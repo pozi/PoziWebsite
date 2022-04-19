@@ -1,0 +1,51 @@
+---
+title: Widgets
+sidebar_position: 5
+tags: [Pozi Pro]
+---
+
+:::note Under Construction
+
+*This page is a work in progress. Please refer to our existing Help Guide for information about this topic.*
+
+[Existing Help Guide](https://help.pozi.com/search?query=widgets)
+
+:::
+
+---
+
+*Available for Pozi Pro, Enterprise and Enterprise Cloud customers*
+
+Pozi Widgets are embeddable address search tools that can be embedded into any website.
+
+[!ref **Data widget**: search any address to display specific details about the location (eg, waste collection details)](/administrator-guide/widgets/data-widget/)
+
+[!ref **Map widget**: search any address to launch an instance of the Pozi web application focussed on the address location](/administrator-guide/widgets/map-widget/)
+
+Widgets can configured by clients without the need for any changes by Pozi staff. However you can request help from Pozi to construct the right embed code to suit your requirements.
+
+## Embedding
+
+Obtain the URL for widget by following the instructions from the [data widget](/administrator-guide/widgets/data-widget/) or [map widget](/administrator-guide/widgets/map-widget/).
+
+The HTML for embedding the widget in your website:
+
+```
+<iframe style="border:none; height: 300px; width: 100%; overflow: hidden;" src="https://southerngrampians.pozi.com/widget.html#card=Waste Collection&fieldnames=Next Rubbish Pickup,Next Recycling Pickup,Next Organics Pickup&fontsize=20"></iframe>
+```
+
+## Showcase
+
+Map Widgets:
+
+* [Cardinia "My Council Services"](https://www.cardinia.vic.gov.au/)
+
+Data Widgets:
+
+[!ref icon="person" text="Cardinia Bin Collection Days"](https://www.cardinia.vic.gov.au/binday#section-3-check-your-bin-collection-days-online)
+
+* [Cardinia Bin Collection Days](https://www.cardinia.vic.gov.au/binday#section-3-check-your-bin-collection-days-online)
+* [Swan Hill Open Air Burning](https://www.swanhill.vic.gov.au/environment-and-waste/fires/open-air-burning/)
+* [Frankston Bin Information](https://www.frankston.vic.gov.au/Environment-and-Waste/Waste-and-Recycling/Bin-Information)
+* [Frankston Hard Waste Collection](https://www.frankston.vic.gov.au/Environment-and-Waste/Waste-and-Recycling/Free-Annual-Collection-of-Hard-Waste)
+* [Northern Grampians Bin Collection Date](https://www.ngshire.vic.gov.au/Residents/Bins-recycling-and-waste/Check-your-bin-collection-date)
