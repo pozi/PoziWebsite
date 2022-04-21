@@ -4,7 +4,7 @@ layout: central
 description: Pozi Web GIS | Online Map
 ---
 
-# 
+#
 
 <style>
     .section {
@@ -25,7 +25,7 @@ description: Pozi Web GIS | Online Map
 
   <big>Building Connected Communities Through Spatial Thinking</big>
 
-  [!button variant="info" icon="checklist" size="xl" corners="pill" text="Discover Pozi's features >"](/features/)
+  [!button variant="primary" icon="checklist" size="xl" corners="pill" text="Discover Pozi's features >"](/features/)
 
 :::
 
