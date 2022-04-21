@@ -1,0 +1,76 @@
+:root {
+  --pozi-color-hex: #70925C;
+  --pozi-color-rgb-normal: 112, 146, 92; /* #70925C; */
+  --pozi-color-rgb-dark: 97, 127, 80; /* #617F50; *
+
+  /*
+  Some colours from original Pozi site
+
+  #3C4E31; 60 78 49
+
+  #617F50; 97 127 80
+  #6E8C5D; 110 140 93
+  #7D9A6D; 125 154 109
+  #85A176; 133 161 118
+  #8DA87F; 141 168 127
+  #AFC3A4; 175 195 164
+  */
+
+  /* Transparencies */
+  --pozi-alpha-100: 0.1;
+  --pozi-alpha-300: 0.3;
+  --pozi-alpha-400: 0.4;
+  --pozi-alpha-500: 0.5;
+  --pozi-alpha-700: 0.7;
+  --pozi-alpha-900: 0.9;
+  --pozi-alpha-1000: 1;
+}
+
+/* Hide anchors */
+.header-anchor-trigger {
+  display: none;
+}
+
+/***********/
+/* Buttons */
+/***********/
+
+.bg-blue-100, .hover\:bg-blue-100:hover {
+	background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-300));
+}
+
+.bg-blue-200, .hover\:bg-blue-200:hover {
+	background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-400));
+}
+
+.bg-blue-300, .hover\:bg-blue-300:hover {
+	background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-500));
+}
+
+.bg-blue-500, .hover\:bg-blue-500:hover {
+	background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-900));
+}
+
+.bg-blue-700, .hover\:bg-blue-700:hover {
+	background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-1000));
+}
+
+
+/*************************/
+/* Text links and hovers */
+/*************************/
+.text-blue-500, .md\:text-blue-500, .docs-markdown a:not(.no-link) {
+	color: rgba(var(--pozi-color-rgb-normal), var(--pozi-alpha-1000));
+}
+
+.text-blue-600, .md\:text-blue-600 {
+	color: rgba(var(--pozi-color-rgb-normal), var(--pozi-alpha-1000));
+}
+
+.hover\:text-blue-500:hover {
+	color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-900));
+}
+
+.hover\:text-blue-800:hover, .docs-markdown a:not(.no-link):hover {
+	color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-1000));
+}
