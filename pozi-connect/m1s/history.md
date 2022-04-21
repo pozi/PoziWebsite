@@ -1,10 +1,9 @@
 ---
 title: Release History
+order: -100
 ---
 
-## Highlights
-
-Here are some of the improvements and bug fixes. (For a complete history of all changes, see [here](
+Here are some of Pozi Connect's improvements and bug fixes. (For a complete history of all changes, see [here](
 https://github.com/pozi/PoziConnectConfig/commits/master/~Shared/))
 
 ### Version 2.9.3 (Mar 2022)

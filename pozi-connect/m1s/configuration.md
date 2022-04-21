@@ -1,7 +1,7 @@
 ---
 title: Pozi Connect M1 Configuration
 sidebar_label: Configuration
-sidebar_position: 2
+order: 90
 ---
 
 Obtain from Council

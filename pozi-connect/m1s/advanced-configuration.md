@@ -1,6 +1,7 @@
 ---
 title: Pozi Connect M1 Advanced Configuration
 sidebar_label: Advanced Configuration
+order: -5
 ---
 
 ### 'Gridlocked' Matches

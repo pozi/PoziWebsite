@@ -1,7 +1,7 @@
 ---
 title: Pozi Connect Release Notes
 sidebar_label: Release Notes
-sidebar_position: 1
+order: 100
 ---
 
 ## Pozi Connect 2.9
