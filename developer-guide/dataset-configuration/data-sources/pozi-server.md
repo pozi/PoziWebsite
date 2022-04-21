@@ -21,8 +21,12 @@ Any ogr2ogr options can be included as part of any request. A complete list of o
 Notes:
 
 * options are prefixed with `&options=`
-* any spaces (that not within double quotes) must be replaced with a pipe character (`|`)
-* double quotes are excluded
+* any spaces (that are not within double quotes) must be replaced with a pipe character (`|`)
+* exclude any double quotes (ie, such as ones that are part of an `-sql` option)
+* if the source table name within a VRT (or SHZ or any other multi-layer dataset) contains spaces:
+  * use double quotes around the table name
+  * when populating the Pozi config, escape the double quotes with backslashes
+
 
 Command line example:
 
@@ -34,6 +38,30 @@ Equivalent Pozi Server request example:
 
 ```
 .../ogr2ogr?source=frankston/council-facilities.vrt&options=-where|type='Maternal and Child Health'
+```
+
+#### Examples
+
+* `https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=data.gov.au/bendigo/cogb-recreation-drinking-fountains.shz`
+* `https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=frankston/property-valuation-information.vrt&options=-where|propertynumber='214855'`
+
+##### Advanced Example
+
+* `https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=data.gov.au/bendigo/cogb-capital-works.shz&options=-sql|select * from "CoGB Capital Works" where BudgetYear='2022-2023' order by Category desc`
+
+The above example is derived from the `ogr2ogr` command which was used for testing the query:
+
+```
+ogrinfo cogb-capital-works.shz -sql "select * from ""CoGB Capital Works"" where BudgetYear='2022-2023' order by Category desc"
+```
+
+In the Pozi config, the double quotes must be escaped with backslashes
+
+```json
+  "config": {
+    "spatial": {
+      "loader": "geojson",
+      "url": "https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=data.gov.au/bendigo/cogb-capital-works.shz&options=-sql|select * from \"CoGB Capital Works\" where BudgetYear='2022-2023' order by Category desc"
 ```
 
 #### Default Parameters
