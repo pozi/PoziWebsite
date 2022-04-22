@@ -31,7 +31,7 @@ Example feature:
 
 |Formatted Content | Title | Attribute A | Attribute B | Attribute C | ID
 |--|--|--|--|--|--|
-|`<h1>Big heading</h1><h2>Medium heading</h2><h3>Small heading</h3><p>Paragraph</p><p>Another paragraph</p><ul><li>Point 1</li><li>Point 2</li></ul><p><a href=\"https://www.example.com/ \" target=\"_blank\`|`Feature Name`|`Value`|`Value`|`Value`|`101`|
+|`<h1>Big heading</h1><h2>Medium heading</h2><h3>Small heading</h3><p>Paragraph</p><p>Another paragraph</p><ul><li>Point 1</li><li>Point 2</li></ul><p><a href=\"https://www.example.com/ \" target=\"_blank\">A link</a></p>`|`Feature Name`|`Value`|`Value`|`Value`|`101`|
 
 When this feature is selected in Pozi, it will display like this:
 
