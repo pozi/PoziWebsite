@@ -36,7 +36,7 @@ description: Pozi Web GIS | Online Map
 
 <!--- START SECTION - BENEFITS --->
 
-<img src="/static/img/undraw_information_tab_re_f0w3.svg" alt="" style="float:left;width:300px;margin:0px 40px;">
+<img src="/static/img/undraw/undraw_information_tab_re_f0w3-4cbb17.svg" alt="" style="float:left;width:300px;margin:0px 40px;">
 
 #### Confident decision making
 
@@ -45,7 +45,7 @@ Empower your users with the critical information they need by integrating with l
 <br clear="all" />
 <br/>
 
-<img src="/static/img/undraw_map_re_60yf.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
+<img src="/static/img/undraw/undraw_map_re_60yf-4cbb17.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
 
 #### Ease of use
 
@@ -54,7 +54,7 @@ Simple, modern map interface with a focus on immediate usability
 <br clear="all" />
 <br/>
 
-<img src="/static/img/undraw_online_discussion_re_nn7e.svg" alt="" style="float:left;width:300px;margin:0px 40px;">
+<img src="/static/img/undraw/undraw_online_discussion_re_nn7e-4cbb17.svg" alt="" style="float:left;width:300px;margin:0px 40px;">
 
 #### Real Support
 
@@ -98,7 +98,7 @@ For over twenty years, Pozi has helped organisations to work more efficiently an
 <br clear="all" />
 <br/>
 
-<img src="/static/img/undraw_map_re_60yf.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
+<img src="/static/img/undraw/undraw_map_re_60yf-4cbb17.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
 
 > "Really appreciate the 5 star support. So helpful and fast to respond. Thank you!"
 >
@@ -107,7 +107,7 @@ For over twenty years, Pozi has helped organisations to work more efficiently an
 <br clear="all" />
 <br/>
 
-<img src="/static/img/undraw_information_tab_re_f0w3.svg" alt="" style="float:left;width:300px;margin:0px 40px;">
+<img src="/static/img/undraw/undraw_information_tab_re_f0w3-4cbb17.svg" alt="" style="float:left;width:300px;margin:0px 40px;">
 
 > "The Pozi mapping product is a great tool to easily display public map-based information for users. The process, design and planning stages are made simple by the Pozi Support team."
 >
@@ -116,7 +116,7 @@ For over twenty years, Pozi has helped organisations to work more efficiently an
 <br clear="all" />
 <br/>
 
-<img src="/static/img/undraw_map_re_60yf.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
+<img src="/static/img/undraw/undraw_map_re_60yf-4cbb17.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
 
 > "The clean look and layout of Pozi, along with its user friendly functionality make it easy for customers to locate and interpret data. It's an efficient tool for delivering information to our customers, and the staff at Pozi provide great support to their clients."
 >
@@ -155,11 +155,11 @@ For over twenty years, Pozi has helped organisations to work more efficiently an
 
 Pozi is your new geospatial software solution; a hosted web map solution tailored for organisations who need to:
 
-||| ![](/static/img/person-exclamation.png)
+||| ![](/static/img/noun-project/noun-speak-1790666-4CBB17.svg)
 Make timely and informed decisions about infrastructure, properties and workforce
-||| ![](/static/img/person-map.png)
+||| ![](/static/img/noun-project/noun-pin-1790658-4CBB17.svg)
 Help customers with their location-based enquiries
-||| ![](/static/img/person-star.png)
+||| ![](/static/img/noun-project/noun-favorite-1790644-4CBB17.svg)
 Promote local places, facilities events and services to customers
 |||
 
