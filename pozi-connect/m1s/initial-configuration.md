@@ -1,6 +1,7 @@
 ---
 title: Pozi Connect M1 Configuration
 sidebar_label: Configuration
+visibility: hidden
 order: 90
 ---
 
