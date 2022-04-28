@@ -2,16 +2,6 @@
 title: Installation
 ---
 
-:::note Under Construction
-
-*This page is a work in progress. Please refer to our existing Help Guide for information about this topic.*
-
-[Existing Help Guide](https://help.pozi.com/)
-
-:::
-
----
-
 # Pozi Server Installation
 
 ## Prerequisites
@@ -23,9 +13,34 @@ title: Installation
 ## Download and Install
 
 1. download the [Pozi Connect Server installer](https://connect.pozi.com/installer/PoziConnectInstaller.exe)
-2. install
-3. `mkdir "C:\Program Files (x86)\Pozi\userdata\local"`
-4. `mklink /D "C:\Program Files (x86)\Pozi\userdata\local\sample" "C:\Program Files (x86)\Pozi\server\data\local\sample"`
+2. run installer and follow prompts
+
+==- Useful supplementary software
+
+* [Notepad++](https://notepad-plus-plus.org/downloads/)
+* [JSON Viewer browser extension](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh/)
+* [TAD Viewer](https://www.tadviewer.com/) for previewing CSV files
+* [BD Browser for SQLite](https://sqlitebrowser.org/dl/)
+
+==- Useful desktop preparation
+
+Desktop shortcuts:
+
+* `C:\Program Files (x86)\Pozi`
+* `C:\Program Files (x86)\Pozi\server\pipeline\.shell.cmd` (rename shorctut to 'GDAL Shell')
+* GIS data folder(s)
+* `C:\Windows\System32\drivers\etc\hosts`
+
+Pin to taskbar:
+
+* Windows > Services
+
+File associations:
+
+* `.config` > Notepad++
+* `.vrt` > Notepad++
+
+==-
 
 ## Enable permissions on `userdata` folder
 
@@ -41,16 +56,25 @@ The `C:\Program Files (x86)\Pozi` will be created by the installation process wi
 
 ## Prepare `userdata` folder
 
-1. delete `sample` and `vrt` folders
-2. create `local` folder
+Sample data is included in the Pozi Server installation. To enable the Pozi Server service to access this data, create a Windows symlink in within the `Pozi\userdata\local` folder.
 
-The `local` folder corresponds to the subdomain that you have configured, eg, `local.pozi.com`. You can add other folders to correspond to any other subdomains you might want to use.
+Open the command prompt in administrator mode:
+
+Press Windows button > type `cmd` > right-click 'Command Prompt' > click 'Run as administrator' > click 'Yes'
+
+Then run the following command:
+
+```
+mklink /D "C:\Program Files (x86)\Pozi\userdata\local\sample" "C:\Program Files (x86)\Pozi\server\data\local\sample"
+```
+
+The `local` folder corresponds to the subdomain that is configured as per the *DNS Configuration* instructions on this page. During the Pozi Server installation, the hosts file is updated to automatically resolve requests by the local user to  `local.pozi.com`. You can add other folders to correspond to any other subdomains you might want to use.
 
 ## DNS Configuration
 
 Configure the network Domain Name System (DNS) so that any requests to `local.pozi.com` resolve to the IP address of the server on which Pozi Server is installed.
 
-![DNS Manager](./img/dns-manager.png){style="width:65%"}
+![DNS Manager](./img/dns-manager.png)
 
 ## SSL Certificates
 
