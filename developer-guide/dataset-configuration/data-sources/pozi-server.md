@@ -73,7 +73,10 @@ Pozi Server applies the following parameters by default to all requests:
 
 #### Simplify
 
+Apply geometry generalisation on polyline and polygon features to eliminate unneeded vertices. Note that the simplification unit is based on the *source* data. For sources in degrees, a simplication value of 0.00001 is approximately 1m.
+
 `-simplify 0.00001`
+
 #### Spatial Intersection
 
 #### Unified Search
@@ -88,7 +91,7 @@ A client has uploaded a GeoJSON to data.gov.au that they want displayed in Pozi 
 
 A VRT is configured that points to this GeoJSON and enables us to dynamically query it:
 
-```xml  title="Pozi\userdata\ec 21354118232\frankston\council-facilities.vrt"
+```xml Pozi\userdata\ec 21354118232\frankston\council-facilities.vrt
 <?xml version="1.0" encoding="UTF-8"?>
 <OGRVRTDataSource>
     <OGRVRTLayer name="frankston-city-council-facilities">

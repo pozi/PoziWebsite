@@ -41,7 +41,10 @@ Enter in the credentials into the client's Pozi Connect Server [Data Sync](https
 * Pozi Cloud Username: `[Access key ID]`
 * Pozi Password: `[Secret access key]`
 * Sitename: `[sitename]` (must be lowercase)
+* click 'Submit'
 
 ![](/static/img/pozi-server-sync-credentials.png)
 
 Restart the Pozi Server service for the settings to take effect.
+
+Windows > Services > PoziConnectServer > right-click > Restart

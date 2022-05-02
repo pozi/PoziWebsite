@@ -103,7 +103,7 @@ You can customise the Pozi Connect drop-down task list to display only the tasks
 
 The `PoziConnect\PoziConnect.site.ini` file contains filters to specifically include or exclude tasks. Open the file in a text editor, and specify the filter. For example, if you only want to display tasks that relate to 'Glen Eira', update the file as follows:
 
-```ini title="PoziConnect\PoziConnect.site.ini"
+```ini PoziConnect\PoziConnect.site.ini
 [Settings]
 Include: Glen Eira
 Exclude:
