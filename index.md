@@ -1,7 +1,6 @@
 ---
 title: Home
 layout: central
-description: Pozi Web GIS | Online Map
 ---
 
 #
@@ -21,9 +20,11 @@ description: Pozi Web GIS | Online Map
 
 :::section
 
-  # Pozi
+  <h2>Building Connected Communities Through Spatial Thinking</h2>
 
-  <big>Building Connected Communities Through Spatial Thinking</big>
+  Pozi combines geographic information from local data sources and trusted web services to give your users the complete picture.
+
+  Deploy for a fraction of cost of traditional GIS software, with no lock-in contracts.
 
   [!button variant="primary" icon="checklist" size="xl" corners="pill" text="Discover Pozi's features >"](/features/)
 
@@ -36,7 +37,7 @@ description: Pozi Web GIS | Online Map
 
 <!--- START SECTION - BENEFITS --->
 
-<img src="/static/img/undraw_information_tab_re_f0w3.svg" alt="" style="float:left;width:300px;margin:0px 40px;">
+<img src="/static/img/undraw_information_tab_re_f0w3.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
 
 #### Confident decision making
 
@@ -45,7 +46,7 @@ Empower your users with the critical information they need by integrating with l
 <br clear="all" />
 <br/>
 
-<img src="/static/img/undraw_map_re_60yf.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
+<img src="/static/img/undraw_map_re_60yf.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
 #### Ease of use
 
@@ -54,11 +55,11 @@ Simple, modern map interface with a focus on immediate usability
 <br clear="all" />
 <br/>
 
-<img src="/static/img/undraw_online_discussion_re_nn7e.svg" alt="" style="float:left;width:300px;margin:0px 40px;">
+<img src="/static/img/undraw_online_discussion_re_nn7e.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
 
 #### Real Support
 
-Our team works with you to customise your map application - you're never on your own
+Our team works with you to customise and maintain your map application - you're never on your own
 
 <br clear="all" />
 <br/>
@@ -79,6 +80,10 @@ For over twenty years, Pozi has helped organisations to work more efficiently an
 <br/>
 
 <!--- END SECTION - VISUALISE --->
+
+#### Ultimate connectability
+
+Eliminate data double-handling by accessing data directly from any local or remote source
 
 <!--- START SECTION - CLIENTS --->
 
@@ -163,7 +168,7 @@ Help customers with their location-based enquiries
 Promote local places, facilities events and services to customers
 |||
 
-Pozi is an intuitive, interactive, location-based communication platform for both internal and external users that aggregates geographic information from multiple sources in web application, at a fraction of the cost of traditional Geographic Information System (GIS) software.
+<big>Pozi is an intuitive, interactive, location-based communication platform for your internal and external users that aggregates geographic information from multiple sources in an simple web interface, at a fraction of the cost of traditional Geographic Information System (GIS) software.</big>
 
 :::
 
@@ -177,7 +182,7 @@ Pozi is an intuitive, interactive, location-based communication platform for bot
 * ✔️ Creates maps for enquiries, visualisation and fieldwork
 * ✔️ Integrates existing systems and software easily at lower cost
 * ✔️ Customises to your unique data
-* ✔️ Eliminates expensive software licensing fees and doesn’t lock you in to a long-term contract
+* ✔️ Eliminates expensive software licensing fees and doesn't lock you in to a long-term contract
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Pozi leverages QGIS to give organisations more control of their Pozi site. In today&#39;s update, Pozi automatically generates layer legends from styles created in QGIS. <a href="https://t.co/WWu1W2FwsD">https://t.co/WWu1W2FwsD</a> <a href="https://t.co/exRgu8sEev">pic.twitter.com/exRgu8sEev</a></p>&mdash; Pozi (@PoziApp) <a href="https://twitter.com/PoziApp/status/1467725591315038210?ref_src=twsrc%5Etfw">December 6, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -189,7 +194,7 @@ Deliver data to staff and public – easily and affordably. Users can access the
 
 * ✔️ **Manage services intelligently** - Staff can view additional information such as property owner details and asset information
 * ✔️ **Find information about any location** - View land parcel details, planning controls, road closures, maintenance schedules, major projects, waste collection zones and more.
-* ✔️ **Reduce data maintenance overheads** - Pozi operates independently of your internal IT infrastructure and connects live to state and federal government web services so you don’t have to spend time maintaining and updating base datasets
+* ✔️ **Reduce data maintenance overheads** - the Pozi app operates independently of your internal IT infrastructure and connects live to state and federal government web services so you don't have to spend time maintaining and updating background datasets
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Our clients are always finding new datasets to open up to the public. <a href="https://twitter.com/SwanHillCouncil?ref_src=twsrc%5Etfw">@SwanHillCouncil</a> has just published the locations of their dog waste bag dispensers on Pozi <a href="https://twitter.com/hashtag/opendata?src=hash&amp;ref_src=twsrc%5Etfw">#opendata</a> <a href="https://t.co/CfaVfTSBfU">https://t.co/CfaVfTSBfU</a> <a href="https://t.co/xHvveLh9OJ">pic.twitter.com/xHvveLh9OJ</a></p>&mdash; Pozi (@PoziApp) <a href="https://twitter.com/PoziApp/status/1442715683733733377?ref_src=twsrc%5Etfw">September 28, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -210,7 +215,7 @@ Pozi runs from our secure Australian-based web server. This means you get all th
 Deliver data to staff and public – easily and affordably. Users can access the information they need at any time, such as property information, nearby community facilities and services, and aerial imagery.
 
 * ✔️ Display map information from different sources on the one map
-* ✔️ Have full visibility of your organisation’s activities through a single portal
+* ✔️ Have full visibility of your organisation's activities through a single portal
 * ✔️ Free your people to use data strategically with no need to double-handle externally-maintained data.
 * ✔️ Share information cost effectively and connect with staff and public
 * ✔️ Deliver relevant data to external stakeholders on demand
@@ -225,7 +230,7 @@ Deliver data to staff and public – easily and affordably. Users can access the
 
 :::section
 
-  ### Helping organisations with Geographic Information Systems (GIS) since 1999
+  ### Helping organisations with GIS since 1999
 
   For over twenty years, Pozi (formerly Groundtruth) has helped government organisations to work more efficiently and gain greater insights into their clients, resources, activities and risks by making use of location-based information in their business processes.
 

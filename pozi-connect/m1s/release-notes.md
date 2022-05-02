@@ -25,7 +25,7 @@ Pozi Connect 2.9 has been updated to use these new DataShare table names. The ol
 
 The new Pozi Connect continues to use your previously configured Vicmap data folder locations.
 
-Pozi Connect may be configured for your council to use `VMADD` and `VMPROP` as your folder names, because these were the folder names inside the Spatial Datamart zip file. However it's important to note that the folder names inside the DataShare zip files are `VICMAP_ADDRESS` and `VMPROP_SIMPLIFIED_1`. You may need to alter your zip extraction process to take into account the new folder names to ensure that the table files end up in the correct location.
+Pozi Connect may be configured for your council to use `VMADD` and `VMPROP` as your folder names, because these were the folder names inside the old Spatial Datamart zip file. However it's important to note that the folder names inside the DataShare zip files are `VICMAP_ADDRESS` and `VMPROP_SIMPLIFIED_1`. You may need to alter your zip extraction process to take into account the new folder names to ensure that the table files end up in the correct location.
 
 If you decide to extract your DataShare downloads to a different location (for instance, to use the new DataShare folder names), you can change override the location when you run Pozi Connect at the 'Import Vicmap' step by using the folder picker buttons in the Pozi Connect interface and browsing to the new location. You can also modify your council's own 'Import Vicmap' INI file (in `PoziConnect\tasks\[councilname]\`) using a text editor to ensure Pozi Connect remembers the location. And remember, if you make any changes to your INI file, please send the updated file to support@pozi.com so it can be included in future releases.
 

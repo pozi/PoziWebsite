@@ -38,6 +38,7 @@ Pin to taskbar:
 File associations:
 
 * `.config` > Notepad++
+* `.sld` > Notepad++
 * `.vrt` > Notepad++
 
 ==-
@@ -72,7 +73,7 @@ The `local` folder corresponds to the subdomain that is configured as per the *D
 
 ## DNS Configuration
 
-Configure the network Domain Name System (DNS) so that any requests to `local.pozi.com` resolve to the IP address of the server on which Pozi Server is installed.
+Configure the network Domain Name System (DNS) so that any requests to `local.pozi.com` (or another subdomain of your choosing) resolve to the IP address of the server on which Pozi Server is installed.
 
 ![DNS Manager](./img/dns-manager.png)
 
