@@ -3,7 +3,9 @@ output: .retype
 url: https://pozi.github.io/PoziWebsite/
 edit:
   repo:
-
+integrations:
+  googleAnalytics:
+    id: G-74NZKRQ3KQ
 meta:
   title: " | Pozi Web GIS | Online Map"
 
