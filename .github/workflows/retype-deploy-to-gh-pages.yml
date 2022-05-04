@@ -16,7 +16,10 @@ jobs:
 
       - uses: retypeapp/action-build@latest
 
-      - uses: retypeapp/action-github-pages@latest
+      - name: Deploy to Github Pages
+        env:
+          RETYPE_SECRET: ${{ secrets.RETYPE_SECRET }}
+        uses: retypeapp/action-github-pages@latest
         with:
           branch: gh-pages
           update-branch: true
