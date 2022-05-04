@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pozi.com/sitemap.xml.gz

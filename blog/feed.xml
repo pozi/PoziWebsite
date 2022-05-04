@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog</title>
+    <link>https://pozi.com/blog/</link>
+    <description>Blog</description>
+    <copyright>© Copyright 2022 - Pozi Pty Ltd</copyright>
+    <lastBuildDate>Mon, 11 Apr 2022 00:00:00 GMT</lastBuildDate>
+    <generator>https://retype.com</generator>
+    <atom:link rel="self" type="application/rss+xml" href="https://pozi.com/blog/feed.xml" />
+    <image>
+      <title>Blog</title>
+      <link>https://pozi.com/blog/</link>
+      <url>https://pozi.com/favicon.ico</url>
+    </image>
+    <item>
+      <title>On Metadata</title>
+      <guid isPermaLink="true">https://pozi.com/on-metadata/</guid>
+      <description>I recently went came across an email I'd sent to a client from a couple of years ago in response to their enquiry about whether they should implement...</description>
+      <author>Simon O'Keefe</author>
+      <pubDate>Mon, 11 Apr 2022 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Upgrade to Pozi Connect 2.9.3</title>
+      <guid isPermaLink="true">https://pozi.com/upgrade-to-pozi-connect-2-9-3/</guid>
+      <description>An announcement for users of the Pozi Connect desktop application.</description>
+      <author>Simon O'Keefe</author>
+      <pubDate>Mon, 28 Mar 2022 00:00:00 GMT</pubDate>
+      <category domain="https://pozi.com/categories/pozi-connect/">Pozi Connect</category>
+    </item>
+    <item>
+      <title>Upgrade to Pozi Connect 2.9</title>
+      <guid isPermaLink="true">https://pozi.com/upgrade-to-pozi-connect-2-9/</guid>
+      <description>An announcement for users of the Pozi Connect desktop application.</description>
+      <author>Simon O'Keefe</author>
+      <pubDate>Tue, 22 Feb 2022 00:00:00 GMT</pubDate>
+      <category domain="https://pozi.com/categories/pozi-connect/">Pozi Connect</category>
+    </item>
+    <item>
+      <title>Pozi Shadeway Route Finder</title>
+      <guid isPermaLink="true">https://pozi.com/pozi-shadeway-route-finder/</guid>
+      <description>Smart Cities</description>
+      <pubDate>Mon, 09 Dec 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Meet Pozi, GIS with a Customer Service Focus</title>
+      <guid isPermaLink="true">https://pozi.com/meet-pozi-gis-with-a-customer-service-focus/</guid>
+      <description>Ensuring customer success is our number one priority. We provide the platform to ensure you can achieve your GIS goals.</description>
+      <author>Simon O'Keefe</author>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Love your internal GIS? That's great, Pozi will integrate with it.</title>
+      <guid isPermaLink="true">https://pozi.com/love-your-internal-gis-thats-great-pozi-will-integrate-with-it/</guid>
+      <description>Due to Pozi's simplicity and strong focus on easy user experience, we receive feedback from clients that staff use Pozi for most of their customer...</description>
+      <author>Megan Barrow</author>
+      <pubDate>Tue, 10 Sep 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Using Pozi web map to gather community feedback</title>
+      <guid isPermaLink="true">https://pozi.com/using-pozi-web-map-to-gather-community-feedback/</guid>
+      <description>Pozi makes gathering community feedback about specific locations a breeze!</description>
+      <author>Megan Barrow</author>
+      <pubDate>Sun, 16 Jun 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Pozi web map helps Macedon Ranges shape its Biodiversity Strategy</title>
+      <guid isPermaLink="true">https://pozi.com/pozi-web-map-helps-macedon-ranges-shape-its-biodiversity-strategy/</guid>
+      <description>We have previously discussed some creative ways organisations are integrating Pozi as part of customer service and community engagement.</description>
+      <author>Megan Barrow</author>
+      <pubDate>Sun, 01 Jul 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Pozi in the news</title>
+      <guid isPermaLink="true">https://pozi.com/pozi-in-the-news/</guid>
+      <description>Finding opportunities to get PR for your organisation can be incredibly difficult.</description>
+      <author>Megan Barrow</author>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>How web developers can use GIS data &amp; Pozi</title>
+      <guid isPermaLink="true">https://pozi.com/how-web-developers-can-use-gis-data/</guid>
+      <description>Traditionally Geographic Information Systems (GIS) have been a hidden resource of data portals used by organisation staff to deliver critical...</description>
+      <author>Megan Barrow</author>
+      <pubDate>Mon, 29 Jan 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Cardinia Shire Council using GIS for customer service</title>
+      <guid isPermaLink="true">https://pozi.com/cardinia-shire-council-using-pozi-for-customer-service/</guid>
+      <description>Pozi's web map helps Cardinia's Shire Council's customers easily find local services</description>
+      <author>Megan Barrow</author>
+      <pubDate>Tue, 31 Oct 2017 00:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
