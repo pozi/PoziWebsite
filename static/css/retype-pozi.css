@@ -36,41 +36,41 @@
 /***********/
 
 .bg-blue-100, .hover\:bg-blue-100:hover {
-	background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-300));
+	background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-300)) !important;
 }
 
 .bg-blue-200, .hover\:bg-blue-200:hover {
-	background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-400));
+	background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-400)) !important;
 }
 
 .bg-blue-300, .hover\:bg-blue-300:hover {
-	background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-500));
+	background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-500)) !important;
 }
 
 .bg-blue-500, .hover\:bg-blue-500:hover {
-	background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-900));
+	background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-900)) !important;
 }
 
 .bg-blue-700, .hover\:bg-blue-700:hover {
-	background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-1000));
+	background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-1000)) !important;
 }
 
 
 /*************************/
 /* Text links and hovers */
 /*************************/
-.text-blue-500, .md\:text-blue-500, .docs-markdown a:not(.no-link) {
-	color: rgba(var(--pozi-color-rgb-normal), var(--pozi-alpha-1000));
+.text-blue-500,.md\:text-blue-500, .docs-markdown a:not(.no-link) {
+	color: rgba(var(--pozi-color-rgb-normal), var(--pozi-alpha-1000)) !important;
 }
 
 .text-blue-600, .md\:text-blue-600 {
-	color: rgba(var(--pozi-color-rgb-normal), var(--pozi-alpha-1000));
+	color: rgba(var(--pozi-color-rgb-normal), var(--pozi-alpha-1000)) !important;
 }
 
 .hover\:text-blue-500:hover {
-	color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-900));
+	color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-900)) !important;
 }
 
 .hover\:text-blue-800:hover, .docs-markdown a:not(.no-link):hover {
-	color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-1000));
+	color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-1000)) !important;
 }
