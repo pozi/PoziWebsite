@@ -20,7 +20,7 @@ layout: central
 
 :::section
 
-  <h2>Building Connected Communities Through Spatial Thinking</h2>
+  ## Building Connected Communities Through Spatial Thinking
 
   Pozi combines geographic information from local data sources and trusted web services to give your users the complete picture.
 
@@ -37,7 +37,7 @@ layout: central
 
 <!--- START SECTION - BENEFITS --->
 
-<img src="/static/img/undraw_information_tab_re_f0w3.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
+<img src="./static/img/undraw_information_tab_re_f0w3.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
 
 #### Confident decision making
 
@@ -46,7 +46,7 @@ Empower your users with the critical information they need by integrating with l
 <br clear="all" />
 <br/>
 
-<img src="/static/img/undraw_map_re_60yf.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
+<img src="./static/img/undraw_map_re_60yf.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
 #### Ease of use
 
@@ -55,7 +55,7 @@ Simple, modern map interface with a focus on immediate usability
 <br clear="all" />
 <br/>
 
-<img src="/static/img/undraw_online_discussion_re_nn7e.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
+<img src="./static/img/undraw_online_discussion_re_nn7e.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
 
 #### Real Support
 
@@ -69,7 +69,7 @@ Our team works with you to customise and maintain your map application - you're 
 
 <!--- START SECTION - VISUALISE --->
 
-<img src="/static/img/smartmockups.png" alt="" style="float:right;width:500px;margin:0px 40px;">
+<img src="./static/img/smartmockups.png" alt="" style="float:right;width:500px;margin:0px 40px;">
 <br/>
 
 #### Visualise & interact with location-based information in a simple map interface
@@ -93,8 +93,7 @@ Eliminate data double-handling by accessing data directly from any local or remo
 
 :::
 
-<img src="/static/img/pozi-data-widget-cardinia-council-tool.png" alt="" style="float:left;width:300px;margin:0px 40px;">
-<br/>
+<img src="./static/img/pozi-data-widget-cardinia-council-tool.png" alt="Screenshot of Cardinia Council Widget" style="float:left;width:300px;margin:0px 40px;">
 
 > "We see great online traffic data and know visiting the website has become a key part of customer service interaction. The waste and recycling collection widget is one of the most popular pages on our website.​"
 >
@@ -103,7 +102,9 @@ Eliminate data double-handling by accessing data directly from any local or remo
 <br clear="all" />
 <br/>
 
-<img src="/static/img/undraw_map_re_60yf.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
+
+
+<img src="./static/img/undraw_map_re_60yf.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
 
 > "Really appreciate the 5 star support. So helpful and fast to respond. Thank you!"
 >
@@ -112,7 +113,7 @@ Eliminate data double-handling by accessing data directly from any local or remo
 <br clear="all" />
 <br/>
 
-<img src="/static/img/undraw_information_tab_re_f0w3.svg" alt="" style="float:left;width:300px;margin:0px 40px;">
+<img src="./static/img/undraw_information_tab_re_f0w3.svg" alt="" style="float:left;width:300px;margin:0px 40px;">
 
 > "The Pozi mapping product is a great tool to easily display public map-based information for users. The process, design and planning stages are made simple by the Pozi Support team."
 >
@@ -121,7 +122,7 @@ Eliminate data double-handling by accessing data directly from any local or remo
 <br clear="all" />
 <br/>
 
-<img src="/static/img/undraw_map_re_60yf.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
+<img src="./static/img/undraw_map_re_60yf.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
 
 > "The clean look and layout of Pozi, along with its user friendly functionality make it easy for customers to locate and interpret data. It's an efficient tool for delivering information to our customers, and the staff at Pozi provide great support to their clients."
 >

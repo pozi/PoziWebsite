@@ -22,7 +22,7 @@ Pozi delivers powerful location-based functionality at a fraction of the cost of
 | ✔️ Unlimited users | ✔️ Layer filtering |  |  |
 | ✔️ Zero installation | ✔️ Multi-select |  |  |
 | ✔️ Custom maps | ✔️ Custom bookmarking |  |  |
-| - | ✔️ GPS tracking |  |  |
+| | ✔️ GPS tracking |  |  |
 
 [!ref](/upgrade/)
 
@@ -42,7 +42,7 @@ The Pozi Pro, Enterprise and Enterprise Cloud offerings include up to two concur
 
 ### Pozi Connect for M1s
 
-Pozi Connect generates property and address change reports for Victorian municipalities. We customise Pozi Connect to integreate with your counci's corporate property system, then install it and provide training. The first twelve months support is also included.
+Pozi Connect generates property and address change reports for Victorian municipalities. We customise Pozi Connect to integrate with your counci's corporate property system, then install it and provide training. The first twelve months support is also included.
 
 <small>AUD</small>$6K
 
