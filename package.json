@@ -1,5 +1,14 @@
 {
   "dependencies": {
     "retypeapp": "2.3.0"
+  },
+  "devDependencies": {
+    "browser-sync": "2.27.9",
+    "concurrently": "7.1.0"
+  },
+  "scripts": {
+    "retype-watch-no-browser": "DISPLAY=:none retype watch",
+    "browser-sync": "browser-sync start --no-open --files \"static/css/*.css\" --proxy http://localhost:5000/PoziWebsite/ --reload-delay 1500",
+    "start": "concurrently \"npm:retype-watch-no-browser\" \"npm:browser-sync\""
   }
 }
