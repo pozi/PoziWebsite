@@ -99,6 +99,8 @@ Set `"visible": true` for the default basemap.
   }
   ```
 
+  https://dev-base.maps.vic.gov.au/service?SERVICE=WMTS&REQUEST=Getcapabilities
+
 ==- Mapscape
 
   Pozi is not currently licensed for Mapscape. This configuration is for evaluation purposes only.

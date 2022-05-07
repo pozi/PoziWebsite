@@ -12,6 +12,13 @@ The popular open source QGIS application provides a powerful and convenient way 
 
 A QGIS project file (*.qgs) represents a layer group within Pozi.
 
+## QGIS Configuration
+
+QGIS > Settings > Options > General > Project Files >
+
+* Prompt for confirmation when a layer is to be removed: untick
+* Default project file format: QGS Project
+
 ## Create Project
 
 1. open QGIS
@@ -67,14 +74,14 @@ Advantages:
 
 * cursor changes when hovering over object
 * select individual features and display results in Info Panel without displaying results of features on other layers at the same location
-* enable filter, report and table view
+* enable layers to be interactive using Pozi's filter, report and table view functionality
 
 Disadvantages:
 
 * the browser can be easily overwhelmed when dealing with thousands of features
 * labelling for WFS features is not well supported, especially for line features such as roads
 
-We recommend to only enable WFS for layers with fewer than 10K features.
+We recommend to enable WFS only for layers with fewer than 10-20K features.
 
 1. Project > Properties > QGIS Server
 2. update the following settings:
@@ -90,9 +97,11 @@ We recommend to only enable WFS for layers with fewer than 10K features.
 
 :::danger
 
-Extreme care should be taken when deleting, moving or renaming any table files that are referenced by a QGIS project file.
+Extreme care should be taken when **deleting, moving or renaming** any table files that are referenced by a QGIS project file.
 
-If such a change is made to a table file while the table is registered as a layer in a QGIS project, it may prevent Pozi from loading the project, and cause all layers belonging to the project to not appear in the layer panel.
+If such a change is made to a table while it is registered as a layer in a QGIS project, it will cause QGIS Server to return an error and prevent Pozi from loading any layers from that project.
+
+In this scenario, **all layers belonging to the project will no longer appear in the layer panel.**
 
 :::
 

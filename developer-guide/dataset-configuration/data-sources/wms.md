@@ -7,7 +7,14 @@ sidebar_label: WMS
 
 ### DELWP DataVic
 
+This service is soon to be retired. See 'DELWP DataVic (New)' below for details about the replacement service.
+
 * [GetCapabilities](https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms?request=getCapabilities)
+
+### DELWP DataVic (New)
+
+* [GetCapabilities](https://geoserver-uat.maps.vic.gov.au/geoserver/ows?service=WMS&request=getCapabilities)
+* [GeoWebCache](https://geoserver-uat.maps.vic.gov.au/geoserver/gwc/)
 
 ### data.gov.au
 
@@ -23,7 +30,7 @@ sidebar_label: WMS
 For WMS datasets, the dataset type can be either `TileWMS` or `ImageWMS`.
 
 * `TileWMS` - loads the layer in a series of 640 x 640 image tiles. The tiles load incrementally in the map view, enabling the user to start to see the layer before the the entire map view is generated.
-* `ImageWMS` - loads the layer as a single image that covers the current map view. In most scenarios it will be slower to load, but may be useful in avoiding unwanted duplication of any label text.
+* `ImageWMS` - loads the layer as a single image that covers the current map view. In most scenarios it will be slower to load, but may be useful in avoiding unwanted duplication of any label text. (Note: there are currently differences between the way that Pozi loads TileWMS and ImageWMS layers that might result in degraded functionality for ImageWMS)
 
 ```json
   "type": "TileWMS"

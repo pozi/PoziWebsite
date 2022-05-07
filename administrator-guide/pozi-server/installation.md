@@ -1,5 +1,6 @@
 ---
 title: Installation
+order: 100
 ---
 
 # Pozi Server Installation
@@ -20,7 +21,7 @@ title: Installation
 * [Notepad++](https://notepad-plus-plus.org/downloads/)
 * [JSON Viewer browser extension](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh/)
 * [TAD Viewer](https://www.tadviewer.com/) for previewing CSV files
-* [BD Browser for SQLite](https://sqlitebrowser.org/dl/)
+* [DB Browser for SQLite](https://sqlitebrowser.org/dl/)
 
 ==- Useful desktop preparation
 
@@ -73,9 +74,13 @@ The `local` folder corresponds to the subdomain that is configured as per the *D
 
 ## DNS Configuration
 
-Configure the network Domain Name System (DNS) so that any requests to `local.pozi.com` (or another subdomain of your choosing) resolve to the IP address of the server on which Pozi Server is installed.
+To enable PCs on the council network to communicate with the Pozi Server instance, configure the network Domain Name System (DNS) so that any requests to `local.pozi.com` (or another subdomain of your choosing) resolve to the IP address of the server on which Pozi Server is installed.
+
+Add the lookup (eg `local.pozi.com`) as a "forward lookup zone (primary)" then create an "A record with no hostname" (matches zone) to target server.
 
 ![DNS Manager](./img/dns-manager.png)
+
+To confirm the DNS is configured correctly, open a command prompt window and ping local.pozi.com. It should return a reply from the server on which Pozi Server is installed.
 
 ## SSL Certificates
 
