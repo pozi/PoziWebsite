@@ -34,11 +34,11 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/PoziWebsite/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/PoziWebsite/favicon.ico" rel="icon" />
-    <link href="/PoziWebsite/resources/css/retype.css?v=2.2.705047118570" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/PoziWebsite/resources/css/retype.css?v=2.2.705223596609" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/PoziWebsite/resources/js/config.js?v=2.2.705047118570" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/PoziWebsite/resources/js/config.js?v=2.2.705223596609" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/PoziWebsite/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/PoziWebsite/resources/js/lunr.js?v=2.2.705047118570" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/PoziWebsite/resources/js/lunr.js?v=2.2.705223596609" defer></script>
 
     <!-- CSS overrides -->
     <link href="/PoziWebsite/static/css/retype-pozi.css" rel="stylesheet" />
@@ -264,6 +264,17 @@
 </doc-anchor-target>
 <p>The popular open source QGIS application provides a powerful and convenient way to compile and configure map layers for publishing local datasets to internal Pozi users.</p>
 <p>A QGIS project file (*.qgs) represents a layer group within Pozi.</p>
+<doc-anchor-target id="qgis-configuration">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#qgis-configuration">#</doc-anchor-trigger>
+        <span>QGIS Configuration</span>
+    </h2>
+</doc-anchor-target>
+<p>QGIS &gt; Settings &gt; Options &gt; General &gt; Project Files &gt;</p>
+<ul>
+<li>Prompt for confirmation when a layer is to be removed: untick</li>
+<li>Default project file format: QGS Project</li>
+</ul>
 <doc-anchor-target id="create-project">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#create-project">#</doc-anchor-trigger>
@@ -343,14 +354,14 @@
 <ul>
 <li>cursor changes when hovering over object</li>
 <li>select individual features and display results in Info Panel without displaying results of features on other layers at the same location</li>
-<li>enable filter, report and table view</li>
+<li>enable layers to be interactive using Pozi&#x27;s filter, report and table view functionality</li>
 </ul>
 <p>Disadvantages:</p>
 <ul>
 <li>the browser can be easily overwhelmed when dealing with thousands of features</li>
 <li>labelling for WFS features is not well supported, especially for line features such as roads</li>
 </ul>
-<p>We recommend to only enable WFS for layers with fewer than 10K features.</p>
+<p>We recommend to enable WFS only for layers with fewer than 10-20K features.</p>
 <ol>
 <li>Project &gt; Properties &gt; QGIS Server</li>
 <li>update the following settings:
@@ -386,8 +397,9 @@
         </div>
         <div class="pr-5 ml-3 w-full">
             <h5>DANGER</h5>
-<p>Extreme care should be taken when deleting, moving or renaming any table files that are referenced by a QGIS project file.</p>
-<p>If such a change is made to a table file while the table is registered as a layer in a QGIS project, it may prevent Pozi from loading the project, and cause all layers belonging to the project to not appear in the layer panel.</p>
+<p>Extreme care should be taken when <strong>deleting, moving or renaming</strong> any table files that are referenced by a QGIS project file.</p>
+<p>If such a change is made to a table while it is registered as a layer in a QGIS project, it will cause QGIS Server to return an error and prevent Pozi from loading any layers from that project.</p>
+<p>In this scenario, <strong>all layers belonging to the project will no longer appear in the layer panel.</strong></p>
         </div>
     </div>
 </div>

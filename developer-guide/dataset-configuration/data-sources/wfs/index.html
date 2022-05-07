@@ -15,29 +15,29 @@
     <!-- Primary Meta Tags -->
     <title>WFS (Web Feature Service) | Pozi Web GIS | Online Map</title>
     <meta name="title" content="WFS (Web Feature Service) | Pozi Web GIS | Online Map">
-    <meta name="description" content="GetCapabilities" />
+    <meta name="description" content="This service is soon to be retired. See 'DELWP DataVic (New)' below for details about the replacement service." />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pozi.github.io/PoziWebsite/developer-guide/dataset-configuration/data-sources/wfs/">
     <meta property="og:title" content="WFS (Web Feature Service) | Pozi Web GIS | Online Map">
-    <meta property="og:description" content="GetCapabilities">
+    <meta property="og:description" content="This service is soon to be retired. See 'DELWP DataVic (New)' below for details about the replacement service.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pozi.github.io/PoziWebsite/developer-guide/dataset-configuration/data-sources/wfs/">
     <meta property="twitter:title" content="WFS (Web Feature Service) | Pozi Web GIS | Online Map">
-    <meta property="twitter:description" content="GetCapabilities">
+    <meta property="twitter:description" content="This service is soon to be retired. See 'DELWP DataVic (New)' below for details about the replacement service.">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/PoziWebsite/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/PoziWebsite/favicon.ico" rel="icon" />
-    <link href="/PoziWebsite/resources/css/retype.css?v=2.2.705047118570" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/PoziWebsite/resources/css/retype.css?v=2.2.705223596609" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/PoziWebsite/resources/js/config.js?v=2.2.705047118570" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/PoziWebsite/resources/js/config.js?v=2.2.705223596609" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/PoziWebsite/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/PoziWebsite/resources/js/lunr.js?v=2.2.705047118570" defer></script>
-    <script id="prism-js" type="text/javascript" src="/PoziWebsite/resources/js/prism.js?v=2.2.705047118570" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/PoziWebsite/resources/js/lunr.js?v=2.2.705223596609" defer></script>
+    <script id="prism-js" type="text/javascript" src="/PoziWebsite/resources/js/prism.js?v=2.2.705223596609" defer></script>
 
     <!-- CSS overrides -->
     <link href="/PoziWebsite/static/css/retype-pozi.css" rel="stylesheet" />
@@ -266,6 +266,7 @@
         <span>DELWP DataVic</span>
     </h3>
 </doc-anchor-target>
+<p>This service is soon to be retired. See &#x27;DELWP DataVic (New)&#x27; below for details about the replacement service.</p>
 <ul>
 <li><a href="https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wfs?request=getCapabilities">GetCapabilities</a></li>
 <li><a href="https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/ows?SERVICE=WFS&amp;VERSION=1.1.0&amp;REQUEST=GetFeature&amp;srsName=EPSG%3A4326&amp;typeNames=VMPROP_PROPERTY_ADDRESS&amp;maxFeatures=500&amp;outputFormat=application%2Fjson&amp;CQL_FILTER=INTERSECTS(SHAPE,MULTIPOINT((-37.63734881455353%20142.54281720678077)))">Example GetFeature request</a></li>
@@ -362,6 +363,16 @@
 }</code></pre>
 </doc-codeblock></div>
 </doc-panel>
+<doc-anchor-target id="delwp-datavic-new">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#delwp-datavic-new">#</doc-anchor-trigger>
+        <span>DELWP DataVic (New)</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><a href="https://geoserver-uat.maps.vic.gov.au/geoserver/ows?service=WFS&amp;request=getCapabilities">GetCapabilities</a></li>
+<li><a href="https://geoserver-uat.maps.vic.gov.au/geoserver/ows?SERVICE=WFS&amp;REQUEST=GetFeature&amp;typeNames=open-data-platform:v_property_mp_address&amp;outputFormat=application%2Fjson&amp;CQL_FILTER=INTERSECTS(shape,point(-37.80736%20144.95948))">Example GetFeature request</a></li>
+</ul>
 <doc-anchor-target id="datagovau">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#datagovau">#</doc-anchor-trigger>
