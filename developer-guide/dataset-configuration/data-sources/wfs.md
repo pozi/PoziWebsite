@@ -7,6 +7,8 @@ sidebar_label: WFS
 
 ### DELWP DataVic
 
+This service is soon to be retired. See 'DELWP DataVic (New)' below for details about the replacement service.
+
 * [GetCapabilities](https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wfs?request=getCapabilities)
 * [Example GetFeature request](https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/ows?SERVICE=WFS&VERSION=1.1.0&REQUEST=GetFeature&srsName=EPSG%3A4326&typeNames=VMPROP_PROPERTY_ADDRESS&maxFeatures=500&outputFormat=application%2Fjson&CQL_FILTER=INTERSECTS(SHAPE,MULTIPOINT((-37.63734881455353%20142.54281720678077))))
 
@@ -103,6 +105,11 @@ sidebar_label: WFS
   ```
 
 ==-
+
+### DELWP DataVic (New)
+
+* [GetCapabilities](https://geoserver-uat.maps.vic.gov.au/geoserver/ows?service=WFS&request=getCapabilities)
+* [Example GetFeature request](https://geoserver-uat.maps.vic.gov.au/geoserver/ows?SERVICE=WFS&REQUEST=GetFeature&typeNames=open-data-platform:v_property_mp_address&outputFormat=application%2Fjson&CQL_FILTER=INTERSECTS(shape,point(-37.80736%20144.95948)))
 
 ### data.gov.au
 

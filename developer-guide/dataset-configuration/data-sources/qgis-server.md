@@ -25,6 +25,8 @@ title: QGIS Server
   }
   ```
 
+  Note that the `styleGeoStyler` URL for SLDs is `service=WMS` (not WFS).
+
 ==-
 
 ## WMS GetCapabilities

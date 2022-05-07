@@ -20,13 +20,13 @@ layout: central
 
 :::section
 
-  ## Building Connected Communities Through Spatial Thinking
+  # Building Connected Communities Through Spatial Thinking
 
   Pozi combines geographic information from local data sources and trusted web services to give your users the complete picture.
 
   Deploy for a fraction of cost of traditional GIS software, with no lock-in contracts.
 
-  [!button variant="primary" icon="checklist" size="xl" corners="pill" text="Discover Pozi's features >"](/features/)
+  [!button variant="primary" icon="checklist" size="2xl" corners="pill" text="Discover Pozi's features >"](/features/)
 
 :::
 

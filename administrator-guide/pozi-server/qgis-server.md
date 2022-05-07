@@ -1,5 +1,6 @@
 ---
 title: QGIS Server
+order: 90
 ---
 
 ## Installation
@@ -35,6 +36,12 @@ C:\Program Files (x86)\Pozi\server\iis\Pozi\QgisServer
 
 ### Install IIS
 
+!!!secondary Copying and pasting using command prompt
+
+When copying and pasting multiple lines into the command prompt, all lines will be executed except the last one. You must hit `Enter` for the last line to be executed.
+
+!!!
+
 In a new command prompt window, running as administrator:
 
 ```cmd
@@ -46,6 +53,8 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
 
 ```
 
+If IIS has not previously been set up on the server, the command prompt may return `Restart Windows to complete this operation`.  Restarting may be necessary for the subsequent configuration.
+
 ### Configure IIS
 
 ```cmd
@@ -53,6 +62,8 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
 "%systemroot%\system32\inetsrv\appcmd" add app /site.name:"Default Web Site" /path:/Pozi/QgisServer /physicalPath:"C:\Program Files (x86)\Pozi\server\iis\Pozi\QgisServer"
 
 ```
+
+If the command prompt returns `"C:\Windows\system32\inetsrv\appcmd" is not recognised as an internal or external command`, then a restart may be required before re-attempting this configuration step.
 
 There should be `web.config` file located at the following path:
 
@@ -86,9 +97,9 @@ NOTE: If you have installed QGIS Server to a location other than the default `C:
 
 ```
 
-#### Configure Environment Variables
+### Configure Environment Variables
 
-+++ Command Propmpt
++++ Command Prompt
 
 Copy and paste the following into the command prompt:
 
@@ -126,23 +137,24 @@ If the command prompt option doesn't work, you can configure the environment var
 
 Windows > IIS > select server > Fast CGISettings > select item we just configured > Edit > Environment variables:
 
-```
-PATH = "C:\OSGeo4W\apps\qgis-ltr\bin;C:\OSGeo4W\apps\qt5\bin;C:\OSGeo4W\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32\WBem"
-O4W_QT_PREFIX = "C:\OSGeo4W\apps\Qt5"
-O4W_QT_BINARIES = "C:\OSGeo4W\apps\Qt5\bin"
-O4W_QT_PLUGINS = "C:\OSGeo4W\apps\Qt5\plugins"
-O4W_QT_LIBRARIES = "C:\OSGeo4W\apps\Qt5\lib"
-O4W_QT_TRANSLATIONS = "C:\OSGeo4W\apps\Qt5\translations"
-O4W_QT_HEADERS = "C:\OSGeo4W\apps\Qt5\include"
-QGIS_PREFIX_PATH = "C:\OSGeo4W\apps\qgis-ltr"
-QT_PLUGIN_PATH = "C:\OSGeo4W\apps\qt5\plugins"
-TEMP = "C:\Windows\Temp"
-PYTHONHOME = "C:\OSGeo4W\apps\Python39"
-QGIS_SERVER_LOG_FILE = "C:\Program Files (x86)\Pozi\server\iis\logs\qgis_server.log"
-QGIS_SERVER_LOG_LEVEL = "0"
-QGIS_PLUGINPATH = "C:\OSGeo4W\apps\qgis-ltr\plugins"
+Name | Value 
+-----|------
+PATH | `C:\OSGeo4W\apps\qgis-ltr\bin;C:\OSGeo4W\apps\qt5\bin;C:\OSGeo4W\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32\WBem`
+O4W_QT_PREFIX | `C:\OSGeo4W\apps\Qt5`
+O4W_QT_BINARIES | `C:\OSGeo4W\apps\Qt5\bin`
+O4W_QT_PLUGINS | `C:\OSGeo4W\apps\Qt5\plugins`
+O4W_QT_LIBRARIES | `C:\OSGeo4W\apps\Qt5\lib`
+O4W_QT_TRANSLATIONS | `C:\OSGeo4W\apps\Qt5\translations`
+O4W_QT_HEADERS | `C:\OSGeo4W\apps\Qt5\include`
+QGIS_PREFIX_PATH | `C:\OSGeo4W\apps\qgis-ltr`
+QT_PLUGIN_PATH | `C:\OSGeo4W\apps\qt5\plugins`
+TEMP | `C:\Windows\Temp`
+PYTHONHOME | `C:\OSGeo4W\apps\Python39`
+QGIS_SERVER_LOG_FILE | `C:\Program Files (x86)\Pozi\server\iis\logs\qgis_server.log`
+QGIS_SERVER_LOG_LEVEL | `0`
+QGIS_PLUGINPATH | `C:\OSGeo4W\apps\qgis-ltr\plugins`
 
-```
+(End of `Manual Configuration` instructions)
 
 +++
 
@@ -171,13 +183,9 @@ Set permissions for `IIS AppPool\PoziQgisServer` :
 
 ![Grant read permission for Pozi Server data folder to IIS AppPool\PoziQgisServer](img/pozi-server-iis-apppool-poziqgisserver-permissions.png)
 
-## Reference for Pozi Developers
+### Configuring Clean URLs for QGIS Server FastCGI
 
-Development notes that may contain useful additional information for Pozi developers.
-
-* [https://github.com/pozi/PoziServer/pull/40#issuecomment-972331899](https://github.com/pozi/PoziServer/pull/40#issuecomment-972331899)
-
-## Configuring Clean URLs for QGIS Server FastCGI
+The following instructions relate to hiding the QGIS project file path from the GetCapabilities URL.
 
 ```cmd
 mkdir "C:\Program Files (x86)\Pozi\server\iis\Pozi\QgisServer\Next\Vicmap"
@@ -187,7 +195,7 @@ xcopy "C:\Program Files (x86)\Pozi\server\iis\Pozi\QgisServer\web.config" "C:\Pr
 
 Open the new `web.config` file located in the `C:\Program Files (x86)\Pozi\server\iis\Pozi\QgisServer\Next\Vicmap` folder and replace the `PoziQgisServerFastCgi` with `'PoziQgisServerNextVicmapFastCgi` -- please note that this handler name has to be unique which is why we are replacing it:
 
-```xml web.config
+```xml !#5 web.config
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <system.webServer>
@@ -220,3 +228,11 @@ Below we are going to create another application pool that we are going to set t
 And now QGIS Server should respond to query for that `QGIS_PROJECT_FILE` without including it in URL:
 
 http://local.pozi.com:3001/iis/qgisserver/next/vicmap?service=WMS&request=GetCapabilities
+
+!!!secondary Additional Reference for Clean URLs
+
+Development notes that may contain useful additional information for Pozi developers:
+
+* [https://github.com/pozi/PoziServer/pull/40#issuecomment-972331899](https://github.com/pozi/PoziServer/pull/40#issuecomment-972331899)
+
+!!!

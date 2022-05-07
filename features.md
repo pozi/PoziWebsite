@@ -90,8 +90,6 @@ Pozi Pro has optional constant GPS tracking that follows users as they walk or d
 Pozi Pro can generate custom map links to control exactly how the app appears to users. Focus your users' attention on what you want them to see, hiding unneeded datasets and buttons. Especially helpful for customer service and emailing map information specific to the customer.
 |||
 
-[!ref](/upgrade/)
-
 ## Pozi Enterprise
 
 Take your organisational data and public web page to the ultimate level. Pozi Enterprise has all the features of Pozi and Pozi Pro plus the following.
@@ -103,6 +101,8 @@ With Pozi Enterprise, staff will see live data for asset status, as well as insp
 ||| :icon-stack: <h4>GIS integration</h4>
 Enable staff to access map layers directly from your organisation’s network, including: MapInfo TAB, Esri Shapefile, PostGIS, SQL Server Spatial, GeoPackage, and any other GDAL-compatible source (SQLite, DXF, CSV, XLSX, VRT and more).
 |||
+
+[!ref icon="trophy" text="Upgrade to Pozi Enterprise"](/upgrade/)
 
 ## Pozi Enterprise Cloud
 
