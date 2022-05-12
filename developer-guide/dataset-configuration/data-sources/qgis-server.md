@@ -2,6 +2,12 @@
 title: QGIS Server
 ---
 
+!!!note
+
+When specifying the URL for QGS project files, any backslashes must be converted to forward slashes.
+
+!!!
+
 ## WFS GetCapabilities
 
 ==- Example Configuration
@@ -25,7 +31,7 @@ title: QGIS Server
   }
   ```
 
-  Note that the `styleGeoStyler` URL for SLDs is `service=WMS` (not WFS).
+  Note that the GetStyles URL for SLDs is `service=WMS` (not WFS).
 
 ==-
 

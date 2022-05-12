@@ -27,14 +27,18 @@ order: 100
 
 Desktop shortcuts:
 
-* `C:\Program Files (x86)\Pozi`
-* `C:\Program Files (x86)\Pozi\server\pipeline\.shell.cmd` (rename shorctut to 'GDAL Shell')
-* GIS data folder(s)
-* `C:\Windows\System32\drivers\etc\hosts`
+* GIS data folder
+* Pozi site shortcut (from browser, go Options > More tools > Create shortcut)
+* Pozi site config shortcut
+* Pozi folder: `C:\Program Files (x86)\Pozi`
+* GDAL Shell:`C:\Program Files (x86)\Pozi\server\pipeline\.shell.cmd`
+* Pozi Server log: `C:\Program Files (x86)\Pozi\server\server.log`
+* QGIS Server log:`C:\Program Files (x86)\Pozi\server\iis\logs\qgis_server.log`
 
 Pin to taskbar:
 
 * Windows > Services
+* Windows > IIS
 
 File associations:
 

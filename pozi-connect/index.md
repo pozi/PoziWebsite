@@ -3,6 +3,7 @@ title: Pozi Connect
 order: 20
 visibility: public
 icon: table
+tags: [Pozi Connect]
 ---
 
 Pozi Connect is a powerful data extraction and processing application that extracts data from multiple spatial and non-spatial sources to generate derived datasets and map layers.

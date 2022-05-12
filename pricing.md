@@ -23,22 +23,33 @@ Pozi delivers powerful location-based functionality at a fraction of the cost of
 | ✔️ Zero installation | ✔️ Multi-select |  |  |
 | ✔️ Custom maps | ✔️ Custom bookmarking |  |  |
 | | ✔️ GPS tracking |  |  |
+| [More info](/features/#pozi-public) | [More info](/features/#pozi-pro) | [More info](/features/#pozi-enterprise) | [More info](/features/#pozi-enterprise-cloud) |
 
-[!ref](/upgrade/)
+[!ref icon="trophy"](/upgrade/)
 
 ## Add-Ons
 
-### 3D Imagery
+### 3D Viewer
 
-Use Pozi to visualise your 3D imagery. Compatiable with [Cesium 3D tile format](https://cesium.com/why-cesium/3d-tiles/).
+<img src="/PoziWebsite/static/img/tweet-gallery/3d-poc.jpg" alt="" style="float:right;width:400px;margin:0px 40px;">
+
+Use Pozi to visualise your 3D imagery. Toggle between 2D and 3D viewing modes. Compatiable with [Cesium 3D tile format](https://cesium.com/why-cesium/3d-tiles/).
 
 <small>AUD</small>$3K<small>/year</small>
 
+<br clear="all" />
+<br/>
+
 ### Community Consultation
+
+<img src="/PoziWebsite/static/img/tweet-gallery/horsham_corellas_wrap_up.png" alt="" style="float:right;width:400px;margin:0px 40px;">
 
 The Pozi Pro, Enterprise and Enterprise Cloud offerings include up to two concurrent community consultation campaigns. You may purchase additional campaigns over and above the included ones.
 
 <small>AUD</small>$1500<small>/year</small>
+
+<br clear="all" />
+<br/>
 
 ### Pozi Connect for M1s
 

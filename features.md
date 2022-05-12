@@ -37,6 +37,7 @@ Pozi maps are fully responsive to fit on any device. Whether your customers are 
 |||
 
 <br/>
+<br/>
 
 ### Intelligent with pinpoint GPS accuracy
 
@@ -48,6 +49,8 @@ Pozi maps incorporates GPS to help customers out-and-about find their current lo
 Aerial imagery allows users to clearly see the visual landmarks of their location including buildings, roads and vegetation. With a single click, customers can toggle on or off an aerial photo layer.
 |||
 
+<br/>
+
 ### Unlimited users, zero install & custom maps
 
 ||| :icon-people: <h4>Unlimited users</h4>
@@ -57,6 +60,8 @@ Users don’t need to install any specialty software to use Pozi. The online map
 ||| :icon-copy: <h4>Custom maps</h4>
 Pozi allows you to have unlimited, embeddable and bookmarkable maps customised to your organisation’s data.
 |||
+
+<br/>
 
 ## Pozi Pro
 
@@ -70,6 +75,8 @@ With Pozi Pro, users can search for a location using information other than an a
 Whenever a user searches for their address or location, Pozi Pro shows the nearest facilities and services to that address, helping users quickly get their bearings.
 |||
 
+<br/>
+
 ### Multiple layers & widgets
 
 ||| :icon-stack: <h4>Multiple imagery layers</h4>
@@ -80,6 +87,8 @@ Pozi Pro's map widget that allows you to embed an address search box on your web
 Different from Map Widget, the Information Widget allows an address search field to be embedded on your website to display property-specific information (without a map launch), such as council bin collection dates.
 |||
 
+<br/>
+
 ### Filtering, GPS tracking and bookmarks
 
 ||| :icon-sort-desc: <h4>Layer filter & mulit-select</h4>
@@ -89,6 +98,8 @@ Pozi Pro has optional constant GPS tracking that follows users as they walk or d
 ||| :icon-bookmark: <h4>Custom bookmarking</h4>
 Pozi Pro can generate custom map links to control exactly how the app appears to users. Focus your users' attention on what you want them to see, hiding unneeded datasets and buttons. Especially helpful for customer service and emailing map information specific to the customer.
 |||
+
+<br/>
 
 ## Pozi Enterprise
 
@@ -103,6 +114,8 @@ Enable staff to access map layers directly from your organisation’s network, i
 |||
 
 [!ref icon="trophy" text="Upgrade to Pozi Enterprise"](/upgrade/)
+
+<br/>
 
 ## Pozi Enterprise Cloud
 

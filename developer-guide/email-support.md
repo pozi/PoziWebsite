@@ -1,6 +1,6 @@
 ---
 title: Email Support
-sidebar_position: 30
+order: 30
 ---
 
 When clients send an email to [support@pozi.com](mailto:support@pozi.com), an issue is created in the Help Scout service, and nominated service agents are notified by email.

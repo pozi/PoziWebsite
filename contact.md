@@ -5,9 +5,6 @@ description: Get in touch with Pozi!
 
 # Contact
 
-<big>Pozi Pty Ltd</big><br/>
-ABN: 22 633 153 385
-
 #### Email
 
 General enquiries: info@pozi.com<br/>
@@ -20,11 +17,14 @@ Support enquiries: support@pozi.com
 
 #### Address
 
+Pozi Pty Ltd<br/>
 Level 7, 575 Bourke Street<br/>
 Melbourne VIC 3000<br/>
 Australia
 
-<iframe width="100%" height="300px" src="https://contact.pozi.com/#/layers[heresatellite]/"></iframe>
+ABN: 22 633 153 385
+
+<iframe width="100%" height="300px" src="https://contact.pozi.com/"></iframe>
 
 <br/>
 <br/>
@@ -33,3 +33,10 @@ Australia
 
 [Twitter](https://twitter.com/PoziApp)<br/>
 [LinkedIn](https://www.linkedin.com/company/poziapp)
+
+---
+
+#### Business
+
+Pozi Pty Ltd<br/>
+ABN: 22 633 153 385
