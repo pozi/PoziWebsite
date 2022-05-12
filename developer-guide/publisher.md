@@ -1,5 +1,6 @@
 ---
 title: Publisher
+order: 50
 ---
 
 # Pozi Publisher Configuration

@@ -1,6 +1,6 @@
 ---
 title: Building Pozi Connect
-sidebar_position: 999
+order: 0
 ---
 
 ## Requirements

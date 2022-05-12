@@ -1,6 +1,6 @@
 ---
 title: Community Consultation
-sidebar_position: 10
+order: 50
 ---
 
 *Community consultation is available for **Pozi Pro**, **Enterprise** and **Enterprise Cloud** offerings.*

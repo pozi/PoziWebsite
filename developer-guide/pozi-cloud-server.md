@@ -1,5 +1,6 @@
 ---
 title: Pozi Cloud Server
+order: 60
 ---
 
 * From external: https://d2nozjvesbm579.cloudfront.net/
@@ -7,10 +8,37 @@ title: Pozi Cloud Server
 
 ## Example Requests
 
-* `https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=frankston/property-valuation-information.vrt&options=-where|propertynumber='214855'`
-* `https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=data.gov.au/bendigo/cogb-recreation-drinking-fountains.shz`
+* https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=frankston/property-valuation-information.vrt&options=-where|propertynumber='214855'
+* https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=data.gov.au/bendigo/cogb-recreation-drinking-fountains.shz
 
-## Maintenance
+## Data Configuration
+
+### Sync from data.gov.au
+
+By special arrangement, selected datasets published by clients to data.gov.au can be imported/synchronised to the Pozi Cloud for caching and/or joining with other datasets.
+
+To include a new dataset in the overnight import, update the nightly batch file.
+
+```bat C:\Program Files (x86)\Pozi\userdata\tasks\sync-from-datagovau.bat
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: Bendigo
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+cd "C:\Program Files (x86)\Pozi\userdata\ec 21354118232\data.gov.au\bendigo"
+
+curl -L -O https://data.gov.au/dataset/b3ed25b6-c414-4386-9752-c8d1338ab75f/resource/78a2c2b1-625d-4d6a-9ca5-19b3407b79e7/download/cogb-recreation-drinking-fountains.shz
+curl -L -O https://data.gov.au/dataset/f9d52171-c5f1-4d49-9fc0-77dc9a3aae8c/resource/1a550471-4aff-4550-b5ea-2ac6b2139c98/download/cogb-assets-drainage-pits.shz
+curl -L -O https://data.gov.au/dataset/573626a7-2435-4145-9671-12697bb84301/resource/05affd86-b0ed-4867-a8ed-8f90b8eaa9f4/download/cogb-community-mach-centres.shz
+curl -L -O https://data.gov.au/dataset/09161aac-fcdc-4be0-8284-7760d631b70e/resource/ab1c863c-20ef-4a16-b564-5d596617f383/download/cogb-assets-roads.shz
+curl -L -O https://data.gov.au/dataset/09161aac-fcdc-4be0-8284-7760d631b70e/resource/8ab7005a-2a37-43e6-907d-38a497f7c37e/download/cogb-assets-roads.sld
+curl -L -O https://data.gov.au/dataset/d17c9e50-fab1-40e6-b91d-6e665faf2656/resource/b3f01081-924c-41b7-989a-cf521ca136ea/download/cogb-environment-trees.shz
+```
+
+The scheduled task associated with this batch file downloads the specified datasets to a subfolder of Pozi Server's `userdata\ec 21354118232\` folder, where they can be called from the `ogr2ogr` API. For example:
+
+https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=data.gov.au/bendigo/cogb-recreation-drinking-fountains.shz
+
+## Server Maintenance
 
 ### EC2 Issues
 

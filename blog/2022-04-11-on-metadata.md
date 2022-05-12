@@ -5,7 +5,7 @@ author: Simon O'Keefe
 
 # On Metadata
 
-I recently went came across an email I'd sent to a client from a couple of years ago in response to their enquiry about whether they should implement a metadata system for their GIS.
+I recently came across an email I'd sent to a client from a couple of years ago in response to their enquiry about whether they should implement a metadata system for their GIS.
 
 Here was my response:
 
