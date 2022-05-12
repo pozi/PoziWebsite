@@ -32,11 +32,12 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/PoziWebsite/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/PoziWebsite/favicon.ico" rel="icon" />
-    <link href="/PoziWebsite/resources/css/retype.css?v=2.2.705565658278" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/PoziWebsite/resources/css/retype.css?v=2.2.705638754155" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/PoziWebsite/resources/js/config.js?v=2.2.705565658278" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/PoziWebsite/resources/js/config.js?v=2.2.705638754155" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/PoziWebsite/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/PoziWebsite/resources/js/lunr.js?v=2.2.705565658278" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/PoziWebsite/resources/js/lunr.js?v=2.2.705638754155" defer></script>
+    <script id="prism-js" type="text/javascript" src="/PoziWebsite/resources/js/prism.js?v=2.2.705638754155" defer></script>
 
     <!-- CSS overrides -->
     <link href="/PoziWebsite/static/css/retype-pozi.css" rel="stylesheet" />
@@ -264,13 +265,44 @@
     </h2>
 </doc-anchor-target>
 <ul>
-<li><code v-pre>https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=frankston/property-valuation-information.vrt&amp;options=-where|propertynumber='214855'</code></li>
-<li><code v-pre>https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=data.gov.au/bendigo/cogb-recreation-drinking-fountains.shz</code></li>
+<li><a href="https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=frankston/property-valuation-information.vrt&amp;options=-where%7Cpropertynumber=%27214855%27">https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=frankston/property-valuation-information.vrt&amp;options=-where|propertynumber=&#x27;214855&#x27;</a></li>
+<li><a href="https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=data.gov.au/bendigo/cogb-recreation-drinking-fountains.shz">https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=data.gov.au/bendigo/cogb-recreation-drinking-fountains.shz</a></li>
 </ul>
-<doc-anchor-target id="maintenance">
+<doc-anchor-target id="data-configuration">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#maintenance">#</doc-anchor-trigger>
-        <span>Maintenance</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#data-configuration">#</doc-anchor-trigger>
+        <span>Data Configuration</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="sync-from-datagovau">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#sync-from-datagovau">#</doc-anchor-trigger>
+        <span>Sync from data.gov.au</span>
+    </h3>
+</doc-anchor-target>
+<p>By special arrangement, selected datasets published by clients to data.gov.au can be imported/synchronised to the Pozi Cloud for caching and/or joining with other datasets.</p>
+<p>To include a new dataset in the overnight import, update the nightly batch file.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">C:\Program Files (x86)\Pozi\userdata\tasks\sync-from-datagovau.bat</div>
+<pre class="language-batch"><code v-pre class="language-batch">:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: Bendigo
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+cd &quot;C:\Program Files (x86)\Pozi\userdata\ec 21354118232\data.gov.au\bendigo&quot;
+
+curl -L -O https://data.gov.au/dataset/b3ed25b6-c414-4386-9752-c8d1338ab75f/resource/78a2c2b1-625d-4d6a-9ca5-19b3407b79e7/download/cogb-recreation-drinking-fountains.shz
+curl -L -O https://data.gov.au/dataset/f9d52171-c5f1-4d49-9fc0-77dc9a3aae8c/resource/1a550471-4aff-4550-b5ea-2ac6b2139c98/download/cogb-assets-drainage-pits.shz
+curl -L -O https://data.gov.au/dataset/573626a7-2435-4145-9671-12697bb84301/resource/05affd86-b0ed-4867-a8ed-8f90b8eaa9f4/download/cogb-community-mach-centres.shz
+curl -L -O https://data.gov.au/dataset/09161aac-fcdc-4be0-8284-7760d631b70e/resource/ab1c863c-20ef-4a16-b564-5d596617f383/download/cogb-assets-roads.shz
+curl -L -O https://data.gov.au/dataset/09161aac-fcdc-4be0-8284-7760d631b70e/resource/8ab7005a-2a37-43e6-907d-38a497f7c37e/download/cogb-assets-roads.sld
+curl -L -O https://data.gov.au/dataset/d17c9e50-fab1-40e6-b91d-6e665faf2656/resource/b3f01081-924c-41b7-989a-cf521ca136ea/download/cogb-environment-trees.shz</code></pre>
+</doc-codeblock></div>
+<p>The scheduled task associated with this batch file downloads the specified datasets to a subfolder of Pozi Server&#x27;s <code v-pre>userdata\ec 21354118232\</code> folder, where they can be called from the <code v-pre>ogr2ogr</code> API. For example:</p>
+<p><a href="https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=data.gov.au/bendigo/cogb-recreation-drinking-fountains.shz">https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=data.gov.au/bendigo/cogb-recreation-drinking-fountains.shz</a></p>
+<doc-anchor-target id="server-maintenance">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#server-maintenance">#</doc-anchor-trigger>
+        <span>Server Maintenance</span>
     </h2>
 </doc-anchor-target>
 <doc-anchor-target id="ec2-issues">
@@ -330,20 +362,20 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/PoziWebsite/developer-guide/onboarding/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/PoziWebsite/developer-guide/configuring-widgets/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Onboarding</span>
+                                                <span class="block mt-1">Configuring Widgets</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/PoziWebsite/developer-guide/proxy-service/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/PoziWebsite/developer-guide/community-consultation/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Proxy Service</span>
+                                                <span class="block mt-1">Community Consultation</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -417,6 +449,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Pozi Cloud Server", icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Pozi Cloud Server", icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>

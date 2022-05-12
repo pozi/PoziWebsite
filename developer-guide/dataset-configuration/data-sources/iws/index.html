@@ -32,12 +32,12 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/PoziWebsite/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/PoziWebsite/favicon.ico" rel="icon" />
-    <link href="/PoziWebsite/resources/css/retype.css?v=2.2.705565658278" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/PoziWebsite/resources/css/retype.css?v=2.2.705638754155" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/PoziWebsite/resources/js/config.js?v=2.2.705565658278" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/PoziWebsite/resources/js/config.js?v=2.2.705638754155" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/PoziWebsite/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/PoziWebsite/resources/js/lunr.js?v=2.2.705565658278" defer></script>
-    <script id="prism-js" type="text/javascript" src="/PoziWebsite/resources/js/prism.js?v=2.2.705565658278" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/PoziWebsite/resources/js/lunr.js?v=2.2.705638754155" defer></script>
+    <script id="prism-js" type="text/javascript" src="/PoziWebsite/resources/js/prism.js?v=2.2.705638754155" defer></script>
 
     <!-- CSS overrides -->
     <link href="/PoziWebsite/static/css/retype-pozi.css" rel="stylesheet" />
@@ -272,7 +272,7 @@
     </h3>
 </doc-anchor-target>
 <p><a href="http://images.land.vic.gov.au/ecwp/ecw_wms.dll?service=WMS&amp;request=getcapabilities">http://images.land.vic.gov.au/ecwp/ecw_wms.dll?service=WMS&amp;request=getcapabilities</a></p>
-<p>Current GetCapabilities is over 13MB in one long line. Use <a href="https://stackoverflow.com/questions/3961217/how-do-i-format-xml-in-notepad">https://stackoverflow.com/questions/3961217/how-do-i-format-xml-in-notepad</a> to format output.</p>
+<p>The current GetCapabilities is over 13MB in one long line. Save it to a text file and use <a href="https://stackoverflow.com/questions/3961217/how-do-i-format-xml-in-notepad">https://stackoverflow.com/questions/3961217/how-do-i-format-xml-in-notepad</a> to format the text into a readable form.</p>
 <doc-anchor-target id="outages">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#outages">#</doc-anchor-trigger>
@@ -280,6 +280,13 @@
     </h3>
 </doc-anchor-target>
 <p>Report to <a href="mailto:gis.helpdesk@delwp.vic.gov.au">gis.helpdesk@delwp.vic.gov.au</a></p>
+<doc-anchor-target id="support">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#support">#</doc-anchor-trigger>
+        <span>Support</span>
+    </h3>
+</doc-anchor-target>
+<p>Email <a href="mailto:coordinated.imagery@delwp.vic.gov.au">coordinated.imagery@delwp.vic.gov.au</a></p>
 <doc-anchor-target id="configuration">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#configuration">#</doc-anchor-trigger>
@@ -355,7 +362,7 @@
 <a href="http://images.land.vic.gov.au/iwsadmin/">http://images.land.vic.gov.au/iwsadmin/</a></p>
 <p>Credentials for the Image Web Server:
 <a href="http://services.land.vic.gov.au/MyProfile/">http://services.land.vic.gov.au/MyProfile/</a></p>
-<p>If councils don&#x27;t already have credentials, tell them to get in touch with John White: <a href="mailto:john.white@delwp.vic.gov.au">john.white@delwp.vic.gov.au</a>, 03 9194 0204.</p>
+<p>If councils don&#x27;t already have credentials, tell them to email <a href="mailto:coordinated.imagery@delwp.vic.gov.au">coordinated.imagery@delwp.vic.gov.au</a>.</p>
 <p>Client credentials: <a href="https://github.com/groundtruth/PoziProxy/blob/master/lib/pozi-auth.js">https://github.com/groundtruth/PoziProxy/blob/master/lib/pozi-auth.js</a></p>
 <doc-anchor-target id="troubleshooting">
     <h2>
@@ -382,7 +389,7 @@
         <span>No spaces allowed in ecw image layer set</span>
     </h4>
 </doc-anchor-target>
-<p>When there are multiple ecws for the same aerial layer, separated by commas, no spaces are allowed before and after the commas.  If there is a space then the ecw images after that point in the layer set will not b displayed.</p>
+<p>When there are multiple ecws for the same aerial layer, separated by commas, no spaces are allowed before and after the commas.  If there is a space then the ecw images after that point in the layer set will not be displayed.</p>
 <doc-anchor-target id="get-layer-name">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#get-layer-name">#</doc-anchor-trigger>

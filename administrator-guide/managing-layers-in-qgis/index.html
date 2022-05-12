@@ -22,23 +22,23 @@
     <meta property="og:url" content="https://pozi.github.io/PoziWebsite/administrator-guide/managing-layers-in-qgis/">
     <meta property="og:title" content="Managing Layers in QGIS | Pozi Web GIS | Online Map">
     <meta property="og:description" content="Available for Pozi Enterprise and Enterprise Cloud customers">
-    <meta property="og:image" content="https://pozi.github.io/PoziWebsite/administrator-guide/img/qgis-project-properties-wms-configuration.png">
+    <meta property="og:image" content="https://pozi.github.io/PoziWebsite/administrator-guide/img/iis-application-pool-recycle.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pozi.github.io/PoziWebsite/administrator-guide/managing-layers-in-qgis/">
     <meta property="twitter:title" content="Managing Layers in QGIS | Pozi Web GIS | Online Map">
     <meta property="twitter:description" content="Available for Pozi Enterprise and Enterprise Cloud customers">
-    <meta property="twitter:image" content="https://pozi.github.io/PoziWebsite/administrator-guide/img/qgis-project-properties-wms-configuration.png">
+    <meta property="twitter:image" content="https://pozi.github.io/PoziWebsite/administrator-guide/img/iis-application-pool-recycle.png">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/PoziWebsite/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/PoziWebsite/favicon.ico" rel="icon" />
-    <link href="/PoziWebsite/resources/css/retype.css?v=2.2.705565658278" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/PoziWebsite/resources/css/retype.css?v=2.2.705638754155" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/PoziWebsite/resources/js/config.js?v=2.2.705565658278" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/PoziWebsite/resources/js/config.js?v=2.2.705638754155" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/PoziWebsite/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/PoziWebsite/resources/js/lunr.js?v=2.2.705565658278" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/PoziWebsite/resources/js/lunr.js?v=2.2.705638754155" defer></script>
 
     <!-- CSS overrides -->
     <link href="/PoziWebsite/static/css/retype-pozi.css" rel="stylesheet" />
@@ -262,7 +262,7 @@
         <span>Introduction</span>
     </h2>
 </doc-anchor-target>
-<p>The popular open source QGIS application provides a powerful and convenient way to compile and configure map layers for publishing local datasets to internal Pozi users.</p>
+<p>The popular open source QGIS desktop application provides a powerful and convenient way to compile and configure map layers for publishing local datasets to internal Pozi users.</p>
 <p>A QGIS project file (*.qgs) represents a layer group within Pozi.</p>
 <doc-anchor-target id="qgis-configuration">
     <h2>
@@ -296,10 +296,11 @@
 <p>When adding new file-based layers, we recommend to use the layer&#x27;s absolute file path (UNC) to ensure that the service under which the QGIS Server is running can recognise the path.</p>
 <p>Often your own user account may have certain drives mapped for convenience, so you might be used to working with data using file paths that refer to a drive letter (eg, <code v-pre>S:\</code> or <code v-pre>V:\</code>). However, the domain user account that runs QGIS Server often won&#x27;t have these drives mapped.</p>
 <p>A UNC path is an absolute path that is recognised by all user accounts, regardless of what drives are mapped on startup. An example UNC path might look like this:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">\\ad.hrcc.vic.gov.au\shared\GIS\</code></pre>
-</doc-codeblock></div>
-<p>Add the UNC path as a <em>Favorite</em> in the QGIS Browser panel for easy access. Learn more <a href="https://docs.qgis.org/3.22/en/docs/user_manual/introduction/browser.html#favorites">here</a>. Also add a shortcut to the UNC location on your PC desktop for extra convenience.</p>
+<ul>
+<li><code v-pre>\\ad.hrcc.vic.gov.au\shared\GIS\</code></li>
+<li><code v-pre>\\bs-intra\GIS\</code></li>
+</ul>
+<p>Add the UNC path of your GIS data folder as a <em>Favorite</em> in the QGIS Browser panel for easy access. Learn more <a href="https://docs.qgis.org/3.22/en/docs/user_manual/introduction/browser.html#favorites">here</a>. Also add a shortcut to the UNC location on your PC desktop for extra convenience.</p>
 <doc-anchor-target id="configuring-layers">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#configuring-layers">#</doc-anchor-trigger>
@@ -320,6 +321,24 @@
 <li><a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#labels-properties">add labels</a></li>
 <li><a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#fields-properties">modify fields</a></li>
 </ul>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
+                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>Some changes may not be available immediately in Pozi. If you encounter an issue such as a recently added or renamed layer not loading, restart the IIS application pool.</p>
+<p>Windows &gt; IIS &gt; (select server) &gt; Application Pools &gt; PoziQgisServer &gt; Recycle</p>
+<p><img src="../img/iis-application-pool-recycle.png" style="width:400px" alt="" /></p>
+        </div>
+    </div>
+</div>
 <doc-anchor-target id="enable-project-as-wms-service">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#enable-project-as-wms-service">#</doc-anchor-trigger>
@@ -396,7 +415,6 @@
             </svg>
         </div>
         <div class="pr-5 ml-3 w-full">
-            <h5>DANGER</h5>
 <p>Extreme care should be taken when <strong>deleting, moving or renaming</strong> any table files that are referenced by a QGIS project file.</p>
 <p>If such a change is made to a table while it is registered as a layer in a QGIS project, it will cause QGIS Server to return an error and prevent Pozi from loading any layers from that project.</p>
 <p>In this scenario, <strong>all layers belonging to the project will no longer appear in the layer panel.</strong></p>
