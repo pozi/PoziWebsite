@@ -1,5 +1,6 @@
 ---
 title: Print
+icon: file-symlink-file
 ---
 
 :::note Under Construction

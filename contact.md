@@ -22,8 +22,6 @@ Level 7, 575 Bourke Street<br/>
 Melbourne VIC 3000<br/>
 Australia
 
-ABN: 22 633 153 385
-
 <iframe width="100%" height="300px" src="https://contact.pozi.com/"></iframe>
 
 <br/>
@@ -38,5 +36,5 @@ ABN: 22 633 153 385
 
 #### Business
 
-Pozi Pty Ltd<br/>
+**Pozi Pty Ltd**<br/>
 ABN: 22 633 153 385

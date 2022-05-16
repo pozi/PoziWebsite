@@ -1,6 +1,7 @@
 ---
 title: Navigate
 sidebar_position: 1
+icon: milestone
 ---
 
 :::note Under Construction

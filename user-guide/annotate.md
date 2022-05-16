@@ -1,5 +1,7 @@
 ---
 title: Annotate
+icon: pencil
+order: -100
 ---
 
 :::note Under Construction

@@ -32,6 +32,7 @@ layout: central
 
 <br clear="all" />
 <br/>
+<br/>
 
 <!--- END HEADING --->
 
@@ -77,21 +78,17 @@ Our team works with you to customise and maintain your map application - you're 
 
 :::
 
-![](/PoziWebsite/static/img/smartmockups_jno2fteq_1000x649.png)
+--![](/PoziWebsite/static/img/smartmockups_jno2fteq_1000x649.png)--
 
 <br/>
 
 <!--- END SECTION - VISUALISE --->
 
-#### Ultimate connectability
-
-Eliminate data double-handling by accessing data directly from any local or remote source
-
 <!--- START SECTION - CLIENTS --->
 
 :::section
 
-  ### What our clients say...
+  ## What our clients say...
 
 :::
 
@@ -153,8 +150,6 @@ Eliminate data double-handling by accessing data directly from any local or remo
 
 <!--- END SECTION - SHOWCASE --->
 
-<!--- START SECTION - WHY --->
-
 :::section
 
 ## Why Pozi?
@@ -169,7 +164,17 @@ Help customers with their location-based enquiries
 Promote local places, facilities events and services to customers
 |||
 
+<br/>
+
 <big>Pozi is an intuitive, interactive, location-based communication platform for your internal and external users that aggregates geographic information from multiple sources in an simple web interface, at a fraction of the cost of traditional Geographic Information System (GIS) software.</big>
+
+:::
+
+:::section
+
+## Ultimate connectability
+
+Eliminate data double-handling by accessing data directly from any local or remote source
 
 :::
 
@@ -225,21 +230,30 @@ Deliver data to staff and public – easily and affordably. Users can access the
 [!ref icon="checklist" text="Discover Pozi's features"](/features/)
 [!ref icon="mention" text="Contact us today!"](/contact/)
 
-<!--- END SECTION - WHY --->
+:::section
+
+## Powered by QGIS
+
+--![](/PoziWebsite/static/img/tweet-gallery/northern_grampians_waste_route_styling.png)--
+
+  Use QGIS or MapManager to configure layer catalogues, including adding data sources, layer styling, filtering, data joins, metadata, and more.
+
+  Take advantage of open source resources such as documentation, tutorials, community forums and training to further build your Pozi site's capabilities.
+
+:::
 
 <!--- START SECTION - ABOUT --->
 
 :::section
 
-  ### Helping organisations with GIS since 1999
+  ## Supporting GIS since 1999
 
   For over twenty years, Pozi (formerly Groundtruth) has helped organisations to work more efficiently and gain greater insights into their clients, resources, activities and risks by making use of location-based information in their business processes.
 
-  [!button variant="info" icon="organization" size="xl" corners="pill" text="About us >"](/about/)
+  [!button variant="info" icon="organization" size="2xl" corners="pill" text="About us >"](/about/)
 
 :::
 
-<br clear="all" />
 <br/>
 
 <!--- END SECTION - ABOUT --->
@@ -252,7 +266,7 @@ Deliver data to staff and public – easily and affordably. Users can access the
 
   <big>Contact us to discuss a free, 60 day Pozi trial or for a friendly chat about how we can work with you to deliver your organisation's needs.</big>
 
-  [!button variant="info" icon="mention" size="xl" corners="pill" text="Contact us >"](/contact/)
+  [!button variant="info" icon="mention" size="2xl" corners="pill" text="Contact us >"](/contact/)
 
 :::
 

@@ -14,7 +14,7 @@ When DELWP requests you to submit a PIQA extract for your council, follow these 
 
 1. Download the [Pozi Connect installer](https://github.com/pozi/PoziConnect/releases/latest). (If you have a previous installation of Pozi Connect, please remove it before proceeding by deleting your existing `PoziConnect` folder.)
 2. Run the installer, and when it prompts you, specify a folder location. You can choose anywhere; somewhere like `C:\Temp\` or the desktop will be sufficient.
-3. Navigate to the newly-created PoziConnect folder location, and run PoziConnect.exe by double-clicking it.
+3. Navigate to the newly-created `PoziConnect` folder location, and run `PoziConnect.exe` by double-clicking it.
 4. From the Task drop-down list, select the item that relates to your council (eg, Alpine Shire Council would choose 'Alpine PIQA'). If you are prompted for a database username and/or password, enter them. You may have your own credentials that you can use, or you may use the database administrator credentials. Then click OK and wait for the application to run (it can take several minutes).
 5. Check the `PoziConnect\output` folder (or you may have specified your own location in the settings) for a newly created 'PIQA Export.zip' file. This file contains two CSV spreadsheets that have been generated from the council’s property and address data. Email the zip file to your DELWP contact.
 

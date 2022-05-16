@@ -1,7 +1,7 @@
 ---
 title: Search
-sidebar_position: 2
-
+order: 100
+icon: search
 ---
 
 :::note Under Construction

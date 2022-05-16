@@ -1,5 +1,6 @@
 ---
 title: Report
+icon: checklist
 ---
 
 :::note Under Construction

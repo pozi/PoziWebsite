@@ -53,7 +53,7 @@ But
 
 * Does going cloud enable 
 
-#### Legitimate reaons to go cloud
+#### Legitimate reasons to go cloud
 
 Ask your vendor if you'll gain any of the usual advantages of moving to the cloud
 

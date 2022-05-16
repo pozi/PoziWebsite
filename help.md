@@ -1,8 +1,18 @@
 ---
+title: Help Centre
 layout: central
 ---
 
-# Help Centre
+#
+
+<div style="text-align:center;">
+  <h1>Help Centre</h1>
+  <img src="/PoziWebsite/static/img/undraw/undraw_team_collaboration_re_ow29.svg" style="width:500px">
+</div>
+
+<br/>
+
+Welcome to the documentation for Pozi. Here, you can find information about using, administering and developing with Pozi.
 
 <br/>
 
@@ -17,6 +27,14 @@ layout: central
 ## Specialty Software
 
 [!ref icon="table" text="Pozi Connect"](/pozi-connect/)
+
+---
+
+## Property Dashboard
+
+[!ref icon="milestone" text="Property Dashboard"](/property-dashboard/)
+
+---
 
 ## Further Help
 
