@@ -1,6 +1,7 @@
 ---
 title: Enquire
 sidebar_position: 3
+icon: location
 ---
 
 :::note Under Construction

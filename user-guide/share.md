@@ -1,5 +1,6 @@
 ---
 title: Share
+icon: share-android
 ---
 
 :::note Under Construction

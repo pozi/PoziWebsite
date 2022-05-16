@@ -4,11 +4,17 @@ layout: central
 
 # Pricing
 
+<br/>
+
+![](/PoziWebsite/static/img/undraw/undraw_options_re_9vxh.svg){style="width:300px"}
+
+<br/>
+
 Pozi delivers powerful location-based functionality at a fraction of the cost of traditional Geographic Information System (GIS) software.
 
 ***No long-term, lock-in contracts***
 
-| :icon-megaphone: <h2>Public</h2> | :icon-tools: <h2>Pro</h2> | :icon-organization: <h2>Enterprise</h2> | :icon-rocket: <h2>Enterprise Cloud</h2> | { class="compact" }
+| :icon-megaphone: <h3>Public</h3> | :icon-tools: <h3>Pro</h3> | :icon-organization: <h3>Enterprise</h3> | :icon-rocket: <h3>Enterprise Cloud</h3> | { class="compact" }
 ---    | ---
 | <small>*Perfect for publishing your organisation's data to the public*</small> | <small>*When your users demand a higher level of interaction*</small> | <small>*A high functioning replacement for your inhouse GIS enquiry tool*</small> | <small>*Ultimate integration with your organisation’s cloud infrastructure*</small> |
 | <small>AUD</small><big>**$6K**</big><small>/year</small> | <small>AUD</small><big>**$9K**</big><small>/year</small> | <small>AUD</small><big>**$12K**</big><small>/year</small> | <small>AUD</small><big>**$15K**</big><small>/year</small> |
@@ -26,6 +32,8 @@ Pozi delivers powerful location-based functionality at a fraction of the cost of
 | [More info](/features/#pozi-public) | [More info](/features/#pozi-pro) | [More info](/features/#pozi-enterprise) | [More info](/features/#pozi-enterprise-cloud) |
 
 [!ref icon="trophy"](/upgrade/)
+
+---
 
 ## Add-Ons
 

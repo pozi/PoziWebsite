@@ -1,5 +1,6 @@
 ---
 title: Track
+icon: pulse
 ---
 
 :::note Under Construction

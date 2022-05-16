@@ -1,8 +1,8 @@
 ---
-title: Pozi Connect for M1s
+title: M1s
 ---
 
-Pozi Connect generates council 'M1' reports that are critical link for updating the Victorian state map base.
+<big>Pozi Connect generates council 'M1' reports that are critical link for updating the Victorian state map base.</big>
 
 ![M1 Form](https://i.imgur.com/rlp9JKS.jpg "M1 Form")
 
@@ -61,7 +61,9 @@ Upon completion of the 'Generate M1' M1 task, you can find the completed M1 repo
 
 ## Outputs
 
-*Tip: in Windows Explorer, order the files by reverse date order to bring the latest generated files to the top*
+!!!
+In Windows Explorer, order the files by reverse date order to bring the latest generated files to the top
+!!!
 
 * `M1_CouncilName_CurrentDate_Pozi_Connect-VersionNumber.csv`: generated M1
 * `M1_History.csv`: contains all M1 records for searching purposes
@@ -135,4 +137,4 @@ Z, R, P, S, E, C, A
 
 Pozi offers consulting services to improve councils' property data maintenance processes.
 
-[Read more](https://pozi.com/pozi-connect/), or [contact](https://pozi.com/contact/) Pozi.
+[!button variant="info" icon="mention" size="2xl" corners="pill" text="Contact us >"](/contact/)

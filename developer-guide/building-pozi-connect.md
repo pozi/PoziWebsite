@@ -55,6 +55,10 @@ mklink /D C:\Users\Simon\GitHub\PoziConnect\tasks C:\Users\Simon\GitHub\PoziConn
 * Home > Build
 * check Output log for location of output msi file
 
+## Create Zip Distribution
+
+Clients in locked-down IT environments may prefer a simple zip file instead of the installer. Zip up the contents of `PoziConnect\dist` and rename the zip file from 'dist.zip' to `PoziConnect-x.x.x.zip`.
+
 ## Publish Release
 
 ### GitHub
@@ -92,6 +96,7 @@ Example:
 ---
 
 * drag msi file into box 'Attach binaries..'
+* drag zip file into box 'Attach binaries..'
 * click 'Publish release'
 * visit [https://github.com/pozi/PoziConnect/releases/latest](https://github.com/pozi/PoziConnect/releases/latest) to confirm that it's published
 

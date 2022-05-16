@@ -1,7 +1,9 @@
 ---
-title: Assetic myData
-tags: [Pozi Enterprise]
+description: GIS integration for Assetic myData
+tags: [Pozi Enterprise, URL protocol handler, Hindmarsh Shire Council]
 ---
+
+# Assetic myData
 
 Assetic myData is a Windows application that supports linking via a URL protocol handler.
 
@@ -22,7 +24,7 @@ An example configuration in the VRT file is as follows:
         <SrcDataSource>\\nhillDB2\MapData\Assets\Building\Building.TAB</SrcDataSource>
         <SrcSQL dialect="sqlite">
             select
-				*,
+                *,
                 '&#60;a href="mydata://action=goto&#38;assetCategory=Buildings&#38;assetID=' || Asset_ID || '" target="_blank" &#62;Open in myData&#60;/a&#62;' as "Application Link"
             from Building
         </SrcSQL>

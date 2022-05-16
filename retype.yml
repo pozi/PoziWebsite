@@ -2,7 +2,11 @@ input: .
 output: .retype
 url: https://pozi.github.io/PoziWebsite/
 edit:
-  repo:
+  repo: "https://github.com/pozi/PoziWebsite/"
+  branch: "main"
+  label: "Edit this page"
+editor:
+  enabled: true
 integrations:
   googleAnalytics:
     id: G-74NZKRQ3KQ

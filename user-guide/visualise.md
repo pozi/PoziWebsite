@@ -1,5 +1,6 @@
 ---
 title: Visualise
+icon: stack
 ---
 
 :::note Under Construction

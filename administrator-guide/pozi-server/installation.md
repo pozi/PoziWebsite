@@ -39,6 +39,7 @@ Pin to taskbar:
 
 * Windows > Services
 * Windows > IIS
+* QGIS Desktop
 
 File associations:
 
