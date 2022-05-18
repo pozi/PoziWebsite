@@ -55,6 +55,8 @@ If the server ever becomes unresponsive, you can reboot it this way:
 * Instance State > Reboot Instance
 * **Note:** Do not choose any of the other options as its IP address may be changed!
 
+Once triggered, the reboot may take several minutes to complete.
+
 ### Increase Disk Space
 
 - Log into the machine using RDP

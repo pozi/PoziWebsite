@@ -1,4 +1,5 @@
 ---
+title: Features
 layout: central
 order: 100
 icon: stack
@@ -15,6 +16,8 @@ icon: stack
 </style>
 
 :::section
+
+# Pozi Features
 
 <big>Pozi is a customisable, user friendly geospatial system to visually communicate your organisation’s location-based data on a simple interface.</big>
 
