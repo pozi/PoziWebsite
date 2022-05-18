@@ -3,7 +3,7 @@ visibility: hidden
 layout: central
 ---
 
-# 
+#
 <br/>
 <br/>
 
@@ -31,7 +31,7 @@ Victorian councils maintain the source of truth for much of the state's property
 
 <img src="/PoziWebsite/static/img/undraw/undraw_small_town_re_7mcn.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
 
-The [Victorian Department of Environment, Land Water and Planning](https://delwp.vic.gov.au) (DELWP) relies on this information for its Vicmap Address and Property datasets. However the current data exchange process puts responsibility on under-resourced councils to frequently prepare and submit lists of property data updates via complex spreadsheets (M1s).
+The [Victorian Department of Environment, Land Water and Planning](https://delwp.vic.gov.au) (DELWP) relies on this information for its Vicmap Address and Property datasets. However, the current data exchange process puts responsibility on under-resourced councils to frequently prepare and submit lists of property data updates via complex spreadsheets (M1s).
 
 <br clear="all" />
 <br/>
@@ -219,7 +219,7 @@ Yes. Councils will inspect and approve change reports through the web dashboard 
 
 ==- Are there any privacy implications?
 
-No. Only data such as address attributes and property numbers is used. No information beyond was normally appears in an M1 spreadsheet will be transferred.
+No. Only data such as address attributes and property numbers is used. No information beyond what normally appears in an M1 spreadsheet will be transferred.
 
 ==- Won't it be hard to standardise property data from every council?
 
