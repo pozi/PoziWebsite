@@ -3,7 +3,7 @@ visibility: hidden
 layout: central
 ---
 
-# 
+#
 <br/>
 <br/>
 
@@ -219,7 +219,7 @@ Yes. Councils will inspect and approve change reports through the web dashboard 
 
 ==- Are there any privacy implications?
 
-No. Only data such as address attributes and property numbers is used. No information beyond was normally appears in an M1 spreadsheet will be transferred.
+No. Only data such as address attributes and property numbers is used. No information beyond what normally appears in an M1 spreadsheet will be transferred.
 
 ==- Won't it be hard to standardise property data from every council?
 
