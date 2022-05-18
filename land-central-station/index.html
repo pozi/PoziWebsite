@@ -34,11 +34,11 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/PoziWebsite/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/PoziWebsite/favicon.ico" rel="icon" />
-    <link href="/PoziWebsite/resources/css/retype.css?v=2.2.705988175946" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/PoziWebsite/resources/css/retype.css?v=2.2.706150646554" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/PoziWebsite/resources/js/config.js?v=2.2.705988175946" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/PoziWebsite/resources/js/config.js?v=2.2.706150646554" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/PoziWebsite/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/PoziWebsite/resources/js/lunr.js?v=2.2.705988175946" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/PoziWebsite/resources/js/lunr.js?v=2.2.706150646554" defer></script>
 
     <!-- CSS overrides -->
     <link href="/PoziWebsite/static/css/retype-pozi.css" rel="stylesheet" />
@@ -283,7 +283,7 @@
 </doc-anchor-target>
 <p>Victorian councils maintain the source of truth for much of the state&#x27;s property information.</p>
 <img src="/PoziWebsite/static/img/undraw/undraw_small_town_re_7mcn.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
-<p>The <a href="https://delwp.vic.gov.au">Victorian Department of Environment, Land Water and Planning</a> (DELWP) relies on this information for its Vicmap Address and Property datasets. However the current data exchange process puts responsibility on under-resourced councils to frequently prepare and submit lists of changes via complex spreadsheets (M1s).</p>
+<p>The <a href="https://delwp.vic.gov.au">Victorian Department of Environment, Land Water and Planning</a> (DELWP) relies on this information for its Vicmap Address and Property datasets. However the current data exchange process puts responsibility on under-resourced councils to frequently prepare and submit lists of property data updates via complex spreadsheets (M1s).</p>
 <br clear="all" />
 <br/>
 <doc-anchor-target id="problem">
@@ -294,7 +294,7 @@
 </doc-anchor-target>
 <p>The current system requires from councils:</p>
 <ul>
-<li>specialised knowledge (typically GIS staff) - even though councils maintain their property data in dedicated property systems, M1 preparation requires extensive knowledge of the Vicmap data model and M1 rules</li>
+<li>specialised knowledge (typically GIS staff) - even though councils maintain their property data in dedicated property systems, the preparation of M1s requires extensive knowledge of the Vicmap data model and M1 rules</li>
 <li>antiquated workflows (tracking changes, filling in spreadsheets, uploading files)</li>
 <li>valuable staff resources (time better spent on serving the council&#x27;s own needs)</li>
 </ul>
@@ -375,6 +375,7 @@
 <li><p>DELWP and other approved authorities can pull data from the combined resource on demand in the format of their choosing (M1, full dump, filtered extracts, audits, discrepancy reports, etc)</p>
 </li>
 </ol>
+<p>With DELWP having complete access to the combined authoritative property information from the councils, they have everything they need to update their map base.</p>
 <doc-anchor-target id="components">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#components">#</doc-anchor-trigger>
@@ -392,7 +393,7 @@
 <ul>
 <li>API for syncing data</li>
 <li>data processing workflow for transforming and combining datasets from multiple councils</li>
-<li>interactive web map for performing spatial adjustments such as rural addresses and custom property boundaries</li>
+<li>interactive web map for performing any manual spatial adjustments such as rural addresses and custom property boundaries</li>
 <li>dashboard to provide status of recent loads, match stats, data discrepancy reports, etc</li>
 <li>API for DELWP to retrieve statewide council datasets</li>
 </ul>
@@ -403,7 +404,7 @@
     </h4>
 </doc-anchor-target>
 <img src="/PoziWebsite/static/img/undraw/undraw_going_up_re_86kg.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
-<p>On the council side, a simple data sync tool installed at each council and configured for their specific property system to generate and upload a nightly extract of property information. Alternatively, councils may choose to set up FME or another tool of their choice to push data to the cloud platform in the standard format.</p>
+<p>On the council side, a simple data sync tool installed at each council and configured for their specific property system to generate and upload a nightly extract of property information. Alternatively, councils may choose to set up FME or another tool of their choice to push data to the cloud platform.</p>
 <hr />
 <doc-anchor-target id="benefits">
     <h2>
@@ -447,7 +448,7 @@
     </h2>
 </doc-anchor-target>
 <p><strong>Pozi</strong> is uniquely placed to develop this platform.</p>
-<p>We&#x27;ve worked with every council in Victoria (through M1 and PIQA projects), building custom property data integrations to 79 different property data schemas, across seven different property systems, on a range of database technologies and cloud services.</p>
+<p>We&#x27;ve worked with every council in Victoria (through M1 and PIQA projects), building custom property data integrations to 79 different property data schemas, across seven different property systems, on a range of database platforms.</p>
 <p>Our Pozi Connect software is installed at most Victorian councils, and already integrated into councils&#x27; property systems. The software will be adapted to automatically sync the council&#x27;s data to the cloud platform.</p>
 <p>We&#x27;ve established trust and built upon relationships we&#x27;ve had with Victorian councils over 20 years.</p>
 <p>We&#x27;ve proven we can build and maintain scalable web infrastructure with our Pozi Web GIS solution.</p>
@@ -466,13 +467,13 @@
    </doc-panel>
    <doc-panel id="how-does-a-cloud-service-help-with-m1s" collapsed>
        <template #title>How does a cloud service help with M1s?</template>
-<p>The cloud clearinghouse service is where each council&#x27;s authoritative property information is centralised. The service enables councils to synchronise their property data to the clearinghouse, and it also enables DELWP to obtain weekly or daily snapshots of the combined property data. When DELWP has on-demand access to the complete council property information for the whole state, it doesn&#x27;t have to re-assemble this information from dozens of spreadsheets.</p>
-<p>Adopting this solution when DELWP runs its routine data update process, it will compares what changed between snapshots of the council data and apply those changes to Vicmap. DELWP can continue to use the M1 format for supplying the changes to the Vicmap data maintainer, or we may uncover a more direct way for DELWP to get data into Vicmap (one that is not possible right now). Either way, councils never need to see an M1 again.</p>
+<p>The cloud clearinghouse service is where each council&#x27;s authoritative property information is centralised. The service enables DELWP to obtain weekly or daily snapshots of the combined property data. When DELWP has on-demand access to the complete council property information for the whole state, it won&#x27;t need to re-assemble this information from dozens of spreadsheets.</p>
+<p>To update Vicmap, DELWP will compare what changed between snapshots of the council data and then apply those changes to Vicmap. DELWP can continue to use the M1 format internally for supplying the changes to the Vicmap data maintainer. Or DELWP might use the new snapshot approach to come up with a more efficient way to get changes into Vicmap. Either way, councils never need to see an M1 again.</p>
    </doc-panel>
    <doc-panel id="why-hasn-t-this-been-considered-in-the-past" collapsed>
        <template #title>Why hasn&#x27;t this been considered in the past?</template>
 <p>Most discussions about improving the M1 process for councils have involved minor improvements, like creating new edit codes or tweaking some fields.</p>
-<p>We have a different idea about how to better exchange data that utilises a shared services approach, modern technologies, and includes DELWP taking a greater role in the property data maintenance workflow.</p>
+<p>We have a different idea about how to better exchange data that utilises a shared services approach, modern technologies, and involves DELWP taking a greater role in the property data maintenance workflow.</p>
    </doc-panel>
    <doc-panel id="have-you-considered-the-challenges-of-implementing-this" collapsed>
        <template #title>Have you considered the challenges of implementing this?</template>
@@ -483,17 +484,19 @@
 <li>ensuring every council is catered for (resources, technology, data integrations)</li>
 <li>safeguards to prevent unintended updates</li>
 <li>transition phase</li>
+<li>hosting and support considerations</li>
 </ul>
    </doc-panel>
    <doc-panel id="doesn-t-your-company-already-have-an-m1-solution" collapsed>
        <template #title>Doesn&#x27;t your company already have an M1 solution?</template>
-<p>Yes. It&#x27;s called Pozi Connect, and it&#x27;s used extensively by two-thirds of Victorian councils. While it helps to alleviate some of the burden of M1s, it cannot come close to providing decent automation under the current data exchange system.</p>
+<p>Yes. It&#x27;s called Pozi Connect, and it&#x27;s used by two-thirds of Victorian councils. While it helps to alleviate some of the burden of M1s, it cannot come close to providing decent automation under the current data exchange system.</p>
    </doc-panel>
    <doc-panel id="will-councils-have-to-install-pozi-s-software" collapsed>
        <template #title>Will councils have to install Pozi&#x27;s software?</template>
 <p>No.</p>
 <p>If your council already has Pozi Connect installed, we&#x27;ll update it to synchronise the council&#x27;s property data to the cloud.</p>
-<p>For councils that don&#x27;t already have Pozi Connect, we can install and customise it for you. Or you can use your own software (like FME) or automated scripts to perform the data sync.</p>
+<p>For councils that don&#x27;t already have Pozi Connect, we can install and customise it for you.</p>
+<p>Or you can use your own software (like FME) or automated scripts to perform the data sync.</p>
    </doc-panel>
    <doc-panel id="will-the-vicmap-data-model-need-to-change-to-accommodate-this-solution" collapsed>
        <template #title>Will the Vicmap data model need to change to accommodate this solution?</template>
@@ -514,21 +517,21 @@
    </doc-panel>
    <doc-panel id="won-t-it-be-hard-to-standardise-property-data-from-every-council" collapsed>
        <template #title>Won&#x27;t it be hard to standardise property data from every council?</template>
-<p>No. Our existing Pozi Connect M1 and PIQA solution already uses a single, common data model/table structure (based on the PIQA output format). Pozi Connect uses this model to process data from every council property system without exception.</p>
+<p>No. Our existing Pozi Connect M1 and PIQA solution already uses a single, common data model/table structure (based on the PIQA format). Pozi Connect uses this model to process data from every council property system without exception.</p>
    </doc-panel>
    <doc-panel id="will-it-work-for-councils-of-all-sizes" collapsed>
        <template #title>Will it work for councils of all sizes?</template>
 <p>Yes.</p>
    </doc-panel>
-   <doc-panel id="can-the-solution-still-work-if-not-all-councils-switches-over" collapsed>
-       <template #title>Can the solution still work if not all councils switches over?</template>
+   <doc-panel id="can-the-solution-still-work-if-not-all-councils-switch-over" collapsed>
+       <template #title>Can the solution still work if not all councils switch over?</template>
 <p>Yes. Councils may choose to continue submitting M1s to VES using their current software and workflow.</p>
-<p>But ideally, in a scenario in which every council decides to switch, it becomes possible for DELWP to do away with processing M1s altogether.</p>
+<p>But ideally, in a scenario in which every council decides to switch, it becomes possible for DELWP to process its updates with a more efficient format than the M1.</p>
    </doc-panel>
-   <doc-panel id="can-this-platform-be-used-for-sharing-other-council-data" collapsed>
-       <template #title>Can this platform be used for sharing other council data?</template>
+   <doc-panel id="can-this-platform-be-used-for-managing-and-sharing-other-council-data" collapsed>
+       <template #title>Can this platform be used for managing and sharing other council data?</template>
 <p>Yes.</p>
-<p>For now, we&#x27;re tackling property data and eliminating the M1 burden.</p>
+<p>For now, we&#x27;re tackling property data to eliminate the M1 burden.</p>
 <p>But in the future, it can be adapted to synchronise and consolidate any common council dataset. The platform can automate the delivery of statewide spatial and non-spatial data from councils to any government agency.</p>
    </doc-panel>
    <doc-panel id="is-it-really-going-to-be-called-land-central-station" collapsed>
@@ -578,7 +581,7 @@
 </ul>
 </li>
 <li>are you interested in being a pilot site for the new solution?</li>
-<li>any other feedback about this initiative</li>
+<li>any other feedback you have about this initiative</li>
 </ul>
 
                             

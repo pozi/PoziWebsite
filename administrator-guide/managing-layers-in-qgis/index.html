@@ -34,11 +34,11 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/PoziWebsite/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/PoziWebsite/favicon.ico" rel="icon" />
-    <link href="/PoziWebsite/resources/css/retype.css?v=2.2.705988175946" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/PoziWebsite/resources/css/retype.css?v=2.2.706150646554" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/PoziWebsite/resources/js/config.js?v=2.2.705988175946" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/PoziWebsite/resources/js/config.js?v=2.2.706150646554" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/PoziWebsite/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/PoziWebsite/resources/js/lunr.js?v=2.2.705988175946" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/PoziWebsite/resources/js/lunr.js?v=2.2.706150646554" defer></script>
 
     <!-- CSS overrides -->
     <link href="/PoziWebsite/static/css/retype-pozi.css" rel="stylesheet" />
@@ -426,6 +426,17 @@
 <p>Windows &gt; IIS &gt; (select server) &gt; Application Pools &gt; PoziQgisServer &gt; Stop</p>
 <p>You may also need to stop any other services that start with <code v-pre>PoziQgisServer</code>.</p>
 <p>Restart the service(s) after you make your changes.</p>
+<doc-anchor-target id="troubleshooting">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#troubleshooting">#</doc-anchor-trigger>
+        <span>Troubleshooting</span>
+    </h2>
+</doc-anchor-target>
+<doc-panel id="layer-features-are-not-displayed-when-the-layer-is-turned-on" collapsed>
+    <template #title>Layer features are not displayed when the layer is turned on</template>
+<p>Pozi is only able to display features that have at least one valid/non-null attribute.</p>
+<p>If any records in your data contain no attributes, populate some values into one of the fields.</p>
+</doc-panel>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
                                     <span>

@@ -15,28 +15,28 @@
     <!-- Primary Meta Tags -->
     <title>Embedded Maps | Pozi Web GIS | Online Map</title>
     <meta name="title" content="Embedded Maps | Pozi Web GIS | Online Map">
-    <meta name="description" content="Customised Pozi maps can be embedded in your organisation’s web pages using a standard HTML iframe." />
+    <meta name="description" content="The Pozi web map can be embedded into any web page to enable your customers discover location-specific information about their place of interest from..." />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pozi.github.io/PoziWebsite/administrator-guide/embedded-maps/">
     <meta property="og:title" content="Embedded Maps | Pozi Web GIS | Online Map">
-    <meta property="og:description" content="Customised Pozi maps can be embedded in your organisation’s web pages using a standard HTML iframe.">
+    <meta property="og:description" content="The Pozi web map can be embedded into any web page to enable your customers discover location-specific information about their place of interest from...">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pozi.github.io/PoziWebsite/administrator-guide/embedded-maps/">
     <meta property="twitter:title" content="Embedded Maps | Pozi Web GIS | Online Map">
-    <meta property="twitter:description" content="Customised Pozi maps can be embedded in your organisation’s web pages using a standard HTML iframe.">
+    <meta property="twitter:description" content="The Pozi web map can be embedded into any web page to enable your customers discover location-specific information about their place of interest from...">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/PoziWebsite/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/PoziWebsite/favicon.ico" rel="icon" />
-    <link href="/PoziWebsite/resources/css/retype.css?v=2.2.705988175946" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/PoziWebsite/resources/css/retype.css?v=2.2.706150646554" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/PoziWebsite/resources/js/config.js?v=2.2.705988175946" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/PoziWebsite/resources/js/config.js?v=2.2.706150646554" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/PoziWebsite/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/PoziWebsite/resources/js/lunr.js?v=2.2.705988175946" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/PoziWebsite/resources/js/lunr.js?v=2.2.706150646554" defer></script>
 
     <!-- CSS overrides -->
     <link href="/PoziWebsite/static/css/retype-pozi.css" rel="stylesheet" />
@@ -247,17 +247,36 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
+<hr />
+<hr />
 <doc-anchor-target id="embedded-maps" class="break-words">
     <h1>
         <doc-anchor-trigger class="header-anchor-trigger" to="#embedded-maps">#</doc-anchor-trigger>
         <span>Embedded Maps</span>
     </h1>
 </doc-anchor-target>
-<p>Customised Pozi maps can be embedded in your organisation’s web pages using a standard HTML iframe. Copy the link of the desired map from your browser&#x27;s address bar or by clicking the Share button from the menu at the top right. If you want the page to show the default map extent, you can strip out the location parameters (eg <code v-pre>x[144.44500]/y[-36.73075]/z[10]/</code>). Then wrap the link in an iframe tag.</p>
+<p>The Pozi web map can be embedded into any web page to enable your customers discover location-specific information about their place of interest from directly in your organisation&#x27;s website.</p>
+<ul>
+<li>map display, default view or centred on any location</li>
+<li>autocomplete address search</li>
+<li>inline info panel displays location-specific information for selected features</li>
+<li>nearby facilities and services, including navigation options for walking, cycling and driving</li>
+<li>print to PDF</li>
+<li>and more</li>
+</ul>
+<doc-anchor-target id="how-to-embed">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#how-to-embed">#</doc-anchor-trigger>
+        <span>How to Embed</span>
+    </h2>
+</doc-anchor-target>
+<p>Pozi maps are embedded using a standard HTML iframe. Copy the link of the desired map from your browser&#x27;s address bar or by clicking the Share button in the Tools panel. If you want the page to show the default map extent, you can strip out the location parameters (eg <code v-pre>x[144.44500]/y[-36.73075]/z[10]/</code>). Then wrap the link in an <code v-pre>iframe</code> tag.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">&lt;iframe width=&quot;100%&quot; height=&quot;500px&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; src=&quot;https://bendigo.pozi.com/&quot;&gt;&lt;/iframe&gt;</code></pre>
 </doc-codeblock></div>
+<p>This is the resulting map from the above HTML:</p>
 <iframe width="100%" height="500px" frameborder="0" scrolling="no" src="https://bendigo.pozi.com/"></iframe>
+<p>Insert the HTML in any webpage or CMS that supports iframes.</p>
 
                                 
                                 <!-- Required only on API pages -->
