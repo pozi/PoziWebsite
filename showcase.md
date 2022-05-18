@@ -4,6 +4,8 @@ layout: central
 
 # Showcase
 
+Click on any of our client sites below to discover how Pozi serves these organisations.
+
 [!ref icon="/static/img/client-logos/gleneira.png" text="Glen Eira City Council"](https://gleneira.pozi.com/)
 [!ref icon="/static/img/client-logos/frankston.png" text="Frankston City Council"](https://frankston.pozi.com/)
 [!ref icon="/static/img/client-logos/cardinia.png" text="Cardinia Shire Council"](https://cardinia.pozi.com/)

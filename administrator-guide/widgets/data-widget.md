@@ -92,11 +92,19 @@ https://southerngrampians.pozi.com/widget.html#card=Waste Collection&fieldnames=
 
 ### Hide Field Names
 
+This parameter hides the field names and only displays the field data.
+
 `fieldnameshide=true`
+
+### Font Size
+
+By default the font size of the widget text is set to 18. However, you can specify a different font size by using the optional font size parameter, for example:
+
+`fontsize=10`
 
 ### Data Transformer
 
-If using the standard configration option, any transformers are already applied within the Pozi app, so there is typically no need to configure any transformer in the widget URL.
+If using the standard (not CKAN) configuration option, any transformers are already applied within the Pozi app, so there is typically no need to configure any transformer in the widget URL.
 
 However, if using the CKAN option, the results will not have any transformers applied, and so you can specify them here in the widget URL.
 

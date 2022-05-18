@@ -1,6 +1,6 @@
 ---
 description: GIS integration for Open Office
-tags: [Pozi Enterprise, Cardinia Shire Council]
+tags: [Pozi Enterprise, Loddon Shire Council]
 ---
 
 # Open Office

@@ -124,3 +124,13 @@ Windows > IIS > (select server) > Application Pools > PoziQgisServer > Stop
 You may also need to stop any other services that start with `PoziQgisServer`.
 
 Restart the service(s) after you make your changes.
+
+## Troubleshooting
+
+==- Layer features are not displayed when the layer is turned on
+
+Pozi is only able to display features that have at least one valid/non-null attribute.
+
+If any records in your data contain no attributes, populate some values into one of the fields.
+
+==-

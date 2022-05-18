@@ -40,4 +40,4 @@ Welcome to the documentation for Pozi. Here, you can find information about usin
 
 Have feedback or a question that isn't answered here?
 
-[!ref icon="people" text="Get in touch"](/contact/#email)
+[!ref icon="people" text="Get in touch"](/contact/)

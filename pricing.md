@@ -41,7 +41,7 @@ Pozi delivers powerful location-based functionality at a fraction of the cost of
 
 <img src="/PoziWebsite/static/img/tweet-gallery/3d-poc.jpg" alt="" style="float:right;width:400px;margin:0px 40px;">
 
-Use Pozi to visualise your 3D imagery. Toggle between 2D and 3D viewing modes. Compatiable with [Cesium 3D tile format](https://cesium.com/why-cesium/3d-tiles/).
+Use Pozi to visualise your 3D imagery. Toggle between 2D and 3D viewing modes. Compatible with [Cesium 3D tile format](https://cesium.com/why-cesium/3d-tiles/).
 
 <small>AUD</small>$3K<small>/year</small>
 
@@ -61,7 +61,7 @@ The Pozi Pro, Enterprise and Enterprise Cloud offerings include up to two concur
 
 ### Pozi Connect for M1s
 
-Pozi Connect generates property and address change reports for Victorian municipalities. We customise Pozi Connect to integrate with your counci's corporate property system, then install it and provide training. The first twelve months support is also included.
+Pozi Connect generates property and address change reports for Victorian municipalities. We customise Pozi Connect to integrate with your council's corporate property system, then install it and provide training. The first twelve months support is also included.
 
 <small>AUD</small>$6K
 
