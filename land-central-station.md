@@ -13,7 +13,7 @@ layout: central
 
 <big>A vision to simplify the way Victorian councils integrate their property information into Victoria's statewide map</big>
 
-Seamless synchronisation of council property information to a **cloud data hub**, a centralised source of truth for property information for every Victorian council
+Seamless synchronisation of council property information to a **cloud data hub**, a centralised source of truth for property information for every Victorian council.
 
 ---
 
@@ -31,7 +31,7 @@ Victorian councils maintain the source of truth for much of the state's property
 
 <img src="/PoziWebsite/static/img/undraw/undraw_small_town_re_7mcn.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
 
-The [Victorian Department of Environment, Land Water and Planning](https://delwp.vic.gov.au) (DELWP) relies on this information for its Vicmap Address and Property datasets. However, the current data exchange process puts responsibility on under-resourced councils to frequently prepare and submit lists of property data updates via complex spreadsheets (M1s).
+The Victorian [Department of Environment, Land Water and Planning](https://delwp.vic.gov.au) (DELWP) relies on this information for its Vicmap Address and Property datasets. However, the current data exchange process puts responsibility on under-resourced councils to frequently prepare and submit lists of property data updates via complex spreadsheets (M1s).
 
 <br clear="all" />
 <br/>
@@ -56,7 +56,7 @@ The exchange is made complicated because of the M1 format:
 * manual upload process to VES
 * councils receive feedback once a year about how well they're doing
 
-The current system is resistant to innovation and automation.
+The current system is difficult to automate and innovate upon.
 
 <br clear="all" />
 <br/>
@@ -245,7 +245,7 @@ But in the future, it can be adapted to synchronise and consolidate any common c
 
 ==- Is it really going to be called Land Central Station?
 
-Do you like it?
+Do you like the name?
 
 If not, we'd love to hear any suggestion you have!
 
