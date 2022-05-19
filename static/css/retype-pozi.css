@@ -76,6 +76,10 @@
 	color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-1000));
 }
 
+.group:hover .group-hover\:text-blue-500 {
+	color: rgba(var(--pozi-color-rgb-normal), var(--pozi-alpha-1000));
+}
+
 /**************************************/
 /* Text links and hovers - Dark Theme */
 /**************************************/
