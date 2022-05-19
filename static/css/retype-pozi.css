@@ -1,5 +1,6 @@
 :root {
   --pozi-color-hex: #70925C;
+  --pozi-color-rgb-light: 141, 168, 127; /* #8DA87F; */
   --pozi-color-rgb-normal: 112, 146, 92; /* #70925C; */
   --pozi-color-rgb-dark: 97, 127, 80; /* #617F50; *
 
@@ -56,9 +57,9 @@
 }
 
 
-/*************************/
-/* Text links and hovers */
-/*************************/
+/***************************************/
+/* Text links and hovers - Light Theme */
+/***************************************/
 .text-blue-500,.md\:text-blue-500, .docs-markdown a:not(.no-link) {
 	color: rgba(var(--pozi-color-rgb-normal), var(--pozi-alpha-1000));
 }
@@ -73,4 +74,20 @@
 
 .hover\:text-blue-800:hover, .docs-markdown a:not(.no-link):hover {
 	color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-1000));
+}
+
+/**************************************/
+/* Text links and hovers - Dark Theme */
+/**************************************/
+
+.dark .dark\:hover\:text-blue-200:hover {
+	color: rgba(var(--pozi-color-rgb-light), var(--pozi-alpha-900));
+}
+
+.dark .dark\:text-blue-400 {
+	color: rgba(var(--pozi-color-rgb-light), var(--pozi-alpha-1000));
+}
+
+.dark .dark\:hover\:text-blue-400:hover {
+	color: rgba(var(--pozi-color-rgb-light), var(--pozi-alpha-1000));
 }
