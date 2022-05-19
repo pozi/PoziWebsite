@@ -96,12 +96,20 @@
 	color: rgba(var(--pozi-color-rgb-light), var(--pozi-alpha-1000));
 }
 
+.dark .group:hover .dark\:group-hover\:text-blue-400 {
+	color: rgba(var(--pozi-color-rgb-light), var(--pozi-alpha-1000));
+}
+
 /**************************************/
 /* Borders                            */
 /**************************************/
 
 .dark .dark\:bg-blue-400 {
   background-color: rgba(var(--pozi-color-rgb-light), var(--pozi-alpha-1000));
+}
+
+.dark .dark\:hover\:bg-dark-500:hover {
+  background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-1000));
 }
 
 .dark .dark\:text-blue-400 {
