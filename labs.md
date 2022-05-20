@@ -14,6 +14,13 @@ If you'd like to see these features in Pozi, and you'd like to have us build it 
 
 A major Pozi upgrade to enable your organisation to gain full control over its Pozi map configuration using the popular open source QGIS desktop software.
 
+Benefits:
+
+* maintain control over map layers available to staff
+* quickly respond to staff requirements
+* build the council's in-house capabilities for maintaining GIS configuration
+* make it easier for users to discover and access specialised datasets that are useful to their workflows
+
 Functionality:
 
 * add/remove map layers
@@ -21,16 +28,6 @@ Functionality:
 * expose/hide data fields, and rename fields
 * create dynamic table joins
 * maintain metadata
-
-Benefits:
-
-* reduce/eliminate costs for migrating large number of layers from legacy systems
-* maintain ongoing control over all aspects of data available to staff
-* adapt to changes in council data
-* quickly respond to changing staff requirements
-* bypass support request bottleneck
-* build the council’s in-house capabilities for maintaining GIS configuration
-* make it easier for users to discover and access specialised datasets that are useful to their workflows
 
 ---
 
@@ -55,7 +52,7 @@ Enable staff to securely share and maintain their Pozi map annotations
 * any internal user can use the link to open the map and view or update the annotations
 * annotation files can be backed up/restored/removed by the GIS Administrator
 
-All internal users are trusted, and anyone can update existing annotations. Links remain stable after editing.
+All internal users are trusted, and anyone can collaborate on annotations. Links remain stable after editing.
 
 Annotations are stored as GeoJSON files on the network. The GIS Administrator has the ability to delete, rename, edit or set specific files as read-only.
 

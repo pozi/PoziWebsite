@@ -78,8 +78,9 @@ Our team works with you to customise and maintain your map application - you're 
 
 :::
 
---![](/PoziWebsite/static/img/smartmockups_jno2fteq_1000x649.png)--
+<img src="/PoziWebsite/static/img/smartmockups_jno2fteq_1000x649.png">
 
+<br/>
 <br/>
 
 <!--- END SECTION - VISUALISE --->
@@ -101,7 +102,7 @@ Our team works with you to customise and maintain your map application - you're 
 <br clear="all" />
 <br/>
 
-<img src="/PoziWebsite/static/img/undraw_map_re_60yf.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
+<img src="/PoziWebsite/static/img/screenshots/strathbogie-waste-collection-routes.png" alt="" style="float:right;width:300px;margin:0px 40px;">
 
 > "Really appreciate the 5 star support. So helpful and fast to respond. Thank you!"
 >
@@ -142,8 +143,6 @@ Our team works with you to customise and maintain your map application - you're 
   [!badge size="3xl" variant="light" icon="/static/img/client-logos/cardinia.png" text="Cardinia Shire Council"](https://cardinia.pozi.com/) &zwnj; &zwnj; &zwnj;
   [!badge size="3xl" variant="light" icon="/static/img/client-logos/bendigo.png" text="City of Greater Bendigo"](https://bendigo.pozi.com/) &zwnj; &zwnj; &zwnj;
 
-  [!badge size="3xl" variant="light" icon="/static/img/client-logos/horsham.png" text="Horsham Rural City Council"](https://horsham.pozi.com/) &zwnj; &zwnj; &zwnj;
-
   [!ref size="3xl" text="See more"](/showcase/)
 
 :::
@@ -172,6 +171,18 @@ Promote local places, facilities events and services to customers
 
 :::section
 
+## Powered by QGIS
+
+--![](/PoziWebsite/static/img/tweet-gallery/northern_grampians_waste_route_styling.png)--
+
+  Use QGIS or MapManager to configure layer catalogues, including adding data sources, layer styling, filtering, data joins, metadata, and more.
+
+  Take advantage of open source resources such as documentation, tutorials, community forums and training to further build your Pozi site's capabilities.
+
+:::
+
+:::section
+
 ## Ultimate connectability
 
 Eliminate data double-handling by accessing data directly from any local or remote source
@@ -190,8 +201,6 @@ Eliminate data double-handling by accessing data directly from any local or remo
 ✔️ Customises to your unique data<br/>
 ✔️ Eliminates expensive software licensing fees and doesn't lock you in to a long-term contract<br/>
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Pozi leverages QGIS to give organisations more control of their Pozi site. In today&#39;s update, Pozi automatically generates layer legends from styles created in QGIS. <a href="https://t.co/WWu1W2FwsD">https://t.co/WWu1W2FwsD</a> <a href="https://t.co/exRgu8sEev">pic.twitter.com/exRgu8sEev</a></p>&mdash; Pozi (@PoziApp) <a href="https://twitter.com/PoziApp/status/1467725591315038210?ref_src=twsrc%5Etfw">December 6, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 <br/>
 
 ### Pozi features...
@@ -201,8 +210,6 @@ Deliver data to staff and public – easily and affordably. Users can access the
 ✔️ **Manage services intelligently** - Staff can view additional information such as property owner details and asset information<br/>
 ✔️ **Find information about any location** - View land parcel details, planning controls, road closures, maintenance schedules, major projects, waste collection zones and more<br/>
 ✔️ **Reduce data maintenance overheads** - the Pozi app operates independently of your internal IT infrastructure and connects live to state and federal government web services so you don't have to spend time maintaining and updating background datasets<br/>
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Our clients are always finding new datasets to open up to the public. <a href="https://twitter.com/SwanHillCouncil?ref_src=twsrc%5Etfw">@SwanHillCouncil</a> has just published the locations of their dog waste bag dispensers on Pozi <a href="https://twitter.com/hashtag/opendata?src=hash&amp;ref_src=twsrc%5Etfw">#opendata</a> <a href="https://t.co/CfaVfTSBfU">https://t.co/CfaVfTSBfU</a> <a href="https://t.co/xHvveLh9OJ">pic.twitter.com/xHvveLh9OJ</a></p>&mdash; Pozi (@PoziApp) <a href="https://twitter.com/PoziApp/status/1442715683733733377?ref_src=twsrc%5Etfw">September 28, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <br/>
 
@@ -229,18 +236,6 @@ Deliver data to staff and public – easily and affordably. Users can access the
 
 [!ref icon="checklist" text="Discover Pozi's features"](/features/)
 [!ref icon="mention" text="Contact us today!"](/contact/)
-
-:::section
-
-## Powered by QGIS
-
---![](/PoziWebsite/static/img/tweet-gallery/northern_grampians_waste_route_styling.png)--
-
-  Use QGIS or MapManager to configure layer catalogues, including adding data sources, layer styling, filtering, data joins, metadata, and more.
-
-  Take advantage of open source resources such as documentation, tutorials, community forums and training to further build your Pozi site's capabilities.
-
-:::
 
 <!--- START SECTION - ABOUT --->
 
