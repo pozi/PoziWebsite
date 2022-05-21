@@ -5,6 +5,8 @@ author: Simon O'Keefe
 
 # On Metadata
 
+![](/static/img/pexels/pexels-element-digital-1370294.jpg)
+
 I recently came across an email I'd sent to a client from a couple of years ago in response to their enquiry about whether they should implement a metadata system for their GIS.
 
 Here was my response:
@@ -16,3 +18,6 @@ Here was my response:
 The client responded with a thank-you.
 
 As far as I know, they have not yet implemented a metadata system.
+
+---
+*Photo by [Element5 Digital](https://www.pexels.com/photo/gray-steel-file-cabinet-1370294/)*

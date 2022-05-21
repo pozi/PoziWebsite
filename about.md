@@ -75,4 +75,6 @@ The Pozi team is committed to a future where GIS is synonymous with transparent 
 
 We are driven to enable more people to easily access and use spatial information to build the shared knowledge of their community.
 
-[!button icon="mention" size="2xl" corners="pill" text="Contact us today!"](/contact/)
+<br/>
+
+[!button icon="mention" size="xl" corners="pill" text="Contact us today!"](/contact/)

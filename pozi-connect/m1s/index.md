@@ -4,13 +4,13 @@ title: M1s
 
 <big>Pozi Connect generates council 'M1' reports that are critical link for updating the Victorian state map base.</big>
 
-![M1 Form](https://i.imgur.com/rlp9JKS.jpg "M1 Form")
+![](https://i.imgur.com/rlp9JKS.jpg)
 
 Pozi Connect compares the council's property data with the latest Vicmap data and determines what updates are required in Vicmap to accurately reflect the council's property and address information.
 
 After Pozi configures and implements Pozi Connect for your council, you can generate M1s at any time by launching Pozi Connect and running the three or four M1 tasks from the picklist. Your M1 report will be generated to a pre-defined location, and it is ready to be submitted via the [VES](https://ves.land.vic.gov.au/) system.
 
-(See Pozi Connect's [history](/pozi-connect/m1s/history) to see the our most recent changes.)
+(See Pozi Connect's [history](/pozi-connect/history) to see the our most recent changes.)
 
 ## Vicmap Maintenance Cycle
 
@@ -47,7 +47,7 @@ Confirm that the dates of the files in these main folder(s) correspond to the da
 
 Launch Pozi Connect. From the picklist, select the first M1 task that relates to your council name:
 
-![Pozi Connect for M1s](https://i.imgur.com/Yx9RH81.png "Pozi Connect for M1s"){style="width:500px"}
+![](/static/img/screenshots/pozi-connect-maroondah-m1.png)
 
 For each of the three to four M1 tasks in the picklist:
 

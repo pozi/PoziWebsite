@@ -20,8 +20,6 @@ This guide is intended for use by Pozi developers, support staff, technical part
 
 ### GitHub Repositories
 
-Enable access to these repositories:
-
 * [PoziApp](https://github.com/pozi/PoziApp/settings/access)
 * [PoziAppConfig](https://github.com/pozi/PoziAppConfig/settings/access)
 * [PoziClientConfig](https://github.com/pozi/PoziClientConfig/settings/access)
@@ -35,11 +33,11 @@ Enable access to these repositories:
 * GitHub Desktop
 * SnagIt/LICEcap
 * S3 Browser
-* JSON Viewer Chrome extension
+* [JSON Viewer Chrome extension](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh)
 * Remote Desktop for Pozi Cloud Server
 
 ---
 
-<big>Want to learn more? Do you want to work with us?</big>
+Want to learn more? Do you want to work with us?
 
-[!button icon="mention" size="2xl" text="Contact us today!"](/contact/)
+[!button icon="mention" size="xl" text="Contact us today!"](/contact/)

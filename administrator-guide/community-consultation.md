@@ -15,7 +15,7 @@ tags: [Pozi Pro]
 
 Pozi's Community Consultation feature is used by clients to gather feedback from the community.
 
-Read case studies [here](/blog/tags/community-consultation).
+Read case studies [here](/tags/community-consultation).
 
 ## Examples
 

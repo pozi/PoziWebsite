@@ -6,6 +6,8 @@ tags: [customer service]
 
 # Meet Pozi, GIS with a Customer Service Focus
 
+![](/static/img/AdobeStock_233557617_small_crop-768x384-1.webp){style="width:600px"}
+
 Ensuring customer success is our number one priority. We provide the platform to ensure you can achieve your GIS goals. We always aim to exceed your expectations with not only a great GIS product, but superior customer service and support.
 
 <!--truncate-->

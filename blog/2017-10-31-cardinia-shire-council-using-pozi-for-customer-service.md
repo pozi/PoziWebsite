@@ -11,8 +11,6 @@ tags: [Cardinia Shire Council, case study, testimonial]
 
 Cardinia Shire Council contacted Pozi with a specific goal: To deliver a Geographic Information System (GIS) for their customers to access location based information.
 
-<!--truncate-->
-
 They already had an internal GIS tool in place for staff, but this information was too complex for customers who needed simple data about their property and area delivered in an engaging and intuitive format. The Cardinia Shire Council IT department approached Pozi having seen their web based mapping system in action and wanted to implement a similar solution for their customers.
 
 > “Our internal GIS is a complex tool to communicate to our customers. Implementing Pozi allows us to show crucial customer services online.” <br/><br/>

@@ -1,5 +1,5 @@
 ---
 title: Integrations
-icon: plug
+# icon: plug
 order: 90
 ---

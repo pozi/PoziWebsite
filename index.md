@@ -38,7 +38,7 @@ layout: central
 
 <!--- START SECTION - BENEFITS --->
 
-<img src="/PoziWebsite/static/img/undraw_information_tab_re_f0w3.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
+<img src="/PoziWebsite/static/img/undraw/undraw_information_tab_re_f0w3.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
 
 #### Confident decision making
 
@@ -47,7 +47,7 @@ Empower your users with the critical information they need by integrating with l
 <br clear="all" />
 <br/>
 
-<img src="/PoziWebsite/static/img/undraw_map_re_60yf.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
+<img src="/PoziWebsite/static/img/undraw/undraw_map_re_60yf.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
 #### Ease of use
 
@@ -56,7 +56,7 @@ Simple, modern map interface with a focus on immediate usability
 <br clear="all" />
 <br/>
 
-<img src="/PoziWebsite/static/img/undraw_online_discussion_re_nn7e.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
+<img src="/PoziWebsite/static/img/undraw/undraw_online_discussion_re_nn7e.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
 
 #### Real Support
 
@@ -111,7 +111,7 @@ Our team works with you to customise and maintain your map application - you're 
 <br clear="all" />
 <br/>
 
-<img src="/PoziWebsite/static/img/tweet-gallery/wangaratta_roadside_conservation.png" alt="" style="float:left;width:400px;margin:0px 40px;">
+<img src="/PoziWebsite/static/img/tweet-gallery/wangaratta_roadside_conservation.png" alt="" style="float:left;width:300px;margin:0px 40px;">
 
 > "The Pozi mapping product is a great tool to easily display public map-based information for users. The process, design and planning stages are made simple by the Pozi Support team."
 >
@@ -120,7 +120,7 @@ Our team works with you to customise and maintain your map application - you're 
 <br clear="all" />
 <br/>
 
-<img src="/PoziWebsite/static/img/tweet-gallery/latrobe_2018_aerial_imagery.jpg" alt="" style="float:right;width:400px;margin:0px 40px;">
+<img src="/PoziWebsite/static/img/tweet-gallery/latrobe_2018_aerial_imagery.jpg" alt="" style="float:right;width:300px;margin:0px 40px;">
 
 > "The clean look and layout of Pozi, along with its user friendly functionality make it easy for customers to locate and interpret data. It's an efficient tool for delivering information to our customers, and the staff at Pozi provide great support to their clients."
 >
@@ -173,11 +173,11 @@ Promote local places, facilities events and services to customers
 
 ## Powered by QGIS
 
---![](/PoziWebsite/static/img/tweet-gallery/northern_grampians_waste_route_styling.png)--
+  <img src="/PoziWebsite/static/img/tweet-gallery/northern_grampians_waste_route_styling.png">
+  <br/>
+  <br/>
 
-  Use QGIS or MapManager to configure layer catalogues, including adding data sources, layer styling, filtering, data joins, metadata, and more.
-
-  Take advantage of open source resources such as documentation, tutorials, community forums and training to further build your Pozi site's capabilities.
+  Use QGIS to configure your layers in Pozi, including adding data sources, layer styling, filtering, data joins, metadata, and more.
 
 :::
 
@@ -189,9 +189,11 @@ Eliminate data double-handling by accessing data directly from any local or remo
 
 :::
 
-![](/PoziWebsite/static/img/tweet-gallery/latrobe_planning_scheme_amendment.png)
-
+<img src="/PoziWebsite/static/img/tweet-gallery/latrobe_planning_scheme_amendment.png">
 <br/>
+<br/>
+
+---
 
 ### Benefit from a hosted web map that...
 
@@ -223,6 +225,8 @@ Pozi runs from our secure Australian-based web server. This means you get all th
 ✔️ GPS location to place your staff and customers at the scene<br/>
 ✔️ Customisation so your organisation can get up and running quickly<br/>
 
+<br/>
+
 ### Let's get functional...
 
 Deliver data to staff and public – easily and affordably. Users can access the information they need at any time, such as property information, nearby community facilities and services, and aerial imagery.
@@ -235,7 +239,8 @@ Deliver data to staff and public – easily and affordably. Users can access the
 ✔️ Customise maps display with just one click<br/>
 
 [!ref icon="checklist" text="Discover Pozi's features"](/features/)
-[!ref icon="mention" text="Contact us today!"](/contact/)
+
+<br/>
 
 <!--- START SECTION - ABOUT --->
 

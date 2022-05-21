@@ -1,19 +1,14 @@
 ---
-title: Pozi Connect Integrations
-sidebar_label: Integrations
+title: Integrations
 ---
 
-## CouncilWise
-
-* Alpine Shire Council
-* Ararat Rural City Council
-
+# Pozi Connect Integrations
 ## Civica Authority
 
+* Brimbank
 * Hindmarsh
 * Horsham
 * Maribyrnong
-* West Wimmera
 * Surf Coast
 * Murrindindi
 * Swan Hill
@@ -24,9 +19,15 @@ sidebar_label: Integrations
 * Melton
 * Colac Otway
 
+## CouncilWise
+
+* Alpine
+* Ararat
+* Buloke
+* West Wimmera
+
 ## Ibis Rating Manager
 
-* Buloke
 * Indigo
 * Towong
 * Moorabool
@@ -52,7 +53,22 @@ sidebar_label: Integrations
 * Knox
 * East Gippsland
 
+## Open Office Property.Gov
+
+* Bass Coast
+* Cardinia
+* Central Goldfields
+* Hobsons Bay
+* Strathbogie
+
+## SynergySoft
+
+* Golden Plains
+* Mansfield
+* Pyrenees
 ## TechnologyOne
+
+### On-Premise
 
 * Campaspe
 * Manningham
@@ -67,11 +83,14 @@ sidebar_label: Integrations
 * Corangamite
 * Casey
 
-## TechnologyOne Cloud
+### OneCouncil
+
+* Mitchell
+* Port Phillip
 
 Pozi Connect is configured to extract the information it needs from CSV files, extracted nightly from the TechOne cloud database.
 
-CSVs required:
+Tables required for downloading to CSV:
 
 ```
 nucAssociation
@@ -82,13 +101,21 @@ nucProperty
 nucStreet
 ```
 
-The nucAssociation table is likely to be quite large (possibly 100s of MBs). You may be able to apply a filter to it to reduce it down before downloading it.
+Alternatively, the table names may be as follows:
+
+```
+P1PLN_LAND
+P1PLN_PROP_LOCATION
+P1PLN_PROPERTY
+P1PLN_STREET
+P1PLN_PROP_TRANSFER
+P1PRC_ASSOCIATION
+```
+
+The Association table is likely to be quite large (possibly 100s of MBs). Apply a filter to it to reduce it down before downloading it.
 
 ```sql
 SELECT key1,key2,association_type,date_ended
 FROM nucAssociation
 WHERE association_type = 'PropLand'
 ```
-
-* Mitchell
-* Port Phillip

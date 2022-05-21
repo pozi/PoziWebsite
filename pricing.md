@@ -1,12 +1,14 @@
 ---
+title: Pricing
 layout: central
 ---
 
-# Pricing
+#
 
-<br/>
-
-![](/PoziWebsite/static/img/undraw/undraw_options_re_9vxh.svg){style="width:300px"}
+<div style="text-align:center;">
+  <h1>Pricing</h1>
+  <img src="/PoziWebsite/static/img/undraw/undraw_options_re_9vxh.svg" style="width:300px">
+</div>
 
 <br/>
 
@@ -31,7 +33,11 @@ Pozi delivers powerful location-based functionality at a fraction of the cost of
 | | ✔️ GPS tracking |  |  |
 | [More info](/features/#pozi-public) | [More info](/features/#pozi-pro) | [More info](/features/#pozi-enterprise) | [More info](/features/#pozi-enterprise-cloud) |
 
+<br/>
+
 [!ref icon="trophy"](/upgrade/)
+
+<br/>
 
 ---
 

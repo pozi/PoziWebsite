@@ -6,7 +6,7 @@ Each year, Victoria's [Department of Environment, Land, Water & Planning](https:
 
 The process of extracting, filtering and formatting this data is time consuming and often overwhelming for councils, and can require the participation and co-operation of council staff members across GIS, Rates and IT departments.
 
-[Pozi Connect](https://pozi.com/pozi-connect/) is a tool developed by Pozi, with financial support of DELWP, that enables councils to quickly and accurately compile their property and address information into the required PIQA format.
+[Pozi Connect](https://pozi.com/pozi-connect/) enables councils to quickly and accurately compile their property and address information into the required PIQA format.
 
 ## Instructions For PIQA Participants
 
@@ -26,24 +26,24 @@ For any issues that are not solved by installing this patch, please contact Pozi
 
 ### How does Pozi Connect connect to the property system?
 
-Pozi Connect uses your PC’s existing ODBC connection settings. It does not require any additional network or firewall configuration.
+Pozi Connect uses your PC's existing ODBC connection settings. It does not require any additional network or firewall configuration.
 
 ### Does Pozi Connect extract any confidential information?
 
-Pozi Connect only extracts the tables and fields from your property system that contains information relevant to the PIQA. You can check for yourself what information will be sent to DELWP by opening up the CSV files located in the “Output” folder in Excel.
+Pozi Connect only extracts the tables and fields from your property system that contains information relevant to the PIQA. You can check for yourself what information will be sent to DELWP by opening up the CSV files located in the `output` folder in Excel.
 
 ### Does Pozi Connect make any changes to the property system?
 
-Pozi Connect does not perform any update on your property database. It simply reads data from the database tables via the PC’s ODBC connection, similar to the Import function in Access, Excel or Crystal Reports.
+Pozi Connect does not perform any update on your property database. It simply reads data from the database tables via the PC's ODBC connection, similar to the Import function in Access, Excel or Crystal Reports.
 
 ### How does Pozi Connect work?
 
-Pozi Connect extracts tables from your council’s property database and imports them into a temporary SQLite database file. It then performs a series of queries (customised for each council) on this file to generate PIQA-compliant CSV files that contain the council’s address and parcel information required for the PIQA audits. These two CSV files are automatically zipped up for you, ready for emailing to DELWP.
+Pozi Connect extracts tables from your council's property database and imports them into a temporary SQLite database file. It then performs a series of queries (customised for each council) on this file to generate PIQA-compliant CSV files that contain the council’s address and parcel information required for the PIQA audits. These two CSV files are automatically zipped up for you, ready for emailing to DELWP.
 
 ### What else is Pozi Connect capable of?
 
 Pozi Connect has other tricks up its sleeve. It generates map layers from corporate databases (spatial and non-spatial), performs spatial data analysis, converts between data formats (Esri SHP, MapInfo TAB, DXF, KML, and others), loads data into spatial databases (SQL Server 2008, PostGIS, Oracle Spatial), and generally automates many of the tasks that GIS Administrators find themselves doing on a regular basis.
 
-Most importantly, it can [automate your M1 workflow](https://www.pozi.com/pozi-connect-for-m1s).
+Most importantly, it can [automate your M1 workflow](m1s/index.md).
 
 Contact Pozi to find out how you can put Pozi Connect to work in your council’s GIS.
