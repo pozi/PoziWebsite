@@ -22,22 +22,24 @@
     <meta property="og:url" content="https://pozi.github.io/PoziWebsite/administrator-guide/integrations/assetic-mydata/">
     <meta property="og:title" content="Assetic myData | Pozi Web GIS | Online Map">
     <meta property="og:description" content="GIS integration for Assetic myData">
+    <meta property="og:image" content="https://pozi.github.io/PoziWebsite/administrator-guide/integrations/img/mydata-app.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pozi.github.io/PoziWebsite/administrator-guide/integrations/assetic-mydata/">
     <meta property="twitter:title" content="Assetic myData | Pozi Web GIS | Online Map">
     <meta property="twitter:description" content="GIS integration for Assetic myData">
+    <meta property="twitter:image" content="https://pozi.github.io/PoziWebsite/administrator-guide/integrations/img/mydata-app.png">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/PoziWebsite/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/PoziWebsite/favicon.ico" rel="icon" />
-    <link href="/PoziWebsite/resources/css/retype.css?v=2.2.706323454076" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/PoziWebsite/resources/css/retype.css?v=2.2.706436630096" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/PoziWebsite/resources/js/config.js?v=2.2.706323454076" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/PoziWebsite/resources/js/config.js?v=2.2.706436630096" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/PoziWebsite/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/PoziWebsite/resources/js/lunr.js?v=2.2.706323454076" defer></script>
-    <script id="prism-js" type="text/javascript" src="/PoziWebsite/resources/js/prism.js?v=2.2.706323454076" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/PoziWebsite/resources/js/lunr.js?v=2.2.706436630096" defer></script>
+    <script id="prism-js" type="text/javascript" src="/PoziWebsite/resources/js/prism.js?v=2.2.706436630096" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -257,8 +259,25 @@
         <span>Assetic myData</span>
     </h1>
 </doc-anchor-target>
+<doc-anchor-target id="application-link">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#application-link">#</doc-anchor-trigger>
+        <span>Application Link</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="link-out-from-pozi">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#link-out-from-pozi">#</doc-anchor-trigger>
+        <span>Link-Out from Pozi</span>
+    </h3>
+</doc-anchor-target>
 <p>Assetic myData is a Windows application that supports linking via a URL protocol handler.</p>
 <p>For any selected asset feature, Pozi users can click a link to launch the myData application which displays the asset&#x27;s details.</p>
+<p><figure class="content-center">
+    <img src="../img/mydata-app.png" alt="" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <p>An example link for myData looks like this:</p>
 <p><a href="mydata://action=goto&amp;assetCategory=Buildings&amp;assetID=BD0021">mydata://action=goto&amp;assetCategory=Buildings&amp;assetID=BD0021</a></p>
 <p>For any PC on which a URL protocol handler has been installed, clicking this link will launch the myData application.</p>
@@ -295,6 +314,82 @@
         </div>
     </div>
 </div>
+<doc-panel id="supported-asset-categories" collapsed>
+    <template #title>Supported Asset Categories</template>
+<ul>
+<li><code v-pre>Buildings</code></li>
+<li><code v-pre>Bridges</code></li>
+<li><code v-pre>Civil</code></li>
+<li><code v-pre>Culverts</code></li>
+<li><code v-pre>Drains</code></li>
+<li><code v-pre>FleetPlantAndEquipment</code></li>
+<li><code v-pre>Kerbs</code></li>
+<li><code v-pre>ParkInfrastructure</code></li>
+<li><code v-pre>Parks</code></li>
+<li><code v-pre>Pathways</code></li>
+<li><code v-pre>Pits</code></li>
+<li><code v-pre>PlayEquipment</code></li>
+<li><code v-pre>Playgrounds</code></li>
+<li><code v-pre>Runways</code></li>
+<li><code v-pre>SealedRoads</code></li>
+<li><code v-pre>StreetFurniture</code></li>
+</ul>
+</doc-panel>
+<doc-anchor-target id="data-link">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#data-link">#</doc-anchor-trigger>
+        <span>Data Link</span>
+    </h2>
+</doc-anchor-target>
+<p>When a user selects an asset feature in the Pozi map, the feature&#x27;s <code v-pre>Asset_ID</code> value can be used to look up inspection details for that feature.</p>
+<doc-anchor-target id="pozi-app-configuration">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pozi-app-configuration">#</doc-anchor-trigger>
+        <span>Pozi App Configuration</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Footpath Inspections</div>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;title&quot;: &quot;Footpath Inspections&quot;,
+  &quot;type&quot;: &quot;GeoJSON&quot;,
+  &quot;parent&quot;: &quot;Footpaths&quot;,
+  &quot;showInLayerControl&quot;: false,
+  &quot;localDataSource&quot;: true,
+  &quot;ResourceCheck&quot;: &quot;https://local.pozi.com/resourcecheck/hindmarsh.json&quot;,
+  &quot;config&quot;: {
+    &quot;spatial&quot;: {
+      &quot;loader&quot;: &quot;geojson&quot;,
+      &quot;url&quot;: &quot;https://local.pozi.com/ogr?source=hsc_assets_inspections.vrt&amp;options=-where|AssetID in ('[Asset_ID]')&quot;,
+      &quot;label&quot;: &quot;InspectionNameAndDate&quot;,
+      &quot;id&quot;: &quot;ID&quot;
+    }
+  }
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="pozi-server-configuration">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pozi-server-configuration">#</doc-anchor-trigger>
+        <span>Pozi Server Configuration</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">hsc_assets_inspections.vrt</div>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;OGRVRTDataSource&gt;
+	&lt;OGRVRTLayer name=&quot;Inspections&quot;&gt;
+		&lt;SrcDataSource&gt;ODBC:DRIVER={SQL Server};SERVER=NHILLDB2;DATABASE=myDataProduction,InspectionView&lt;/SrcDataSource&gt;
+		&lt;SrcSQL dialect=&quot;sqlite&quot;&gt;
+		    select
+			    *,
+				InspectionName + ' (' + cast ( cast ( ScheduledDueDate as date ) as varchar ) + ')' as InspectionNameAndDate
+			from InspectionView
+			order by ScheduledDueDate desc
+		&lt;/SrcSQL&gt;
+		&lt;GeometryType&gt;wkbNone&lt;/GeometryType&gt;
+	&lt;/OGRVRTLayer&gt;
+&lt;/OGRVRTDataSource&gt;</code></pre>
+</doc-codeblock></div>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
                                     <span>

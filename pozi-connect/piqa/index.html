@@ -32,11 +32,11 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/PoziWebsite/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/PoziWebsite/favicon.ico" rel="icon" />
-    <link href="/PoziWebsite/resources/css/retype.css?v=2.2.706323454076" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/PoziWebsite/resources/css/retype.css?v=2.2.706436630096" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/PoziWebsite/resources/js/config.js?v=2.2.706323454076" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/PoziWebsite/resources/js/config.js?v=2.2.706436630096" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/PoziWebsite/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/PoziWebsite/resources/js/lunr.js?v=2.2.706323454076" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/PoziWebsite/resources/js/lunr.js?v=2.2.706436630096" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -258,7 +258,7 @@
 </doc-anchor-target>
 <p>Each year, Victoria&#x27;s <a href="https://www.delwp.vic.gov.au/">Department of Environment, Land, Water &amp; Planning</a> (DELWP) requires councils to supply it with an extract of property and address information from their internal property systems to be used for an annual Property Information Quality Audit (PIQA).</p>
 <p>The process of extracting, filtering and formatting this data is time consuming and often overwhelming for councils, and can require the participation and co-operation of council staff members across GIS, Rates and IT departments.</p>
-<p><a href="https://pozi.com/pozi-connect/">Pozi Connect</a> is a tool developed by Pozi, with financial support of DELWP, that enables councils to quickly and accurately compile their property and address information into the required PIQA format.</p>
+<p><a href="https://pozi.com/pozi-connect/">Pozi Connect</a> enables councils to quickly and accurately compile their property and address information into the required PIQA format.</p>
 <doc-anchor-target id="instructions-for-piqa-participants">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#instructions-for-piqa-participants">#</doc-anchor-trigger>
@@ -287,28 +287,28 @@
         <span>How does Pozi Connect connect to the property system?</span>
     </h3>
 </doc-anchor-target>
-<p>Pozi Connect uses your PC’s existing ODBC connection settings. It does not require any additional network or firewall configuration.</p>
+<p>Pozi Connect uses your PC&#x27;s existing ODBC connection settings. It does not require any additional network or firewall configuration.</p>
 <doc-anchor-target id="does-pozi-connect-extract-any-confidential-information">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#does-pozi-connect-extract-any-confidential-information">#</doc-anchor-trigger>
         <span>Does Pozi Connect extract any confidential information?</span>
     </h3>
 </doc-anchor-target>
-<p>Pozi Connect only extracts the tables and fields from your property system that contains information relevant to the PIQA. You can check for yourself what information will be sent to DELWP by opening up the CSV files located in the “Output” folder in Excel.</p>
+<p>Pozi Connect only extracts the tables and fields from your property system that contains information relevant to the PIQA. You can check for yourself what information will be sent to DELWP by opening up the CSV files located in the <code v-pre>output</code> folder in Excel.</p>
 <doc-anchor-target id="does-pozi-connect-make-any-changes-to-the-property-system">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#does-pozi-connect-make-any-changes-to-the-property-system">#</doc-anchor-trigger>
         <span>Does Pozi Connect make any changes to the property system?</span>
     </h3>
 </doc-anchor-target>
-<p>Pozi Connect does not perform any update on your property database. It simply reads data from the database tables via the PC’s ODBC connection, similar to the Import function in Access, Excel or Crystal Reports.</p>
+<p>Pozi Connect does not perform any update on your property database. It simply reads data from the database tables via the PC&#x27;s ODBC connection, similar to the Import function in Access, Excel or Crystal Reports.</p>
 <doc-anchor-target id="how-does-pozi-connect-work">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#how-does-pozi-connect-work">#</doc-anchor-trigger>
         <span>How does Pozi Connect work?</span>
     </h3>
 </doc-anchor-target>
-<p>Pozi Connect extracts tables from your council’s property database and imports them into a temporary SQLite database file. It then performs a series of queries (customised for each council) on this file to generate PIQA-compliant CSV files that contain the council’s address and parcel information required for the PIQA audits. These two CSV files are automatically zipped up for you, ready for emailing to DELWP.</p>
+<p>Pozi Connect extracts tables from your council&#x27;s property database and imports them into a temporary SQLite database file. It then performs a series of queries (customised for each council) on this file to generate PIQA-compliant CSV files that contain the council’s address and parcel information required for the PIQA audits. These two CSV files are automatically zipped up for you, ready for emailing to DELWP.</p>
 <doc-anchor-target id="what-else-is-pozi-connect-capable-of">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#what-else-is-pozi-connect-capable-of">#</doc-anchor-trigger>
@@ -316,7 +316,7 @@
     </h3>
 </doc-anchor-target>
 <p>Pozi Connect has other tricks up its sleeve. It generates map layers from corporate databases (spatial and non-spatial), performs spatial data analysis, converts between data formats (Esri SHP, MapInfo TAB, DXF, KML, and others), loads data into spatial databases (SQL Server 2008, PostGIS, Oracle Spatial), and generally automates many of the tasks that GIS Administrators find themselves doing on a regular basis.</p>
-<p>Most importantly, it can <a href="https://www.pozi.com/pozi-connect-for-m1s">automate your M1 workflow</a>.</p>
+<p>Most importantly, it can <a href="../m1s/">automate your M1 workflow</a>.</p>
 <p>Contact Pozi to find out how you can put Pozi Connect to work in your council’s GIS.</p>
 
                                 
