@@ -32,11 +32,11 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/PoziWebsite/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/PoziWebsite/favicon.ico" rel="icon" />
-    <link href="/PoziWebsite/resources/css/retype.css?v=2.2.706755356223" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/PoziWebsite/resources/css/retype.css?v=2.2.706768580398" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/PoziWebsite/resources/js/config.js?v=2.2.706755356223" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/PoziWebsite/resources/js/config.js?v=2.2.706768580398" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/PoziWebsite/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/PoziWebsite/resources/js/lunr.js?v=2.2.706755356223" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/PoziWebsite/resources/js/lunr.js?v=2.2.706768580398" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -271,7 +271,7 @@
 <li>Run the installer, and when it prompts you, specify a folder location. You can choose anywhere; somewhere like <code v-pre>C:\Temp\</code> or the desktop will be sufficient.</li>
 <li>Navigate to the newly-created <code v-pre>PoziConnect</code> folder location, and run <code v-pre>PoziConnect.exe</code> by double-clicking it.</li>
 <li>From the Task drop-down list, select the item that relates to your council (eg, Alpine Shire Council would choose &#x27;Alpine PIQA&#x27;). If you are prompted for a database username and/or password, enter them. You may have your own credentials that you can use, or you may use the database administrator credentials. Then click OK and wait for the application to run (it can take several minutes).</li>
-<li>Check the <code v-pre>PoziConnect\output</code> folder (or you may have specified your own location in the settings) for a newly created &#x27;PIQA Export.zip&#x27; file. This file contains two CSV spreadsheets that have been generated from the council’s property and address data. Email the zip file to your DELWP contact.</li>
+<li>Check the <code v-pre>PoziConnect\output</code> folder (or you may have specified your own location in the settings) for a newly created &#x27;PIQA Export.zip&#x27; file. This file contains two CSV spreadsheets that have been generated from the council&#x27;s property and address data. Email the zip file to your DELWP contact.</li>
 </ol>
 <p>If you experience any difficulties such as the Pozi Connect failing to start, please download and install the <a href="https://www.microsoft.com/en-au/download/details.aspx?id=11895">Microsoft Visual C++ 2008 Redistributable Package (x86)</a>, and try running Pozi Connect again.</p>
 <p>For any issues that are not solved by installing this patch, please contact Pozi.</p>
@@ -281,43 +281,30 @@
         <span>FAQ</span>
     </h2>
 </doc-anchor-target>
-<doc-anchor-target id="how-does-pozi-connect-connect-to-the-property-system">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#how-does-pozi-connect-connect-to-the-property-system">#</doc-anchor-trigger>
-        <span>How does Pozi Connect connect to the property system?</span>
-    </h3>
-</doc-anchor-target>
+<doc-panels>
+   <doc-panel id="how-does-pozi-connect-connect-to-the-property-system" collapsed>
+       <template #title>How does Pozi Connect connect to the property system?</template>
 <p>Pozi Connect uses your PC&#x27;s existing ODBC connection settings. It does not require any additional network or firewall configuration.</p>
-<doc-anchor-target id="does-pozi-connect-extract-any-confidential-information">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#does-pozi-connect-extract-any-confidential-information">#</doc-anchor-trigger>
-        <span>Does Pozi Connect extract any confidential information?</span>
-    </h3>
-</doc-anchor-target>
+   </doc-panel>
+   <doc-panel id="does-pozi-connect-extract-any-confidential-information" collapsed>
+       <template #title>Does Pozi Connect extract any confidential information?</template>
 <p>Pozi Connect only extracts the tables and fields from your property system that contains information relevant to the PIQA. You can check for yourself what information will be sent to DELWP by opening up the CSV files located in the <code v-pre>output</code> folder in Excel.</p>
-<doc-anchor-target id="does-pozi-connect-make-any-changes-to-the-property-system">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#does-pozi-connect-make-any-changes-to-the-property-system">#</doc-anchor-trigger>
-        <span>Does Pozi Connect make any changes to the property system?</span>
-    </h3>
-</doc-anchor-target>
+   </doc-panel>
+   <doc-panel id="does-pozi-connect-make-any-changes-to-the-property-system" collapsed>
+       <template #title>Does Pozi Connect make any changes to the property system?</template>
 <p>Pozi Connect does not perform any update on your property database. It simply reads data from the database tables via the PC&#x27;s ODBC connection, similar to the Import function in Access, Excel or Crystal Reports.</p>
-<doc-anchor-target id="how-does-pozi-connect-work">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#how-does-pozi-connect-work">#</doc-anchor-trigger>
-        <span>How does Pozi Connect work?</span>
-    </h3>
-</doc-anchor-target>
-<p>Pozi Connect extracts tables from your council&#x27;s property database and imports them into a temporary SQLite database file. It then performs a series of queries (customised for each council) on this file to generate PIQA-compliant CSV files that contain the council’s address and parcel information required for the PIQA audits. These two CSV files are automatically zipped up for you, ready for emailing to DELWP.</p>
-<doc-anchor-target id="what-else-is-pozi-connect-capable-of">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#what-else-is-pozi-connect-capable-of">#</doc-anchor-trigger>
-        <span>What else is Pozi Connect capable of?</span>
-    </h3>
-</doc-anchor-target>
+   </doc-panel>
+   <doc-panel id="how-does-pozi-connect-work" collapsed>
+       <template #title>How does Pozi Connect work?</template>
+<p>Pozi Connect extracts tables from your council&#x27;s property database and imports them into a temporary SQLite database file. It then performs a series of queries (customised for each council) on this file to generate PIQA-compliant CSV files that contain the council&#x27;s address and parcel information required for the PIQA audits. These two CSV files are automatically zipped up for you, ready for emailing to DELWP.</p>
+   </doc-panel>
+   <doc-panel id="what-else-is-pozi-connect-capable-of" collapsed>
+       <template #title>What else is Pozi Connect capable of?</template>
 <p>Pozi Connect has other tricks up its sleeve. It generates map layers from corporate databases (spatial and non-spatial), performs spatial data analysis, converts between data formats (Esri SHP, MapInfo TAB, DXF, KML, and others), loads data into spatial databases (SQL Server 2008, PostGIS, Oracle Spatial), and generally automates many of the tasks that GIS Administrators find themselves doing on a regular basis.</p>
 <p>Most importantly, it can <a href="../m1s/">automate your M1 workflow</a>.</p>
-<p>Contact Pozi to find out how you can put Pozi Connect to work in your council’s GIS.</p>
+   </doc-panel>
+</doc-panels>
+<p>Contact Pozi to find out how you can put Pozi Connect to work in your council&#x27;s GIS.</p>
 
                                 
                                 <!-- Required only on API pages -->
