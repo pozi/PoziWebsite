@@ -143,7 +143,7 @@ Our team works with you to customise and maintain your map application - you're 
   [!badge size="3xl" variant="light" icon="/static/img/client-logos/cardinia.png" text="Cardinia Shire Council"](https://cardinia.pozi.com/) &zwnj; &zwnj; &zwnj;
   [!badge size="3xl" variant="light" icon="/static/img/client-logos/bendigo.png" text="City of Greater Bendigo"](https://bendigo.pozi.com/) &zwnj; &zwnj; &zwnj;
 
-  [!ref size="3xl" text="See more"](/showcase/)
+  [!ref icon="star" size="3xl" text="See more"](/showcase/)
 
 :::
 

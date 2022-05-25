@@ -24,15 +24,15 @@ icon: paper-airplane
 
 We build and customise Pozi sites to suit the specialised requirements of our clients.
 
-Check out these sites we've already implemented for our clients:
+Check out these sites we've built for our clients:
 
-[!ref size="3xl" text="Pozi site showcase"](/showcase/)
+[!ref icon="star" size="3xl" text="Pozi site showcase"](/showcase/)
 
 [Get in touch](/contact/) with us to discuss your requirements. We'll customise a trial Pozi site to suit your organisation's needs.
 
-After the 60 day trial, we'll find which of the Pozi plans is suitable for you.
+After a 60 day trial, we'll discuss with you which of the Pozi plans is suitable for you.
 
-[!ref size="3xl" text="Plans and pricing"](/pricing/)
+[!ref icon="briefcase" size="3xl" text="Plans and pricing"](/pricing/)
 
 :::section
 
