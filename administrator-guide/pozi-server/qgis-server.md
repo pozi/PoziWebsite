@@ -183,13 +183,13 @@ Create PoziQgisServer application pool:
 
 ```
 
-Set the user for the PoziQgisServer application pool:
+Set the user for the PoziQgisServer application pool (this step may not be needed because the command immediately above seems to take care of this - remove this step if it can be confirmed this is not needed):
 
 - IIS > select server > Sites > Default Web Site > Pozi > QgisServer > Advanced Settings > Application Pool > set to PoziQgisServer
 
 Set permissions for `IIS AppPool\PoziQgisServer` :
 
-- IIS > select server > Application Pools > PoziQgisServer > Advanced settings > Identity > Application Pool Identity > Custom account > enter details of the domain user that runs Pozi "service" account
+- IIS > select server > Application Pools > PoziQgisServer > Advanced settings > Identity > Application Pool Identity > Custom account > enter details of the domain user that runs Pozi "service" account (include the domain prefix and backslash before the username)
 
 ![Grant read permission for Pozi Server data folder to IIS AppPool\PoziQgisServer](img/pozi-server-iis-apppool-poziqgisserver-permissions.png)
 

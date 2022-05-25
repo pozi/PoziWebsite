@@ -13,11 +13,15 @@ sidebar_label: IWS
 
 http://images.land.vic.gov.au/ecwp/ecw_wms.dll?service=WMS&request=getcapabilities
 
-Current GetCapabilities is over 13MB in one long line. Use https://stackoverflow.com/questions/3961217/how-do-i-format-xml-in-notepad to format output.
+The current GetCapabilities is over 13MB in one long line. Save it to a text file and use https://stackoverflow.com/questions/3961217/how-do-i-format-xml-in-notepad to format the text into a readable form.
 
 ### Outages
 
 Report to gis.helpdesk@delwp.vic.gov.au
+
+### Support
+
+Email coordinated.imagery@delwp.vic.gov.au
 
 ## Configuration
 
@@ -89,7 +93,7 @@ http://images.land.vic.gov.au/iwsadmin/
 Credentials for the Image Web Server:
 http://services.land.vic.gov.au/MyProfile/
 
-If councils don't already have credentials, tell them to get in touch with John White: john.white@delwp.vic.gov.au, 03 9194 0204.
+If councils don't already have credentials, tell them to email coordinated.imagery@delwp.vic.gov.au.
 
 Client credentials: https://github.com/groundtruth/PoziProxy/blob/master/lib/pozi-auth.js
 
@@ -103,7 +107,7 @@ When there are multiple ecws for the same aerial layer the ecw images are displa
 
 #### No spaces allowed in ecw image layer set
 
-When there are multiple ecws for the same aerial layer, separated by commas, no spaces are allowed before and after the commas.  If there is a space then the ecw images after that point in the layer set will not b displayed.
+When there are multiple ecws for the same aerial layer, separated by commas, no spaces are allowed before and after the commas.  If there is a space then the ecw images after that point in the layer set will not be displayed.
 
 ### Get Layer Name
 

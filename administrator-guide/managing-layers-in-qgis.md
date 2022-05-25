@@ -8,7 +8,7 @@ sidebar_position: 1
 
 ## Introduction
 
-The popular open source QGIS application provides a powerful and convenient way to compile and configure map layers for publishing local datasets to internal Pozi users.
+The popular open source QGIS desktop application provides a powerful and convenient way to compile and configure map layers for publishing local datasets to internal Pozi users.
 
 A QGIS project file (*.qgs) represents a layer group within Pozi.
 
@@ -34,11 +34,11 @@ Often your own user account may have certain drives mapped for convenience, so y
 
 A UNC path is an absolute path that is recognised by all user accounts, regardless of what drives are mapped on startup. An example UNC path might look like this:
 
-```
-\\ad.hrcc.vic.gov.au\shared\GIS\
-```
 
-Add the UNC path as a *Favorite* in the QGIS Browser panel for easy access. Learn more [here](https://docs.qgis.org/3.22/en/docs/user_manual/introduction/browser.html#favorites). Also add a shortcut to the UNC location on your PC desktop for extra convenience.
+* `\\ad.hrcc.vic.gov.au\shared\GIS\`
+* `\\bs-intra\GIS\`
+
+Add the UNC path of your GIS data folder as a *Favorite* in the QGIS Browser panel for easy access. Learn more [here](https://docs.qgis.org/3.22/en/docs/user_manual/introduction/browser.html#favorites). Also add a shortcut to the UNC location on your PC desktop for extra convenience.
 
 ### Configuring Layers
 
@@ -52,6 +52,16 @@ Some common layer configuration tasks that can be carried out in QGIS include:
   * [thematic styling](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#categorized-renderer)
 * [add labels](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#labels-properties)
 * [modify fields](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#fields-properties)
+
+!!!warning
+
+Some changes may not be available immediately in Pozi. If you encounter an issue such as a recently added or renamed layer not loading, restart the IIS application pool.
+
+Windows > IIS > (select server) > Application Pools > PoziQgisServer > Recycle
+
+![](./img/iis-application-pool-recycle.png){style="width:400px"}
+
+!!!
 
 ## Enable Project as WMS Service
 
@@ -95,7 +105,7 @@ We recommend to enable WFS only for layers with fewer than 10-20K features.
 
 ## Table File Maintenance
 
-:::danger
+!!!danger
 
 Extreme care should be taken when **deleting, moving or renaming** any table files that are referenced by a QGIS project file.
 
@@ -103,7 +113,7 @@ If such a change is made to a table while it is registered as a layer in a QGIS 
 
 In this scenario, **all layers belonging to the project will no longer appear in the layer panel.**
 
-:::
+!!!
 
 If you need to move, rename or delete a table, you must first **remove the layer from any QGIS project to which the layer is registered**, then save the QGIS project.
 
@@ -114,3 +124,13 @@ Windows > IIS > (select server) > Application Pools > PoziQgisServer > Stop
 You may also need to stop any other services that start with `PoziQgisServer`.
 
 Restart the service(s) after you make your changes.
+
+## Troubleshooting
+
+==- Layer features are not displayed when the layer is turned on
+
+Pozi is only able to display features that have at least one valid/non-null attribute.
+
+If any records in your data contain no attributes, populate some values into one of the fields.
+
+==-

@@ -38,7 +38,6 @@ Enable internal users to view and interact with corporate GIS layers on your org
   - send Pozi property selection to property system (mailouts, planning application notifications, etc)
 - Asset System
 - CRM
-
 - integration with any web-based corporate applications wth open APIs
 - launch Pozi from any application with map pre-zoomed to specific feature
 
@@ -63,7 +62,7 @@ Pozi Enterprise enables staff to carry out critical workflows within its use-to-
 
 Remote and mobile staff will have access to critical location information in the field and working from home. Field crews can use Pozi on phones and tablets with GPS functionality to guide them to precise locations to carry out inspections and works.
 
-## Upgrade to Pozi Enterprise
+## Upgrade
 
 If you're already using Pozi Pro, an upgrade to Pozi Enterprise costs an additional $3K per year.
 
@@ -71,4 +70,10 @@ Some implementation costs will also apply to set up the internal data integratio
 
 We will also collaborate closely with internal staff and/or external support providers to enable them to manage the Pozi configuration.
 
-[Get in touch](/contact/) to discuss your organisation's requirements. 60-day free trials are available.
+[Get in touch](/contact/) to discuss your organisation's requirements. [60-day free trials](/trial/) are available.
+
+:::section
+
+[!button variant="light" icon="mention" size="2xl" corners="pill" text="Contact us today!"](/contact/)
+
+:::

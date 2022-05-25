@@ -2,7 +2,7 @@
 slug: pozi-in-the-news
 title: Pozi in the news
 authors: Megan Barrow
-tags: [Horsham Rural City Council, Wimmera CMA, City of Greater Bendigo, news]
+tags: [Horsham Rural City Council, Wimmera CMA, City of Greater Bendigo, media]
 ---
 
 ### How Pozi can help your organisation get PR...

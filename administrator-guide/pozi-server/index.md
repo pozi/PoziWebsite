@@ -1,5 +1,6 @@
 ---
 title: Pozi Server
+order: 100
 ---
 
 :::note Under Construction

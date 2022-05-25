@@ -2,14 +2,12 @@
 slug: how-web-developers-can-use-gis-data
 title: How web developers can use GIS data & Pozi
 authors: Megan Barrow
-tags: [Horsham Rural City Council, Cardinia Shire Council, City of Greater Bendigo, news]
+tags: [Horsham Rural City Council, Cardinia Shire Council, City of Greater Bendigo, media]
 ---
 
 Traditionally Geographic Information Systems (GIS) have been a hidden resource of data portals used by organisation staff to deliver critical customer service on location based information.
 
 But, with the digital age comes digital communication and the need to transparently deliver as much of your knowledge to the community with UX (user experience). This includes your GIS data.
-
-<!--truncate-->
 
 In recent times, web based maps for GIS have sat at the extremes of accessibility for organisations – either expensive applications delivered in complex formats, or simplistic tools that, whilst being inexpensive or even free, such as Google Maps, don’t deliver your unique data.
 

@@ -20,7 +20,7 @@ Any the GeoJSON files published to data.gov.au are directly loaded by Pozi. Any 
 
 ### Shapefile
 
-Shapefiles are converted into WMS and WFS enpoints after an overnight 'ingestion' process.
+Shapefiles are converted into WMS and WFS endpoints after an overnight 'ingestion' process.
 
 After ingestion, the data is available via the following API endpoints:
 

@@ -1,16 +1,16 @@
 ---
-title: Pozi Connect for M1s
+title: M1s
 ---
 
-Pozi Connect generates council 'M1' reports that are critical link for updating the Victorian state map base.
+<big>Pozi Connect generates council 'M1' reports that are critical link for updating the Victorian state map base.</big>
 
-![M1 Form](https://i.imgur.com/rlp9JKS.jpg "M1 Form")
+![](https://i.imgur.com/rlp9JKS.jpg)
 
 Pozi Connect compares the council's property data with the latest Vicmap data and determines what updates are required in Vicmap to accurately reflect the council's property and address information.
 
 After Pozi configures and implements Pozi Connect for your council, you can generate M1s at any time by launching Pozi Connect and running the three or four M1 tasks from the picklist. Your M1 report will be generated to a pre-defined location, and it is ready to be submitted via the [VES](https://ves.land.vic.gov.au/) system.
 
-(See Pozi Connect's [history](/pozi-connect/m1s/history) to see the our most recent changes.)
+(See Pozi Connect's [history](/pozi-connect/history) to see the our most recent changes.)
 
 ## Vicmap Maintenance Cycle
 
@@ -47,7 +47,7 @@ Confirm that the dates of the files in these main folder(s) correspond to the da
 
 Launch Pozi Connect. From the picklist, select the first M1 task that relates to your council name:
 
-![Pozi Connect for M1s](https://i.imgur.com/Yx9RH81.png "Pozi Connect for M1s"){style="width:500px"}
+![](/static/img/screenshots/pozi-connect-maroondah-m1.png)
 
 For each of the three to four M1 tasks in the picklist:
 
@@ -61,7 +61,9 @@ Upon completion of the 'Generate M1' M1 task, you can find the completed M1 repo
 
 ## Outputs
 
-*Tip: in Windows Explorer, order the files by reverse date order to bring the latest generated files to the top*
+!!!
+In Windows Explorer, order the files by reverse date order to bring the latest generated files to the top
+!!!
 
 * `M1_CouncilName_CurrentDate_Pozi_Connect-VersionNumber.csv`: generated M1
 * `M1_History.csv`: contains all M1 records for searching purposes
@@ -135,4 +137,4 @@ Z, R, P, S, E, C, A
 
 Pozi offers consulting services to improve councils' property data maintenance processes.
 
-[Read more](https://pozi.com/pozi-connect/), or [contact](https://pozi.com/contact/) Pozi.
+[!button variant="info" icon="mention" size="2xl" corners="pill" text="Contact us >"](/contact/)

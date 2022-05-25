@@ -1,6 +1,6 @@
 ---
 title: Configuring Widgets
-sidebar_position: 20
+order: 60
 ---
 
 It is not necessary to have developer access to configure Pozi widgets. Widget configuration instructions can be found on the [Widgets (Administrator Guide)](/administrator-guide/widgets/) page.

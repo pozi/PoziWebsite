@@ -1,13 +1,13 @@
 ---
 title: Community Consultation
-sidebar_position: 10
+order: 50
 ---
 
 *Community consultation is available for **Pozi Pro**, **Enterprise** and **Enterprise Cloud** offerings.*
 
 Community consultation enables gathering information from the public for strategic initiatives.
 
-A campain may make use of one or both of these forms:
+A campaign may make use of one or both of these forms:
 
 * main 'survey' form, displayed to user when they click a certain location
 * 'feedback' form, displayed when user clicks on a feature (such as another user's survey response)
@@ -36,7 +36,7 @@ Add hidden fields:
 
 * `Longitude` (Basic > Number)
 * `Latitude` (Basic > Number)
-* `Layer ID` (Basic > Short Text, with default value, eg, growinggreatwestern) (Does this even need to be populated? It looks like Pozi inserts the value. Try testing the next one with just a blank field)
+* `Layer ID` (Basic > Short Text, with default value, eg, `growinggreatwestern`) (Does this even need to be populated? It looks like Pozi inserts the value. Try testing the next one with just a blank field)
 * `Feature ID` (Widget > Unique ID)
 * `Map Link` (Basic > Short Text)
 

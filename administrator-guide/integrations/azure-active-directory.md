@@ -1,6 +1,6 @@
 ---
 title: Azure Active Directory
-tags: [Pozi Enterprise Cloud]
+tags: [Pozi Enterprise Cloud, Cardinia Shire Council]
 ---
 
 *Azure AD integration is a feature of the **Pozi Enterprise Cloud** offering.*
@@ -16,4 +16,4 @@ Example:
 
 ![](./img/azure-ad-login.png)
 
-Once signed in, users will have access to private datasets for as long as the user remains logged in.
+Once signed in, users will have access to private datasets for as long their Microsoft account remains logged in.

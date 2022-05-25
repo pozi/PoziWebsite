@@ -9,8 +9,6 @@ tags: [customer service]
 
 Due to Pozi's simplicity and strong focus on easy user experience, we receive feedback from clients that staff use Pozi for most of their customer service roles instead of their more complex GIS. This is an added benefit you can discover for yourself.
 
-<!--truncate-->
-
 We often speak with potential clients looking for a simple map enquiry tool, but are concerned about how it will work with their existing GIS product and the issues around change management in rolling out a new platform.
 
 ### Did you know many of our clients use Pozi GIS app to complement their internal GIS solution?

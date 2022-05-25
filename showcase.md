@@ -2,7 +2,18 @@
 layout: central
 ---
 
-# Showcase
+#
+
+<div style="text-align:center;">
+  <h1>Showcase</h1>
+  <img src="/PoziWebsite/static/img/undraw/undraw_portfolio_re_qwm5.svg" style="width:400px">
+</div>
+
+<br/>
+<br/>
+Click on any of our client sites below to discover how Pozi serves these organisations.
+<br/>
+<br/>
 
 [!ref icon="/static/img/client-logos/gleneira.png" text="Glen Eira City Council"](https://gleneira.pozi.com/)
 [!ref icon="/static/img/client-logos/frankston.png" text="Frankston City Council"](https://frankston.pozi.com/)
