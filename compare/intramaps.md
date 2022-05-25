@@ -66,7 +66,7 @@ If your users require selections based on circles or rectangles, then IntraMaps 
 
 ==- Users use it to launch legacy Windows applications
 
-While Pozi enables linking to installed Windows applications that support [URL protocol handlers](/PoziWebsite/tags/url-protocol-handler/), it is mostly designed for integrations with modern web applications through REST APIs and simple URLs.
+While Pozi enables linking to installed Windows applications that support [URL protocol handlers](/tags/url-protocol-handler/), it is mostly designed for integrations with modern web applications through REST APIs and simple URLs.
 
 If your users have specialised Windows applications that they launch from customised IntraMaps application launchers, then IntraMaps will continue to serve them for years to come.
 

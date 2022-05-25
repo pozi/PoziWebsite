@@ -8,7 +8,7 @@ layout: central
 <br/>
 <br/>
 
-<img src="/PoziWebsite/static/img/undraw/undraw_sync_files_re_ws4c.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
+<img src="/static/img/undraw/undraw_sync_files_re_ws4c.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
 # Land Central Station
 
@@ -30,7 +30,7 @@ We have a plan to eliminate the friction between the councils and the Victorian 
 
 Victorian councils maintain the source of truth for much of the state's property information.
 
-<img src="/PoziWebsite/static/img/undraw/undraw_small_town_re_7mcn.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
+<img src="/static/img/undraw/undraw_small_town_re_7mcn.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
 
 The Victorian [Department of Environment, Land Water and Planning](https://delwp.vic.gov.au) (DELWP) relies on this information for its Vicmap Address and Property datasets. However, the current data exchange process puts responsibility on under-resourced councils to frequently prepare and submit lists of property data updates via complex spreadsheets (M1s).
 
@@ -66,7 +66,7 @@ The current system is difficult to automate and innovate upon.
 
 #### For Councils
 
-<img src="/PoziWebsite/static/img/undraw/undraw_process_re_gws7.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
+<img src="/static/img/undraw/undraw_process_re_gws7.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
 * councils spend significant time on compiling and supplying data to DELWP that would that would be better spent on serving the council's own needs
 * as staff change or go on leave, there's a breakdown in the process, and it may be weeks or months between critical data updates
@@ -83,7 +83,7 @@ The current system is difficult to automate and innovate upon.
 
 **Land Central Station** is a centralised data clearinghouse of property information from all Victorian councils.
 
-<img src="/PoziWebsite/static/img/undraw/undraw_start_building_re_xani.svg" alt="" style="float:right;width:350px;margin:0px 40px;">
+<img src="/static/img/undraw/undraw_start_building_re_xani.svg" alt="" style="float:right;width:350px;margin:0px 40px;">
 
 It is designed to:
 
@@ -106,7 +106,7 @@ With DELWP having complete access to the combined authoritative property informa
 
 Central secure cloud-hosted platform
 
-<img src="/PoziWebsite/static/img/undraw/undraw_server_status_re_n8ln.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
+<img src="/static/img/undraw/undraw_server_status_re_n8ln.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
 * API for syncing data
 * data processing workflow for transforming and combining datasets from multiple councils
@@ -116,7 +116,7 @@ Central secure cloud-hosted platform
 
 #### Local File Sync
 
-<img src="/PoziWebsite/static/img/undraw/undraw_going_up_re_86kg.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
+<img src="/static/img/undraw/undraw_going_up_re_86kg.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
 On the council side, a simple data sync tool installed at each council and configured for their specific property system to generate and upload a nightly extract of property information. Alternatively, councils may choose to set up FME or another tool of their choice to push data to the cloud platform.
 
@@ -126,7 +126,7 @@ On the council side, a simple data sync tool installed at each council and confi
 
 #### For Councils
 
-<img src="/PoziWebsite/static/img/undraw/undraw_my_current_location_re_whmt.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
+<img src="/static/img/undraw/undraw_my_current_location_re_whmt.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
 * reduce complexity and the need for specialised knowledge within councils
 * reduce burden on council resources

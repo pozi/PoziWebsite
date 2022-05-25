@@ -7,7 +7,7 @@ layout: central
 
 <div style="text-align:center;">
   <h1>Pricing</h1>
-  <img src="/PoziWebsite/static/img/undraw/undraw_options_re_9vxh.svg" style="width:300px">
+  <img src="/static/img/undraw/undraw_options_re_9vxh.svg" style="width:300px">
 </div>
 
 <br/>
@@ -47,7 +47,7 @@ Pozi delivers powerful location-based functionality at a fraction of the cost of
 
 ### 3D Viewer
 
-<img src="/PoziWebsite/static/img/tweet-gallery/3d-poc.jpg" alt="" style="float:right;width:400px;margin:0px 40px;">
+<img src="/static/img/tweet-gallery/3d-poc.jpg" alt="" style="float:right;width:400px;margin:0px 40px;">
 
 Use Pozi to visualise your 3D imagery. Toggle between 2D and 3D viewing modes. Compatible with [Cesium 3D tile format](https://cesium.com/why-cesium/3d-tiles/).
 
@@ -58,7 +58,7 @@ Use Pozi to visualise your 3D imagery. Toggle between 2D and 3D viewing modes. C
 
 ### Community Consultation
 
-<img src="/PoziWebsite/static/img/tweet-gallery/horsham_corellas_wrap_up.png" alt="" style="float:right;width:400px;margin:0px 40px;">
+<img src="/static/img/tweet-gallery/horsham_corellas_wrap_up.png" alt="" style="float:right;width:400px;margin:0px 40px;">
 
 The Pozi Pro, Enterprise and Enterprise Cloud offerings include up to two concurrent community consultation campaigns. You may purchase additional campaigns over and above the included ones.
 

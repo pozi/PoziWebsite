@@ -5,7 +5,7 @@ layout: central
 
 # Pipeline
 
-<img src="/PoziWebsite/static/img/undraw/undraw_internet_on_the_go_re_vben.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
+<img src="/static/img/undraw/undraw_internet_on_the_go_re_vben.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
 <big>Transform your organisation's raw data into ready-to-use information sources.</big>
 

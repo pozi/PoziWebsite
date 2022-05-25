@@ -45,7 +45,7 @@ Pozi maps are fully responsive to fit on any device. Whether your customers are 
 ### Intelligent with pinpoint GPS accuracy
 
 <br/>
-<img src="/PoziWebsite/static/img/screenshots/gleneira-aerial-photo.jpg">
+<img src="/static/img/screenshots/gleneira-aerial-photo.jpg">
 <br/>
 <br/>
 <br/>
@@ -63,7 +63,7 @@ Aerial imagery allows users to clearly see the visual landmarks of their locatio
 ### Unlimited users, zero install & custom maps
 
 <br/>
-<img src="/PoziWebsite/static/img/tweet-gallery/glen_eira_planning_amendments.png">
+<img src="/static/img/tweet-gallery/glen_eira_planning_amendments.png">
 <br/>
 <br/>
 <br/>
@@ -83,7 +83,7 @@ Pozi allows you to have unlimited, embeddable and bookmarkable maps customised t
 Pozi Pro offers your organisation all the above features along with more advanced functionality to further engage with customers and satisfy the demands of internal staff and other repeat users.
 
 <br/>
-<img src="/PoziWebsite/static/img/tweet-gallery/northern_grampians_stawell_town_plan.png">
+<img src="/static/img/tweet-gallery/northern_grampians_stawell_town_plan.png">
 <br/>
 <br/>
 <br/>
@@ -101,7 +101,7 @@ Whenever a user searches for their address or location, Pozi Pro shows the neare
 ### Multiple layers & widgets
 
 <br/>
-<img src="/PoziWebsite/static/img/tweet-gallery/horsham_2020_aerial_imagery.jpg">
+<img src="/static/img/tweet-gallery/horsham_2020_aerial_imagery.jpg">
 <br/>
 <br/>
 <br/>
@@ -119,7 +119,7 @@ Different from Map Widget, the Information Widget allows an address search field
 ### Filtering, GPS tracking and bookmarks
 
 <br/>
-<img src="/PoziWebsite/static/img/tweet-gallery/northern_grampians_reseal_program.png">
+<img src="/static/img/tweet-gallery/northern_grampians_reseal_program.png">
 <br/>
 <br/>
 <br/>
@@ -133,7 +133,7 @@ Pozi Pro can generate custom map links to control exactly how the app appears to
 |||
 
 <br/>
-<img src="/PoziWebsite/static/img/screenshots/frankston-event-site-plan-mockup.jpg">
+<img src="/static/img/screenshots/frankston-event-site-plan-mockup.jpg">
 <br/>
 
 ---
@@ -144,7 +144,7 @@ Pozi Pro can generate custom map links to control exactly how the app appears to
 
 Take your organisational data and public web page to the ultimate level. Pozi Enterprise has all the features of Pozi and Pozi Pro plus the following.
 
-<img src="/PoziWebsite/static/img/tweet-gallery/loddon_reflect_defects.png">
+<img src="/static/img/tweet-gallery/loddon_reflect_defects.png">
 <br/>
 <br/>
 <br/>

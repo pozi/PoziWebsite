@@ -6,7 +6,7 @@ layout: central
 
 <div style="text-align:center;">
   <h1>Showcase</h1>
-  <img src="/PoziWebsite/static/img/undraw/undraw_portfolio_re_qwm5.svg" style="width:400px">
+  <img src="/static/img/undraw/undraw_portfolio_re_qwm5.svg" style="width:400px">
 </div>
 
 <br/>

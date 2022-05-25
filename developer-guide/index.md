@@ -25,7 +25,7 @@ This guide is intended for use by Pozi developers, support staff, technical part
 * [PoziClientConfig](https://github.com/pozi/PoziClientConfig/settings/access)
 * [PoziProxy](https://github.com/pozi/PoziProxy/settings/access)
 * [PoziServer](https://github.com/pozi/PoziServer/settings/access)
-* [PoziWebsite](https://github.com/pozi/PoziWebsite/settings/access)
+* [PoziWebsite](https://github.com/pozi/settings/access)
 
 ### Recommended PC Setup
 

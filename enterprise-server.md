@@ -5,7 +5,7 @@ layout: central
 
 # Enterprise Server
 
-<img src="/PoziWebsite/static/img/undraw/undraw_server_cluster_jwwq.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
+<img src="/static/img/undraw/undraw_server_cluster_jwwq.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
 <big>API for your organisation's spatial and non-spatial data</big>
 

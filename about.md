@@ -8,7 +8,7 @@ order: 10
 
 ## Our Vision
 
-<img src="/PoziWebsite/static/img/undraw/undraw_interview_re_e5jn.svg" alt="" style="float:right;width:350px;margin:0px 40px;">
+<img src="/static/img/undraw/undraw_interview_re_e5jn.svg" alt="" style="float:right;width:350px;margin:0px 40px;">
 
 <br/>
 
@@ -30,7 +30,7 @@ We embrace modern web technologies and continuous development and deployment pro
 
 ## Our Story
 
-<img src="/PoziWebsite/static/img/undraw/undraw_navigator_a479.svg" alt="" style="float:right;width:400px;margin:0px 40px;">
+<img src="/static/img/undraw/undraw_navigator_a479.svg" alt="" style="float:right;width:400px;margin:0px 40px;">
 
 Pozi commenced as *Groundtruth*, a consulting company founded in 1999 to help Victorian councils better manage their Geographic Information Systems (GIS).
 
@@ -54,7 +54,7 @@ We are driven to enable more people to easily access and use spatial information
 
 ### User Success
 
-<img src="/PoziWebsite/static/img/sssi-2022-010-crop.jpg" alt="" style="float:right;width:400px;margin:0px 40px;">
+<img src="/static/img/sssi-2022-010-crop.jpg" alt="" style="float:right;width:400px;margin:0px 40px;">
 
 Pozi puts the map at the centre of data discovery. Users effortlessly access accurate, up-to-date information for critical decision-making and gaining new insights by connecting to live, authoritative data sources.
 
@@ -70,7 +70,7 @@ Our clients work more efficiently and gain greater insights into their customers
 <br clear="all" />
 <br/>
 
-<img src="/PoziWebsite/static/img/sssi-2022-012-crop.jpg" alt="" style="float:right;width:400px;margin:0px 40px;">
+<img src="/static/img/sssi-2022-012-crop.jpg" alt="" style="float:right;width:400px;margin:0px 40px;">
 
 ### Partner Success
 

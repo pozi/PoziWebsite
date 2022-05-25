@@ -38,7 +38,7 @@ layout: central
 
 <!--- START SECTION - BENEFITS --->
 
-<img src="/PoziWebsite/static/img/undraw/undraw_information_tab_re_f0w3.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
+<img src="/static/img/undraw/undraw_information_tab_re_f0w3.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
 
 #### Confident decision making
 
@@ -47,7 +47,7 @@ Empower your users with the critical information they need by integrating with l
 <br clear="all" />
 <br/>
 
-<img src="/PoziWebsite/static/img/undraw/undraw_map_re_60yf.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
+<img src="/static/img/undraw/undraw_map_re_60yf.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
 #### Ease of use
 
@@ -56,7 +56,7 @@ Simple, modern map interface with a focus on immediate usability
 <br clear="all" />
 <br/>
 
-<img src="/PoziWebsite/static/img/undraw/undraw_online_discussion_re_nn7e.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
+<img src="/static/img/undraw/undraw_online_discussion_re_nn7e.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
 
 #### Real Support
 
@@ -78,7 +78,7 @@ Our team works with you to customise and maintain your map application - you're 
 
 :::
 
-<img src="/PoziWebsite/static/img/smartmockups_jno2fteq_1000x649.png">
+<img src="/static/img/smartmockups_jno2fteq_1000x649.png">
 
 <br/>
 <br/>
@@ -93,7 +93,7 @@ Our team works with you to customise and maintain your map application - you're 
 
 :::
 
-<img src="/PoziWebsite/static/img/pozi-data-widget-cardinia-council-tool.png" alt="Screenshot of Cardinia Council Widget" style="float:left;width:300px;margin:0px 40px;">
+<img src="/static/img/pozi-data-widget-cardinia-council-tool.png" alt="Screenshot of Cardinia Council Widget" style="float:left;width:300px;margin:0px 40px;">
 
 > "We see great online traffic data and know visiting the website has become a key part of customer service interaction. The waste and recycling collection widget is one of the most popular pages on our website.​"
 >
@@ -102,7 +102,7 @@ Our team works with you to customise and maintain your map application - you're 
 <br clear="all" />
 <br/>
 
-<img src="/PoziWebsite/static/img/screenshots/strathbogie-waste-collection-routes.png" alt="" style="float:right;width:300px;margin:0px 40px;">
+<img src="/static/img/screenshots/strathbogie-waste-collection-routes.png" alt="" style="float:right;width:300px;margin:0px 40px;">
 
 > "Really appreciate the 5 star support. So helpful and fast to respond. Thank you!"
 >
@@ -111,7 +111,7 @@ Our team works with you to customise and maintain your map application - you're 
 <br clear="all" />
 <br/>
 
-<img src="/PoziWebsite/static/img/tweet-gallery/wangaratta_roadside_conservation.png" alt="" style="float:left;width:300px;margin:0px 40px;">
+<img src="/static/img/tweet-gallery/wangaratta_roadside_conservation.png" alt="" style="float:left;width:300px;margin:0px 40px;">
 
 > "The Pozi mapping product is a great tool to easily display public map-based information for users. The process, design and planning stages are made simple by the Pozi Support team."
 >
@@ -120,7 +120,7 @@ Our team works with you to customise and maintain your map application - you're 
 <br clear="all" />
 <br/>
 
-<img src="/PoziWebsite/static/img/tweet-gallery/latrobe_2018_aerial_imagery.jpg" alt="" style="float:right;width:300px;margin:0px 40px;">
+<img src="/static/img/tweet-gallery/latrobe_2018_aerial_imagery.jpg" alt="" style="float:right;width:300px;margin:0px 40px;">
 
 > "The clean look and layout of Pozi, along with its user friendly functionality make it easy for customers to locate and interpret data. It's an efficient tool for delivering information to our customers, and the staff at Pozi provide great support to their clients."
 >
@@ -173,7 +173,7 @@ Promote local places, facilities events and services to customers
 
 ## Powered by QGIS
 
-  <img src="/PoziWebsite/static/img/tweet-gallery/northern_grampians_waste_route_styling.png">
+  <img src="/static/img/tweet-gallery/northern_grampians_waste_route_styling.png">
   <br/>
   <br/>
 
@@ -189,7 +189,7 @@ Eliminate data double-handling by accessing data directly from any local or remo
 
 :::
 
-<img src="/PoziWebsite/static/img/tweet-gallery/latrobe_planning_scheme_amendment.png">
+<img src="/static/img/tweet-gallery/latrobe_planning_scheme_amendment.png">
 <br/>
 <br/>
 

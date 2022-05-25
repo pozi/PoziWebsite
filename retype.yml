@@ -1,6 +1,6 @@
 input: .
 output: .retype
-url: https://pozi.github.io/PoziWebsite/
+url: https://pozi.com/
 edit:
   repo: "https://github.com/pozi/PoziWebsite/"
   branch: "main"

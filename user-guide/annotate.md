@@ -13,7 +13,7 @@ order: -100
 :::
 
 <br/>
-<img src="/PoziWebsite/static/img/screenshots/frankston-event-site-plan-mockup.jpg">
+<img src="/static/img/screenshots/frankston-event-site-plan-mockup.jpg">
 <br/>
 
 ---

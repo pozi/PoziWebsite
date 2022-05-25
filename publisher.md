@@ -5,7 +5,7 @@ layout: central
 
 # Publisher
 
-<img src="/PoziWebsite/static/img/undraw/undraw_going_up_re_86kg.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
+<img src="/static/img/undraw/undraw_going_up_re_86kg.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
 <big>Synchronise your organisation's internal data to the web.</big>
 
