@@ -35,7 +35,9 @@ Pozi delivers powerful location-based functionality at a fraction of the cost of
 
 <br/>
 
-[!ref icon="trophy"](/upgrade/)
+[!ref icon="paper-airplane" text="Start your 60 day trial"](/trial/)
+
+[!ref icon="trophy" text="Already use Pozi? Upgrade to Pozi Enterprise"](/upgrade/)
 
 <br/>
 

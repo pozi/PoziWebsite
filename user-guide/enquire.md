@@ -14,7 +14,7 @@ icon: location
 
 ---
 
-To discover information about any location on the map, simply click on the map or do a search. Information about the location or selected feature is displayed in Pozi's *Info Panel*.
+To discover information about any location on the map, simply click on the map or use the search tool to find your location. Information about the location or selected feature is displayed in Pozi's *Info Panel*.
 
 ## What's Here
 
@@ -28,7 +28,7 @@ When the cursor is hovered over these features, the cursor changes to a pointing
 
 ## Details and Related Information
 
-Pozi can display not only information about features on the map, but also related information from separate sources.
+Pozi can display information not only about features selected from the map, but also related information from separate sources.
 
 Pozi uses parent-child relationships between datasets to provide unlimited querying capabilities.
 

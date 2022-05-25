@@ -11,7 +11,7 @@ tags: [cloud]
 
 As developers of a cloud product, you'd think we'd be biased towards moving **everything** to the cloud. After all, Pozi is a cloud-native app that excels in the online world. It works seamlessly with web APIs to connect with live, trusted data sources across government agencies and other providers.
 
-But we recognise that often your most important users and datasets and systems live and thrive on your **local network** (physical or virtual private cloud). That's why we developed Pozi's *hybrid cloud* architecture, to happily integrate with those critical local resources.
+But we recognise that often your most important users and datasets and systems live and thrive in **local ecosystems**  such as your organisation's local network or virtual private cloud. That's why we developed Pozi's *hybrid cloud* architecture, to happily integrate with those critical local resources.
 
 Without leaving the Pozi app, your local users have access to live trusted data from internal and external sources. It's the best of both worlds!
 
@@ -40,7 +40,7 @@ But
 
 **... your processes are local**
 
-**... automations, database views, triggers, actions, scripts, software**
+You've built a foundation of automations, views, triggers, actions, scripts and software integrations to suit the needs of your organisation.
 
 **... your collaborations are local**
 

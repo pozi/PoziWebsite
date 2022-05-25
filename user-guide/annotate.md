@@ -12,6 +12,10 @@ order: -100
 
 :::
 
+<br/>
+<img src="/PoziWebsite/static/img/screenshots/frankston-event-site-plan-mockup.jpg">
+<br/>
+
 ---
 
 Toolbar > Tools > Draw

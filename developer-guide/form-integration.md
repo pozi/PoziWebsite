@@ -1,7 +1,8 @@
 ---
-title: Community Consultation
 order: 50
 ---
+
+# Form Integration
 
 *Community consultation is available for **Pozi Pro**, **Enterprise** and **Enterprise Cloud** offerings.*
 
@@ -104,3 +105,6 @@ The configuration must instead be done manually at the *site* level instead of t
 * [Add Survey form to Pozi as layer](https://github.com/Pozi/PoziApp/commit/d9098f244ae9ce34622c84d07b226f3241d787f3)
 * [Add Feedback form fragments to layer](https://github.com/Pozi/PoziApp/commit/9a13722c3cab269ba6b74c9ae8a6fb7addda0ca6)
 * [Disable Feedback form](https://github.com/pozi/PoziAppConfig/commit/3afdb9ebe250ff32e1cd30f44f23a446ee1cb8f4)
+* Add layer based on client-configured form (using their form and API key)
+  * [add layer from survey form](https://github.com/pozi/PoziAppConfig/commit/71bd11303acc4eaf376faa21fceb4008e3ca7d42)
+  * [enable survey form interaction for users](https://github.com/pozi/PoziAppConfig/commit/aa70acddf96dbc55efb321d995c10c89ba6b5ac5)

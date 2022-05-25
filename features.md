@@ -63,7 +63,7 @@ Aerial imagery allows users to clearly see the visual landmarks of their locatio
 ### Unlimited users, zero install & custom maps
 
 <br/>
-<img src="/PoziWebsite/static/img/tweet-gallery/moorabool_planning_scheme_amendment_1200x675.png">
+<img src="/PoziWebsite/static/img/tweet-gallery/glen_eira_planning_amendments.png">
 <br/>
 <br/>
 <br/>
@@ -131,6 +131,12 @@ Pozi Pro has optional constant GPS tracking that follows users as they walk or d
 ||| :icon-bookmark: <h4>Custom bookmarking</h4>
 Pozi Pro can generate custom map links to control exactly how the app appears to users. Focus your users' attention on what you want them to see, hiding unneeded datasets and buttons. Especially helpful for customer service and emailing map information specific to the customer.
 |||
+
+<br/>
+<img src="/PoziWebsite/static/img/screenshots/frankston-event-site-plan-mockup.jpg">
+<br/>
+
+---
 
 <br/>
 
