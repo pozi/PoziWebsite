@@ -87,14 +87,14 @@ The current system is difficult to automate and innovate upon.
 
 It is designed to:
 
-* reduce the friction of current data exchange processes between councils and DELWP
+* reduce the friction of data exchange between councils and DELWP
 * automate property data maintenance to better suit a modern digital cadastre
 
 ### How It Works
 
-1. councils synchronise selected property data to a central web platform
+1. council property data is synchronised to a central web platform
 
-2. the platform automatically processes and compiles information from multiple councils into a single uniform property dataset
+2. the platform automatically processes and compiles the data into a single uniform property dataset
 
 3. DELWP and other approved authorities can pull data from the combined resource on demand in the format of their choosing (M1, full dump, filtered extracts, audits, discrepancy reports, etc)
 
@@ -104,7 +104,7 @@ With DELWP having complete access to the combined authoritative property informa
 
 #### Cloud Platform
 
-Central secure cloud-hosted platform
+A secure cloud-hosted platform provides a centralised source of truth for property information from every Victorian council.
 
 <img src="/static/img/undraw/undraw_server_status_re_n8ln.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
@@ -139,7 +139,7 @@ On the council side, a simple data sync tool installed at each council and confi
 * reduce risk of councils falling behind in providing updates
 * potential to increase data update frequency
 * council data can be audited constantly, instead of once a year
-* replace expensive and outdated workflow for loading changes (beyond M1s)
+* replace expensive and outdated workflow for loading changes
 * improve relationships with councils by reducing their burden
 * show leadership in government by adopting modern technologies
 
@@ -192,7 +192,7 @@ Yes. The challenges include, but are not limited to:
 
 ==- Doesn't your company already have an M1 solution?
 
-Yes. It's called Pozi Connect, and it's used by two-thirds of Victorian councils. While it helps to alleviate some of the burden of M1s, it cannot come close to providing decent automation under the current data exchange system.
+Yes. It's called Pozi Connect, and it's used by two-thirds of Victorian councils. While it helps to alleviate some of the burden of M1s, it is limited in the level of automation it can achieve under the current data exchange system.
 
 ==- Will councils have to install Pozi's software?
 
@@ -200,7 +200,7 @@ No.
 
 If your council already has Pozi Connect installed, we'll update it to synchronise the council's property data to the cloud.
 
-For councils that don't already have Pozi Connect, we can install and customise it for you.
+For councils that don't already have Pozi Connect, we can optionally install and customise it for you.
 
 Or you can use your own software (like FME) or automated scripts to perform the data sync.
 
@@ -356,8 +356,3 @@ We want to hear from you!
 
 
 ---
-
-Thanks for your support!
-
-[!button variant="info" icon="mention" size="2xl" text="Get in touch"](/contact/)
-

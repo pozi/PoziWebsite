@@ -95,7 +95,7 @@ http://services.land.vic.gov.au/MyProfile/
 
 If councils don't already have credentials, tell them to email coordinated.imagery@delwp.vic.gov.au.
 
-Client credentials: https://github.com/groundtruth/PoziProxy/blob/master/lib/pozi-auth.js
+Client credentials: https://github.com/pozi/PoziProxy/blob/master/lib/pozi-auth.js
 
 ## Troubleshooting
 
