@@ -80,11 +80,11 @@ Set `"visible": true` for the default basemap.
   }
   ```
 
-==- Vicmap (Beta)
+==- Vicmap
 
   ```json
   {
-    "title": "Vicmap (Beta)",
+    "title": "Vicmap",
     "group": "Basemap",
     "type": "XYZ",
     "visible": true,
@@ -94,12 +94,12 @@ Set `"visible": true` for the default basemap.
       "url": "https://www.land.vic.gov.au/maps-and-spatial/data-services/vicmap-basemap/licensing-and-copyright"
     },
     "config": {
-      "url": "https://dev-base.maps.vic.gov.au/wmts/CARTO_WM_256/EPSG:3857:256/{z}/{x}/{y}.png"
+      "url": "https://base.maps.vic.gov.au/wmts/CARTO_WM_256/EPSG:3857:256/{z}/{x}/{y}.png"
     }
   }
   ```
 
-  https://dev-base.maps.vic.gov.au/service?SERVICE=WMTS&REQUEST=Getcapabilities
+  https://base.maps.vic.gov.au/service?SERVICE=WMTS&REQUEST=Getcapabilities
 
 ==- Mapscape
 
