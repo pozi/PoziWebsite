@@ -30,12 +30,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=2.2.706924372172" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=2.2.706941720492" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=2.2.706924372172" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=2.2.706941720492" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.706924372172" defer></script>
-    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=2.2.706924372172" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.706941720492" defer></script>
+    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=2.2.706941720492" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -339,11 +339,11 @@
 }</code></pre>
 </doc-codeblock></div>
    </doc-panel>
-   <doc-panel id="vicmap-beta" collapsed>
-       <template #title>Vicmap (Beta)</template>
+   <doc-panel id="vicmap" collapsed>
+       <template #title>Vicmap</template>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-json"><code v-pre class="language-json">{
-  &quot;title&quot;: &quot;Vicmap (Beta)&quot;,
+  &quot;title&quot;: &quot;Vicmap&quot;,
   &quot;group&quot;: &quot;Basemap&quot;,
   &quot;type&quot;: &quot;XYZ&quot;,
   &quot;visible&quot;: true,
@@ -353,11 +353,11 @@
     &quot;url&quot;: &quot;https://www.land.vic.gov.au/maps-and-spatial/data-services/vicmap-basemap/licensing-and-copyright&quot;
   },
   &quot;config&quot;: {
-    &quot;url&quot;: &quot;https://dev-base.maps.vic.gov.au/wmts/CARTO_WM_256/EPSG:3857:256/{z}/{x}/{y}.png&quot;
+    &quot;url&quot;: &quot;https://base.maps.vic.gov.au/wmts/CARTO_WM_256/EPSG:3857:256/{z}/{x}/{y}.png&quot;
   }
 }</code></pre>
 </doc-codeblock></div>
-<p><a href="https://dev-base.maps.vic.gov.au/service?SERVICE=WMTS&amp;REQUEST=Getcapabilities">https://dev-base.maps.vic.gov.au/service?SERVICE=WMTS&amp;REQUEST=Getcapabilities</a></p>
+<p><a href="https://base.maps.vic.gov.au/service?SERVICE=WMTS&amp;REQUEST=Getcapabilities">https://base.maps.vic.gov.au/service?SERVICE=WMTS&amp;REQUEST=Getcapabilities</a></p>
    </doc-panel>
    <doc-panel id="mapscape" collapsed>
        <template #title>Mapscape</template>
