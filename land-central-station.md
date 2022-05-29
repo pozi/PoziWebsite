@@ -96,7 +96,7 @@ It is designed to:
 
 2. the platform automatically processes and compiles the data into a single uniform property dataset
 
-3. DELWP and other approved authorities can pull data from the combined resource on demand in the format of their choosing (M1, full dump, filtered extracts, audits, discrepancy reports, etc)
+3. DELWP and other approved authorities can pull data from the combined resource on demand in the format of their choosing (M1, full dump, diffs, filtered extracts, audits, discrepancy reports, etc)
 
 With DELWP having complete access to the combined authoritative property information from the councils, they have everything they need to update their map base.
 
@@ -149,9 +149,9 @@ On the council side, a simple data sync tool installed at each council and confi
 
 **Pozi** is uniquely placed to develop this platform.
 
-We've worked with every council in Victoria (through M1 and PIQA projects), building custom property data integrations to 79 different property data schemas, across seven different property systems, on a range of database platforms.
+We've worked with every council in Victoria (through M1 and PIQA projects), building custom property data integrations into 79 different data schemas, across seven different property systems, on a range of database platforms.
 
-Our Pozi Connect software is installed at most Victorian councils, and already integrated into councils' property systems. The software will be adapted to automatically sync the council's data to the cloud platform.
+Our Pozi Connect software is installed at most Victorian councils, and already integrated into councils' property systems. The software can be adapted to automatically sync the council's data to the cloud platform.
 
 We've established trust and built upon relationships we've had with Victorian councils over 20 years.
 
@@ -175,9 +175,9 @@ To update Vicmap, DELWP will compare what changed between snapshots of the counc
 
 ==- Why hasn't this been considered in the past?
 
-Most discussions about improving the M1 process for councils have involved minor improvements, like creating new edit codes or tweaking some fields.
+Most discussions about improving the property data maintenance processes for councils have involved minor improvements to the M1, like creating new edit codes or tweaking some fields.
 
-We have a different idea about how to better exchange data that utilises a shared services approach, modern technologies, and involves DELWP taking a greater role in the property data maintenance workflow.
+We have a different idea about how to better exchange data that doesn't rely on M1s. It's a new approach based on shared service and modern technologies, and involves DELWP taking a greater role in the property data maintenance workflow.
 
 ==- Have you considered the challenges of implementing this?
 
@@ -207,6 +207,10 @@ Or you can use your own software (like FME) or automated scripts to perform the 
 ==- Will the Vicmap data model need to change to accommodate this solution?
 
 No.
+
+==- How will the system deal with special property attributes such as multi-assessment, distance-based address, outside property, new road, etc?
+
+The cloud platform includes an interactive dashboard for councils to manage edits. Validation rules will be configured to flag any updates that would affect or be affected by these property attributes. Councils will use the dashboard to approve or amend any flagged updates.
 
 ==- What happens if council's property data is not perfect?
 

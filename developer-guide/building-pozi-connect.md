@@ -11,14 +11,14 @@ Repositories
 
 Software
 * GitHub Desktop
-* Advanced Installer software
-* Resource Hacker software
+* Advanced Installer
+* [Resource Hacker](http://angusj.com/resourcehacker/)
 
 ## Repository Configuration
 
 Set up symlink folder called `tasks` in PoziConnect repo that points to PoziConnectConfig repo. Example:
 
-```
+```bat
 mklink /D C:\Users\Simon\GitHub\PoziConnect\tasks C:\Users\Simon\GitHub\PoziConnectConfig
 ```
 
@@ -32,7 +32,7 @@ mklink /D C:\Users\Simon\GitHub\PoziConnect\tasks C:\Users\Simon\GitHub\PoziConn
 ## Prepare PoziConnect Repository
 
 * if there's been an update of the GDAL library, update `setenv_python.bat`
-* update `PoziWebsite/docs/developer-guide/pozi-connect/m1s/history.md` with dot points about recent changes (identified above)
+* update `PoziWebsite/pozi-connect/history.md` with dot points about recent changes (identified above)
 * if logo has changed since last release, run `PoziConnect\PoziConnect.bat` to trigger regeneration of `gui_logo_png.py`
 * run `PoziConnect\build.bat`; type in new version number when prompted
 * embed thumbnail logo in `PoziConnect.exe`
@@ -68,30 +68,23 @@ Clients in locked-down IT environments may prefer a simple zip file instead of t
 * Release title: (eg Release 2.9.2)
 * Description: (example)
 
-(check https://github.com/pozi/PoziConnectConfig/commits/master; identify which councils have had changes since [last release](https://github.com/pozi/PoziConnect/releases/latest))
-
-#### Description
-
 Example:
 
-> Welcome to Pozi Connect v2.x.
->
-> **Click the .msi link below to download this release.**
->
-> This October 2017 release contains the following changes since the June 2017 (v2.04) release:
->
-> * populate most suitable property_pfi for multi-property parcels
-> * enforce geometry types for output layers
-> * update Pozi web links to new format
-> * update Exception table generation
-> * upgrade GDAL library to `release-1800-gdal-2-1-3-mapserver-7-0-6`
-> * configuration updates for Hepburn, Glen Eira, Hindmarsh, Wangaratta, Moorabool
->
-> See a complete history of all of Pozi Connect's changes [here](https://github.com/pozi/PoziConnectConfig/commits/master/~Shared/).
->
-> **Click the .msi link below to download this release.**
->
-> For installation instructions, visit [https://docs.pozi.com/pozi-connect/installation/](https://docs.pozi.com/pozi-connect/installation/)
+```md
+Welcome to Pozi Connect v2.9.4
+
+**Click the .msi link below to download this release.**
+
+This May 2022 release contains the following changes since the March 2022 (v2.9.3) release:
+
+* update web links
+* new `.zip` distribution
+* configuration updates for Port Phillip, Central Goldfields, Loddon, Strathbogie
+
+See a complete history of all of Pozi Connect's changes [here](https://github.com/pozi/PoziConnectConfig/commits/master/~Shared/).
+
+For installation instructions, visit [https://pozi.com/pozi-connect/installation/](https://pozi.com/pozi-connect/installation/).
+```
 
 ---
 
