@@ -30,11 +30,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=2.2.706941720492" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=2.2.707174963530" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=2.2.706941720492" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=2.2.707174963530" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.706941720492" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.707174963530" defer></script>
+    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=2.2.707174963530" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -268,8 +269,8 @@
 <p>Software</p>
 <ul>
 <li>GitHub Desktop</li>
-<li>Advanced Installer software</li>
-<li>Resource Hacker software</li>
+<li>Advanced Installer</li>
+<li><a href="http://angusj.com/resourcehacker/">Resource Hacker</a></li>
 </ul>
 <doc-anchor-target id="repository-configuration">
     <h2>
@@ -279,7 +280,7 @@
 </doc-anchor-target>
 <p>Set up symlink folder called <code v-pre>tasks</code> in PoziConnect repo that points to PoziConnectConfig repo. Example:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">mklink /D C:\Users\Simon\GitHub\PoziConnect\tasks C:\Users\Simon\GitHub\PoziConnectConfig</code></pre>
+<pre class="language-batch"><code v-pre class="language-batch">mklink /D C:\Users\Simon\GitHub\PoziConnect\tasks C:\Users\Simon\GitHub\PoziConnectConfig</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="prepare-poziconnectconfig-repository">
     <h2>
@@ -301,7 +302,7 @@
 </doc-anchor-target>
 <ul>
 <li>if there&#x27;s been an update of the GDAL library, update <code v-pre>setenv_python.bat</code></li>
-<li>update <code v-pre>PoziWebsite/docs/developer-guide/pozi-connect/m1s/history.md</code> with dot points about recent changes (identified above)</li>
+<li>update <code v-pre>PoziWebsite/pozi-connect/history.md</code> with dot points about recent changes (identified above)</li>
 <li>if logo has changed since last release, run <code v-pre>PoziConnect\PoziConnect.bat</code> to trigger regeneration of <code v-pre>gui_logo_png.py</code></li>
 <li>run <code v-pre>PoziConnect\build.bat</code>; type in new version number when prompted</li>
 <li>embed thumbnail logo in <code v-pre>PoziConnect.exe</code>
@@ -357,30 +358,22 @@
 <li>Release title: (eg Release 2.9.2)</li>
 <li>Description: (example)</li>
 </ul>
-<p>(check <a href="https://github.com/pozi/PoziConnectConfig/commits/master;">https://github.com/pozi/PoziConnectConfig/commits/master;</a> identify which councils have had changes since <a href="https://github.com/pozi/PoziConnect/releases/latest">last release</a>)</p>
-<doc-anchor-target id="description">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#description">#</doc-anchor-trigger>
-        <span>Description</span>
-    </h4>
-</doc-anchor-target>
 <p>Example:</p>
-<blockquote>
-<p>Welcome to Pozi Connect v2.x.</p>
-<p><strong>Click the .msi link below to download this release.</strong></p>
-<p>This October 2017 release contains the following changes since the June 2017 (v2.04) release:</p>
-<ul>
-<li>populate most suitable property_pfi for multi-property parcels</li>
-<li>enforce geometry types for output layers</li>
-<li>update Pozi web links to new format</li>
-<li>update Exception table generation</li>
-<li>upgrade GDAL library to <code v-pre>release-1800-gdal-2-1-3-mapserver-7-0-6</code></li>
-<li>configuration updates for Hepburn, Glen Eira, Hindmarsh, Wangaratta, Moorabool</li>
-</ul>
-<p>See a complete history of all of Pozi Connect&#x27;s changes <a href="https://github.com/pozi/PoziConnectConfig/commits/master/%7EShared/">here</a>.</p>
-<p><strong>Click the .msi link below to download this release.</strong></p>
-<p>For installation instructions, visit <a href="https://docs.pozi.com/pozi-connect/installation/">https://docs.pozi.com/pozi-connect/installation/</a></p>
-</blockquote>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markdown"><code v-pre class="language-markdown">Welcome to Pozi Connect v2.9.4
+
+**Click the .msi link below to download this release.**
+
+This May 2022 release contains the following changes since the March 2022 (v2.9.3) release:
+
+* update web links
+* new `.zip` distribution
+* configuration updates for Port Phillip, Central Goldfields, Loddon, Strathbogie
+
+See a complete history of all of Pozi Connect's changes [here](https://github.com/pozi/PoziConnectConfig/commits/master/~Shared/).
+
+For installation instructions, visit [https://pozi.com/pozi-connect/installation/](https://pozi.com/pozi-connect/installation/).</code></pre>
+</doc-codeblock></div>
 <hr />
 <ul>
 <li>drag msi file into box &#x27;Attach binaries..&#x27;</li>
@@ -540,6 +533,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Building Pozi Connect", icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Building Pozi Connect", icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>

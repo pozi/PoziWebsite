@@ -32,11 +32,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=2.2.706941720492" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=2.2.707174963530" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=2.2.706941720492" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=2.2.707174963530" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.706941720492" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.707174963530" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -373,7 +373,7 @@
 </li>
 <li><p>the platform automatically processes and compiles the data into a single uniform property dataset</p>
 </li>
-<li><p>DELWP and other approved authorities can pull data from the combined resource on demand in the format of their choosing (M1, full dump, filtered extracts, audits, discrepancy reports, etc)</p>
+<li><p>DELWP and other approved authorities can pull data from the combined resource on demand in the format of their choosing (M1, full dump, diffs, filtered extracts, audits, discrepancy reports, etc)</p>
 </li>
 </ol>
 <p>With DELWP having complete access to the combined authoritative property information from the councils, they have everything they need to update their map base.</p>
@@ -449,8 +449,8 @@
     </h2>
 </doc-anchor-target>
 <p><strong>Pozi</strong> is uniquely placed to develop this platform.</p>
-<p>We&#x27;ve worked with every council in Victoria (through M1 and PIQA projects), building custom property data integrations to 79 different property data schemas, across seven different property systems, on a range of database platforms.</p>
-<p>Our Pozi Connect software is installed at most Victorian councils, and already integrated into councils&#x27; property systems. The software will be adapted to automatically sync the council&#x27;s data to the cloud platform.</p>
+<p>We&#x27;ve worked with every council in Victoria (through M1 and PIQA projects), building custom property data integrations into 79 different data schemas, across seven different property systems, on a range of database platforms.</p>
+<p>Our Pozi Connect software is installed at most Victorian councils, and already integrated into councils&#x27; property systems. The software can be adapted to automatically sync the council&#x27;s data to the cloud platform.</p>
 <p>We&#x27;ve established trust and built upon relationships we&#x27;ve had with Victorian councils over 20 years.</p>
 <p>We&#x27;ve proven we can build and maintain scalable web infrastructure with our Pozi Web GIS solution.</p>
 <p>We&#x27;re passionate about solving this problem once and for all.</p>
@@ -473,8 +473,8 @@
    </doc-panel>
    <doc-panel id="why-hasn-t-this-been-considered-in-the-past" collapsed>
        <template #title>Why hasn&#x27;t this been considered in the past?</template>
-<p>Most discussions about improving the M1 process for councils have involved minor improvements, like creating new edit codes or tweaking some fields.</p>
-<p>We have a different idea about how to better exchange data that utilises a shared services approach, modern technologies, and involves DELWP taking a greater role in the property data maintenance workflow.</p>
+<p>Most discussions about improving the property data maintenance processes for councils have involved minor improvements to the M1, like creating new edit codes or tweaking some fields.</p>
+<p>We have a different idea about how to better exchange data that doesn&#x27;t rely on M1s. It&#x27;s a new approach based on shared service and modern technologies, and involves DELWP taking a greater role in the property data maintenance workflow.</p>
    </doc-panel>
    <doc-panel id="have-you-considered-the-challenges-of-implementing-this" collapsed>
        <template #title>Have you considered the challenges of implementing this?</template>
@@ -502,6 +502,10 @@
    <doc-panel id="will-the-vicmap-data-model-need-to-change-to-accommodate-this-solution" collapsed>
        <template #title>Will the Vicmap data model need to change to accommodate this solution?</template>
 <p>No.</p>
+   </doc-panel>
+   <doc-panel id="how-will-the-system-deal-with-special-property-attributes-such-as-multi-assessment-distance-based-address-outside-property-new-road-etc" collapsed>
+       <template #title>How will the system deal with special property attributes such as multi-assessment, distance-based address, outside property, new road, etc?</template>
+<p>The cloud platform includes an interactive dashboard for councils to manage edits. Validation rules will be configured to flag any updates that would affect or be affected by these property attributes. Councils will use the dashboard to approve or amend any flagged updates.</p>
    </doc-panel>
    <doc-panel id="what-happens-if-council-s-property-data-is-not-perfect" collapsed>
        <template #title>What happens if council&#x27;s property data is not perfect?</template>
