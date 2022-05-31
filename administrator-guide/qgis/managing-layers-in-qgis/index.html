@@ -32,11 +32,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=2.2.707354429050" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=2.2.707355760873" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=2.2.707354429050" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=2.2.707355760873" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.707354429050" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.707355760873" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -360,16 +360,12 @@
         <span>Enable Layers for WFS</span>
     </h2>
 </doc-anchor-target>
-<p>As a guideline, enable WFS only for layers with fewer than 10-20K features.</p>
+<p>As a guideline, enable WFS only for layers with fewer than 5-10K features.</p>
 <ol>
 <li>Project &gt; Properties &gt; QGIS Server</li>
-<li>update the following settings:
-<ul>
 <li><code v-pre>WFS capabilities &gt; Published</code>: tick on for each layer to be published</li>
-</ul>
-</li>
 <li>OK</li>
-<li>Project &gt; Save</li>
+<li>Project &gt; Save (<code v-pre>Ctrl</code> + <code v-pre>S</code>)</li>
 </ol>
 <p><img src="../img/qgis-project-properties-wfs-configuration.png" style="width:600px" alt="Screenshot of QGIS Project Properties WFS Configuration" /></p>
 <doc-anchor-target id="table-file-maintenance">
