@@ -198,7 +198,7 @@ Yes. It's called Pozi Connect, and it's used by two-thirds of Victorian councils
 
 No.
 
-If your council already has Pozi Connect installed, we'll update it to synchronise the council's property data to the cloud.
+If your council already has Pozi Connect installed, we'll update it to synchronise the council's property data to the cloud platform.
 
 For councils that don't already have Pozi Connect, we can optionally install and customise it for you.
 

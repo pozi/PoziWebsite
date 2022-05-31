@@ -3,7 +3,7 @@ title: Service Monitoring
 order: 50
 ---
 
-* [Pingdom](https://my.pingdom.com/app/3/home)
+* [Pingdom](https://my.pingdom.com/app/newchecks/checks)
 * [Freshping](https://pozi.freshping.io/dashboard)
 
 ## Public Status Page
