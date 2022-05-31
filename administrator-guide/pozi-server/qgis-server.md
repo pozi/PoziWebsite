@@ -162,7 +162,7 @@ QGIS_PLUGINPATH | `C:\OSGeo4W\apps\qgis-ltr\plugins`
 
 !!! Log Levels
 
-The above script/instructions sets the `QGIS_SERVER_LOG_LEVEL` value to `1` to capture warnings and critical events in the log. If you want to capture all activity for troubleshooting purposes, set the value to `0` in the GUI.
+The above script/instructions sets the `QGIS_SERVER_LOG_LEVEL` value to `1` to capture warnings and critical events in the log. If you want to capture *all* activity for troubleshooting purposes, set the value to `0` in the GUI.
 
 More information about QGIS log levels is at https://docs.qgis.org/latest/en/docs/server_manual/config.html#qgis-server-log-level
 

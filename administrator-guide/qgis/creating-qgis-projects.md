@@ -47,7 +47,7 @@ Pozi requires the project to be enabled for WMS.
 ![QGIS Project Properties WMS Configuration](./img/qgis-project-properties-wms-configuration.png){style="width:600px"}
 
 3. OK
-4. Project > Save
+4. Project > Save  (`Ctrl` + `S`)
 5. test that you get a valid WMS/WFS GetCapabilities response by entering the GetCapabilities request in your browser. 
 
 ## Enable WFS Service
@@ -73,7 +73,7 @@ As a guideline, use WFS for layers with fewer than 5-10K features.
    * `Advertised URL`: enter WFS GetCapabilities
      * example: `https://local.pozi.com/iis/qgisserver?service=WFS&version=1.1.0&request=GetCapabilities&MAP=C:/Program%20Files%20(x86)/Pozi/server/data/local/property.qgs`
 3. OK
-4. Project > Save
+4. Project > Save (`Ctrl` + `S`)
 
 ## Exclude Base Layer
 

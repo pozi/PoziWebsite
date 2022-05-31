@@ -86,13 +86,12 @@ Tips:
 
 ## Enable Layers for WFS
 
-As a guideline, enable WFS only for layers with fewer than 10-20K features.
+As a guideline, enable WFS only for layers with fewer than 5-10K features.
 
 1. Project > Properties > QGIS Server
-2. update the following settings:
-   * `WFS capabilities > Published`: tick on for each layer to be published
+2. `WFS capabilities > Published`: tick on for each layer to be published
 3. OK
-4. Project > Save
+4. Project > Save (`Ctrl` + `S`)
 
 ![Screenshot of QGIS Project Properties WFS Configuration](./img/qgis-project-properties-wfs-configuration.png){style="width:600px"}
 
