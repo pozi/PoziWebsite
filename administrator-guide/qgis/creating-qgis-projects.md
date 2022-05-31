@@ -46,12 +46,9 @@ Pozi requires the project to be enabled for WMS.
 
 ![QGIS Project Properties WMS Configuration](./img/qgis-project-properties-wms-configuration.png){style="width:600px"}
 
-3. update WFS settings (optional)
-   * `Advertised URL`: enter WFS GetCapabilities address
-     * example: `https://local.pozi.com/iis/qgisserver?service=WFS&request=GetCapabilities&MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs`
-4. OK
-5. Project > Save
-6. test that you get a valid WMS/WFS GetCapabilities response by entering the GetCapabilities request in your browser. 
+3. OK
+4. Project > Save
+5. test that you get a valid WMS/WFS GetCapabilities response by entering the GetCapabilities request in your browser. 
 
 ## Enable WFS Service
 
@@ -60,16 +57,16 @@ WFS (Web Feature Service) provides users with the ability to directly interact w
 Advantages:
 
 * cursor changes when hovering over object
-* select individual features and display results in Info Panel without displaying results of features on other layers at the same location
+* select individual features and display results in Info Panel (without displaying results of features on other layers at the same location)
 * enable layers to be interactive using Pozi's filter, report and table view functionality
 
 Disadvantages:
 
 * the browser can be easily overwhelmed when dealing with thousands of features or complex features with thousands of vertices
-* labelling for WFS features is not well supported, especially for line features such as roads
+* labeling for WFS features is not well supported, especially for line features such as roads
 * restricting visibility to specific zoom ranges is not supported
 
-As a guideline, enable WFS only for layers with fewer than 5-10K features.
+As a guideline, use WFS for layers with fewer than 5-10K features.
 
 1. Project > Properties > QGIS Server
 2. update the WFS settings:
@@ -78,9 +75,9 @@ As a guideline, enable WFS only for layers with fewer than 5-10K features.
 3. OK
 4. Project > Save
 
-## Excluding Base Layer
+## Exclude Base Layer
 
-If your project uses a base layer for background context, and if your project is configured for WMS, you'll want to exclude it from appearing in the layer panel in Pozi.
+If your project uses a base layer for background context, you'll want to exclude it from appearing in the layer panel in Pozi.
 
 QGIS > Project > Properties > QGIS Server > WMS Capabilities > Exclude layers (tick) > add > pick layer(s) to exclude > OK
 
