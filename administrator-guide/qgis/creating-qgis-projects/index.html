@@ -32,11 +32,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=2.2.707303916743" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=2.2.707349163579" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=2.2.707303916743" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=2.2.707349163579" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.707303916743" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.707349163579" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -323,15 +323,6 @@
 </ol>
 <p><img src="../img/qgis-project-properties-wms-configuration.png" style="width:600px" alt="QGIS Project Properties WMS Configuration" /></p>
 <ol start="3">
-<li>update WFS settings (optional)
-<ul>
-<li><code v-pre>Advertised URL</code>: enter WFS GetCapabilities address
-<ul>
-<li>example: <code v-pre>https://local.pozi.com/iis/qgisserver?service=WFS&amp;request=GetCapabilities&amp;MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs</code></li>
-</ul>
-</li>
-</ul>
-</li>
 <li>OK</li>
 <li>Project &gt; Save</li>
 <li>test that you get a valid WMS/WFS GetCapabilities response by entering the GetCapabilities request in your browser.</li>
@@ -346,16 +337,16 @@
 <p>Advantages:</p>
 <ul>
 <li>cursor changes when hovering over object</li>
-<li>select individual features and display results in Info Panel without displaying results of features on other layers at the same location</li>
+<li>select individual features and display results in Info Panel (without displaying results of features on other layers at the same location)</li>
 <li>enable layers to be interactive using Pozi&#x27;s filter, report and table view functionality</li>
 </ul>
 <p>Disadvantages:</p>
 <ul>
 <li>the browser can be easily overwhelmed when dealing with thousands of features or complex features with thousands of vertices</li>
-<li>labelling for WFS features is not well supported, especially for line features such as roads</li>
+<li>labeling for WFS features is not well supported, especially for line features such as roads</li>
 <li>restricting visibility to specific zoom ranges is not supported</li>
 </ul>
-<p>As a guideline, enable WFS only for layers with fewer than 5-10K features.</p>
+<p>As a guideline, use WFS for layers with fewer than 5-10K features.</p>
 <ol>
 <li>Project &gt; Properties &gt; QGIS Server</li>
 <li>update the WFS settings:
@@ -370,13 +361,13 @@
 <li>OK</li>
 <li>Project &gt; Save</li>
 </ol>
-<doc-anchor-target id="excluding-base-layer">
+<doc-anchor-target id="exclude-base-layer">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#excluding-base-layer">#</doc-anchor-trigger>
-        <span>Excluding Base Layer</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exclude-base-layer">#</doc-anchor-trigger>
+        <span>Exclude Base Layer</span>
     </h2>
 </doc-anchor-target>
-<p>If your project uses a base layer for background context, and if your project is configured for WMS, you&#x27;ll want to exclude it from appearing in the layer panel in Pozi.</p>
+<p>If your project uses a base layer for background context, you&#x27;ll want to exclude it from appearing in the layer panel in Pozi.</p>
 <p>QGIS &gt; Project &gt; Properties &gt; QGIS Server &gt; WMS Capabilities &gt; Exclude layers (tick) &gt; add &gt; pick layer(s) to exclude &gt; OK</p>
 <p>QGIS &gt; Project &gt; Save</p>
 <doc-anchor-target id="register-project">
