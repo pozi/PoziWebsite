@@ -9,7 +9,7 @@ Aerial imagery acquired in through DELWP's Coordinated Imagery Programme (CIP) i
 
 Instructions for publishing IWS imagery layers in Pozi:
 
-1. log in to [IWS Admin](https://www.land.vic.gov.au/maps-and-spatial/imagery/about-image-web-server)
+1. log in to [IWS Admin](http://images.land.vic.gov.au/iwsadmin/)
 2. click View Permissions
 3. copy the name of the image(s) to be published
 4. paste into an email to support@pozi.com
