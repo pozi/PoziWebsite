@@ -22,9 +22,15 @@ Create new project from scratch:
 
 ## Construct `GetCapabilities` URL
 
+Any standards-based GIS server (including QGIS Server) can generate a document that includes details of all the map layers it has. The document is called a `GetCapabilities`, and it is generated as XML.
+
+When Pozi launches in the user's browser, it sends a `GetCapabilities` request to QGIS Server. Pozi uses the response to determine what layers are available.
+
+As part of the project configuration, you must construct a URL for the `GetCapabilities` request and configure this URL within the QGIS project file. Essentially, the project file needs a reference to itself.
+
 Combine the details below:
 
-1. server URL (eg `https://local.pozi.com/`)
+1. server URL (default server URL is`https://local.pozi.com/`, but check your local setup for any custom endpoint)
 2. service and WMS/WFS parameters (eg `iis/qgisserver?service=WMS&request=GetCapabilities`)
 3. QGIS project file path (eg `&MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs`)
 

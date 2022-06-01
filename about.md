@@ -60,21 +60,24 @@ Pozi puts the map at the centre of data discovery. Users effortlessly access acc
 
 <br clear="all" />
 <br/>
+<br/>
+
+<img src="/static/img/undraw/undraw_software_engineer_re_tnjc.svg" alt="" style="float:left;width:300px;margin:0px 40px;">
 
 ### Client Success
 
 Our clients work more efficiently and gain greater insights into their customers, resources, activities and risks by integrating location-based information into their workflows. Pozi delivers efficiencies in business processes and human resources by connecting to data at the source with minimal configuration. Enterprise-ready solutions are implemented in days, not months.
 
-[!ref icon="star"](/showcase/)
+[!ref icon="star"text="Client Showcase"](/showcase/)
 
 <br clear="all" />
 <br/>
 
-<img src="/static/img/sssi-2022-012-crop.jpg" alt="" style="float:right;width:400px;margin:0px 40px;">
+<img src="/static/img/undraw/undraw_server_status_re_n8ln.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
 
 ### Partner Success
 
-We enable software vendors and systems integrators to bring the power of location-based decision making into their business solutions. Pozi's lightweight footprint, modern API and library of common data connectors enables enterprise applications to access powerful spatial visualisation, querying and analysis and capabilities.
+We enable software vendors and systems integrators to bring the power of location-based decision making into their business solutions. Pozi's lightweight footprint, modern API and library of [data connectors](administrator-guide/integrations) enables enterprise applications to access powerful spatial visualisation, querying and analysis and capabilities.
 
 <br/>
 

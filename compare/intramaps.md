@@ -8,6 +8,8 @@ title: Pozi vs IntraMaps
 
 ### Modules vs Bookmarks
 
+*Sick of maintaining multiple map modules?*
+
 Pozi enables any user to have their own personalised map view without you having to maintain separate modules.
 
 From the one master layer catalogue, users can bookmark the current state of the Pozi map in their browser, which enables them to launch Pozi with their favourite map layers displayed.
