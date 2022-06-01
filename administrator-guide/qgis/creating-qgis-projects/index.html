@@ -32,11 +32,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=2.2.707365602614" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=2.2.707381584771" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=2.2.707365602614" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=2.2.707381584771" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.707365602614" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.707381584771" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -292,9 +292,12 @@
         <span>Construct <code v-pre>GetCapabilities</code> URL</span>
     </h2>
 </doc-anchor-target>
+<p>Any standards-based GIS server (including QGIS Server) can generate a document that includes details of all the map layers it has. The document is called a <code v-pre>GetCapabilities</code>, and it is generated as XML.</p>
+<p>When Pozi launches in the user&#x27;s browser, it sends a <code v-pre>GetCapabilities</code> request to QGIS Server. Pozi uses the response to determine what layers are available.</p>
+<p>As part of the project configuration, you must construct a URL for the <code v-pre>GetCapabilities</code> request and configure this URL within the QGIS project file. Essentially, the project file needs a reference to itself.</p>
 <p>Combine the details below:</p>
 <ol>
-<li>server URL (eg <code v-pre>https://local.pozi.com/</code>)</li>
+<li>server URL (default server URL is<code v-pre>https://local.pozi.com/</code>, but check your local setup for any custom endpoint)</li>
 <li>service and WMS/WFS parameters (eg <code v-pre>iis/qgisserver?service=WMS&amp;request=GetCapabilities</code>)</li>
 <li>QGIS project file path (eg <code v-pre>&amp;MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs</code>)</li>
 </ol>
