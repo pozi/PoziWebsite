@@ -5,6 +5,8 @@ order: 90
 
 # Integrations
 
+## Data Sources
+
 * ArcGIS Online
 * AssetEdge
 * [Assetic myData](./assetic-mydata/)
@@ -36,3 +38,8 @@ order: 90
 * TechnologyOne P&R
 
 ...and more
+
+## Identity and Access Management
+
+* [Azure Active Directory](./azure-active-directory)
+* AWS IAM

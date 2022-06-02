@@ -5,88 +5,88 @@ title: Integrations
 # Pozi Connect Integrations
 ## Civica Authority
 
-* Brimbank
-* Hindmarsh
-* Horsham
-* Maribyrnong
-* Surf Coast
-* Murrindindi
-* Swan Hill
-* Mildura
-* Wellington
-* Northern Grampians
-* Moira
-* Melton
-* Colac Otway
+* Brimbank City Council
+* Hindmarsh Shire Council
+* Horsham Rural City Council
+* Maribyrnong City Council
+* Surf Coast Shire Council
+* Murrindindi Shire Council
+* Swan Hill Rural City Council
+* Mildura Rural City Council
+* Wellington Shire Council
+* Northern Grampians Shire Council
+* Moira Shire Council
+* Melton City Council
+* Colac Otway Shire Council
 
 ## CouncilWise
 
-* Alpine
-* Ararat
-* Buloke
-* West Wimmera
+* Alpine Shire Council
+* Ararat Rural City Council
+* Buloke Shire Council
+* West Wimmera Shire Council
 
 ## Ibis Rating Manager
 
-* Indigo
-* Towong
-* Moorabool
-* Loddon
+* Indigo Shire Council
+* Towong Shire Council
+* Moorabool Shire Council
+* Loddon Shire Council
 
 ## Infor Pathway
 
-* Bendigo
-* Monash
-* Ballarat
-* Nillumbik
-* Frankston
-* Glen Eira
-* Kingston
-* Latrobe
-* Yarra Ranges
-* South Gippsland
-* Shepparton
-* Moreland
-* Moonee Valley
-* Maroondah
-* Macedon Ranges
-* Knox
-* East Gippsland
+* City of Greater Bendigo
+* City of Monash
+* City of Ballarat
+* Nillumbik Shire Council
+* Frankston City Council
+* Glen Eira City Council
+* Kingston City Council
+* Latrobe City Council
+* Shire of Yarra Ranges
+* South Gippsland Shire Council
+* Greater Shepparton City Council
+* Moreland City Council
+* Moonee Valley City Council
+* Maroondah City Council
+* Macedon Ranges Shire Council
+* Knox City Council
+* East Gippsland Shire Council
 
 ## Open Office Property.Gov
 
-* Bass Coast
-* Cardinia
-* Central Goldfields
-* Hobsons Bay
-* Strathbogie
+* Bass Coast Shire Council
+* Cardinia Shire Council
+* Central Goldfields Shire Council
+* Hobsons Bay City Council
+* Strathbogie Shire Council
 
 ## SynergySoft
 
-* Golden Plains
-* Mansfield
-* Pyrenees
+* Golden Plains Shire Council
+* Mansfield Shire Council
+* Pyrenees Shire Council
 ## TechnologyOne
 
 ### On-Premise
 
-* Campaspe
-* Manningham
-* Wangaratta
-* Hepburn
-* Warrnambool
-* Baw Baw
-* Stonnington
-* Mount Alexander
-* Mornington Peninsula
-* Dandenong
-* Corangamite
-* Casey
+* Shire of Campaspe
+* Manningham City Council
+* Rural City of Wangaratta
+* Hepburn Shire Council
+* Warrnambool City Council
+* Baw Baw Shire Council
+* City of Stonnington
+* Mount Alexander Shire Council
+* Mornington Peninsula Shire Council
+* City of Greater Dandenong
+* Corangamite Shire Council
+* City of Casey
 
 ### OneCouncil
 
-* Mitchell
-* Port Phillip
+* Mitchell Shire Council
+* City of Port Phillip
 
 Pozi Connect is configured to extract the information it needs from CSV files, extracted nightly from the TechOne cloud database.
 

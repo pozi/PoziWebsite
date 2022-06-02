@@ -27,6 +27,22 @@ layout: central
 
 :::centre
 
+<big>QGIS is your Admin Panel for publishing location-based information to users within your organisation</big>
+
+:::
+
+## Ultimate control
+
+### Styling
+
+### Filtering
+
+### Joining
+
+### Publishing
+
+:::centre
+
   ## Get in touch
 
 :::

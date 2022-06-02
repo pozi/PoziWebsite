@@ -6,6 +6,10 @@ title: Pozi vs IntraMaps
 
 ### Ease of Use
 
+*If you can use Google Maps, you can use Pozi*
+
+From its beginning as a public-facing map enquiry tool, Pozi has focussed on delivering critical information to users regardless of any previous GIS expertise.
+
 ### Modules vs Bookmarks
 
 *Sick of maintaining multiple map modules?*
@@ -21,6 +25,8 @@ There is no limit to the number of bookmarks that users create, so users can hav
 Pozi avoids the overhead of duplicating configuration across multiple modules. At the same time, it enables staff to discover and use information outside of artificial data silos.
 
 ### Real Support
+
+*When you ask Pozi for help, we'll acknowledge your request within 24 hours, and begin resolving your issue within 48 hours.*
 
 ### Ultimate Control
 

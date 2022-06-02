@@ -7,9 +7,27 @@ order: 100
 
 ## Prerequisites
 
-* support account
-* service account
-* internet access (needed to communicate with connect.pozi.com for software updates)
+Prior to installation, clients should set up two domain user accounts.
+
+**Support Account**
+
+* example name: `PoziSupport`
+* read permissions on GIS file locations
+* trusted user any GIS and other any other corporate databases
+* local admin on server
+* access for remote support by Pozi staff
+* internet access
+
+**Service Account**
+
+* example name: `PoziService`
+* read permissions on GIS file locations
+* trusted user any GIS and other any other corporate databases
+* permissions for running scheduled tasks
+* credentials must never expire
+* internet access (needed to communicate with connect.pozi.com for software updates).
+
+Share the credentials for these accounts with your Pozi support contact, along with any instructions for remote access.
 
 ## Download and Install
 
@@ -51,7 +69,13 @@ File associations:
 
 ## Enable permissions on `userdata` folder
 
-The `C:\Program Files (x86)\Pozi` will be created by the installation process with limited permissions for editing. To enable your user account to make changes within the userdata folder, do the following:
+!!!
+
+The instructions below assume that Pozi Server has been installed in the default location. If it has been installed elsewhere, substitute your path in place of `C:\Program Files (x86)\Pozi` in all subsequent steps.
+
+!!!
+
+The `C:\Program Files (x86)\Pozi` folder will be created by the installation process with limited permissions for editing. To enable your user account to make changes within the userdata folder, do the following:
 
 1. in Windows Explorer, navigate to `C:\Program Files (x86)\Pozi`
 2. right click `userdata` folder
