@@ -12,8 +12,8 @@ Prior to installation, clients should set up two domain user accounts.
 **Support Account**
 
 * example name: `PoziSupport`
-* read permissions on GIS file locations
-* trusted user any GIS and other any other corporate databases
+* read-only permissions on GIS file locations
+* trusted read-only user of GIS database and any relevant corporate databases
 * local admin on server
 * access for remote support by Pozi staff
 * internet access
@@ -21,8 +21,8 @@ Prior to installation, clients should set up two domain user accounts.
 **Service Account**
 
 * example name: `PoziService`
-* read permissions on GIS file locations
-* trusted user any GIS and other any other corporate databases
+* read-only permissions on GIS file locations
+* trusted read-only user of GIS database and any relevant corporate databases
 * permissions for running scheduled tasks
 * credentials must never expire
 * internet access (needed to communicate with connect.pozi.com for software updates).
