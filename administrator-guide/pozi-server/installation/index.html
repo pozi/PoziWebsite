@@ -14,30 +14,30 @@
     <!-- Primary Meta Tags -->
     <title>Installation | Pozi Web GIS | Online Map</title>
     <meta name="title" content="Installation | Pozi Web GIS | Online Map">
-    <meta name="description" content="support account" />
+    <meta name="description" content="Prior to installation, clients should set up two domain user accounts." />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pozi.com/administrator-guide/pozi-server/installation/">
     <meta property="og:title" content="Installation | Pozi Web GIS | Online Map">
-    <meta property="og:description" content="support account">
+    <meta property="og:description" content="Prior to installation, clients should set up two domain user accounts.">
     <meta property="og:image" content="https://pozi.com/administrator-guide/pozi-server/img/dns-manager.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pozi.com/administrator-guide/pozi-server/installation/">
     <meta property="twitter:title" content="Installation | Pozi Web GIS | Online Map">
-    <meta property="twitter:description" content="support account">
+    <meta property="twitter:description" content="Prior to installation, clients should set up two domain user accounts.">
     <meta property="twitter:image" content="https://pozi.com/administrator-guide/pozi-server/img/dns-manager.png">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=2.2.707381584771" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=2.2.707467283236" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=2.2.707381584771" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=2.2.707467283236" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.707381584771" defer></script>
-    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=2.2.707381584771" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.707467283236" defer></script>
+    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=2.2.707467283236" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -263,11 +263,26 @@
         <span>Prerequisites</span>
     </h2>
 </doc-anchor-target>
+<p>Prior to installation, clients should set up two domain user accounts.</p>
+<p><strong>Support Account</strong></p>
 <ul>
-<li>support account</li>
-<li>service account</li>
-<li>internet access (needed to communicate with connect.pozi.com for software updates)</li>
+<li>example name: <code v-pre>PoziSupport</code></li>
+<li>read permissions on GIS file locations</li>
+<li>trusted user any GIS and other any other corporate databases</li>
+<li>local admin on server</li>
+<li>access for remote support by Pozi staff</li>
+<li>internet access</li>
 </ul>
+<p><strong>Service Account</strong></p>
+<ul>
+<li>example name: <code v-pre>PoziService</code></li>
+<li>read permissions on GIS file locations</li>
+<li>trusted user any GIS and other any other corporate databases</li>
+<li>permissions for running scheduled tasks</li>
+<li>credentials must never expire</li>
+<li>internet access (needed to communicate with connect.pozi.com for software updates).</li>
+</ul>
+<p>Share the credentials for these accounts with your Pozi support contact, along with any instructions for remote access.</p>
 <doc-anchor-target id="download-and-install">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#download-and-install">#</doc-anchor-trigger>
@@ -320,7 +335,24 @@
         <span>Enable permissions on <code v-pre>userdata</code> folder</span>
     </h2>
 </doc-anchor-target>
-<p>The <code v-pre>C:\Program Files (x86)\Pozi</code> will be created by the installation process with limited permissions for editing. To enable your user account to make changes within the userdata folder, do the following:</p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>The instructions below assume that Pozi Server has been installed in the default location. If it has been installed elsewhere, substitute your path in place of <code v-pre>C:\Program Files (x86)\Pozi</code> in all subsequent steps.</p>
+        </div>
+    </div>
+</div>
+<p>The <code v-pre>C:\Program Files (x86)\Pozi</code> folder will be created by the installation process with limited permissions for editing. To enable your user account to make changes within the userdata folder, do the following:</p>
 <ol>
 <li>in Windows Explorer, navigate to <code v-pre>C:\Program Files (x86)\Pozi</code></li>
 <li>right click <code v-pre>userdata</code> folder</li>
