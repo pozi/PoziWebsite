@@ -109,7 +109,7 @@ A secure cloud-hosted platform provides a centralised source of truth for proper
 <img src="/static/img/undraw/undraw_server_status_re_n8ln.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
 * API for syncing data
-* data processing workflow for transforming and combining datasets from multiple councils
+* data processing workflow for transforming, validating and combining datasets from multiple councils
 * interactive web map for performing any manual spatial adjustments such as rural addresses and custom property boundaries
 * dashboard to provide status of recent loads, match stats, data discrepancy reports, etc
 * API for DELWP to retrieve statewide council datasets
@@ -151,7 +151,7 @@ On the council side, a simple data sync tool installed at each council and confi
 
 We've worked with every council in Victoria (through M1 and PIQA projects), building custom property data integrations into 79 different data schemas, across seven different property systems, on a range of database platforms.
 
-Our Pozi Connect software is installed at most Victorian councils, and already integrated into councils' property systems. The software can be adapted to automatically sync the council's data to the cloud platform.
+Our Pozi Connect software is already installed at most Victorian councils and integrated into their property systems. The software can be adapted to automatically sync the council's data to the cloud platform.
 
 We've established trust and built upon relationships we've had with Victorian councils over 20 years.
 
@@ -216,15 +216,19 @@ Or you can use your own software (like FME) or automated scripts to perform the 
 
 No.
 
-==- How will the system deal with special property attributes such as multi-assessment and distance-based address?
-
-The cloud platform includes an interactive dashboard for councils to manage edits. Validation rules will be configured to flag any updates that would affect or be affected by these property attributes. Councils will use the dashboard to approve or amend any flagged updates.
-
 ==- What happens if council's property data is not perfect?
 
 No council's property data is perfect. However, automation of property updates is possible with any level of data quality.
 
 Our existing M1 solution, Pozi Connect, has been generating M1s for councils for years, and already takes this into account. It is designed to not unmatch any property or remove any address information unless the council has more a complete record for that property with which to replace it. This same conservative approach will be applied for updates from the new consolidated dataset.
+
+==- How will the system deal with special property attributes such as multi-assessment and distance-based address?
+
+The cloud platform includes an interactive dashboard for councils to manage edits. Validation rules will be configured to flag any updates that would affect (or be affected by) these property attributes. Councils will use the dashboard to approve or amend any flagged updates.
+
+==- How will the system deal with property boundaries that aren't defined by parcel ownership?
+
+Property numbers that are associated with custom property boundaries will be respected. Councils may optionally maintain a look-up table of `propnum` vs `property_pfi` for custom properties. Any property numbers in this list will be associated with the target property polygon instead of a known parcel.
 
 ==- Will councils be able to review the generated property changes?
 
