@@ -1,6 +1,8 @@
 ---
 slug: on-metadata
 author: Simon O'Keefe
+description: A try-before-you-buy approach to implementing a GIS metadata solution
+tags: [metadata]
 ---
 
 # On Metadata

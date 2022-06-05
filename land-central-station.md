@@ -1,5 +1,6 @@
 ---
 title: Land Central Station
+description: Land Central Station is a vision for cloud data hub and single source of truth for Victorian council property information - an alternative to dreaded "M1" process.
 visibility: hidden
 layout: central
 ---
@@ -98,7 +99,7 @@ It is designed to:
 
 3. DELWP and other approved authorities can pull data from the combined resource on demand in the format of their choosing (M1, full dump, diffs, filtered extracts, audits, discrepancy reports, etc)
 
-With DELWP having complete access to the combined authoritative property information from the councils, they have everything they need to update their map base.
+With DELWP having complete access to the combined authoritative property information from the councils, they have all the information they need to update their map base.
 
 ### Components
 
@@ -108,8 +109,8 @@ A secure cloud-hosted platform provides a centralised source of truth for proper
 
 <img src="/static/img/undraw/undraw_server_status_re_n8ln.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
-* API for syncing data
-* data processing workflow for transforming, validating and combining datasets from multiple councils
+* API for syncing data from councils
+* automated workflows for transforming, validating and combining datasets from multiple councils
 * interactive web map for performing any manual spatial adjustments such as rural addresses and custom property boundaries
 * dashboard to provide status of recent loads, match stats, data discrepancy reports, etc
 * API for DELWP to retrieve statewide council datasets
@@ -118,7 +119,7 @@ A secure cloud-hosted platform provides a centralised source of truth for proper
 
 <img src="/static/img/undraw/undraw_going_up_re_86kg.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
-On the council side, a simple data sync tool installed at each council and configured for their specific property system to generate and upload a nightly extract of property information. Alternatively, councils may choose to set up FME or another tool of their choice to push data to the cloud platform.
+On the council side, a simple data sync tool is installed at each council and configured for their specific property system to generate and upload a nightly extract of property information. Alternatively, councils may choose to set up FME or another tool of their choice to push data to the cloud platform.
 
 ---
 
@@ -135,7 +136,7 @@ On the council side, a simple data sync tool installed at each council and confi
 
 #### For DELWP
 
-* replacing 79 points of contact with single API call to retrieve authoritative property data for the whole state
+* replacing 79 points of contact with a single source of truth for authoritative property data for the whole state
 * reduce risk of councils falling behind in providing updates
 * potential to increase data update frequency
 * council data can be audited constantly, instead of once a year
@@ -175,9 +176,9 @@ To update Vicmap, DELWP will compare what changed between snapshots of the counc
 
 ==- Why hasn't this been considered in the past?
 
-Most discussions about improving the property data maintenance processes for councils have involved minor improvements to the M1, like creating new edit codes or tweaking some fields.
+Most discussions about improving the property data maintenance processes for councils have involved minor improvements to the M1, like creating new edit codes or adding more fields.
 
-We have a different idea about how to better exchange data that doesn't rely on M1s. It's a new approach based on shared service and modern technologies, and involves DELWP taking a greater role in the property data maintenance workflow.
+We have a different idea about how to better exchange data that doesn't rely on spreadsheets. It's a new shared-service approach based on modern technologies, and it involves DELWP taking a greater role in the property data maintenance workflow.
 
 ==- Have you considered the challenges of implementing this?
 
@@ -194,7 +195,7 @@ Yes. The challenges include, but are not limited to:
 
 DELWP currently relies on council staff across Victoria to routinely compile change requests (M1s) detailing which records have changed (PFIs), what to update (property numbers, address attributes), and how to update it (edit codes).
 
-The proposed solution provides DELWP with access to an authoritative source of all council property information for the whole state, allowing DELWP to update its Vicmap datasets on demand with up-to-date council-maintained attributes.
+Under the proposed solution, DELWP will gain access to a single source of truth of all council property information for the whole state, enabling it to update its Vicmap datasets on demand.
 
 Instead of DELWP constantly recreating council information from individual change requests, their role will be to validate and merge the council's property attributes from the central source of truth into their Vicmap datasets.
 
@@ -206,7 +207,7 @@ Yes. It's called Pozi Connect, and it's used by two-thirds of Victorian councils
 
 No.
 
-If your council already has Pozi Connect installed, we'll update it to synchronise the council's property data to the cloud platform.
+If your council already has Pozi Connect installed, we can update it to synchronise the council's property data to the cloud platform.
 
 For councils that don't already have Pozi Connect, we can optionally install and customise it for you.
 
@@ -220,9 +221,9 @@ No.
 
 No council's property data is perfect. However, automation of property updates is possible with any level of data quality.
 
-Our existing M1 solution, Pozi Connect, has been generating M1s for councils for years, and already takes this into account. It is designed to not unmatch any property or remove any address information unless the council has more a complete record for that property with which to replace it. This same conservative approach will be applied for updates from the new consolidated dataset.
+Our existing M1 solution, Pozi Connect, has been generating M1s for councils for years, and already takes this into account. It's designed to not unmatch any property or remove any address information unless the council has more a complete record for that property with which to replace it. This same conservative approach will be applied for updates from the new consolidated dataset.
 
-==- How will the system deal with special property attributes such as multi-assessment and distance-based address?
+==- How will the system deal with special property attributes such as multi-assessment, access type and distance-based address?
 
 The cloud platform includes an interactive dashboard for councils to manage edits. Validation rules will be configured to flag any updates that would affect (or be affected by) these property attributes. Councils will use the dashboard to approve or amend any flagged updates.
 
@@ -264,14 +265,18 @@ But in the future, it can be adapted to synchronise and consolidate any common c
 
 Do you like the name?
 
-If not, we'd love to hear any suggestion you have!
+If not, we'd love to hear any suggestions you have!
 
 ==-
 
 ---
 ## Where to now?
 
-We want to hear from you! Register your interest by filling in the form below. We'll keep you up-to-date with this project as it progresses.
+We want to hear from you!
+
+Register your interest by filling in the form below. You can also indicate your interest to participate in a pilot solution.
+
+We'll keep you up-to-date with this project as it progresses.
 
 <iframe
   id="JotFormIFrame-221373150678052"

@@ -2,15 +2,13 @@
 slug: upgrade-to-pozi-connect-2-9-3
 author: Simon O'Keefe
 tags: [Pozi Connect]
-description: An announcement for users of the Pozi Connect desktop application.
+description: An announcement for users of Pozi Connect.
 category: Pozi Connect
 ---
 
 # Upgrade to Pozi Connect 2.9.3
 
 *Note: this announcement is for users of the Pozi Connect desktop application.*
-
-<!--truncate-->
 
 Pozi Connect 2.9.3 is now available for you to download and install.
 
@@ -19,8 +17,6 @@ This update ensures that Pozi Connect imports only the latest data from DELWP's 
 We've also taken the opportunity to improve the PIQA reporting capabilities, provide more detailed M1 file name, and improve the installation experience.
 
 **[Upgrade to Pozi Connect 2.9.3](https://docs.pozi.com/pozi-connect/installation/)**
-
-
 
 ------
 
@@ -57,20 +53,6 @@ Pozi Connect may be configured for your council to use `VMADD` and `VMPROP` as y
 
 If you decide to extract your DataShare downloads to a different location (for instance, to use the new DataShare folder names), you can change override the location when you run Pozi Connect at the 'Import Vicmap' step by using the folder picker buttons in the Pozi Connect interface and browsing to the new location. You can also modify your council's own 'Import Vicmap' INI file (in `PoziConnect\tasks\[councilname]\`) using a text editor to ensure Pozi Connect remembers the location. And remember, if you make any changes to your INI file, please send the updated file to support@pozi.com so it can be included in future releases.
 
-
-
-------
-
-## Powerful GIS Capabilities for your Council
-
-Are you looking for an alternative GIS enquiry tool for your council's corporate GIS? Do you want to improve user engagement? Do you need a better level of support?
-
-Discover how you can leverage your council's existing MapManager and QGIS project files to easily manage and publish spatial information across your organisation in a powerful, easy to use web map application.
-
-Reply to this email to register your interest for a free trial deployment of Pozi Enterprise, customised for your organisation.
-
-
-
 ------
 
 ## Install Pozi Connect 2.9.3 Now
@@ -79,4 +61,4 @@ The new Pozi Docs site provides step-by-step instructions for downloading and in
 
 **[Get Pozi Connect 2.9.3](https://docs.pozi.com/pozi-connect/installation/)**
 
-For assistance with this upgrade, reply to this email, or contact support@pozi.com.
+For assistance with this upgrade, contact support@pozi.com.

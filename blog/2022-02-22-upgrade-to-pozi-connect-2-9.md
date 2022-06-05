@@ -2,7 +2,7 @@
 slug: upgrade-to-pozi-connect-2-9
 author: Simon O'Keefe
 tags: [Pozi Connect]
-description: An announcement for users of the Pozi Connect desktop application.
+description: An announcement for users of Pozi Connect.
 category: Pozi Connect
 ---
 
@@ -65,20 +65,10 @@ If you decide to extract your DataShare downloads to a different location (for i
 
 ------
 
-## Powerful GIS Capabilities for your Council
-
-Are you looking for an alternative GIS enquiry tool for your council's corporate GIS? Do you want to improve user engagement? Do you need a better level of support?
-
-Discover how you can leverage your council's existing MapManager and QGIS project files to easily manage and publish spatial information across your organisation in a powerful, easy to use web map application.
-
-Reply to this email to register your interest for a free trial deployment of Pozi Enterprise, customised for your organisation.
-
-------
-
 ## Install Pozi Connect 2.9 Now
 
 The new Pozi Docs site provides step-by-step instructions for downloading and installing Pozi Connect 2.9.
 
 **[Get Pozi Connect 2.9](https://docs.pozi.com/pozi-connect/installation/)**
 
-For assistance with this upgrade, reply to this email, or contact support@pozi.com.
+For assistance with this upgrade, contact support@pozi.com.

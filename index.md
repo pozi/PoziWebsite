@@ -1,12 +1,13 @@
 ---
-title: Home
+title: Pozi
+description: Pozi is a high performance hosted web map that enables organisations to easily share their GIS data to drive business efficiencies and community engagement. Developed in Melbourne Australia, with no long term lock in contracts.
 layout: central
 ---
 
 #
 
 <style>
-    .section {
+    .centre {
         text-align: center;
         /* color: #1956AF; */
         /* background-color: #EEEEEE; */
@@ -18,7 +19,7 @@ layout: central
 
 <!--- START HEADING --->
 
-:::section
+:::centre
 
   # Building Connected Communities Through Spatial Thinking
 
@@ -72,7 +73,7 @@ Our team works with you to customise and maintain your map application - you're 
 
 <br/>
 
-:::section
+:::centre
 
 ## Visualise & interact with location-based information in a simple map interface
 
@@ -87,7 +88,7 @@ Our team works with you to customise and maintain your map application - you're 
 
 <!--- START SECTION - CLIENTS --->
 
-:::section
+:::centre
 
   ## What our clients say...
 
@@ -133,7 +134,7 @@ Our team works with you to customise and maintain your map application - you're 
 
 <!--- START SECTION - SHOWCASE --->
 
-:::section
+:::centre
 
   ## Showcase
 
@@ -149,7 +150,7 @@ Our team works with you to customise and maintain your map application - you're 
 
 <!--- END SECTION - SHOWCASE --->
 
-:::section
+:::centre
 
 ## Why Pozi?
 
@@ -169,7 +170,7 @@ Promote local places, facilities events and services to customers
 
 :::
 
-:::section
+:::centre
 
 ## Powered by QGIS
 
@@ -181,7 +182,7 @@ Promote local places, facilities events and services to customers
 
 :::
 
-:::section
+:::centre
 
 ## Ultimate connectability
 
@@ -244,7 +245,7 @@ Deliver data to staff and public – easily and affordably. Users can access the
 
 <!--- START SECTION - ABOUT --->
 
-:::section
+:::centre
 
   ## Supporting GIS since 1999
 
@@ -260,7 +261,7 @@ Deliver data to staff and public – easily and affordably. Users can access the
 
 <!--- START SECTION - CONTACT --->
 
-:::section
+:::centre
 
   ## Get in touch
 

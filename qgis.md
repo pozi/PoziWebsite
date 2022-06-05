@@ -27,11 +27,16 @@ layout: central
 
 :::centre
 
-<big>QGIS is your Admin Panel for publishing location-based information to users within your organisation</big>
+<big>QGIS is your **admin panel** for publishing location-based information to users within your organisation</big>
+
 
 :::
 
 ## Ultimate control
+
+Use QGIS to easily manage and publish map layers to staff within Pozi.
+
+Add layers to a QGIS project to make them available in Pozi. Easily apply styling, customise fields, join datasets, add metadata, and more, all within the familiar QGIS open source desktop application.
 
 ### Styling
 
@@ -41,9 +46,11 @@ layout: central
 
 ### Publishing
 
+---
+
 :::centre
 
-  ## Get in touch
+  <big>Get in touch to discover how to power your GIS with QGIS</big>
 
 :::
 

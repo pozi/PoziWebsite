@@ -85,6 +85,17 @@ Email coordinated.imagery@delwp.vic.gov.au
 
 ==-
 
+## New Image Web Server
+
+Notification of new service from DELWP in May 2022:
+
+> Image Web Server and its storage have been migrated to the new AWS Cloud hosted Raster Data Platform and Image Web Server. This change is part of DELWP’s Spatial Transformation Program, which aims to enhance our service delivery capabilities including support of GDA2020.
+
+New endpoint: https://iws.maps.vic.gov.au/erdas-iws/ogc/wms/RDP?SERVICE=WMS&REQUEST=GetCapabilities
+
+> ...the existing Image Web Server service (
+https://images.maps.vic.gov.au/erdas-iws/ogc/wms)...will be decommissioned by 30 June 2022.
+
 ## For Clients
 
 Image Web Server account:

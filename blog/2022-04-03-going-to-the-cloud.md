@@ -2,6 +2,7 @@
 slug: going-to-the-cloud
 authors: Simon O'Keefe
 visibility: hidden
+description: What does it mean when one of your software vendors announces that you're "moving to the cloud"?
 tags: [cloud]
 ---
 
@@ -24,6 +25,7 @@ Without leaving the Pozi app, your most critical users have access to live trust
 * your audience consists only of remote users or external stakeholders
 * it provides a cheaper alternative to an existing on-premise solution
 * the solution enables greater integration with other cloud resources and applications
+* you retain the same level of control over your data and processes
 
 ### But why "go cloud" when...
 
@@ -41,7 +43,6 @@ You've built a foundation of automations, views, triggers, actions, scripts and 
 
 **... your collaborations are local**
 
-
 ### Evaluate the cost of "going cloud"
 
 ### Does the vendor have your interests at heart
@@ -55,9 +56,9 @@ Ask your vendor if you'll gain any of the usual advantages of moving to the clou
 
 Or will the move be a step backwards
 
-* does your organisation's on-premise corporate data need to be duplicated in the cloud?
+* will it require your organisation's on-premise corporate data to be replicated in the cloud?
 * will it prevent your organisation using third party support providers?
-* will it prevent database access for integrations or reporting?
+* will it restrict integrations for your other GIS software and corporate systems?
 * will it prevent the use of basic database functions such as triggers and views?
 * will it make it harder for your GIS to connect directly with data from external data providers?
 

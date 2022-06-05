@@ -34,11 +34,11 @@ We embrace modern web technologies and continuous development and deployment pro
 
 Pozi commenced as *Groundtruth*, a consulting company founded in 1999 to help Victorian councils better manage their Geographic Information Systems (GIS).
 
-In 2009, we grew beyond expert advisory services and became a developer of geospatial software solutions. With a vision to "re-imagine GIS for the web", we launched Australia's first hosted web GIS, Pozi Web.
+In 2009, we grew beyond expert advisory services and became a developer of geospatial software solutions. With a vision to "re-imagine GIS for the web", we launched what we reckon was Australia's first hosted web GIS, Pozi.
 
-The release of Pozi Connect, a data processing tool, soon followed. This GIS product is now used by over two-thirds of Victorian councils and municipalities.
+The release of Pozi Connect, a data processing tool, soon followed. This GIS product is now used by over two-thirds of Victorian municipalities.
 
-Over the years, we continued to develop the Pozi products in consultation with municipal clients to deliver improved features to better meet the growing needs of staff and their community. The work transformed Pozi Web to becoming a scalable and modern web app that enables organisations to integrate spatial visualisation, querying and analysis functionality across their corporate applications.
+Over the years, we continued to develop the Pozi products in consultation with municipal clients to deliver improved features to better meet the growing needs of their staff and the wider community. The work transformed Pozi to becoming a scalable and modern web app that enables organisations to integrate spatial visualisation, querying and analysis functionality across their corporate applications.
 
 In 2019 we rebranded the company name to Pozi, with a fresh vision for ***building connected communities through spatial thinking***.
 
@@ -56,7 +56,7 @@ We are driven to enable more people to easily access and use spatial information
 
 <img src="/static/img/sssi-2022-010-crop.jpg" alt="" style="float:right;width:400px;margin:0px 40px;">
 
-Pozi puts the map at the centre of data discovery. Users effortlessly access accurate, up-to-date information for critical decision-making and gaining new insights by connecting to live, authoritative data sources.
+Pozi puts the map at the centre of data discovery. Users effortlessly access accurate, up-to-date information for critical decision-making and gaining new insights by connecting to live, trusted data sources.
 
 <br clear="all" />
 <br/>
@@ -66,7 +66,9 @@ Pozi puts the map at the centre of data discovery. Users effortlessly access acc
 
 ### Client Success
 
-Our clients work more efficiently and gain greater insights into their customers, resources, activities and risks by integrating location-based information into their workflows. Pozi delivers efficiencies in business processes and human resources by connecting to data at the source with minimal configuration. Enterprise-ready solutions are implemented in days, not months.
+Our clients work more efficiently and gain greater insights into their customers, resources, activities and risks by integrating location-based information into their workflows.
+
+Pozi delivers efficiencies in business processes and human resources by connecting to data at the source with minimal configuration. Enterprise-ready solutions are implemented in days, not months.
 
 [!ref icon="star"text="Client Showcase"](/showcase/)
 
@@ -77,7 +79,9 @@ Our clients work more efficiently and gain greater insights into their customers
 
 ### Partner Success
 
-We enable software vendors and systems integrators to bring the power of location-based decision making into their business solutions. Pozi's lightweight footprint, modern API and library of [data connectors](administrator-guide/integrations) enables enterprise applications to access powerful spatial visualisation, querying and analysis and capabilities.
+We enable software vendors and systems integrators to bring the power of location-based decision making into their business solutions.
+
+Pozi's lightweight footprint, modern API and library of [data connectors](administrator-guide/integrations) enables enterprise applications to access powerful spatial visualisation, querying and analysis and capabilities.
 
 <br/>
 
