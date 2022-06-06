@@ -4,14 +4,14 @@ order: 100
 
 # Setting Up QGIS
 
-These are the recommended settings for QGIS. They only need to be set once.
+These are the recommended settings for QGIS. They are optional. They only need to be set once.
 
 ## Project Settings
 
 QGIS > Settings > Options > General > Project Files >
 
-* Default project file format: QGS Project
 * Prompt for confirmation when a layer is to be removed: untick
+* Default project file format: QGS Project
 
 ## Styling Panel
 

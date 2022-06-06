@@ -25,9 +25,9 @@ Prior to installation, clients should set up two domain user accounts.
 * trusted read-only user of GIS database and any relevant corporate databases
 * permissions for running scheduled tasks
 * credentials must never expire
-* internet access (needed to communicate with connect.pozi.com for software updates).
+* internet access (needed to communicate with connect.pozi.com for software updates)
 
-Share the credentials for these accounts with your Pozi support contact, along with any instructions for remote access.
+Provide these credentials to your Pozi support contact, along with any instructions for remote access.
 
 ## Download and Install
 

@@ -84,11 +84,12 @@ The current system is difficult to automate and innovate upon.
 
 **Land Central Station** is a centralised data clearinghouse of property information from all Victorian councils.
 
-<img src="/static/img/undraw/undraw_start_building_re_xani.svg" alt="" style="float:right;width:350px;margin:0px 40px;">
+<img src="/static/img/undraw/undraw_start_building_re_xani.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
 
 It is designed to:
 
 * reduce the friction of data exchange between councils and DELWP
+* eliminate ongoing data discrepancies between councils and DELWP
 * automate property data maintenance to better suit a modern digital cadastre
 
 ### How It Works
@@ -257,7 +258,7 @@ But ideally, in a scenario in which every council decides to switch, it becomes 
 
 Yes!
 
-For now, we're tackling property data to eliminate the M1 burden.
+For now, we're tackling council property data to eliminate the M1 burden.
 
 But in the future, it can be adapted to synchronise and consolidate any common council dataset. The platform can automate the delivery of statewide spatial and non-spatial data from councils to any government agency.
 
@@ -274,17 +275,15 @@ If not, we'd love to hear any suggestions you have!
 
 We want to hear from you!
 
-Register your interest by filling in the form below. You can also indicate your interest to participate in a pilot solution.
+Register your interest by filling in the form below. You can also indicate whether you'd like your organisation to participate in a pilot solution.
 
 We'll keep you up-to-date with this project as it progresses.
 
 <iframe
   id="JotFormIFrame-221373150678052"
   title="Land Central Station"
-  onload="window.parent.scrollTo(0,0)"
   allowtransparency="true"
   allowfullscreen="true"
-  allow="geolocation; microphone; camera"
   src="https://form.jotform.com/221373150678052"
   frameborder="0"
   style="
