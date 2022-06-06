@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.707730625452">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.707809275658">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.3.0.707730625452" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.3.0.707809275658" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.707730625452" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.707809275658" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.707730625452" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.707809275658" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -356,7 +356,7 @@
 <li>QGIS project file path (eg <code v-pre>&amp;MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs</code>)</li>
 </ol>
 <p>For example:</p>
-<p><a href="https://local.pozi.com/iis/qgisserver?service=WFS&amp;request=GetCapabilities&amp;MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs">https://local.pozi.com/iis/qgisserver?service=WFS&amp;request=GetCapabilities&amp;MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs</a></p>
+<p><a href="https://local.pozi.com/iis/qgisserver?service=WMS&amp;request=GetCapabilities&amp;MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs">https://local.pozi.com/iis/qgisserver?service=WMS&amp;request=GetCapabilities&amp;MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs</a></p>
 <p>Copy your URL to your clipboard or a blank text document for reference. This URL will be used in subsequent configuration below. Note that the URL will not yet return a valid response until the configuration is complete.</p>
 <doc-anchor-target id="enable-wms-service">
     <h2>
@@ -367,22 +367,24 @@
 <p>Pozi requires the project to be enabled for WMS.</p>
 <ol>
 <li>Project &gt; Properties &gt; QGIS Server</li>
-<li>update WMS settings
+<li>update WMS capabilities settings
 <ul>
 <li><code v-pre>Add geometry to feature response</code>: tick on</li>
-<li><code v-pre>Advertised URL</code>: enter WMS GetCapabilities address
-<ul>
-<li>example: <code v-pre>https://local.pozi.com/iis/qgisserver?service=WMS&amp;request=GetCapabilities&amp;MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs</code></li>
+<li><code v-pre>Advertised URL</code>: enter WMS GetCapabilities URL</li>
 </ul>
 </li>
+<li>update WMTS capabilities settings
+<ul>
+<li><code v-pre>Published layers &gt; Project &gt; Published</code>: tick on</li>
+<li><code v-pre>Advertised URL</code>: enter WMS GetCapabilities URL</li>
 </ul>
 </li>
 </ol>
 <p><img src="../img/qgis-project-properties-wms-configuration.png" style="width:600px" alt="QGIS Project Properties WMS Configuration" /></p>
-<ol start="3">
+<ol start="4">
 <li>OK</li>
 <li>Project &gt; Save  (<code v-pre>Ctrl</code> + <code v-pre>S</code>)</li>
-<li>test that you get a valid WMS/WFS GetCapabilities response by entering the GetCapabilities request in your browser.</li>
+<li>test that you get a valid WMS GetCapabilities response by entering the GetCapabilities request in your browser.</li>
 </ol>
 <doc-anchor-target id="enable-wfs-service">
     <h2>
@@ -406,17 +408,14 @@
 <p>As a guideline, use WFS for layers with fewer than 5-10K features.</p>
 <ol>
 <li>Project &gt; Properties &gt; QGIS Server</li>
-<li>update the WFS settings:
+<li>update the WFS capabilities settings:
 <ul>
-<li><code v-pre>Advertised URL</code>: enter WFS GetCapabilities
-<ul>
-<li>example: <code v-pre>https://local.pozi.com/iis/qgisserver?service=WFS&amp;version=1.1.0&amp;request=GetCapabilities&amp;MAP=C:/Program%20Files%20(x86)/Pozi/server/data/local/property.qgs</code></li>
-</ul>
-</li>
+<li><code v-pre>Advertised URL</code>: enter WFS GetCapabilities (similar to WMS request above, but with <code v-pre>WFS</code> substituted in place of <code v-pre>WMS</code>)</li>
 </ul>
 </li>
 <li>OK</li>
 <li>Project &gt; Save (<code v-pre>Ctrl</code> + <code v-pre>S</code>)</li>
+<li>test that you get a valid WFS GetCapabilities response by entering the GetCapabilities request in your browser.</li>
 </ol>
 <doc-anchor-target id="exclude-base-layer">
     <h2>
