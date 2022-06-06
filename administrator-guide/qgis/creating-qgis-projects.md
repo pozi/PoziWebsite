@@ -36,7 +36,7 @@ Combine the details below:
 
 For example:
 
-https://local.pozi.com/iis/qgisserver?service=WFS&request=GetCapabilities&MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs
+https://local.pozi.com/iis/qgisserver?service=WMS&request=GetCapabilities&MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs
 
 Copy your URL to your clipboard or a blank text document for reference. This URL will be used in subsequent configuration below. Note that the URL will not yet return a valid response until the configuration is complete.
 
@@ -45,16 +45,18 @@ Copy your URL to your clipboard or a blank text document for reference. This URL
 Pozi requires the project to be enabled for WMS.
 
 1. Project > Properties > QGIS Server
-2. update WMS settings
+2. update WMS capabilities settings
    * `Add geometry to feature response`: tick on
-   * `Advertised URL`: enter WMS GetCapabilities address
-     * example: `https://local.pozi.com/iis/qgisserver?service=WMS&request=GetCapabilities&MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs`
+   * `Advertised URL`: enter WMS GetCapabilities URL
+3. update WMTS capabilities settings
+   * `Published layers > Project > Published`: tick on
+   * `Advertised URL`: enter WMS GetCapabilities URL
 
 ![QGIS Project Properties WMS Configuration](./img/qgis-project-properties-wms-configuration.png){style="width:600px"}
 
-3. OK
-4. Project > Save  (`Ctrl` + `S`)
-5. test that you get a valid WMS/WFS GetCapabilities response by entering the GetCapabilities request in your browser. 
+4. OK
+5. Project > Save  (`Ctrl` + `S`)
+6. test that you get a valid WMS GetCapabilities response by entering the GetCapabilities request in your browser. 
 
 ## Enable WFS Service
 
@@ -75,11 +77,11 @@ Disadvantages:
 As a guideline, use WFS for layers with fewer than 5-10K features.
 
 1. Project > Properties > QGIS Server
-2. update the WFS settings:
-   * `Advertised URL`: enter WFS GetCapabilities
-     * example: `https://local.pozi.com/iis/qgisserver?service=WFS&version=1.1.0&request=GetCapabilities&MAP=C:/Program%20Files%20(x86)/Pozi/server/data/local/property.qgs`
+2. update the WFS capabilities settings:
+   * `Advertised URL`: enter WFS GetCapabilities (similar to WMS request above, but with `WFS` substituted in place of `WMS`)
 3. OK
 4. Project > Save (`Ctrl` + `S`)
+5. test that you get a valid WFS GetCapabilities response by entering the GetCapabilities request in your browser.
 
 ## Exclude Base Layer
 
