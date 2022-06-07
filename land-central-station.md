@@ -17,6 +17,10 @@ layout: central
 
 Seamless synchronisation of council property information to a **cloud data hub** - a centralised source of truth for property information for every Victorian council.
 
+</br>
+
+[!button variant="secondary" icon="checklist" size="2xl" text="Get involved"](#where-to-now)
+
 ---
 
 ## Vision
@@ -29,7 +33,7 @@ We have a plan to eliminate the friction between the councils and the Victorian 
 
 ## Background
 
-Victorian councils maintain the source of truth for much of the state's property information.
+Victoria's 79 councils maintain the source of truth for much of the state's property information.
 
 <img src="/static/img/undraw/undraw_small_town_re_7mcn.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
 
@@ -54,8 +58,8 @@ The exchange is made complicated because of the M1 format:
 * must add information that the council doesn't maintain internally
   * PFI numbers
   * various flags (outside property, new road, multi-assessment, etc)
-  * edit codes (telling DELWP how to update the data)
-* manual upload process to VES
+  * edit codes (instructing DELWP *how* to update their data)
+* manual submission process to VES
 * councils receive feedback once a year about how well they're doing
 
 The current system is difficult to automate and innovate upon.
@@ -69,13 +73,13 @@ The current system is difficult to automate and innovate upon.
 
 <img src="/static/img/undraw/undraw_process_re_gws7.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
-* councils spend significant time on compiling and supplying data to DELWP that would that would be better spent on serving the council's own needs
+* councils spend significant time on compiling and supplying data to DELWP that would be better spent on serving the council's own needs
 * as staff change or go on leave, there's a breakdown in the process, and it may be weeks or months between critical data updates
 
 #### For DELWP
 
 * data quality varies across the state according to how well resourced individual councils are
-* inherent data quality issues - data gridlocks where DELWP can't update Vicmap to reflect the council's version because there is no M1 edit code that can do the trick (eg, changing multi-parcel multi-assessments)
+* inherent data quality issues - data gridlocks where DELWP can't update Vicmap to reflect the council's version because there is no suitable M1 edit code (eg, changing multi-parcel multi-assessments)
 * it's currently impractical for DELWP to innovate within the M1 system because it would require changing the M1 format/edit codes and re-educating 79 councils
 
 ---
@@ -100,7 +104,7 @@ It is designed to:
 
 3. DELWP and other approved authorities can pull data from the combined resource on demand in the format of their choosing (M1, full dump, diffs, filtered extracts, audits, discrepancy reports, etc)
 
-With DELWP having complete access to the combined authoritative property information from the councils, they have all the information they need to update their map base.
+With DELWP having complete access to the combined authoritative property information from the councils, they have all the information they need to update Vicmap.
 
 ### Components
 
@@ -112,15 +116,17 @@ A secure cloud-hosted platform provides a centralised source of truth for proper
 
 * API for syncing data from councils
 * automated workflows for transforming, validating and combining datasets from multiple councils
-* interactive web map for performing any manual spatial adjustments such as rural addresses and custom property boundaries
 * dashboard to provide status of recent loads, match stats, data discrepancy reports, etc
-* API for DELWP to retrieve statewide council datasets
+* interactive web map for performing any manual spatial adjustments such as rural addresses and custom property boundaries
+* API for DELWP to access the council property dataset
 
 #### Local File Sync
 
 <img src="/static/img/undraw/undraw_going_up_re_86kg.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
-On the council side, a simple data sync tool is installed at each council and configured for their specific property system to generate and upload a nightly extract of property information. Alternatively, councils may choose to set up FME or another tool of their choice to push data to the cloud platform.
+On the council side, a simple data sync tool is installed at each council and configured for their property system to generate and upload a nightly extract of relevant property information.
+
+Alternatively, councils may choose to set up FME or another tool of their choice to push their data to the cloud platform.
 
 ---
 
@@ -137,7 +143,7 @@ On the council side, a simple data sync tool is installed at each council and co
 
 #### For DELWP
 
-* replacing 79 points of contact with a single source of truth for authoritative property data for the whole state
+* replacing 79 points of contact with a single source of truth for authoritative council property data for the whole state
 * reduce risk of councils falling behind in providing updates
 * potential to increase data update frequency
 * council data can be audited constantly, instead of once a year
@@ -151,7 +157,7 @@ On the council side, a simple data sync tool is installed at each council and co
 
 **Pozi** is uniquely placed to develop this platform.
 
-We've worked with every council in Victoria (through M1 and PIQA projects), building custom property data integrations into 79 different data schemas, across seven different property systems, on a range of database platforms.
+We've worked with every council in Victoria (through M1 and PIQA projects), building custom property data integrations into 79 different property data schemas, across seven different vendor systems, on a range of database and web platforms.
 
 Our Pozi Connect software is already installed at most Victorian councils and integrated into their property systems. The software can be adapted to automatically sync the council's data to the cloud platform.
 
@@ -171,7 +177,7 @@ No. But we will build it if we can get buy-in from councils and DELWP.
 
 ==- How does a cloud service help with M1s?
 
-The cloud clearinghouse service is where each council's authoritative property information is centralised. The service enables DELWP to obtain weekly or daily snapshots of the combined property data. When DELWP has on-demand access to the complete council property information for the whole state, it won't need to re-assemble this information from dozens of spreadsheets.
+The cloud clearinghouse service is where each council's property information is centralised. The service enables DELWP to obtain weekly or daily snapshots of the combined statewide property data. When DELWP has on-demand access to the complete council property information for the whole state, it won't need to re-assemble this information from dozens of spreadsheets.
 
 To update Vicmap, DELWP will compare what changed between snapshots of the council data and then apply those changes to Vicmap. DELWP can continue to use the M1 format internally for supplying the changes to the Vicmap data maintainer. Or DELWP might use the new snapshot approach to come up with a more efficient way to get changes into Vicmap. Either way, councils never need to see an M1 again.
 
@@ -252,7 +258,7 @@ Yes.
 
 Yes. Councils may choose to continue submitting M1s to VES using their current software and workflow.
 
-But ideally, in a scenario in which every council decides to switch, it becomes possible for DELWP to process its updates with a more efficient format than the M1.
+But ideally, in a scenario in which every council decides to switch, it becomes possible for DELWP to process all its updates with a more efficient format than the M1.
 
 ==- Can this platform be used for managing and sharing other council data?
 
@@ -260,7 +266,7 @@ Yes!
 
 For now, we're tackling council property data to eliminate the M1 burden.
 
-But in the future, it can be adapted to synchronise and consolidate any common council dataset. The platform can automate the delivery of statewide spatial and non-spatial data from councils to any government agency.
+But in the future, it can be adapted to synchronise and consolidate any data that councils are required to provide in a standard format. The platform can automate the delivery of statewide spatial and non-spatial data from councils to any government agency.
 
 ==- Is it really going to be called Land Central Station?
 

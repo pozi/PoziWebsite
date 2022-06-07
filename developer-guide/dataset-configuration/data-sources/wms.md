@@ -40,16 +40,22 @@ For WMS datasets, the dataset type can be either `TileWMS` or `ImageWMS`.
 
 ==- Layer with default style
 
-  ```json
-    "title": "Public Land",
-    "legend": "https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms?request=GetLegendGraphic&version=1.0.0&format=image/gif&layer=CROWNLAND_PLM25",
-    "config": {
-      "url": "https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms",
-      "params": {
-        "LAYERS": "CROWNLAND_PLM25",
-        "FORMAT": "image/GIF"
-      },
-  ```
+```json
+{
+  "title": "Public Land",
+  "legend": "https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms?request=GetLegendGraphic&version=1.0.0&format=image/gif&width=20&height=20&layer=CROWNLAND_PLM25",
+  "group": "Administrative",
+  "type": "TileWMS",
+  "config": {
+    "url": "https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms",
+    "params": {
+      "LAYERS": "CROWNLAND_PLM25",
+      "FORMAT": "image/GIF"
+    }
+  },
+  "opacity": 0.5
+}
+```
 
 ==-
 
@@ -117,3 +123,25 @@ Example configurations:
 
 * [Glen Eira Street Trees](https://github.com/pozi/PoziAppConfig/commit/c2f9bf6b3eb9998b27d85df266ebf48fc4ff80c5#diff-5a45ada4e9f3d1ed3db20f652cabe746c1767390718cf94228bc25a7576c9f7dL776-R776)
 * [Mitchell Contours](https://github.com/pozi/PoziAppConfig/commit/d95812fd4691e86e0fac3de91d0e3ad5fbb7683b#diff-216128510370c47687518818e49f4d63083c96ba0b3686031cea3cc7dc0d98feL3214-R3234)
+
+### CQL Filter
+
+==- Layer with CQL Filter
+
+```json
+{
+  "title": "Public Land - Council Committee of Management",
+  "group": "Administrative",
+  "type": "TileWMS",
+  "config": {
+    "url": "https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms",
+    "params": {
+      "LAYERS": "CROWNLAND_PLM25",
+      "FORMAT": "image/GIF",
+      "CQL_FILTER": "MNG_GROUP='COM Council'"
+    }
+  }
+}
+```
+
+==-

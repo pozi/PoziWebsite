@@ -1,7 +1,8 @@
 ---
-title: WFS (Web Feature Service)
-sidebar_label: WFS
+title: WFS
 ---
+
+# WFS (Web Feature Service)
 
 ## Sources
 
@@ -132,13 +133,13 @@ This service is soon to be retired. See 'DELWP DataVic (New)' below for details 
 
 #### Request GeoJSON
 
-```
+```json
 &outputFormat=json
 ```
 
 #### Force output to WGS84
 
-```
+```json
 &srsName=epsg:4326
 ```
 

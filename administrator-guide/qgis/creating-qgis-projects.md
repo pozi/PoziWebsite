@@ -10,7 +10,7 @@ order: 90
 
 If you have an existing QGIS project that is already configured for Pozi, you can fast-track the steps below.
 
-Save a copy of an existing project, remove all layers, and update WMS/WFS URL settings to include the name of the new project file.
+Save a copy of an existing project, remove all layers (except for any basemap that you're using as a reference layer), and update the `Advertised URL` settings to use the name of the new project file.
 
 !!!
 
@@ -42,7 +42,7 @@ Copy your URL to your clipboard or a blank text document for reference. This URL
 
 ## Enable WMS Service
 
-Pozi requires the project to be enabled for WMS.
+Pozi requires the project to be enabled for WMS, even if you intend for Pozi to use WFS for accessing the layers.
 
 1. Project > Properties > QGIS Server
 2. update WMS capabilities settings
@@ -60,7 +60,7 @@ Pozi requires the project to be enabled for WMS.
 
 ## Enable WFS Service
 
-WFS (Web Feature Service) provides users with the ability to directly interact with map features.
+WFS (Web Feature Service) provides users with the ability to directly interact with map features. When a WFS layer is loaded in Pozi, every feature from the source dataset is sent to the browser as *vector* layer that includes all geometries and attributes.
 
 Advantages:
 
@@ -70,11 +70,12 @@ Advantages:
 
 Disadvantages:
 
-* the browser can be easily overwhelmed when dealing with thousands of features or complex features with thousands of vertices
+* the browser can be easily overwhelmed when dealing with thousands of features or complex features with many vertices
+* only basic styling for vector features is supported in Pozi
 * labeling for WFS features is not well supported, especially for line features such as roads
-* restricting visibility to specific zoom ranges is not supported
+* restricting visibility to specific zoom ranges is not currently supported
 
-As a guideline, use WFS for layers with fewer than 5-10K features.
+As a guideline, use WFS for layers with fewer than 5-10K point features, and fewer again for line and polygon features depending on shape complexity.
 
 1. Project > Properties > QGIS Server
 2. update the WFS capabilities settings:
@@ -97,7 +98,9 @@ Your project is now ready to be registered in Pozi. Email support@pozi.com with 
 
 * name of layer group to appear in Pozi layer panel
 * order in which the layer group is to appear (relative to an existing layer group)
-* choose `WFS` or `WMS` (Note: `WMS/WFS` coming soon)
+* choose `WFS` or `WMS` (Note: combined `WMS/WFS` coming soon)
 * GetCapabilities URL
 
 Within 24 hours, the new layer group will be configured and available for users to view in Pozi.
+
+During this time, and any time afterwards, you may start [adding and configuring layers](/administrator-guide/qgis/managing-layers-in-qgis/) in your new project.
