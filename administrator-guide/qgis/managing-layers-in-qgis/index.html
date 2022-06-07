@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.707809275658">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.707958859668">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.3.0.707809275658" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.3.0.707958859668" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.707809275658" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.707958859668" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.707809275658" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.707958859668" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -328,7 +328,7 @@
 <p><a href="https://docs.qgis.org/latest/en/docs/user_manual/managing_data_source/opening_data.html#opening-data">QGIS Reference: Opening Data</a></p>
 <doc-panel id="a-note-about-layer-file-paths" collapsed>
     <template #title>A note about layer file paths</template>
-<p>When adding new file-based layers, we recommend to use the layer&#x27;s absolute file path (UNC) to ensure that the service under which the QGIS Server is running can recognise the path.</p>
+<p>When adding new file-based layers, use the layer&#x27;s absolute file path (UNC) to ensure that the service under which the QGIS Server is running can recognise the path.</p>
 <p>Often your own user account may have certain drives mapped for convenience, so you might be used to working with data using file paths that refer to a drive letter (eg, <code v-pre>S:\</code> or <code v-pre>V:\</code>). However, the domain user account that runs QGIS Server often won&#x27;t have these drives mapped.</p>
 <p>A UNC path is an absolute path that is recognised by all user accounts, regardless of what drives are mapped on startup. An example UNC path might look like this:</p>
 <ul>
@@ -361,7 +361,7 @@
         <span>Configuring Layers</span>
     </h2>
 </doc-anchor-target>
-<p>Some common layer configuration tasks that can be carried out in QGIS include:</p>
+<p>Some common layer configuration tasks you can do in QGIS include:</p>
 <ul>
 <li><a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#source-properties">change layer name</a></li>
 <li><a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#query-builder">filter data</a></li>
@@ -373,12 +373,20 @@
         <span>Styling Layers</span>
     </h2>
 </doc-anchor-target>
+<p>Using QGIS, you can control many visual aspects of your layer.</p>
 <p>Reference:</p>
 <ul>
 <li><a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#single-symbol-renderer">basic symbols</a></li>
 <li><a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#categorized-renderer">thematic styling</a></li>
 <li><a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#labels-properties">add labels</a></li>
 </ul>
+<doc-anchor-target id="supported-styles-in-pozi">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#supported-styles-in-pozi">#</doc-anchor-trigger>
+        <span>Supported Styles in Pozi</span>
+    </h3>
+</doc-anchor-target>
+<p>For any layers that are to be made accessible to Pozi as <em>vector</em> layers (ie, WFS), use only the supported styles specified below. Even if you only intend to serve layer via WMS, we recommend to keep the styling as simple as possible to make any future transition to WFS easier.</p>
 <p>Styling options supported by Pozi:</p>
 <ul>
 <li>simple points, lines, polygons symbolisers
@@ -397,16 +405,18 @@
 </ul>
 <p>Not currently supported:</p>
 <ul>
-<li><code v-pre>diamond</code> symbol</li>
 <li>SVG marker symbols</li>
+<li><code v-pre>diamond</code> symbol</li>
 <li>fill hatching</li>
 <li>label offsets</li>
 <li>rules based on a field name that contains spaces</li>
 </ul>
 <p>Tips:</p>
 <ul>
-<li>opacity must be defined in the colour - the layer&#x27;s global opacity slider has no effect</li>
+<li>any changes to opacity must be set in the style colour setting - the layer&#x27;s global opacity slider has no effect</li>
 <li>for polygon features to be selectable, the fill opacity must be greater than <code v-pre>0</code> - it can be as little as 1%</li>
+<li>increase symbol size from the default size in QGIS to enable easier interaction for users in the browser</li>
+<li>increase line thicknesses beyond the QGIS default to enable users to more easily select line features</li>
 </ul>
 <doc-anchor-target id="enable-layers-for-wfs">
     <h2>
@@ -414,7 +424,7 @@
         <span>Enable Layers for WFS</span>
     </h2>
 </doc-anchor-target>
-<p>As a guideline, enable WFS only for layers with fewer than 5-10K features.</p>
+<p>As a guideline, enable WFS only for layers with fewer than 5-10K features. See <a href="../creating-qgis-projects/#enable-wfs-service">here</a> for more information about pros and cons of using WFS.</p>
 <ol>
 <li>Project &gt; Properties &gt; QGIS Server</li>
 <li><code v-pre>WFS capabilities &gt; Published</code>: tick on for each layer to be published</li>
@@ -428,7 +438,7 @@
         <span>Table File Maintenance</span>
     </h2>
 </doc-anchor-target>
-<p>If you need to move, rename or delete a table, remove the layer from any QGIS project to which the layer is registered, then save the QGIS project.</p>
+<p>If you need to move, rename or delete a table, first remove the layer from any QGIS project to which the layer is registered, then save the QGIS project.</p>
 <p>You may then attempt to make any changes to the table file(s). If Windows prevents you from making any changes, stop the IIS service that is locking the files.</p>
 <p>Windows &gt; IIS &gt; (select server) &gt; Application Pools &gt; PoziQgisServer &gt; Stop</p>
 <p>You may also need to stop any other services that start with <code v-pre>PoziQgisServer</code>.</p>
@@ -439,11 +449,27 @@
         <span>Troubleshooting</span>
     </h2>
 </doc-anchor-target>
-<doc-panel id="layer-features-are-not-displayed-when-the-layer-is-turned-on" collapsed>
-    <template #title>Layer features are not displayed when the layer is turned on</template>
+<doc-panels>
+   <doc-panel id="layer-features-are-not-displayed-when-the-layer-is-turned-on" collapsed>
+       <template #title>Layer features are not displayed when the layer is turned on</template>
 <p>Pozi is only able to display features that have at least one valid/non-null attribute.</p>
 <p>If any records in your data contain no attributes, populate some values into one of the fields.</p>
-</doc-panel>
+   </doc-panel>
+   <doc-panel id="layers-are-not-displayed-with-the-styling-from-qgis" collapsed>
+       <template #title>Layers are not displayed with the styling from QGIS</template>
+<p>Pozi will display layers in a generic style if it cannot process the style that was configured in QGIS.</p>
+<p>Simplify the style in the QGIS project and try again. Replace hatch styles with semi-opaque fills. Replace custom point symbols with one of the standard symbols specified above.</p>
+   </doc-panel>
+   <doc-panel id="layers-are-slow-to-load" collapsed>
+       <template #title>Layers are slow to load</template>
+<p>Use QGIS to determine whether the layer also causes its project file to load slowly. Observer the progress bar at the bottom to see if any layers are taking more than a fraction of a second to load in QGIS. If it appears that a layer is taking longer, check the source data. If it&#x27;s from a database view, check that any join fields are properly indexed.</p>
+<p><figure class="content-center">
+    <img src="../img/qgis-project-loading-status.png" alt="" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+   </doc-panel>
+</doc-panels>
 
                                 
                                 <!-- Required only on API pages -->

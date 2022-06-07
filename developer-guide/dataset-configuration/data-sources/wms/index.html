@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.707809275658">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.707958859668">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.3.0.707809275658" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.3.0.707958859668" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.3.0.707809275658" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.3.0.707958859668" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.3.0.707809275658" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../../resources/js/prism.js?v=2.3.0.707809275658" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.3.0.707958859668" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../../resources/js/prism.js?v=2.3.0.707958859668" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -377,14 +377,20 @@
 <doc-panel id="layer-with-default-style" collapsed>
     <template #title>Layer with default style</template>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-json"><code v-pre class="language-json">  &quot;title&quot;: &quot;Public Land&quot;,
-  &quot;legend&quot;: &quot;https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms?request=GetLegendGraphic&amp;version=1.0.0&amp;format=image/gif&amp;layer=CROWNLAND_PLM25&quot;,
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;title&quot;: &quot;Public Land&quot;,
+  &quot;legend&quot;: &quot;https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms?request=GetLegendGraphic&amp;version=1.0.0&amp;format=image/gif&amp;width=20&amp;height=20&amp;layer=CROWNLAND_PLM25&quot;,
+  &quot;group&quot;: &quot;Administrative&quot;,
+  &quot;type&quot;: &quot;TileWMS&quot;,
   &quot;config&quot;: {
     &quot;url&quot;: &quot;https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms&quot;,
     &quot;params&quot;: {
       &quot;LAYERS&quot;: &quot;CROWNLAND_PLM25&quot;,
       &quot;FORMAT&quot;: &quot;image/GIF&quot;
-    },</code></pre>
+    }
+  },
+  &quot;opacity&quot;: 0.5
+}</code></pre>
 </doc-codeblock></div>
 </doc-panel>
 <doc-anchor-target id="external-sld">
@@ -455,6 +461,30 @@
 <li><a href="https://github.com/pozi/PoziAppConfig/commit/c2f9bf6b3eb9998b27d85df266ebf48fc4ff80c5#diff-5a45ada4e9f3d1ed3db20f652cabe746c1767390718cf94228bc25a7576c9f7dL776-R776">Glen Eira Street Trees</a></li>
 <li><a href="https://github.com/pozi/PoziAppConfig/commit/d95812fd4691e86e0fac3de91d0e3ad5fbb7683b#diff-216128510370c47687518818e49f4d63083c96ba0b3686031cea3cc7dc0d98feL3214-R3234">Mitchell Contours</a></li>
 </ul>
+<doc-anchor-target id="cql-filter">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#cql-filter">#</doc-anchor-trigger>
+        <span>CQL Filter</span>
+    </h3>
+</doc-anchor-target>
+<doc-panel id="layer-with-cql-filter" collapsed>
+    <template #title>Layer with CQL Filter</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;title&quot;: &quot;Public Land - Council Committee of Management&quot;,
+  &quot;group&quot;: &quot;Administrative&quot;,
+  &quot;type&quot;: &quot;TileWMS&quot;,
+  &quot;config&quot;: {
+    &quot;url&quot;: &quot;https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms&quot;,
+    &quot;params&quot;: {
+      &quot;LAYERS&quot;: &quot;CROWNLAND_PLM25&quot;,
+      &quot;FORMAT&quot;: &quot;image/GIF&quot;,
+      &quot;CQL_FILTER&quot;: &quot;MNG_GROUP='COM Council'&quot;
+    }
+  }
+}</code></pre>
+</doc-codeblock></div>
+</doc-panel>
 
                                 
                                 <!-- Required only on API pages -->
@@ -470,20 +500,20 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../../developer-guide/dataset-configuration/data-sources/wfs/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../../developer-guide/dataset-configuration/data-sources/wfs-catalogue/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">WFS</span>
+                                                <span class="block mt-1">WFS Catalogue</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../../developer-guide/dataset-configuration/linking-to-external-applications/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../../developer-guide/dataset-configuration/data-sources/wms-catalogue/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Linking to External Applications</span>
+                                                <span class="block mt-1">WMS Catalogue</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>

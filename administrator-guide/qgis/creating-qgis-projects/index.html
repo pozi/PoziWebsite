@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.707809275658">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.707958859668">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.3.0.707809275658" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.3.0.707958859668" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.707809275658" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.707958859668" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.707809275658" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.707958859668" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -330,7 +330,7 @@
         </div>
         <div class="pr-5 ml-3 w-full">
 <p>If you have an existing QGIS project that is already configured for Pozi, you can fast-track the steps below.</p>
-<p>Save a copy of an existing project, remove all layers, and update WMS/WFS URL settings to include the name of the new project file.</p>
+<p>Save a copy of an existing project, remove all layers (except for any basemap that you&#x27;re using as a reference layer), and update the <code v-pre>Advertised URL</code> settings to use the name of the new project file.</p>
         </div>
     </div>
 </div>
@@ -364,7 +364,7 @@
         <span>Enable WMS Service</span>
     </h2>
 </doc-anchor-target>
-<p>Pozi requires the project to be enabled for WMS.</p>
+<p>Pozi requires the project to be enabled for WMS, even if you intend for Pozi to use WFS for accessing the layers.</p>
 <ol>
 <li>Project &gt; Properties &gt; QGIS Server</li>
 <li>update WMS capabilities settings
@@ -392,7 +392,7 @@
         <span>Enable WFS Service</span>
     </h2>
 </doc-anchor-target>
-<p>WFS (Web Feature Service) provides users with the ability to directly interact with map features.</p>
+<p>WFS (Web Feature Service) provides users with the ability to directly interact with map features. When a WFS layer is loaded in Pozi, every feature from the source dataset is sent to the browser as <em>vector</em> layer that includes all geometries and attributes.</p>
 <p>Advantages:</p>
 <ul>
 <li>cursor changes when hovering over object</li>
@@ -401,11 +401,12 @@
 </ul>
 <p>Disadvantages:</p>
 <ul>
-<li>the browser can be easily overwhelmed when dealing with thousands of features or complex features with thousands of vertices</li>
+<li>the browser can be easily overwhelmed when dealing with thousands of features or complex features with many vertices</li>
+<li>only basic styling for vector features is supported in Pozi</li>
 <li>labeling for WFS features is not well supported, especially for line features such as roads</li>
-<li>restricting visibility to specific zoom ranges is not supported</li>
+<li>restricting visibility to specific zoom ranges is not currently supported</li>
 </ul>
-<p>As a guideline, use WFS for layers with fewer than 5-10K features.</p>
+<p>As a guideline, use WFS for layers with fewer than 5-10K point features, and fewer again for line and polygon features depending on shape complexity.</p>
 <ol>
 <li>Project &gt; Properties &gt; QGIS Server</li>
 <li>update the WFS capabilities settings:
@@ -436,10 +437,11 @@
 <ul>
 <li>name of layer group to appear in Pozi layer panel</li>
 <li>order in which the layer group is to appear (relative to an existing layer group)</li>
-<li>choose <code v-pre>WFS</code> or <code v-pre>WMS</code> (Note: <code v-pre>WMS/WFS</code> coming soon)</li>
+<li>choose <code v-pre>WFS</code> or <code v-pre>WMS</code> (Note: combined <code v-pre>WMS/WFS</code> coming soon)</li>
 <li>GetCapabilities URL</li>
 </ul>
 <p>Within 24 hours, the new layer group will be configured and available for users to view in Pozi.</p>
+<p>During this time, and any time afterwards, you may start <a href="../managing-layers-in-qgis/">adding and configuring layers</a> in your new project.</p>
 
                                 
                                 <!-- Required only on API pages -->
