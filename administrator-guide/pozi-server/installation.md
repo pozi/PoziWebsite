@@ -45,9 +45,13 @@ Provide these credentials to your Pozi support contact, along with any instructi
 
 Desktop shortcuts:
 
+* Pozi webpage shortcuts
+  * live site: https://sitename.pozi.com/
+  * staging/testing site: https://staging.pozi.com/master/#/site[sitename]/
+  * config page: https://staging.pozi.com/master/#/site[sitename]/config[true]/preview[true]/
+  * Pozi Server: https://local.pozi.com/
+  * Admin Guide: https://pozi.com/administrator-guide/
 * GIS data folder
-* Pozi site shortcut (from browser, go Options > More tools > Create shortcut)
-* Pozi site config shortcut
 * Pozi folder: `C:\Program Files (x86)\Pozi`
 * GDAL Shell:`C:\Program Files (x86)\Pozi\server\pipeline\.shell.cmd`
 * Pozi Server log: `C:\Program Files (x86)\Pozi\server\server.log`

@@ -5,6 +5,8 @@ description: Get in touch with Pozi!
 
 # Contact
 
+<img src="/static/img/undraw/undraw_collaborating_re_l43g.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
+
 #### Email
 
 General enquiries: info@pozi.com<br/>

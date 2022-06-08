@@ -84,13 +84,15 @@ Not currently supported:
 * fill hatching
 * label offsets
 * rules based on a field name that contains spaces
+* text expressions in labels (eg attempting to display multiple fields)
 
 Tips:
 
 * any changes to opacity must be set in the style colour setting - the layer's global opacity slider has no effect
 * for polygon features to be selectable, the fill opacity must be greater than `0` - it can be as little as 1%
-* increase symbol size from the default size in QGIS to enable easier interaction for users in the browser
-* increase line thicknesses beyond the QGIS default to enable users to more easily select line features
+* increase symbol size from the QGIS default to **3mm** or greater enable to easier interaction for users in the browser
+* increase line thicknesses from the QGIS default to **1mm** or greater to enable users to more easily select line features
+* increase label text size from the QGIS default to **10 points** or greater, and with a white **2mm** buffer for better legibility
 
 ## Enable Layers for WFS
 

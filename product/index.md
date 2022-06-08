@@ -35,11 +35,11 @@ Unlike traditional GIS software, Pozi is built from the ground up to integrate d
 
 ==- For your organisation
 
-* vendor neutral architecture enables council to use its existing spatial data library with no data migration migration
+* vendor neutral architecture enables your organisation to use its existing spatial data library with no data migration migration
 * direct integration with live government web services
 * mobile friendly design: staff can take Pozi with them to meetings, presentations and out in the field, whether they are using a laptop, tablet or smartphone
-* performance: users don’t experience frustration waiting for app to load—Pozi loads in the browser near instantly
-* embed any custom map directly in the organisation's webpages
+* performance: users don't experience frustration waiting for app to load--Pozi loads in the browser near instantly
+* embed customised maps directly in the organisation's webpages
 
 ==-
 
@@ -50,3 +50,11 @@ Unlike traditional GIS software, Pozi is built from the ground up to integrate d
 [!ref icon="briefcase"](/pricing/)
 [!ref icon="trophy"](/upgrade/)
 [!ref icon="paper-airplane"](/trial/)
+
+---
+
+## Guided Tour
+
+<big>Contact us for a personalised guided tour</big>
+
+[!button variant="info" icon="mention" size="2xl" corners="pill" text="Contact us >"](/contact/)

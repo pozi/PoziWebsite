@@ -72,7 +72,7 @@ Disadvantages:
 
 * the browser can be easily overwhelmed when dealing with thousands of features or complex features with many vertices
 * only basic styling for vector features is supported in Pozi
-* labeling for WFS features is not well supported, especially for line features such as roads
+* cannot use text expressions for labels
 * restricting visibility to specific zoom ranges is not currently supported
 
 As a guideline, use WFS for layers with fewer than 5-10K point features, and fewer again for line and polygon features depending on shape complexity.

@@ -31,7 +31,10 @@ When specifying the URL for QGS project files, any backslashes must be converted
   }
   ```
 
-  Note that the GetStyles URL for SLDs is `service=WMS` (not WFS).
+  Note the style URL has two critical differences from the data URL:
+  
+  * `service=WMS` (not WFS)
+  * `request=GetStyles` (not GetCapabilities)
 
 ==-
 
