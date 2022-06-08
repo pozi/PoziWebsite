@@ -1,35 +1,35 @@
 :root {
-  --pozi-color-hex: #70925C;
-  --pozi-color-rgb-light: 141, 168, 127; /* #8DA87F; */
-  --pozi-color-rgb-normal: 112, 146, 92; /* #70925C; */
-  --pozi-color-rgb-dark: 97, 127, 80; /* #617F50; *
+  --pozi-color-hex: #70925C !important;
+  --pozi-color-rgb-light: 141, 168, 127 !important; /* #8DA87F !important; */
+  --pozi-color-rgb-normal: 112, 146, 92 !important; /* #70925C !important; */
+  --pozi-color-rgb-dark: 97, 127, 80 !important; /* #617F50 !important; *
 
   /*
   Some colours from original Pozi site
 
-  #3C4E31; 60 78 49
+  #3C4E31 !important; 60 78 49
 
-  #617F50; 97 127 80
-  #6E8C5D; 110 140 93
-  #7D9A6D; 125 154 109
-  #85A176; 133 161 118
-  #8DA87F; 141 168 127
-  #AFC3A4; 175 195 164
+  #617F50 !important; 97 127 80
+  #6E8C5D !important; 110 140 93
+  #7D9A6D !important; 125 154 109
+  #85A176 !important; 133 161 118
+  #8DA87F !important; 141 168 127
+  #AFC3A4 !important; 175 195 164
   */
 
   /* Transparencies */
-  --pozi-alpha-100: 0.1;
-  --pozi-alpha-300: 0.3;
-  --pozi-alpha-400: 0.4;
-  --pozi-alpha-500: 0.5;
-  --pozi-alpha-700: 0.7;
-  --pozi-alpha-900: 0.9;
-  --pozi-alpha-1000: 1;
+  --pozi-alpha-100: 0.1 !important;
+  --pozi-alpha-300: 0.3 !important;
+  --pozi-alpha-400: 0.4 !important;
+  --pozi-alpha-500: 0.5 !important;
+  --pozi-alpha-700: 0.7 !important;
+  --pozi-alpha-900: 0.9 !important;
+  --pozi-alpha-1000: 1 !important;
 }
 
 /* Hide anchors */
 .header-anchor-trigger {
-  display: none;
+  display: none !important;
 }
 
 /***********/
@@ -37,23 +37,23 @@
 /***********/
 
 .bg-blue-100, .hover\:bg-blue-100:hover {
-	background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-100));
+	background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-100)) !important;
 }
 
 .bg-blue-200, .hover\:bg-blue-200:hover {
-	background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-200));
+	background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-200)) !important;
 }
 
 .bg-blue-300, .hover\:bg-blue-300:hover {
-	background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-300));
+	background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-300)) !important;
 }
 
 .bg-blue-500, .hover\:bg-blue-500:hover {
-	background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-900));
+	background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-900)) !important;
 }
 
 .bg-blue-700, .hover\:bg-blue-700:hover {
-	background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-1000));
+	background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-1000)) !important;
 }
 
 
@@ -61,23 +61,23 @@
 /* Text links and hovers - Light Theme */
 /***************************************/
 .text-blue-500,.md\:text-blue-500, .docs-markdown a:not(.no-link) {
-	color: rgba(var(--pozi-color-rgb-normal), var(--pozi-alpha-1000));
+	color: rgba(var(--pozi-color-rgb-normal), var(--pozi-alpha-1000)) !important;
 }
 
 .text-blue-600, .md\:text-blue-600 {
-	color: rgba(var(--pozi-color-rgb-normal), var(--pozi-alpha-1000));
+	color: rgba(var(--pozi-color-rgb-normal), var(--pozi-alpha-1000)) !important;
 }
 
 .hover\:text-blue-500:hover {
-	color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-900));
+	color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-900)) !important;
 }
 
 .hover\:text-blue-800:hover, .docs-markdown a:not(.no-link):hover {
-	color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-1000));
+	color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-1000)) !important;
 }
 
 .group:hover .group-hover\:text-blue-500 {
-	color: rgba(var(--pozi-color-rgb-normal), var(--pozi-alpha-1000));
+	color: rgba(var(--pozi-color-rgb-normal), var(--pozi-alpha-1000)) !important;
 }
 
 /**************************************/
@@ -85,23 +85,23 @@
 /**************************************/
 
 .dark .dark\:hover\:text-blue-200:hover {
-	color: rgba(var(--pozi-color-rgb-light), var(--pozi-alpha-900));
+	color: rgba(var(--pozi-color-rgb-light), var(--pozi-alpha-900)) !important;
 }
 
 .dark .dark\:text-blue-400 {
-	color: rgba(var(--pozi-color-rgb-light), var(--pozi-alpha-1000));
+	color: rgba(var(--pozi-color-rgb-light), var(--pozi-alpha-1000)) !important;
 }
 
 .dark .dark\:hover\:text-blue-400:hover {
-	color: rgba(var(--pozi-color-rgb-light), var(--pozi-alpha-1000));
+	color: rgba(var(--pozi-color-rgb-light), var(--pozi-alpha-1000)) !important;
 }
 
 .dark .docs-markdown a:not(.no-link) {
-	color: rgba(var(--pozi-color-rgb-light), var(--pozi-alpha-1000));
+	color: rgba(var(--pozi-color-rgb-light), var(--pozi-alpha-1000)) !important;
 }
 
 .dark .group:hover .dark\:group-hover\:text-blue-400 {
-	color: rgba(var(--pozi-color-rgb-light), var(--pozi-alpha-1000));
+	color: rgba(var(--pozi-color-rgb-light), var(--pozi-alpha-1000)) !important;
 }
 
 /**************************************/
@@ -109,13 +109,13 @@
 /**************************************/
 
 .dark .dark\:bg-blue-400 {
-  background-color: rgba(var(--pozi-color-rgb-light), var(--pozi-alpha-1000));
+  background-color: rgba(var(--pozi-color-rgb-light), var(--pozi-alpha-1000)) !important;
 }
 
 .dark .dark\:hover\:bg-dark-500:hover {
-  background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-1000));
+  background-color: rgba(var(--pozi-color-rgb-dark), var(--pozi-alpha-1000)) !important;
 }
 
 .dark .dark\:text-blue-400 {
-  border-color: rgba(var(--pozi-color-rgb-light), var(--pozi-alpha-1000));
+  border-color: rgba(var(--pozi-color-rgb-light), var(--pozi-alpha-1000)) !important;
 }
