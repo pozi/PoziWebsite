@@ -44,6 +44,8 @@ Pozi avoids the overhead of duplicating configuration across multiple modules. A
 
 *When you ask Pozi for help, we'll acknowledge your request within 24 hours, and begin resolving your issue within 48 hours.*
 
+Pozi clients benefit from being able to communicate directly with development and support staff during solution implementations and ongoing support.
+
 ### Purpose-Driven
 
 Pozi is solely focussed on building spatial technologies to drive business efficiencies and community engagement. To achieve that, we develop an open platform that integrates with other purpose-built technologies. We have no interest in creating closed ecosystems to capture all your business functions.
@@ -105,6 +107,10 @@ If you're stuck in another contract, talk to us. Not only can we get you up and 
 
 IntraMaps is one of many corporate software titles in the TechnologyOne suite. If your organisation needs a single point of contact for all its technology needs, then TechnologyOne's offering will suit your organisation.
 
+==- You're getting support from a third party provider
+
+If you have access to support from an independent provider and they continue to keep IntraMaps working to suit your organisation's needs, then IntraMaps can still be a viable option for you.
+
 ==- Users use it to launch legacy Windows applications
 
 While Pozi enables linking to Windows applications that support [URL protocol handlers](/tags/url-protocol-handler/), it's primarily designed for integrations with modern web applications through REST APIs and standard URLs.
@@ -115,13 +121,13 @@ If your users have specialised Windows applications that they launch from custom
 
 Pozi supports a variety of commercial, government and community basemaps, and allows custom styling for vector tile basemaps. It even allows you to use QGIS for creating a custom basemap for internal use.
 
-However if you need your public users to use your internally-maintained custom basemap, then IntraMaps may be the right option for you.
+However if you need your public users to use an internally-maintained custom basemap, then IntraMaps may be the right option for you.
 
 ==- You need to isolate layers on different maps
 
 Pozi allows permitted users to discover and turn on any combination of permitted map layers. Users can even create bookmarks for maps that contain the combination of layers they commonly use.
 
-If you need to prevent layers of one type being displayed on the same map as layers of another type, then you'll want to use modules in IntraMaps to isolate these layers.
+However if you need to prevent layers of one type being displayed on the same map as layers of another type, then you'll want to use modules in IntraMaps to isolate these layers from one another.
 
 ==- Users need to use circle or rectangle selection tools
 

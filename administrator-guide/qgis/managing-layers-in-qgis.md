@@ -62,7 +62,7 @@ Reference:
 
 ### Supported Styles in Pozi
 
-For any layers that are to be made accessible to Pozi as *vector* layers (ie, WFS), use only the supported styles specified below. Even if you only intend to serve layer via WMS, we recommend to keep the styling as simple as possible to make any future transition to WFS easier.
+For any layers that are to be made accessible to Pozi as *vector* layers (ie, WFS), use only the supported styles specified below. Even if you only intend to serve layer via WMS, keep the styling as simple as possible to make any future transition to WFS easier.
 
 Styling options supported by Pozi:
 
@@ -84,15 +84,15 @@ Not currently supported:
 * fill hatching
 * label offsets
 * rules based on a field name that contains spaces
-* text expressions in labels (eg attempting to display multiple fields)
+* text expressions in labels
 
 Tips:
 
 * any changes to opacity must be set in the style colour setting - the layer's global opacity slider has no effect
 * for polygon features to be selectable, the fill opacity must be greater than `0` - it can be as little as 1%
-* increase symbol size from the QGIS default to **3mm** or greater enable to easier interaction for users in the browser
+* increase symbol size from the QGIS default to **4mm** or greater enable to easier interaction for users in the browser
 * increase line thicknesses from the QGIS default to **1mm** or greater to enable users to more easily select line features
-* increase label text size from the QGIS default to **10 points** or greater, and with a white **2mm** buffer for better legibility
+* increase label text size from the QGIS default to **10 points** or greater and a white **2mm** buffer for better legibility
 
 ## Enable Layers for WFS
 
@@ -133,7 +133,7 @@ Simplify the style in the QGIS project and try again. Replace hatch styles with 
 
 ==- Layers are slow to load
 
-Use QGIS to determine whether the layer also causes its project file to load slowly. Observer the progress bar at the bottom to see if any layers are taking more than a fraction of a second to load in QGIS. If it appears that a layer is taking longer, check the source data. If it's from a database view, check that any join fields are properly indexed.
+Use QGIS to determine whether the layer also causes its project file to load slowly. Observe the progress bar at the bottom to see if any layers are taking more than a fraction of a second to load in QGIS. If it appears that a layer is taking longer, check the source data. If it's from a database view, check that any join fields are properly indexed.
 
 ![](img/qgis-project-loading-status.png)
 

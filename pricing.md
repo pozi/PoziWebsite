@@ -18,11 +18,11 @@ Pozi delivers powerful location-based functionality at a fraction of the cost of
 
 | :icon-megaphone: <h3>Public</h3> | :icon-tools: <h3>Pro</h3> | :icon-organization: <h3>Enterprise</h3> | :icon-rocket: <h3>Enterprise Cloud</h3> | { class="compact" }
 ---    | ---
-| <small>*Perfect for publishing your organisation's data to the public*</small> | <small>*When your users demand a higher level of interaction*</small> | <small>*A high functioning replacement for your inhouse GIS enquiry tool*</small> | <small>*Ultimate integration with your organisation’s cloud infrastructure*</small> |
+| *Perfect for publishing your organisation's data to the public* | *When your users demand a higher level of interaction* | *A high functioning replacement for your inhouse GIS enquiry tool* | *Ultimate integration with your organisation’s cloud infrastructure* |
 | <small>AUD</small><big>**$6K**</big><small>/year</small> | <small>AUD</small><big>**$9K**</big><small>/year</small> | <small>AUD</small><big>**$12K**</big><small>/year</small> | <small>AUD</small><big>**$15K**</big><small>/year</small> |
 | - | <small>All the features of Pozi Public, plus:</small> | <small>All the features of Pozi Pro, plus:</small> | <small>All the features of Pozi Enterprise, plus:</small> |
 | ✔️ Live, authoritative data | ✔️ Community consultation module | ✔️ Property system integration | 🚀 Azure Active Directory integration |
-| ✔️ Customer support | ✔️ Advanced search | ✔️ Asset system integration |  |
+| ✔️ Customer support | ✔️ Advanced search | ✔️ Asset system integration | 📃 Enterprise Cloud Service Level Agreement |
 | ✔️ Responsive design | ✔️ Nearby places | ✔️ GIS integration |  |
 | ✔️ Intelligent address search | ✔️ Multiple imagery layers | ✔️ Table view |  |
 | ✔️ GPS location | ✔️ Map widget | ✔️ Public data publisher |  |
@@ -56,6 +56,8 @@ Use Pozi to visualise your 3D imagery. Toggle between 2D and 3D viewing modes. C
 <br clear="all" />
 <br/>
 
+---
+
 ### Community Consultation
 
 <img src="/static/img/tweet-gallery/horsham_corellas_wrap_up.png" alt="" style="float:right;width:400px;margin:0px 40px;">
@@ -67,13 +69,45 @@ The Pozi Pro, Enterprise and Enterprise Cloud offerings include up to two concur
 <br clear="all" />
 <br/>
 
+---
+
 ### Pozi Connect for M1s
 
-Pozi Connect generates property and address change reports for Victorian municipalities. We customise Pozi Connect to integrate with your council's corporate property system, then install it and provide training. The first twelve months support is also included.
+<img src="/static/img/screenshots/pozi-connect-maroondah-m1.png" alt="" style="float:right;width:350px;margin:0px 40px;">
+
+Pozi Connect generates property and address change reports (M1s) for Victorian municipalities. We customise Pozi Connect to integrate with your council's corporate property system, install it and provide training. The first twelve months support are included.
 
 <small>AUD</small>$6K
 
-[!ref](/pozi-connect/m1s/)
+[!ref text="Learn more"](/pozi-connect/m1s/)
+
+<br clear="all" />
+<br/>
+
+---
+
+### Source Code Access
+
+For *Enterprise* and *Enterprise Cloud* subscribers, we offer access to our source code.
+
+==- Terms of Use
+
+##### Authorised Usage
+
+* create backup copies of the source code
+* review code to check for security vulnerabilities
+* access to contribute code and documentation
+* use the code to recreate Pozi on organisation's internal infrastructure for the exclusive use of the organisation ONLY IF Pozi is no longer offered as a service
+
+##### Prohibited Usage
+
+* share the code outside of the organisation
+* share the code with anyone who has not agreed to these terms of use
+* use the code to create a competing service
+
+==-
+
+<small>AUD</small>$1800/year
 
 ---
 

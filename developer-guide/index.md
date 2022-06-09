@@ -4,9 +4,11 @@ order: 30
 icon: terminal
 ---
 
-This guide is intended for use by Pozi developers, support staff, technical partners, or anyone who wants to see what goes on behind the scenes!
+Pozi enables software vendors, systems integrators and independent support providers to bring the power of location-based decision making to business solutions for their clients.
 
-## Prerequisites
+The **Developer Guide** is intended for use by our internal developers and support staff, as well as technical partners.
+
+## Setup
 
 ### Accounts
 
@@ -18,7 +20,7 @@ This guide is intended for use by Pozi developers, support staff, technical part
 * LastPass
 * Pozi Cloud Server
 
-### GitHub Repositories
+### Code Repositories
 
 * [PoziApp](https://github.com/pozi/PoziApp/settings/access)
 * [PoziAppConfig](https://github.com/pozi/PoziAppConfig/settings/access)
@@ -38,6 +40,6 @@ This guide is intended for use by Pozi developers, support staff, technical part
 
 ---
 
-Want to learn more? Do you want to work with us?
+Want to learn more? Interested in partnering with us? Do you want to work with us?
 
-[!button icon="mention" size="xl" text="Contact us today!"](/contact/)
+[!button icon="mention" size="xl" text="Contact us"](/contact/)

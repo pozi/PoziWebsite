@@ -1,22 +1,25 @@
 ---
-title: Annotate
+description: Annotation/drawing/mock-up tool for Pozi online GIS. Mark up your web map and share with anyone.
 icon: pencil
 order: -100
 ---
 
-:::note Under Construction
+# Annotate
 
-*This page is a work in progress. Please refer to our existing Help Guide for information about this topic.*
+Pozi's annotation tool enables users to add any content to the map and download or publicly share the results.
 
-[Existing Help Guide](https://help.pozi.com/search?query=annotate)
+![](/static/img/screenshots/frankston-event-site-plan-mockup.jpg)
 
-:::
+Its uses include, but are not limited to:
 
-<br/>
-<img src="/static/img/screenshots/frankston-event-site-plan-mockup.jpg">
-<br/>
+* event planning
+* site plan for planning applications
+* road closure notifications
+* service planning and navigation
 
----
+Pozi's ease-of-use makes it an easy choice for rapid map mark-up and sharing.
+
+## How to use
 
 Toolbar > Tools > Draw
 
