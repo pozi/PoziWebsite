@@ -125,6 +125,32 @@ Instead of configuring your DNS for `local.pozi.com`, you will use something lik
 
 Note: due to a current limitation in Pozi Server, it will still expect any static files (images, style files, pre-rendered GeoJSON, etc) to be in `userdata\local` regardless of whatever subdomain is being used for domain forwarding.
 
+## Resource Check
+
+The Pozi web app will be configured to look for a local file, known as a 'resource check', in order to know whether it has access to local data sources on your network. When Pozi detects that it is local, it knows to display a privacy notification and send subsequent `GetCapabilities` requests to know exactly what resources it has access to.
+
+When Pozi doesn't get a valid response from a resource check, it assumes the user is public. Pozi will list only the layers it knows are public in the Layer Panel, and doesn't make any further attempt to contact any local resources.
+
+### Configuration
+
+Create a text file, and save it to `C:\Program Files (x86)\Pozi\userdata\local\resourcecheck\[yoursitename].json`
+
+Example:
+
+```json centralgoldfields.json
+{"You are successfully connected to Pozi Server on cgs-smc01 on Central Goldfield's internal network"}
+```
+
+!!!
+
+Note that the resource check must reside in the `userdata\local\` folder, even if the endpoint for the data is not in `local`.
+
+!!!
+
+The Pozi app now be configured to request a resource check via a URL, for example:
+
+https://cgs-smc01.pozi.com/resourcecheck/centralgoldfields.json
+
 ## Scheduled Restarts
 
 As a Windows server, Pozi Server is designed to be always on. However sometimes Windows services can fail and cause the sync and other functions to become unresponsive.

@@ -21,7 +21,9 @@ Pozi's ease-of-use makes it an easy choice for rapid map mark-up and sharing.
 
 ## How to use
 
-Toolbar > Tools > Draw
+Use drawing tools to mark up the map:
+
+`Toolbar` > `Tools` > `Draw`
 
 Select from any of the following drawing tools:
 
@@ -29,3 +31,14 @@ Select from any of the following drawing tools:
 * Add point
 * Add line
 * Add shape
+
+Mark up the map:
+
+* pick different colours for different features
+* make adjustments such as moving or reshaping features
+
+Share the map:
+
+* generate a custom link to share the fully interactive custom map, or
+* download a PDF, or
+* download a GIS file for use in desktop GIS software

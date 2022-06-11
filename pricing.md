@@ -35,6 +35,18 @@ Pozi delivers powerful location-based functionality at a fraction of the cost of
 
 <br/>
 
+A Pozi subscription includes:
+
+* customised web map application
+* high performance hosting
+* unlimited users
+* custom subdomain
+* embeddable maps
+* custom branding
+* updates and bug fixes
+* configuration updates
+* helpdesk support
+
 [!ref icon="paper-airplane" text="Start your 60 day trial"](/trial/)
 
 [!ref icon="trophy" text="Already use Pozi? Upgrade to Pozi Enterprise"](/upgrade/)
@@ -82,6 +94,17 @@ Pozi Connect generates property and address change reports (M1s) for Victorian m
 [!ref text="Learn more"](/pozi-connect/m1s/)
 
 <br clear="all" />
+
+---
+
+### Custom Development
+
+Our development services can be engaged for any custom development required to further enhance any aspect of Pozi functionality to suit your organisation's needs.
+
+We also offer clients the opportunity to sponsor development of new features, giving them direct input into the specification to ensure it meets their exact requirements.
+
+<small>AUD</small>$1500/day
+
 <br/>
 
 ---
@@ -92,14 +115,20 @@ For *Enterprise* and *Enterprise Cloud* subscribers, we offer access to our sour
 
 ==- Terms of Use
 
+</br>
+
 ##### Authorised Usage
+
+</br>
 
 * create backup copies of the source code
 * review code to check for security vulnerabilities
-* access to contribute code and documentation
+* contribute to code by submitting pull requests for new features, bugfixes and documentation updates
 * use the code to recreate Pozi on organisation's internal infrastructure for the exclusive use of the organisation ONLY IF Pozi is no longer offered as a service
 
 ##### Prohibited Usage
+
+</br>
 
 * share the code outside of the organisation
 * share the code with anyone who has not agreed to these terms of use

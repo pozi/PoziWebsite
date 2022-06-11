@@ -60,7 +60,7 @@ Reference:
 * [thematic styling](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#categorized-renderer)
 * [add labels](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#labels-properties)
 
-### Supported Styles in Pozi
+### Supported Styles for Vector Layers
 
 For any layers that are to be made accessible to Pozi as *vector* layers (ie, WFS), use only the supported styles specified below. Even if you only intend to serve layer via WMS, keep the styling as simple as possible to make any future transition to WFS easier.
 
@@ -86,7 +86,7 @@ Not currently supported:
 * rules based on a field name that contains spaces
 * text expressions in labels
 
-Tips:
+Vector Style Tips:
 
 * any changes to opacity must be set in the style colour setting - the layer's global opacity slider has no effect
 * for polygon features to be selectable, the fill opacity must be greater than `0` - it can be as little as 1%

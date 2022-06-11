@@ -119,7 +119,7 @@ If your users have specialised Windows applications that they launch from custom
 
 ==- You need to publish your own custom base map to external users
 
-Pozi supports a variety of commercial, government and community basemaps, and allows custom styling for vector tile basemaps. It even allows you to use QGIS for creating a custom basemap for internal use.
+Pozi supports a variety of commercial, government and community basemaps, and allows custom styling for vector tile basemaps.
 
 However if you need your public users to use an internally-maintained custom basemap, then IntraMaps may be the right option for you.
 
