@@ -20,45 +20,47 @@ Create new project from scratch:
 2. Project > Save > specify name and path of new project file (`.qgs`)
 3. note the exact file path of project file (needed for subsequent configuration below)
 
-## Construct `GetCapabilities` URL
+## Construct 'Advertised URL'
 
-Any standards-based GIS server (including QGIS Server) can generate a document that includes details of all the map layers it has. The document is called a `GetCapabilities`, and it is generated as XML.
-
-When Pozi launches in the user's browser, it sends a `GetCapabilities` request to QGIS Server. Pozi uses the response to determine what layers are available.
-
-As part of the project configuration, you must construct a URL for the `GetCapabilities` request and configure this URL within the QGIS project file. Essentially, the project file needs a reference to itself.
+Construct the URL required for the project to 'advertise' what layers will be available from this project file. Essentially, the project file needs a reference to itself in a URL format.
 
 Combine the details below:
 
-1. server URL (default server URL is`https://local.pozi.com/`, but check your local setup for any custom endpoint)
-2. service and WMS/WFS parameters (eg `iis/qgisserver?service=WMS&request=GetCapabilities`)
-3. QGIS project file path (eg `&MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs`)
+1. server URL (default server URL is `https://local.pozi.com/`, but check your local setup for any custom endpoint)
+2. service endpoint (eg `iis/qgisserver?`)
+3. QGIS project file path (eg `MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs`)
 
-For example:
+Example Advertised URL:
 
-https://local.pozi.com/iis/qgisserver?service=WMS&request=GetCapabilities&MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs
+https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs
 
-Copy your URL to your clipboard or a blank text document for reference. This URL will be used in subsequent configuration below. Note that the URL will not yet return a valid response until the configuration is complete.
 
-## Enable WMS Service
+Copy your URL to your clipboard or a blank text document for reference. This URL will be used in subsequent configuration below.
 
-Pozi requires the project to be enabled for WMS, even if you intend for Pozi to use WFS for accessing the layers.
+## Enable WMS, WMTS and WFS Services
+
+!!!
+Pozi requires the project to be enabled for WMS, even if you intend for Pozi to use only WFS for accessing the layers.
+!!!
 
 1. Project > Properties > QGIS Server
 2. update WMS capabilities settings
+   * `Exclude layers` (tick) > add > pick any background layers you don't need to see in Pozi
    * `Add geometry to feature response`: tick on
-   * `Advertised URL`: enter WMS GetCapabilities URL
+   * `Advertised URL`: enter Advertised URL
 3. update WMTS capabilities settings
    * `Published layers > Project > Published`: tick on
-   * `Advertised URL`: enter WMS GetCapabilities URL
+   * `Advertised URL`: enter Advertised URL
+4. update the WFS capabilities settings:
+   * `Advertised URL`: enter Advertised URL
+5. OK
 
-![QGIS Project Properties WMS Configuration](./img/qgis-project-properties-wms-configuration.png){style="width:600px"}
+![QGIS Project Properties WMS Configuration](./img/qgis-project-properties-configuration.png){style="width:600px"}
 
-4. OK
-5. Project > Save  (`Ctrl` + `S`)
-6. test that you get a valid WMS GetCapabilities response by entering the GetCapabilities request in your browser. 
+6. OK
+7. Project > Save  (`Ctrl` + `S`)
 
-## Enable WFS Service
+## Choose WMS or WFS
 
 WFS (Web Feature Service) provides users with the ability to directly interact with map features. When a WFS layer is loaded in Pozi, every feature from the source dataset is sent to the browser as *vector* layer that includes all geometries and attributes.
 
@@ -71,35 +73,38 @@ Advantages:
 Disadvantages:
 
 * the browser can be easily overwhelmed when dealing with thousands of features or complex features with many vertices
-* only basic styling for vector features is supported in Pozi
+* not all QGIS styles are supported in Pozi for vector features
 * cannot use text expressions for labels
 * restricting visibility to specific zoom ranges is not currently supported
 
-As a guideline, use WFS for layers with fewer than 5-10K point features, and fewer again for line and polygon features depending on shape complexity.
-
-1. Project > Properties > QGIS Server
-2. update the WFS capabilities settings:
-   * `Advertised URL`: enter WFS GetCapabilities (similar to WMS request above, but with `WFS` substituted in place of `WMS`)
-3. OK
-4. Project > Save (`Ctrl` + `S`)
-5. test that you get a valid WFS GetCapabilities response by entering the GetCapabilities request in your browser.
-
-## Exclude Base Layer
-
-If your project uses a base layer for background context, you'll want to exclude it from appearing in the layer panel in Pozi.
-
-QGIS > Project > Properties > QGIS Server > WMS Capabilities > Exclude layers (tick) > add > pick layer(s) to exclude > OK
-
-QGIS > Project > Save
+As a guideline, use WFS for layers with fewer than 5-10K point features, and even fewer for line and polygon features depending on shape complexity.
 
 ## Register Project
 
-Your project is now ready to be registered in Pozi. Email support@pozi.com with these details:
+### Test `GetCapabilities` URL
+
+Construct a `GetCapabilities` URL by combining the following:
+
+1. Advertised URL from above (eg `https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs`)
+2. preferred service, either:
+   * WMS: `&service=WMS`
+   * WFS: `&service=WFS`
+3. GetCapabilities request: `&request=GetCapabilities`
+
+Example WMS `GetCapabilities` URL:
+
+https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs&service=WMS&request=GetCapabilities
+
+Test this URL in your browser and check that you get a valid response that lists the available layers.
+
+### Submit Helpdesk Ticket
+
+Email support@pozi.com with these details:
 
 * name of layer group to appear in Pozi layer panel
 * order in which the layer group is to appear (relative to an existing layer group)
 * choose `WFS` or `WMS` (Note: combined `WMS/WFS` coming soon)
-* GetCapabilities URL
+* WFS or WMS `GetCapabilities` URL
 
 Within 24 hours, the new layer group will be configured and available for users to view in Pozi.
 
