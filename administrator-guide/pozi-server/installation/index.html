@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.708137833237">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.708223162377">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -35,12 +35,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.3.0.708137833237" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.3.0.708223162377" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.708137833237" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.708223162377" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.708137833237" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.3.0.708137833237" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.708223162377" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.3.0.708223162377" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -461,6 +461,45 @@
 <p>If your organisation wants to use its own SSL certificate, place the <code v-pre>certificate.cer</code> and <code v-pre>certificate.key</code> files in the root Pozi folder, and restart the PoziConnectServer service.</p>
 <p>Instead of configuring your DNS for <code v-pre>local.pozi.com</code>, you will use something like <code v-pre>poziserver.[yourorganisation].com</code>. Accordingly the subfolder you create inside the <code v-pre>userdata</code> folder (see Prepare Userdata Folder above) will need to correspond with the subdomain (eg, <code v-pre>userdata\poziserver</code> instead of <code v-pre>userdata\local</code>).</p>
 <p>Note: due to a current limitation in Pozi Server, it will still expect any static files (images, style files, pre-rendered GeoJSON, etc) to be in <code v-pre>userdata\local</code> regardless of whatever subdomain is being used for domain forwarding.</p>
+<doc-anchor-target id="resource-check">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#resource-check">#</doc-anchor-trigger>
+        <span>Resource Check</span>
+    </h2>
+</doc-anchor-target>
+<p>The Pozi web app will be configured to look for a local file, known as a &#x27;resource check&#x27;, in order to know whether it has access to local data sources on your network. When Pozi detects that it is local, it knows to display a privacy notification and send subsequent <code v-pre>GetCapabilities</code> requests to know exactly what resources it has access to.</p>
+<p>When Pozi doesn&#x27;t get a valid response from a resource check, it assumes the user is public. Pozi will list only the layers it knows are public in the Layer Panel, and doesn&#x27;t make any further attempt to contact any local resources.</p>
+<doc-anchor-target id="configuration">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#configuration">#</doc-anchor-trigger>
+        <span>Configuration</span>
+    </h3>
+</doc-anchor-target>
+<p>Create a text file, and save it to <code v-pre>C:\Program Files (x86)\Pozi\userdata\local\resourcecheck\[yoursitename].json</code></p>
+<p>Example:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">centralgoldfields.json</div>
+<pre class="language-json"><code v-pre class="language-json">{&quot;You are successfully connected to Pozi Server on cgs-smc01 on Central Goldfield's internal network&quot;}</code></pre>
+</doc-codeblock></div>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>Note that the resource check must reside in the <code v-pre>userdata\local\</code> folder, even if the endpoint for the data is not in <code v-pre>local</code>.</p>
+        </div>
+    </div>
+</div>
+<p>The Pozi app now be configured to request a resource check via a URL, for example:</p>
+<p><a href="https://cgs-smc01.pozi.com/resourcecheck/centralgoldfields.json">https://cgs-smc01.pozi.com/resourcecheck/centralgoldfields.json</a></p>
 <doc-anchor-target id="scheduled-restarts">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#scheduled-restarts">#</doc-anchor-trigger>

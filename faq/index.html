@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.708137833237">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.708223162377">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -14,7 +14,7 @@
     <!-- Primary Meta Tags -->
     <title>Frequently Asked Questions | Pozi Web GIS | Online Map</title>
     <meta name="title" content="Frequently Asked Questions | Pozi Web GIS | Online Map">
-    <meta name="description" content="Pozi's hybrid cloud architecture enables organisations to control access via network permissions." />
+    <meta name="description" content="Got a question about Pozi? Here are some FAQs." />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://pozi.com/faq/" />
@@ -23,21 +23,21 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pozi.com/faq/">
     <meta property="og:title" content="Frequently Asked Questions | Pozi Web GIS | Online Map">
-    <meta property="og:description" content="Pozi's hybrid cloud architecture enables organisations to control access via network permissions.">
+    <meta property="og:description" content="Got a question about Pozi? Here are some FAQs.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pozi.com/faq/">
     <meta property="twitter:title" content="Frequently Asked Questions | Pozi Web GIS | Online Map">
-    <meta property="twitter:description" content="Pozi's hybrid cloud architecture enables organisations to control access via network permissions.">
+    <meta property="twitter:description" content="Got a question about Pozi? Here are some FAQs.">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=2.3.0.708137833237" rel="stylesheet" />
+    <link href="../resources/css/retype.css?v=2.3.0.708223162377" rel="stylesheet" />
 
-    <script type="text/javascript" src="../resources/js/config.js?v=2.3.0.708137833237" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../resources/js/config.js?v=2.3.0.708223162377" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.3.0.708137833237" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.3.0.708223162377" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -307,12 +307,60 @@
         <span>Frequently Asked Questions</span>
     </h1>
 </doc-anchor-target>
-<doc-panel id="can-pozi-enterprise-provide-access-to-external-parties-for-internal-datasets" collapsed>
-    <template #title>Can Pozi Enterprise provide access to external parties for internal datasets?</template>
+<doc-anchor-target id="user-experience">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#user-experience">#</doc-anchor-trigger>
+        <span>User Experience</span>
+    </h2>
+</doc-anchor-target>
+<doc-panel id="does-pozi-have-a-mobile-app" collapsed>
+    <template #title>Does Pozi have a mobile app?</template>
+<p>Pozi is a web application that runs in any desktop or mobile browser.</p>
+<p>Pozi&#x27;s responsive design enables it to work on any sized device. On large screens, it displays in landscape mode. On smaller screens such as phones, it displays in portrait mode, with the menu displaying under the map.</p>
+<p>Pozi uses Progressive Web App (PWA) technology, enabling users to add Pozi to the home screen of their device, launch it and switch between it and other apps as if it were a native application.</p>
+</doc-panel>
+<doc-anchor-target id="configuration">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#configuration">#</doc-anchor-trigger>
+        <span>Configuration</span>
+    </h2>
+</doc-anchor-target>
+<doc-panels>
+   <doc-panel id="how-are-pozi-sites-configured" collapsed>
+       <template #title>How are Pozi sites configured?</template>
+<p>We configure Pozi to suit the specialised needs of our clients. Requests for configuration changes can be lodged with our help desk. All configuration updates are included in the subscription.</p>
+<p>Pozi <em>Enterprise</em> and <em>Enterprise Cloud</em> clients also have the ability to manage all their internal data connections via QGIS.</p>
+   </doc-panel>
+   <doc-panel id="can-pozi-enterprise-provide-access-to-external-parties-for-internal-datasets" collapsed>
+       <template #title>Can Pozi Enterprise provide access to external parties for internal datasets?</template>
 <p>Pozi&#x27;s hybrid cloud architecture enables organisations to control access via network permissions. Any user who is granted access to the organisation&#x27;s network or VPN will obtain access to the internal data sources in Pozi.</p>
 <p>Users who are not on the network will have no way of gaining access to internal datasets.</p>
 <p>We are exploring solutions for enabling this kind of access for external parties in the future. Stay posted, or <a href="../contact/">contact us</a> for more details.</p>
-</doc-panel>
+   </doc-panel>
+</doc-panels>
+<hr />
+<doc-anchor-target id="platform">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#platform">#</doc-anchor-trigger>
+        <span>Platform</span>
+    </h2>
+</doc-anchor-target>
+<doc-panels>
+   <doc-panel id="how-does-the-pozi-platform-deal-with-scalability-and-security" collapsed>
+       <template #title>How does the Pozi platform deal with scalability and security?</template>
+<p>Pozi&#x27;s cloud architecture ensures fast performance, maximum stability, and unlimited scalability.</p>
+<p>Pozi is fully hosted and managed on Amazon Web Services (AWS), served from an Australian-based data centre. The application is deployed to AWS Simple Storage Service (S3) and served by AWS CloudFront.</p>
+<p>Pozi is fully compliant with https to ensure user privacy and compatibility with all major browsers.
+Pozi App is encrypted and authenticated using TLS 1.2/1.3, X25519, and AES_128_GCM.</p>
+<p>Pozi is a serverless web application, and as such is not a target for cyber attacks that attempt to exploit server vulnerabilities. AWS Cloudfront provides protection from DDOS attacks.</p>
+<p>We monitor the uptime of the Pozi application using Pingdom. Pozi maintained a 99.999% uptime over the last three years.</p>
+   </doc-panel>
+   <doc-panel id="how-does-pozi-deal-with-updates-and-bug-fixes" collapsed>
+       <template #title>How does Pozi deal with updates and bug fixes?</template>
+<p>We embrace continuous development and deployment processes to ensure our clients have access to the latest version. Updated releases which include bug fixes, enhancements and new features are deployed several times per month. Any critical fixes can be deployed in a matter of hours.</p>
+   </doc-panel>
+</doc-panels>
+<hr />
 <p>
 <div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
     <div class="flex items-center text-blue-500 dark:text-blue-400">
