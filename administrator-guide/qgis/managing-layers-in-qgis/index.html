@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.708223162377">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.708333241430">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.3.0.708223162377" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.3.0.708333241430" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.708223162377" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.708333241430" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.708223162377" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.708333241430" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -407,6 +407,7 @@
 <ul>
 <li>SVG marker symbols</li>
 <li><code v-pre>diamond</code> symbol</li>
+<li>symbol rotation</li>
 <li>fill hatching</li>
 <li>label offsets</li>
 <li>rules based on a field name that contains spaces</li>
@@ -414,8 +415,12 @@
 </ul>
 <p>Vector Style Tips:</p>
 <ul>
+<li>opacity
+<ul>
 <li>any changes to opacity must be set in the style colour setting - the layer&#x27;s global opacity slider has no effect</li>
 <li>for polygon features to be selectable, the fill opacity must be greater than <code v-pre>0</code> - it can be as little as 1%</li>
+</ul>
+</li>
 <li>increase symbol size from the QGIS default to <strong>4mm</strong> or greater enable to easier interaction for users in the browser</li>
 <li>increase line thicknesses from the QGIS default to <strong>1mm</strong> or greater to enable users to more easily select line features</li>
 <li>increase label text size from the QGIS default to <strong>10 points</strong> or greater and a white <strong>2mm</strong> buffer for better legibility</li>
@@ -454,8 +459,12 @@
 <doc-panels>
    <doc-panel id="layer-features-are-not-displayed-when-the-layer-is-turned-on" collapsed>
        <template #title>Layer features are not displayed when the layer is turned on</template>
-<p>Pozi is only able to display features that have at least one valid/non-null attribute.</p>
-<p>If any records in your data contain no attributes, populate some values into one of the fields.</p>
+<p>Check the following:</p>
+<ul>
+<li>If your project is configured as a WFS source, check that the layer is enabled for WFS. Go to Project &gt; Properties &gt; QGIS Server &gt; WFS Capabilities &gt; your layer &gt; Published (tick on)</li>
+<li>Pozi is only able to display features that have at least one valid/non-null attribute. If any records in your data contain no attributes, populate some values into one of the fields.</li>
+<li>Ensure the layer has a coordinate reference system set. Go to Layer Properties &gt; Source &gt; Assigned CRS, and pick a projection</li>
+</ul>
    </doc-panel>
    <doc-panel id="layers-are-not-displayed-with-the-styling-from-qgis" collapsed>
        <template #title>Layers are not displayed with the styling from QGIS</template>

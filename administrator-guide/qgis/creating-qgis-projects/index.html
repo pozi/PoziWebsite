@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.708223162377">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.708333241430">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -24,22 +24,22 @@
     <meta property="og:url" content="https://pozi.com/administrator-guide/qgis/creating-qgis-projects/">
     <meta property="og:title" content="Creating QGIS Projects | Pozi Web GIS | Online Map">
     <meta property="og:description" content="If you have an existing QGIS project that is already configured for Pozi, you can fast-track the steps below.">
-    <meta property="og:image" content="https://pozi.com/administrator-guide/qgis/img/qgis-project-properties-configuration.png">
+    <meta property="og:image" content="https://pozi.com/administrator-guide/qgis/img/qgis-add-wmts-layer.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pozi.com/administrator-guide/qgis/creating-qgis-projects/">
     <meta property="twitter:title" content="Creating QGIS Projects | Pozi Web GIS | Online Map">
     <meta property="twitter:description" content="If you have an existing QGIS project that is already configured for Pozi, you can fast-track the steps below.">
-    <meta property="twitter:image" content="https://pozi.com/administrator-guide/qgis/img/qgis-project-properties-configuration.png">
+    <meta property="twitter:image" content="https://pozi.com/administrator-guide/qgis/img/qgis-add-wmts-layer.png">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.3.0.708223162377" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.3.0.708333241430" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.708223162377" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.708333241430" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.708223162377" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.708333241430" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -340,6 +340,22 @@
 <li>Project &gt; Save &gt; specify name and path of new project file (<code v-pre>.qgs</code>)</li>
 <li>note the exact file path of project file (needed for subsequent configuration below)</li>
 </ol>
+<doc-anchor-target id="add-basemap">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#add-basemap">#</doc-anchor-trigger>
+        <span>Add Basemap</span>
+    </h3>
+</doc-anchor-target>
+<p>It&#x27;s useful to include a basemap in the project to provide visual context for the layers you will add on top.</p>
+<doc-anchor-target id="example">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#example">#</doc-anchor-trigger>
+        <span>Example</span>
+    </h4>
+</doc-anchor-target>
+<p>If you&#x27;ve set up &#x27;Vicmap Basemap&#x27; as a WMS/WMTS source, you can easily one of its layers as your basemap.</p>
+<p>Browser &gt; WMS/WMTS &gt; Vicmap Basemap &gt; Vicmap Basemap - Web Mercator - Cartographic</p>
+<p><img src="../img/qgis-add-wmts-layer.png" style="width:250px" alt="Add Vicmap Basemap" /></p>
 <doc-anchor-target id="construct-advertised-url">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#construct-advertised-url">#</doc-anchor-trigger>
@@ -353,6 +369,7 @@
 <li>service endpoint (eg <code v-pre>iis/qgisserver?</code>)</li>
 <li>QGIS project file path (eg <code v-pre>MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs</code>)</li>
 </ol>
+<p>Combine these three text strings to create your Advertised URL.</p>
 <p>Example Advertised URL:</p>
 <p><a href="https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs">https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs</a></p>
 <p>Copy your URL to your clipboard or a blank text document for reference. This URL will be used in subsequent configuration below.</p>
@@ -406,10 +423,10 @@
 <li>OK</li>
 <li>Project &gt; Save  (<code v-pre>Ctrl</code> + <code v-pre>S</code>)</li>
 </ol>
-<doc-anchor-target id="choose-wms-or-wfs">
+<doc-anchor-target id="choose-publishing-format-for-project-wms-vs-wfs">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#choose-wms-or-wfs">#</doc-anchor-trigger>
-        <span>Choose WMS or WFS</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#choose-publishing-format-for-project-wms-vs-wfs">#</doc-anchor-trigger>
+        <span>Choose Publishing Format for Project (WMS vs WFS)</span>
     </h2>
 </doc-anchor-target>
 <p>WFS (Web Feature Service) provides users with the ability to directly interact with map features. When a WFS layer is loaded in Pozi, every feature from the source dataset is sent to the browser as <em>vector</em> layer that includes all geometries and attributes.</p>
@@ -427,6 +444,14 @@
 <li>restricting visibility to specific zoom ranges is not currently supported</li>
 </ul>
 <p>As a guideline, use WFS for layers with fewer than 5-10K point features, and even fewer for line and polygon features depending on shape complexity.</p>
+<doc-anchor-target id="further-settings">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#further-settings">#</doc-anchor-trigger>
+        <span>Further Settings</span>
+    </h2>
+</doc-anchor-target>
+<p>A comprehensive guide for configuring QGIS projects for publishing layers via WMS/WFS can be found at:</p>
+<p><a href="https://docs.qgis.org/latest/en/docs/server_manual/getting_started.html#creatingwmsfromproject">https://docs.qgis.org/latest/en/docs/server_manual/getting_started.html#creatingwmsfromproject</a></p>
 <doc-anchor-target id="register-project">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#register-project">#</doc-anchor-trigger>
@@ -436,7 +461,7 @@
 <doc-anchor-target id="test-getcapabilities-url">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#test-getcapabilities-url">#</doc-anchor-trigger>
-        <span>Test <code v-pre>GetCapabilities</code> URL</span>
+        <span>Test GetCapabilities URL</span>
     </h3>
 </doc-anchor-target>
 <p>Construct a <code v-pre>GetCapabilities</code> URL by combining the following:</p>
@@ -450,9 +475,10 @@
 </li>
 <li>GetCapabilities request: <code v-pre>&amp;request=GetCapabilities</code></li>
 </ol>
+<p>Combine these three text strings to create a <code v-pre>GetCapabilities</code> URL.</p>
 <p>Example WMS <code v-pre>GetCapabilities</code> URL:</p>
 <p><a href="https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs&amp;service=WMS&amp;request=GetCapabilities">https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs&amp;service=WMS&amp;request=GetCapabilities</a></p>
-<p>Test this URL in your browser and check that you get a valid response that lists the available layers.</p>
+<p>Test this URL by pasting it in your browser and check that you get a valid response that lists the available layers.</p>
 <doc-anchor-target id="submit-helpdesk-ticket">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#submit-helpdesk-ticket">#</doc-anchor-trigger>
@@ -462,7 +488,7 @@
 <p>Email <a href="mailto:support@pozi.com">support@pozi.com</a> with these details:</p>
 <ul>
 <li>name of layer group to appear in Pozi layer panel</li>
-<li>order in which the layer group is to appear (relative to an existing layer group)</li>
+<li>order in which the layer group is to appear in the Pozi Layer Panel (relative to an existing layer group)</li>
 <li>choose <code v-pre>WFS</code> or <code v-pre>WMS</code> (Note: combined <code v-pre>WMS/WFS</code> coming soon)</li>
 <li>WFS or WMS <code v-pre>GetCapabilities</code> URL</li>
 </ul>

@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.708223162377">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.708333241430">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -14,7 +14,7 @@
     <!-- Primary Meta Tags -->
     <title>Setting Up QGIS | Pozi Web GIS | Online Map</title>
     <meta name="title" content="Setting Up QGIS | Pozi Web GIS | Online Map">
-    <meta name="description" content="These are the recommended settings for QGIS. They are optional. They only need to be set once." />
+    <meta name="description" content="Configure QGIS desktop to make it easy to publish your layers to Pozi" />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://pozi.com/administrator-guide/qgis/setting-up-qgis/" />
@@ -23,21 +23,23 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pozi.com/administrator-guide/qgis/setting-up-qgis/">
     <meta property="og:title" content="Setting Up QGIS | Pozi Web GIS | Online Map">
-    <meta property="og:description" content="These are the recommended settings for QGIS. They are optional. They only need to be set once.">
+    <meta property="og:description" content="Configure QGIS desktop to make it easy to publish your layers to Pozi">
+    <meta property="og:image" content="https://pozi.com/administrator-guide/qgis/img/qgis-new-wmts-connection.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pozi.com/administrator-guide/qgis/setting-up-qgis/">
     <meta property="twitter:title" content="Setting Up QGIS | Pozi Web GIS | Online Map">
-    <meta property="twitter:description" content="These are the recommended settings for QGIS. They are optional. They only need to be set once.">
+    <meta property="twitter:description" content="Configure QGIS desktop to make it easy to publish your layers to Pozi">
+    <meta property="twitter:image" content="https://pozi.com/administrator-guide/qgis/img/qgis-new-wmts-connection.png">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.3.0.708223162377" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.3.0.708333241430" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.708223162377" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.708333241430" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.708223162377" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.708333241430" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -315,25 +317,60 @@
         <span>Project Settings</span>
     </h2>
 </doc-anchor-target>
-<p>QGIS &gt; Settings &gt; Options &gt; General &gt; Project Files &gt;</p>
+<p>Settings &gt; Options &gt; General &gt; Project Files</p>
 <ul>
 <li>Prompt for confirmation when a layer is to be removed: untick</li>
 <li>Default project file format: QGS Project</li>
 </ul>
-<doc-anchor-target id="styling-panel">
+<doc-anchor-target id="panels">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#styling-panel">#</doc-anchor-trigger>
-        <span>Styling Panel</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#panels">#</doc-anchor-trigger>
+        <span>Panels</span>
     </h2>
 </doc-anchor-target>
-<p>QGIS &gt; View &gt; Panels &gt; Layer Styling</p>
-<doc-anchor-target id="quick-access-for-layer-files">
+<p>View &gt; Panels</p>
+<ul>
+<li>Layer Styling</li>
+<li>Layers</li>
+<li>Browser</li>
+<li>Debugging/Development Tools</li>
+</ul>
+<doc-anchor-target id="data-sources">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#quick-access-for-layer-files">#</doc-anchor-trigger>
-        <span>Quick Access for Layer Files</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#data-sources">#</doc-anchor-trigger>
+        <span>Data Sources</span>
     </h2>
 </doc-anchor-target>
-<p>Add the UNC path of your GIS data folder as a <em>Favorite</em> in the QGIS Browser panel for easy access. Learn more <a href="https://docs.qgis.org/latest/en/docs/user_manual/introduction/browser.html#favorites">here</a>. Also add a shortcut to the UNC location on your PC desktop for extra convenience.</p>
+<p>Set up your Browser panel to enable access to commonly-used data sources.</p>
+<doc-anchor-target id="layer-files">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#layer-files">#</doc-anchor-trigger>
+        <span>Layer Files</span>
+    </h3>
+</doc-anchor-target>
+<p>Add the path of your GIS data folder as a <em>Favorite</em> in the QGIS Browser panel for easy access. Learn more <a href="https://docs.qgis.org/latest/en/docs/user_manual/introduction/browser.html#favorites">here</a>.</p>
+<p>Browser &gt; Favorites (right-click) &gt; Add a Directory... &gt; navigate to your GIS data folder (use UNC path only!)</p>
+<p>Also add a shortcut to the UNC location on your PC desktop for extra convenience.</p>
+<doc-anchor-target id="database-connections">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#database-connections">#</doc-anchor-trigger>
+        <span>Database Connections</span>
+    </h3>
+</doc-anchor-target>
+<p>Browser &gt; MSSQL (right-click) &gt; New Connection...</p>
+<doc-anchor-target id="basemap">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#basemap">#</doc-anchor-trigger>
+        <span>Basemap</span>
+    </h3>
+</doc-anchor-target>
+<p><img src="../img/qgis-new-wmts-connection.png" style="width:600px" alt="Add Vicmap Basemap" /></p>
+<p>Browser &gt; WMS/WMTS (right-click) &gt; New Connection...</p>
+<ul>
+<li>Name: Vicmap Basemap</li>
+<li>URL: <a href="https://base.maps.vic.gov.au/service?SERVICE=WMTS&amp;REQUEST=Getcapabilities">https://base.maps.vic.gov.au/service?SERVICE=WMTS&amp;REQUEST=Getcapabilities</a></li>
+<li>OK</li>
+</ul>
 
                                 
                                 <!-- Required only on API pages -->
