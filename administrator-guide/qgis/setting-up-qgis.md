@@ -1,4 +1,5 @@
 ---
+description: Configure QGIS desktop to make it easy to publish your layers to Pozi
 order: 100
 ---
 
@@ -8,15 +9,42 @@ These are the recommended settings for QGIS. They are optional. They only need t
 
 ## Project Settings
 
-QGIS > Settings > Options > General > Project Files >
+Settings > Options > General > Project Files
 
 * Prompt for confirmation when a layer is to be removed: untick
 * Default project file format: QGS Project
 
-## Styling Panel
+## Panels
 
-QGIS > View > Panels > Layer Styling
+View > Panels
 
-## Quick Access for Layer Files
+* Layer Styling
+* Layers
+* Browser
+* Debugging/Development Tools
 
-Add the UNC path of your GIS data folder as a *Favorite* in the QGIS Browser panel for easy access. Learn more [here](https://docs.qgis.org/latest/en/docs/user_manual/introduction/browser.html#favorites). Also add a shortcut to the UNC location on your PC desktop for extra convenience.
+## Data Sources
+
+Set up your Browser panel to enable access to commonly-used data sources.
+
+### Layer Files
+
+Add the path of your GIS data folder as a *Favorite* in the QGIS Browser panel for easy access. Learn more [here](https://docs.qgis.org/latest/en/docs/user_manual/introduction/browser.html#favorites).
+
+Browser > Favorites (right-click) > Add a Directory... > navigate to your GIS data folder (use UNC path only!)
+
+Also add a shortcut to the UNC location on your PC desktop for extra convenience.
+
+### Database Connections
+
+Browser > MSSQL (right-click) > New Connection...
+
+### Basemap
+
+![Add Vicmap Basemap](./img/qgis-new-wmts-connection.png){style="width:600px"}
+
+Browser > WMS/WMTS (right-click) > New Connection...
+
+* Name: Vicmap Basemap
+* URL: https://base.maps.vic.gov.au/service?SERVICE=WMTS&REQUEST=Getcapabilities
+* OK

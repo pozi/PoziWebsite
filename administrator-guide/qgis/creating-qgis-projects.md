@@ -20,6 +20,18 @@ Create new project from scratch:
 2. Project > Save > specify name and path of new project file (`.qgs`)
 3. note the exact file path of project file (needed for subsequent configuration below)
 
+### Add Basemap
+
+It's useful to include a basemap in the project to provide visual context for the layers you will add on top.
+
+#### Example
+
+If you've set up 'Vicmap Basemap' as a WMS/WMTS source, you can easily one of its layers as your basemap.
+
+Browser > WMS/WMTS > Vicmap Basemap > Vicmap Basemap - Web Mercator - Cartographic
+
+![Add Vicmap Basemap](./img/qgis-add-wmts-layer.png){style="width:250px"}
+
 ## Construct 'Advertised URL'
 
 Construct the URL required for the project to 'advertise' what layers will be available from this project file. Essentially, the project file needs a reference to itself in a URL format.
@@ -30,10 +42,11 @@ Combine the details below:
 2. service endpoint (eg `iis/qgisserver?`)
 3. QGIS project file path (eg `MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs`)
 
+Combine these three text strings to create your Advertised URL.
+
 Example Advertised URL:
 
 https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs
-
 
 Copy your URL to your clipboard or a blank text document for reference. This URL will be used in subsequent configuration below.
 
@@ -60,7 +73,7 @@ Pozi requires the project to be enabled for WMS, even if you intend for Pozi to 
 6. OK
 7. Project > Save  (`Ctrl` + `S`)
 
-## Choose WMS or WFS
+## Choose Publishing Format for Project (WMS vs WFS)
 
 WFS (Web Feature Service) provides users with the ability to directly interact with map features. When a WFS layer is loaded in Pozi, every feature from the source dataset is sent to the browser as *vector* layer that includes all geometries and attributes.
 
@@ -79,9 +92,15 @@ Disadvantages:
 
 As a guideline, use WFS for layers with fewer than 5-10K point features, and even fewer for line and polygon features depending on shape complexity.
 
+## Further Settings
+
+A comprehensive guide for configuring QGIS projects for publishing layers via WMS/WFS can be found at:
+
+https://docs.qgis.org/latest/en/docs/server_manual/getting_started.html#creatingwmsfromproject
+
 ## Register Project
 
-### Test `GetCapabilities` URL
+### Test GetCapabilities URL
 
 Construct a `GetCapabilities` URL by combining the following:
 
@@ -91,18 +110,20 @@ Construct a `GetCapabilities` URL by combining the following:
    * WFS: `&service=WFS`
 3. GetCapabilities request: `&request=GetCapabilities`
 
+Combine these three text strings to create a `GetCapabilities` URL.
+
 Example WMS `GetCapabilities` URL:
 
 https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs&service=WMS&request=GetCapabilities
 
-Test this URL in your browser and check that you get a valid response that lists the available layers.
+Test this URL by pasting it in your browser and check that you get a valid response that lists the available layers.
 
 ### Submit Helpdesk Ticket
 
 Email support@pozi.com with these details:
 
 * name of layer group to appear in Pozi layer panel
-* order in which the layer group is to appear (relative to an existing layer group)
+* order in which the layer group is to appear in the Pozi Layer Panel (relative to an existing layer group)
 * choose `WFS` or `WMS` (Note: combined `WMS/WFS` coming soon)
 * WFS or WMS `GetCapabilities` URL
 

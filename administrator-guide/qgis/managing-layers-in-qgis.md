@@ -81,6 +81,7 @@ Not currently supported:
 
 * SVG marker symbols
 * `diamond` symbol
+* symbol rotation
 * fill hatching
 * label offsets
 * rules based on a field name that contains spaces
@@ -88,8 +89,9 @@ Not currently supported:
 
 Vector Style Tips:
 
-* any changes to opacity must be set in the style colour setting - the layer's global opacity slider has no effect
-* for polygon features to be selectable, the fill opacity must be greater than `0` - it can be as little as 1%
+* opacity
+  * any changes to opacity must be set in the style colour setting - the layer's global opacity slider has no effect
+  * for polygon features to be selectable, the fill opacity must be greater than `0` - it can be as little as 1%
 * increase symbol size from the QGIS default to **4mm** or greater enable to easier interaction for users in the browser
 * increase line thicknesses from the QGIS default to **1mm** or greater to enable users to more easily select line features
 * increase label text size from the QGIS default to **10 points** or greater and a white **2mm** buffer for better legibility
@@ -121,9 +123,11 @@ Restart the service(s) after you make your changes.
 
 ==- Layer features are not displayed when the layer is turned on
 
-Pozi is only able to display features that have at least one valid/non-null attribute.
+Check the following:
 
-If any records in your data contain no attributes, populate some values into one of the fields.
+* If your project is configured as a WFS source, check that the layer is enabled for WFS. Go to Project > Properties > QGIS Server > WFS Capabilities > your layer > Published (tick on)
+* Pozi is only able to display features that have at least one valid/non-null attribute. If any records in your data contain no attributes, populate some values into one of the fields.
+* Ensure the layer has a coordinate reference system set. Go to Layer Properties > Source > Assigned CRS, and pick a projection
 
 ==- Layers are not displayed with the styling from QGIS
 

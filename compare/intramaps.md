@@ -1,6 +1,6 @@
 ---
 title: Pozi vs IntraMaps
-description: Is IntraMaps no longer growing with you or serving your organisation's needs? Pozi is your alternative GIS platform with the features you need, plus real support.
+description: Is IntraMaps no longer growing with you or serving your organisation's needs? Meet Pozi--your new enterprise GIS platform with the features you need, plus real support.
 layout: central
 ---
 
@@ -18,11 +18,15 @@ Pozi's open architecture avoids vendor lock-in by respecting our clients' autono
 
 Users don't require expensive training to get the answers they need. When tools are simple and intuitive, you improve user engagement.
 
-From its beginning as a public-facing map enquiry tool, Pozi has focussed on delivering critical information to users regardless of any previous GIS expertise.
+From its beginning as a public-facing map enquiry tool, Pozi has focussed on ease of use and appealing visual design to deliver critical information to users regardless of any previous GIS expertise.
 
 * touch friendly
 * efficient use of screen space
 * no complex tools, menus or jargon
+
+### Public Ready
+
+Every Pozi site provides a public-facing view by default. Engage your community and external stakeholders with information that is relevant to them while keeping your organisation's internal data available only to internal users.
 
 ### Modules vs Bookmarks
 
@@ -70,7 +74,7 @@ Our pricing is on our website.
 
 Hosting and basic support is included in your subscription. Initial setup and advanced support is available on-demand at our standard rate. You don't need a support contract to ask us for help.
 
-And we will never charge you for fixing a bug.
+And we'll never charge you for fixing a bug.
 
 ### Anything Missing?
 

@@ -7,7 +7,7 @@ layout: central
 
 *<big>Combine geographic information from local files, databases and remote web services to give your users the complete picture*</big>
 
-For organisations who are already using Pozi Public or Pro, upgrading to Pozi Enterprise or Enterprise Cloud enables internal users to directly access internal corporate datasets within the Pozi app.
+For organisations who are already using Pozi Public or Pro, upgrading to Pozi Enterprise or Enterprise Cloud enables internal users to **directly access internal corporate datasets** within the Pozi app.
 
 Pozi Enterprise is a powerful GIS enquiry tool that is an ideal replacement for any existing internal GIS viewer.
 
@@ -25,7 +25,7 @@ Pozi Enterprise unlocks a range of advanced functionality and integrations.
 
 ### Publisher
 
-Synchronise select internal datasets to public cloud.
+Synchronise selected internal datasets to public cloud.
 
 ### GIS Integration
 

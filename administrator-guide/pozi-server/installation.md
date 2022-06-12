@@ -1,9 +1,12 @@
 ---
 title: Installation
+description: Step-by-step instructions for setting up Pozi Server on your network
 order: 100
 ---
 
 # Pozi Server Installation
+
+By following these step-by-step instructions, you can install and configure Pozi Server on your network.
 
 ## Prerequisites
 
@@ -132,6 +135,8 @@ The Pozi web app will be configured to look for a local file, known as a 'resour
 When Pozi doesn't get a valid response from a resource check, it assumes the user is public. Pozi will list only the layers it knows are public in the Layer Panel, and doesn't make any further attempt to contact any local resources.
 
 ### Configuration
+
+Any internal URL that returns some response can be used as a resource check. The URL can reference a static file or a call to the QGIS Server. The instructions below describe setting up a static file, which provides a near-instant response, and can include a custom message for displaying in browser console that may be useful when troubleshooting.
 
 Create a text file, and save it to `C:\Program Files (x86)\Pozi\userdata\local\resourcecheck\[yoursitename].json`
 

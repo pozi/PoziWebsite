@@ -1,5 +1,6 @@
 ---
 title: Pozi Server
+description: Pozi Server enables the integrate of your organisation's internal data sources (spatial and non-spatial) with the Pozi app.
 order: 100
 ---
 
@@ -13,7 +14,7 @@ With Pozi Server installed and configured, the Pozi web application can access i
 
 ==- <b>Pozi Server</b> or <b>Pozi Connect Server</b>?
 
-  The Pozi Server application is often referred to as "Pozi Connect Server". This name came about from our attempt to combine our two on-premise applications, Pozi Connect and Pozi Server, into one application. We have since abandonded that approach, but the hybrid name persists in the Pozi Server interface and documentation.
+  The Pozi Server application is often referred to as "Pozi Connect Server". This name came about from our attempt to combine our two on-premise applications, Pozi Connect and Pozi Server, into one application. We have since abandoned that approach, but the hybrid name persists in the Pozi Server interface and documentation.
 
   [Pozi Connect](/pozi-connect/) is the desktop application used by Victorian municipalities for generating property data change reports (M1s). It is distributed as a Windows installer, and councils are notified by email when there are new versions available to download and install.
 
