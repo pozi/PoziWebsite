@@ -18,15 +18,15 @@ tags: [Pozi Pro]
 
 Pozi Widgets are embeddable address search tools that can be embedded into any website.
 
-[!ref **Data widget**: search any address to display specific details about the location (eg, waste collection details)](/administrator-guide/widgets/data-widget/)
+[!ref **Data widget**: search any address to display specific details about the location (eg, waste collection details)](/admin-guide/widgets/data-widget/)
 
-[!ref **Map widget**: search any address to launch an instance of the Pozi web application focussed on the address location](/administrator-guide/widgets/map-widget/)
+[!ref **Map widget**: search any address to launch an instance of the Pozi web application focussed on the address location](/admin-guide/widgets/map-widget/)
 
 Widgets can configured by clients without the need for any changes by Pozi staff. However you can request help from Pozi to construct the right embed code to suit your requirements.
 
 ## Embedding
 
-Obtain the URL for widget by following the instructions from the [data widget](/administrator-guide/widgets/data-widget/) or [map widget](/administrator-guide/widgets/map-widget/).
+Obtain the URL for widget by following the instructions from the [data widget](/admin-guide/widgets/data-widget/) or [map widget](/admin-guide/widgets/map-widget/).
 
 The HTML for embedding the widget in your website:
 

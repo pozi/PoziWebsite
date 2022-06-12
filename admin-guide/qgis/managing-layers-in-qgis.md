@@ -98,7 +98,7 @@ Vector Style Tips:
 
 ## Enable Layers for WFS
 
-As a guideline, enable WFS only for layers with fewer than 5-10K features. See [here](/administrator-guide/qgis/creating-qgis-projects/#enable-wfs-service) for more information about pros and cons of using WFS.
+As a guideline, enable WFS only for layers with fewer than 5-10K features. See [here](/admin-guide/qgis/creating-qgis-projects/#enable-wfs-service) for more information about pros and cons of using WFS.
 
 1. Project > Properties > QGIS Server
 2. `WFS capabilities > Published`: tick on for each layer to be published

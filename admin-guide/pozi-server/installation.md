@@ -53,7 +53,7 @@ Desktop shortcuts:
   * staging/testing site: https://staging.pozi.com/master/#/site[sitename]/
   * config page: https://staging.pozi.com/master/#/site[sitename]/config[true]/preview[true]/
   * Pozi Server: https://local.pozi.com/
-  * Admin Guide: https://pozi.com/administrator-guide/
+  * Admin Guide: https://pozi.com/admin-guide/
 * GIS data folder
 * Pozi folder: `C:\Program Files (x86)\Pozi`
 * GDAL Shell:`C:\Program Files (x86)\Pozi\server\pipeline\.shell.cmd`

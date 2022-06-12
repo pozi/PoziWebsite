@@ -19,8 +19,8 @@ Welcome to the documentation for Pozi. Here, you can find information about usin
 ## Resources
 
 [!ref icon="person" text="For users"](/user-guide/)
-[!ref icon="tools" text="For administrators"](/administrator-guide/)
-[!ref icon="terminal" text="For developers"](/developer-guide/)
+[!ref icon="tools" text="For administrators"](/admin-guide/)
+[!ref icon="terminal" text="For developers"](/dev-guide/)
 
 ---
 

@@ -129,4 +129,4 @@ Email support@pozi.com with these details:
 
 Within 24 hours, the new layer group will be configured and available for users to view in Pozi.
 
-During this time, and any time afterwards, you may start [adding and configuring layers](/administrator-guide/qgis/managing-layers-in-qgis/) in your new project.
+During this time, and any time afterwards, you may start [adding and configuring layers](/admin-guide/qgis/managing-layers-in-qgis/) in your new project.
