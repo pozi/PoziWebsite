@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.708333377575">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.708423711885">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.3.0.708333377575" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.3.0.708423711885" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.3.0.708333377575" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.3.0.708423711885" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.3.0.708333377575" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.3.0.708333377575" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.3.0.708423711885" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.3.0.708423711885" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -360,6 +360,53 @@ XYZ</code></pre>
 <li><code v-pre>&quot;showInLayerControl&quot;:</code> set to <code v-pre>false</code> to prevent dataset from being listed in the layer panel.</li>
 <li><code v-pre>&quot;group&quot;:</code> leave blank or undefined</li>
 </ul>
+<doc-anchor-target id="lookups">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#lookups">#</doc-anchor-trigger>
+        <span>Lookups</span>
+    </h3>
+</doc-anchor-target>
+<p>A child dataset can be used to fetch data about a selected feature from a separate source such as a database or web service. This enables Pozi to return one or more (or none) records that are associated with the selected feature.</p>
+<p>Use cases:</p>
+<ul>
+<li>property owner</li>
+<li>inspections</li>
+<li>defects</li>
+<li>maintenance</li>
+</ul>
+<p>The dataset&#x27;s <code v-pre>url</code> will contain a request to a data endpoint plus a filter parameter.</p>
+<doc-anchor-target id="filters">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#filters">#</doc-anchor-trigger>
+        <span>Filters</span>
+    </h4>
+</doc-anchor-target>
+<ul>
+<li>OGC: <code v-pre>FILTER=&lt;Filter&gt;&lt;PropertyIsEqualTo&gt;&lt;PropertyName&gt;</code>ChildDatasetIDField<code v-pre>&lt;/PropertyName&gt;&lt;Literal&gt;[</code>ParentDatasetIDField<code v-pre>]&lt;/Literal&gt;&lt;/PropertyIsEqualTo&gt;&lt;/Filter&gt;</code></li>
+<li>CKAN</li>
+<li>VRT</li>
+</ul>
+<doc-panel id="ogc-example" collapsed>
+    <template #title>OGC Example</template>
+<p>This example uses the selected bridge&#x27;s <code v-pre>AssetID</code> value to do a lookup on a table of associated records in a defect table. The defect table is registered as a WFS endpoint in QGIS.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;title&quot;: &quot;Bridge Defects&quot;,
+  &quot;parent&quot;: &quot;Bridges&quot;,
+  &quot;type&quot;: &quot;GeoJSON&quot;,
+  &quot;localDataSource&quot;: true,
+  &quot;showInLayerControl&quot;: false,
+  &quot;config&quot;: {
+    &quot;spatial&quot;: {
+      &quot;loader&quot;: &quot;geojson&quot;,
+      &quot;url&quot;: &quot;https://bs-gis.pozi.com/iis/qgisserver?MAP=//bs-intra/GIS/System/POZI/QGIS%20Projects/Child%20Datasets.qgs&amp;SERVICE=WFS&amp;VERSION=1.1.0&amp;REQUEST=GetFeature&amp;OUTPUTFORMAT=application%2Fjson&amp;TYPENAME=POZI_BridgeDefects&amp;FILTER=&lt;Filter&gt;&lt;PropertyIsEqualTo&gt;&lt;PropertyName&gt;AssetID&lt;/PropertyName&gt;&lt;Literal&gt;[AssetID]&lt;/Literal&gt;&lt;/PropertyIsEqualTo&gt;&lt;/Filter&gt;&quot;,
+      &quot;id&quot;: &quot;AssetID&quot;,
+      &quot;label&quot;: &quot;DefectDescription&quot;
+    }
+  }
+}</code></pre>
+</doc-codeblock></div>
+</doc-panel>
 <doc-anchor-target id="spatial-intersection">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#spatial-intersection">#</doc-anchor-trigger>
