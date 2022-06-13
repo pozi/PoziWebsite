@@ -38,6 +38,49 @@ XYZ
 * `"showInLayerControl":` set to `false` to prevent dataset from being listed in the layer panel.
 * `"group":` leave blank or undefined
 
+### Lookups
+
+A child dataset can be used to fetch data about a selected feature from a separate source such as a database or web service. This enables Pozi to return one or more (or none) records that are associated with the selected feature.
+
+Use cases:
+
+* property owner
+* inspections
+* defects
+* maintenance
+
+The dataset's `url` will contain a request to a data endpoint plus a filter parameter.
+
+#### Filters
+
+* OGC: `FILTER=<Filter><PropertyIsEqualTo><PropertyName>`ChildDatasetIDField`</PropertyName><Literal>[`ParentDatasetIDField`]</Literal></PropertyIsEqualTo></Filter>`
+* CKAN
+* VRT
+
+==- OGC Example
+
+This example uses the selected bridge's `AssetID` value to do a lookup on a table of associated records in a defect table. The defect table is registered as a WFS endpoint in QGIS.
+
+```json
+{
+  "title": "Bridge Defects",
+  "parent": "Bridges",
+  "type": "GeoJSON",
+  "localDataSource": true,
+  "showInLayerControl": false,
+  "config": {
+    "spatial": {
+      "loader": "geojson",
+      "url": "https://bs-gis.pozi.com/iis/qgisserver?MAP=//bs-intra/GIS/System/POZI/QGIS%20Projects/Child%20Datasets.qgs&SERVICE=WFS&VERSION=1.1.0&REQUEST=GetFeature&OUTPUTFORMAT=application%2Fjson&TYPENAME=POZI_BridgeDefects&FILTER=<Filter><PropertyIsEqualTo><PropertyName>AssetID</PropertyName><Literal>[AssetID]</Literal></PropertyIsEqualTo></Filter>",
+      "id": "AssetID",
+      "label": "DefectDescription"
+    }
+  }
+}
+```
+
+==-
+
 ### Spatial Intersection
 
 When a dataset is configured with the `"pointOnSurface": true` transformer function, Pozi filters the dataset to only those records that intersect with the parent geometry.

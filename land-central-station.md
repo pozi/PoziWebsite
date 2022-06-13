@@ -15,8 +15,6 @@ layout: central
 
 <big>A vision to simplify the way Victorian councils integrate their property information into Victoria's statewide map</big>
 
-Seamless synchronisation of council property information to a **cloud data hub** - a centralised source of truth for property information for every Victorian council.
-
 </br>
 
 [!button variant="secondary" icon="checklist" size="2xl" text="Get involved"](#where-to-now)
@@ -52,13 +50,13 @@ The current system requires from councils:
 
 --![](https://i.imgur.com/rlp9JKS.jpg)--
 
-The exchange is made complicated because of the M1 format:
+The exchange is made complicated because of the M1 specification:
 
 * must include only the records that have changed
-* must add information that the council doesn't maintain internally
+* must add information that the council doesn't maintain
   * PFI numbers
   * various flags (outside property, new road, multi-assessment, etc)
-  * edit codes (instructing DELWP *how* to update their data)
+  * edit codes (to instruct DELWP how to update the data)
 * manual submission process to VES
 * councils receive feedback once a year about how well they're doing
 
@@ -80,7 +78,7 @@ The current system is difficult to automate and innovate upon.
 
 * data quality varies across the state according to how well resourced individual councils are
 * inherent data quality issues - data gridlocks where DELWP can't update Vicmap to reflect the council's version because there is no suitable M1 edit code (eg, changing multi-parcel multi-assessments)
-* it's currently impractical for DELWP to innovate within the M1 system because it would require changing the M1 format/edit codes and re-educating 79 councils
+* it's currently impractical for DELWP to innovate within the M1 system because it would require changing the M1 specification/edit codes and re-educating 79 councils
 
 ---
 
@@ -102,11 +100,16 @@ It is designed to:
 
 2. the platform automatically processes and compiles the data into a single uniform property dataset
 
-3. DELWP and other approved authorities can pull data from the combined resource on demand in the format of their choosing (M1, full dump, diffs, filtered extracts, audits, discrepancy reports, etc)
+3. DELWP and other approved authorities can pull data from the combined resource on demand in the format of their choosing (complete extract, diffs, M1s, filtered extracts, audits, discrepancy reports, etc)
 
 With DELWP having complete access to the combined authoritative property information from the councils, they have all the information they need to update Vicmap.
 
 ### Components
+
+The system comprises:
+
+1. a central cloud platform
+2. data sync tool installed at each council
 
 #### Cloud Platform
 
@@ -177,13 +180,13 @@ No. But we will build it if we can get buy-in from councils and DELWP.
 
 ==- How does a cloud service help with M1s?
 
-The cloud clearinghouse service is where each council's property information is centralised. The service enables DELWP to obtain weekly or daily snapshots of the combined statewide property data. When DELWP has on-demand access to the complete council property information for the whole state, it won't need to re-assemble this information from dozens of spreadsheets.
+The cloud clearinghouse service is where each council's property information is centralised. The service enables DELWP to obtain daily or weekly snapshots of the combined statewide property data. When DELWP has on-demand access to the complete council property information for the whole state, it won't need to re-assemble this information from dozens of spreadsheets.
 
-To update Vicmap, DELWP will compare what changed between snapshots of the council data and then apply those changes to Vicmap. DELWP can continue to use the M1 format internally for supplying the changes to the Vicmap data maintainer. Or DELWP might use the new snapshot approach to come up with a more efficient way to get changes into Vicmap. Either way, councils never need to see an M1 again.
+To update Vicmap, DELWP will compare what changed between snapshots of the council data and then apply those changes to Vicmap. DELWP can continue to use the M1 format internally for supplying the changes to the Vicmap data maintainer. Or DELWP might use the new snapshot approach to come up with a more efficient way to get changes into Vicmap. Either way, councils never need to use M1s again.
 
 ==- Why hasn't this been considered in the past?
 
-Most discussions about improving the property data maintenance processes for councils have involved minor improvements to the M1, like creating new edit codes or adding more fields.
+Most discussions about improving the property data maintenance processes for councils have involved minor improvements to the M1, like creating new edit codes or adding more fields to the specification.
 
 We have a different idea about how to better exchange data that doesn't rely on spreadsheets. It's a new shared-service approach based on modern technologies, and it involves DELWP taking a greater role in the property data maintenance workflow.
 
@@ -281,7 +284,7 @@ If not, we'd love to hear any suggestions you have!
 
 We want to hear from you!
 
-Register your interest by filling in the form below. You can also indicate whether you'd like your organisation to participate in a pilot solution.
+Register your interest by filling in the form below. You can also indicate whether you'd like to participate in a pilot solution.
 
 We'll keep you up-to-date with this project as it progresses.
 

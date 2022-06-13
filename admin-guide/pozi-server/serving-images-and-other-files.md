@@ -27,11 +27,11 @@ For example:
 
 Update the image paths in the source data accordingly by prepending the URL prefix to any reference to the file name. This can be done within the data itself, or as a string expression if using a database view or VRT file.
 
-VRT Example
+==- VRT Example
 
-In this example, the `bridges` dataset contains a field name called `image_file_name` which is populated with values like `img_1001.jpg`.
+In this example, the `bridges` dataset contains a field name called `image_file_name` which is populated with values like `img_1001.jpg`. The customised query (in SQLite format) uses a string expression to add a new field called `photo` containing the full image URL.
 
-```xml
+```xml bridges.vrt
 <?xml version="1.0" encoding="UTF-8"?>
 <OGRVRTDataSource>
     <OGRVRTLayer name="bridges">
@@ -45,3 +45,5 @@ In this example, the `bridges` dataset contains a field name called `image_file_
     </OGRVRTLayer>
 </OGRVRTDataSource>
 ```
+
+==-
