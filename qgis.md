@@ -29,7 +29,6 @@ layout: central
 
 <big>QGIS is your **admin panel** for publishing location-based information to users within your organisation</big>
 
-
 :::
 
 ## Ultimate control
@@ -37,6 +36,21 @@ layout: central
 Use QGIS to easily manage and publish map layers to staff within Pozi.
 
 Add layers to a QGIS project to make them available in Pozi. Easily apply styling, customise fields, join datasets, add metadata, and more, all within the familiar QGIS open source desktop application.
+
+Benefits:
+
+* maintain control over map layers available to staff
+* quickly respond to staff requirements
+* build your organisation's in-house capabilities for maintaining GIS configuration
+* make it easier for users to discover and access specialised datasets that are useful to their workflows
+
+Functionality for Administrators:
+
+* add/remove map layers
+* control styling, filtering, thematic maps
+* expose/hide data fields, and rename fields
+* create dynamic table joins
+* maintain metadata
 
 ### Styling
 

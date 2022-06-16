@@ -68,4 +68,11 @@ When specifying the URL for QGS project files, any backslashes must be converted
 }
 ```
 
+#### OGC Filter
+
+WFS requests utilise OGC filters can be applied to target specific records.
+
+* Example: `FILTER=<Filter><PropertyIsEqualTo><PropertyName>AssetID</PropertyName><Literal>12345</Literal></PropertyIsEqualTo></Filter>`
+* Reference: http://schemas.opengis.net/filter/2.0/filter.xsd
+
 ==-

@@ -16,6 +16,18 @@ It generates map layers from corporate databases (spatial and non-spatial), perf
 
 ### M1
 
+!!!
+
+**Sick of M1s?**
+
+We have a vision to simplify the way Victorian councils integrate their property information into Vicmap.
+
+Read our plan, and have your say!
+
+[!button variant="secondary" size="2xl" text="Land Central Station"](/land-central-station/)
+
+!!!
+
 Pozi Connect M1 is a specialised workflow designed for Victorian municipalities. It uses Pozi Connect's powerful extraction and processing capabilities to generate reports of changes to councils' property and address information to feed into the Vicmap state map base.
 
 Two-thirds of Victorian councils use Pozi Connect as a critical component in their property data maintenance workflow.

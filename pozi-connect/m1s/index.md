@@ -1,7 +1,20 @@
 ---
-title: M1s
 order: 90
 ---
+
+# M1s
+
+!!!
+
+**Sick of M1s?**
+
+We have a vision to simplify the way Victorian councils integrate their property information into Vicmap.
+
+Read our plan, and have your say!
+
+[!button variant="secondary" size="2xl" text="Land Central Station"](/land-central-station/)
+
+!!!
 
 <big>Pozi Connect generates council 'M1' reports that are critical link for updating the Victorian state map base.</big>
 
