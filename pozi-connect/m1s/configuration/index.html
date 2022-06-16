@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.708485309446">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.708689244391">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.3.0.708485309446" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.3.0.708689244391" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.708485309446" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.708689244391" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.708485309446" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.708689244391" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -308,11 +308,17 @@
         <span>Pozi Connect M1 Configuration</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="update-vicmap-data-source">
+<doc-anchor-target id="basic-configuration-tasks">
     <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#basic-configuration-tasks">#</doc-anchor-trigger>
+        <span>Basic Configuration Tasks</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="update-vicmap-data-source">
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#update-vicmap-data-source">#</doc-anchor-trigger>
         <span>Update Vicmap Data Source</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <ol>
 <li>open <code v-pre>PoziConnect\tasks\[council name]\[council name] M1 - x - Import Vicmap.ini</code> in a text editor such as Notepad</li>
@@ -328,12 +334,12 @@
 <li>send the updated file locations to <a href="mailto:support@pozi.com">support@pozi.com</a> for inclusion in future releases</li>
 </ol>
 <doc-anchor-target id="working-with-alternative-table-names">
-    <h2>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#working-with-alternative-table-names">#</doc-anchor-trigger>
         <span>Working with Alternative Table Names</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
-<p>In 2021-2022, DELWP changed the names of two of the Vicmap Poprerty Simplified 1 tables that Pozi Connect relies upon.</p>
+<p>In 2021-2022, DELWP changed the names of two of the Vicmap Property Simplified 1 tables that Pozi Connect relies upon.</p>
 <ul>
 <li><code v-pre>PARCEL_MP</code> &gt; <code v-pre>V_PARCEL_MP</code></li>
 <li><code v-pre>PROPERTY_MP</code> &gt; <code v-pre>V_PROPERTY_MP</code></li>
@@ -342,6 +348,46 @@
 <p>However if your council is still using the old table names, there a couple of approaches to enable Pozi Connect to work with them.</p>
 <p>An approach you can take that wouldn&#x27;t require any changes to Pozi Connect would be to download the PARCEL_MP table twice: once with PARCEL_MP as the destination and once with V_PARCEL_MP as the destination. (And do the same for PROPERTY_MP and V_PROPERTY_MP.)</p>
 <p>Or if you don&#x27;t mind messing with the Pozi Connect config, you can edit the shared Vicmap import config file to use the new table names: <code v-pre>PoziConnect\tasks\~Shared\M1 Shared - Import VMADD and VMPROP SHPs.ini</code>. But be careful because installing any future release may overwrite your changes in this file.</p>
+<doc-anchor-target id="advanced-configuration">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#advanced-configuration">#</doc-anchor-trigger>
+        <span>Advanced Configuration</span>
+    </h2>
+</doc-anchor-target>
+<p>This section describes how to set up Pozi Connect to generate M1s for a new site or for an existing site which requires reconfiguration for a new property system.</p>
+<doc-anchor-target id="preparation">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#preparation">#</doc-anchor-trigger>
+        <span>Preparation</span>
+    </h3>
+</doc-anchor-target>
+<ol>
+<li>obtain data extract</li>
+</ol>
+<ul>
+<li>if starting from scratch, install Pozi Connect and run the import task for desired system (eg <code v-pre>M1 Shared - Import Authority.ini</code>)</li>
+<li>if site already has a PIQA profile in Pozi Connect, run that and obtain <code v-pre>PlaceLab.sqlite</code> file</li>
+<li>if site uses CouncilWise or TechOne OneCouncil, obtain CSV files</li>
+</ul>
+<ol start="2">
+<li>order and download Vicmap Address and Vicmap Property Simplified 1 datasets in preferred format</li>
+<li>use Pozi Connect to import council data and Vicmap data into SQLite file</li>
+</ol>
+<doc-anchor-target id="customisation">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#customisation">#</doc-anchor-trigger>
+        <span>Customisation</span>
+    </h3>
+</doc-anchor-target>
+<ol>
+<li>create dedicated folder in <code v-pre>PoziConnect\tasks</code> if it doesn&#x27;t already exist</li>
+<li>copy files from similar site into site folder</li>
+<li>update file names to correspond with site name</li>
+<li>within INI files, replace all instances of former site name with new site</li>
+<li>within INI and SQL files, update <code v-pre>lga_code</code></li>
+<li>update <code v-pre>readme.md</code> to indicate which site was used as the source</li>
+<li>TODO: add the remaining steps</li>
+</ol>
 
                                 
                                 <!-- Required only on API pages -->
