@@ -8,6 +8,7 @@
         "clearinghouse",
         "DELWP",
         "Groundtruth",
+        "Helpdesk",
         "Jotform",
         "O'Keefe",
         "ogrinfo",
@@ -15,6 +16,7 @@
         "polyline",
         "Pozi",
         "QGIS",
-        "Vicmap"
+        "Vicmap",
+        "WMTS"
     ]
 }

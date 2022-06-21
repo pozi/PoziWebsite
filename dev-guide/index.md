@@ -1,12 +1,15 @@
 ---
-title: Developer Guide
 order: 30
 icon: terminal
 ---
 
+# Developer Guide
+
 Pozi enables software vendors, systems integrators and independent support providers to bring the power of location-based decision making to business solutions for their clients.
 
 The **Developer Guide** is intended for use by our internal developers and support staff, as well as technical partners.
+
+[!ref icon="terminal"](/dev-guide/getting-started/)
 
 ---
 

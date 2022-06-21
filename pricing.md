@@ -21,11 +21,11 @@ Pozi delivers powerful location-based functionality at a fraction of the cost of
 | *Perfect for publishing your organisation's data to the public* | *When your users demand a higher level of interaction* | *A high functioning replacement for your inhouse GIS enquiry tool* | *Ultimate integration with your organisation’s cloud infrastructure* |
 | <small>AUD</small><big>**$6K**</big><small>/year</small> | <small>AUD</small><big>**$9K**</big><small>/year</small> | <small>AUD</small><big>**$12K**</big><small>/year</small> | <small>AUD</small><big>**$15K**</big><small>/year</small> |
 | - | <small>All the features of Pozi Public, plus:</small> | <small>All the features of Pozi Pro, plus:</small> | <small>All the features of Pozi Enterprise, plus:</small> |
-| ✔️ Live, authoritative data | ✔️ Community consultation module | ✔️ Property system integration | 🚀 Azure Active Directory integration |
-| ✔️ Customer support | ✔️ Advanced search | ✔️ Asset system integration | 📃 Enterprise Cloud Service Level Agreement |
-| ✔️ Responsive design | ✔️ Nearby places | ✔️ GIS integration |  |
+| ✔️ Live, authoritative data | ✔️ Community consultation module | ✔️ GIS integration | 🚀 Azure Active Directory integration |
+| ✔️ Customer support | ✔️ Advanced search | ✔️ Corporate system integrations | 📃 Enterprise Cloud Service Level Agreement |
+| ✔️ Responsive design | ✔️ Nearby places | ✔️ Public data publisher |  |
 | ✔️ Intelligent address search | ✔️ Multiple imagery layers | ✔️ Table view |  |
-| ✔️ GPS location | ✔️ Map widget | ✔️ Public data publisher |  |
+| ✔️ GPS location | ✔️ Map widget |  |  |
 | ✔️ Aerial imagery | ✔️ Data widget |  |  |
 | ✔️ Unlimited users | ✔️ Layer filtering |  |  |
 | ✔️ Zero installation | ✔️ Multi-select |  |  |
@@ -35,7 +35,7 @@ Pozi delivers powerful location-based functionality at a fraction of the cost of
 
 <br/>
 
-A Pozi subscription includes:
+All Pozi subscriptions include:
 
 * customised web map application
 * high performance hosting
@@ -47,7 +47,7 @@ A Pozi subscription includes:
 * configuration updates
 * helpdesk support
 
-[!ref icon="paper-airplane" text="Start your 60 day trial"](/trial/)
+[!ref icon="paper-airplane" text="Request a free 60 day trial"](/trial/)
 
 [!ref icon="trophy" text="Already use Pozi? Upgrade to Pozi Enterprise"](/upgrade/)
 
@@ -140,6 +140,6 @@ For *Enterprise* and *Enterprise Cloud* subscribers, we offer access to our sour
 
 ---
 
-[Contact us](/contact/) us to discuss your organisation's requirements. 60-day free trials are available.
+Contact us to discuss your organisation's requirements. 60-day free trials are available.
 
-[!ref icon="mention" text="Contact us >"](/contact/)
+[!button variant="info" icon="mention" size="2xl" corners="pill" text="Contact us >"](/contact/)

@@ -18,7 +18,7 @@ Read our plan, and have your say!
 
 <big>Pozi Connect generates council 'M1' reports that are critical link for updating the Victorian state map base.</big>
 
-![](https://i.imgur.com/rlp9JKS.jpg)
+![](/static/img/m1-header.jpg)
 
 Pozi Connect compares the council's property data with the latest Vicmap data and determines what updates are required in Vicmap to accurately reflect the council's property and address information.
 
@@ -145,7 +145,7 @@ Z, R, P, S, E, C, A
 * secondary addresses
 * multi-assessment properties where all existing propnums in Vicmap are incorrectly matched (typical multi-assessments are OK)
 * transfers of parcels that contain a primary address
-* address position update (ie, addresses that have *moved* from their original position)
+* address position update (ie, addresses that have moved from their original position)
 
 ## Support
 

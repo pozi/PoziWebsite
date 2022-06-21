@@ -26,7 +26,7 @@ We build and customise Pozi sites to suit the specialised requirements of our cl
 
 Check out these sites we've built for our clients:
 
-[!ref icon="star" size="3xl" text="Pozi site showcase"](/showcase/)
+[!ref icon="star" size="3xl" text="Pozi Showcase"](/showcase/)
 
 [Get in touch](/contact/) with us to discuss your requirements. We'll customise a trial Pozi site to suit your organisation's needs.
 

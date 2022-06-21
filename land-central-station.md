@@ -48,7 +48,7 @@ The current system requires from councils:
 * antiquated workflows (tracking changes, filling in spreadsheets, uploading files)
 * valuable staff resources (time better spent on serving the council's own needs)
 
---![](https://i.imgur.com/rlp9JKS.jpg)--
+--![](/static/img/m1-header.jpg)--
 
 The exchange is made complicated because of the M1 specification:
 

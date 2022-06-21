@@ -1,8 +1,9 @@
 ---
-title: Pozi vs IntraMaps
 description: Is IntraMaps no longer growing with you or serving your organisation's needs? Meet Pozi--your new enterprise GIS platform with the features you need, plus real support.
 layout: central
 ---
+
+# IntraMaps vs Pozi
 
 ## Why choose Pozi over IntraMaps?
 
@@ -10,7 +11,7 @@ layout: central
 
 We work with clients on their terms, in their preferred environment, with their preferred infrastructure and resources.
 
-On-premise, cloud or a combination. The choice is yours.
+On-premise, cloud or a hybrid. The choice is yours.
 
 Pozi's open architecture avoids vendor lock-in by respecting our clients' autonomy and strategic technology decisions.
 

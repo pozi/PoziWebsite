@@ -53,3 +53,9 @@ This section describes how to set up Pozi Connect to generate M1s for a new site
 5. within INI and SQL files, update `lga_code`
 6. update `readme.md` to indicate which site was used as the source
 7. TODO: add the remaining steps
+
+#### Parcel Crown Descriptions
+
+##### Townships
+
+A parcel's 'Township' attribute important component of a parcel's description. Without the township value, the parcel description is not unique. When it comes to matching properties to parcels, a property that should be in a township might get associated with a parcel outside of the township that has the same lot and section number.

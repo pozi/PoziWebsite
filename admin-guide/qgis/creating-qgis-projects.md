@@ -10,7 +10,7 @@ order: 90
 
 If you have an existing QGIS project that is already configured for Pozi, you can fast-track the steps below.
 
-Save a copy of an existing project, remove all layers (except for any basemap that you're using as a reference layer), and update the `Advertised URL` settings to use the name of the new project file.
+Save a copy of an existing project, remove all layers (except for any basemap that you might be using as a reference layer), and update the `Advertised URL` settings to use the name of the new project file.
 
 !!!
 
@@ -26,29 +26,29 @@ It's useful to include a basemap in the project to provide visual context for th
 
 #### Example
 
-If you've set up 'Vicmap Basemap' as a WMS/WMTS source, you can easily one of its layers as your basemap.
+If you've [set up](/admin-guide/qgis/setting-up-qgis/#basemap) 'Vicmap Basemap' as a WMS/WMTS source, you can easily one of its layers as your basemap.
 
 Browser > WMS/WMTS > Vicmap Basemap > Vicmap Basemap - Web Mercator - Cartographic
 
 ![Add Vicmap Basemap](./img/qgis-add-wmts-layer.png){style="width:250px"}
 
-## Construct 'Advertised URL'
+## Construct Advertised URL
 
-Construct the URL required for the project to 'advertise' what layers will be available from this project file. Essentially, the project file needs a reference to itself in a URL format.
+The project's *Advertised URL* is a URL at which WMS and WFS requests can interact with the layers in the project file. Essentially, the project file needs a reference to itself in a URL format.
 
-Combine the details below:
+Combine the details below to create your project's Advertised URL:
 
 1. server URL (default server URL is `https://local.pozi.com/`, but check your local setup for any custom endpoint)
 2. service endpoint (eg `iis/qgisserver?`)
 3. QGIS project file path (eg `MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs`)
 
-Combine these three text strings to create your Advertised URL.
+Combine these three text strings to create the Advertised URL.
 
 Example Advertised URL:
 
 https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs
 
-Copy your URL to your clipboard or a blank text document for reference. This URL will be used in subsequent configuration below.
+Copy the URL to your clipboard or a blank text document for reference. This URL will be used in subsequent configuration below.
 
 ## Enable WMS, WMTS and WFS Services
 
@@ -75,18 +75,19 @@ Pozi requires the project to be enabled for WMS, even if you intend for Pozi to 
 
 ## Choose Publishing Format for Project (WMS vs WFS)
 
-WFS (Web Feature Service) provides users with the ability to directly interact with map features. When a WFS layer is loaded in Pozi, every feature from the source dataset is sent to the browser as *vector* layer that includes all geometries and attributes.
+WFS (Web Feature Service) provides users with the ability to directly interact with map features. When a WFS layer is loaded in Pozi, every feature from the source dataset is sent to the browser as a *vector* layer that includes all geometries and attributes.
 
-Advantages:
+### WFS Advantages
 
 * cursor changes when hovering over object
-* select individual features and display results in Info Panel (without displaying results of features on other layers at the same location)
-* enable layers to be interactive using Pozi's filter, report and table view functionality
+* users can select individual features and display results in Info Panel (without displaying results of features on other layers at the same location)
+* layers are fully interactive using Pozi's filter, report and table view functionality
 
-Disadvantages:
+### WFS Disadvantages
 
-* the browser can be easily overwhelmed when dealing with thousands of features or complex features with many vertices
+* the browser can be easily overwhelmed when dealing with thousands of features or complex features with many vertices, resulting in slow panning and zooming
 * not all QGIS styles are supported in Pozi for vector features
+* only one vector feature can be selected at a time - info results are not displayed for any features that have been overlapped by another feature
 * cannot use text expressions for labels
 * restricting visibility to specific zoom ranges is not currently supported
 
@@ -122,6 +123,7 @@ Test this URL by pasting it in your browser and check that you get a valid respo
 
 Email support@pozi.com with these details:
 
+* subject: New layer catalogue
 * name of layer group to appear in Pozi layer panel
 * order in which the layer group is to appear in the Pozi Layer Panel (relative to an existing layer group)
 * choose `WFS` or `WMS` (Note: combined `WMS/WFS` coming soon)

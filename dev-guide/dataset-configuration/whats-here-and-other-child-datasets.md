@@ -21,7 +21,9 @@ Use cases:
 * maintenance
 * photos
 
-The dataset's `url` will contain a request to a dataset, plus a filter parameter for selecting related rows from the source dataset.
+The child dataset's `url` will contain a request to a dataset, plus a filter parameter for selecting related rows from the source dataset.
+
+There is no special configuration required for the parent dataset in order for it to support a child dataset.
 
 #### Filters
 

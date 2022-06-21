@@ -19,7 +19,9 @@ layout: central
 
   # Powered by QGIS
 
-  Use QGIS to configure your layers in Pozi, including adding data sources, layer styling, filtering, data joins, metadata, and more.
+  <big>Use QGIS to publish your layers across your organisation.</big>
+  
+  QGIS provides ultimate control for adding data sources, layer styling, filtering, data joins, metadata, and more.
 
 :::
 
@@ -27,15 +29,15 @@ layout: central
 
 :::centre
 
-<big>QGIS is your **admin panel** for publishing location-based information to users within your organisation</big>
+<big>QGIS is ultimate toolkit for publishing location-based information to users within your organisation</big>
 
 :::
 
 ## Ultimate control
 
-Use QGIS to easily manage and publish map layers to staff within Pozi.
+Use QGIS to easily manage and publish map layers across your organisation.
 
-Add layers to a QGIS project to make them available in Pozi. Easily apply styling, customise fields, join datasets, add metadata, and more, all within the familiar QGIS open source desktop application.
+Simply add layers to a QGIS project to make them available in Pozi. Easily apply styling, customise fields, join datasets, add metadata, and more, all within the familiar QGIS open source desktop application.
 
 Benefits:
 
@@ -47,10 +49,11 @@ Benefits:
 Functionality for Administrators:
 
 * add/remove map layers
+* organise layers in nested groups
 * control styling, filtering, thematic maps
 * expose/hide data fields, and rename fields
 * create dynamic table joins
-* maintain metadata
+* update metadata
 
 ### Styling
 

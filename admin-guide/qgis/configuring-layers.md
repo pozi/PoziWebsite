@@ -2,7 +2,7 @@
 order: 80
 ---
 
-# Managing Layers in QGIS
+# Configuring Layers
 
 ## Adding Layers
 
@@ -41,8 +41,6 @@ Windows > IIS > (select server) > Application Pools > PoziQgisServer > Recycle
 ![](./img/iis-application-pool-recycle.png){style="width:400px"}
 
 !!!
-
-## Configuring Layers
 
 Some common layer configuration tasks you can do in QGIS include:
 

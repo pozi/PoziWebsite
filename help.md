@@ -16,7 +16,7 @@ Welcome to the documentation for Pozi. Here, you can find information about usin
 
 <br/>
 
-## Resources
+## How-To Guides
 
 [!ref icon="person" text="For users"](/user-guide/)
 [!ref icon="tools" text="For administrators"](/admin-guide/)
