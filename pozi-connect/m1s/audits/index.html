@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.709112747239">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.709275330463">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.3.0.709112747239" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.3.0.709275330463" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.709112747239" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.709275330463" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.709112747239" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.709275330463" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -310,20 +310,17 @@
         <span>Pozi Connect M1 Audits</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="pozi-connect-victorian-council-data-audits">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#pozi-connect-victorian-council-data-audits">#</doc-anchor-trigger>
-        <span>Pozi Connect: Victorian Council Data Audits</span>
-    </h2>
-</doc-anchor-target>
 <p>Pozi Connect generates parcel and property/address audits when it creates an M1. Use these audit reports to uncover anomalies in your council&#x27;s data.</p>
 <p>Described below are techniques for filtering the audits to narrow down the records to show only the ones that require further attention.</p>
-<doc-anchor-target id="opening-audit">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#opening-audit">#</doc-anchor-trigger>
-        <span>Opening Audit</span>
-    </h3>
+<doc-anchor-target id="working-with-csvs">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#working-with-csvs">#</doc-anchor-trigger>
+        <span>Working with CSVs</span>
+    </h2>
 </doc-anchor-target>
+<doc-tabs>
+<doc-tab id="excel-libreoffice">
+<template #title>Excel / LibreOffice</template>
 <p>When opening a spreadsheet:</p>
 <doc-anchor-target id="split-window-to-freeze-column-headings">
     <h5>
@@ -355,13 +352,24 @@ or</li>
 <li>click top left corner to highlight all rows, then double-click on any column divider)</li>
 </ul>
 <doc-anchor-target id="filtering-audit">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#filtering-audit">#</doc-anchor-trigger>
         <span>Filtering Audit</span>
-    </h3>
+    </h4>
 </doc-anchor-target>
 <p><em>Example filter to select only <code v-pre>0</code> values</em></p>
 <p><img src="https://i.imgur.com/rjvYdGt.png" style="width:250px" alt="" /></p>
+</doc-tab>
+<doc-tab id="sqliteviz">
+<template #title>SQLiteViz</template>
+<p>Open this webpage, and drag your CSV file into it:</p>
+<p><a href="https://lana-k.github.io/sqliteviz/#/">https://lana-k.github.io/sqliteviz/#/</a></p>
+</doc-tab>
+<doc-tab id="command-line">
+<template #title>Command Line</template>
+<p><a href="https://til.simonwillison.net/sqlite/one-line-csv-operations">https://til.simonwillison.net/sqlite/one-line-csv-operations</a></p>
+</doc-tab>
+</doc-tabs>
 <doc-anchor-target id="council-parcel">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#council-parcel">#</doc-anchor-trigger>

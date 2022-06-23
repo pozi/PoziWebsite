@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.709112747239">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.709275330463">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.3.0.709112747239" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.3.0.709275330463" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.709112747239" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.709275330463" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.709112747239" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.709275330463" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -361,6 +361,7 @@
 <li><a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#query-builder">filter data</a></li>
 <li><a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#fields-properties">modify fields</a></li>
 </ul>
+<br/>
 <doc-anchor-target id="styling-layers">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#styling-layers">#</doc-anchor-trigger>
@@ -404,6 +405,10 @@
 <li>symbol rotation</li>
 <li>fill hatching</li>
 <li>label offsets</li>
+<li>label buffer transparency</li>
+</ul>
+<p>Workaround required (by configuring virtual fields in QGIS):</p>
+<ul>
 <li>rules based on a field name that contains spaces</li>
 <li>text expressions in labels</li>
 </ul>
@@ -417,14 +422,40 @@
 </li>
 <li>increase symbol size from the QGIS default to <strong>4mm</strong> or greater enable to easier interaction for users in the browser</li>
 <li>increase line thicknesses from the QGIS default to <strong>1mm</strong> or greater to enable users to more easily select line features</li>
-<li>increase label text size from the QGIS default to <strong>10 points</strong> or greater and a white <strong>2mm</strong> buffer for better legibility</li>
+<li>increase label text size from the QGIS default to <strong>10 points</strong> or greater, and a white <strong>1.8mm</strong> buffer for better legibility</li>
 </ul>
+<br/>
 <doc-anchor-target id="enable-layers-for-wfs">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#enable-layers-for-wfs">#</doc-anchor-trigger>
         <span>Enable Layers for WFS</span>
     </h2>
 </doc-anchor-target>
+<p>WFS (Web Feature Service) provides users with the ability to directly interact with map features. When a WFS layer is loaded in Pozi, every feature from the source dataset is sent to the browser as a <em>vector</em> layer that includes all geometries and attributes.</p>
+<doc-anchor-target id="wfs-advantages">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#wfs-advantages">#</doc-anchor-trigger>
+        <span>WFS Advantages</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>cursor changes when hovering over object</li>
+<li>users can select individual features and display results in Info Panel (without displaying results of features on other layers at the same location)</li>
+<li>layers are fully interactive using Pozi&#x27;s filter, report and table view functionality</li>
+</ul>
+<doc-anchor-target id="wfs-disadvantages">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#wfs-disadvantages">#</doc-anchor-trigger>
+        <span>WFS Disadvantages</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>the browser can be easily overwhelmed when dealing with thousands of features or complex features with many vertices, resulting in slow panning and zooming</li>
+<li>not all QGIS styles are supported in Pozi for vector features</li>
+<li>only one vector feature can be selected at a time - info results are not displayed for any features that have been overlapped by another feature</li>
+<li>cannot use text expressions for labels</li>
+<li>restricting visibility to specific zoom ranges is not currently supported</li>
+</ul>
 <p>As a guideline, enable WFS only for layers with fewer than 5-10K features. See <a href="../creating-qgis-projects/#enable-wfs-service">here</a> for more information about pros and cons of using WFS.</p>
 <ol>
 <li>Project &gt; Properties &gt; QGIS Server</li>
@@ -432,7 +463,30 @@
 <li>OK</li>
 <li>Project &gt; Save (<code v-pre>Ctrl</code> + <code v-pre>S</code>)</li>
 </ol>
-<p><img src="../img/qgis-project-properties-wfs-configuration.png" style="width:600px" alt="Screenshot of QGIS Project Properties WFS Configuration" /></p>
+<p><img src="../img/qgis-project-properties-wfs-configuration.png" style="width:500px" alt="Screenshot of QGIS Project Properties WFS Configuration" /></p>
+<br/>
+<doc-anchor-target id="feature-title">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#feature-title">#</doc-anchor-trigger>
+        <span>Feature Title</span>
+    </h2>
+</doc-anchor-target>
+<p>When users select a feature from the map, Pozi will pick a value from the selected feature&#x27;s attributes to display prominently at the top of the Info Panel.</p>
+<doc-panel id="priority-field-names" collapsed>
+    <template #title>Priority Field Names</template>
+<p>Pozi dynamically evaluates the selected feature, and attempts to use fields with any of these names if they exist and contain a value:</p>
+<ul>
+<li><code v-pre>label</code> or <code v-pre>*label</code></li>
+<li><code v-pre>name</code> or <code v-pre>*name</code></li>
+<li><code v-pre>title</code> or <code v-pre>*title</code></li>
+<li><code v-pre>description</code> or <code v-pre>*description</code></li>
+</ul>
+<p><em>Note: the asterisk above represents a wildcard, meaning that the field name may begin with any text.</em></p>
+<p>This list is subject to change. (<a href="https://github.com/pozi/PoziApp/blob/master/app/src/drawer/tabs/info/Label.ts">Developer Notes</a>)</p>
+</doc-panel>
+<p>You can manipulate your source data using virtual fields in QGIS to promote your chosen field by using any variation of the priority names.</p>
+<p>See <a href="https://docs.qgis.org/latest/en/docs/user_manual/expressions/expression.html">https://docs.qgis.org/latest/en/docs/user_manual/expressions/expression.html</a></p>
+<br/>
 <doc-anchor-target id="table-file-maintenance">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#table-file-maintenance">#</doc-anchor-trigger>
@@ -444,6 +498,7 @@
 <p>Windows &gt; IIS &gt; (select server) &gt; Application Pools &gt; PoziQgisServer &gt; Stop</p>
 <p>You may also need to stop any other services that start with <code v-pre>PoziQgisServer</code>.</p>
 <p>Restart the service(s) after you make your changes.</p>
+<br/>
 <doc-anchor-target id="troubleshooting">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#troubleshooting">#</doc-anchor-trigger>
