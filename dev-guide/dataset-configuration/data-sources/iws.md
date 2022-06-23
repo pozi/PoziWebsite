@@ -27,61 +27,61 @@ Email coordinated.imagery@delwp.vic.gov.au
 
 ==- Single Image Example
 
-  ```json
-  {
-    "title": "Aerial 2008 Dec (Urban)",
-    "group": "Imagery",
-    "type": "TileWMSAuth",
-    "about": {
-      "source": "Victorian Coordinated Imagery Program",
-      "organisation": "DELWP",
-      "url": "https://www2.delwp.vic.gov.au/maps/maps-and-services/coordinated-imagery-program"
-    },
-    "linkedLayers": [
-      "Vicmap Labels"
-    ],
-    "config": {
-      "url": "https://imageproxy.pozi.com/http://images.land.vic.gov.au/ecwp/ecw_wms.dll",
-      "params": {
-        "LAYERS": "aerial_bendigo_2008jan06_air_vis_15cm_mga55",
-        "STYLES": "",
-        "TILED": true,
-        "FORMAT": "image/jpeg",
-        "authkey": "iws-bendigo"
-      }
+```json
+{
+  "title": "Aerial 2008 Dec (Urban)",
+  "group": "Imagery",
+  "type": "TileWMSAuth",
+  "about": {
+    "source": "Victorian Coordinated Imagery Program",
+    "organisation": "DELWP",
+    "url": "https://www2.delwp.vic.gov.au/maps/maps-and-services/coordinated-imagery-program"
+  },
+  "linkedLayers": [
+    "Vicmap Labels"
+  ],
+  "config": {
+    "url": "https://imageproxy.pozi.com/http://images.land.vic.gov.au/ecwp/ecw_wms.dll",
+    "params": {
+      "LAYERS": "aerial_bendigo_2008jan06_air_vis_15cm_mga55",
+      "STYLES": "",
+      "TILED": true,
+      "FORMAT": "image/jpeg",
+      "authkey": "iws-bendigo"
     }
   }
+}
   ```
 
 ==- Multi Image Example
 
-  *Note: each layer name in the `LAYERS` parameter is separated by a comma, and the `STYLES` paramater must contain the same number of commas.*
+*Note: each layer name in the `LAYERS` parameter is separated by a comma, and the `STYLES` paramater must contain the same number of commas.*
 
-  ```json
-  {
-    "title": "Aerial Photo (Latest)",
-    "group": "Imagery",
-    "type": "TileWMSAuth",
-    "about": {
-      "source": "Victorian Coordinated Imagery Program",
-      "organisation": "DELWP",
-      "url": "https://www2.delwp.vic.gov.au/maps/maps-and-services/coordinated-imagery-program"
-    },
-    "linkedLayers": [
-      "Vicmap Labels"
-    ],
-    "config": {
-      "url": "https://imageproxy.pozi.com/http://images.land.vic.gov.au/ecwp/ecw_wms.dll",
-      "params": {
-        "LAYERS": "aerial_bendigo_2021jan17_air_vis_10cm_mga55,towns_bendigo_2021sep02_air_vis_10cm_mga55,towns_axedale_2021jan18_air_vis_10cm_mga55,towns_elmore_2021jan18_air_vis_10cm_mga55,towns_goornong_2021jan18_air_vis_10cm_mga55,towns_heathcote_2020feb22_air_vis_10cm_mga55,towns_lockwood-south_2021jan17_air_vis_10cm_mga55,towns_marong_2020feb22_air_vis_10cm_mga55,towns_neilborough_2021jan17_air_vis_10cm_mga55,towns_ravenswood_2021jan17_air_vis_10cm_mga55,towns_raywood_2021jan17_air_vis_10cm_mga55,towns_redesdale_2020feb22_air_vis_10cm_mga55,towns_sebastian_2021jan17_air_vis_10cm_mga55,towns_mia-mia_2020feb22_air_vis_10cm_mga55",
-        "STYLES": ",,,,,,,,,,,,,",
-        "TILED": true,
-        "FORMAT": "image/jpeg",
-        "authkey": "iws-bendigo"
-      }
+```json
+{
+  "title": "Aerial Photo (Latest)",
+  "group": "Imagery",
+  "type": "TileWMSAuth",
+  "about": {
+    "source": "Victorian Coordinated Imagery Program",
+    "organisation": "DELWP",
+    "url": "https://www2.delwp.vic.gov.au/maps/maps-and-services/coordinated-imagery-program"
+  },
+  "linkedLayers": [
+    "Vicmap Labels"
+  ],
+  "config": {
+    "url": "https://imageproxy.pozi.com/http://images.land.vic.gov.au/ecwp/ecw_wms.dll",
+    "params": {
+      "LAYERS": "aerial_bendigo_2021jan17_air_vis_10cm_mga55,towns_bendigo_2021sep02_air_vis_10cm_mga55,towns_axedale_2021jan18_air_vis_10cm_mga55,towns_elmore_2021jan18_air_vis_10cm_mga55,towns_goornong_2021jan18_air_vis_10cm_mga55,towns_heathcote_2020feb22_air_vis_10cm_mga55,towns_lockwood-south_2021jan17_air_vis_10cm_mga55,towns_marong_2020feb22_air_vis_10cm_mga55,towns_neilborough_2021jan17_air_vis_10cm_mga55,towns_ravenswood_2021jan17_air_vis_10cm_mga55,towns_raywood_2021jan17_air_vis_10cm_mga55,towns_redesdale_2020feb22_air_vis_10cm_mga55,towns_sebastian_2021jan17_air_vis_10cm_mga55,towns_mia-mia_2020feb22_air_vis_10cm_mga55",
+      "STYLES": ",,,,,,,,,,,,,",
+      "TILED": true,
+      "FORMAT": "image/jpeg",
+      "authkey": "iws-bendigo"
     }
   }
-  ```
+}
+```
 
 ==-
 

@@ -7,7 +7,7 @@ layout: central
 
 You want the best solution for your organisation, and that's why you're shopping around.
 
-To help make the right choice for your organisation, we created these pages. You can directly compare our platform to our most popular competitors.
+To help you make the right choice for your organisation, we created these pages. You can directly compare our platform to our most popular competitors.
 
 [!ref text="IntraMaps vs Pozi"](/compare/intramaps/)
 

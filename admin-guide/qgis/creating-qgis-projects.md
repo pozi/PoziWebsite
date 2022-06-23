@@ -10,7 +10,7 @@ order: 90
 
 If you have an existing QGIS project that is already configured for Pozi, you can fast-track the steps below.
 
-Save a copy of an existing project, remove all layers (except for any basemap that you might be using as a reference layer), and update the `Advertised URL` settings to use the name of the new project file.
+Save a copy of an existing project, remove all layers (except for any basemap that you might be using as a background layer), and update the `Advertised URL` settings to use the name of the new project file.
 
 !!!
 
@@ -50,11 +50,7 @@ https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userda
 
 Copy the URL to your clipboard or a blank text document for reference. This URL will be used in subsequent configuration below.
 
-## Enable WMS, WMTS and WFS Services
-
-!!!
-Pozi requires the project to be enabled for WMS, even if you intend for Pozi to use only WFS for accessing the layers.
-!!!
+## Enable Web Services
 
 1. Project > Properties > QGIS Server
 2. update WMS capabilities settings
@@ -73,26 +69,6 @@ Pozi requires the project to be enabled for WMS, even if you intend for Pozi to 
 6. OK
 7. Project > Save  (`Ctrl` + `S`)
 
-## Choose Publishing Format for Project (WMS vs WFS)
-
-WFS (Web Feature Service) provides users with the ability to directly interact with map features. When a WFS layer is loaded in Pozi, every feature from the source dataset is sent to the browser as a *vector* layer that includes all geometries and attributes.
-
-### WFS Advantages
-
-* cursor changes when hovering over object
-* users can select individual features and display results in Info Panel (without displaying results of features on other layers at the same location)
-* layers are fully interactive using Pozi's filter, report and table view functionality
-
-### WFS Disadvantages
-
-* the browser can be easily overwhelmed when dealing with thousands of features or complex features with many vertices, resulting in slow panning and zooming
-* not all QGIS styles are supported in Pozi for vector features
-* only one vector feature can be selected at a time - info results are not displayed for any features that have been overlapped by another feature
-* cannot use text expressions for labels
-* restricting visibility to specific zoom ranges is not currently supported
-
-As a guideline, use WFS for layers with fewer than 5-10K point features, and even fewer for line and polygon features depending on shape complexity.
-
 ## Further Settings
 
 A comprehensive guide for configuring QGIS projects for publishing layers via WMS/WFS can be found at:
@@ -101,21 +77,18 @@ https://docs.qgis.org/latest/en/docs/server_manual/getting_started.html#creating
 
 ## Register Project
 
-### Test GetCapabilities URL
+### Test GetProjectSettings URL
 
-Construct a `GetCapabilities` URL by combining the following:
+Construct a `GetProjectSettings` URL by combining the following:
 
 1. Advertised URL from above (eg `https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs`)
-2. preferred service, either:
-   * WMS: `&service=WMS`
-   * WFS: `&service=WFS`
-3. GetCapabilities request: `&request=GetCapabilities`
+2. GetProjectSettings request: `&service=WMS&REQUEST=GetProjectSettings`
 
-Combine these three text strings to create a `GetCapabilities` URL.
+Combine these text strings to create a `GetProjectSettings` URL.
 
-Example WMS `GetCapabilities` URL:
+Example `GetProjectSettings` URL:
 
-https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs&service=WMS&request=GetCapabilities
+https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs&service=WMS&request=GetProjectSettings
 
 Test this URL by pasting it in your browser and check that you get a valid response that lists the available layers.
 
@@ -126,8 +99,7 @@ Email support@pozi.com with these details:
 * subject: New layer catalogue
 * name of layer group to appear in Pozi layer panel
 * order in which the layer group is to appear in the Pozi Layer Panel (relative to an existing layer group)
-* choose `WFS` or `WMS` (Note: combined `WMS/WFS` coming soon)
-* WFS or WMS `GetCapabilities` URL
+* `GetProjectSettings` URL
 
 Within 24 hours, the new layer group will be configured and available for users to view in Pozi.
 

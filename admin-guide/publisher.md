@@ -3,7 +3,7 @@ title: Publisher
 tags: [Pozi Enterprise]
 ---
 
-*Available for Pozi Enterprise and Enterprise Cloud customers*
+# Publisher
 
 The Pozi Publisher enables your organisation to export selected internal datasets out to the web, where they can be viewed by the public in the Pozi App.
 

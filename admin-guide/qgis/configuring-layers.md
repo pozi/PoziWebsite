@@ -48,6 +48,8 @@ Some common layer configuration tasks you can do in QGIS include:
 * [filter data](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#query-builder)
 * [modify fields](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#fields-properties)
 
+<br/>
+
 ## Styling Layers
 
 Using QGIS, you can control many visual aspects of your layer.
@@ -82,6 +84,10 @@ Not currently supported:
 * symbol rotation
 * fill hatching
 * label offsets
+* label buffer transparency
+
+Workaround required (by configuring virtual fields in QGIS):
+
 * rules based on a field name that contains spaces
 * text expressions in labels
 
@@ -92,9 +98,27 @@ Vector Style Tips:
   * for polygon features to be selectable, the fill opacity must be greater than `0` - it can be as little as 1%
 * increase symbol size from the QGIS default to **4mm** or greater enable to easier interaction for users in the browser
 * increase line thicknesses from the QGIS default to **1mm** or greater to enable users to more easily select line features
-* increase label text size from the QGIS default to **10 points** or greater and a white **2mm** buffer for better legibility
+* increase label text size from the QGIS default to **10 points** or greater, and a white **1.8mm** buffer for better legibility
+
+<br/>
 
 ## Enable Layers for WFS
+
+WFS (Web Feature Service) provides users with the ability to directly interact with map features. When a WFS layer is loaded in Pozi, every feature from the source dataset is sent to the browser as a *vector* layer that includes all geometries and attributes.
+
+### WFS Advantages
+
+* cursor changes when hovering over object
+* users can select individual features and display results in Info Panel (without displaying results of features on other layers at the same location)
+* layers are fully interactive using Pozi's filter, report and table view functionality
+
+### WFS Disadvantages
+
+* the browser can be easily overwhelmed when dealing with thousands of features or complex features with many vertices, resulting in slow panning and zooming
+* not all QGIS styles are supported in Pozi for vector features
+* only one vector feature can be selected at a time - info results are not displayed for any features that have been overlapped by another feature
+* cannot use text expressions for labels
+* restricting visibility to specific zoom ranges is not currently supported
 
 As a guideline, enable WFS only for layers with fewer than 5-10K features. See [here](/admin-guide/qgis/creating-qgis-projects/#enable-wfs-service) for more information about pros and cons of using WFS.
 
@@ -103,7 +127,34 @@ As a guideline, enable WFS only for layers with fewer than 5-10K features. See [
 3. OK
 4. Project > Save (`Ctrl` + `S`)
 
-![Screenshot of QGIS Project Properties WFS Configuration](./img/qgis-project-properties-wfs-configuration.png){style="width:600px"}
+![Screenshot of QGIS Project Properties WFS Configuration](./img/qgis-project-properties-wfs-configuration.png){style="width:500px"}
+
+<br/>
+
+## Feature Title
+
+When users select a feature from the map, Pozi will pick a value from the selected feature's attributes to display prominently at the top of the Info Panel.
+
+==- Priority Field Names
+
+Pozi dynamically evaluates the selected feature, and attempts to use fields with any of these names if they exist and contain a value:
+
+* `label` or `*label`
+* `name` or `*name`
+* `title` or `*title`
+* `description` or `*description`
+
+*Note: the asterisk above represents a wildcard, meaning that the field name may begin with any text.*
+
+This list is subject to change. ([Developer Notes](https://github.com/pozi/PoziApp/blob/master/app/src/drawer/tabs/info/Label.ts))
+
+==-
+
+You can manipulate your source data using virtual fields in QGIS to promote your chosen field by using any variation of the priority names.
+
+See https://docs.qgis.org/latest/en/docs/user_manual/expressions/expression.html
+
+<br/>
 
 ## Table File Maintenance
 
@@ -116,6 +167,8 @@ Windows > IIS > (select server) > Application Pools > PoziQgisServer > Stop
 You may also need to stop any other services that start with `PoziQgisServer`.
 
 Restart the service(s) after you make your changes.
+
+<br/>
 
 ## Troubleshooting
 

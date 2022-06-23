@@ -1,5 +1,6 @@
 ---
 title: Spatial Data Library
+order: -10
 ---
 
 A well-structured data library makes it easy for organisations to maintain up-to-date data from internal and external sources.

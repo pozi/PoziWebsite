@@ -10,11 +10,20 @@ See https://github.com/pozi/PoziApp/blob/master/app/src/ConfigManager/schemas/la
 
 ## Dataset Types
 
+### Catalogues
+
+```
+QGISProjectSettings
+WFSGetCapabilities
+WMSGetCapabilities
+```
+
+### Individual Datasets
+
 ```
 GeoJSON
 Image
 ImageWMS
-QGISGetProjectSettings
 Search
 TileWMS
 TileWMSAuth
@@ -23,8 +32,6 @@ Mapbox-GL
 Mapbox-OLSM
 VectorTile
 Vicmap
-WFSGetCapabilities
-WMSGetCapabilities
 XYZ
 ```
 

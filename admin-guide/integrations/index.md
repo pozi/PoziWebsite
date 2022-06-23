@@ -14,7 +14,7 @@ order: 90
 * Confirm
 * Conquest
 * [CouncilWise](./councilwise/)
-* data.gov.au
+* [data.gov.au](./data-gov-au/)
 * [DELWP Web Services](./delwp-web-services/)
 * Geocode Earth
 * GeoSciences Australia

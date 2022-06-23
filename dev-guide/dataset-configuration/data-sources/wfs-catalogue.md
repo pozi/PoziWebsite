@@ -17,6 +17,7 @@ When specifying the URL for QGS project files, any backslashes must be converted
     "title": "Assets",
     "group": "Assets",
     "type": "WFSGetCapabilities",
+    "serverType": "qgis",
     "config": {
       "spatial": {
         "url": "https://hrccsvrgis01.pozi.com/iis/qgisserver?service=WFS&request=GetCapabilities&MAP=//ad.hrcc.vic.gov.au/shared/GIS/workspaces/Pozi/Assets.qgs",

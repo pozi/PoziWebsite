@@ -1,15 +1,16 @@
 ---
-title: Pozi Connect M1 Audits
-sidebar_label: Audits
+label: Audits
 ---
 
-## Pozi Connect: Victorian Council Data Audits
+# Pozi Connect M1 Audits
 
 Pozi Connect generates parcel and property/address audits when it creates an M1. Use these audit reports to uncover anomalies in your council's data.
 
 Described below are techniques for filtering the audits to narrow down the records to show only the ones that require further attention.
 
-### Opening Audit
+## Working with CSVs
+
++++ Excel / LibreOffice
 
 When opening a spreadsheet:
 
@@ -27,12 +28,23 @@ When opening a spreadsheet:
 
 * click top left corner to highlight all rows, then double-click on any column divider)
 
-### Filtering Audit
+#### Filtering Audit
 
 *Example filter to select only `0` values*
 
 ![](https://i.imgur.com/rjvYdGt.png){style="width:250px"}
 
++++ SQLiteViz
+
+Open this webpage, and drag your CSV file into it:
+
+https://lana-k.github.io/sqliteviz/#/
+
++++ Command Line
+
+https://til.simonwillison.net/sqlite/one-line-csv-operations
+
++++
 
 ## Council Parcel
 
