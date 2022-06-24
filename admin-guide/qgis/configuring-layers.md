@@ -140,6 +140,7 @@ When users select a feature from the map, Pozi will pick a value from the select
 Pozi dynamically evaluates the selected feature, and attempts to use fields with any of these names if they exist and contain a value:
 
 * `label` or `*label`
+* `ezi_address`
 * `name` or `*name`
 * `title` or `*title`
 * `description` or `*description`

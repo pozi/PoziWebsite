@@ -3,6 +3,8 @@
 
 # QGIS Catalogue
 
+## Configuration
+
 ==- Example Config
 
 ```json
@@ -24,8 +26,6 @@
 ```
 
 ==-
-
-## Configuration
 
 ### Selectability
 
