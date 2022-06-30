@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.709370456570">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.709872506006">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.3.0.709370456570" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.3.0.709872506006" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.709370456570" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.709872506006" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.709370456570" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.3.0.709370456570" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.709872506006" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.3.0.709872506006" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -348,6 +348,17 @@
         <span>Options</span>
     </h2>
 </doc-anchor-target>
+<doc-anchor-target id="enabled">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#enabled">#</doc-anchor-trigger>
+        <span>Enabled</span>
+    </h3>
+</doc-anchor-target>
+<p>Set to <code v-pre>false</code> to prevent the dataset from being configured in Pozi. The default value is <code v-pre>true</code>.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">  &quot;enabled&quot;: false,</code></pre>
+</doc-codeblock></div>
+<p>This setting goes beyond simply hiding the layer as per the <code v-pre>showInLayerControl</code> setting. It causes Pozi to completely ignore the dataset and make it unavailable as a layer or child dataset. In the case of the source being a catalogue, it will prevent Pozi from sending a GetCapabilities request.</p>
 <doc-anchor-target id="queryable">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#queryable">#</doc-anchor-trigger>
@@ -449,6 +460,30 @@
         {
           &quot;name_alt&quot;: &quot;Name (Alternate)&quot;
         },</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="garbage">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#garbage">#</doc-anchor-trigger>
+        <span>Garbage</span>
+    </h4>
+</doc-anchor-target>
+<p>If the source dataset complies with the <a href="http://standards.opencouncildata.org/#/garbage-collection-zones">OpenCouncilData waste data spec</a>, Pozi will use the information in the table to calculate and display the next waste collection date.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">    &quot;transformer&quot;: {
+      &quot;pointOnSurface&quot;: true,
+      &quot;garbage&quot;: true,
+      &quot;renameAndOrderFields&quot;: [
+        {
+          &quot;rubbish_next_pickup&quot;: &quot;Next Rubbish Pickup&quot;
+        },
+        {
+          &quot;recycling_next_pickup&quot;: &quot;Next Recycling Pickup&quot;
+        },
+        {
+          &quot;green_waste_next_pickup&quot;: &quot;Next Organics Pickup&quot;
+        }
+      ]
+    }</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="promote-details">
     <h3>

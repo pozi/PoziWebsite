@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.709370456570">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.709872506006">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.3.0.709370456570" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.3.0.709872506006" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.709370456570" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.709872506006" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.709370456570" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.709872506006" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -439,9 +439,10 @@
     </h3>
 </doc-anchor-target>
 <ul>
+<li>layers are fully interactive using Pozi&#x27;s filter, report and table view functionality</li>
+<li>after the layer is loaded in the browser, the browser doesn&#x27;t not need to send new requests to the server every time the map moves</li>
 <li>cursor changes when hovering over object</li>
 <li>users can select individual features and display results in Info Panel (without displaying results of features on other layers at the same location)</li>
-<li>layers are fully interactive using Pozi&#x27;s filter, report and table view functionality</li>
 </ul>
 <doc-anchor-target id="wfs-disadvantages">
     <h3>
@@ -453,10 +454,16 @@
 <li>the browser can be easily overwhelmed when dealing with thousands of features or complex features with many vertices, resulting in slow panning and zooming</li>
 <li>not all QGIS styles are supported in Pozi for vector features</li>
 <li>only one vector feature can be selected at a time - info results are not displayed for any features that have been overlapped by another feature</li>
-<li>cannot use text expressions for labels</li>
+<li>cannot directly use text expressions for labels (but you can still make use of virtual fields for creating generating label values)</li>
 <li>restricting visibility to specific zoom ranges is not currently supported</li>
 </ul>
-<p>As a guideline, enable WFS only for layers with fewer than 5-10K features. See <a href="../creating-qgis-projects/#enable-wfs-service">here</a> for more information about pros and cons of using WFS.</p>
+<p>As a guideline, enable WFS only for layers with fewer than 5-10K features, or even fewer for layers with complex polylines or polygons.</p>
+<doc-anchor-target id="enable-wfs">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#enable-wfs">#</doc-anchor-trigger>
+        <span>Enable WFS</span>
+    </h3>
+</doc-anchor-target>
 <ol>
 <li>Project &gt; Properties &gt; QGIS Server</li>
 <li><code v-pre>WFS capabilities &gt; Published</code>: tick on for each layer to be published</li>
@@ -483,10 +490,19 @@
 <li><code v-pre>description</code> or <code v-pre>*description</code></li>
 </ul>
 <p><em>Note: the asterisk above represents a wildcard, meaning that the field name may begin with any text.</em></p>
-<p>This list is subject to change. (<a href="https://github.com/pozi/PoziApp/blob/master/app/src/drawer/tabs/info/Label.ts">Developer Notes</a>)</p>
+<p>This list is subject to change. <a href="https://github.com/pozi/PoziApp/blob/master/app/src/drawer/tabs/info/Label.ts">(Developer Notes)</a></p>
 </doc-panel>
 <p>You can manipulate your source data using virtual fields in QGIS to promote your chosen field by using any variation of the priority names.</p>
 <p>See <a href="https://docs.qgis.org/latest/en/docs/user_manual/expressions/expression.html">https://docs.qgis.org/latest/en/docs/user_manual/expressions/expression.html</a></p>
+<br/>
+<doc-anchor-target id="selectability">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#selectability">#</doc-anchor-trigger>
+        <span>Selectability</span>
+    </h2>
+</doc-anchor-target>
+<p>To prevent the Info Panel from displaying results from specific layers (say, for aerial photos), update the <code v-pre>Data Sources</code> settings in the QGIS project.</p>
+<p>Project &gt; Properties &gt; Data Sources &gt; Identifiable &gt; untick to disable layer selectability</p>
 <br/>
 <doc-anchor-target id="table-file-maintenance">
     <h2>

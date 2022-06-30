@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.709370456570">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.709872506006">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.3.0.709370456570" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.3.0.709872506006" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.709370456570" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.709872506006" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.709370456570" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.709872506006" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -356,6 +356,7 @@
 <p>If you&#x27;ve <a href="../setting-up-qgis/#basemap">set up</a> &#x27;Vicmap Basemap&#x27; as a WMS/WMTS source, you can easily one of its layers as your basemap.</p>
 <p>Browser &gt; WMS/WMTS &gt; Vicmap Basemap &gt; Vicmap Basemap - Web Mercator - Cartographic</p>
 <p><img src="../img/qgis-add-wmts-layer.png" style="width:250px" alt="Add Vicmap Basemap" /></p>
+<br/>
 <doc-anchor-target id="construct-advertised-url">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#construct-advertised-url">#</doc-anchor-trigger>
@@ -373,6 +374,7 @@
 <p>Example Advertised URL:</p>
 <p><a href="https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs">https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs</a></p>
 <p>Copy the URL to your clipboard or a blank text document for reference. This URL will be used in subsequent configuration below.</p>
+<br/>
 <doc-anchor-target id="enable-web-services">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#enable-web-services">#</doc-anchor-trigger>
@@ -406,6 +408,7 @@
 <li>OK</li>
 <li>Project &gt; Save  (<code v-pre>Ctrl</code> + <code v-pre>S</code>)</li>
 </ol>
+<br/>
 <doc-anchor-target id="further-settings">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#further-settings">#</doc-anchor-trigger>
@@ -414,16 +417,26 @@
 </doc-anchor-target>
 <p>A comprehensive guide for configuring QGIS projects for publishing layers via WMS/WFS can be found at:</p>
 <p><a href="https://docs.qgis.org/latest/en/docs/server_manual/getting_started.html#creatingwmsfromproject">https://docs.qgis.org/latest/en/docs/server_manual/getting_started.html#creatingwmsfromproject</a></p>
+<br/>
+<doc-anchor-target id="add-layers">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#add-layers">#</doc-anchor-trigger>
+        <span>Add Layers</span>
+    </h2>
+</doc-anchor-target>
+<p>See <a href="../configuring-layers/">Configuring Layers</a> for details about working with layers.</p>
+<p>When you&#x27;re done, remember to <a href="../configuring-layers/#enable-wfs">enable any layers for WFS</a> if required.</p>
+<br/>
 <doc-anchor-target id="register-project">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#register-project">#</doc-anchor-trigger>
         <span>Register Project</span>
     </h2>
 </doc-anchor-target>
-<doc-anchor-target id="test-getprojectsettings-url">
+<doc-anchor-target id="obtain-getprojectsettings-url">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#test-getprojectsettings-url">#</doc-anchor-trigger>
-        <span>Test GetProjectSettings URL</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#obtain-getprojectsettings-url">#</doc-anchor-trigger>
+        <span>Obtain GetProjectSettings URL</span>
     </h3>
 </doc-anchor-target>
 <p>Construct a <code v-pre>GetProjectSettings</code> URL by combining the following:</p>
@@ -435,6 +448,20 @@
 <p>Example <code v-pre>GetProjectSettings</code> URL:</p>
 <p><a href="https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs&amp;service=WMS&amp;request=GetProjectSettings">https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs&amp;service=WMS&amp;request=GetProjectSettings</a></p>
 <p>Test this URL by pasting it in your browser and check that you get a valid response that lists the available layers.</p>
+<doc-anchor-target id="test-project-load-performance">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#test-project-load-performance">#</doc-anchor-trigger>
+        <span>Test Project Load Performance</span>
+    </h3>
+</doc-anchor-target>
+<p>The speed at which Pozi can access layers from the QGIS project is limited by how fast QGIS can access the layers.</p>
+<p>To ensure that QGIS is able to access the layers quickly, check the project&#x27;s performance using QGIS&#x27;s debugging tool to identify any performance issues.</p>
+<p>View &gt; Panels &gt; Debugging/Development Tools &gt; Profiler (clock button)</p>
+<p>As soon as you load a QGIS project, a new category called <code v-pre>Project Load</code> will be available. Select it from the category list.</p>
+<p>Expand the entry called <code v-pre>Reading map layers</code> in the profiler tree to see all of the QGIS project layers and their corresponding loading time.</p>
+<p><img src="../img/qgis-debug-layer-load-times.png" style="width:300px" alt="QGIS Debug Tool" /></p>
+<p>If the result show any layer that takes more than a fraction of a second to load, there may be an issue with the network or database that is worth investigating.</p>
+<p><a href="https://gis.stackexchange.com/a/414884">(via GIS StackExchange)</a></p>
 <doc-anchor-target id="submit-helpdesk-ticket">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#submit-helpdesk-ticket">#</doc-anchor-trigger>
@@ -444,7 +471,7 @@
 <p>Email <a href="mailto:support@pozi.com">support@pozi.com</a> with these details:</p>
 <ul>
 <li>subject: New layer catalogue</li>
-<li>name of layer group to appear in Pozi layer panel</li>
+<li>name of new layer group to appear in Pozi layer panel</li>
 <li>order in which the layer group is to appear in the Pozi Layer Panel (relative to an existing layer group)</li>
 <li><code v-pre>GetProjectSettings</code> URL</li>
 </ul>
