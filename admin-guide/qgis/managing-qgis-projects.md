@@ -2,7 +2,9 @@
 order: 90
 ---
 
-# Creating QGIS Projects
+# Managing QGIS Projects
+
+A QGIS project is a collection of layers and settings that make up a QGIS map. Pozi uses these projects as layer catalogues, each of which is displayed in Pozi as a layer group.
 
 ## Create Project
 
@@ -116,13 +118,13 @@ To ensure that QGIS is able to access the layers quickly, check the project's pe
 
 View > Panels > Debugging/Development Tools > Profiler (clock button)
 
-As soon as you load a QGIS project, a new category called `Project Load` will be available. Select it from the category list.
+As soon as you load your QGIS project, a new category called `Project Load` will be available. Select it from the category list.
 
 Expand the entry called `Reading map layers` in the profiler tree to see all of the QGIS project layers and their corresponding loading time.
 
-![QGIS Debug Tool](./img/qgis-debug-layer-load-times.png){style="width:300px"}
+![QGIS Debug Tool](./img/qgis-debug-layer-load-times.png){style="width:350px"}
 
-If the result show any layer that takes more than a fraction of a second to load, there may be an issue with the network or database that is worth investigating.
+If the results show any layer that takes more than a fraction of a second to load, there may be an issue with the network or database that is worth investigating.
 
 [(via GIS StackExchange)](https://gis.stackexchange.com/a/414884)
 
@@ -137,4 +139,4 @@ Email support@pozi.com with these details:
 
 Within 24 hours, the new layer group will be configured and available for users to view in Pozi.
 
-During this time, and any time afterwards, you may start [adding and configuring layers](/admin-guide/qgis/managing-layers-in-qgis/) in your new project.
+During this time, and any time afterwards, you may continue to [add and configure layers](/admin-guide/qgis/configuring-layers/) in your new project.

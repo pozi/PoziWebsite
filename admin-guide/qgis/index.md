@@ -15,6 +15,6 @@ This functionality is powered by QGIS Server, which is installed on the client n
 Administrators configure their layers dedicated QGIS project files, and the layers within the projects appear in a layer groups in the Pozi layer panel.
 
 [!ref](./setting-up-qgis/)
-[!ref](./creating-qgis-projects/)
+[!ref](./managing-qgis-projects/)
 [!ref](./configuring-layers/)
 [!ref](./configuring-linked-datasets/)

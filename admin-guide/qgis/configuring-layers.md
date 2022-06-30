@@ -6,7 +6,7 @@ order: 80
 
 ## Adding Layers
 
-Using your [existing QGIS project](creating-qgis-projects), you can add new layers to publish them to your users.
+Using your [existing QGIS project](managing-qgis-projects), you can add new layers to publish them to your users.
 
 1. open your project file in QGIS
 2. Layer > Add Layer > pick from vector, raster or other options

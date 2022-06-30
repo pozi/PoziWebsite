@@ -20,7 +20,7 @@ There is no special configuration required for the parent dataset for it to supp
 
 ## Add Dataset
 
-Add datasets to an [existing QGIS project](creating-qgis-projects) (eg `Child Datasets.qgs`).
+Add datasets to an [existing QGIS project](managing-qgis-projects) (eg `Child Datasets.qgs`).
 
 1. open project file in QGIS
 2. Layer > Add Layer > pick from file or database options
@@ -36,7 +36,7 @@ Add datasets to an [existing QGIS project](creating-qgis-projects) (eg `Child Da
 
 Construct a `GetFeature` URL by combining the following:
 
-1. the project's [Advertised URL](/admin-guide/qgis/creating-qgis-projects/#construct-advertised-url) (eg `https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs`)
+1. the project's [Advertised URL](/admin-guide/qgis/managing-qgis-projects/#construct-advertised-url) (eg `https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs`)
 2. WFS GetFeature request: `&service=WFS&version=1.1.0&request=GetFeature`
 3. table: `&typename=` + table name
 
