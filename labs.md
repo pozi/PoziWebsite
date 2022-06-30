@@ -16,25 +16,6 @@ Publish local data to the public with ease.
 
 Use QGIS to organise local layers, including styling, and publish them to the Pozi cloud to enable the public to access these layers from your public-facing Pozi site.
 
-## QGIS Integration (✔️ funded!)
-
-A major Pozi upgrade to enable your organisation to gain full control over its Pozi map configuration using the popular open source QGIS desktop software.
-
-Benefits:
-
-* maintain control over map layers available to staff
-* quickly respond to staff requirements
-* build your organisation's capabilities for maintaining GIS configuration
-* make it easier for users to discover and access specialised datasets that are useful to their workflows
-
-Functionality for Administrators:
-
-* add/remove map layers
-* control styling, filtering, thematic maps
-* expose/hide data fields, and rename fields
-* create dynamic table joins
-* maintain metadata
-
 ---
 
 ## Property Report
@@ -43,11 +24,16 @@ The Pozi Property Report displays the details of any selected or searched-for ad
 
 ---
 
-## 3D
+## 3D Mode
 
 Use Pozi to visualise your 3D imagery. Toggle between 2D and 3D viewing modes. Compatible with Cesium 3D tile format.
 
 ---
+
+## Advanced Selection
+
+* enable users to select features from any map layer using the region selection
+* display results of all active layers in multiple tables at the bottom of the map
 
 ## Collaborative Map Annotations
 

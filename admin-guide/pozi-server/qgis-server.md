@@ -137,7 +137,7 @@ If the command prompt option doesn't work, you can configure the environment var
 
 ![FastCGI Settings](./img/pozi-qgis-server-iis.png)
 
-Windows > IIS > select server > Fast CGISettings > select item we just configured > Edit > Environment variables:
+Windows > IIS > select server > Fast CGISettings > select `qgis_mapserv.fcgi.exe` application > Edit > Environment variables:
 
 Name | Value 
 -----|------

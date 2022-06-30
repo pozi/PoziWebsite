@@ -32,6 +32,8 @@ Browser > WMS/WMTS > Vicmap Basemap > Vicmap Basemap - Web Mercator - Cartograph
 
 ![Add Vicmap Basemap](./img/qgis-add-wmts-layer.png){style="width:250px"}
 
+<br/>
+
 ## Construct Advertised URL
 
 The project's *Advertised URL* is a URL at which WMS and WFS requests can interact with the layers in the project file. Essentially, the project file needs a reference to itself in a URL format.
@@ -49,6 +51,8 @@ Example Advertised URL:
 https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs
 
 Copy the URL to your clipboard or a blank text document for reference. This URL will be used in subsequent configuration below.
+
+<br/>
 
 ## Enable Web Services
 
@@ -69,15 +73,27 @@ Copy the URL to your clipboard or a blank text document for reference. This URL 
 6. OK
 7. Project > Save  (`Ctrl` + `S`)
 
+<br/>
+
 ## Further Settings
 
 A comprehensive guide for configuring QGIS projects for publishing layers via WMS/WFS can be found at:
 
 https://docs.qgis.org/latest/en/docs/server_manual/getting_started.html#creatingwmsfromproject
 
+<br/>
+
+## Add Layers
+
+See [Configuring Layers](/admin-guide/qgis/configuring-layers.md) for details about working with layers.
+
+When you're done, remember to [enable any layers for WFS](/admin-guide/qgis/configuring-layers/#enable-wfs) if required.
+
+<br/>
+
 ## Register Project
 
-### Test GetProjectSettings URL
+### Obtain GetProjectSettings URL
 
 Construct a `GetProjectSettings` URL by combining the following:
 
@@ -92,12 +108,30 @@ https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userda
 
 Test this URL by pasting it in your browser and check that you get a valid response that lists the available layers.
 
+### Test Project Load Performance
+
+The speed at which Pozi can access layers from the QGIS project is limited by how fast QGIS can access the layers.
+
+To ensure that QGIS is able to access the layers quickly, check the project's performance using QGIS's debugging tool to identify any performance issues.
+
+View > Panels > Debugging/Development Tools > Profiler (clock button)
+
+As soon as you load a QGIS project, a new category called `Project Load` will be available. Select it from the category list.
+
+Expand the entry called `Reading map layers` in the profiler tree to see all of the QGIS project layers and their corresponding loading time.
+
+![QGIS Debug Tool](./img/qgis-debug-layer-load-times.png){style="width:300px"}
+
+If the result show any layer that takes more than a fraction of a second to load, there may be an issue with the network or database that is worth investigating.
+
+[(via GIS StackExchange)](https://gis.stackexchange.com/a/414884)
+
 ### Submit Helpdesk Ticket
 
 Email support@pozi.com with these details:
 
 * subject: New layer catalogue
-* name of layer group to appear in Pozi layer panel
+* name of new layer group to appear in Pozi layer panel
 * order in which the layer group is to appear in the Pozi Layer Panel (relative to an existing layer group)
 * `GetProjectSettings` URL
 

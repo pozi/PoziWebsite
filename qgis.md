@@ -63,6 +63,14 @@ Functionality for Administrators:
 
 ### Publishing
 
+## Enterprise performance from QGIS Server
+
+Pozi's QGIS integration is powered by [QGIS Server](https://docs.qgis.org/3.22/en/docs/server_manual/introduction.html), which is installed on your network or private cloud. QGIS Server is a standards-based WMS/WFS server, with similar performance as MapServer and GeoServer, but with the ability to use QGIS desktop for layer configuration.
+
+Configure your layers in dedicated QGIS project files, and the layers are automatically made available for internal Pozi users.
+
+QGIS Server is [certified by the OGC](https://www.opengeospatial.org/resource/products/details/?pid=1496) as an [OGC reference implementation](https://blog.qgis.org/2018/06/27/qgis-server-certified-as-official-ogc-reference-implementation/).
+
 ---
 
 :::centre

@@ -108,19 +108,22 @@ WFS (Web Feature Service) provides users with the ability to directly interact w
 
 ### WFS Advantages
 
+* layers are fully interactive using Pozi's filter, report and table view functionality
+* after the layer is loaded in the browser, the browser doesn't not need to send new requests to the server every time the map moves
 * cursor changes when hovering over object
 * users can select individual features and display results in Info Panel (without displaying results of features on other layers at the same location)
-* layers are fully interactive using Pozi's filter, report and table view functionality
 
 ### WFS Disadvantages
 
 * the browser can be easily overwhelmed when dealing with thousands of features or complex features with many vertices, resulting in slow panning and zooming
 * not all QGIS styles are supported in Pozi for vector features
 * only one vector feature can be selected at a time - info results are not displayed for any features that have been overlapped by another feature
-* cannot use text expressions for labels
+* cannot directly use text expressions for labels (but you can still make use of virtual fields for creating generating label values)
 * restricting visibility to specific zoom ranges is not currently supported
 
-As a guideline, enable WFS only for layers with fewer than 5-10K features. See [here](/admin-guide/qgis/creating-qgis-projects/#enable-wfs-service) for more information about pros and cons of using WFS.
+As a guideline, enable WFS only for layers with fewer than 5-10K features, or even fewer for layers with complex polylines or polygons.
+
+### Enable WFS
 
 1. Project > Properties > QGIS Server
 2. `WFS capabilities > Published`: tick on for each layer to be published
@@ -147,13 +150,21 @@ Pozi dynamically evaluates the selected feature, and attempts to use fields with
 
 *Note: the asterisk above represents a wildcard, meaning that the field name may begin with any text.*
 
-This list is subject to change. ([Developer Notes](https://github.com/pozi/PoziApp/blob/master/app/src/drawer/tabs/info/Label.ts))
+This list is subject to change. [(Developer Notes)](https://github.com/pozi/PoziApp/blob/master/app/src/drawer/tabs/info/Label.ts)
 
 ==-
 
 You can manipulate your source data using virtual fields in QGIS to promote your chosen field by using any variation of the priority names.
 
 See https://docs.qgis.org/latest/en/docs/user_manual/expressions/expression.html
+
+<br/>
+
+## Selectability
+
+To prevent the Info Panel from displaying results from specific layers (say, for aerial photos), update the `Data Sources` settings in the QGIS project.
+
+Project > Properties > Data Sources > Identifiable > untick to disable layer selectability
 
 <br/>
 

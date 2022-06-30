@@ -54,10 +54,10 @@ Email support@pozi.com with these details:
 
 * subject: New child dataset
 * `GetFeature` URL
-* new child dataset name (eg `Bridge Defects`)
-* field in child dataset that contains the link attribute (eg `Asset_ID`)
-* existing parent dataset name (must already exist in Pozi) (eg `Bridges`)
-* field in parent dataset that contains the link attribute (eg `AssetID`)
+* name of new child dataset(eg `Bridge Defects`)
+* name of field in child dataset that contains the link attribute (eg `Asset_ID`)
+* name of existing parent dataset (must already exist in Pozi) (eg `Bridges`)
+* name of field in parent dataset that contains the link attribute (eg `AssetID`)
 
 Within 24 hours, the child dataset will be configured and available in Pozi.
 

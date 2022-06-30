@@ -3,9 +3,11 @@ title: Upgrade
 layout: central
 ---
 
-# Upgrading to Pozi Enterprise
+# Upgrade to Pozi Enterprise
 
-*<big>Combine geographic information from local files, databases and remote web services to give your users the complete picture*</big>
+<img src="/static/img/undraw/undraw_os_upgrade_re_r0qa.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
+
+*<big>Combine geographic information from local data and remote web services to give your users the complete picture*</big>
 
 For organisations who are already using Pozi Public or Pro, upgrading to Pozi Enterprise or Enterprise Cloud enables internal users to **directly access internal corporate datasets** within the Pozi app.
 

@@ -22,7 +22,9 @@ For other changes to the Pozi app experience, contact the Pozi Helpdesk:
 
 * register a new layer catalogue in Pozi
 * link a new child dataset to an existing layer
-* add layers for public
-* change the default basemap, search and imagery layers
+* register new layers for viewing by public
+* enable new dataset as mail merge source
+* change the default basemap, search and imagery options
+* update branding
 
 support@pozi.com

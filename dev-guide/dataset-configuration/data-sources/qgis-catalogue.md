@@ -1,4 +1,5 @@
 ---
+title: QGIS Catalogue
 ---
 
 # QGIS Catalogue

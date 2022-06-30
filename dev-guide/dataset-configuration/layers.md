@@ -32,6 +32,16 @@
 
 ## Options
 
+### Enabled
+
+Set to `false` to prevent the dataset from being configured in Pozi. The default value is `true`.
+
+```json
+  "enabled": false,
+```
+
+This setting goes beyond simply hiding the layer as per the `showInLayerControl` setting. It causes Pozi to completely ignore the dataset and make it unavailable as a layer or child dataset. In the case of the source being a catalogue, it will prevent Pozi from sending a GetCapabilities request.
+
 ### Queryable
 
 Control whether the features in this layer are queryable/selectable by the user clicking in the map.
@@ -109,6 +119,28 @@ Attributes from the source data can be hidden from the info panel display by spe
         {
           "name_alt": "Name (Alternate)"
         },
+```
+
+#### Garbage
+
+If the source dataset complies with the [OpenCouncilData waste data spec](http://standards.opencouncildata.org/#/garbage-collection-zones), Pozi will use the information in the table to calculate and display the next waste collection date.
+
+```json
+    "transformer": {
+      "pointOnSurface": true,
+      "garbage": true,
+      "renameAndOrderFields": [
+        {
+          "rubbish_next_pickup": "Next Rubbish Pickup"
+        },
+        {
+          "recycling_next_pickup": "Next Recycling Pickup"
+        },
+        {
+          "green_waste_next_pickup": "Next Organics Pickup"
+        }
+      ]
+    }
 ```
 
 ### Promote Details

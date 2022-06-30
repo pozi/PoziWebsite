@@ -26,6 +26,12 @@ title: WMS Catalogue
 
 ### Enable Selectability
 
+!!!
+
+This may no longer be required for WMS catalogues. Need to confirm.
+
+!!!
+
 There is currently a limitation in Pozi that prevents users from seeing any attributes when they click on features in WMS layers. The way around this is to configure the dataset with `"parent": "Whats Here"`. This forces Pozi to display the attributes in the info panel when the layer is turned on .
 
 There is [a plan](https://trello.com/c/NuPIDgSL/18-enable-wms-layers-getfeatureinfo-results-to-be-displayed-in-info-panel-by-default) to avoid the need for this work-around in the future.

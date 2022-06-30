@@ -13,6 +13,12 @@
 
 Data.gov.au is a federal government data portal where Australian government organisations can publish open data.
 
+## Open Council Data Standards
+
+The [Open Council Data Toolkit](http://opencouncildata.org/) has recommended standards for commonly published datasets.
+
+When data is published using the recommended table structure, Pozi can apply some smarts when displaying the results. For instance, when waste collection data uses the conventions specified in the [garbage collection](http://standards.opencouncildata.org/#/garbage-collection-zones), Pozi will use the information in the table to calculate and display the next waste collection date.
+
 ## Formats
 
 ### GeoJSON

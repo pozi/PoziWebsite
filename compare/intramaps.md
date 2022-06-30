@@ -25,9 +25,15 @@ From its beginning as a public-facing map enquiry tool, Pozi has focussed on eas
 * efficient use of screen space
 * no complex tools, menus or jargon
 
+### Ease of Configuration
+
+If you know how to use QGIS, you know everything you need to start publishing your map layers in Pozi.
+
+There are no multi-day courses required to get you started.
+
 ### Public Ready
 
-Every Pozi site provides a public-facing view by default. Engage your community and external stakeholders with information that is relevant to them while keeping your organisation's internal data available only to internal users.
+Every Pozi site provides a public-facing view by default. Engage your community and external stakeholders with information that's relevant to them while keeping your organisation's internal data available only to internal users.
 
 ### Modules vs Bookmarks
 
@@ -39,9 +45,9 @@ From the one master layer catalogue, users can bookmark the current state of the
 
 When users interact with layer groups within the layer panel, Pozi remembers the current state of the panel so that relevant layers are ready to toggle on and off as needed. Layers that are not relevant to a particular user remain tucked away.
 
-There is no limit to the number of bookmarks that users create, so users can have multiple ways of launching Pozi to suit specific workflows or projects. This method of saving maps is also used to share links, so that staff can share customised maps showing specific areas and layers.
+There is no limit to the number of bookmarks that users create, so users can have multiple ways of launching Pozi to suit specific workflows or projects. This method of saving maps is also used to share links, so that users can share customised maps showing specific areas and layers.
 
-Pozi avoids the overhead of duplicating configuration across multiple modules. At the same time, it enables staff to discover and use information outside of artificial data silos.
+Pozi avoids the overhead of duplicating configuration across multiple modules. At the same time, it enables users to discover and use information outside of artificial data silos.
 
 ### Performance
 
@@ -51,19 +57,25 @@ Pozi avoids the overhead of duplicating configuration across multiple modules. A
 
 Pozi clients benefit from being able to communicate directly with development and support staff during solution implementations and ongoing support.
 
+#### Have your own preferred GIS support provider?
+
+Do you already have your own GIS support provider? No worries. We'll work with them to ensure the best outcome for you.
+
+We'll never put restrictions on who you ask for support. Pozi's open architecture ensures that any GIS support provider with basic knowledge of QGIS and OGC standards is as equally well-equipped as our own good selves to customise Pozi to your organisation's requirements.
+
 ### Purpose-Driven
 
-Pozi is solely focussed on building spatial technologies to drive business efficiencies and community engagement. To achieve that, we develop an open platform that integrates with other purpose-built technologies. We have no interest in creating closed ecosystems to capture all your business functions.
+Pozi is solely focussed on the spatial enablement of your organisation. We have no interest or agenda in creating closed ecosystems to capture your organisation's other business functions.
+
+Pozi's open platform integrates with major vendor platforms and other purpose-built technologies to give you maximum autonomy in your organisation's strategic technology decisions.
 
 ### Future Ready
 
-The future of web GIS will be driven by technologies such as vector tiles and in-browser geo-processing.
+The future of web GIS is driven by web-optimised data formats and in-browser geo-processing.
 
-Pozi invests for the future by with continuous development and keeping Pozi up-to-date with modern web technologies.
+Pozi invests for the future by keeping Pozi up-to-date with modern web technologies. We work with HTML5 technologies including React, Material UI, OpenLayers 6, TurfJS and GeoStyler to ensure achieve high performance, compatibility with modern data sources, and a high quality user experience.
 
-Pozi uses modern HTML5 web technologies, including OpenLayers 6, ensuring high performance, compatibility with newer data sources, and an improved user experience.
-
-IntraMaps is built around OpenLayers 2, which ceased development in 2013. As long as IntraMaps stays on this legacy version of OpenLayers, its performance will be restricted, and it will be prevented from integrating modern data sources.
+IntraMaps is built on top of OpenLayers 2, which ceased development in 2013. IntraMaps' performance and functionality are tied to a legacy code base, and its users cannot take advantage of modern interfaces, data sources and formats.
 
 ### Transparent Pricing
 
@@ -81,22 +93,24 @@ And we'll never charge you for fixing a bug.
 
 We'll build it for you!
 
-That's right. If you need any functionality that's not already in Pozi, talk to us about your requirements. We'll collaborate with you on a specification to suit your exact requirements and provide an estimate for its development.
+If you need any functionality that's not already in Pozi, talk to us about your requirements. We'll collaborate with you on a specification to suit your exact requirements and provide an estimate for its development.
 
 When you fund the development of new features, you have ongoing access to the new functionality for the life of your subscription.
 
 ## Better Outcomes with Pozi
 
 * staff can expect to get answers quicker with a faster, simpler application built around their needs
-* GIS administrators can expect reduction in administration overheads due to direct integration with live data from internal and external sources (eg, reduce need for downloading, processing and republishing data from government and other sources; reduce overnight processing/duplication of corporate data)
-* council can expect to see its GIS become more advanced by using its GIS budget to fund the development of any new functionality to serve its users
+* GIS administrators can expect reduction in administration overheads due to direct integration with live data from internal and external sources
+  * reduce need for downloading, processing and republishing data from government and other sources
+  * reduce overnight processing/duplication of corporate data
+* organisations can better use their GIS budget to serve their users by funding the development of any new functionality they need
 
 ## Unhappy with IntraMaps?
 
 * it's worthwhile taking a critical look at existing software to evaluate the value it's currently providing
 * it's OK to switch providers in order to get better support
 * GIS budgets can be put to better use by using lower-cost solutions and funding the development of functionality your users need
-* evolution of a council's GIS can be achieved without tenders/RFQs, data migration or significant retraining
+* your organisation's GIS can grow and adapt to your needs without tenders/RFQs, data migration or significant retraining
 
 ### On a contract?
 
@@ -106,25 +120,25 @@ If you're stuck in another contract, talk to us. Not only can we get you up and 
 
 ---
 
-## IntraMaps is right for you if...
+## IntraMaps may be right for you if...
 
-==- Your organisation needs a single vendor for its technology requirements
+==- Your organisation requires a single vendor for its technology requirements
 
 IntraMaps is one of many corporate software titles in the TechnologyOne suite. If your organisation needs a single point of contact for all its technology needs, then TechnologyOne's offering will suit your organisation.
 
-==- You're getting support from a third party provider
+==- You're able to use a third party provider for supporting your existing IntraMaps
 
-If you have access to support from an independent provider and they continue to keep IntraMaps working to suit your organisation's needs, then IntraMaps can still be a viable option for you.
+If you have access to support from an independent provider, and they're able to keep IntraMaps working to suit your organisation's needs, then IntraMaps can still be a viable option for you.
 
 ==- Users use it to launch legacy Windows applications
 
 While Pozi enables linking to Windows applications that support [URL protocol handlers](/tags/url-protocol-handler/), it's primarily designed for integrations with modern web applications through REST APIs and standard URLs.
 
-If your users have specialised Windows applications that they launch from custom-built IntraMaps application launchers, then IntraMaps will provide the backwards-compatibility you need for as long as these custom launchers are supported.
+If you rely on custom-built IntraMaps application launchers (and they continue to be supported), then IntraMaps may be right for you.
 
 ==- You need to publish your own custom base map to external users
 
-Pozi supports a variety of commercial, government and community basemaps, and allows custom styling for vector tile basemaps.
+Pozi supports a variety of commercial, government and community basemaps, and allows custom styling for vector tile basemaps. It can also use any QGIS project as a basemap for internal users.
 
 However if you need your public users to use an internally-maintained custom basemap, then IntraMaps may be the right option for you.
 
