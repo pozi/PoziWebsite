@@ -57,6 +57,8 @@ All Pozi subscriptions include:
 
 ## Add-Ons
 
+</br>
+
 ### 3D Viewer
 
 <img src="/static/img/tweet-gallery/3d-poc.jpg" alt="" style="float:right;width:400px;margin:0px 40px;">
@@ -137,6 +139,16 @@ For *Enterprise* and *Enterprise Cloud* subscribers, we offer access to our sour
 ==-
 
 <small>AUD</small>$1800/year
+
+</br>
+
+---
+
+### Tender Response
+
+If your organisation uses Request For Tender (RFT) or Request For Quote (RFQ) for service procurement, a premium will apply to the package cost and ongoing subscription. Talk to us about what additional costs will apply for your procurement method.
+
+</br>
 
 ---
 
