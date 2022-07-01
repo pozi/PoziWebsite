@@ -22,13 +22,13 @@ When enquiring on a location via clicking on the map or doing a search, Pozi dis
 
 ## Feature Selection
 
-Many layers in Pozi are interactive, and allow users to select individual features to directly query them.
+Many layers in Pozi are directly interactive, allowing users to select individual features to query them.
 
-When the cursor is hovered over these features, the cursor changes to a pointing hand. Click to select the feature and view its attribute information in the Info Panel.
+When the cursor hovers over these features, the cursor changes to a pointing hand. Click to select the feature and view its attribute information in the Info Panel.
 
 ## Details and Related Information
 
-Pozi can display information not only about features selected from the map, but also related information from separate sources.
+Pozi displays information not only about features selected from the map, but also any related information from separate sources.
 
 Pozi uses parent-child relationships between datasets to provide unlimited querying capabilities.
 

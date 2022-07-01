@@ -5,14 +5,16 @@ order: 90
 
 # Integrations
 
+Pozi's open architecture enables it to integrate seamlessly with a wide range of corporate applications and data service providers.
+
 ## Data Sources
 
 * ArcGIS Online
-* AssetEdge
+* [Asset Edge](./asset-edge)
 * [Assetic myData](./assetic-mydata/)
-* Civica Authority
+* [Civica Authority](./authority/)
 * Confirm
-* Conquest
+* [Conquest](./conquest/)
 * [CouncilWise](./councilwise/)
 * [data.gov.au](./data-gov-au/)
 * [DELWP Web Services](./delwp-web-services/)
@@ -38,6 +40,8 @@ order: 90
 * TechnologyOne P&R
 
 ...and more
+
+If there's an application you need to integrate with, and you don't see it here, talk to us! We'll give you an idea of how easy it will be to integrate.
 
 ## Identity and Access Management
 

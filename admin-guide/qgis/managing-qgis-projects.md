@@ -6,13 +6,22 @@ order: 90
 
 A QGIS project is a collection of layers and settings that make up a QGIS map. Pozi uses these projects as layer catalogues, each of which is displayed in Pozi as a layer group.
 
+![QGIS projects and their corresponding Pozi layer groups](./img/qgis-projects-and-pozi-layer-groups.png){style="width:400px"}
+
+The workflow for getting a project into Pozi are as follows:
+
+1. [create project](#create-project)
+2. [configure web services](#configure-web-services)
+3. [start adding layers](#add-layers)
+4. [register project for Pozi](#register-project)
+
 ## Create Project
 
 !!!
 
-If you have an existing QGIS project that is already configured for Pozi, you can fast-track the steps below.
+If you have an existing QGIS project that's already configured for Pozi, you can fast-track the steps below.
 
-Save a copy of an existing project, remove all layers (except for any basemap that you might be using as a background layer), and update the `Advertised URL` settings to use the name of the new project file.
+Save a copy of an existing project, remove all layers (except for any basemap that you might be using as a background layer), and skip to [configuring web services](#configure-web-services).
 
 !!!
 
@@ -36,7 +45,8 @@ Browser > WMS/WMTS > Vicmap Basemap > Vicmap Basemap - Web Mercator - Cartograph
 
 <br/>
 
-## Construct Advertised URL
+## Configure Web Services
+### Construct Advertised URL
 
 The project's *Advertised URL* is a URL at which WMS and WFS requests can interact with the layers in the project file. Essentially, the project file needs a reference to itself in a URL format.
 
@@ -54,9 +64,7 @@ https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userda
 
 Copy the URL to your clipboard or a blank text document for reference. This URL will be used in subsequent configuration below.
 
-<br/>
-
-## Enable Web Services
+### Enable Web Services
 
 1. Project > Properties > QGIS Server
 2. update WMS capabilities settings
@@ -75,9 +83,7 @@ Copy the URL to your clipboard or a blank text document for reference. This URL 
 6. OK
 7. Project > Save  (`Ctrl` + `S`)
 
-<br/>
-
-## Further Settings
+### Further Settings
 
 A comprehensive guide for configuring QGIS projects for publishing layers via WMS/WFS can be found at:
 
@@ -87,7 +93,9 @@ https://docs.qgis.org/latest/en/docs/server_manual/getting_started.html#creating
 
 ## Add Layers
 
-See [Configuring Layers](/admin-guide/qgis/configuring-layers.md) for details about working with layers.
+See [Configuring Layers](/admin-guide/qgis/configuring-layers.md) for details about adding and configuring new layers within your project.
+
+Remember to use only UNC paths for file-based layers.
 
 When you're done, remember to [enable any layers for WFS](/admin-guide/qgis/configuring-layers/#enable-wfs) if required.
 

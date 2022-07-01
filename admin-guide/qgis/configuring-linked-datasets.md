@@ -8,19 +8,28 @@ A linked dataset contains complementary attributes that relate to a features fro
 
 Users can select a feature from a standard map layer (the 'parent' dataset) and Pozi will fetch and display its associated records from the linked table (the 'child' dataset) based on an attribute that is shared between the two.
 
+![Parent and child records](./img/info-panel-parent-and-child-records.png){style="width:300px"}
+
 Use cases:
 
-* owner details
-* inspections
-* defects
-* maintenance
-* photos
-
-There is no special configuration required for the parent dataset for it to support a child dataset.
+* properties
+  * owner details
+  * building and planning permits
+  * animal registrations
+  * associated land parcels
+  * intersecting planning zones and overlays
+* assets
+  * inspections
+  * defects
+  * maintenance
+  * photos
+* council wards
+  * representatives
+* more...
 
 ## Add Dataset
 
-Add datasets to an [existing QGIS project](managing-qgis-projects) (eg `Child Datasets.qgs`).
+Add the source table for the child datasets to an [existing QGIS project](managing-qgis-projects) that has been configured for WFS (eg `Child Datasets.qgs`).
 
 1. open project file in QGIS
 2. Layer > Add Layer > pick from file or database options
@@ -32,7 +41,11 @@ Add datasets to an [existing QGIS project](managing-qgis-projects) (eg `Child Da
 8. OK
 9. Project > Save (`Ctrl` + `S`)
 
-## Create GetFeature URL
+Only the child dataset needs to be configured. There is no configuration required for the parent dataset for it to support a child dataset.
+
+## Register Dataset
+
+### Obtain GetFeature URL
 
 Construct a `GetFeature` URL by combining the following:
 
@@ -56,8 +69,8 @@ Email support@pozi.com with these details:
 * `GetFeature` URL
 * name of new child dataset(eg `Bridge Defects`)
 * name of field in child dataset that contains the link attribute (eg `Asset_ID`)
-* name of existing parent dataset (must already exist in Pozi) (eg `Bridges`)
-* name of field in parent dataset that contains the link attribute (eg `AssetID`)
+* name of existing parent layer as it appears in Pozi (eg `Bridges`)
+* name of field in parent layer that contains the link attribute (eg `AssetID`)
 
 Within 24 hours, the child dataset will be configured and available in Pozi.
 

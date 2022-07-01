@@ -60,11 +60,11 @@ Reference:
 * [thematic styling](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#categorized-renderer)
 * [add labels](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#labels-properties)
 
-### Supported Styles for Vector Layers
+### Styling for Vector Layers
 
 For any layers that are to be made accessible to Pozi as *vector* layers (ie, WFS), use only the supported styles specified below. Even if you only intend to serve layer via WMS, keep the styling as simple as possible to make any future transition to WFS easier.
 
-Styling options supported by Pozi:
+#### Supported
 
 * simple points, lines, polygons symbolisers
   * `square`
@@ -77,7 +77,7 @@ Styling options supported by Pozi:
 * basic labels
 * customisable legend text
 
-Not currently supported:
+#### Not currently supported
 
 * SVG marker symbols
 * `diamond` symbol
@@ -86,12 +86,14 @@ Not currently supported:
 * label offsets
 * label buffer transparency
 
-Workaround required (by configuring virtual fields in QGIS):
+#### Workaround required
 
-* rules based on a field name that contains spaces
-* text expressions in labels
+Configure [virtual fields](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/attribute_table.html#virtual-field) in QGIS to achieve:
 
-Vector Style Tips:
+* text expressions in labels (eg, replace all instances of 'UNNAMED' with (blank))
+* categorised styling based on a field name that contains spaces
+
+#### Vector Style Tips
 
 * opacity
   * any changes to opacity must be set in the style colour setting - the layer's global opacity slider has no effect
@@ -104,18 +106,20 @@ Vector Style Tips:
 
 ## Enable Layers for WFS
 
-WFS (Web Feature Service) provides users with the ability to directly interact with map features. When a WFS layer is loaded in Pozi, every feature from the source dataset is sent to the browser as a *vector* layer that includes all geometries and attributes.
+WFS (Web Feature Service) provides users with the ability to directly interact with map features. When a WFS layer is loaded in Pozi, every feature from the source dataset is loaded in the browser as a *vector* layer that includes all geometries and attributes.
 
-### WFS Advantages
+### Considerations for WFS
+
+#### Advantages
 
 * layers are fully interactive using Pozi's filter, report and table view functionality
-* after the layer is loaded in the browser, the browser doesn't not need to send new requests to the server every time the map moves
-* cursor changes when hovering over object
-* users can select individual features and display results in Info Panel (without displaying results of features on other layers at the same location)
+* after the layer is loaded in the browser, the browser doesn't not need to send further requests for the layer to the server every time the map moves
+* cursor changes when hovering over object to indicate the feature is clickable
+* users can select an individual feature and display its details in Info Panel (without displaying results of features on other layers at the same location)
 
-### WFS Disadvantages
+#### Disadvantages
 
-* the browser can be easily overwhelmed when dealing with thousands of features or complex features with many vertices, resulting in slow panning and zooming
+* the browser can be easily overwhelmed when dealing with thousands of features or complex features with many vertices, resulting in slow map rendering
 * not all QGIS styles are supported in Pozi for vector features
 * only one vector feature can be selected at a time - info results are not displayed for any features that have been overlapped by another feature
 * cannot directly use text expressions for labels (but you can still make use of virtual fields for creating generating label values)
@@ -130,7 +134,7 @@ As a guideline, enable WFS only for layers with fewer than 5-10K features, or ev
 3. OK
 4. Project > Save (`Ctrl` + `S`)
 
-![Screenshot of QGIS Project Properties WFS Configuration](./img/qgis-project-properties-wfs-configuration.png){style="width:500px"}
+![QGIS Project Properties WFS Configuration](./img/qgis-project-properties-wfs-configuration.png){style="width:500px"}
 
 <br/>
 
@@ -140,7 +144,7 @@ When users select a feature from the map, Pozi will pick a value from the select
 
 ==- Priority Field Names
 
-Pozi dynamically evaluates the selected feature, and attempts to use fields with any of these names if they exist and contain a value:
+Pozi dynamically evaluates the selected feature, and attempts to obtain a title value using any fields with any of these names if they exist and if they contain a value:
 
 * `label` or `*label`
 * `ezi_address`
