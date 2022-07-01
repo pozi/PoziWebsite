@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.709892098332">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.709961205111">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -24,22 +24,22 @@
     <meta property="og:url" content="https://pozi.com/admin-guide/qgis/configuring-linked-datasets/">
     <meta property="og:title" content="Configuring Linked Datasets | Pozi Web GIS | Online Map">
     <meta property="og:description" content="A linked dataset contains complementary attributes that relate to a features from a map layer.">
-    <meta property="og:image" content="https://pozi.com/admin-guide/qgis/img/qgis-project-loading-status.png">
+    <meta property="og:image" content="https://pozi.com/admin-guide/qgis/img/info-panel-parent-and-child-records.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pozi.com/admin-guide/qgis/configuring-linked-datasets/">
     <meta property="twitter:title" content="Configuring Linked Datasets | Pozi Web GIS | Online Map">
     <meta property="twitter:description" content="A linked dataset contains complementary attributes that relate to a features from a map layer.">
-    <meta property="twitter:image" content="https://pozi.com/admin-guide/qgis/img/qgis-project-loading-status.png">
+    <meta property="twitter:image" content="https://pozi.com/admin-guide/qgis/img/info-panel-parent-and-child-records.png">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.3.0.709892098332" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.3.0.709961205111" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.709892098332" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.709961205111" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.709892098332" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.709961205111" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -312,22 +312,40 @@
 </doc-anchor-target>
 <p>A linked dataset contains complementary attributes that relate to a features from a map layer.</p>
 <p>Users can select a feature from a standard map layer (the &#x27;parent&#x27; dataset) and Pozi will fetch and display its associated records from the linked table (the &#x27;child&#x27; dataset) based on an attribute that is shared between the two.</p>
+<p><img src="../img/info-panel-parent-and-child-records.png" style="width:300px" alt="Parent and child records" /></p>
 <p>Use cases:</p>
 <ul>
+<li>properties
+<ul>
 <li>owner details</li>
+<li>building and planning permits</li>
+<li>animal registrations</li>
+<li>associated land parcels</li>
+<li>intersecting planning zones and overlays</li>
+</ul>
+</li>
+<li>assets
+<ul>
 <li>inspections</li>
 <li>defects</li>
 <li>maintenance</li>
 <li>photos</li>
 </ul>
-<p>There is no special configuration required for the parent dataset for it to support a child dataset.</p>
+</li>
+<li>council wards
+<ul>
+<li>representatives</li>
+</ul>
+</li>
+<li>more...</li>
+</ul>
 <doc-anchor-target id="add-dataset">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#add-dataset">#</doc-anchor-trigger>
         <span>Add Dataset</span>
     </h2>
 </doc-anchor-target>
-<p>Add datasets to an <a href="../managing-qgis-projects/">existing QGIS project</a> (eg <code v-pre>Child Datasets.qgs</code>).</p>
+<p>Add the source table for the child datasets to an <a href="../managing-qgis-projects/">existing QGIS project</a> that has been configured for WFS (eg <code v-pre>Child Datasets.qgs</code>).</p>
 <ol>
 <li>open project file in QGIS</li>
 <li>Layer &gt; Add Layer &gt; pick from file or database options</li>
@@ -339,11 +357,18 @@
 <li>OK</li>
 <li>Project &gt; Save (<code v-pre>Ctrl</code> + <code v-pre>S</code>)</li>
 </ol>
-<doc-anchor-target id="create-getfeature-url">
+<p>Only the child dataset needs to be configured. There is no configuration required for the parent dataset for it to support a child dataset.</p>
+<doc-anchor-target id="register-dataset">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#create-getfeature-url">#</doc-anchor-trigger>
-        <span>Create GetFeature URL</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#register-dataset">#</doc-anchor-trigger>
+        <span>Register Dataset</span>
     </h2>
+</doc-anchor-target>
+<doc-anchor-target id="obtain-getfeature-url">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#obtain-getfeature-url">#</doc-anchor-trigger>
+        <span>Obtain GetFeature URL</span>
+    </h3>
 </doc-anchor-target>
 <p>Construct a <code v-pre>GetFeature</code> URL by combining the following:</p>
 <ol>
@@ -367,8 +392,8 @@
 <li><code v-pre>GetFeature</code> URL</li>
 <li>name of new child dataset(eg <code v-pre>Bridge Defects</code>)</li>
 <li>name of field in child dataset that contains the link attribute (eg <code v-pre>Asset_ID</code>)</li>
-<li>name of existing parent dataset (must already exist in Pozi) (eg <code v-pre>Bridges</code>)</li>
-<li>name of field in parent dataset that contains the link attribute (eg <code v-pre>AssetID</code>)</li>
+<li>name of existing parent layer as it appears in Pozi (eg <code v-pre>Bridges</code>)</li>
+<li>name of field in parent layer that contains the link attribute (eg <code v-pre>AssetID</code>)</li>
 </ul>
 <p>Within 24 hours, the child dataset will be configured and available in Pozi.</p>
 <doc-anchor-target id="troubleshooting">

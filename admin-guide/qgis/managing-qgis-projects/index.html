@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.709892098332">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.709961205111">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -24,22 +24,22 @@
     <meta property="og:url" content="https://pozi.com/admin-guide/qgis/managing-qgis-projects/">
     <meta property="og:title" content="Managing QGIS Projects | Pozi Web GIS | Online Map">
     <meta property="og:description" content="A QGIS project is a collection of layers and settings that make up a QGIS map.">
-    <meta property="og:image" content="https://pozi.com/admin-guide/qgis/img/qgis-add-wmts-layer.png">
+    <meta property="og:image" content="https://pozi.com/admin-guide/qgis/img/qgis-projects-and-pozi-layer-groups.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pozi.com/admin-guide/qgis/managing-qgis-projects/">
     <meta property="twitter:title" content="Managing QGIS Projects | Pozi Web GIS | Online Map">
     <meta property="twitter:description" content="A QGIS project is a collection of layers and settings that make up a QGIS map.">
-    <meta property="twitter:image" content="https://pozi.com/admin-guide/qgis/img/qgis-add-wmts-layer.png">
+    <meta property="twitter:image" content="https://pozi.com/admin-guide/qgis/img/qgis-projects-and-pozi-layer-groups.png">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.3.0.709892098332" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.3.0.709961205111" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.709892098332" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.709961205111" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.709892098332" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.709961205111" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -311,6 +311,14 @@
     </h1>
 </doc-anchor-target>
 <p>A QGIS project is a collection of layers and settings that make up a QGIS map. Pozi uses these projects as layer catalogues, each of which is displayed in Pozi as a layer group.</p>
+<p><img src="../img/qgis-projects-and-pozi-layer-groups.png" style="width:400px" alt="QGIS projects and their corresponding Pozi layer groups" /></p>
+<p>The workflow for getting a project into Pozi are as follows:</p>
+<ol>
+<li><doc-anchor-trigger to="#create-project">create project</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#configure-web-services">configure web services</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#add-layers">start adding layers</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#register-project">register project for Pozi</doc-anchor-trigger></li>
+</ol>
 <doc-anchor-target id="create-project">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#create-project">#</doc-anchor-trigger>
@@ -330,8 +338,8 @@
             </svg>
         </div>
         <div class="pr-5 ml-3 w-full">
-<p>If you have an existing QGIS project that is already configured for Pozi, you can fast-track the steps below.</p>
-<p>Save a copy of an existing project, remove all layers (except for any basemap that you might be using as a background layer), and update the <code v-pre>Advertised URL</code> settings to use the name of the new project file.</p>
+<p>If you have an existing QGIS project that&#x27;s already configured for Pozi, you can fast-track the steps below.</p>
+<p>Save a copy of an existing project, remove all layers (except for any basemap that you might be using as a background layer), and skip to <doc-anchor-trigger to="#configure-web-services">configuring web services</doc-anchor-trigger>.</p>
         </div>
     </div>
 </div>
@@ -358,11 +366,17 @@
 <p>Browser &gt; WMS/WMTS &gt; Vicmap Basemap &gt; Vicmap Basemap - Web Mercator - Cartographic</p>
 <p><img src="../img/qgis-add-wmts-layer.png" style="width:250px" alt="Add Vicmap Basemap" /></p>
 <br/>
-<doc-anchor-target id="construct-advertised-url">
+<doc-anchor-target id="configure-web-services">
     <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#configure-web-services">#</doc-anchor-trigger>
+        <span>Configure Web Services</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="construct-advertised-url">
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#construct-advertised-url">#</doc-anchor-trigger>
         <span>Construct Advertised URL</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <p>The project&#x27;s <em>Advertised URL</em> is a URL at which WMS and WFS requests can interact with the layers in the project file. Essentially, the project file needs a reference to itself in a URL format.</p>
 <p>Combine the details below to create your project&#x27;s Advertised URL:</p>
@@ -375,12 +389,11 @@
 <p>Example Advertised URL:</p>
 <p><a href="https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs">https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs</a></p>
 <p>Copy the URL to your clipboard or a blank text document for reference. This URL will be used in subsequent configuration below.</p>
-<br/>
 <doc-anchor-target id="enable-web-services">
-    <h2>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#enable-web-services">#</doc-anchor-trigger>
         <span>Enable Web Services</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <ol>
 <li>Project &gt; Properties &gt; QGIS Server</li>
@@ -409,12 +422,11 @@
 <li>OK</li>
 <li>Project &gt; Save  (<code v-pre>Ctrl</code> + <code v-pre>S</code>)</li>
 </ol>
-<br/>
 <doc-anchor-target id="further-settings">
-    <h2>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#further-settings">#</doc-anchor-trigger>
         <span>Further Settings</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <p>A comprehensive guide for configuring QGIS projects for publishing layers via WMS/WFS can be found at:</p>
 <p><a href="https://docs.qgis.org/latest/en/docs/server_manual/getting_started.html#creatingwmsfromproject">https://docs.qgis.org/latest/en/docs/server_manual/getting_started.html#creatingwmsfromproject</a></p>
@@ -425,7 +437,8 @@
         <span>Add Layers</span>
     </h2>
 </doc-anchor-target>
-<p>See <a href="../configuring-layers/">Configuring Layers</a> for details about working with layers.</p>
+<p>See <a href="../configuring-layers/">Configuring Layers</a> for details about adding and configuring new layers within your project.</p>
+<p>Remember to use only UNC paths for file-based layers.</p>
 <p>When you&#x27;re done, remember to <a href="../configuring-layers/#enable-wfs">enable any layers for WFS</a> if required.</p>
 <br/>
 <doc-anchor-target id="register-project">
