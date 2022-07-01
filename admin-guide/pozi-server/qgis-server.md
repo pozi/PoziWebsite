@@ -128,6 +128,8 @@ Copy and paste the following into the command prompt:
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_SERVER_LOG_LEVEL',value='1']" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_PLUGINPATH',value='C:\OSGeo4W\apps\qgis-ltr\plugins']" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='GDAL_DRIVER_PATH',value='C:\OSGeo4W\bin\gdalplugins']" /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='PYTHONPATH',value='C:\OSGeo4W\apps\qgis-ltr\python']" /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='PROJ_LIB',value='C:\OSGeo4W\share\proj']" /commit:apphost
 
 ```
 
@@ -139,7 +141,7 @@ If the command prompt option doesn't work, you can configure the environment var
 
 Windows > IIS > select server > Fast CGISettings > select `qgis_mapserv.fcgi.exe` application > Edit > Environment variables:
 
-Name | Value 
+Name | Value
 -----|------
 PATH | `C:\OSGeo4W\apps\qgis-ltr\bin;C:\OSGeo4W\apps\qt5\bin;C:\OSGeo4W\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32\WBem`
 O4W_QT_PREFIX | `C:\OSGeo4W\apps\Qt5`
@@ -157,6 +159,8 @@ QGIS_SERVER_LOG_FILE | `C:\Program Files (x86)\Pozi\server\iis\logs\qgis_server.
 QGIS_SERVER_LOG_LEVEL | `1`
 QGIS_PLUGINPATH | `C:\OSGeo4W\apps\qgis-ltr\plugins`
 GDAL_DRIVER_PATH | `C:\OSGeo4W\bin\gdalplugins`
+PYTHONPATH | `C:\OSGeo4W\apps\qgis-ltr\python`
+PROJ_LIB | `C:\OSGeo4W\share\proj`
 
 (End of `Manual Configuration` instructions)
 
@@ -248,3 +252,22 @@ Development notes that may contain useful additional information for Pozi develo
 * [https://github.com/pozi/PoziServer/pull/40#issuecomment-972331899](https://github.com/pozi/PoziServer/pull/40#issuecomment-972331899)
 
 !!!
+
+<br/>
+
+---
+
+## Troubleshooting
+
+==- ECW layers are not rendered
+
+Depending on how QGIS has been installed, some dependency paths may vary.
+
+#### `GDAL_DRIVER_PATH`
+
+* assumed location: `C:\OSGeo4W\bin\gdalplugins`
+* alternative location: `C:\OSGeo4W\apps\gdal\lib\gdalplugins`
+
+If an alternative location exists instead of the assumed one, update the `GDAL_DRIVER_PATH` environment variable accordingly.
+
+==-
