@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.709961205111">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.709965476110">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -35,12 +35,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.3.0.709961205111" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.3.0.709965476110" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.709961205111" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.709965476110" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.709961205111" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.3.0.709961205111" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.709965476110" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.3.0.709965476110" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -466,6 +466,8 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_SERVER_LOG_LEVEL',value='1']&quot; /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_PLUGINPATH',value='C:\OSGeo4W\apps\qgis-ltr\plugins']&quot; /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='GDAL_DRIVER_PATH',value='C:\OSGeo4W\bin\gdalplugins']&quot; /commit:apphost
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='PYTHONPATH',value='C:\OSGeo4W\apps\qgis-ltr\python']&quot; /commit:apphost
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='PROJ_LIB',value='C:\OSGeo4W\share\proj']&quot; /commit:apphost
 </code></pre>
 </doc-codeblock></div>
 </doc-tab>
@@ -550,6 +552,14 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
 <tr>
 <td>GDAL_DRIVER_PATH</td>
 <td><code v-pre>C:\OSGeo4W\bin\gdalplugins</code></td>
+</tr>
+<tr>
+<td>PYTHONPATH</td>
+<td><code v-pre>C:\OSGeo4W\apps\qgis-ltr\python</code></td>
+</tr>
+<tr>
+<td>PROJ_LIB</td>
+<td><code v-pre>C:\OSGeo4W\share\proj</code></td>
 </tr>
 </tbody>
 </table>
@@ -670,6 +680,29 @@ xcopy &quot;C:\Program Files (x86)\Pozi\server\iis\Pozi\QgisServer\web.config&qu
         </div>
     </div>
 </div>
+<br/>
+<hr />
+<doc-anchor-target id="troubleshooting">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#troubleshooting">#</doc-anchor-trigger>
+        <span>Troubleshooting</span>
+    </h2>
+</doc-anchor-target>
+<doc-panel id="ecw-layers-are-not-rendered" collapsed>
+    <template #title>ECW layers are not rendered</template>
+<p>Depending on how QGIS has been installed, some dependency paths may vary.</p>
+<doc-anchor-target id="gdal_driver_path">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#gdal_driver_path">#</doc-anchor-trigger>
+        <span><code v-pre>GDAL_DRIVER_PATH</code></span>
+    </h4>
+</doc-anchor-target>
+<ul>
+<li>assumed location: <code v-pre>C:\OSGeo4W\bin\gdalplugins</code></li>
+<li>alternative location: <code v-pre>C:\OSGeo4W\apps\gdal\lib\gdalplugins</code></li>
+</ul>
+<p>If an alternative location exists instead of the assumed one, update the <code v-pre>GDAL_DRIVER_PATH</code> environment variable accordingly.</p>
+</doc-panel>
 
                                 
                                 <!-- Required only on API pages -->
