@@ -99,6 +99,24 @@ NOTE: If you have installed QGIS Server to a location other than the default `C:
 
 ### Configure Environment Variables
 
+!!!warning Migrating to GDAL 3.5
+
+When upgrading an existing installation from prior to June 2022, the following changes need to be made:
+
+Changed:
+
+* `GDAL_DRIVER_PATH` = `C:\OSGeo4W\apps\gdal\lib\gdalplugins` (previously `C:\OSGeo4W\bin\gdalplugins`)
+
+New (not previously configured or documented by us prior to GDAL 3.5 change):
+
+* `GDAL_DATA` = `C:\OSGeo4W\apps\gdal\share\gdal`
+* `PYTHONPATH` = `C:\OSGeo4W\apps\qgis-ltr\python`
+* `PROJ_LIB` = `C:\OSGeo4W\share\proj`
+
+The instructions and scripts below assume a new installation which will include GDAL 3.5.
+
+!!!
+
 +++ Command Prompt
 
 Copy and paste the following into the command prompt:
@@ -127,7 +145,8 @@ Copy and paste the following into the command prompt:
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_SERVER_LOG_FILE',value='C:\Program Files (x86)\Pozi\server\iis\logs\qgis_server.log']" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_SERVER_LOG_LEVEL',value='1']" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_PLUGINPATH',value='C:\OSGeo4W\apps\qgis-ltr\plugins']" /commit:apphost
-"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='GDAL_DRIVER_PATH',value='C:\OSGeo4W\bin\gdalplugins']" /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='GDAL_DRIVER_PATH',value='C:\OSGeo4W\apps\gdal\lib\gdalplugins']" /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='GDAL_DATA',value='C:\OSGeo4W\apps\gdal\share\gdal']" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='PYTHONPATH',value='C:\OSGeo4W\apps\qgis-ltr\python']" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='PROJ_LIB',value='C:\OSGeo4W\share\proj']" /commit:apphost
 
@@ -158,7 +177,8 @@ QGIS_SERVER_IGNORE_BAD_LAYERS | `1`
 QGIS_SERVER_LOG_FILE | `C:\Program Files (x86)\Pozi\server\iis\logs\qgis_server.log`
 QGIS_SERVER_LOG_LEVEL | `1`
 QGIS_PLUGINPATH | `C:\OSGeo4W\apps\qgis-ltr\plugins`
-GDAL_DRIVER_PATH | `C:\OSGeo4W\bin\gdalplugins`
+GDAL_DRIVER_PATH | `C:\OSGeo4W\apps\gdal\lib\gdalplugins`
+GDAL_DATA | `C:\OSGeo4W\apps\gdal\share\gdal`
 PYTHONPATH | `C:\OSGeo4W\apps\qgis-ltr\python`
 PROJ_LIB | `C:\OSGeo4W\share\proj`
 
@@ -265,9 +285,9 @@ Depending on how QGIS has been installed, some dependency paths may vary.
 
 #### `GDAL_DRIVER_PATH`
 
-* assumed location: `C:\OSGeo4W\bin\gdalplugins`
-* alternative location: `C:\OSGeo4W\apps\gdal\lib\gdalplugins`
+* GDAL 3.4 and earlier: `C:\OSGeo4W\bin\gdalplugins`
+* GDAL 3.5: `C:\OSGeo4W\apps\gdal\lib\gdalplugins`
 
-If an alternative location exists instead of the assumed one, update the `GDAL_DRIVER_PATH` environment variable accordingly.
+Update the `GDAL_DRIVER_PATH` environment variable accordingly.
 
 ==-
