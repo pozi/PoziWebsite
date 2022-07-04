@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.709965476110">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.710219205920">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -35,12 +35,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.3.0.709965476110" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.3.0.710219205920" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.709965476110" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.710219205920" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.709965476110" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.3.0.709965476110" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.710219205920" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.3.0.710219205920" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -437,6 +437,34 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
         <span>Configure Environment Variables</span>
     </h3>
 </doc-anchor-target>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
+                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>Migrating to GDAL 3.5</h5>
+<p>When upgrading an existing installation from prior to June 2022, the following changes need to be made:</p>
+<p>Changed:</p>
+<ul>
+<li><code v-pre>GDAL_DRIVER_PATH</code> = <code v-pre>C:\OSGeo4W\apps\gdal\lib\gdalplugins</code> (previously <code v-pre>C:\OSGeo4W\bin\gdalplugins</code>)</li>
+</ul>
+<p>New (not previously configured or documented by us prior to GDAL 3.5 change):</p>
+<ul>
+<li><code v-pre>GDAL_DATA</code> = <code v-pre>C:\OSGeo4W\apps\gdal\share\gdal</code></li>
+<li><code v-pre>PYTHONPATH</code> = <code v-pre>C:\OSGeo4W\apps\qgis-ltr\python</code></li>
+<li><code v-pre>PROJ_LIB</code> = <code v-pre>C:\OSGeo4W\share\proj</code></li>
+</ul>
+<p>The instructions and scripts below assume a new installation which will include GDAL 3.5.</p>
+        </div>
+    </div>
+</div>
 <doc-tabs>
 <doc-tab id="command-prompt">
 <template #title>Command Prompt</template>
@@ -465,7 +493,8 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_SERVER_LOG_FILE',value='C:\Program Files (x86)\Pozi\server\iis\logs\qgis_server.log']&quot; /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_SERVER_LOG_LEVEL',value='1']&quot; /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_PLUGINPATH',value='C:\OSGeo4W\apps\qgis-ltr\plugins']&quot; /commit:apphost
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='GDAL_DRIVER_PATH',value='C:\OSGeo4W\bin\gdalplugins']&quot; /commit:apphost
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='GDAL_DRIVER_PATH',value='C:\OSGeo4W\apps\gdal\lib\gdalplugins']&quot; /commit:apphost
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='GDAL_DATA',value='C:\OSGeo4W\apps\gdal\share\gdal']&quot; /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='PYTHONPATH',value='C:\OSGeo4W\apps\qgis-ltr\python']&quot; /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='PROJ_LIB',value='C:\OSGeo4W\share\proj']&quot; /commit:apphost
 </code></pre>
@@ -551,7 +580,11 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
 </tr>
 <tr>
 <td>GDAL_DRIVER_PATH</td>
-<td><code v-pre>C:\OSGeo4W\bin\gdalplugins</code></td>
+<td><code v-pre>C:\OSGeo4W\apps\gdal\lib\gdalplugins</code></td>
+</tr>
+<tr>
+<td>GDAL_DATA</td>
+<td><code v-pre>C:\OSGeo4W\apps\gdal\share\gdal</code></td>
 </tr>
 <tr>
 <td>PYTHONPATH</td>
@@ -698,10 +731,10 @@ xcopy &quot;C:\Program Files (x86)\Pozi\server\iis\Pozi\QgisServer\web.config&qu
     </h4>
 </doc-anchor-target>
 <ul>
-<li>assumed location: <code v-pre>C:\OSGeo4W\bin\gdalplugins</code></li>
-<li>alternative location: <code v-pre>C:\OSGeo4W\apps\gdal\lib\gdalplugins</code></li>
+<li>GDAL 3.4 and earlier: <code v-pre>C:\OSGeo4W\bin\gdalplugins</code></li>
+<li>GDAL 3.5: <code v-pre>C:\OSGeo4W\apps\gdal\lib\gdalplugins</code></li>
 </ul>
-<p>If an alternative location exists instead of the assumed one, update the <code v-pre>GDAL_DRIVER_PATH</code> environment variable accordingly.</p>
+<p>Update the <code v-pre>GDAL_DRIVER_PATH</code> environment variable accordingly.</p>
 </doc-panel>
 
                                 
