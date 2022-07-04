@@ -290,4 +290,49 @@ Depending on how QGIS has been installed, some dependency paths may vary.
 
 Update the `GDAL_DRIVER_PATH` environment variable accordingly.
 
+==- QGIS Desktop doesn't open
+
+If you experience an "Error loading QGIS" message, it may specify a file named `qgis-ltr-bin.env` that might not exist in your installation:
+
+> Error loading QGIS
+> Oops, looks like an error loading QGIS
+>
+> Details:
+> Could not load qgis_app.dll
+> Windows Error: The specified module could not be found.
+>
+> Help:
+> Check C:\OSGeo4W\bin\qgis-ltr-bin.env for correct environment paths
+
+Use a text editor to recreate the missing file with the following content:
+
+```bat C:\OSGeo4W\bin\qgis-ltr-bin.env
+PATH=C:\OSGeo4W\apps\qgis-ltr\bin;C:\OSGeo4W\apps\qt5\bin;C:\OSGeo4W\apps\Python39\Scripts;C:\OSGeo4W\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32\WBem
+GDAL_DATA=C:\OSGeo4W\apps\gdal\share\gdal
+GDAL_DRIVER_PATH=C:\OSGeo4W\apps\gdal\lib\gdalplugins
+GDAL_FILENAME_IS_UTF8=YES
+JPEGMEM=1000000
+OSGEO4W_ROOT=C:\OSGeo4W
+PROJ_LIB=C:\OSGeo4W\share\proj
+PYTHONHOME=C:\OSGeo4W\apps\Python39
+PYTHONUTF8=1
+QGIS_PREFIX_PATH=C:/OSGeo4W/apps/qgis-ltr
+QT_PLUGIN_PATH=C:\OSGeo4W\apps\qgis-ltr\qtplugins;C:\OSGeo4W\apps\qt5\plugins
+VSI_CACHE=TRUE
+VSI_CACHE_SIZE=1000000
+O4W_QT_PREFIX=C:/OSGeo4W/apps/Qt5
+O4W_QT_BINARIES=C:/OSGeo4W/apps/Qt5/bin
+O4W_QT_PLUGINS=C:/OSGeo4W/apps/Qt5/plugins
+O4W_QT_LIBRARIES=C:/OSGeo4W/apps/Qt5/lib
+O4W_QT_TRANSLATIONS=C:/OSGeo4W/apps/Qt5/translations
+O4W_QT_HEADERS=C:/OSGeo4W/apps/Qt5/include
+QGIS_WIN_APP_NAME=OSGeo4W\QGIS Desktop 3.22.8
+```
+
+Check that the `GDAL_DATA` and `GDAL_DRIVER_PATH` paths exist for your installation. If not, update the file accordingly.
+
+If you are denied permission to create or edit the file in the destination location, create the file elsewhere and move it to `C:\OSGeo4W\bin\` using Windows Explorer. 
+
+[Further details about this issue](https://github.com/qgis/QGIS/issues/49148#issuecomment-1174459434)
+
 ==-
