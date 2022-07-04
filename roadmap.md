@@ -1,10 +1,13 @@
 ---
-visibility: hidden
+layout: page
+description: We strive to continually improve Pozi's capabilities. See what's new, improved and fixed in Pozi.
 ---
 
 # Roadmap
 
-We are constantly improving the Pozi experience for our users based on the feedback we receive from our clients. This includes developing new features, fixing bugs, improving the interface and optimising performance.
+<img src="/static/img/undraw/undraw_scrum_board_re_wk7v.svg" alt="" style="float:right;width:300px;margin:40px 40px;">
+
+We're constantly at work to improve the Pozi experience for our users based on the feedback and feature requests we receive from our clients. This includes developing new functionality, fixing bugs, improving the interface and optimising performance.
 
 We also offer clients the opportunity to sponsor development of new features, giving them direct input into the specification to ensure it meets their exact requirements.
 
@@ -12,50 +15,52 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 <br/>
 
-## Upcoming
-
-### Features and Enhancements
-
-- [ ] enable layer finder on catalogue layers
-- [ ] allow linked layer to be turned off independently from target layer
-
-### Bugfixes
-
-==- Known bugs
-
-- [ ] WMS GetFeatureInfo details fail to display after initial viewing
-- [ ] table view for catalogue layers does not persist on page
-- [ ] layer groups don't remember their expand/collapse status from previous session
-
-==-
-
-Found a bug not listed here? Please send us details at support@pozi.com.
-
-<br/>
-
 ## Completed
+
+### July 2022
+
+- [x] new: obtain layer queryability setting from QGIS Server
+- [x] new: enable highlighting of selected features from QGIS Server layers
+- [x] improved: slimmer left drawer takes up less screen real estate
+- [x] improved: show spinner during app load if waiting for slow data sources
+- [x] improved: even better evaluation of values to display for title of selected feature
+- [x] fixed: info panel failed to show feature details after initial viewing
+- [x] fixed: wait for local datasource check before attempting to get local layers
+
 ### June 2022
 
-- [x] new: **QGIS integration!**
+Our biggest release in over two years!
+
+- [x] new: **QGIS integration**
   * import layer catalogue from QGIS Server and other WMS/WFS sources
   * build nested layer groups from WMS/QGIS catalogues
-  * cache layer catalogues in browser for sites with intermittent network performance issues
-  * create Admin Guide
+  * cache layer catalogues in browser for instant startup
+  * create Admin Guide, add content for using QGIS to create and maintain layer catalogues
 - [x] new: dynamically evaluate suitable title to display for selected features
 - [x] new: display loading spinner for WMS layers
 - [x] improved: compact layer view
 - [x] improved: extend table view to full page width
 - [x] upgrade to React v17
+- [x] fixed: prevent page from reloading on first visit
 
 ---
 
 !!!
 
-Please excuse the gaps in our timeline! Sometimes we get busy building, and don't spend enough time celebrating our wins and recording our accomplishments. Come back soon to see a more complete timeline.
+Please excuse the gaps in our timeline!
 
-TO-DO: add to timeline from https://github.com/pozi/PoziApp/commits/
+Sometimes we get busy building, and don't spend enough time celebrating our wins and recording our accomplishments. Come back soon to see a more complete timeline.
+
+<!-- TO-DO: add to timeline from https://github.com/pozi/PoziApp/commits/ -->
+<!-- https://github.com/pozi/PoziApp/pulls?q=is%3Apr+sort%3Aupdated-desc+is%3Aclosed -->
 
 !!!
+
+---
+
+### January 2022
+
+- [x] new: enable coordinates to be displayed in alternative projections
 
 ---
 

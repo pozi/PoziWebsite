@@ -52,23 +52,25 @@ If using Windows Notepad, the line returns in existing files may not display cor
 
 Notes:
 
-* If key name ends with 'folder', the interface offers the user a button to launch an Open Folder dialog.
-* If key name ends with 'file', the interface offers the user a button to launch an Open File dialog
-* If key name ends with 'password', the interface displays dummy characters in place of the populated or typed characters
+* If key name ends with `folder`, the interface offers the user a button to launch an Open Folder dialog.
+* If key name ends with `file`, the interface offers the user a button to launch an Open File dialog
+* If key name ends with `password`, the interface displays dummy characters in place of the populated or typed characters
 
 Examples:
 
-    [User Settings]
-    Vicmap_Address_Folder:
-    Vicmap_Property_Folder:
-    LGA_Code: 302
-    Database_File: Output\Ballarat.sqlite
+```ini
+[User Settings]
+Vicmap_Address_Folder:
+Vicmap_Property_Folder:
+LGA_Code: 302
+Database_File: Output\Ballarat.sqlite
 
-    [User Settings]
-    Pathway_DSN: pthprod
-    Pathway_User_ID:
-    Pathway_Password:
-    Pathway_Table_Prefix: pthdbo.
+[User Settings]
+Pathway_DSN: pthprod
+Pathway_User_ID:
+Pathway_Password:
+Pathway_Table_Prefix: pthdbo.
+```
 
 ### General Settings
 
@@ -126,7 +128,7 @@ A reference guide for the SQL functions in SQLite and Spatialite is [here](https
     Destination: PG:host='server.pozi.com' port='5432' dbname='councilgis' user='opengeo' password='abc123',Road
     Destination: OCI:gisadmin/abc123@127.0.0.1,Road
 
-## If
+### If
 
 Notes:
 
