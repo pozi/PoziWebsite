@@ -1,8 +1,9 @@
 ---
-title: Pozi Server
 description: Pozi Server enables the integrate of your organisation's internal data sources (spatial and non-spatial) with the Pozi app.
 order: 100
 ---
+
+# Installation
 
 Pozi Server is the software in the Pozi Enterprise suite that enables internal datasets to be served to Pozi users within the organisation’s network.
 

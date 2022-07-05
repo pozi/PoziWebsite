@@ -1,5 +1,5 @@
 ---
-title: Installation
+title: Pozi Server
 description: Step-by-step instructions for setting up Pozi Server on your network
 order: 100
 ---
