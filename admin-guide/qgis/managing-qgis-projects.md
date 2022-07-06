@@ -50,11 +50,13 @@ Browser > WMS/WMTS > Vicmap Basemap > Vicmap Basemap - Web Mercator - Cartograph
 
 The project's *Advertised URL* is a URL at which WMS and WFS requests can interact with the layers in the project file. Essentially, the project file needs a reference to itself in a URL format.
 
+This step involves constructing the URL text that will be used in subsequent configuration below. For now, you can use a blank text document in Notepad to compile the text.
+
 Combine the details below to create your project's Advertised URL:
 
 1. server URL (default server URL is `https://local.pozi.com/`, but check your local setup for any custom endpoint)
 2. service endpoint (eg `iis/qgisserver?`)
-3. QGIS project file path (eg `MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs`)
+3. QGIS project file path, with any backslashes replaced with forward slashes (eg `MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs`)
 
 Combine these three text strings to create the Advertised URL.
 
@@ -62,7 +64,7 @@ Example Advertised URL:
 
 https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs
 
-Copy the URL to your clipboard or a blank text document for reference. This URL will be used in subsequent configuration below.
+Copy the URL to your clipboard for subsequent configuration below.
 
 ### Enable Web Services
 
@@ -105,7 +107,7 @@ When you're done, remember to [enable any layers for WFS](/admin-guide/qgis/conf
 
 ### Obtain GetProjectSettings URL
 
-Construct a `GetProjectSettings` URL by combining the following:
+In a text editor, construct a `GetProjectSettings` URL by combining the following:
 
 1. Advertised URL from above (eg `https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs`)
 2. GetProjectSettings request: `&service=WMS&REQUEST=GetProjectSettings`
