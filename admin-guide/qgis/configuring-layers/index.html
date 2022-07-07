@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.710482415958">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.710498160971">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.3.0.710482415958" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.3.0.710498160971" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.710482415958" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.710498160971" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.710482415958" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.710498160971" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -388,7 +388,7 @@
         <span>Styling for Vector Layers</span>
     </h3>
 </doc-anchor-target>
-<p>For any layers that are to be made accessible to Pozi as <em>vector</em> layers (ie, WFS), use only the supported styles specified below. Even if you only intend to serve layer via WMS, keep the styling as simple as possible to make any future transition to WFS easier.</p>
+<p>For any layers that are to be made accessible to Pozi as fully interactive <em>vector</em> layers (ie, WFS), use only the supported styles specified below. Even if you only intend to serve layer via WMS, keep the styling as simple as possible to make any future transition to WFS easier.</p>
 <doc-anchor-target id="supported">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#supported">#</doc-anchor-trigger>
@@ -442,15 +442,15 @@
     </h4>
 </doc-anchor-target>
 <ul>
-<li>opacity
+<li><strong>opacity</strong>
 <ul>
 <li>any changes to opacity must be set in the style colour setting - the layer&#x27;s global opacity slider has no effect</li>
-<li>for polygon features to be selectable, the fill opacity must be greater than <code v-pre>0</code> - it can be as little as 1%</li>
+<li>for polygon features to be selectable, the fill opacity must be greater than <code v-pre>0</code> - it can be as little as <code v-pre>1%</code></li>
 </ul>
 </li>
-<li>increase symbol size from the QGIS default to <strong>4mm</strong> or greater enable to easier interaction for users in the browser</li>
-<li>increase line thicknesses from the QGIS default to <strong>1mm</strong> or greater to enable users to more easily select line features</li>
-<li>increase label text size from the QGIS default to <strong>10 points</strong> or greater, and a white <strong>1.8mm</strong> buffer for better legibility</li>
+<li><strong>symbol size</strong>: set to <code v-pre>4mm</code> or greater enable to easier interaction for users in the browser</li>
+<li><strong>line thicknesses</strong>: set to <code v-pre>1mm</code> or greater to enable users to more easily select line features</li>
+<li><strong>label text size</strong>: set to <code v-pre>10 points</code> or greater, and a white <code v-pre>1.8mm</code> buffer for better legibility</li>
 </ul>
 <br/>
 <doc-anchor-target id="enable-layers-for-wfs">
@@ -459,7 +459,7 @@
         <span>Enable Layers for WFS</span>
     </h2>
 </doc-anchor-target>
-<p>WFS (Web Feature Service) provides users with the ability to directly interact with map features. When a WFS layer is loaded in Pozi, every feature from the source dataset is loaded in the browser as a <em>vector</em> layer that includes all geometries and attributes.</p>
+<p>WFS (Web Feature Service) provides users with the ability to directly interact with map features as <em>vector</em> objects. When a WFS layer is turned on in Pozi, every feature from the source dataset is loaded in the browser, including all geometries and attributes.</p>
 <doc-anchor-target id="considerations-for-wfs">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#considerations-for-wfs">#</doc-anchor-trigger>
@@ -500,7 +500,7 @@
 </doc-anchor-target>
 <ol>
 <li>Project &gt; Properties &gt; QGIS Server</li>
-<li><code v-pre>WFS capabilities &gt; Published</code>: tick on for each layer to be published</li>
+<li><code v-pre>WFS capabilities &gt; Published</code>: tick on for each layer to be published, or click <code v-pre>Select All</code> if all layers are required</li>
 <li>OK</li>
 <li>Project &gt; Save (<code v-pre>Ctrl</code> + <code v-pre>S</code>)</li>
 </ol>
@@ -535,6 +535,7 @@
         <span>Selectability</span>
     </h2>
 </doc-anchor-target>
+<p><small>#selectable #queryable #identifiable</small></p>
 <p>To prevent the Info Panel from displaying results from specific layers (say, for aerial photos), update the <code v-pre>Data Sources</code> settings in the QGIS project.</p>
 <p>Project &gt; Properties &gt; Data Sources &gt; Identifiable &gt; untick to disable layer selectability</p>
 <br/>
