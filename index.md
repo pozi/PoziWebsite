@@ -247,7 +247,7 @@ Deliver data to staff and public – easily and affordably. Users can access the
 
 :::centre
 
-  ## Supporting GIS since 1999
+  ## GIS solutions since 1999
 
   For over twenty years, Pozi (formerly Groundtruth) has helped organisations to work more efficiently and gain greater insights into their clients, resources, activities and risks by making use of location-based information in their business processes.
 

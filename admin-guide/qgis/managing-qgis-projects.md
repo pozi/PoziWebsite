@@ -50,7 +50,7 @@ Browser > WMS/WMTS > Vicmap Basemap > Vicmap Basemap - Web Mercator - Cartograph
 
 The project's *Advertised URL* is a URL at which WMS and WFS requests can interact with the layers in the project file. Essentially, the project file needs a reference to itself in a URL format.
 
-This step involves constructing the URL text that will be used in subsequent configuration below. For now, you can use a blank text document in Notepad to compile the text.
+This step involves constructing the URL text that will be used in subsequent configuration below. You can use a temporary blank text document in Notepad to compile the text.
 
 Combine the details below to create your project's Advertised URL:
 
@@ -72,7 +72,7 @@ Copy the URL to your clipboard for subsequent configuration below.
 2. update WMS capabilities settings
    * `Exclude layers` (tick) > add > pick any background layers you don't need to see in Pozi
    * `Add geometry to feature response`: tick on
-   * `Advertised URL`: enter Advertised URL
+   * `Advertised URL`: enter Advertised URL (from above)
 3. update WMTS capabilities settings
    * `Published layers > Project > Published`: tick on
    * `Advertised URL`: enter Advertised URL
@@ -103,24 +103,7 @@ When you're done, remember to [enable any layers for WFS](/admin-guide/qgis/conf
 
 <br/>
 
-## Register Project
-
-### Obtain GetProjectSettings URL
-
-In a text editor, construct a `GetProjectSettings` URL by combining the following:
-
-1. Advertised URL from above (eg `https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs`)
-2. GetProjectSettings request: `&service=WMS&REQUEST=GetProjectSettings`
-
-Combine these text strings to create a `GetProjectSettings` URL.
-
-Example `GetProjectSettings` URL:
-
-https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs&service=WMS&request=GetProjectSettings
-
-Test this URL by pasting it in your browser and check that you get a valid response that lists the available layers.
-
-### Test Project Load Performance
+## Test Project Load Performance
 
 The speed at which Pozi can access layers from the QGIS project is limited by how fast QGIS can access the layers.
 
@@ -138,6 +121,26 @@ If the results show any layer that takes more than a fraction of a second to loa
 
 [(via GIS StackExchange)](https://gis.stackexchange.com/a/414884)
 
+
+<br/>
+
+## Register Project
+
+### Obtain GetProjectSettings URL
+
+In a text editor, construct a `GetProjectSettings` URL by combining the following:
+
+1. Advertised URL from above (eg `https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs`)
+2. GetProjectSettings request: `&service=WMS&REQUEST=GetProjectSettings`
+
+Combine these text strings to create a `GetProjectSettings` URL.
+
+Example `GetProjectSettings` URL:
+
+https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs&service=WMS&request=GetProjectSettings
+
+Test this URL by pasting it in your browser and check that you get a valid response that lists the available layers.
+
 ### Submit Helpdesk Ticket
 
 Email support@pozi.com with these details:
@@ -145,7 +148,7 @@ Email support@pozi.com with these details:
 * subject: New layer catalogue
 * name of new layer group to appear in Pozi layer panel
 * order in which the layer group is to appear in the Pozi Layer Panel (relative to an existing layer group)
-* `GetProjectSettings` URL
+* `GetProjectSettings` URL (from above)
 
 Within 24 hours, the new layer group will be configured and available for users to view in Pozi.
 

@@ -45,5 +45,7 @@ If there's an application you need to integrate with, and you don't see it here,
 
 ## Identity and Access Management
 
+*Available in Pozi Enterprise Cloud package*
+
 * [Azure Active Directory](./azure-active-directory)
 * AWS IAM

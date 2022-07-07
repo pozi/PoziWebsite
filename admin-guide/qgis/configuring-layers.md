@@ -88,7 +88,7 @@ For any layers that are to be made accessible to Pozi as *vector* layers (ie, WF
 
 #### Workaround required
 
-Configure [virtual fields](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/attribute_table.html#virtual-field) in QGIS to achieve:
+The following items are possible by configuring [virtual fields](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/attribute_table.html#virtual-field) in QGIS:
 
 * text expressions in labels (eg, replace all instances of 'UNNAMED' with (blank))
 * categorised styling based on a field name that contains spaces
@@ -114,7 +114,7 @@ WFS (Web Feature Service) provides users with the ability to directly interact w
 
 * layers are fully interactive using Pozi's filter, report and table view functionality
 * after the layer is loaded in the browser, the browser doesn't not need to send further requests for the layer to the server every time the map moves
-* cursor changes when hovering over object to indicate the feature is clickable
+* the cursor changes when hovering over object to indicate the feature is clickable
 * users can select an individual feature and display its details in Info Panel (without displaying results of features on other layers at the same location)
 
 #### Disadvantages
@@ -207,5 +207,7 @@ Simplify the style in the QGIS project and try again. Replace hatch styles with 
 Use QGIS to determine whether the layer also causes its project file to load slowly. Observe the progress bar at the bottom to see if any layers are taking more than a fraction of a second to load in QGIS. If it appears that a layer is taking longer, check the source data. If it's from a database view, check that any join fields are properly indexed.
 
 ![](img/qgis-project-loading-status.png)
+
+[!ref text="Testing Load Performance"](/admin-guide/qgis/managing-qgis-projects#test-project-load-performance)
 
 ==-

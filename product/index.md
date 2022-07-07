@@ -31,12 +31,12 @@ Unlike traditional GIS software, Pozi is built from the ground up to integrate d
 * mark up maps with points, lines, polygons and text, and share your annotated maps with others
 * generate reports based on features within the current map view, along with calculated statistics
 * obtain coordinates and dimensions for any selected feature, or interactively measure using provided measuring tools
-* export maps to desktop GIS
+* export geo-referenced maps to desktop GIS
 
 ==- For your organisation
 
-* vendor neutral architecture enables your organisation to use its existing spatial data library with no data migration migration
-* direct integration with live government web services
+* vendor neutral architecture enables your organisation to use its existing spatial data library
+* direct integration with live government and commercial web services
 * mobile friendly design: staff can take Pozi with them to meetings, presentations and out in the field, whether they are using a laptop, tablet or smartphone
 * performance: users don't experience frustration waiting for app to load--Pozi loads in the browser near instantly
 * embed customised maps directly in the organisation's webpages

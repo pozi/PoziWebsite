@@ -105,6 +105,10 @@ Our development services can be engaged for any custom development required to f
 
 We also offer clients the opportunity to sponsor development of new features, giving them direct input into the specification to ensure it meets their exact requirements.
 
+* custom workflows
+* new functionality
+* custom integrations for corporate applications
+
 <small>AUD</small>$1500/day
 
 <br/>
