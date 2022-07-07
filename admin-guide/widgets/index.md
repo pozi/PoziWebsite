@@ -2,6 +2,7 @@
 title: Widgets
 sidebar_position: 5
 tags: [Pozi Pro]
+icon: rows
 ---
 
 :::note Under Construction

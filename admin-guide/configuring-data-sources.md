@@ -1,6 +1,7 @@
 ---
 title: Configuring Data Sources
 sidebar_position: 2
+icon: database
 ---
 
 :::note Under Construction

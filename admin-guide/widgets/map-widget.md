@@ -1,5 +1,6 @@
 ---
 title: Map Widget
+icon: location
 ---
 
 :::note Under Construction

@@ -1,5 +1,6 @@
 ---
 title: Data Widget
+icon: list-unordered
 ---
 
 :::note Under Construction

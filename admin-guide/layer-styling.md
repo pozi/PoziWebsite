@@ -1,6 +1,7 @@
 ---
 title: Layer Styling
 sidebar_position: 4
+icon: paintbrush
 ---
 
 :::note Under Construction

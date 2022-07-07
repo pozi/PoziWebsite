@@ -1,5 +1,6 @@
 ---
 title: Azure Active Directory
+icon: dot
 tags: [Pozi Enterprise Cloud, Cardinia Shire Council]
 ---
 

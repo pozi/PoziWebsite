@@ -1,5 +1,6 @@
 ---
 title: Data Sync
+icon: sync
 tags: [Pozi Enterprise]
 ---
 

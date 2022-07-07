@@ -1,6 +1,7 @@
 ---
 description: Pozi Server enables the integrate of your organisation's internal data sources (spatial and non-spatial) with the Pozi app.
 order: 100
+icon: tools
 ---
 
 # Installation

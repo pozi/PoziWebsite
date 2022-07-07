@@ -1,4 +1,5 @@
 ---
+icon: dot
 ---
 
 # DELWP Web Services

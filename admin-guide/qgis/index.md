@@ -1,5 +1,6 @@
 ---
 order: 95
+icon: globe
 tags: [Pozi Enterprise]
 ---
 

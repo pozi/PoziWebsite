@@ -1,5 +1,6 @@
 ---
 description: GIS integration for CouncilWise
+icon: dot
 tags: [Pozi Enterprise, Yarriambiack Shire Council, West Wimmera Shire Council]
 ---
 

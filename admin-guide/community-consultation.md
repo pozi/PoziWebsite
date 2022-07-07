@@ -1,6 +1,7 @@
 ---
 title: Community Consultation
 tags: [Pozi Pro]
+icon: comment-discussion
 ---
 
 :::note Under Construction

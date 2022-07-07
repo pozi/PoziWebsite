@@ -1,5 +1,6 @@
 ---
 description: GIS integration for Asset Edge Reflect
+icon: dot
 tags: [Pozi Enterprise, Loddon Shire Council]
 ---
 

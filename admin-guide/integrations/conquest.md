@@ -1,5 +1,6 @@
 ---
 description: GIS integration for Conquest Asset Management
+icon: dot
 tags: [Pozi Enterprise, Southern Grampians Shire Council]
 ---
 

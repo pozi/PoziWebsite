@@ -1,5 +1,5 @@
 ---
-# icon: plug
+icon: plug
 order: 90
 ---
 

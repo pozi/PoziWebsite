@@ -1,6 +1,7 @@
 ---
 description: Configure QGIS desktop to make it easy to publish your layers to Pozi
 order: 100
+icon: codespaces
 ---
 
 # Setting Up QGIS

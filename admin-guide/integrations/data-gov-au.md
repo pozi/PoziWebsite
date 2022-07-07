@@ -1,4 +1,5 @@
 ---
+icon: dot
 ---
 
 # data.gov.au

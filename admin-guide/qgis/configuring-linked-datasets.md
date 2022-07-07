@@ -1,5 +1,6 @@
 ---
 order: 70
+icon: link
 ---
 
 # Configuring Linked Datasets

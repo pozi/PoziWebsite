@@ -1,5 +1,6 @@
 ---
 title: Publisher
+icon: git-commit
 tags: [Pozi Enterprise]
 ---
 
