@@ -17,7 +17,7 @@ Using your [existing QGIS project](managing-qgis-projects), you can add new laye
 
 [QGIS Reference: Opening Data](https://docs.qgis.org/latest/en/docs/user_manual/managing_data_source/opening_data.html#opening-data)
 
-==- A note about layer file paths
+==- About layer file paths
 
 When adding new file-based layers, use the layer's absolute file path (UNC) to ensure that the service under which the QGIS Server is running can recognise the path.
 
@@ -29,6 +29,12 @@ A UNC path is an absolute path that is recognised by all user accounts, regardle
 * `\\bs-intra\GIS\`
 
 Add the UNC path of your GIS data folder as a *Favorite* in the QGIS Browser panel for easy access. Learn more [here](https://docs.qgis.org/latest/en/docs/user_manual/introduction/browser.html#favorites). Also add a shortcut to the UNC location on your PC desktop for extra convenience.
+
+==- About layer names
+
+Pozi does not currently support duplicate layer names within a site.
+
+If you have two layers that share a name, [alter the layer name](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#source-properties) on one or both in QGIS so that they are no longer the same.
 
 ==-
 
