@@ -1,5 +1,6 @@
 ---
 order: 80
+icon: stack
 ---
 
 # Configuring Layers
@@ -68,7 +69,7 @@ Reference:
 
 ### Styling for Vector Layers
 
-For any layers that are to be made accessible to Pozi as *vector* layers (ie, WFS), use only the supported styles specified below. Even if you only intend to serve layer via WMS, keep the styling as simple as possible to make any future transition to WFS easier.
+For any layers that are to be made accessible to Pozi as fully interactive *vector* layers (ie, WFS), use only the supported styles specified below. Even if you only intend to serve layer via WMS, keep the styling as simple as possible to make any future transition to WFS easier.
 
 #### Supported
 
@@ -101,18 +102,18 @@ The following items are possible by configuring [virtual fields](https://docs.qg
 
 #### Vector Style Tips
 
-* opacity
+* **opacity**
   * any changes to opacity must be set in the style colour setting - the layer's global opacity slider has no effect
-  * for polygon features to be selectable, the fill opacity must be greater than `0` - it can be as little as 1%
-* increase symbol size from the QGIS default to **4mm** or greater enable to easier interaction for users in the browser
-* increase line thicknesses from the QGIS default to **1mm** or greater to enable users to more easily select line features
-* increase label text size from the QGIS default to **10 points** or greater, and a white **1.8mm** buffer for better legibility
+  * for polygon features to be selectable, the fill opacity must be greater than `0` - it can be as little as `1%`
+* **symbol size**: set to `4mm` or greater enable to easier interaction for users in the browser
+* **line thicknesses**: set to `1mm` or greater to enable users to more easily select line features
+* **label text size**: set to `10 points` or greater, and a white `1.8mm` buffer for better legibility
 
 <br/>
 
 ## Enable Layers for WFS
 
-WFS (Web Feature Service) provides users with the ability to directly interact with map features. When a WFS layer is loaded in Pozi, every feature from the source dataset is loaded in the browser as a *vector* layer that includes all geometries and attributes.
+WFS (Web Feature Service) provides users with the ability to directly interact with map features as *vector* objects. When a WFS layer is turned on in Pozi, every feature from the source dataset is loaded in the browser, including all geometries and attributes.
 
 ### Considerations for WFS
 
@@ -136,7 +137,7 @@ As a guideline, enable WFS only for layers with fewer than 5-10K features, or ev
 ### Enable WFS
 
 1. Project > Properties > QGIS Server
-2. `WFS capabilities > Published`: tick on for each layer to be published
+2. `WFS capabilities > Published`: tick on for each layer to be published, or click `Select All` if all layers are required
 3. OK
 4. Project > Save (`Ctrl` + `S`)
 
@@ -171,6 +172,8 @@ See https://docs.qgis.org/latest/en/docs/user_manual/expressions/expression.html
 <br/>
 
 ## Selectability
+
+<small>#selectable #queryable #identifiable</small>
 
 To prevent the Info Panel from displaying results from specific layers (say, for aerial photos), update the `Data Sources` settings in the QGIS project.
 

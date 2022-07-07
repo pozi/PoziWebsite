@@ -11,8 +11,8 @@ The Pozi Administrator Guide contains self-service information for *Pozi Enterpr
 
 Administrators control the following aspects of the Pozi experience:
 
-* add and configure layers for internal use
-* sync layers for external use
+* add and configure layers for viewing within your network
+* sync layers to Pozi cloud for external viewing
 * add layer to Unified Search index
 * embed custom maps and widgets in your website
 

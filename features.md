@@ -78,6 +78,8 @@ Pozi allows you to have unlimited, embeddable and bookmarkable maps customised t
 
 <br/>
 
+---
+
 ## Pozi Pro
 
 Pozi Pro offers your organisation all the above features along with more advanced functionality to further engage with customers and satisfy the demands of internal staff and other repeat users.
@@ -98,7 +100,7 @@ Whenever a user searches for their address or location, Pozi Pro shows the neare
 
 <br/>
 
-### Multiple layers & widgets
+### Multiple imagery layers, plus widgets
 
 <br/>
 <img src="/static/img/tweet-gallery/horsham_2020_aerial_imagery.jpg">
@@ -107,11 +109,11 @@ Whenever a user searches for their address or location, Pozi Pro shows the neare
 <br/>
 
 ||| :icon-stack: <h4>Multiple imagery layers</h4>
-Features such as combining multiple images, toggling aerial images by date, comparing date-stamped visible & infra-red images for urban growth data, building footprints, vegetation and more. Pozi Pro can also merge high & low res imagery into a seamless layer for complete coverage.
+Enable users to pick between multiple images to compare by date for monitoring urban growth, building footprints, vegetation and more. Pozi Pro can also merge imagery from multiple captures into a seamless layer for complete coverage.
 ||| :icon-paper-airplane: <h4>Map widget</h4>
-Pozi Pro's map widget that allows you to embed an address search box on your website to launch a custom map. Users simply enter an address and Pozi Pro will launch its map featuring their chosen location.
-||| :icon-code-square: <h4>Information widget</h4>
-Different from Map Widget, the Information Widget allows an address search field to be embedded on your website to display property-specific information (without a map launch), such as council bin collection dates.
+Pozi Pro's map widget allows you to embed an address search box on your website to launch a custom map. Users simply enter an address and Pozi Pro will launch its map featuring their chosen location.
+||| :icon-code-square: <h4>Data widget</h4>
+The data widget is an address search box embedded on your website that directly displays location-specific information (without a map launch), such as council bin collection dates.
 |||
 
 <br/>
@@ -135,10 +137,9 @@ Pozi Pro can generate custom map links to control exactly how the app appears to
 <br/>
 <img src="/static/img/screenshots/frankston-event-site-plan-mockup.jpg">
 <br/>
+<br/>
 
 ---
-
-<br/>
 
 ## Pozi Enterprise
 
@@ -160,6 +161,8 @@ Enable staff to access map layers directly from your organisation's network, inc
 [!ref icon="trophy" text="Upgrade to Pozi Enterprise"](/upgrade/)
 
 <br/>
+
+---
 
 ## Pozi Enterprise Cloud
 

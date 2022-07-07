@@ -23,7 +23,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [x] new: enable highlighting of selected features from QGIS Server layers
 - [x] improved: slimmer left drawer takes up less screen real estate
 - [x] improved: show spinner during app load if waiting for slow data sources
-- [x] improved: even better evaluation of values to display for title of selected feature
+- [x] improved: even better evaluation of attributes to display for title of selected feature
 - [x] fixed: info panel failed to show feature details after initial viewing
 - [x] fixed: wait for local datasource check before attempting to get local layers
 
@@ -36,7 +36,7 @@ Our biggest release in over two years!
   * build nested layer groups from WMS/QGIS catalogues
   * cache layer catalogues in browser for instant startup
   * create Admin Guide, add content for using QGIS to create and maintain layer catalogues
-- [x] new: dynamically evaluate suitable title to display for selected features
+- [x] new: dynamically evaluate the most suitable attribute from any selected feature to display as feature's title
 - [x] new: display loading spinner for WMS layers
 - [x] improved: compact layer view
 - [x] improved: extend table view to full page width
@@ -60,7 +60,7 @@ Sometimes we get busy building, and don't spend enough time celebrating our wins
 
 ### January 2022
 
-- [x] new: enable coordinates to be displayed in alternative projections
+- [x] new: display coordinates in alternative projections
 
 ---
 

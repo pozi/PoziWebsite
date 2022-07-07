@@ -21,17 +21,19 @@ Pozi respects your organisation's autonomy and strategic technology decisions.
 
 ### Ease of Use
 
-Users don't require expensive training to get the answers they need. When tools are simple and intuitive, you improve user engagement and promote more informed decision-making.
+Users don't require expensive training to get the answers they need.
 
-Pozi's focus on simplicity and ease of use enables users to quickly access the critical information they need, regardless of any previous GIS expertise.
+Pozi's focus on simplicity and ease of use enables users to quickly access critical information, regardless of any previous GIS expertise.
 
-Pozi's smart adaptive interface displays only the information needed for the task at hand, whether it's viewing information for a selected feature or location, browsing available map layers, or carrying out a search. By freeing up valuable screen space, users gain more insight and context around their area of interest.
+Pozi's adaptive interface displays only the information needed for the task at hand, whether it's visualising the map at full screen, viewing details about a selected feature or location, browsing available map layers, or searching for a location. By freeing up valuable screen space, users gain more insight and context around their focus area.
 
 * intuitive workflows
 * touch friendly, mobile friendly
 * efficient use of screen space, free of clutter
 * no complex tools, menus or jargon
 * modern, visually-appealing interface
+
+Pozi's ease of use improves user engagement and promotes more informed decision-making.
 
 ### Ease of Configuration
 
