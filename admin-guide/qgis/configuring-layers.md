@@ -34,7 +34,7 @@ Add the UNC path of your GIS data folder as a *Favorite* in the QGIS Browser pan
 
 Pozi does not currently support duplicate layer names within a site.
 
-If you have two layers that share a name, [alter the layer name](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#source-properties) on one or both in QGIS so that they are no longer the same.
+If you have two layers that share a name, [alter the layer name](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#source-properties) on one or both layers in the affected QGIS project(s) so that they are no longer the same.
 
 ==-
 
