@@ -1,19 +1,9 @@
 ---
-title: Configuring Data Sources
 order: 10
 icon: database
 ---
 
-:::note Under Construction
-
-*This page is a work in progress. Please refer to our existing Help Guide for information about this topic.*
-
-[Existing Help Guide](https://help.pozi.com/search?query=configuring+data+sources)
-
-:::
-
----
-
+# Data Preparation
 ## Attribute Formatting
 
 ### Hyperlinks
@@ -46,8 +36,10 @@ QGIS can combine hundreds or thousands of tiles into virtual layer by generating
 
 ### Create VRT
 
-1. QGIS > Raster > Miscellaneous > Build Virtual Raster
-2. Virtual > file picker > Save to File >  choose location and name of new VRT file to create (typically use the name of the source imagery folder as the new VRT filename, eg `2015 Full Coverage.vrt`)
+In QGIS:
+
+1. Raster > Miscellaneous > Build Virtual Raster
+2. Virtual > click file picker > Save to File >  choose location and name of new VRT file to create (typically use the name of the source imagery folder as the new VRT filename, eg `2015 Full Coverage.vrt`)
 3. Input layers > click file picker > Add File(s)
 4. sort files by type, click to select first ECW file, scroll to last ECW file, hold Shift and click last ECW file to select all ECW files > Open
 5. Run
