@@ -1,5 +1,5 @@
 ---
-description: IntraMaps vs Pozi - evaluate which enterprise GIS viewer better serves your organisation.
+description: IntraMaps vs Pozi - evaluate which enterprise GIS viewer better serves your organisation. We consider functionality, strategic fit and support.
 layout: central
 ---
 
@@ -52,6 +52,8 @@ Engage your community and external stakeholders with information that's relevant
 Every Pozi site provides a public-facing map view by default.
 
 Synchronise selected datasets from your network to the Pozi cloud platform for viewing by the public.
+
+And engage with the public using Pozi's two-way community consultation functionality. Gather information from the public about incidents, maintenance requests, feedback on strategic initiatives, community story-telling, and more.
 
 ### Modules vs Bookmarks
 
@@ -131,7 +133,7 @@ When you fund the development of new features, you have ongoing access to the ne
 
 ==- For advanced users
 
-* view layers as tables, narrow down results with filters, and browse to navigate to specific features
+* view layers as interactive tables, narrow down results with filters, and browse to navigate to specific features
 * generate reports based on features within the current map view with dynamically calculated statistics
 * export geo-referenced maps to desktop GIS
 
@@ -164,11 +166,6 @@ You're not alone.
 
 With Pozi, your GIS can thrive and adapt to your users' growing needs.
 
-* it's worthwhile taking a critical look at existing software to evaluate the value it's currently providing
-* it's OK to switch providers in order to get better support
-* GIS budgets can be put to better use by using lower-cost solutions and funding the development of functionality your users need
-* your organisation's GIS can grow and adapt to your needs without tenders/RFQs, data migration or significant retraining
-
 ### On a contract?
 
 If you're stuck in another contract, talk to us. Not only can we get you up and running with Pozi straight away, we'll provide credit for your use of Pozi during the remainder of your existing contract!
@@ -183,9 +180,11 @@ If you're stuck in another contract, talk to us. Not only can we get you up and 
 
 IntraMaps is one of many software titles in the TechnologyOne suite. If your organisation needs a single point of contact for all its technology needs, then TechnologyOne's offering will suit your organisation.
 
-==- You're able to use a third party provider to support your existing IntraMaps
+==- You have access to a third party provider to support your existing IntraMaps
 
-If you have access to support from an independent provider, and they've proven they can keep IntraMaps working to suit your organisation's needs, then IntraMaps can still be a viable option for you.
+If your IntraMaps contract allows you to get support from an independent provider, and they've proven they can keep IntraMaps working to suit your organisation's needs, then IntraMaps can still be a viable option for you.
+
+Ensure you check the TechnologyOne roadmap for upcoming changes that might affect the autonomy your organisation maintains over its corporate spatial data.
 
 ==- Users use it to launch legacy Windows applications
 
@@ -195,9 +194,9 @@ As long as the integrations continue to be supported, then IntraMaps may be righ
 
 ==- You need to publish your own custom base map to external users
 
-Pozi supports a variety of commercial, government and community basemaps, and allows custom styling for vector tile basemaps. It can also use any QGIS project as a basemap for internal users.
+Pozi enables your site to make use of a variety of commercial, government and community basemaps, and also allows custom styling for vector tile basemaps. It can even use any QGIS project or MapServer map file as a basemap for internal users.
 
-However if you need your public users to use an internally-maintained custom basemap, then IntraMaps may be the right option for you.
+However if you need your public users to use a custom basemap that you maintain, then IntraMaps may be the right option for you.
 
 ==- You need to isolate layers on different maps
 

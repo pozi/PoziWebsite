@@ -1,6 +1,6 @@
 ---
 title: Widgets
-sidebar_position: 5
+order: 20
 tags: [Pozi Pro]
 icon: rows
 ---

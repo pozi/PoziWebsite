@@ -12,7 +12,7 @@ Pozi Data Sync is a dedicated folder within Pozi Server that is permanently sync
 
 After installing Pozi Server, go to [https://local.pozi.com/settingssync?](https://local.pozi.com/settingssync?) and fill in the cloud sync settings which have been provided to you by Pozi Support.
 
-![Cloud Sync Settings](./img/cloud-sync-settings.png){style="width:65%"}
+![Cloud Sync Settings](./img/cloud-sync-settings.png){style="width:500px"}
 
 As soon as this is done, your sync is live. Any files placed in `C:\Program Files (x86)\Pozi\userdata\public` are automatically and continuously synchronised to the Pozi cloud.
 

@@ -1,6 +1,6 @@
 ---
 title: Configuring Data Sources
-sidebar_position: 2
+order: 10
 icon: database
 ---
 
@@ -37,3 +37,27 @@ Example feature:
 When this feature is selected in Pozi, it will display like this:
 
 ![Screenshot of Info Panel](./img/info-panel.png){style="width:300px"}
+
+## Image Mosaics
+
+When aerial imagery data has been supplied as a folder of image tile files (as a opposed to a single image file), it is necessary to create an image *mosaic* for Pozi to recognise it as a single layer.
+
+QGIS can combine hundreds or thousands of tiles into virtual layer by generating a VRT file which you then add into your QGIS project.
+
+### Create VRT
+
+1. QGIS > Raster > Miscellaneous > Build Virtual Raster
+2. Virtual > file picker > Save to File >  choose location and name of new VRT file to create (typically use the name of the source imagery folder as the new VRT filename, eg `2015 Full Coverage.vrt`)
+3. Input layers > click file picker > Add File(s)
+4. sort files by type, click to select first ECW file, scroll to last ECW file, hold Shift and click last ECW file to select all ECW files > Open
+5. Run
+
+It can take up to 10 minutes to process 1-2K images. During this time, QGIS may show no sign of progress. On completion, the log display will display "Process completed successfully". QGIS may still appear to be working while stuck on 97%, and may not respond to any user action. If you can confirm that the VRT file has been created at the chosen location, you can safely force QGIS to close.
+
+### Add VRT to Project
+
+1. open your Aerials project in QGIS
+2. Layer > Add Layer > Add Rater Layer > file picker > select your new VRT file > Open > Add
+3. Project > Save
+
+It can take several hours for the VRT file to be added to the project. During this time, QGIS will not respond, and the cursor displays as a spinner. This is a [known issue](https://github.com/qgis/QGIS/issues/26231) in QGIS. Let it run overnight or however long is necessary. When you see the layer is added to the layer panel, save your project.
