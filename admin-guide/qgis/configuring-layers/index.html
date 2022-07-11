@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.710571844812">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.710841397042">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.3.0.710571844812" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.3.0.710841397042" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.710571844812" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.710841397042" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.710571844812" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.710841397042" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -341,7 +341,8 @@
    <doc-panel id="about-layer-names" collapsed>
        <template #title>About layer names</template>
 <p>Pozi does not currently support duplicate layer names within a site.</p>
-<p>If you have two layers that share a name, <a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#source-properties">alter the layer name</a> on one or both layers in the affected QGIS project(s) so that they are no longer the same.</p>
+<p>If you have two layers that share a name, even if they are maintained in separate QGIS projects, <a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#source-properties">alter the layer name</a> on one or both layers in the affected QGIS project(s) so that they are no longer the same.</p>
+<p>Similarly, layer folder names must also be unique, and must not share a name with any layer within a site.</p>
    </doc-panel>
 </doc-panels>
 <div class="flex mb-6">
@@ -418,7 +419,7 @@
 </doc-anchor-target>
 <ul>
 <li>SVG marker symbols</li>
-<li><code v-pre>diamond</code> symbol</li>
+<li><code v-pre>diamond</code>, <code v-pre>cross2</code>, <code v-pre>cross_fill</code> symbols</li>
 <li>symbol rotation</li>
 <li>fill hatching</li>
 <li>label offsets</li>
@@ -441,13 +442,28 @@
         <span>Vector Style Tips</span>
     </h4>
 </doc-anchor-target>
+<doc-anchor-target id="opacity">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#opacity">#</doc-anchor-trigger>
+        <span>Opacity</span>
+    </h5>
+</doc-anchor-target>
 <ul>
-<li><strong>opacity</strong>
-<ul>
-<li>any changes to opacity must be set in the style colour setting - the layer&#x27;s global opacity slider has no effect</li>
+<li>any changes to opacity must be set in the style colour setting - the symbol&#x27;s overall opacity slider (as well as the layer&#x27;s overall opacity slider) has no effect</li>
 <li>for polygon features to be selectable, the fill opacity must be greater than <code v-pre>0</code> - it can be as little as <code v-pre>1%</code></li>
 </ul>
-</li>
+<p><figure class="content-center">
+    <img src="../img/qgis-opacity-control.png" alt="" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<doc-anchor-target id="sizes">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#sizes">#</doc-anchor-trigger>
+        <span>Sizes</span>
+    </h5>
+</doc-anchor-target>
+<ul>
 <li><strong>symbol size</strong>: set to <code v-pre>4mm</code> or greater enable to easier interaction for users in the browser</li>
 <li><strong>line thicknesses</strong>: set to <code v-pre>1mm</code> or greater to enable users to more easily select line features</li>
 <li><strong>label text size</strong>: set to <code v-pre>10 points</code> or greater, and a white <code v-pre>1.8mm</code> buffer for better legibility</li>
@@ -489,7 +505,6 @@
 <li>not all QGIS styles are supported in Pozi for vector features</li>
 <li>only one vector feature can be selected at a time - info results are not displayed for any features that have been overlapped by another feature</li>
 <li>cannot directly use text expressions for labels (but you can still make use of virtual fields for creating generating label values)</li>
-<li>restricting visibility to specific zoom ranges is not currently supported</li>
 </ul>
 <p>As a guideline, enable WFS only for layers with fewer than 5-10K features, or even fewer for layers with complex polylines or polygons.</p>
 <doc-anchor-target id="enable-wfs">
@@ -574,6 +589,10 @@
    </doc-panel>
    <doc-panel id="layers-are-slow-to-load" collapsed>
        <template #title>Layers are slow to load</template>
+<p><strong>Consider using WMS instead of WFS</strong></p>
+<p>If a layer is being served via WFS, the load time will be proportional to how large the source dataset is. Layers with a large number of records or complex shapes may not be suitable for loading as a vector layer in the browser.</p>
+<p>Consider disabling WFS for your layer. Pozi will instead use WMS, enabling it to render layers efficiently for the user&#x27;s current map view without loading the entire dataset.</p>
+<p><strong>Check source data</strong></p>
 <p>Use QGIS to determine whether the layer also causes its project file to load slowly. Observe the progress bar at the bottom to see if any layers are taking more than a fraction of a second to load in QGIS. If it appears that a layer is taking longer, check the source data. If it&#x27;s from a database view, check that any join fields are properly indexed.</p>
 <p><figure class="content-center">
     <img src="../img/qgis-project-loading-status.png" alt="" />
