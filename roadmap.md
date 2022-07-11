@@ -21,11 +21,13 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 - [x] new: obtain layer queryability setting from QGIS Server
 - [x] new: enable highlighting of selected features from QGIS Server layers
+- [x] improved: faster app loads by caching layer catalogue in the browser (via service workers)
 - [x] improved: slimmer left drawer takes up less screen real estate
 - [x] improved: show spinner during app load if waiting for slow data sources
 - [x] improved: even better evaluation of attributes to display for title of selected feature
 - [x] fixed: info panel failed to show feature details after initial viewing
 - [x] fixed: wait for local datasource check before attempting to get local layers
+- [x] fixed: table view now working for catalogue layers
 
 ### June 2022
 

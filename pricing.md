@@ -16,7 +16,16 @@ Pozi delivers powerful location-based functionality at a fraction of the cost of
 
 ***No long-term, lock-in contracts***
 
-| :icon-megaphone: <h3>Public</h3> | :icon-tools: <h3>Pro</h3> | :icon-organization: <h3>Enterprise</h3> | :icon-rocket: <h3>Enterprise Cloud</h3> | { class="compact" }
+<style>
+    .pricingTable th {
+        background: #E9E9E9;
+    }
+    .pricingTable tr:nth-child(2) { background: #F9F9F9; }
+</style>
+
+<div class="pricingTable">
+
+| :icon-megaphone: <h3>Public</h3> | :icon-tools: <h3>Pro</h3> | :icon-organization: &nbsp; *<small>Most popular</small>* <h3>Enterprise</h3> | :icon-rocket: <h3>Enterprise Cloud</h3> | { class="compact" }
 ---    | ---
 | *Perfect for publishing your organisation's data to the public* | *When your users demand a higher level of interaction* | *A high functioning replacement for your inhouse GIS enquiry tool* | *Ultimate integration with your organisation’s cloud infrastructure* |
 | <small>AUD</small><big>**$6K**</big><small>/year</small> | <small>AUD</small><big>**$9K**</big><small>/year</small> | <small>AUD</small><big>**$12K**</big><small>/year</small> | <small>AUD</small><big>**$15K**</big><small>/year</small> |
@@ -32,6 +41,8 @@ Pozi delivers powerful location-based functionality at a fraction of the cost of
 | ✔️ Custom maps | ✔️ Custom bookmarking |  |  |
 | | ✔️ GPS tracking |  |  |
 | [More info](/features/#pozi-public) | [More info](/features/#pozi-pro) | [More info](/features/#pozi-enterprise) | [More info](/features/#pozi-enterprise-cloud) |
+
+</div>
 
 <br/>
 

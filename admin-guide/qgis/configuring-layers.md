@@ -35,7 +35,9 @@ Add the UNC path of your GIS data folder as a *Favorite* in the QGIS Browser pan
 
 Pozi does not currently support duplicate layer names within a site.
 
-If you have two layers that share a name, [alter the layer name](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#source-properties) on one or both layers in the affected QGIS project(s) so that they are no longer the same.
+If you have two layers that share a name, even if they are maintained in separate QGIS projects, [alter the layer name](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#source-properties) on one or both layers in the affected QGIS project(s) so that they are no longer the same.
+
+Similarly, layer folder names must also be unique, and must not share a name with any layer within a site.
 
 ==-
 
@@ -87,7 +89,7 @@ For any layers that are to be made accessible to Pozi as fully interactive *vect
 #### Not currently supported
 
 * SVG marker symbols
-* `diamond` symbol
+* `diamond`, `cross2`, `cross_fill` symbols
 * symbol rotation
 * fill hatching
 * label offsets
@@ -102,9 +104,15 @@ The following items are possible by configuring [virtual fields](https://docs.qg
 
 #### Vector Style Tips
 
-* **opacity**
-  * any changes to opacity must be set in the style colour setting - the layer's global opacity slider has no effect
-  * for polygon features to be selectable, the fill opacity must be greater than `0` - it can be as little as `1%`
+##### Opacity
+
+* any changes to opacity must be set in the style colour setting - the symbol's overall opacity slider (as well as the layer's overall opacity slider) has no effect
+* for polygon features to be selectable, the fill opacity must be greater than `0` - it can be as little as `1%`
+
+![](./img/qgis-opacity-control.png)
+
+##### Sizes
+
 * **symbol size**: set to `4mm` or greater enable to easier interaction for users in the browser
 * **line thicknesses**: set to `1mm` or greater to enable users to more easily select line features
 * **label text size**: set to `10 points` or greater, and a white `1.8mm` buffer for better legibility
@@ -130,7 +138,6 @@ WFS (Web Feature Service) provides users with the ability to directly interact w
 * not all QGIS styles are supported in Pozi for vector features
 * only one vector feature can be selected at a time - info results are not displayed for any features that have been overlapped by another feature
 * cannot directly use text expressions for labels (but you can still make use of virtual fields for creating generating label values)
-* restricting visibility to specific zoom ranges is not currently supported
 
 As a guideline, enable WFS only for layers with fewer than 5-10K features, or even fewer for layers with complex polylines or polygons.
 
@@ -212,6 +219,14 @@ Pozi will display layers in a generic style if it cannot process the style that 
 Simplify the style in the QGIS project and try again. Replace hatch styles with semi-opaque fills. Replace custom point symbols with one of the standard symbols specified above.
 
 ==- Layers are slow to load
+
+**Consider using WMS instead of WFS**
+
+If a layer is being served via WFS, the load time will be proportional to how large the source dataset is. Layers with a large number of records or complex shapes may not be suitable for loading as a vector layer in the browser.
+
+Consider disabling WFS for your layer. Pozi will instead use WMS, enabling it to render layers efficiently for the user's current map view without loading the entire dataset.
+
+**Check source data**
 
 Use QGIS to determine whether the layer also causes its project file to load slowly. Observe the progress bar at the bottom to see if any layers are taking more than a fraction of a second to load in QGIS. If it appears that a layer is taking longer, check the source data. If it's from a database view, check that any join fields are properly indexed.
 

@@ -57,6 +57,28 @@ For WMS datasets, the dataset type can be either `TileWMS` or `ImageWMS`.
 }
 ```
 
+==- Aerial image from local MapServer
+
+```json
+{
+  "title": "Aerial Photo (2021 Jan)",
+  "group": "Imagery",
+  "type": "TileWMS",
+  "queryable": false,
+  "config": {
+    "url": "https://pozi-cardiniavicgovau.msappproxy.net/iis/MapServer?MAP=C:/Pozi/MapServer/maps/Aerial.map",
+    "params": {
+      "FORMAT": "image/jpeg",
+      "LAYERS": "NMD-1199_Cardinia"
+    }
+  },
+  "linkedLayers": [
+    "Vicmap Labels"
+  ],
+  "localDataSource": true
+}
+```
+
 ==-
 
 ### External SLD

@@ -106,7 +106,7 @@ When you're done, remember to [enable any layers for WFS](/admin-guide/qgis/conf
 
 ## Test Project Load Performance
 
-The speed at which Pozi can access layers from the QGIS project is limited by how fast QGIS can access the layers.
+The speed at which Pozi can access layers from the QGIS project is limited by how fast QGIS can access the layers from their respective data sources.
 
 To ensure that QGIS is able to access the layers quickly, check the project's performance using QGIS's debugging tool to identify any performance issues.
 
@@ -121,7 +121,6 @@ Expand the entry called `Reading map layers` in the profiler tree to see all of 
 If the results show any layer that takes more than a fraction of a second to load, there may be an issue with the network or database that is worth investigating.
 
 [(via GIS StackExchange)](https://gis.stackexchange.com/a/414884)
-
 
 <br/>
 
