@@ -37,6 +37,18 @@ We are exploring solutions for enabling this kind of access for external parties
 
 ---
 
+## Deployment
+
+==- How long does it take to implement a Pozi site?
+
+We like to allow 3-4 weeks from receipt of a purchase order to a go-live date.
+
+Talk to us about your requirements and priorities, and we can give you a more precise timeline.
+
+==-
+
+---
+
 ## Platform
 
 ==- How does the Pozi platform deal with scalability and security?

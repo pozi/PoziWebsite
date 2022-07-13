@@ -1,7 +1,6 @@
 ---
 redirect: /faq
 title: FAQ
-order: 70
+order: 55
 icon: comment
-visibility: hidden
 ---
