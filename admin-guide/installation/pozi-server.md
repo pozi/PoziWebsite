@@ -37,6 +37,18 @@ Provide these credentials to your Pozi support contact, along with any instructi
 1. download the [Pozi Connect Server installer](https://connect.pozi.com/installer/PoziConnectInstaller.exe)
 2. run installer and follow prompts
 
+==- Is it called **Pozi Server** or **Pozi Connect Server**?
+
+The Pozi Server application is often referred to as "Pozi Connect Server". This name came about from our attempt to combine our two on-premise applications, *Pozi Connect* and *Pozi Server*, into one application. We have since abandoned that approach, but the hybrid name persists in the Pozi Server interface and documentation.
+
+***Pozi Server*** (what this page is about) is the API that the Pozi web app uses for accessing the local data. It runs as a Windows service (PoziConnectServer), and auto-updates with the help of the Updater (PoziConnectUpdater) service.
+
+***[Pozi Connect](/pozi-connect/)*** is the desktop application used by Victorian municipalities for generating property data change reports (M1s). It is distributed as a Windows installer, and councils are notified by email when there are new versions available to download and install.
+
+==-
+
+### Optional Setup
+
 ==- Useful supplementary software
 
 * [Notepad++](https://notepad-plus-plus.org/downloads/)

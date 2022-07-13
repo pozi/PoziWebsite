@@ -34,4 +34,51 @@ https://community.cardinia.vic.gov.au/Secure/Content/Products/CustomerService/Fo
 http://communityhub.loddon.vic.gov.au/Secure/Content/Products/TownPlanning/Forms/ManageApplication.aspx?pac=2&eid=2227496
 ```
 
+==- Others
+
+```json
+      "calculatedField": [
+        {
+          "title": "OPEN OFFICE HEALTH",
+          "field": "PROP_PROPNUM",
+          "value": "http://openoffice/Hub/public/ProcessExternalAction.aspx?Module=HEALTH%26source=ExecuteOO%26id={field}"
+        },
+        {
+          "title": "OPEN OFFICE CRMS",
+          "field": "PROP_PROPNUM",
+          "value": "http://openoffice/Hub/public/ProcessExternalAction.aspx?Module=CRMS%26source=ExecuteOO%26id={field}"
+        },
+        {
+          "title": "OPEN OFFICE TOWN PLANNING",
+          "field": "PROP_PROPNUM",
+          "value": "http://openoffice/Hub/public/ProcessExternalAction.aspx?Module=TP%26source=ExecuteOO%26id={field}"
+        },
+        {
+          "title": "OPEN OFFICE BUILDING",
+          "field": "PROP_PROPNUM",
+          "value": "http://openoffice/Hub/public/ProcessExternalAction.aspx?Module=BUILDING%26source=ExecuteOO%26id={field}"
+        },
+        {
+          "title": "OPEN OFFICE DEV APPS",
+          "field": "PROP_PROPNUM",
+          "value": "http://openoffice/Hub/public/ProcessExternalAction.aspx?Module=DEVAPPS%26source=ExecuteOO%26id={field}"
+        },
+        {
+          "title": "OPEN OFFICE LOCAL LAWS",
+          "field": "PROP_PROPNUM",
+          "value": "http://openoffice/Hub/public/ProcessExternalAction.aspx?Module=LLP%26source=ExecuteOO%26id={field}"
+        },
+        {
+          "title": "OPEN OFFICE ANIMALS",
+          "field": "PROP_PROPNUM",
+          "value": "http://openoffice/Hub/public/ProcessExternalAction.aspx?Module=ANIMALS%26source=ExecuteOO%26id={field}"
+        },
+        {
+          "title": "OPEN OFFICE WASTE WATER",
+          "field": "PROP_PROPNUM",
+          "value": "http://openoffice/Hub/public/ProcessExternalAction.aspx?Module=WW%26source=ExecuteOO%26id={field}"
+        }
+      ]
+```
+
 ==-

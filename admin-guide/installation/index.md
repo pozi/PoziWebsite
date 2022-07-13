@@ -14,16 +14,6 @@ With Pozi Server installed and configured, the Pozi web application can access i
 
 **Pozi Enterprise** sites utilise their internal network for connections to private data sources. **Pozi Enterprise Cloud** sites utilise Azure Active Directory to handle these connections.
 
-==- <b>Pozi Server</b> or <b>Pozi Connect Server</b>?
-
-  The Pozi Server application is often referred to as "Pozi Connect Server". This name came about from our attempt to combine our two on-premise applications, Pozi Connect and Pozi Server, into one application. We have since abandoned that approach, but the hybrid name persists in the Pozi Server interface and documentation.
-
-  [Pozi Connect](/pozi-connect/) is the desktop application used by Victorian municipalities for generating property data change reports (M1s). It is distributed as a Windows installer, and councils are notified by email when there are new versions available to download and install.
-
-  <b>Pozi Server</b> (what this page is about) is the API that the Pozi web app uses for accessing the local data. It runs as a Windows service (PoziConnectServer), and auto-updates with the help of the Updater (PoziConnectUpdater) service.
-
-==-
-
 ## How Pozi Server Works
 
 Pozi Server is configured on the network with DNS rules that enable local users to access its API via a dedicated URL (typically `local.pozi.com`).

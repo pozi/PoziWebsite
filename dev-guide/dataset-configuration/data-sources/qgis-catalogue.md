@@ -10,7 +10,7 @@ title: QGIS Catalogue
 
 ```json
 {
-  "title": "Assets Cataloue",
+  "title": "Assets Catalogue",
   "group": "Assets",
   "type": "QGISProjectSettings",
   "localDataSource": true,

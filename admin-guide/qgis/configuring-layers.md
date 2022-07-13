@@ -113,7 +113,9 @@ The following items are possible by configuring [virtual fields](https://docs.qg
 
 ##### Sizes
 
-* **symbol size**: set to `4mm` or greater enable to easier interaction for users in the browser
+* **symbol**
+  * set size to `4mm` or greater enable to easier interaction for users in the browser
+  * set stroke to white, `0.5mm` or greater to provide separation from the background
 * **line thicknesses**: set to `1mm` or greater to enable users to more easily select line features
 * **label text size**: set to `10 points` or greater, and a white `1.8mm` buffer for better legibility
 
