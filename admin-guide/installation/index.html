@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.710841397042">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.710991303644">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.3.0.710841397042" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.3.0.710991303644" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.3.0.710841397042" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.3.0.710991303644" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.3.0.710841397042" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.3.0.710991303644" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -312,12 +312,6 @@
 <p>Pozi Server is installed on premise, enabling it to serve local data directly to an internal user&#x27;s browser without any data leaving the network. For users to access these datasets, they must be connected to the network, either directly or via a VPN.</p>
 <p>With Pozi Server installed and configured, the Pozi web application can access internal data in the same way it accesses external APIs from other provides (eg, DataVic, data.gov.au, HERE, ArcGIS Online, various government web services, etc). The Pozi web application aggregates internal and external data in the browser in a seamless experience for staff.</p>
 <p><strong>Pozi Enterprise</strong> sites utilise their internal network for connections to private data sources. <strong>Pozi Enterprise Cloud</strong> sites utilise Azure Active Directory to handle these connections.</p>
-<doc-panel id="b-pozi-server-b-or-b-pozi-connect-server-b" collapsed>
-    <template #title><b>Pozi Server</b> or <b>Pozi Connect Server</b>?</template>
-<p>The Pozi Server application is often referred to as &quot;Pozi Connect Server&quot;. This name came about from our attempt to combine our two on-premise applications, Pozi Connect and Pozi Server, into one application. We have since abandoned that approach, but the hybrid name persists in the Pozi Server interface and documentation.</p>
-<p><a href="../../pozi-connect/">Pozi Connect</a> is the desktop application used by Victorian municipalities for generating property data change reports (M1s). It is distributed as a Windows installer, and councils are notified by email when there are new versions available to download and install.</p>
-<p><b>Pozi Server</b> (what this page is about) is the API that the Pozi web app uses for accessing the local data. It runs as a Windows service (PoziConnectServer), and auto-updates with the help of the Updater (PoziConnectUpdater) service.</p>
-</doc-panel>
 <doc-anchor-target id="how-pozi-server-works">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#how-pozi-server-works">#</doc-anchor-trigger>

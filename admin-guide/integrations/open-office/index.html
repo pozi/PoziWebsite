@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.710841397042">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.710991303644">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -35,11 +35,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.3.0.710841397042" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.3.0.710991303644" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.710841397042" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.710991303644" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.710841397042" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.710991303644" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.3.0.710991303644" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -348,6 +349,53 @@
 <pre class="language-none"><code v-pre class="language-none">http://communityhub.loddon.vic.gov.au/Secure/Content/Products/TownPlanning/Forms/ManageApplication.aspx?pac=2&amp;eid=2227496</code></pre>
 </doc-codeblock></div>
    </doc-panel>
+   <doc-panel id="others" collapsed>
+       <template #title>Others</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">      &quot;calculatedField&quot;: [
+        {
+          &quot;title&quot;: &quot;OPEN OFFICE HEALTH&quot;,
+          &quot;field&quot;: &quot;PROP_PROPNUM&quot;,
+          &quot;value&quot;: &quot;http://openoffice/Hub/public/ProcessExternalAction.aspx?Module=HEALTH%26source=ExecuteOO%26id={field}&quot;
+        },
+        {
+          &quot;title&quot;: &quot;OPEN OFFICE CRMS&quot;,
+          &quot;field&quot;: &quot;PROP_PROPNUM&quot;,
+          &quot;value&quot;: &quot;http://openoffice/Hub/public/ProcessExternalAction.aspx?Module=CRMS%26source=ExecuteOO%26id={field}&quot;
+        },
+        {
+          &quot;title&quot;: &quot;OPEN OFFICE TOWN PLANNING&quot;,
+          &quot;field&quot;: &quot;PROP_PROPNUM&quot;,
+          &quot;value&quot;: &quot;http://openoffice/Hub/public/ProcessExternalAction.aspx?Module=TP%26source=ExecuteOO%26id={field}&quot;
+        },
+        {
+          &quot;title&quot;: &quot;OPEN OFFICE BUILDING&quot;,
+          &quot;field&quot;: &quot;PROP_PROPNUM&quot;,
+          &quot;value&quot;: &quot;http://openoffice/Hub/public/ProcessExternalAction.aspx?Module=BUILDING%26source=ExecuteOO%26id={field}&quot;
+        },
+        {
+          &quot;title&quot;: &quot;OPEN OFFICE DEV APPS&quot;,
+          &quot;field&quot;: &quot;PROP_PROPNUM&quot;,
+          &quot;value&quot;: &quot;http://openoffice/Hub/public/ProcessExternalAction.aspx?Module=DEVAPPS%26source=ExecuteOO%26id={field}&quot;
+        },
+        {
+          &quot;title&quot;: &quot;OPEN OFFICE LOCAL LAWS&quot;,
+          &quot;field&quot;: &quot;PROP_PROPNUM&quot;,
+          &quot;value&quot;: &quot;http://openoffice/Hub/public/ProcessExternalAction.aspx?Module=LLP%26source=ExecuteOO%26id={field}&quot;
+        },
+        {
+          &quot;title&quot;: &quot;OPEN OFFICE ANIMALS&quot;,
+          &quot;field&quot;: &quot;PROP_PROPNUM&quot;,
+          &quot;value&quot;: &quot;http://openoffice/Hub/public/ProcessExternalAction.aspx?Module=ANIMALS%26source=ExecuteOO%26id={field}&quot;
+        },
+        {
+          &quot;title&quot;: &quot;OPEN OFFICE WASTE WATER&quot;,
+          &quot;field&quot;: &quot;PROP_PROPNUM&quot;,
+          &quot;value&quot;: &quot;http://openoffice/Hub/public/ProcessExternalAction.aspx?Module=WW%26source=ExecuteOO%26id={field}&quot;
+        }
+      ]</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
 </doc-panels>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
@@ -467,6 +515,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Open Office", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Open Office", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
