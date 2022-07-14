@@ -19,6 +19,9 @@ In our work, we constantly need to look up the EPSG codes based on a projection 
 | [EPSG:3111](https://epsg.io/3111) | GDA94 / Vicgrid |
 | [EPSG:32754](https://epsg.io/32754) | WGS84 / UTM Zone 54 |
 | [EPSG:32755](https://epsg.io/32755) | WGS84 / UTM Zone 55 |
+| [EPSG:7854](https://epsg.io/7854) | GDA2020 / MGA Zone 54 |
+| [EPSG:7855](https://epsg.io/7855) | GDA2020 / MGA Zone 55 |
+| [EPSG:7899](https://epsg.io/7899) | GDA2020 / Vicgrid |
 
 ## Map Tile Scales
 
