@@ -1,4 +1,5 @@
 ---
+description: Example page element snippets for working with the Pozi website
 layout: central
 ---
 
@@ -11,10 +12,11 @@ layout: central
 
 <br/>
 
-
 ## Text
 
 Standard | <big>Big</big> | <small>Small</small>
+
+[!ref icon="plug" text="Reference link"](/admin-guide/integrations/)
 
 ## Layout
 
@@ -31,6 +33,9 @@ Expanded!
 
 <!-- Line break -->
 <br/>
+
+<!-- Hard line break -->
+<br clear="all" />
 
 ### Notes
 

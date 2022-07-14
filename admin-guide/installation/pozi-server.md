@@ -128,6 +128,10 @@ Add the lookup (eg `local.pozi.com`) as a "forward lookup zone (primary)" then c
 
 ![DNS Manager](./img/dns-manager.png)
 
+When working with OpenVPN, you may need to add the following line to the OpenVPN client configuration file:
+
+`dhcp-option DOMAIN local.pozi.com`
+
 To confirm the DNS is configured correctly, open a command prompt window and ping local.pozi.com. It should return a reply from the server on which Pozi Server is installed.
 
 ## SSL Certificates

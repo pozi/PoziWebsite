@@ -5,12 +5,9 @@ layout: central
 
 #
 
-<div style="text-align:center;">
-  <h1>Help Centre</h1>
-  <img src="/static/img/undraw/undraw_team_collaboration_re_ow29.svg" style="width:400px">
-</div>
+<img src="/static/img/undraw/undraw_team_collaboration_re_ow29.svg" style="float:right;width:300px;margin:40px 40px;">
 
-<br/>
+# Help Centre
 
 Welcome to the documentation for Pozi. Here, you can find information about using, administering and developing with Pozi.
 
