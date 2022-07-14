@@ -11,14 +11,14 @@ In our work, we constantly need to look up the EPSG codes based on a projection 
 
 | EPSG | Description |
 | --- | --- |
-| [EPSG:3857](https://spatialreference.org/ref/sr-org/6864/) | GlobalMercator |
-| [EPSG:4326](https://spatialreference.org/ref/epsg/4326/) | WGS84 / Long/Lat |
-| [EPSG:4283](https://spatialreference.org/ref/epsg/4283/) | GDA94 / Long/Lat |
-| [EPSG:28354](https://spatialreference.org/ref/epsg/28354/) | GDA94 / MGA Zone 54 |
-| [EPSG:28355](https://spatialreference.org/ref/epsg/28355/) | GDA94 / MGA Zone 55 |
-| [EPSG:3111](https://spatialreference.org/ref/epsg/3111/) | GDA94 / Vicgrid94 |
-| [EPSG:32754](https://spatialreference.org/ref/epsg/32754/) | WGS84 / UTM Zone 54 |
-| [EPSG:32755](https://spatialreference.org/ref/epsg/32755/) | WGS84 / UTM Zone 55 |
+| [EPSG:3857](https://epsg.io/3857) | GlobalMercator |
+| [EPSG:4326](https://epsg.io/4326) | WGS84 / Long/Lat |
+| [EPSG:4283](https://epsg.io/4283) | GDA94 / Long/Lat |
+| [EPSG:28354](https://epsg.io/28354) | GDA94 / MGA Zone 54 |
+| [EPSG:28355](https://epsg.io/28355) | GDA94 / MGA Zone 55 |
+| [EPSG:3111](https://epsg.io/3111) | GDA94 / Vicgrid |
+| [EPSG:32754](https://epsg.io/32754) | WGS84 / UTM Zone 54 |
+| [EPSG:32755](https://epsg.io/32755) | WGS84 / UTM Zone 55 |
 
 ## Map Tile Scales
 
