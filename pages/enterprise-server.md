@@ -1,5 +1,5 @@
 ---
-visibility: hidden
+route: /enterprise-server
 layout: central
 ---
 

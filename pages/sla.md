@@ -1,5 +1,6 @@
 ---
 title: SLA
+route: /sla
 layout: central
 ---
 

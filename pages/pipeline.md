@@ -1,5 +1,5 @@
 ---
-visibility: hidden
+route: /pipeline
 layout: central
 ---
 

@@ -1,4 +1,5 @@
 ---
+route: /tour
 layout: central
 description: Take a tour of Pozi. Discover how organisations are using this modern, open-standards enterprise GIS enquiry tool.
 ---

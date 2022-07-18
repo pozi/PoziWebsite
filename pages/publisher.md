@@ -1,5 +1,5 @@
 ---
-visibility: hidden
+route: /publisher
 layout: central
 ---
 

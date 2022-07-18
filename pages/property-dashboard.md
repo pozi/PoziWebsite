@@ -1,4 +1,5 @@
 ---
+route: /property-dashboard
 visibility: hidden
 category: Pozi Connect
 ---

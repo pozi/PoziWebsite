@@ -1,5 +1,6 @@
 ---
 title: QGIS
+route: /qgis
 layout: central
 ---
 

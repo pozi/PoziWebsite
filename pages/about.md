@@ -1,5 +1,6 @@
 ---
 label: About
+route: /about
 layout: central
 order: 10
 ---
