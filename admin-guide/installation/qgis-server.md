@@ -81,6 +81,11 @@ NOTE: If you have installed QGIS Server to a location other than the default `C:
             <add name="PoziQgisServerFastCgi" path="*" verb="*" type="" modules="FastCgiModule" scriptProcessor="C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe"
             resourceType="Unspecified" requireAccess="Script" allowPathInfo="false" preCondition=""  />
         </handlers>
+        <security>
+            <requestFiltering>
+                <requestLimits maxQueryString="32768"/>
+            </requestFiltering>
+        </security>
         <caching enabled="true" enableKernelCache="true" />
     </system.webServer>
 </configuration>

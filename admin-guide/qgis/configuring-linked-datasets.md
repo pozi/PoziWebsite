@@ -7,7 +7,7 @@ icon: link
 
 A linked dataset contains complementary attributes that relate to a features from a map layer.
 
-Users can select a feature from a standard map layer (the 'parent' dataset) and Pozi will fetch and display its associated records from the linked table (the 'child' dataset) based on an attribute that is shared between the two.
+When a users selects a feature from a standard map layer (the 'parent' dataset), Pozi will fetch and display associated records from any linked table (the 'child' dataset) based on an attribute that is shared between the two.
 
 ![Parent and child records](./img/info-panel-parent-and-child-records.png){style="width:300px"}
 
@@ -72,6 +72,7 @@ Email support@pozi.com with these details:
 * name of field in child dataset that contains the link attribute (eg `Asset_ID`)
 * name of existing parent layer as it appears in Pozi (eg `Bridges`)
 * name of field in parent layer that contains the link attribute (eg `AssetID`)
+* whether to allow users to download results as CSV (Yes/No)
 
 Within 24 hours, the child dataset will be configured and available in Pozi.
 
@@ -88,5 +89,21 @@ Within 24 hours, the child dataset will be configured and available in Pozi.
 Use QGIS to determine whether the layer also causes its project file to load slowly. Observe the progress bar at the bottom to see if any layers are taking more than a fraction of a second to load in QGIS. If it appears that a layer is taking longer, check the source data. Also check how long it takes for QGIS to show the dataset's table view (Layer > Open Attribute Table). Check that any join fields are properly indexed.
 
 ![](img/qgis-project-loading-status.png)
+
+==- Pozi displays "Something went wrong... No data found for downloading."
+
+This can happen when querying a large selection because IIS has a default limit to the request length it will accept.
+
+Include this `<security>` section in the IIS QGIS Server `web.config` file to allow longer requests:
+
+```xml !#2-6 C:\Program Files (x86)\Pozi\server\iis\Pozi\QgisServer\web.config
+    <system.webServer>
+        <security>
+            <requestFiltering>
+                <requestLimits maxQueryString="32768"/>
+            </requestFiltering>
+        </security>
+    </system.webServer>
+```
 
 ==-

@@ -53,6 +53,10 @@ Danger blah
 
 ---
 
+## Icons
+
+https://primer.github.io/octicons/
+
 ## Images
 
 ![](/static/img/undraw/undraw_interview_re_e5jn.svg"){style="width:300px"}
@@ -61,8 +65,24 @@ Danger blah
 
 <br clear="all" />
 
+## Code
+
+```xml !#2-6 C:\Program Files (x86)\Pozi\server\iis\Pozi\QgisServer\web.config
+<system.webServer>
+    <security>
+        <requestFiltering>
+            <requestLimits maxQueryString="32768"/>
+        </requestFiltering>
+    </security>
+</system.webServer>
+```
+
 ## Reference
 
 ### Writing
 
 https://www.gingersoftware.com/products/sentence-rephraser
+
+### Structure
+
+https://documentation.divio.com/

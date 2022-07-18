@@ -59,3 +59,10 @@ This section describes how to set up Pozi Connect to generate M1s for a new site
 ##### Townships
 
 A parcel's 'Township' attribute important component of a parcel's description. Without the township value, the parcel description is not unique. When it comes to matching properties to parcels, a property that should be in a township might get associated with a parcel outside of the township that has the same lot and section number.
+
+For the purposes of obtaining the correct SPI, it's important to distinguish between parcels that are within the township from those not within.
+
+For instance, these are two completely different parcels:
+
+* Crown Allotment 2011 Parish of Maribyrnong - [2011\PP2516](https://vicmap.pozi.com/?parcelspi=2011\PP2516)
+* Crown Allotment 2011 Parish of Maribyrnong Township of Keilor - [2011\PP5412](https://vicmap.pozi.com/?parcelspi=2011\PP5412)

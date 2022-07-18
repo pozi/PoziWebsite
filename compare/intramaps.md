@@ -71,7 +71,7 @@ Pozi avoids the overhead of duplicating configuration across multiple modules, w
 
 ### Performance
 
-Users get the answers they need quicker in Pozi. The Pozi web app opens in seconds, and even faster on return visits due to its intelligent caching.
+Users get the answers they need quicker in Pozi. The Pozi web app opens in seconds, and even faster for regular users due to its intelligent caching.
 
 ### Real Support
 
@@ -83,7 +83,7 @@ Pozi clients benefit from being able to communicate directly with development an
 
 Do you already have your own GIS support provider? No worries. We'll work with them to ensure the best outcome for you.
 
-We don't put restrictions on who you ask for support. Pozi's open architecture ensures that any GIS support provider with basic knowledge of QGIS can customise and maintain Pozi to your organisation's requirements.
+We don't put restrictions on who you ask for support. Pozi's open architecture enables any GIS support provider to customise and maintain Pozi to your organisation's requirements.
 
 ### Purpose-Driven
 
@@ -99,7 +99,7 @@ The future of web GIS is driven by web-optimised data formats and in-browser geo
 
 Pozi invests for the future by keeping Pozi up-to-date with modern web technologies. We work with open source HTML5 technologies including React, Material UI, OpenLayers 6, TurfJS and GeoStyler to ensure achieve high performance, compatibility with modern data sources, and a high quality user experience.
 
-IntraMaps is built on top of an outdated version of OpenLayers, which ceased development in 2013. IntraMaps' performance and functionality remain tied to a legacy, unsupported code base, and its users cannot take advantage of modern interfaces, data sources and formats.
+IntraMaps is built on top of an outdated version of OpenLayers, which ceased development in 2013. IntraMaps' performance and functionality remain tied to a legacy, unsupported code base, and its users cannot take advantage of modern interfaces and data sources.
 
 ### Transparent Pricing
 
@@ -164,7 +164,7 @@ When you fund the development of new features, you have ongoing access to the ne
 
 You're not alone.
 
-With Pozi, your GIS can thrive and adapt to your users' growing needs.
+But with Pozi, your GIS is no longer tied to single vendor and its technology decisions.
 
 ### On a contract?
 
@@ -178,37 +178,13 @@ If you're stuck in another contract, talk to us. Not only can we get you up and 
 
 ==- Your organisation requires a single vendor for its technology requirements
 
-IntraMaps is one of many software titles in the TechnologyOne suite. If your organisation needs a single point of contact for all its technology needs, then TechnologyOne's offering will suit your organisation.
-
-==- You have access to a third party provider to support your existing IntraMaps
-
-If your IntraMaps contract allows you to get support from an independent provider, and they've proven they can keep IntraMaps working to suit your organisation's needs, then IntraMaps can still be a viable option for you.
-
-Ensure you check the TechnologyOne roadmap for upcoming changes that might affect the autonomy your organisation maintains over its corporate spatial data.
-
-==- Users use it to launch legacy Windows applications
-
-While Pozi enables linking to Windows applications that support [URL protocol handlers](/tags/url-protocol-handler/), some applications may rely on a custom IntraMaps application launcher.
-
-As long as the integrations continue to be supported, then IntraMaps may be right for you.
-
-==- You need to publish your own custom base map to external users
-
-Pozi enables your site to make use of a variety of commercial, government and community basemaps, and also allows custom styling for vector tile basemaps. It can even use any QGIS project or MapServer map file as a basemap for internal users.
-
-However if you need your public users to use a custom basemap that you maintain, then IntraMaps may be the right option for you.
+IntraMaps is one of many software titles in the TechnologyOne suite. If your organisation needs a single point of contact for all its technology needs, then TechnologyOne's offering will be a better fit your organisation.
 
 ==- You need to isolate layers on different maps
 
-Pozi allows permitted users to discover and turn on any combination of permitted map layers. Users can even create bookmarks for maps that contain the combination of layers they commonly use.
+Pozi allows permitted users to discover and turn on any combination of permitted map layers. Users can also create bookmarks for maps that contain any combination of layers they commonly use.
 
 However if you need to prevent layers of one type being displayed on the same map as layers of another type, then you'll want to use modules in IntraMaps to isolate these layers from one another.
-
-==- Users need to use circle or rectangle selection tools
-
-Pozi enables users to query the map based by a single click or by drawing an area of interest of any shape with the polygon selection tool.
-
-If your users require selections based on strict circles or rectangles, then IntraMaps may be the right option for you.
 
 ==-
 
