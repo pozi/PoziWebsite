@@ -12,24 +12,24 @@
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>Help Centre | Pozi Web GIS | Online Map</title>
-    <meta name="title" content="Help Centre | Pozi Web GIS | Online Map">
-    <meta name="description" content="Welcome to the documentation for Pozi. Here, you can find information about using, administering and developing with Pozi." />
+    <title>Map Projections | Pozi Web GIS | Online Map</title>
+    <meta name="title" content="Map Projections | Pozi Web GIS | Online Map">
+    <meta name="description" content="In our work, we constantly need to look up the EPSG codes based on a projection description, or vice versa." />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://pozi.com/help/" />
+    <link rel="canonical" href="https://pozi.com/map-projections/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pozi.com/help/">
-    <meta property="og:title" content="Help Centre | Pozi Web GIS | Online Map">
-    <meta property="og:description" content="Welcome to the documentation for Pozi. Here, you can find information about using, administering and developing with Pozi.">
+    <meta property="og:url" content="https://pozi.com/map-projections/">
+    <meta property="og:title" content="Map Projections | Pozi Web GIS | Online Map">
+    <meta property="og:description" content="In our work, we constantly need to look up the EPSG codes based on a projection description, or vice versa.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://pozi.com/help/">
-    <meta property="twitter:title" content="Help Centre | Pozi Web GIS | Online Map">
-    <meta property="twitter:description" content="Welcome to the documentation for Pozi. Here, you can find information about using, administering and developing with Pozi.">
+    <meta property="twitter:url" content="https://pozi.com/map-projections/">
+    <meta property="twitter:title" content="Map Projections | Pozi Web GIS | Online Map">
+    <meta property="twitter:description" content="In our work, we constantly need to look up the EPSG codes based on a projection description, or vice versa.">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -301,120 +301,177 @@
                             <div id="docs-sidebar-right-toggle"></div>
                            
                             <!-- Page content  -->
-<doc-anchor-target id="section" class="break-words">
+<doc-anchor-target id="map-projections" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#section">#</doc-anchor-trigger>
-        <span></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#map-projections">#</doc-anchor-trigger>
+        <span>Map Projections</span>
     </h1>
 </doc-anchor-target>
-<img src="/static/img/undraw/undraw_team_collaboration_re_ow29.svg" style="float:right;width:300px;margin:40px 40px;">
-<doc-anchor-target id="help-centre">
-    <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#help-centre">#</doc-anchor-trigger>
-        <span>Help Centre</span>
-    </h1>
-</doc-anchor-target>
-<p>Welcome to the documentation for Pozi. Here, you can find information about using, administering and developing with Pozi.</p>
-<br/>
-<doc-anchor-target id="how-to-guides">
+<doc-anchor-target id="commonly-used-projections-in-victoria">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#how-to-guides">#</doc-anchor-trigger>
-        <span>How-To Guides</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#commonly-used-projections-in-victoria">#</doc-anchor-trigger>
+        <span>Commonly Used Projections in Victoria</span>
     </h2>
 </doc-anchor-target>
-<p>
-<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
-    <div class="flex items-center text-blue-500 dark:text-blue-400">
-        <span class="inline-block mb-px">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill-rule="evenodd" d="M12 2.5a5.5 5.5 0 00-3.096 10.047 9.005 9.005 0 00-5.9 8.18.75.75 0 001.5.045 7.5 7.5 0 0114.993 0 .75.75 0 101.499-.044 9.005 9.005 0 00-5.9-8.181A5.5 5.5 0 0012 2.5zM8 8a4 4 0 118 0 4 4 0 01-8 0z"/></svg>
-        </span>
-        <span class="inline-block font-medium ml-2">For users</span>
-    </div>
-    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>../user-guide/</span>
-    </div>
-    <a href="../user-guide/" class="absolute block inset-0"></a>
+<p>In our work, we constantly need to look up the EPSG codes based on a projection description, or vice versa. Here’s a list of the ones we commonly encounter in our work across Victoria.</p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>EPSG</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://epsg.io/3857">EPSG:3857</a></td>
+<td>GlobalMercator</td>
+</tr>
+<tr>
+<td><a href="https://epsg.io/4326">EPSG:4326</a></td>
+<td>WGS84 / Long/Lat</td>
+</tr>
+<tr>
+<td><a href="https://epsg.io/4283">EPSG:4283</a></td>
+<td>GDA94 / Long/Lat</td>
+</tr>
+<tr>
+<td><a href="https://epsg.io/28354">EPSG:28354</a></td>
+<td>GDA94 / MGA Zone 54</td>
+</tr>
+<tr>
+<td><a href="https://epsg.io/28355">EPSG:28355</a></td>
+<td>GDA94 / MGA Zone 55</td>
+</tr>
+<tr>
+<td><a href="https://epsg.io/3111">EPSG:3111</a></td>
+<td>GDA94 / Vicgrid</td>
+</tr>
+<tr>
+<td><a href="https://epsg.io/32754">EPSG:32754</a></td>
+<td>WGS84 / UTM Zone 54</td>
+</tr>
+<tr>
+<td><a href="https://epsg.io/32755">EPSG:32755</a></td>
+<td>WGS84 / UTM Zone 55</td>
+</tr>
+<tr>
+<td><a href="https://epsg.io/7854">EPSG:7854</a></td>
+<td>GDA2020 / MGA Zone 54</td>
+</tr>
+<tr>
+<td><a href="https://epsg.io/7855">EPSG:7855</a></td>
+<td>GDA2020 / MGA Zone 55</td>
+</tr>
+<tr>
+<td><a href="https://epsg.io/7899">EPSG:7899</a></td>
+<td>GDA2020 / Vicgrid</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
-    <div class="flex items-center text-blue-500 dark:text-blue-400">
-        <span class="inline-block mb-px">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill-rule="evenodd" d="M7.875 2.292a.125.125 0 00-.032.018A7.24 7.24 0 004.75 8.25a7.247 7.247 0 003.654 6.297c.57.327.982.955.941 1.682v.002l-.317 6.058a.75.75 0 11-1.498-.078l.317-6.062v-.004c.006-.09-.047-.215-.188-.296A8.747 8.747 0 013.25 8.25a8.74 8.74 0 013.732-7.169 1.547 1.547 0 011.709-.064c.484.292.809.835.809 1.46v4.714a.25.25 0 00.119.213l2.25 1.385c.08.05.182.05.262 0l2.25-1.385a.25.25 0 00.119-.213V2.478c0-.626.325-1.169.81-1.461a1.547 1.547 0 011.708.064 8.74 8.74 0 013.732 7.17 8.747 8.747 0 01-4.41 7.598c-.14.081-.193.206-.188.296v.004l.318 6.062a.75.75 0 11-1.498.078l-.317-6.058v-.002c-.041-.727.37-1.355.94-1.682A7.247 7.247 0 0019.25 8.25a7.24 7.24 0 00-3.093-5.94.125.125 0 00-.032-.018l-.01-.001c-.003 0-.014 0-.031.01-.036.022-.084.079-.084.177V7.19a1.75 1.75 0 01-.833 1.49l-2.25 1.385a1.75 1.75 0 01-1.834 0l-2.25-1.384A1.75 1.75 0 018 7.192V2.477c0-.098-.048-.155-.084-.176a.062.062 0 00-.031-.011l-.01.001z"/></svg>
-        </span>
-        <span class="inline-block font-medium ml-2">For administrators</span>
-    </div>
-    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>../admin-guide/</span>
-    </div>
-    <a href="../admin-guide/" class="absolute block inset-0"></a>
-</div>
-<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
-    <div class="flex items-center text-blue-500 dark:text-blue-400">
-        <span class="inline-block mb-px">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path d="M9.25 12a.75.75 0 01-.22.53l-2.75 2.75a.75.75 0 01-1.06-1.06L7.44 12 5.22 9.78a.75.75 0 111.06-1.06l2.75 2.75c.141.14.22.331.22.53zm2 2a.75.75 0 000 1.5h5a.75.75 0 000-1.5h-5z"/><path fill-rule="evenodd" d="M0 4.75C0 3.784.784 3 1.75 3h20.5c.966 0 1.75.784 1.75 1.75v14.5A1.75 1.75 0 0122.25 21H1.75A1.75 1.75 0 010 19.25V4.75zm1.75-.25a.25.25 0 00-.25.25v14.5c0 .138.112.25.25.25h20.5a.25.25 0 00.25-.25V4.75a.25.25 0 00-.25-.25H1.75z"/></svg>
-        </span>
-        <span class="inline-block font-medium ml-2">For developers</span>
-    </div>
-    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>../dev-guide/</span>
-    </div>
-    <a href="../dev-guide/" class="absolute block inset-0"></a>
-</div>
-</p>
-<hr />
-<doc-anchor-target id="specialty-software">
+<doc-anchor-target id="map-tile-scales">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#specialty-software">#</doc-anchor-trigger>
-        <span>Specialty Software</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#map-tile-scales">#</doc-anchor-trigger>
+        <span>Map Tile Scales</span>
     </h2>
 </doc-anchor-target>
-<p>
-<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
-    <div class="flex items-center text-blue-500 dark:text-blue-400">
-        <span class="inline-block mb-px">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill-rule="evenodd" d="M2 3.75C2 2.784 2.784 2 3.75 2h16.5c.966 0 1.75.784 1.75 1.75v16.5A1.75 1.75 0 0120.25 22H3.75A1.75 1.75 0 012 20.25V3.75zM3.5 9v11.25c0 .138.112.25.25.25H7.5V9h-4zm4-1.5h-4V3.75a.25.25 0 01.25-.25H7.5v4zM9 9v11.5h11.25a.25.25 0 00.25-.25V9H9zm11.5-1.5H9v-4h11.25a.25.25 0 01.25.25V7.5z"/></svg>
-        </span>
-        <span class="inline-block font-medium ml-2">Pozi Connect</span>
-    </div>
-    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>../pozi-connect/</span>
-    </div>
-    <a href="../pozi-connect/" class="absolute block inset-0"></a>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Zoom level</th>
+<th>Scale denominator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>559,082,264</td>
+</tr>
+<tr>
+<td>1</td>
+<td>279,541,132</td>
+</tr>
+<tr>
+<td>2</td>
+<td>139,770,566</td>
+</tr>
+<tr>
+<td>3</td>
+<td>69,885,283</td>
+</tr>
+<tr>
+<td>4</td>
+<td>34,942,642</td>
+</tr>
+<tr>
+<td>5</td>
+<td>17,471,321</td>
+</tr>
+<tr>
+<td>6</td>
+<td>8,735,660</td>
+</tr>
+<tr>
+<td>7</td>
+<td>4,367,830</td>
+</tr>
+<tr>
+<td>8</td>
+<td>2,183,915</td>
+</tr>
+<tr>
+<td>9</td>
+<td>1,091,958</td>
+</tr>
+<tr>
+<td>10</td>
+<td>545,979</td>
+</tr>
+<tr>
+<td>11</td>
+<td>272,989</td>
+</tr>
+<tr>
+<td>12</td>
+<td>136,495</td>
+</tr>
+<tr>
+<td>13</td>
+<td>68,247</td>
+</tr>
+<tr>
+<td>14</td>
+<td>34,124</td>
+</tr>
+<tr>
+<td>15</td>
+<td>17,062</td>
+</tr>
+<tr>
+<td>16</td>
+<td>8,531</td>
+</tr>
+<tr>
+<td>17</td>
+<td>4,265</td>
+</tr>
+<tr>
+<td>18</td>
+<td>2,133</td>
+</tr>
+<tr>
+<td>19</td>
+<td>1,066</td>
+</tr>
+<tr>
+<td>20</td>
+<td>533</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
-    <div class="flex items-center text-blue-500 dark:text-blue-400">
-        <span class="inline-block mb-px">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill-rule="evenodd" d="M11.75 1a.75.75 0 01.75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 010 2.65l-3.187 2.75a1.75 1.75 0 01-1.143.425H12.5v9.25a.75.75 0 01-1.5 0V13H3.75A1.75 1.75 0 012 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 01.75-.75zm0 4.5h7.282a.25.25 0 01.163.06l3.188 2.75a.25.25 0 010 .38l-3.188 2.75a.25.25 0 01-.163.06H3.75a.25.25 0 01-.25-.25v-5.5a.25.25 0 01.25-.25h8z"/></svg>
-        </span>
-        <span class="inline-block font-medium ml-2">Property Dashboard</span>
-    </div>
-    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>../property-dashboard/</span>
-    </div>
-    <a href="../property-dashboard/" class="absolute block inset-0"></a>
-</div>
-</p>
-<hr />
-<doc-anchor-target id="further-help">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#further-help">#</doc-anchor-trigger>
-        <span>Further Help</span>
-    </h2>
-</doc-anchor-target>
-<p>Have feedback or a question that isn&#x27;t answered here?</p>
-<p>
-<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
-    <div class="flex items-center text-blue-500 dark:text-blue-400">
-        <span class="inline-block mb-px">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill-rule="evenodd" d="M3.5 8a5.5 5.5 0 118.596 4.547 9.005 9.005 0 015.9 8.18.75.75 0 01-1.5.045 7.5 7.5 0 00-14.993 0 .75.75 0 01-1.499-.044 9.005 9.005 0 015.9-8.181A5.494 5.494 0 013.5 8zM9 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M17.29 8c-.148 0-.292.01-.434.03a.75.75 0 11-.212-1.484 4.53 4.53 0 013.38 8.097 6.69 6.69 0 013.956 6.107.75.75 0 01-1.5 0 5.193 5.193 0 00-3.696-4.972l-.534-.16v-1.676l.41-.209A3.03 3.03 0 0017.29 8z"/></svg>
-        </span>
-        <span class="inline-block font-medium ml-2">Get in touch</span>
-    </div>
-    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>../contact/</span>
-    </div>
-    <a href="../contact/" class="absolute block inset-0"></a>
-</div>
-</p>
 
                             
                             <!-- Required only on API pages -->
@@ -477,6 +534,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Help Centre", level: 1, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Map Projections", level: 1, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
