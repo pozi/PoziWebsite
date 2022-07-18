@@ -1,4 +1,5 @@
 ---
+route: /contact
 layout: central
 description: Get in touch with Pozi!
 ---

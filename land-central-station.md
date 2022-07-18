@@ -1,7 +1,7 @@
 ---
 title: Land Central Station
+route: /land-central-station
 description: Land Central Station is a vision for cloud data hub and single source of truth for Victorian council property information - an alternative to dreaded "M1" process.
-visibility: hidden
 layout: central
 ---
 

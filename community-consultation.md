@@ -1,4 +1,5 @@
 ---
+route: /community-consultation
 layout: central
 ---
 
@@ -6,8 +7,4 @@ layout: central
 
 ## Try it yourself
 
-==- Demo
-
 <iframe width="100%" height="500px" src="https://contact.pozi.com/"></iframe>
-
-==-

@@ -1,4 +1,5 @@
 ---
+route: /eg
 description: Example page element snippets for working with the Pozi website
 layout: central
 ---

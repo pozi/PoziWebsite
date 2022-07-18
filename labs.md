@@ -1,4 +1,5 @@
 ---
+route: /labs
 layout: page
 ---
 

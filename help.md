@@ -1,5 +1,6 @@
 ---
 title: Help Centre
+route: /help
 layout: central
 ---
 

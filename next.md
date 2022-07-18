@@ -1,4 +1,5 @@
 ---
+route: /next
 layout: central
 ---
 
