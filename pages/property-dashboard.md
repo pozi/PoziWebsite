@@ -12,9 +12,7 @@ category: Pozi Connect
 
 We have a vision to simplify the way Victorian councils integrate their property information into Vicmap.
 
-Read our plan, and have your say!
-
-[!button variant="secondary" size="2xl" text="Land Central Station"](/land-central-station/)
+[!button variant="secondary" size="2xl" icon="comment" text="Read our plan, and have your say!"](/land-central-station/)
 
 !!!
 

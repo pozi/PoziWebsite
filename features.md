@@ -19,7 +19,7 @@ icon: stack
 
 # Pozi Features
 
-<big>Pozi is a customisable, user friendly geospatial system to visually communicate your organisation's location-based data on a simple interface.</big>
+<big>Pozi is a customisable, user-friendly geospatial system to visually communicate your organisation's location-based information.</big>
 
 :::
 
@@ -167,6 +167,8 @@ Enable staff to access map layers directly from your organisation's network, inc
 ## Pozi Enterprise Cloud
 
 Ultimate integration with your organisation's cloud infrastructure, with Azure Active Directory integration.
+
+---
 
 :::section
 

@@ -7,11 +7,11 @@ description: We strive to continually improve Pozi's capabilities. See what's ne
 
 <img src="/static/img/undraw/undraw_scrum_board_re_wk7v.svg" alt="" style="float:right;width:300px;margin:40px 40px;">
 
-We're constantly at work to improve the Pozi experience for our users based on the feedback and feature requests we receive from our clients. This includes developing new functionality, fixing bugs, improving the interface and optimising performance.
+We're constantly working to improve the Pozi experience for our users based on the feedback and feature requests we receive from our clients. This includes developing new functionality, fixing bugs, improving the interface, and optimising performance.
 
 We also offer clients the opportunity to sponsor development of new features, giving them direct input into the specification to ensure it meets their exact requirements.
 
-[!button icon="mention" corners="pill" text="Tell us what you want to see in Pozi!"](/contact/)
+[!button icon="comment" corners="pill" text="Tell us what you want to see in Pozi!"](/contact/)
 
 <br/>
 

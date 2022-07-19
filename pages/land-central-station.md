@@ -180,7 +180,7 @@ No. But we will build it if we can get buy-in from councils and DELWP.
 
 ==- How does a cloud service help with M1s?
 
-The cloud clearinghouse service is where each council's property information is centralised. The service enables DELWP to obtain daily or weekly snapshots of the combined statewide property data. When DELWP has on-demand access to the complete council property information for the whole state, it won't need to re-assemble this information from dozens of spreadsheets.
+The cloud clearinghouse service is where each council's property information is centralised. The service enables DELWP to obtain daily or weekly snapshots of the combined statewide property data. When DELWP has on-demand access to the complete council property information for the whole state, it doesn't need to re-assemble this information from dozens of spreadsheets.
 
 To update Vicmap, DELWP will compare what changed between snapshots of the council data and then apply those changes to Vicmap. DELWP can continue to use the M1 format internally for supplying the changes to the Vicmap data maintainer. Or DELWP might use the new snapshot approach to come up with a more efficient way to get changes into Vicmap. Either way, councils never need to use M1s again.
 
