@@ -16,7 +16,7 @@ On the server on which Pozi Server is installed:
 * Choose a download site, select top one, Next
 * Select Packages
   * Desktop
-    * `qgis-ltr` - click on the word 'Skip' to toggle through to the latest version (eg 3.16.8-3)
+    * `qgis-ltr` - click on the word 'Skip' to toggle through to the latest version
   * Libs
     * `gdal-ecw`
     * `gdal-mss`
