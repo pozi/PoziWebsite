@@ -2,6 +2,14 @@
 title: MapServer
 ---
 
+# MapServer
+
+MapServer is an industry-standard web map server. Like QGIS Server, MapServer can be used to serve up layer catalogues to Pozi.
+
+If you do not already have MapServer installed, we recommend installing [QGIS Server](../installation/qgis-server.md) instead.
+
+For sites that have chosen MapServer as their primary way of serving map data within their organisation, below are details for installing and configuring MapServer for use with Pozi.
+
 ## Installation
 
 On the server on which Pozi Server is installed:
