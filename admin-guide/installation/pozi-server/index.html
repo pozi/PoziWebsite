@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.712125024582">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.712134665953">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -24,23 +24,23 @@
     <meta property="og:url" content="https://pozi.com/admin-guide/installation/pozi-server/">
     <meta property="og:title" content="Pozi Server | Pozi Web GIS | Online Map">
     <meta property="og:description" content="Step-by-step instructions for setting up Pozi Server on your network">
-    <meta property="og:image" content="https://pozi.com/admin-guide/installation/img/dns-manager.png">
+    <meta property="og:image" content="https://pozi.com/admin-guide/installation/img/attempted-connection-from-external.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pozi.com/admin-guide/installation/pozi-server/">
     <meta property="twitter:title" content="Pozi Server | Pozi Web GIS | Online Map">
     <meta property="twitter:description" content="Step-by-step instructions for setting up Pozi Server on your network">
-    <meta property="twitter:image" content="https://pozi.com/admin-guide/installation/img/dns-manager.png">
+    <meta property="twitter:image" content="https://pozi.com/admin-guide/installation/img/attempted-connection-from-external.png">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.712125024582" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.712134665953" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.712125024582" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.712134665953" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.712125024582" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.712125024582" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.712134665953" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.712134665953" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -305,12 +305,31 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="pozi-server-installation" class="break-words">
+<doc-anchor-target id="pozi-server" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#pozi-server-installation">#</doc-anchor-trigger>
-        <span>Pozi Server Installation</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pozi-server">#</doc-anchor-trigger>
+        <span>Pozi Server</span>
     </h1>
 </doc-anchor-target>
+<p>Pozi Server is the software in the Pozi Enterprise suite that enables internal datasets to be served to Pozi users within the organisation’s network.</p>
+<p>Pozi Server is installed on premise, enabling it to serve local data directly to an internal user&#x27;s browser without any data leaving the network. For users to access these datasets, they must be connected to the network, either directly or via a VPN.</p>
+<p>With Pozi Server installed and configured, the Pozi web application can access internal data in the same way it accesses external APIs from other provides (eg, DataVic, data.gov.au, HERE, ArcGIS Online, various government web services, etc). The Pozi web application aggregates internal and external data in the browser in a seamless experience for staff.</p>
+<p><strong>Pozi Enterprise</strong> sites utilise their internal network for connections to private data sources. <strong>Pozi Enterprise Cloud</strong> sites utilise Azure Active Directory to handle these connections.</p>
+<doc-anchor-target id="how-pozi-server-works">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#how-pozi-server-works">#</doc-anchor-trigger>
+        <span>How Pozi Server Works</span>
+    </h2>
+</doc-anchor-target>
+<p>Pozi Server is configured on the network with DNS rules that enable local users to access its API via a dedicated URL (typically <code v-pre>local.pozi.com</code>).</p>
+<ul>
+<li>when a user outside the organisation&#x27;s network uses Pozi, any request to <code v-pre>local.pozi.com</code> quietly fails because it&#x27;s not a valid endpoint on the internet (however any data from any public data sources will load in the app as normal)</li>
+</ul>
+<p><img src="../img/attempted-connection-from-external.png" style="width:600px" alt="" /></p>
+<ul>
+<li>when a user inside the client&#x27;s network uses Pozi, any request to <code v-pre>local.pozi.com</code> is directed by the local DNS rules to the internal server on which Pozi Connect Server is installed, and Pozi Connect Server responds with the requested data</li>
+<li>IT managers maintain control over internal user access to Pozi Connect Server by configuring the network DNS and firewall rules. For example, access to Pozi Server can be restricted for specific users or groups of users with a group policy or firewall rules that blacklists the <code v-pre>local.pozi.com</code> endpoint</li>
+</ul>
 <p>By following these step-by-step instructions, you can install and configure Pozi Server on your network.</p>
 <doc-anchor-target id="prerequisites">
     <h2>
@@ -617,11 +636,11 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../admin-guide/installation/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../admin-guide/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Installation</span>
+                                                <span class="block mt-1">Administrator Guide</span>
                                             </span>
                                         </a>
                                     </div>
