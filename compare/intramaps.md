@@ -21,19 +21,19 @@ Pozi respects your organisation's autonomy and strategic technology decisions.
 
 ### Ease of Use
 
+Pozi's ease of use improves user engagement and promotes more informed decision-making.
+
 Users don't require expensive training to get the answers they need.
 
-Pozi's focus on simplicity and ease of use enables users to quickly access critical information, regardless of any previous GIS expertise.
+Pozi enables users across your organisation to quickly access critical information, regardless of any previous GIS expertise.
 
-Pozi's adaptive interface displays only the information needed for the task at hand, whether it's visualising the map at full screen, viewing details about a selected feature or location, browsing available map layers, or searching for a location. By freeing up valuable screen space, users gain more insight and context around their focus area.
+Pozi's adaptive interface displays only the information needed for the task at hand, whether it's visualising the map at full screen, viewing details about a selected feature or location, browsing available map layers, or searching for a location. By freeing up valuable screen space, users gain more insight and context around their area of interest.
 
 * intuitive workflows
 * touch friendly, mobile friendly
 * efficient use of screen space, free of clutter
 * no complex tools, menus or jargon
 * modern, visually-appealing interface
-
-Pozi's ease of use improves user engagement and promotes more informed decision-making.
 
 ### Ease of Configuration
 
@@ -67,7 +67,7 @@ When users interact with layer groups within the layer panel, Pozi remembers how
 
 Users can launch Pozi from saved views to suit specific workflows or projects. There's no limit to the number of bookmarks you can create. Users can also share customised map views with others to highlight specific areas or layers of interest.
 
-Pozi avoids the overhead of duplicating configuration across multiple modules, while enabling users to discover and use information without artificial data silos.
+Pozi avoids the overhead of duplicating configuration across multiple modules, while enabling users to discover and use information for their individual needs.
 
 ### Performance
 
