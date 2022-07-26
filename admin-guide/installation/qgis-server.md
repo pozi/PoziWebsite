@@ -1,7 +1,9 @@
 ---
-title: QGIS Server
+title: QGIS Server 
 order: 90
 ---
+
+# QGIS Server
 
 ## Installation
 
