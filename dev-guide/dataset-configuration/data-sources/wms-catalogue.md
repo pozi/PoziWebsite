@@ -4,7 +4,9 @@ title: WMS Catalogue
 
 # WMS (Web Map Service) Catalogue
 
-==- Example Config
+## Configuration
+
+==- QGIS Server Example
 
 ```json
 {
@@ -20,41 +22,61 @@ title: WMS Catalogue
 }
 ```
 
-==-
-
-## Configuration
-
-### Enable Selectability
-
-!!!
-
-This may no longer be required for WMS catalogues. Need to confirm.
-
-!!!
-
-There is currently a limitation in Pozi that prevents users from seeing any attributes when they click on features in WMS layers. The way around this is to configure the dataset with `"parent": "Whats Here"`. This forces Pozi to display the attributes in the info panel when the layer is turned on .
-
-There is [a plan](https://trello.com/c/NuPIDgSL/18-enable-wms-layers-getfeatureinfo-results-to-be-displayed-in-info-panel-by-default) to avoid the need for this work-around in the future.
+==- DataVic Example
 
 ```json
-  "parent": "Whats Here"
+{
+  "title": "DataVic",
+  "group": "DataVic",
+  "type": "WMSGetCapabilities",
+  "config": {
+    "spatial": {
+      "url": "https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms?request=getCapabilities"
+    }
+  }
+}
 ```
 
-==- Example Config
+==-
 
-  ```json
-  {
-    "title": "Assets",
-    "group": "Assets",
-    "parent": "Whats Here",
-    "type": "WMSGetCapabilities",
-    "config": {
-      "spatial": {
-        "url": "https://hrccsvrgis01.pozi.com/iis/qgisserver?service=WMS&request=GetCapabilities&MAP=//ad.hrcc.vic.gov.au/shared/GIS/workspaces/Pozi/Assets.qgs"
-      }
-    },
-    "localDataSource": true
+## Custom Catalogues
+
+### DataVic
+
+The [DataVic WMS GetCapabilities](https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms?request=getCapabilities) is a 1MB file containing over 600 layers. While it's possible for Pozi to consume this entire catalogue, it will slow down the app load, and the user would see all 600 layers in a single layer group.
+
+To provide a faster and more useful user experience, the catalogue is customised to remove unwanted layers and split it into separate catalogues to be shown in separate layer groups.
+
+These custom catalogue files can be hosted as static files.
+
+#### Vicmap Admin
+
+1. download [DataVic WMS GetCapabilities](https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms?request=getCapabilities) and save as `datavic-wms.xml`
+2. save copy as `datavic-wms-vmadmin.xml`
+3. modify `datavic-wms-vmadmin.xml`
+  - search for first instance of `vmadmin`
+  - delete all `<layer>` elements that appear beforehand
+  - search for last instance of `vmadmin`
+  - delete all `<layer>` elements that appear afterwards
+  - find and replace ` - Vicmap Admin` with `[blank]`
+  - find and replace ` (polygon)` with `[blank]`
+  - find and replace `WARD ` with `Ward `
+4. save
+5. upload in Pozi Config Manager
+
+==- DataVic Example
+
+```json
+{
+  "title": "Administrative Catalogue",
+  "group": "Administrative",
+  "type": "WMSGetCapabilities",
+  "config": {
+    "spatial": {
+      "url": "https://config.pozi.com/public/files/datavic-wms-vmadmin.xml"
+    }
   }
-  ```
+}
+```
 
 ==-

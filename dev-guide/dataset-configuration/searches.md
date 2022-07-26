@@ -5,6 +5,25 @@
 
 ## Geocode Earth
 
+### Filter by Municipality
+
+Geocode Earth offers a filter can restrict the address results to a specific municipality.
+
+https://geocode.earth/docs/forward/customization/#restrict-results-by-parent-id
+
+Loddon search:
+
+* [Before - using bounding box](https://api.geocode.earth/v1/autocomplete?text=3%20albert&layers=address,street&boundary.rect.min_lat=-36.91&boundary.rect.min_lon=143.31&boundary.rect.max_lat=-35.91&boundary.rect.max_lon=144.35&api_key=xxxx) - 5 results, including 3 from neighbouring council
+* [After - using "county" filter](https://api.geocode.earth/v1/autocomplete?text=3%20albert&layers=address,street&boundary.gid=whosonfirst:county:102049477&api_key=xxxx) - 2 results
+
+In the Geocode Earth results, the municipality is called `county`.
+
+For municipal client site:
+
+* do a search for an address within the municipality and obtain `county_gid` value from the console (eg, whosonfirst:county:102049477)
+* update Geocode Earth search config to replace bounding box parameters with `boundary.gid=` parameter
+* check results
+
 ## HERE
 
 ### Search by Coordinates

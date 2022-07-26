@@ -15,6 +15,10 @@ Pozi's responsive design enables it to work on any sized device. On large screen
 
 Pozi uses Progressive Web App (PWA) technology, enabling users to add Pozi to the home screen of their device, launch it and switch between it and other apps as if it were a native application.
 
+==- Is it possible to limit what attributes are shown?
+
+You can absolutely configure what fields your users see by using the layer configuration options in QGIS. You can even modify the field names that your users see, as well as create virtual fields to display values derived or calculated from existing fields. This can all be done without modifying your data or setting up views in SQL Server.
+
 ==-
 
 ## Configuration

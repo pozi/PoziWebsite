@@ -15,16 +15,25 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 <br/>
 
+## Upcoming
+
+- [ ] don't unhighlight parent object when clicking on a non-spatial child record
+- [ ] obtain layer opacity setting from QGIS Server
+- [ ] prevent Share links from capturing the panel state (unless specified in advanced options)
+
 ## Completed
 
 ### July 2022
 
 - [x] new: obtain layer queryability setting from QGIS Server
 - [x] new: enable highlighting of selected features from QGIS Server layers
-- [x] improved: faster app loads by caching layer catalogue in the browser (via service workers)
+- [x] improved: faster app loads by batch loading layers
+- [x] improved: faster app loads for return visitors by caching layer catalogue in the browser (via service workers)
+- [x] improved: enable layer filter to narrow down results within nested layer groups
 - [x] improved: slimmer left drawer takes up less screen real estate
 - [x] improved: show spinner during app load if waiting for slow data sources
 - [x] improved: even better evaluation of attributes to display for title of selected feature
+- [x] improved: layer panel now responds much quicker to layer reset and expanding large groups
 - [x] fixed: info panel failed to show feature details after initial viewing
 - [x] fixed: wait for local datasource check before attempting to get local layers
 - [x] fixed: table view now working for catalogue layers
@@ -36,7 +45,6 @@ Our biggest release in over two years!
 - [x] new: **QGIS integration**
   * import layer catalogue from QGIS Server and other WMS/WFS sources
   * build nested layer groups from WMS/QGIS catalogues
-  * cache layer catalogues in browser for instant startup
   * create Admin Guide, add content for using QGIS to create and maintain layer catalogues
 - [x] new: dynamically evaluate the most suitable attribute from any selected feature to display as feature's title
 - [x] new: display loading spinner for WMS layers
@@ -51,7 +59,9 @@ Our biggest release in over two years!
 
 Please excuse the gaps in our timeline!
 
-Sometimes we get busy building, and don't spend enough time celebrating our wins and recording our accomplishments. Come back soon to see a more complete timeline.
+Sometimes we get busy building, and don't spend enough time celebrating our wins and recording our accomplishments.
+
+We'll do a better job going forward keeping track of all new development and improvements!
 
 <!-- TO-DO: add to timeline from https://github.com/pozi/PoziApp/commits/ -->
 <!-- https://github.com/pozi/PoziApp/pulls?q=is%3Apr+sort%3Aupdated-desc+is%3Aclosed -->
@@ -65,6 +75,14 @@ Sometimes we get busy building, and don't spend enough time celebrating our wins
 - [x] new: display coordinates in alternative projections
 
 ---
+
+### December 2021
+
+- [x] fixed: generate valid Esri geometries on selected features to enable better integration with ArcGIS Online
+
+### November 2021
+
+- [x] improved: filter address search results by municipality
 
 ### July 2021
 

@@ -16,6 +16,7 @@ order: 100
 * Trello
 * LastPass
 * Pozi Cloud Server
+* Slack
 
 ### Code Repositories
 

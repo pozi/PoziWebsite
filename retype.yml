@@ -53,11 +53,11 @@ footer:
   copyright: "&copy; Copyright {{ year }} - Pozi Pty Ltd"
   links:
   - text: About
-    link: about.md
+    link: about
     icon: organization
 
   - text: Contact
-    link: contact.md
+    link: contact
     icon: mention
 
   - text: Twitter
