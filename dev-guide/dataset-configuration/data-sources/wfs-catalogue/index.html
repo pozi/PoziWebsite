@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.712292379961">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.712326976352">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.712292379961" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.712326976352" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.712292379961" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.712326976352" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.712292379961" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../../resources/js/prism.js?v=2.4.0.712292379961" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.712326976352" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../../resources/js/prism.js?v=2.4.0.712326976352" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -400,11 +400,69 @@
         <span>OGC Filter</span>
     </h4>
 </doc-anchor-target>
-<p>WFS requests utilise OGC filters can be applied to target specific records.</p>
+<p>WFS requests utilise OGC filters that can be applied to target specific records.</p>
 <ul>
 <li>Example: <code v-pre>FILTER=&lt;Filter&gt;&lt;PropertyIsEqualTo&gt;&lt;PropertyName&gt;AssetID&lt;/PropertyName&gt;&lt;Literal&gt;12345&lt;/Literal&gt;&lt;/PropertyIsEqualTo&gt;&lt;/Filter&gt;</code></li>
 <li>Reference: <a href="http://schemas.opengis.net/filter/2.0/filter.xsd">http://schemas.opengis.net/filter/2.0/filter.xsd</a></li>
 </ul>
+</doc-panel>
+<doc-anchor-target id="custom-catalogues">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#custom-catalogues">#</doc-anchor-trigger>
+        <span>Custom Catalogues</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="datagovau">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#datagovau">#</doc-anchor-trigger>
+        <span>data.gov.au</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="southern-grampians-land-capability">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#southern-grampians-land-capability">#</doc-anchor-trigger>
+        <span>Southern Grampians Land Capability</span>
+    </h4>
+</doc-anchor-target>
+<ol>
+<li>go to <a href="https://jsonformatter.org/xml-pretty-print">https://jsonformatter.org/xml-pretty-print</a></li>
+<li>Load Data &gt; Load URL &gt; <code v-pre>https://data.gov.au/geoserver/wfs?request=GetCapabilities</code></li>
+<li>Download &gt; save as <code v-pre>datagovau-wfs.xml</code></li>
+<li>save copy as <code v-pre>datagovau-wfs-southerngrampians-landcapability.xml</code></li>
+<li>modify <code v-pre>datagovau-wms-southerngrampians-landcapability.xml</code></li>
+</ol>
+<ul>
+<li>search for first instance of <code v-pre>southern-grampians-model</code></li>
+<li>delete all <code v-pre>&lt;FeatureType&gt;</code> elements that appear beforehand</li>
+<li>search for last instance of <code v-pre>southern-grampians-model</code></li>
+<li>delete all <code v-pre>&lt;FeatureType&gt;</code> elements that appear afterwards</li>
+<li>find and replace <code v-pre>Southern Grampians Model of </code> with <code v-pre>[blank]</code></li>
+</ul>
+<ol start="6">
+<li>save</li>
+<li>upload in Pozi Config Manager</li>
+</ol>
+<doc-panel id="configuration" collapsed>
+    <template #title>Configuration</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;title&quot;: &quot;Land Capability WFS Catalogue&quot;,
+  &quot;group&quot;: &quot;Land Capability&quot;,
+  &quot;type&quot;: &quot;WFSGetCapabilities&quot;,
+  &quot;config&quot;: {
+    &quot;spatial&quot;: {
+      &quot;url&quot;: &quot;https://config.pozi.com/public/files/datagovau-wfs-southerngrampians-landcapability.xml&quot;
+    }
+  },
+  &quot;styleGeoStyler&quot;: {
+    &quot;type&quot;: &quot;SLD&quot;,
+    &quot;url&quot;: &quot;https://config.pozi.com/public/files/datagovau-wfs-southerngrampians-landcapability.sld?&quot;
+  },
+  &quot;opacity&quot;: 0.5
+}</code></pre>
+</doc-codeblock></div>
+<p>This configuration is designed to apply the same style to every layer in the catalogue.</p>
+<p>The <code v-pre>?</code> at the end of the style URL enables Pozi to add layer parameters as it normally does for style requests but have those parameters ignored by the server.</p>
 </doc-panel>
 
                                 
