@@ -71,9 +71,54 @@ When specifying the URL for QGS project files, any backslashes must be converted
 
 #### OGC Filter
 
-WFS requests utilise OGC filters can be applied to target specific records.
+WFS requests utilise OGC filters that can be applied to target specific records.
 
 * Example: `FILTER=<Filter><PropertyIsEqualTo><PropertyName>AssetID</PropertyName><Literal>12345</Literal></PropertyIsEqualTo></Filter>`
 * Reference: http://schemas.opengis.net/filter/2.0/filter.xsd
+
+==-
+
+## Custom Catalogues
+
+### data.gov.au
+
+#### Southern Grampians Land Capability
+
+1. go to https://jsonformatter.org/xml-pretty-print
+2. Load Data > Load URL > `https://data.gov.au/geoserver/wfs?request=GetCapabilities`
+3. Download > save as `datagovau-wfs.xml`
+4. save copy as `datagovau-wfs-southerngrampians-landcapability.xml`
+5. modify `datagovau-wms-southerngrampians-landcapability.xml`
+  - search for first instance of `southern-grampians-model`
+  - delete all `<FeatureType>` elements that appear beforehand
+  - search for last instance of `southern-grampians-model`
+  - delete all `<FeatureType>` elements that appear afterwards
+  - find and replace `Southern Grampians Model of ` with `[blank]`
+6. save
+7. upload in Pozi Config Manager
+
+==- Configuration
+
+```json
+{
+  "title": "Land Capability WFS Catalogue",
+  "group": "Land Capability",
+  "type": "WFSGetCapabilities",
+  "config": {
+    "spatial": {
+      "url": "https://config.pozi.com/public/files/datagovau-wfs-southerngrampians-landcapability.xml"
+    }
+  },
+  "styleGeoStyler": {
+    "type": "SLD",
+    "url": "https://config.pozi.com/public/files/datagovau-wfs-southerngrampians-landcapability.sld?"
+  },
+  "opacity": 0.5
+}
+```
+
+This configuration is designed to apply the same style to every layer in the catalogue.
+
+The `?` at the end of the style URL enables Pozi to add layer parameters as it normally does for style requests but have those parameters ignored by the server.
 
 ==-

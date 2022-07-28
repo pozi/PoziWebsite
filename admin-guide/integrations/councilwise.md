@@ -15,3 +15,7 @@ Properties in Pozi are configured with a link that is dynamically populated with
 For example:
 
 https://apps.councilwise.com.au/Module/Property/Details?filter=Property%20Number=1019322
+
+## Data API
+
+https://cwcoreapi.councilwise.com.au/
