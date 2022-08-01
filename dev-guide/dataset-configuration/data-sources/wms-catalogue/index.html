@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.712326976352">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.712657390103">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -14,7 +14,7 @@
     <!-- Primary Meta Tags -->
     <title>WMS Catalogue | Pozi Web GIS | Online Map</title>
     <meta name="title" content="WMS Catalogue | Pozi Web GIS | Online Map">
-    <meta name="description" content="The DataVic WMS GetCapabilities is a 1MB file containing over 600 layers." />
+    <meta name="description" content="When you specify a reference to an individual layer in the GetCapabilities URL, you can effectively use the response as a single-layer catalogue." />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://pozi.com/dev-guide/dataset-configuration/data-sources/wms-catalogue/" />
@@ -23,22 +23,22 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pozi.com/dev-guide/dataset-configuration/data-sources/wms-catalogue/">
     <meta property="og:title" content="WMS Catalogue | Pozi Web GIS | Online Map">
-    <meta property="og:description" content="The DataVic WMS GetCapabilities is a 1MB file containing over 600 layers.">
+    <meta property="og:description" content="When you specify a reference to an individual layer in the GetCapabilities URL, you can effectively use the response as a single-layer catalogue.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pozi.com/dev-guide/dataset-configuration/data-sources/wms-catalogue/">
     <meta property="twitter:title" content="WMS Catalogue | Pozi Web GIS | Online Map">
-    <meta property="twitter:description" content="The DataVic WMS GetCapabilities is a 1MB file containing over 600 layers.">
+    <meta property="twitter:description" content="When you specify a reference to an individual layer in the GetCapabilities URL, you can effectively use the response as a single-layer catalogue.">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.712326976352" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.712657390103" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.712326976352" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.712657390103" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.712326976352" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../../resources/js/prism.js?v=2.4.0.712326976352" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.712657390103" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../../resources/js/prism.js?v=2.4.0.712657390103" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -348,6 +348,18 @@
 </doc-codeblock></div>
    </doc-panel>
 </doc-panels>
+<doc-anchor-target id="single-layer-catalogue">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#single-layer-catalogue">#</doc-anchor-trigger>
+        <span>Single-Layer Catalogue</span>
+    </h2>
+</doc-anchor-target>
+<p>When you specify a reference to an individual layer in the GetCapabilities URL, you can effectively use the response as a single-layer catalogue.</p>
+<p>Examples:</p>
+<ul>
+<li><a href="https://data.gov.au/geoserver/southern-grampians-contours/wms?request=GetCapabilities">https://data.gov.au/geoserver/southern-grampians-contours/wms?request=GetCapabilities</a></li>
+<li><a href="https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/WATER_STORAGE/wms?request=getCapabilities">https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/WATER_STORAGE/wms?request=getCapabilities</a></li>
+</ul>
 <doc-anchor-target id="custom-catalogues">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#custom-catalogues">#</doc-anchor-trigger>
@@ -397,56 +409,6 @@
   &quot;config&quot;: {
     &quot;spatial&quot;: {
       &quot;url&quot;: &quot;https://config.pozi.com/public/files/datavic-wms-vmadmin.xml&quot;
-    }
-  }
-}</code></pre>
-</doc-codeblock></div>
-</doc-panel>
-<doc-anchor-target id="datagovau">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#datagovau">#</doc-anchor-trigger>
-        <span>data.gov.au</span>
-    </h3>
-</doc-anchor-target>
-<doc-anchor-target id="southern-grampians-land-capability">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#southern-grampians-land-capability">#</doc-anchor-trigger>
-        <span>Southern Grampians Land Capability</span>
-    </h4>
-</doc-anchor-target>
-<ol>
-<li>download <a href="https://data.gov.au/geoserver/wms?request=GetCapabilities">data.gov.au WMS GetCapabilities</a> and save as <code v-pre>datagovau-wms.xml</code></li>
-<li>save copy as <code v-pre>datagovau-wms-southerngrampians-landcapability.xml</code></li>
-<li>modify <code v-pre>datagovau-wms-southerngrampians-landcapability.xml</code></li>
-</ol>
-<ul>
-<li>search for first instance of <code v-pre>southern-grampians-model</code></li>
-<li>delete all <code v-pre>&lt;layer&gt;</code> elements that appear beforehand</li>
-<li>search for last instance of <code v-pre>southern-grampians-model</code></li>
-<li>delete all <code v-pre>&lt;layer&gt;</code> elements that appear afterwards</li>
-<li>find and replace <code v-pre>Southern Grampians </code> with <code v-pre>[blank]</code></li>
-<li>remove all <code v-pre>CRS</code> items, except:</li>
-</ul>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">      &lt;CRS&gt;EPSG:3857&lt;/CRS&gt;
-      &lt;CRS&gt;EPSG:4326&lt;/CRS&gt;
-      &lt;CRS&gt;CRS:84&lt;/CRS&gt;</code></pre>
-</doc-codeblock></div>
-<ol start="4">
-<li>save</li>
-<li>upload in Pozi Config Manager</li>
-</ol>
-<doc-panel id="configuration" collapsed>
-    <template #title>Configuration</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-json"><code v-pre class="language-json">{
-  &quot;title&quot;: &quot;Land Capability Catalogue&quot;,
-  &quot;group&quot;: &quot;Land Capability&quot;,
-  &quot;type&quot;: &quot;WMSGetCapabilities&quot;,
-  &quot;config&quot;: {
-    &quot;spatial&quot;: {
-      &quot;url&quot;: &quot;https://config.pozi.com/public/files/datagovau-wms-southerngrampians-landcapability.xml&quot;,
-      &quot;label&quot;: &quot;class_desc&quot;
     }
   }
 }</code></pre>
