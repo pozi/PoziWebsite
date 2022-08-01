@@ -163,6 +163,10 @@ For *Enterprise* and *Enterprise Cloud* subscribers, we offer access to our sour
 
 If your organisation uses Request For Tender (RFT) or Request For Quote (RFQ) for service procurement, a premium will apply to the package cost and ongoing subscription. Talk to us about what additional costs will apply for your procurement method.
 
+Keep in mind that there are no lock-in contracts with Pozi. Avoid RFTs and RFQs altogether by taking up a year-at-a-time Pozi subscription, and avoid committing your organisation to a minimum spend that would exceed any procurement thresholds.
+
+Talk to us to learn how organisations like yours are avoiding RFTs and RFQs with a seamless transition to a simple annual Pozi subscription.
+
 </br>
 
 ---

@@ -46,7 +46,3 @@ title: QGIS Catalogue
 ```
 
 ==-
-
-### Selectability
-
-Unlike WMS catalogues, QGIS catalogues don't require the `"parent": "Whats Here"` setting for layers to be selectable. All layers are enabled by default.

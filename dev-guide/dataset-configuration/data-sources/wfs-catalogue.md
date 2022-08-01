@@ -119,6 +119,6 @@ WFS requests utilise OGC filters that can be applied to target specific records.
 
 This configuration is designed to apply the same style to every layer in the catalogue.
 
-The `?` at the end of the style URL enables Pozi to add layer parameters as it normally does for style requests but have those parameters ignored by the server.
+The `?` at the end of the style URL allows Pozi to add layer parameters (as it normally does for style requests) but have those parameters ignored by the server.
 
 ==-

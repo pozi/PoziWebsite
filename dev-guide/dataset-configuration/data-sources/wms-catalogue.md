@@ -39,6 +39,15 @@ title: WMS Catalogue
 
 ==-
 
+## Single-Layer Catalogue
+
+When you specify a reference to an individual layer in the GetCapabilities URL, you can effectively use the response as a single-layer catalogue.
+
+Examples:
+
+* https://data.gov.au/geoserver/southern-grampians-contours/wms?request=GetCapabilities
+* https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/WATER_STORAGE/wms?request=getCapabilities
+
 ## Custom Catalogues
 
 ### DataVic
@@ -74,46 +83,6 @@ These custom catalogue files can be hosted as static files.
   "config": {
     "spatial": {
       "url": "https://config.pozi.com/public/files/datavic-wms-vmadmin.xml"
-    }
-  }
-}
-```
-
-==-
-
-### data.gov.au
-
-#### Southern Grampians Land Capability
-
-1. download [data.gov.au WMS GetCapabilities](https://data.gov.au/geoserver/wms?request=GetCapabilities) and save as `datagovau-wms.xml`
-2. save copy as `datagovau-wms-southerngrampians-landcapability.xml`
-3. modify `datagovau-wms-southerngrampians-landcapability.xml`
-  - search for first instance of `southern-grampians-model`
-  - delete all `<layer>` elements that appear beforehand
-  - search for last instance of `southern-grampians-model`
-  - delete all `<layer>` elements that appear afterwards
-  - find and replace `Southern Grampians ` with `[blank]`
-  - remove all `CRS` items, except:
-```
-      <CRS>EPSG:3857</CRS>
-      <CRS>EPSG:4326</CRS>
-      <CRS>CRS:84</CRS>
-```
-
-4. save
-5. upload in Pozi Config Manager
-
-==- Configuration
-
-```json
-{
-  "title": "Land Capability Catalogue",
-  "group": "Land Capability",
-  "type": "WMSGetCapabilities",
-  "config": {
-    "spatial": {
-      "url": "https://config.pozi.com/public/files/datagovau-wms-southerngrampians-landcapability.xml",
-      "label": "class_desc"
     }
   }
 }

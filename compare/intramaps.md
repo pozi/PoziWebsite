@@ -19,6 +19,12 @@ On-premise, cloud or hybrid. The choice is yours.
 
 Pozi respects your organisation's autonomy and strategic technology decisions.
 
+### Direct Integration
+
+Connect your users directly with your organisation's spatial data library plus live data from corporate applications, government data services and web APIs.
+
+Pozi delivers live information from trusted sources to your users - not copies or snapshots that require complex workflows for compiling, processing and uploading data.
+
 ### Ease of Use
 
 Pozi's ease of use improves user engagement and promotes more informed decision-making.
@@ -61,11 +67,11 @@ And engage with the public using Pozi's two-way community consultation functiona
 
 Pozi frees you from duplicating your configuration across separate modules. Pozi gives your end-users their own personalised view based on a single map.
 
-From the one map, users can bookmark the current state of the Pozi map in their browser, enabling them to launch Pozi with their frequently-used map layers displayed by default.
-
 When users interact with layer groups within the layer panel, Pozi remembers how they left it so that their most relevant layers are ready to toggle on and off as needed. Layers that aren't useful or haven't been recently accessed remain tucked away.
 
-Users can launch Pozi from saved views to suit specific workflows or projects. There's no limit to the number of bookmarks you can create. Users can also share customised map views with others to highlight specific areas or layers of interest.
+Users can also bookmark the current state of the Pozi map, enabling them to launch Pozi with their frequently-used map layers displayed by default.
+
+Pozi can be launched from saved views to suit specific workflows, projects or themes. There's no limit to the number of bookmarks you can create and share. Users can also share customised map views with others to highlight specific areas or layers of interest.
 
 Pozi avoids the overhead of duplicating configuration across multiple modules, while enabling users to discover and use information for their individual needs.
 
@@ -81,25 +87,25 @@ Pozi clients benefit from being able to communicate directly with development an
 
 #### Have your own preferred GIS support provider?
 
-Do you already have your own GIS support provider? No worries. We'll work with them to ensure the best outcome for you.
+Do you already have your own GIS support provider? No worries. We'll work with them and provide access to the resources they need to deliver the support you deserve.
 
 We don't put restrictions on who you ask for support. Pozi's open architecture enables any GIS support provider to customise and maintain Pozi to your organisation's requirements.
 
 ### Purpose-Driven
 
-Pozi is solely focussed on the spatial enablement of your organisation. We have no interest or agenda in creating closed ecosystems to capture your organisation's other business functions.
+Pozi is solely focussed on the spatial enablement of your organisation. We have no interest in creating closed ecosystems to capture your organisation's other business functions.
 
-Pozi's open platform integrates with major vendor platforms and other purpose-built technologies to enable maximum interoperability, providing your organisation with autonomy in its strategic technology decisions.
+Pozi's open platform integrates with major vendor platforms and applications to enable maximum interoperability, providing your organisation with autonomy in its strategic technology decisions.
 
 [!ref icon="plug" text="Pozi integrations"](/admin-guide/integrations/)
 
 ### Future Ready
 
-The future of web GIS is driven by web-optimised data formats and in-browser geo-processing.
+The future of web GIS is driven by live data integrations, web-optimised data formats and in-browser geo-processing.
 
-Pozi invests for the future by keeping Pozi up-to-date with modern web technologies. We work with open source HTML5 technologies including React, Material UI, OpenLayers 6, TurfJS and GeoStyler to ensure achieve high performance, compatibility with modern data sources, and a high quality user experience.
+Pozi invests for the future by keeping Pozi up-to-date with modern web technologies. We work with open source HTML5 technologies including [React](https://reactjs.org/), [Material UI](https://mui.com/), [OpenLayers 6](https://openlayers.org/), [TurfJS](https://turfjs.org/) and [GeoStyler](https://geostyler.org/) to ensure high performance, compatibility with modern data sources, and a high quality user experience.
 
-IntraMaps is built on top of an outdated version of OpenLayers, which ceased development in 2013. IntraMaps' performance and functionality remain tied to a legacy, unsupported code base, and its users cannot take advantage of modern interfaces and data sources.
+IntraMaps is built on top of an outdated version of OpenLayers, which ceased development in 2013. IntraMaps' performance and functionality remain tied to a legacy, unsupported code base, preventing any significant innovation in performance and functionality.
 
 ### Transparent Pricing
 
@@ -142,7 +148,7 @@ When you fund the development of new features, you have ongoing access to the ne
 * harness QGIS's extensive configuration and visualisation options to manage and publish your organisation's data
 * reduce administration overheads
   * direct integration with live data from internal and external sources
-  * reduce need for downloading, processing and republishing data from government and other sources
+  * reduce need for downloading, processing and republishing data from external sources
   * reduce duplication of corporate data to external hosting sites
 * real support
 
@@ -153,10 +159,10 @@ When you fund the development of new features, you have ongoing access to the ne
 * more efficient use of GIS budget
   * lower subscription cost
   * lower training requirements
-  * flexibility to fund the development of new features that will benefit your organisation
+  * engage us to develop new functionality that will benefit your organisation
   * no lock-in contracts
   * procure without tenders/RFQs
-* risk-free - take advantage of our 60-day free trial
+* risk-free - take advantage of our free trial
 
 ==-
 
@@ -168,25 +174,9 @@ But with Pozi, your GIS is no longer tied to single vendor and its technology de
 
 ### On a contract?
 
-If you're stuck in another contract, talk to us. Not only can we get you up and running with Pozi straight away, we'll provide credit for your use of Pozi during the remainder of your existing contract!
+If you're stuck in another contract, talk to us. Not only can we get you up and running with Pozi straight away, we'll provide credit to cover your use of Pozi during the remainder of your existing contract. Run Pozi and IntraMaps in parallel for as long as you need to make a seamless transition.
 
-[!button variant="info" icon="mention" size="xl" corners="pill" text="Make the switch"](/contact/)
-
----
-
-## IntraMaps may be right for you if...
-
-==- Your organisation requires a single vendor for its technology requirements
-
-IntraMaps is one of many software titles in the TechnologyOne suite. If your organisation needs a single point of contact for all its technology needs, then TechnologyOne's offering will be a better fit your organisation.
-
-==- You need to isolate layers on different maps
-
-Pozi allows permitted users to discover and turn on any combination of permitted map layers. Users can also create bookmarks for maps that contain any combination of layers they commonly use.
-
-However if you need to prevent layers of one type being displayed on the same map as layers of another type, then you'll want to use modules in IntraMaps to isolate these layers from one another.
-
-==-
+[!button variant="info" icon="mention" size="xl" corners="pill" text="Get started"](/contact/)
 
 ---
 
