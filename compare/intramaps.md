@@ -25,6 +25,16 @@ Connect your users directly with your organisation's spatial data library plus l
 
 Pozi delivers live information from trusted sources to your users - not copies or snapshots that require complex workflows for compiling, processing and uploading data.
 
+### Ease of Configuration
+
+Pozi enables GIS administrators to quickly and easily distribute spatial information across your organisation.
+
+If you know how to use QGIS, you can publish data in Pozi.
+
+There are no multi-day courses required to get you started.
+
+Take advantage of QGIS's powerful graphical user interface to configure your layers in Pozi, including adding spatial and non-spatial data sources, filtering, advanced layer styling, labelling, dynamic data joins, virtual fields, debugging tools, and more.
+
 ### Ease of Use
 
 Pozi's ease of use improves user engagement and promotes more informed decision-making.
@@ -40,16 +50,6 @@ Pozi's adaptive interface displays only the information needed for the task at h
 * efficient use of screen space, free of clutter
 * no complex tools, menus or jargon
 * modern, visually-appealing interface
-
-### Ease of Configuration
-
-Pozi enables GIS administrators to quickly and easily distribute spatial information across your organisation.
-
-If you know how to use QGIS, you can publish data in Pozi.
-
-There are no multi-day courses required to get you started.
-
-Take advantage of QGIS's powerful graphical user interface to configure your layers in Pozi, including adding spatial and non-spatial data sources, filtering, advanced layer styling, labelling, dynamic data joins, virtual fields, debugging tools, and more.
 
 ### Public Ready
 
@@ -71,7 +71,7 @@ When users interact with layer groups within the layer panel, Pozi remembers how
 
 Users can also bookmark the current state of the Pozi map, enabling them to launch Pozi with their frequently-used map layers displayed by default.
 
-Pozi can be launched from saved views to suit specific workflows, projects or themes. There's no limit to the number of bookmarks you can create and share. Users can also share customised map views with others to highlight specific areas or layers of interest.
+Pozi can be launched from saved views to suit specific workflows, projects or themes. There's no limit to the number of bookmarks that users can create and share. Users can also share customised map views with others to highlight specific areas or layers of interest.
 
 Pozi avoids the overhead of duplicating configuration across multiple modules, while enabling users to discover and use information for their individual needs.
 
@@ -176,10 +176,10 @@ But with Pozi, your GIS is no longer tied to single vendor and its technology de
 
 If you're stuck in another contract, talk to us. Not only can we get you up and running with Pozi straight away, we'll provide credit to cover your use of Pozi during the remainder of your existing contract. Run Pozi and IntraMaps in parallel for as long as you need to make a seamless transition.
 
-[!button variant="info" icon="mention" size="xl" corners="pill" text="Get started"](/contact/)
+[!button variant="info" icon="paper-airplane" size="xl" corners="pill" text="Get started"](/contact/)
 
 ---
 
 ## Try Pozi for free 
 
-[!button variant="light" icon="paper-airplane" size="xl" corners="pill" text="Request a free trial"](/trial/)
+[!button variant="light" icon="stack" size="xl" corners="pill" text="Request a free trial"](/trial/)
