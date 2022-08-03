@@ -20,10 +20,10 @@ Administrators control the following aspects of the Pozi experience:
 
 For other changes to the Pozi app experience, contact the Pozi Helpdesk:
 
-* register a new layer catalogue in Pozi
+* register a new layer catalogue (ie, layer group) in Pozi
 * link a new child dataset to an existing layer
 * register new layers for viewing by public
-* enable new dataset as mail merge source
+* enable a dataset as mail merge source
 * change the default basemap, search and imagery options
 * update branding
 

@@ -15,14 +15,25 @@ Settings > Options > General > Project Files
 * Prompt for confirmation when a layer is to be removed: untick
 * Default project file format: QGS Project
 
-## Panels
+## Panels and Toolbars
 
-View > Panels
+Right-click on any toolbar handle to reveal tickboxes for adding and removing panels and toolbars.
+
+![](./img/qgis-panel-and-toolbar-setup.png){style="width:600px"}
+
+### Panels
 
 * Layer Styling
 * Layers
 * Browser
 * Debugging/Development Tools
+
+### Toolbars
+
+* Attributes
+* Map Navigation
+* Project
+* Selection
 
 ## Data Sources
 
@@ -47,5 +58,5 @@ Browser > MSSQL (right-click) > New Connection...
 Browser > WMS/WMTS (right-click) > New Connection...
 
 * Name: Vicmap Basemap
-* URL: https://base.maps.vic.gov.au/service?SERVICE=WMTS&REQUEST=Getcapabilities
+* URL: https://base.maps.vic.gov.au/service
 * OK

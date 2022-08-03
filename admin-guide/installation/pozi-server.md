@@ -9,7 +9,7 @@ Pozi Server is the software in the Pozi Enterprise suite that enables internal d
 
 Pozi Server is installed on premise, enabling it to serve local data directly to an internal user's browser without any data leaving the network. For users to access these datasets, they must be connected to the network, either directly or via a VPN.
 
-With Pozi Server installed and configured, the Pozi web application can access internal data in the same way it accesses external APIs from other provides (eg, DataVic, data.gov.au, HERE, ArcGIS Online, various government web services, etc). The Pozi web application aggregates internal and external data in the browser in a seamless experience for staff.
+With Pozi Server installed and configured, the Pozi web application can access internal data in the same way it accesses external APIs from other providers (eg, DataVic, data.gov.au, HERE, ArcGIS Online, various government web services, etc). The Pozi web application aggregates internal and external data in the browser in a seamless experience for staff.
 
 **Pozi Enterprise** sites utilise their internal network for connections to private data sources. **Pozi Enterprise Cloud** sites utilise Azure Active Directory to handle these connections.
 
@@ -28,7 +28,7 @@ By following these step-by-step instructions, you can install and configure Pozi
 
 ## Prerequisites
 
-Prior to installation, clients should set up two domain user accounts.
+Prior to installation, ask your network administrator to set up two domain user accounts.
 
 **Support Account**
 
@@ -130,6 +130,8 @@ Open the command prompt in administrator mode:
 
 Press Windows button > type `cmd` > right-click 'Command Prompt' > click 'Run as administrator' > click 'Yes'
 
+![](./img/run-command-prompt-as-administrator.png){style="width:350px"}
+
 Then run the following command:
 
 ```
@@ -140,17 +142,27 @@ The `local` folder corresponds to the subdomain that is configured as per the *D
 
 ## DNS Configuration
 
-To enable PCs on the council network to communicate with the Pozi Server instance, configure the network Domain Name System (DNS) so that any requests to `local.pozi.com` (or another subdomain of your choosing) resolve to the IP address of the server on which Pozi Server is installed.
+During the installation, the PC's `hosts` file is updated to redirect any web traffic going to `local.pozi.com` to the local machine at `127.0.0.1`.
 
-Add the lookup (eg `local.pozi.com`) as a "forward lookup zone (primary)" then create an "A record with no hostname" (matches zone) to target server.
+``` C:\Windows\System32\drivers\etc\hosts
+127.0.0.1 local.pozi.com
+```
+
+This enables the local user to communicate with the Pozi Server instance.
+
+To enable all PCs across the network to communicate with the Pozi Server instance, configure the network Domain Name System (DNS) so that any requests to `local.pozi.com` (or another subdomain of your choosing) resolve to the IP address of the server on which Pozi Server is installed.
+
+Ask your network administrator to add the lookup (eg `local.pozi.com`) as a "forward lookup zone (primary)" then create an "A record with no hostname" (matches zone) to target server.
 
 ![DNS Manager](./img/dns-manager.png)
 
-When working with OpenVPN, you may need to add the following line to the OpenVPN client configuration file:
+If your network setup uses OpenVPN, you may need to add the following line to the OpenVPN client configuration file:
 
 `dhcp-option DOMAIN local.pozi.com`
 
 To confirm the DNS is configured correctly, open a command prompt window and ping local.pozi.com. It should return a reply from the server on which Pozi Server is installed.
+
+When this is established, you can remove the `local.pozi.com` entry in the hosts file. Use Notepad++ in Administrator mode to carry out the edit.
 
 ## SSL Certificates
 
@@ -158,9 +170,9 @@ Pozi Server communicates only on port 443, so all requests must be sent via http
 
 If your organisation wants to use its own SSL certificate, place the `certificate.cer` and `certificate.key` files in the root Pozi folder, and restart the PoziConnectServer service.
 
-Instead of configuring your DNS for `local.pozi.com`, you will use something like `poziserver.[yourorganisation].com`. Accordingly the subfolder you create inside the `userdata` folder (see Prepare Userdata Folder above) will need to correspond with the subdomain (eg, `userdata\poziserver` instead of `userdata\local`).
+Instead of configuring your DNS for `local.pozi.com`, you will use something like `poziserver.[yourorganisation].com`. Accordingly the subfolder you create inside the `userdata` folder (see [Prepare Userdata Folder](#prepare-userdata-folder) above) will need to be named to correspond with the subdomain (eg, `userdata\poziserver` instead of `userdata\local`).
 
-Note: due to a current limitation in Pozi Server, it will still expect any static files (images, style files, pre-rendered GeoJSON, etc) to be in `userdata\local` regardless of whatever subdomain is being used for domain forwarding.
+Note: due to a current limitation in Pozi Server, it will still expect any static files (images, style files, resource check, pre-rendered GeoJSON, etc) to be in `userdata\local` regardless of whatever subdomain is being used for domain forwarding.
 
 ## Resource Check
 
@@ -262,6 +274,6 @@ Important note: any additional folders under the `server` folder that have been 
 
 ==- Ping test fails
 
-  If you encounter a message that says "The ping test to connect.pozi.com failed", ensure that your machine has permissions to connect to connect.pozi.com.
+  If you encounter a message that says "The ping test to connect.pozi.com failed", ensure that your machine has permissions to connect to the `connect.pozi.com` domain.
 
 ==-
