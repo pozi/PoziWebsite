@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.712725098264">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.712814257415">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,12 +35,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.712725098264" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.712814257415" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.712725098264" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.712814257415" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.712725098264" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.712725098264" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.712814257415" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.712814257415" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -313,7 +313,7 @@
 </doc-anchor-target>
 <p>Pozi Server is the software in the Pozi Enterprise suite that enables internal datasets to be served to Pozi users within the organisation’s network.</p>
 <p>Pozi Server is installed on premise, enabling it to serve local data directly to an internal user&#x27;s browser without any data leaving the network. For users to access these datasets, they must be connected to the network, either directly or via a VPN.</p>
-<p>With Pozi Server installed and configured, the Pozi web application can access internal data in the same way it accesses external APIs from other provides (eg, DataVic, data.gov.au, HERE, ArcGIS Online, various government web services, etc). The Pozi web application aggregates internal and external data in the browser in a seamless experience for staff.</p>
+<p>With Pozi Server installed and configured, the Pozi web application can access internal data in the same way it accesses external APIs from other providers (eg, DataVic, data.gov.au, HERE, ArcGIS Online, various government web services, etc). The Pozi web application aggregates internal and external data in the browser in a seamless experience for staff.</p>
 <p><strong>Pozi Enterprise</strong> sites utilise their internal network for connections to private data sources. <strong>Pozi Enterprise Cloud</strong> sites utilise Azure Active Directory to handle these connections.</p>
 <doc-anchor-target id="how-pozi-server-works">
     <h2>
@@ -337,7 +337,7 @@
         <span>Prerequisites</span>
     </h2>
 </doc-anchor-target>
-<p>Prior to installation, clients should set up two domain user accounts.</p>
+<p>Prior to installation, ask your network administrator to set up two domain user accounts.</p>
 <p><strong>Support Account</strong></p>
 <ul>
 <li>example name: <code v-pre>PoziSupport</code></li>
@@ -464,6 +464,7 @@
 <p>Sample data is included in the Pozi Server installation. To enable the Pozi Server service to access this data, create a Windows symlink in within the <code v-pre>Pozi\userdata\local</code> folder.</p>
 <p>Open the command prompt in administrator mode:</p>
 <p>Press Windows button &gt; type <code v-pre>cmd</code> &gt; right-click &#x27;Command Prompt&#x27; &gt; click &#x27;Run as administrator&#x27; &gt; click &#x27;Yes&#x27;</p>
+<p><img src="../img/run-command-prompt-as-administrator.png" style="width:350px" alt="" /></p>
 <p>Then run the following command:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">mklink /D &quot;C:\Program Files (x86)\Pozi\userdata\local\sample&quot; &quot;C:\Program Files (x86)\Pozi\server\data\local\sample&quot;</code></pre>
@@ -475,16 +476,22 @@
         <span>DNS Configuration</span>
     </h2>
 </doc-anchor-target>
-<p>To enable PCs on the council network to communicate with the Pozi Server instance, configure the network Domain Name System (DNS) so that any requests to <code v-pre>local.pozi.com</code> (or another subdomain of your choosing) resolve to the IP address of the server on which Pozi Server is installed.</p>
-<p>Add the lookup (eg <code v-pre>local.pozi.com</code>) as a &quot;forward lookup zone (primary)&quot; then create an &quot;A record with no hostname&quot; (matches zone) to target server.</p>
+<p>During the installation, the PC&#x27;s <code v-pre>hosts</code> file is updated to redirect any web traffic going to <code v-pre>local.pozi.com</code> to the local machine at <code v-pre>127.0.0.1</code>.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-c"><code v-pre class="language-c">127.0.0.1 local.pozi.com</code></pre>
+</doc-codeblock></div>
+<p>This enables the local user to communicate with the Pozi Server instance.</p>
+<p>To enable all PCs across the network to communicate with the Pozi Server instance, configure the network Domain Name System (DNS) so that any requests to <code v-pre>local.pozi.com</code> (or another subdomain of your choosing) resolve to the IP address of the server on which Pozi Server is installed.</p>
+<p>Ask your network administrator to add the lookup (eg <code v-pre>local.pozi.com</code>) as a &quot;forward lookup zone (primary)&quot; then create an &quot;A record with no hostname&quot; (matches zone) to target server.</p>
 <p><figure class="content-center">
     <img src="../img/dns-manager.png" alt="DNS Manager" />
     <figcaption class="caption">DNS Manager</figcaption>
 </figure>
 </p>
-<p>When working with OpenVPN, you may need to add the following line to the OpenVPN client configuration file:</p>
+<p>If your network setup uses OpenVPN, you may need to add the following line to the OpenVPN client configuration file:</p>
 <p><code v-pre>dhcp-option DOMAIN local.pozi.com</code></p>
 <p>To confirm the DNS is configured correctly, open a command prompt window and ping local.pozi.com. It should return a reply from the server on which Pozi Server is installed.</p>
+<p>When this is established, you can remove the <code v-pre>local.pozi.com</code> entry in the hosts file. Use Notepad++ in Administrator mode to carry out the edit.</p>
 <doc-anchor-target id="ssl-certificates">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#ssl-certificates">#</doc-anchor-trigger>
@@ -493,8 +500,8 @@
 </doc-anchor-target>
 <p>Pozi Server communicates only on port 443, so all requests must be sent via https. The Pozi Server installation manages its own SSL certificate (<code v-pre>*.pozi.com</code>) to enable the local endpoint (eg <code v-pre>local.pozi.com</code>) to run securely.</p>
 <p>If your organisation wants to use its own SSL certificate, place the <code v-pre>certificate.cer</code> and <code v-pre>certificate.key</code> files in the root Pozi folder, and restart the PoziConnectServer service.</p>
-<p>Instead of configuring your DNS for <code v-pre>local.pozi.com</code>, you will use something like <code v-pre>poziserver.[yourorganisation].com</code>. Accordingly the subfolder you create inside the <code v-pre>userdata</code> folder (see Prepare Userdata Folder above) will need to correspond with the subdomain (eg, <code v-pre>userdata\poziserver</code> instead of <code v-pre>userdata\local</code>).</p>
-<p>Note: due to a current limitation in Pozi Server, it will still expect any static files (images, style files, pre-rendered GeoJSON, etc) to be in <code v-pre>userdata\local</code> regardless of whatever subdomain is being used for domain forwarding.</p>
+<p>Instead of configuring your DNS for <code v-pre>local.pozi.com</code>, you will use something like <code v-pre>poziserver.[yourorganisation].com</code>. Accordingly the subfolder you create inside the <code v-pre>userdata</code> folder (see <doc-anchor-trigger to="#prepare-userdata-folder">Prepare Userdata Folder</doc-anchor-trigger> above) will need to be named to correspond with the subdomain (eg, <code v-pre>userdata\poziserver</code> instead of <code v-pre>userdata\local</code>).</p>
+<p>Note: due to a current limitation in Pozi Server, it will still expect any static files (images, style files, resource check, pre-rendered GeoJSON, etc) to be in <code v-pre>userdata\local</code> regardless of whatever subdomain is being used for domain forwarding.</p>
 <doc-anchor-target id="resource-check">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#resource-check">#</doc-anchor-trigger>
@@ -618,7 +625,7 @@
    </doc-panel>
    <doc-panel id="ping-test-fails" collapsed>
        <template #title>Ping test fails</template>
-<p>If you encounter a message that says &quot;The ping test to connect.pozi.com failed&quot;, ensure that your machine has permissions to connect to connect.pozi.com.</p>
+<p>If you encounter a message that says &quot;The ping test to connect.pozi.com failed&quot;, ensure that your machine has permissions to connect to the <code v-pre>connect.pozi.com</code> domain.</p>
    </doc-panel>
 </doc-panels>
 

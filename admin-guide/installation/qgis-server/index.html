@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.712725098264">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.712814257415">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,12 +35,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.712725098264" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.712814257415" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.712725098264" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.712814257415" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.712725098264" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.712725098264" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.712814257415" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.712814257415" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -641,19 +641,14 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set app &quot;Default Web Site/Pozi/QgisServer&quot; /preloadEnabled:true
 </code></pre>
 </doc-codeblock></div>
-<p>Set the user for the PoziQgisServer application pool (this step may not be needed because the command immediately above seems to take care of this - remove this step if it can be confirmed this is not needed):</p>
-<ul>
-<li>IIS &gt; select server &gt; Sites &gt; Default Web Site &gt; Pozi &gt; QgisServer &gt; Advanced Settings &gt; Application Pool &gt; set to PoziQgisServer</li>
-</ul>
+<doc-anchor-target id="permissions">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#permissions">#</doc-anchor-trigger>
+        <span>Permissions</span>
+    </h3>
+</doc-anchor-target>
 <p>Set permissions for <code v-pre>IIS AppPool\PoziQgisServer</code> :</p>
-<ul>
-<li>IIS &gt; select server &gt; Application Pools &gt; PoziQgisServer &gt; Advanced settings &gt; Identity &gt; Application Pool Identity &gt; Custom account &gt; enter details of the domain user that runs Pozi &quot;service&quot; account (include the domain prefix and backslash before the username)</li>
-</ul>
-<p><figure class="content-center">
-    <img src="../img/pozi-server-iis-apppool-poziqgisserver-permissions.png" alt="Grant read permission for Pozi Server data folder to IIS AppPool\PoziQgisServer" />
-    <figcaption class="caption">Grant read permission for Pozi Server data folder to IIS AppPool\PoziQgisServer</figcaption>
-</figure>
-</p>
+<p>IIS &gt; select server &gt; Application Pools &gt; PoziQgisServer &gt; Advanced settings &gt; Identity &gt; Application Pool Identity &gt; Custom account &gt; enter details of the domain user that runs Pozi &quot;service&quot; account (include the domain prefix and backslash, or use the email address of the domain user)</p>
 <doc-anchor-target id="configuring-clean-urls-for-qgis-server-fastcgi">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#configuring-clean-urls-for-qgis-server-fastcgi">#</doc-anchor-trigger>
