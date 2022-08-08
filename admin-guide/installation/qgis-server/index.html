@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.712828500497">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.713313901268">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,12 +35,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.712828500497" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.713313901268" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.712828500497" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.713313901268" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.712828500497" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.712828500497" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.713313901268" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.713313901268" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -776,6 +776,15 @@ QGIS_WIN_APP_NAME=OSGeo4W\QGIS Desktop 3.22.8</code></pre>
 <p>Check that the <code v-pre>GDAL_DATA</code> and <code v-pre>GDAL_DRIVER_PATH</code> paths exist for your installation. If not, update the file accordingly.</p>
 <p>If you are denied permission to create or edit the file in the destination location, create the file elsewhere and move it to <code v-pre>C:\OSGeo4W\bin\</code> using Windows Explorer.</p>
 <p><a href="https://github.com/qgis/QGIS/issues/49148#issuecomment-1174459434">Further details about this issue</a></p>
+   </doc-panel>
+   <doc-panel id="iis-seems-to-go-to-sleep" collapsed>
+       <template #title>IIS seems to &quot;go to sleep&quot;</template>
+<p>IIS &gt; select server &gt; Application Pools &gt; PoziQgisServer &gt; Advanced Settings:</p>
+<ul>
+<li>General &gt; Start Mode &gt; <code v-pre>AlwaysRunning</code></li>
+<li>Process Model &gt; Idle Time-out (minutes) &gt; <code v-pre>0</code></li>
+<li>Recycling &gt; Regular Time Interval (minutes) &gt; <code v-pre>0</code></li>
+</ul>
    </doc-panel>
 </doc-panels>
 
