@@ -338,4 +338,12 @@ If you are denied permission to create or edit the file in the destination locat
 
 [Further details about this issue](https://github.com/qgis/QGIS/issues/49148#issuecomment-1174459434)
 
+==- IIS seems to "go to sleep"
+
+IIS > select server > Application Pools > PoziQgisServer > Advanced Settings:
+
+* General > Start Mode > `AlwaysRunning`
+* Process Model > Idle Time-out (minutes) > `0`
+* Recycling > Regular Time Interval (minutes) > `0`
+
 ==-

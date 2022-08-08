@@ -5,7 +5,7 @@ order: 100
 
 # Pozi Server
 
-*Geospatial API for on-premise data*
+*Geospatial API for your on-premise datasets*
 
 ## About
 

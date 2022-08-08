@@ -34,6 +34,7 @@ title: QGIS Catalogue
   "group": "Aerials",
   "type": "WMSGetCapabilities",
   "localDataSource": true,
+  "showLegend": false,
   "config": {
     "spatial": {
       "url": "https://bs-gis.pozi.com/iis/qgisserver?service=WMS&REQUEST=GetCapabilities&MAP=//bs-intra/GIS/System/POZI/QGIS Projects/Aerials.qgs"

@@ -22,6 +22,20 @@ An example link for myData looks like this:
 
 For any PC on which a URL protocol handler has been installed, clicking this link will launch the myData application.
 
+#### QGIS Configuration
+
+Layer Properties > Fields > Field Calculator > Create a new field:
+
+* Output field name: `Application Link`
+* Output field type: `Text (string)`
+* Expression:
+
+```
+'<a href="mydata://action=goto&assetCategory=Buildings&assetID=' || Asset_ID || '" target="_blank" >Open in myData</a>'
+```
+
+#### VRT Configuration
+
 An example configuration in the VRT file is as follows:
 
 ```xml
