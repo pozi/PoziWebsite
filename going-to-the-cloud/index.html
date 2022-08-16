@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.713313901268">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.713923307383">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -38,11 +38,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=2.4.0.713313901268" rel="stylesheet" />
+    <link href="../resources/css/retype.css?v=2.4.0.713923307383" rel="stylesheet" />
 
-    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.713313901268" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.713923307383" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.713313901268" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.713923307383" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -357,14 +357,14 @@
 <p><strong>... your users are local</strong></p>
 <p>Your most critical users are the authorised users on your organisation&#x27;s network or private cloud. They want fast, direct access to up-to-the-minute data; not out-of-date copies.</p>
 <p><strong>... the applications you integrate with are local</strong></p>
-<p>Your organisation&#x27;s corporate applications are the source of truth for vital business processes. But when your GIS viewer exists only in a closed, cloud-only environment, it cannot link directly to these applications. You&#x27;ll need to start taking snapshot copies of your corporate databases and upload to the cloud in order for your users to view them in your GIS.</p>
-<p>Linking to other cloud-based applications is even more complicated. You&#x27;ll need to download the data first and then upload it to the cloud GIS.</p>
-<p><strong>... your data is local</strong></p>
-<p>Your organisation&#x27;s GIS library contains datasets maintained by departments and individuals in your organisation or collected from external parties and data capture programmes, sometimes over many years or decades.</p>
+<p>Your organisation&#x27;s corporate applications are the source of truth for vital business processes. But when your GIS viewer exists only in a closed, cloud-only environment, it cannot link directly to these applications. You&#x27;ll need to start taking snapshot copies of your internal databases and upload to the cloud in order for your users to view them in your GIS.</p>
+<p><strong>... your GIS data is local</strong></p>
+<p>Your organisation&#x27;s spatial knowledge consists of datasets maintained by departments and individuals in your organisation or collected from external parties and data capture projects, sometimes over many years or decades.</p>
 <p>Even a shapefile or spreadsheet in a shared folder can form an important part of your organisation&#x27;s geospatial knowledge.</p>
+<p>Moving to the cloud means compiling and sending all of this to an off-site host.</p>
 <p>If you&#x27;re required to migrate your organisation&#x27;s data to an external host, your data becomes available only to a single application (theirs) and excluded from any services that they don&#x27;t explicitly allow. Your geospatial library has become content for your host&#x27;s application and not a shared resource for your organisation.</p>
 <p><strong>... your workflows are local</strong></p>
-<p>You&#x27;ve built a foundation of automated workflows within your GIS library to suit the needs of your organisation. These might include views, triggers, actions, scripts, live joins, API connections and data exports. Don&#x27;t expect any of these to be permitted to run on your host&#x27;s servers.</p>
+<p>You&#x27;ve built a foundation of automated workflows within your GIS library to suit the needs of your organisation. These might include views, triggers, scripts, live joins, API connections and data exports. These will not be permitted to run on your host&#x27;s servers.</p>
 <doc-anchor-target id="evaluate-the-cost-of-going-cloud">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#evaluate-the-cost-of-going-cloud">#</doc-anchor-trigger>
@@ -379,18 +379,17 @@
 </doc-anchor-target>
 <p>Ask your vendor if your organisation gains any of the usual advantages of moving to the cloud:</p>
 <ul>
+<li>will it reduce costs?</li>
 <li>will it enable easier integrations with your other corporate applications?</li>
 <li>will it allow users to connect to live data?</li>
-<li>will it reduce costs?</li>
 </ul>
 <p>Or will the move be a step backwards:</p>
 <ul>
-<li>will it require your organisation&#x27;s on-premise corporate data to be replicated or moved permanently to their server?</li>
-<li>will it prevent your organisation using third party support providers?</li>
+<li>will it require your organisation&#x27;s corporate data to be replicated offsite?</li>
 <li>will it restrict integrations for your other GIS software and corporate systems?</li>
-<li>will it prevent the use of basic database functions such as triggers and views?</li>
+<li>will it prevent the use of basic database functionality such as triggers and views?</li>
 <li>will it make it harder for your GIS to connect directly with data from external data providers?</li>
-<li>can you trust that you&#x27;ll get the support you need from the vendor?</li>
+<li>will it prevent your organisation using third party support providers?</li>
 </ul>
 <p>--</p>
 <doc-anchor-target id="where-to-from-here">
@@ -399,9 +398,10 @@
         <span>Where to from here?</span>
     </h2>
 </doc-anchor-target>
-<p>At Pozi, we&#x27;re enabling organisations to leverage their existing infrastructure to gain greater control to integrate directly with council corporate spatial and non-spatial data.</p>
-<p>Pozi&#x27;s open architecture empowers organisations to integrate their spatial and other corporate data in innovative ways, and ensures maximum flexibility and control.</p>
+<p>At Pozi, we&#x27;re enabling organisations to leverage their existing infrastructure to gain greater control to integrate directly with corporate spatial and non-spatial data.</p>
+<p>Pozi&#x27;s open architecture empowers organisations to integrate their spatial and other corporate data to suit their unique requirements, and ensures maximum flexibility and control.</p>
 <p>Pozi&#x27;s new QGIS integration enables organisations to manage their GIS using a familiar powerful tool.</p>
+<p>Talk to us before committing your organisation to a cloud migration you didn&#x27;t ask for.</p>
 <hr />
 <p><em>Photo by <a href="https://www.pexels.com/photo/body-of-water-during-daytime-160320/">Gülizar Şener</a></em></p>
 
