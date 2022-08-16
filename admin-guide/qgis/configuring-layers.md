@@ -236,4 +236,10 @@ Use QGIS to determine whether the layer also causes its project file to load slo
 
 [!ref text="Testing Load Performance"](/admin-guide/qgis/managing-qgis-projects#test-project-load-performance)
 
+==- Can't see the layer option for switching on the table view
+
+Layers must be [enabled for WFS](#enable-layers-for-wfs) in order to access the table view.
+
+If you've already enabled a layer for WFS, and the table view option is still not available, it may be because the layer shares the same name as a layer folder. Rename the layer and/or folder so they are unique.
+
 ==-

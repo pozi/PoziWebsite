@@ -35,21 +35,21 @@ Your most critical users are the authorised users on your organisation's network
 
 **... the applications you integrate with are local**
 
-Your organisation's corporate applications are the source of truth for vital business processes. But when your GIS viewer exists only in a closed, cloud-only environment, it cannot link directly to these applications. You'll need to start taking snapshot copies of your corporate databases and upload to the cloud in order for your users to view them in your GIS.
+Your organisation's corporate applications are the source of truth for vital business processes. But when your GIS viewer exists only in a closed, cloud-only environment, it cannot link directly to these applications. You'll need to start taking snapshot copies of your internal databases and upload to the cloud in order for your users to view them in your GIS.
 
-Linking to other cloud-based applications is even more complicated. You'll need to download the data first and then upload it to the cloud GIS.
+**... your GIS data is local**
 
-**... your data is local**
-
-Your organisation's GIS library contains datasets maintained by departments and individuals in your organisation or collected from external parties and data capture programmes, sometimes over many years or decades.
+Your organisation's spatial knowledge consists of datasets maintained by departments and individuals in your organisation or collected from external parties and data capture projects, sometimes over many years or decades.
 
 Even a shapefile or spreadsheet in a shared folder can form an important part of your organisation's geospatial knowledge.
+
+Moving to the cloud means compiling and sending all of this to an off-site host.
 
 If you're required to migrate your organisation's data to an external host, your data becomes available only to a single application (theirs) and excluded from any services that they don't explicitly allow. Your geospatial library has become content for your host's application and not a shared resource for your organisation.
 
 **... your workflows are local**
 
-You've built a foundation of automated workflows within your GIS library to suit the needs of your organisation. These might include views, triggers, actions, scripts, live joins, API connections and data exports. Don't expect any of these to be permitted to run on your host's servers.
+You've built a foundation of automated workflows within your GIS library to suit the needs of your organisation. These might include views, triggers, scripts, live joins, API connections and data exports. These will not be permitted to run on your host's servers.
 
 ### Evaluate the cost of "going cloud"
 
@@ -57,29 +57,29 @@ You've built a foundation of automated workflows within your GIS library to suit
 
 Ask your vendor if your organisation gains any of the usual advantages of moving to the cloud:
 
+* will it reduce costs?
 * will it enable easier integrations with your other corporate applications?
 * will it allow users to connect to live data?
-* will it reduce costs?
 
 Or will the move be a step backwards:
 
-* will it require your organisation's on-premise corporate data to be replicated or moved permanently to their server?
-* will it prevent your organisation using third party support providers?
+* will it require your organisation's corporate data to be replicated offsite?
 * will it restrict integrations for your other GIS software and corporate systems?
-* will it prevent the use of basic database functions such as triggers and views?
+* will it prevent the use of basic database functionality such as triggers and views?
 * will it make it harder for your GIS to connect directly with data from external data providers?
-* can you trust that you'll get the support you need from the vendor?
+* will it prevent your organisation using third party support providers?
 
 --
 
 ## Where to from here?
 
-At Pozi, we're enabling organisations to leverage their existing infrastructure to gain greater control to integrate directly with council corporate spatial and non-spatial data.
+At Pozi, we're enabling organisations to leverage their existing infrastructure to gain greater control to integrate directly with corporate spatial and non-spatial data.
 
-Pozi's open architecture empowers organisations to integrate their spatial and other corporate data in innovative ways, and ensures maximum flexibility and control.
+Pozi's open architecture empowers organisations to integrate their spatial and other corporate data to suit their unique requirements, and ensures maximum flexibility and control.
 
 Pozi's new QGIS integration enables organisations to manage their GIS using a familiar powerful tool.
 
+Talk to us before committing your organisation to a cloud migration you didn't ask for.
 
 
 ---

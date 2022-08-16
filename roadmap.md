@@ -23,6 +23,19 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## Completed
 
+### August 2022
+
+- [x] new: display legend inline for switched-on layers
+- [x] new: enable loading of layers via WMTS catalogue
+- [x] improved: increase precision on measurement tools
+- [x] improved: enable more overrides for entire catalogue layers, such as opacity
+- [x] improved: after layer search, expand only groups that contain selected layer
+- [x] improved: unify appearance of layer options for stand-alone and catalogue layers
+- [x] improved: hide table when layer is turned off
+- [x] improved: render null and undefined values as empty string in table view
+- [x] fixed: better remember state of expanded layer groups for sites with a lot of layers
+- [x] fixed: respect field order of source data in QGIS GetFeature queries
+
 ### July 2022
 
 - [x] new: obtain layer queryability setting from QGIS Server
@@ -59,7 +72,7 @@ Our biggest release in over two years!
 
 Please excuse the gaps in our timeline!
 
-Sometimes we get busy building, and don't spend enough time celebrating our wins and recording our accomplishments.
+Sometimes we get busy building, and we forget to celebrate our wins and record our accomplishments.
 
 We'll do a better job going forward keeping track of all new development and improvements!
 

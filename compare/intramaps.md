@@ -21,7 +21,7 @@ Pozi respects your organisation's autonomy and strategic technology decisions.
 
 ### Direct Integration
 
-Connect your users directly with your organisation's spatial data library plus live data from corporate applications, government data services and web APIs.
+Connect your users directly with your organisation's spatial data library, plus live data from corporate applications, government data services and web APIs.
 
 Pozi delivers live information from trusted sources to your users - not copies or snapshots that require complex workflows for compiling, processing and uploading data.
 
@@ -33,7 +33,7 @@ If you know how to use QGIS, you can publish data in Pozi.
 
 There are no multi-day courses required to get you started.
 
-Take advantage of QGIS's powerful graphical user interface to configure your layers in Pozi, including adding spatial and non-spatial data sources, filtering, advanced layer styling, labelling, dynamic data joins, virtual fields, debugging tools, and more.
+GIS administrators can take advantage of QGIS's powerful graphical user interface to configure layers in Pozi, including adding spatial and non-spatial data sources, filtering, advanced layer styling, labelling, dynamic data joins, virtual fields, debugging tools, and more.
 
 ### Ease of Use
 
@@ -93,7 +93,7 @@ We don't put restrictions on who you ask for support. Pozi's open architecture e
 
 ### Purpose-Driven
 
-Pozi is solely focussed on the spatial enablement of your organisation. We have no interest in creating closed ecosystems to capture your organisation's other business functions.
+Pozi is solely focussed on the spatial enablement of your organisation. We have no interest in creating closed ecosystems to capture all of your organisation's business functions.
 
 Pozi's open platform integrates with major vendor platforms and applications to enable maximum interoperability, providing your organisation with autonomy in its strategic technology decisions.
 
@@ -105,7 +105,7 @@ The future of web GIS is driven by live data integrations, web-optimised data fo
 
 Pozi invests for the future by keeping Pozi up-to-date with modern web technologies. We work with open source HTML5 technologies including [React](https://reactjs.org/), [Material UI](https://mui.com/), [OpenLayers 6](https://openlayers.org/), [TurfJS](https://turfjs.org/) and [GeoStyler](https://geostyler.org/) to ensure high performance, compatibility with modern data sources, and a high quality user experience.
 
-IntraMaps is built on top of an outdated version of OpenLayers, which ceased development in 2013. IntraMaps' performance and functionality remain tied to a legacy, unsupported code base, preventing any significant innovation in performance and functionality.
+IntraMaps is built on top of an outdated version of OpenLayers, which ceased development in 2013. IntraMaps' performance and functionality remain tied to a legacy, unsupported code base, affecting its ability to innovate any further.
 
 ### Transparent Pricing
 

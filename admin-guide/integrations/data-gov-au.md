@@ -14,6 +14,11 @@ icon: dot
 
 Data.gov.au is a federal government data portal where Australian government organisations can publish open data.
 
+* [data.gov.au website](https://data.gov.au/)
+* [WFS GetCapabilities](https://data.gov.au/geoserver/wfs?request=GetCapabilities)
+* [WMS GetCapabilities](https://data.gov.au/geoserver/wms?request=GetCapabilities)
+* [GeoServer](https://data.gov.au/geoserver/web/)
+
 ## Open Council Data Standards
 
 The [Open Council Data Toolkit](http://opencouncildata.org/) has recommended standards for commonly published datasets.

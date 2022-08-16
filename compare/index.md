@@ -11,6 +11,8 @@ To help you make the right choice for your organisation, we created these pages.
 
 [!ref text="IntraMaps vs Pozi"](/compare/intramaps/)
 
+[!ref text="ArcGIS Online vs Pozi"](/compare/arcgis-online/)
+
 ## Coming Soon
 
 * Google Maps vs Pozi

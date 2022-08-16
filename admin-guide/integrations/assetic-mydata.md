@@ -1,7 +1,7 @@
 ---
 description: GIS integration for Assetic myData
 icon: dot
-tags: [Pozi Enterprise, URL protocol handler, Hindmarsh Shire Council]
+tags: [Pozi Enterprise, URL protocol handler, Hindmarsh Shire Council, Horsham Rural City Council]
 ---
 
 # Assetic myData

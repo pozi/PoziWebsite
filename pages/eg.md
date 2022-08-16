@@ -82,7 +82,8 @@ https://primer.github.io/octicons/
 
 ### Writing
 
-https://www.gingersoftware.com/products/sentence-rephraser
+* https://developers.google.com/tech-writing
+* https://www.gingersoftware.com/products/sentence-rephraser
 
 ### Structure
 

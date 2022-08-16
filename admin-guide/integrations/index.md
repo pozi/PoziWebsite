@@ -31,7 +31,7 @@ Pozi's open architecture enables it to integrate seamlessly with a wide range of
 * MapQuest
 * Mapscape
 * MapTiler
-* Nearmap
+* [Nearmap](./nearmap/)
 * [Open Office](./open-office/)
 * OpenStreetMap
 * SIX Maps, NSW
