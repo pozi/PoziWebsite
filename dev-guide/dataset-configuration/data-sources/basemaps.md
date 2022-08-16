@@ -140,3 +140,34 @@ Set `"visible": true` for the default basemap.
   ```
 
 ==-
+
+## Comparison
+
+#### HERE
+
+![](./img/here-basemap.png){style="width:305px"}
+
+#### Mapbox
+
+![](./img/mapbox-basemap.png){style="width:305px"}
+
+#### Mapscape
+
+![](./img/mapscape-basemap.png){style="width:305px"}
+
+#### MapTiler
+
+![](./img/maptiler-basemap.png){style="width:305px"}
+
+#### OpenStreetMap
+
+![](./img/osm-basemap.png){style="width:305px"}
+
+#### Vicmap
+
+![](./img/vicmap-basemap.png){style="width:305px"}
+
+#### Vicmap Legacy
+
+![](./img/vicmap-legacy-basemap.png){style="width:305px"}
+
