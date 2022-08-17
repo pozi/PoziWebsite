@@ -26,6 +26,11 @@ title: QGIS Catalogue
 }
 ```
 
+  Note the critical difference between the two URLs:
+  
+  * Catalogue: `request=GetProjectSettings`
+  * Styles: `request=GetStyles`
+
 ==- Example Aerial Imagery Catalogue
 
 ```json
