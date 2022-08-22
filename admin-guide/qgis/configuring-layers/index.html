@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714017230361">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714525816759">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.714017230361" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.714525816759" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.714017230361" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.714525816759" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.714017230361" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.714525816759" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -474,6 +474,46 @@
 <li><strong>label text size</strong>: set to <code v-pre>10 points</code> or greater, and a white <code v-pre>1.8mm</code> buffer for better legibility</li>
 </ul>
 <br/>
+<doc-anchor-target id="virtual-fields">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#virtual-fields">#</doc-anchor-trigger>
+        <span>Virtual Fields</span>
+    </h2>
+</doc-anchor-target>
+<p>You can control how your data appears to users without having to modify your source data by using the Field Calculator function in QGIS to create virtual fields.</p>
+<p>Some use cases include:</p>
+<ul>
+<li>generate a link for a web page or photo by combining a URL string and an ID value from one of the table&#x27;s fields</li>
+<li>combine fields (eg first name plus last name)</li>
+<li>generate distinct values/classes from ranges to simplify styling or filtering (eg convert a date into a year value)</li>
+<li>perform calculations based on one or more existing values</li>
+</ul>
+<doc-anchor-target id="create-link-field">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#create-link-field">#</doc-anchor-trigger>
+        <span>Create Link Field</span>
+    </h3>
+</doc-anchor-target>
+<p>This example shows how to generate a clickable link in Pozi by combining a URL string and an ID value from the data.</p>
+<ol>
+<li>Layer Properties &gt; Fields &gt; click Field Calculator button</li>
+<li>tick <code v-pre>Create virtual field</code></li>
+<li>fill in <code v-pre>Output field name</code> with your new field name</li>
+<li>in <code v-pre>Output field type</code>, select Text (string)</li>
+<li>build expression</li>
+</ol>
+<p>Tips for building expressions:</p>
+<ul>
+<li>pick existing fields from the <code v-pre>Fields and Values</code> list</li>
+<li>use <code v-pre>||</code> to combine strings</li>
+<li>enclose static text with single quotes</li>
+</ul>
+<p><img src="../img/qgis-field-calculator.png" style="width:600px" alt="" /></p>
+<p>The resulting virtual field appears in QGIS and Pozi as if it were standard field.</p>
+<p><img src="../img/qgis-table-with-virtual-field.png" style="width:600px" alt="" /></p>
+<p>If the value in the field is a URL (as in this example), Pozi will display it as a clickable link.</p>
+<p><img src="../img/pozi-info-panel-showing-link-from-virtual-field.png" style="width:300px" alt="" /></p>
+<p>If the value is a URL ending in <code v-pre>.png</code> or <code v-pre>.jpg</code>, Pozi will display a thumbnail of the target image.</p>
 <doc-anchor-target id="enable-layers-for-wfs">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#enable-layers-for-wfs">#</doc-anchor-trigger>
