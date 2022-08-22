@@ -121,6 +121,45 @@ The following items are possible by configuring [virtual fields](https://docs.qg
 
 <br/>
 
+## Virtual Fields
+
+You can control how your data appears to users without having to modify your source data by using the Field Calculator function in QGIS to create virtual fields.
+
+Some use cases include:
+
+* generate a link for a web page or photo by combining a URL string and an ID value from one of the table's fields
+* combine fields (eg first name plus last name)
+* generate distinct values/classes from ranges to simplify styling or filtering (eg convert a date into a year value)
+* perform calculations based on one or more existing values
+
+### Create Link Field
+
+This example shows how to generate a clickable link in Pozi by combining a URL string and an ID value from the data.
+
+1. Layer Properties > Fields > click Field Calculator button
+2. tick `Create virtual field`
+3. fill in `Output field name` with your new field name
+4. in `Output field type`, select Text (string)
+5. build expression
+
+Tips for building expressions:
+
+* pick existing fields from the `Fields and Values` list
+* use `||` to combine strings
+* enclose static text with single quotes
+
+![](img/qgis-field-calculator.png){style="width:600px"}
+
+The resulting virtual field appears in QGIS and Pozi as if it were standard field.
+
+![](img/qgis-table-with-virtual-field.png){style="width:600px"}
+
+If the value in the field is a URL (as in this example), Pozi will display it as a clickable link.
+
+![](img/pozi-info-panel-showing-link-from-virtual-field.png){style="width:300px"}
+
+If the value is a URL ending in `.png` or `.jpg`, Pozi will display a thumbnail of the target image.
+
 ## Enable Layers for WFS
 
 WFS (Web Feature Service) provides users with the ability to directly interact with map features as *vector* objects. When a WFS layer is turned on in Pozi, every feature from the source dataset is loaded in the browser, including all geometries and attributes.
