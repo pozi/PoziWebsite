@@ -102,7 +102,7 @@ It is designed to:
 
 3. DELWP and other approved authorities can pull data from the combined resource on demand in the format of their choosing (complete extract, diffs, M1s, PIQAs, filtered extracts, audits, discrepancy reports, etc)
 
-With DELWP having complete access to the combined authoritative property information from the councils, they have all the information they need to update Vicmap.
+With DELWP having complete access to the combined authoritative property information from every council, they have all the information they need to update Vicmap.
 
 ### Components
 
@@ -182,7 +182,7 @@ No. But we will build it if we can get buy-in from councils and DELWP.
 
 The cloud clearinghouse service is where each council's property information is centralised. The service enables DELWP to obtain daily or weekly snapshots of the combined statewide property data. When DELWP has on-demand access to the complete council property information for the whole state, it doesn't need to re-assemble this information from dozens of spreadsheets.
 
-To update Vicmap, DELWP will compare what changed between snapshots of the council data and then apply those changes to Vicmap. DELWP can continue to use the M1 format internally for supplying the changes to the Vicmap data maintainer. Or DELWP might use the new snapshot approach to come up with a more efficient way to get changes into Vicmap. Either way, councils never need to use M1s again.
+To update Vicmap, DELWP will compare what changed between snapshots of the council data and then apply those changes to Vicmap. DELWP can continue to use the M1 format internally for supplying the changes to the Vicmap data maintainer. Or DELWP may develop a more efficient way to get changes into Vicmap. Either way, councils never need to use M1s again.
 
 ==- Why hasn't this been considered in the past?
 
@@ -235,7 +235,7 @@ Our existing M1 solution, Pozi Connect, has been generating M1s for councils for
 
 ==- How will the system deal with special property attributes such as multi-assessment, access type and distance-based address?
 
-The cloud platform includes an interactive dashboard for councils to manage edits. Validation rules will be configured to flag any updates that would affect (or be affected by) these property attributes. Councils will use the dashboard to approve or amend any flagged updates.
+The cloud platform includes an interactive dashboard for councils to manage edits. Validation rules will be configured to flag any updates that would affect (or be affected by) any multi-assessment, access type and distance-based address attributes. Councils will use the dashboard to approve or amend any flagged updates.
 
 ==- How will the system deal with property boundaries that aren't defined by parcel ownership?
 

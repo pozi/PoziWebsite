@@ -17,6 +17,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## Upcoming
 
+- [ ] enable administrators to configure child datasets within QGIS
 - [ ] don't unhighlight parent object when clicking on a non-spatial child record
 - [ ] obtain layer opacity setting from QGIS Server
 - [ ] prevent Share links from capturing the panel state (unless specified in advanced options)
@@ -35,6 +36,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [x] improved: render null and undefined values as empty string in table view
 - [x] fixed: better remember state of expanded layer groups for sites with a lot of layers
 - [x] fixed: respect field order of source data in QGIS GetFeature queries
+- [x] fixed: horizontal alignment of links in info panel
 
 ### July 2022
 

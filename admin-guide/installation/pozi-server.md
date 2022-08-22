@@ -37,21 +37,21 @@ Prior to installation, ask your network administrator to set up two domain user 
 
 **Support Account**
 
-* example name: `PoziSupport`
-* read-only permissions on GIS file locations
-* trusted read-only user of GIS database and any relevant corporate databases
-* **local admin on server**
-* **access for remote support by Pozi staff**
-* internet access
+- [ ] example name: `PoziSupport`
+- [ ] read-only permissions on GIS file locations
+- [ ] trusted read-only user of GIS database and any relevant corporate databases
+- [ ] **local admin on server**
+- [ ] **access for remote support by Pozi staff**
+- [ ] internet access
 
 **Service Account**
 
-* example name: `PoziService`
-* read-only permissions on GIS file locations
-* trusted read-only user of GIS database and any relevant corporate databases
-* **permissions for running scheduled tasks**
-* **credentials must never expire**
-* internet access (needed to communicate with connect.pozi.com for software updates)
+- [ ] example name: `PoziService`
+- [ ] read-only permissions on GIS file locations
+- [ ] trusted read-only user of GIS database and any relevant corporate databases
+- [ ] **permissions for running scheduled tasks**
+- [ ] **credentials must never expire**
+- [ ] internet access (needed to communicate with connect.pozi.com for software updates)
 
 Provide these credentials to your Pozi support contact, along with any instructions for remote access.
 
