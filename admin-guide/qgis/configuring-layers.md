@@ -22,7 +22,7 @@ Using your [existing QGIS project](managing-qgis-projects), you can add new laye
 
 When adding new file-based layers, use the layer's absolute file path (UNC) to ensure that the service under which the QGIS Server is running can recognise the path.
 
-Often your own user account may have certain drives mapped for convenience, so you might be used to working with data using file paths that refer to a drive letter (eg, `S:\` or `V:\`). However, the domain user account that runs QGIS Server often won't have these drives mapped.
+Typically your own user account will have certain drives mapped for convenience, so you might be used to working with data using file paths that refer to a drive letter (eg, `S:\` or `V:\`). However, the domain user account that runs QGIS Server often won't have these drives mapped.
 
 A UNC path is an absolute path that is recognised by all user accounts, regardless of what drives are mapped on startup. An example UNC path might look like this:
 
@@ -256,6 +256,7 @@ Check the following:
 * If your project is configured as a WFS source, check that the layer is enabled for WFS. Go to Project > Properties > QGIS Server > WFS Capabilities > your layer > Published (tick on)
 * Pozi is only able to display features that have at least one valid/non-null attribute. If any records in your data contain no attributes, populate some values into one of the fields.
 * Ensure the layer has a coordinate reference system set. Go to Layer Properties > Source > Assigned CRS, and pick a projection
+* For file-based layers, ensure that the file path is one that is recognised by the server. See [About layer file paths](#about-layer-file-paths) above.
 
 ==- Layers are not displayed with the styling from QGIS
 
