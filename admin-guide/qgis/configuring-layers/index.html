@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714530389601">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714556573391">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.714530389601" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.714556573391" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.714530389601" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.714556573391" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.714530389601" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.714556573391" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -330,7 +330,7 @@
    <doc-panel id="about-layer-file-paths" collapsed>
        <template #title>About layer file paths</template>
 <p>When adding new file-based layers, use the layer&#x27;s absolute file path (UNC) to ensure that the service under which the QGIS Server is running can recognise the path.</p>
-<p>Often your own user account may have certain drives mapped for convenience, so you might be used to working with data using file paths that refer to a drive letter (eg, <code v-pre>S:\</code> or <code v-pre>V:\</code>). However, the domain user account that runs QGIS Server often won&#x27;t have these drives mapped.</p>
+<p>Typically your own user account will have certain drives mapped for convenience, so you might be used to working with data using file paths that refer to a drive letter (eg, <code v-pre>S:\</code> or <code v-pre>V:\</code>). However, the domain user account that runs QGIS Server often won&#x27;t have these drives mapped.</p>
 <p>A UNC path is an absolute path that is recognised by all user accounts, regardless of what drives are mapped on startup. An example UNC path might look like this:</p>
 <ul>
 <li><code v-pre>\\ad.hrcc.vic.gov.au\shared\GIS\</code></li>
@@ -628,6 +628,7 @@
 <li>If your project is configured as a WFS source, check that the layer is enabled for WFS. Go to Project &gt; Properties &gt; QGIS Server &gt; WFS Capabilities &gt; your layer &gt; Published (tick on)</li>
 <li>Pozi is only able to display features that have at least one valid/non-null attribute. If any records in your data contain no attributes, populate some values into one of the fields.</li>
 <li>Ensure the layer has a coordinate reference system set. Go to Layer Properties &gt; Source &gt; Assigned CRS, and pick a projection</li>
+<li>For file-based layers, ensure that the file path is one that is recognised by the server. See <doc-anchor-trigger to="#about-layer-file-paths">About layer file paths</doc-anchor-trigger> above.</li>
 </ul>
    </doc-panel>
    <doc-panel id="layers-are-not-displayed-with-the-styling-from-qgis" collapsed>
