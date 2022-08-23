@@ -22,9 +22,9 @@ An example link for myData looks like this:
 
 For any PC on which a URL protocol handler has been installed, clicking this link will launch the myData application.
 
-#### QGIS Configuration
++++ QGIS Configuration
 
-Layer Properties > Fields > Field Calculator > Create a new field:
+Layer Properties > Fields > Field Calculator > Create virtual field:
 
 * Output field name: `Application Link`
 * Output field type: `Text (string)`
@@ -34,7 +34,9 @@ Layer Properties > Fields > Field Calculator > Create a new field:
 '<a href="mydata://action=goto&assetCategory=Buildings&assetID=' || Asset_ID || '" target="_blank" >Open in myData</a>'
 ```
 
-#### VRT Configuration
+For more information, see the instructions for working with [virtual fields](../qgis/configuring-layers#virtual-fields).
+
++++ VRT Configuration
 
 An example configuration in the VRT file is as follows:
 
@@ -58,6 +60,8 @@ An example configuration in the VRT file is as follows:
 Some of the HTML link text characters (eg "`<`") require replacement codes (eg "`&#60;`") to avoid breaking the XML format of the VRT file.
 
 !!!
+
++++
 
 ==- Supported Asset Categories
 
@@ -105,7 +109,7 @@ When a user selects an asset feature in the Pozi map, the feature's `Asset_ID` v
 }
 ```
 
-### Pozi Server Configuration
+### VRT Configuration
 
 ```xml hsc_assets_inspections.vrt
 <?xml version="1.0" encoding="UTF-8"?>

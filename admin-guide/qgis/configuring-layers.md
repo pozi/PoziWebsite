@@ -97,7 +97,7 @@ For any layers that are to be made accessible to Pozi as fully interactive *vect
 
 #### Workaround required
 
-The following items are possible by configuring [virtual fields](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/attribute_table.html#virtual-field) in QGIS:
+The following items are possible by configuring [virtual fields](#virtual-fields) in QGIS:
 
 * text expressions in labels (eg, replace all instances of 'UNNAMED' with (blank))
 * categorised styling based on a field name that contains spaces
@@ -125,12 +125,16 @@ The following items are possible by configuring [virtual fields](https://docs.qg
 
 You can control how your data appears to users without having to modify your source data by using the Field Calculator function in QGIS to create virtual fields.
 
-Some use cases include:
+Some examples include:
 
-* generate a link for a web page or photo by combining a URL string and an ID value from one of the table's fields
-* combine fields (eg first name plus last name)
+* generate a link for a web page or photo by combining a URL string and an ID value
+* combine fields (eg first name plus last name, or street address plus locality)
 * generate distinct values/classes from ranges to simplify styling or filtering (eg convert a date into a year value)
 * perform calculations based on one or more existing values
+* generate values based on the feature geometry (eg, length, area)
+* do a find-and-replace within text values to change what is displayed to users
+
+See the QGIS help guide for more information [virtual fields](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/attribute_table.html#virtual-field) and [using the field calculator](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/attribute_table.html#using-the-field-calculator).
 
 ### Create Link Field
 
