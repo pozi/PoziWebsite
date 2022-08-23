@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714525816759">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714530389601">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,12 +35,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.714525816759" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.714530389601" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.714525816759" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.714530389601" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.714525816759" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.714525816759" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.714530389601" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.714530389601" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -333,13 +333,10 @@
 <p>An example link for myData looks like this:</p>
 <p><a href="mydata://action=goto&amp;assetCategory=Buildings&amp;assetID=BD0021">mydata://action=goto&amp;assetCategory=Buildings&amp;assetID=BD0021</a></p>
 <p>For any PC on which a URL protocol handler has been installed, clicking this link will launch the myData application.</p>
-<doc-anchor-target id="qgis-configuration">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#qgis-configuration">#</doc-anchor-trigger>
-        <span>QGIS Configuration</span>
-    </h4>
-</doc-anchor-target>
-<p>Layer Properties &gt; Fields &gt; Field Calculator &gt; Create a new field:</p>
+<doc-tabs>
+<doc-tab id="qgis-configuration">
+<template #title>QGIS Configuration</template>
+<p>Layer Properties &gt; Fields &gt; Field Calculator &gt; Create virtual field:</p>
 <ul>
 <li>Output field name: <code v-pre>Application Link</code></li>
 <li>Output field type: <code v-pre>Text (string)</code></li>
@@ -348,12 +345,10 @@
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">'&lt;a href=&quot;mydata://action=goto&amp;assetCategory=Buildings&amp;assetID=' || Asset_ID || '&quot; target=&quot;_blank&quot; &gt;Open in myData&lt;/a&gt;'</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="vrt-configuration">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#vrt-configuration">#</doc-anchor-trigger>
-        <span>VRT Configuration</span>
-    </h4>
-</doc-anchor-target>
+<p>For more information, see the instructions for working with <a href="../../qgis/configuring-layers/#virtual-fields">virtual fields</a>.</p>
+</doc-tab>
+<doc-tab id="vrt-configuration">
+<template #title>VRT Configuration</template>
 <p>An example configuration in the VRT file is as follows:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-markup"><code v-pre class="language-markup">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
@@ -387,6 +382,8 @@
         </div>
     </div>
 </div>
+</doc-tab>
+</doc-tabs>
 <doc-panel id="supported-asset-categories" collapsed>
     <template #title>Supported Asset Categories</template>
 <ul>
@@ -440,10 +437,10 @@
   }
 }</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="pozi-server-configuration">
+<doc-anchor-target id="vrt-configuration">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#pozi-server-configuration">#</doc-anchor-trigger>
-        <span>Pozi Server Configuration</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#vrt-configuration">#</doc-anchor-trigger>
+        <span>VRT Configuration</span>
     </h3>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>

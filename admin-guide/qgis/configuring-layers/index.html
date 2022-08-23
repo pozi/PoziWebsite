@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714525816759">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714530389601">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.714525816759" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.714530389601" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.714525816759" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.714530389601" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.714525816759" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.714530389601" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -431,7 +431,7 @@
         <span>Workaround required</span>
     </h4>
 </doc-anchor-target>
-<p>The following items are possible by configuring <a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/attribute_table.html#virtual-field">virtual fields</a> in QGIS:</p>
+<p>The following items are possible by configuring <doc-anchor-trigger to="#virtual-fields">virtual fields</doc-anchor-trigger> in QGIS:</p>
 <ul>
 <li>text expressions in labels (eg, replace all instances of &#x27;UNNAMED&#x27; with (blank))</li>
 <li>categorised styling based on a field name that contains spaces</li>
@@ -481,13 +481,16 @@
     </h2>
 </doc-anchor-target>
 <p>You can control how your data appears to users without having to modify your source data by using the Field Calculator function in QGIS to create virtual fields.</p>
-<p>Some use cases include:</p>
+<p>Some examples include:</p>
 <ul>
-<li>generate a link for a web page or photo by combining a URL string and an ID value from one of the table&#x27;s fields</li>
-<li>combine fields (eg first name plus last name)</li>
+<li>generate a link for a web page or photo by combining a URL string and an ID value</li>
+<li>combine fields (eg first name plus last name, or street address plus locality)</li>
 <li>generate distinct values/classes from ranges to simplify styling or filtering (eg convert a date into a year value)</li>
 <li>perform calculations based on one or more existing values</li>
+<li>generate values based on the feature geometry (eg, length, area)</li>
+<li>do a find-and-replace within text values to change what is displayed to users</li>
 </ul>
+<p>See the QGIS help guide for more information <a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/attribute_table.html#virtual-field">virtual fields</a> and <a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/attribute_table.html#using-the-field-calculator">using the field calculator</a>.</p>
 <doc-anchor-target id="create-link-field">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#create-link-field">#</doc-anchor-trigger>
