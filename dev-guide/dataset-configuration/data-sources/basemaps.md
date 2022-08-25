@@ -120,6 +120,21 @@ Set `"visible": true` for the default basemap.
   }
   ```
 
+==- Queensland Globe
+
+  ```json
+  {
+    "title": "Queensland Globe Lite",
+    "group": "Basemap",
+    "type": "XYZ",
+    "config": {
+      "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/Basemaps/QldMap_Lite/MapServer/tile/{z}/{y}/{x}?blankTile=false&browserCache=Map"
+    }
+  }
+```
+
+Basemaps available in `QldMap_Lite`, `QldBase_Pastel` and other variations: https://gisservices.information.qld.gov.au/arcgis/rest/services/Basemaps/.
+
 ==-
 
 ### Vector Tiles

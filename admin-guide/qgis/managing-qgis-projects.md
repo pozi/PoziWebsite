@@ -126,7 +126,14 @@ If the results show any layer that takes more than a fraction of a second to loa
 
 ## Register Project
 
-### Obtain GetProjectSettings URL
+Your new project must be registered in Pozi's central web configuration for users to view the map layers in your Pozi site.
+
+Follow these steps to register your project:
+
+1. obtain the project's `GetProjectSettings` URL
+2. submit a helpdesk ticket to Pozi
+
+### 1. Obtain GetProjectSettings URL
 
 In a text editor, construct a `GetProjectSettings` URL by combining the following:
 
@@ -141,7 +148,7 @@ https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userda
 
 Test this URL by pasting it in your browser and check that you get a valid response that lists the available layers.
 
-### Submit Helpdesk Ticket
+### 2. Submit Helpdesk Ticket
 
 Email support@pozi.com with these details:
 

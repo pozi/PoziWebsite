@@ -7,7 +7,7 @@ order: 90
 
 Pozi's open architecture enables it to integrate seamlessly with a wide range of corporate applications and data service providers.
 
-## Data Sources
+## Applications and Data Sources
 
 * ArcGIS Online
 * [Asset Edge](./asset-edge)
@@ -34,14 +34,30 @@ Pozi's open architecture enables it to integrate seamlessly with a wide range of
 * [Nearmap](./nearmap/)
 * [Open Office](./open-office/)
 * OpenStreetMap
+* Queensland Globe
 * SIX Maps, NSW
 * SynergySoft
 * TechnologyOne OneCouncil
 * TechnologyOne P&R
-
-...and more
+* ...and more
 
 If there's an application you need to integrate with, and you don't see it here, talk to us! We'll give you an idea of how easy it will be to integrate.
+
+## Cloud Applications
+
+Pozi’s simplest form of integration with other cloud apps is through dynamic links.
+
+If your cloud application enables users to launch a session using a URL such as `example.com/?property=12345`, then Pozi can generate a link on-the-fly for any feature that a user clicks on from the map.
+
+[!ref CouncilWise Example](./councilwise)
+
+Pozi similarly enables linking in the other direction, ie, from your cloud application into Pozi via a similar dynamic URL that uses a property id.
+
+For example: https://westwimmera.pozi.com/?propnum=1018753
+
+Pozi also supports other forms of integration based on what the cloud application’s API supports.
+
+Talk to us about your aims for integrating Pozi with your other cloud applications.
 
 ## Identity and Access Management
 

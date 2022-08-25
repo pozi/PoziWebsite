@@ -23,10 +23,11 @@ Use cases:
 
 The child dataset's `url` will contain a request to a dataset, plus a filter parameter for selecting related rows from the source dataset.
 
-There is no special configuration required for the parent dataset in order for it to support a child dataset.
+There is no special configuration required for the parent dataset in order for it to support a child dataset. The parent dataset can come from either an external or internal source.
 
 #### Filters
 
+* WFS from QGIS Server: `EXP_FILTER=property_number in ([PROP_PROPNUM])`
 * WFS OGC: `FILTER=<Filter><PropertyIsEqualTo><PropertyName>` ChildDatasetIDField `</PropertyName><Literal>[` ParentDatasetIDField `]</Literal></PropertyIsEqualTo></Filter>`
 * VRT: `&options=-where|` ChildDatasetIDField ` in ('[` ParentDatasetIDField `]')`
 * WFS CQL

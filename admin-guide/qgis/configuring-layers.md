@@ -264,6 +264,17 @@ Pozi will display layers in a generic style if it cannot process the style that 
 
 Simplify the style in the QGIS project and try again. Replace hatch styles with semi-opaque fills. Replace custom point symbols with one of the standard symbols specified above.
 
+==- Labels are not appearing as expected
+
+There are some limitations for labels on vector features in Pozi:
+
+* labels are always placed in the centre of the feature, regardless of any placement rules
+* complex text expressions may not generate the expected text
+
+The issue with text expressions can be easily overcome by using a [virtual field](#virtual-fields) for the label.
+
+Otherwise, for complete control of how the layer appears in Pozi, consider switching the layer to WMS by disabling WFS for the layer.
+
 ==- Layers are slow to load
 
 **Consider using WMS instead of WFS**
@@ -284,6 +295,6 @@ Use QGIS to determine whether the layer also causes its project file to load slo
 
 Layers must be [enabled for WFS](#enable-layers-for-wfs) in order to access the table view.
 
-If you've already enabled a layer for WFS, and the table view option is still not available, it may be because the layer shares the same name as a layer folder. Rename the layer and/or folder so they are unique.
+If you've already enabled a layer for WFS, and the table view option is still not available, it may be because the layer shares the same name as a layer folder. Rename the layer or folder so they are unique.
 
 ==-
