@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714556573391">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714732064162">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.714556573391" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.714732064162" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.714556573391" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.714732064162" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.714556573391" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.714732064162" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -636,6 +636,16 @@
 <p>Pozi will display layers in a generic style if it cannot process the style that was configured in QGIS.</p>
 <p>Simplify the style in the QGIS project and try again. Replace hatch styles with semi-opaque fills. Replace custom point symbols with one of the standard symbols specified above.</p>
    </doc-panel>
+   <doc-panel id="labels-are-not-appearing-as-expected" collapsed>
+       <template #title>Labels are not appearing as expected</template>
+<p>There are some limitations for labels on vector features in Pozi:</p>
+<ul>
+<li>labels are always placed in the centre of the feature, regardless of any placement rules</li>
+<li>complex text expressions may not generate the expected text</li>
+</ul>
+<p>The issue with text expressions can be easily overcome by using a <doc-anchor-trigger to="#virtual-fields">virtual field</doc-anchor-trigger> for the label.</p>
+<p>Otherwise, for complete control of how the layer appears in Pozi, consider switching the layer to WMS by disabling WFS for the layer.</p>
+   </doc-panel>
    <doc-panel id="layers-are-slow-to-load" collapsed>
        <template #title>Layers are slow to load</template>
 <p><strong>Consider using WMS instead of WFS</strong></p>
@@ -666,7 +676,7 @@
    <doc-panel id="can-t-see-the-layer-option-for-switching-on-the-table-view" collapsed>
        <template #title>Can&#x27;t see the layer option for switching on the table view</template>
 <p>Layers must be <doc-anchor-trigger to="#enable-layers-for-wfs">enabled for WFS</doc-anchor-trigger> in order to access the table view.</p>
-<p>If you&#x27;ve already enabled a layer for WFS, and the table view option is still not available, it may be because the layer shares the same name as a layer folder. Rename the layer and/or folder so they are unique.</p>
+<p>If you&#x27;ve already enabled a layer for WFS, and the table view option is still not available, it may be because the layer shares the same name as a layer folder. Rename the layer or folder so they are unique.</p>
    </doc-panel>
 </doc-panels>
 

@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714556573391">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714732064162">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -38,11 +38,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=2.4.0.714556573391" rel="stylesheet" />
+    <link href="../resources/css/retype.css?v=2.4.0.714732064162" rel="stylesheet" />
 
-    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.714556573391" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.714732064162" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.714556573391" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.714732064162" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -332,7 +332,7 @@
 </figure>
 </p>
 <p>As developers of a cloud product, you&#x27;d think we&#x27;d be biased towards moving your organisation&#x27;s corporate GIS data to the cloud. After all, Pozi is a cloud-native app that excels in the online world. It works seamlessly with web APIs to connect with live, trusted data sources across government agencies and other providers.</p>
-<p>But we recognise that your most important users and datasets and systems often live and thrive in <strong>local ecosystems</strong> such as your organisation&#x27;s local network or virtual private cloud. That&#x27;s why we developed Pozi&#x27;s <em>hybrid cloud</em> architecture, to happily integrate with those critical local resources.</p>
+<p>But we recognise that your most important users and datasets and systems live and thrive in <strong>local ecosystems</strong> such as your organisation&#x27;s local network or private cloud. That&#x27;s why we developed Pozi&#x27;s <em>hybrid cloud</em> architecture, to happily integrate with those critical local and remote resources.</p>
 <p>Without leaving the Pozi app, your most demanding users have access to live trusted data from internal and external sources. It&#x27;s the best of both worlds!</p>
 <p><em><strong>So what does it mean for an organisation that relies heavily on local data integrations when one of its software vendors announces that everything will need to &quot;move to the cloud&quot;?</strong></em></p>
 <p>What&#x27;s involved, and who benefits?</p>
@@ -355,16 +355,16 @@
     </h3>
 </doc-anchor-target>
 <p><strong>... your users are local</strong></p>
-<p>Your most critical users are the authorised users on your organisation&#x27;s network or private cloud. They want fast, direct access to up-to-the-minute data; not out-of-date copies.</p>
+<p>Your most critical users are the authorised users on your organisation&#x27;s network or private cloud. They want fast, direct access to up-to-the-minute data; not out-of-date, remote copies.</p>
 <p><strong>... the applications you integrate with are local</strong></p>
-<p>Your organisation&#x27;s corporate applications are the source of truth for vital business processes. But when your GIS viewer exists only in a closed, cloud-only environment, it cannot link directly to these applications. You&#x27;ll need to start taking snapshot copies of your internal databases and upload to the cloud in order for your users to view them in your GIS.</p>
+<p>Your organisation&#x27;s corporate applications are the source of truth for vital business processes. But when your GIS viewer exists only in a closed, cloud-only environment, it can&#x27;t link directly to these applications. You&#x27;ll need to start taking snapshot copies of your internal databases and upload to the cloud in order for your users to view them in your GIS.</p>
 <p><strong>... your GIS data is local</strong></p>
 <p>Your organisation&#x27;s spatial knowledge consists of datasets maintained by departments and individuals in your organisation or collected from external parties and data capture projects, sometimes over many years or decades.</p>
-<p>Even a shapefile or spreadsheet in a shared folder can form an important part of your organisation&#x27;s geospatial knowledge.</p>
-<p>Moving to the cloud means compiling and sending all of this to an off-site host.</p>
-<p>If you&#x27;re required to migrate your organisation&#x27;s data to an external host, your data becomes available only to a single application (theirs) and excluded from any services that they don&#x27;t explicitly allow. Your geospatial library has become content for your host&#x27;s application and not a shared resource for your organisation.</p>
+<p>It exists in local databases that already link directly to your other corporate data.</p>
+<p>Even a shapefile or spreadsheet in a network folder can form an important part of your organisation&#x27;s geospatial knowledge.</p>
+<p>Moving to the cloud means packaging it all up and sending it an off-site host. Your data becomes available only to a single application (the vendor&#x27;s) and excluded from any services that they don&#x27;t explicitly allow. Your geospatial library is no longer a shared resource for your organisation.</p>
 <p><strong>... your workflows are local</strong></p>
-<p>You&#x27;ve built a foundation of automated workflows within your GIS library to suit the needs of your organisation. These might include views, triggers, scripts, live joins, API connections and data exports. These will not be permitted to run on your host&#x27;s servers.</p>
+<p>You&#x27;ve built a foundation of automated workflows within your GIS library to suit the needs of your organisation. These might include database views and triggers, scripts, live data joins, imports from data vendors, API connections and data exports. These will not be permitted to run on your host&#x27;s servers.</p>
 <doc-anchor-target id="evaluate-the-cost-of-going-cloud">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#evaluate-the-cost-of-going-cloud">#</doc-anchor-trigger>
@@ -377,7 +377,7 @@
         <span>Legitimate reasons to go cloud</span>
     </h4>
 </doc-anchor-target>
-<p>Ask your vendor if your organisation gains any of the usual advantages of moving to the cloud:</p>
+<p>Ask your vendor if your organisation gains any of the advantages of moving to the cloud:</p>
 <ul>
 <li>will it reduce costs?</li>
 <li>will it enable easier integrations with your other corporate applications?</li>
@@ -388,7 +388,7 @@
 <li>will it require your organisation&#x27;s corporate data to be replicated offsite?</li>
 <li>will it restrict integrations for your other GIS software and corporate systems?</li>
 <li>will it prevent the use of basic database functionality such as triggers and views?</li>
-<li>will it make it harder for your GIS to connect directly with data from external data providers?</li>
+<li>will it make it harder for your GIS to connect directly with APIs and data from external data providers?</li>
 <li>will it prevent your organisation using third party support providers?</li>
 </ul>
 <p>--</p>
@@ -398,10 +398,11 @@
         <span>Where to from here?</span>
     </h2>
 </doc-anchor-target>
-<p>At Pozi, we&#x27;re enabling organisations to leverage their existing infrastructure to gain greater control to integrate directly with corporate spatial and non-spatial data.</p>
+<p>At Pozi, we&#x27;re enabling organisations to leverage their existing infrastructure (or private cloud) to gain greater control over their data and user experience.</p>
 <p>Pozi&#x27;s open architecture empowers organisations to integrate their spatial and other corporate data to suit their unique requirements, and ensures maximum flexibility and control.</p>
-<p>Pozi&#x27;s new QGIS integration enables organisations to manage their GIS using a familiar powerful tool.</p>
+<p>Pozi&#x27;s new QGIS integration enables GIS Administrators to manage their corporate GIS using the power of QGIS.</p>
 <p>Talk to us before committing your organisation to a cloud migration you didn&#x27;t ask for.</p>
+<p>We won&#x27;t ask you to sign multi-year contracts</p>
 <hr />
 <p><em>Photo by <a href="https://www.pexels.com/photo/body-of-water-during-daytime-160320/">Gülizar Şener</a></em></p>
 

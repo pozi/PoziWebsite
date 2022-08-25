@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714556573391">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714732064162">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.714556573391" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.714732064162" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.714556573391" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.714732064162" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.714556573391" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.714732064162" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -463,10 +463,16 @@
         <span>Register Project</span>
     </h2>
 </doc-anchor-target>
-<doc-anchor-target id="obtain-getprojectsettings-url">
+<p>Your new project must be registered in Pozi&#x27;s central web configuration for users to view the map layers in your Pozi site.</p>
+<p>Follow these steps to register your project:</p>
+<ol>
+<li>obtain the project&#x27;s <code v-pre>GetProjectSettings</code> URL</li>
+<li>submit a helpdesk ticket to Pozi</li>
+</ol>
+<doc-anchor-target id="1-obtain-getprojectsettings-url">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#obtain-getprojectsettings-url">#</doc-anchor-trigger>
-        <span>Obtain GetProjectSettings URL</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-obtain-getprojectsettings-url">#</doc-anchor-trigger>
+        <span>1. Obtain GetProjectSettings URL</span>
     </h3>
 </doc-anchor-target>
 <p>In a text editor, construct a <code v-pre>GetProjectSettings</code> URL by combining the following:</p>
@@ -478,10 +484,10 @@
 <p>Example <code v-pre>GetProjectSettings</code> URL:</p>
 <p><a href="https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs&amp;service=WMS&amp;request=GetProjectSettings">https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs&amp;service=WMS&amp;request=GetProjectSettings</a></p>
 <p>Test this URL by pasting it in your browser and check that you get a valid response that lists the available layers.</p>
-<doc-anchor-target id="submit-helpdesk-ticket">
+<doc-anchor-target id="2-submit-helpdesk-ticket">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#submit-helpdesk-ticket">#</doc-anchor-trigger>
-        <span>Submit Helpdesk Ticket</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-submit-helpdesk-ticket">#</doc-anchor-trigger>
+        <span>2. Submit Helpdesk Ticket</span>
     </h3>
 </doc-anchor-target>
 <p>Email <a href="mailto:support@pozi.com">support@pozi.com</a> with these details:</p>

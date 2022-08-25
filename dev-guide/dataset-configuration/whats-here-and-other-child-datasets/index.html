@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714556573391">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714732064162">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.714556573391" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.714732064162" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.714556573391" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.714732064162" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.714556573391" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.714556573391" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.714732064162" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.714732064162" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -338,7 +338,7 @@
 <li>photos</li>
 </ul>
 <p>The child dataset&#x27;s <code v-pre>url</code> will contain a request to a dataset, plus a filter parameter for selecting related rows from the source dataset.</p>
-<p>There is no special configuration required for the parent dataset in order for it to support a child dataset.</p>
+<p>There is no special configuration required for the parent dataset in order for it to support a child dataset. The parent dataset can come from either an external or internal source.</p>
 <doc-anchor-target id="filters">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#filters">#</doc-anchor-trigger>
@@ -346,6 +346,7 @@
     </h4>
 </doc-anchor-target>
 <ul>
+<li>WFS from QGIS Server: <code v-pre>EXP_FILTER=property_number in ([PROP_PROPNUM])</code></li>
 <li>WFS OGC: <code v-pre>FILTER=&lt;Filter&gt;&lt;PropertyIsEqualTo&gt;&lt;PropertyName&gt;</code> ChildDatasetIDField <code v-pre>&lt;/PropertyName&gt;&lt;Literal&gt;[</code> ParentDatasetIDField <code v-pre>]&lt;/Literal&gt;&lt;/PropertyIsEqualTo&gt;&lt;/Filter&gt;</code></li>
 <li>VRT: <code v-pre>&amp;options=-where|</code> ChildDatasetIDField <code v-pre> in ('[</code> ParentDatasetIDField <code v-pre>]')</code></li>
 <li>WFS CQL</li>
