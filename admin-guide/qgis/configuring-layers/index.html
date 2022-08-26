@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714732064162">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714792596967">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.714732064162" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.714792596967" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.714732064162" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.714792596967" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.714732064162" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.714792596967" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -345,6 +345,12 @@
 <p>Similarly, layer folder names must also be unique, and must not share a name with any layer within a site.</p>
    </doc-panel>
 </doc-panels>
+<p>Some common layer configuration tasks you can do in QGIS include:</p>
+<ul>
+<li><a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#source-properties">change layer name</a></li>
+<li><a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#query-builder">filter data</a></li>
+<li><a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#fields-properties">modify fields</a></li>
+</ul>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
     <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
@@ -363,13 +369,6 @@
         </div>
     </div>
 </div>
-<p>Some common layer configuration tasks you can do in QGIS include:</p>
-<ul>
-<li><a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#source-properties">change layer name</a></li>
-<li><a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#query-builder">filter data</a></li>
-<li><a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#fields-properties">modify fields</a></li>
-</ul>
-<br/>
 <doc-anchor-target id="styling-layers">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#styling-layers">#</doc-anchor-trigger>
@@ -561,6 +560,7 @@
         <span>Enable WFS</span>
     </h3>
 </doc-anchor-target>
+<p>Once you&#x27;ve weighed up the pros and cons of using WFS for your layer, you can enable it as follows:</p>
 <ol>
 <li>Project &gt; Properties &gt; QGIS Server</li>
 <li><code v-pre>WFS capabilities &gt; Published</code>: tick on for each layer to be published, or click <code v-pre>Select All</code> if all layers are required</li>
@@ -608,7 +608,7 @@
         <span>Table File Maintenance</span>
     </h2>
 </doc-anchor-target>
-<p>If you need to move, rename or delete a table, first remove the layer from any QGIS project to which the layer is registered, then save the QGIS project.</p>
+<p>If you need to move, rename or delete a source dataset from its file location or database, first remove the layer from any QGIS project to which the layer is registered, then save the QGIS project.</p>
 <p>You may then attempt to make any changes to the table file(s). If Windows prevents you from making any changes, stop the IIS service that is locking the files.</p>
 <p>Windows &gt; IIS &gt; (select server) &gt; Application Pools &gt; PoziQgisServer &gt; Stop</p>
 <p>You may also need to stop any other services that start with <code v-pre>PoziQgisServer</code>.</p>
@@ -650,7 +650,7 @@
        <template #title>Layers are slow to load</template>
 <p><strong>Consider using WMS instead of WFS</strong></p>
 <p>If a layer is being served via WFS, the load time will be proportional to how large the source dataset is. Layers with a large number of records or complex shapes may not be suitable for loading as a vector layer in the browser.</p>
-<p>Consider disabling WFS for your layer. Pozi will instead use WMS, enabling it to render layers efficiently for the user&#x27;s current map view without loading the entire dataset.</p>
+<p>Consider using WMS for your layer. If you disable WFS, Pozi will instead use WMS, enabling it to render layers efficiently for the user&#x27;s current map view without loading the entire dataset.</p>
 <p><strong>Check source data</strong></p>
 <p>Use QGIS to determine whether the layer also causes its project file to load slowly. Observe the progress bar at the bottom to see if any layers are taking more than a fraction of a second to load in QGIS. If it appears that a layer is taking longer, check the source data. If it&#x27;s from a database view, check that any join fields are properly indexed.</p>
 <p><figure class="content-center">
@@ -658,6 +658,24 @@
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2">Testing Load Performance</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>../managing-qgis-projects/#test-project-load-performance</span>
+    </div>
+    <a href="../managing-qgis-projects/#test-project-load-performance" class="absolute block inset-0"></a>
+</div>
+</p>
+   </doc-panel>
+   <doc-panel id="pozi-takes-a-long-time-to-start" collapsed>
+       <template #title>Pozi takes a long time to start</template>
+<p>Use QGIS to determine identify any slow-loading projects. If one or more of your projects takes significantly longer to load than others, then use the QGIS Debugging tool to narrow down which layers are slowing down the project load.</p>
 <p>
 <div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
     <div class="flex items-center text-blue-500 dark:text-blue-400">
