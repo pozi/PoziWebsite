@@ -120,6 +120,8 @@ Expand the entry called `Reading map layers` in the profiler tree to see all of 
 
 If the results show any layer that takes more than a fraction of a second to load, there may be an issue with the network or database that is worth investigating.
 
+Some file formats can be less efficient than others for a project to load. Large GeoJSON files can be significantly slower to load than a their equivalent SHP, GeoPackage or TAB version, so consider using one of these faster formats.
+
 [(via GIS StackExchange)](https://gis.stackexchange.com/a/414884)
 
 <br/>

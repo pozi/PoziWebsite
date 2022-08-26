@@ -41,6 +41,12 @@ Similarly, layer folder names must also be unique, and must not share a name wit
 
 ==-
 
+Some common layer configuration tasks you can do in QGIS include:
+
+* [change layer name](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#source-properties)
+* [filter data](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#query-builder)
+* [modify fields](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#fields-properties)
+
 !!!warning
 
 Some changes may not be available immediately in Pozi. If you encounter an issue such as a recently added or renamed layer not loading, restart the IIS application pool on the server.
@@ -50,14 +56,6 @@ Windows > IIS > (select server) > Application Pools > PoziQgisServer > Recycle
 ![](./img/iis-application-pool-recycle.png){style="width:400px"}
 
 !!!
-
-Some common layer configuration tasks you can do in QGIS include:
-
-* [change layer name](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#source-properties)
-* [filter data](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#query-builder)
-* [modify fields](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#fields-properties)
-
-<br/>
 
 ## Styling Layers
 
@@ -188,6 +186,8 @@ As a guideline, enable WFS only for layers with fewer than 5-10K features, or ev
 
 ### Enable WFS
 
+Once you've weighed up the pros and cons of using WFS for your layer, you can enable it as follows:
+
 1. Project > Properties > QGIS Server
 2. `WFS capabilities > Published`: tick on for each layer to be published, or click `Select All` if all layers are required
 3. OK
@@ -235,7 +235,7 @@ Project > Properties > Data Sources > Identifiable > untick to disable layer sel
 
 ## Table File Maintenance
 
-If you need to move, rename or delete a table, first remove the layer from any QGIS project to which the layer is registered, then save the QGIS project.
+If you need to move, rename or delete a source dataset from its file location or database, first remove the layer from any QGIS project to which the layer is registered, then save the QGIS project.
 
 You may then attempt to make any changes to the table file(s). If Windows prevents you from making any changes, stop the IIS service that is locking the files.
 
@@ -281,7 +281,7 @@ Otherwise, for complete control of how the layer appears in Pozi, consider switc
 
 If a layer is being served via WFS, the load time will be proportional to how large the source dataset is. Layers with a large number of records or complex shapes may not be suitable for loading as a vector layer in the browser.
 
-Consider disabling WFS for your layer. Pozi will instead use WMS, enabling it to render layers efficiently for the user's current map view without loading the entire dataset.
+Consider using WMS for your layer. If you disable WFS, Pozi will instead use WMS, enabling it to render layers efficiently for the user's current map view without loading the entire dataset.
 
 **Check source data**
 
@@ -289,7 +289,13 @@ Use QGIS to determine whether the layer also causes its project file to load slo
 
 ![](img/qgis-project-loading-status.png)
 
-[!ref text="Testing Load Performance"](/admin-guide/qgis/managing-qgis-projects#test-project-load-performance)
+[!ref text="Testing Load Performance"](../qgis/managing-qgis-projects#test-project-load-performance)
+
+==- Pozi takes a long time to start
+
+Use QGIS to determine identify any slow-loading projects. If one or more of your projects takes significantly longer to load than others, then use the QGIS Debugging tool to narrow down which layers are slowing down the project load.
+
+[!ref text="Testing Load Performance"](../qgis/managing-qgis-projects#test-project-load-performance)
 
 ==- Can't see the layer option for switching on the table view
 
