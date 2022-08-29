@@ -132,10 +132,12 @@ WMS GetMap requests can be made with an `sld_body` parameter that contains the S
 
 #### Switching from external SLD to embedded SLD:
 
-1. download the existing external SLD and open in text editor (VSCode or NotePad++ recommended)
-2. find and replace double quotes with single quotes
-3. find and replace double spaces with blank
-4. find and replace line returns with blank
+1. open SLD in text editor (VSCode or NotePad++ recommended)
+2. ensure `<NamedLayer><se:Name>` is populated with the name that the server uses to identify the layer (eg the ckan id in data.gov.au)
+3. ensure any field names that specified in `<ogc:PropertyName>` settings match the case expected by the server (eg must be lower case for data.gov.au)
+4. find and replace double quotes with single quotes
+5. find and replace double spaces with blank
+6. find and replace line returns (use `\n` in 'Extended' search mode in Notepad++) with blank
 
 The resulting text is a single line of XML.
 
@@ -145,6 +147,7 @@ Example configurations:
 
 * [Glen Eira Street Trees](https://github.com/pozi/PoziAppConfig/commit/c2f9bf6b3eb9998b27d85df266ebf48fc4ff80c5#diff-5a45ada4e9f3d1ed3db20f652cabe746c1767390718cf94228bc25a7576c9f7dL776-R776)
 * [Mitchell Contours](https://github.com/pozi/PoziAppConfig/commit/d95812fd4691e86e0fac3de91d0e3ad5fbb7683b#diff-216128510370c47687518818e49f4d63083c96ba0b3686031cea3cc7dc0d98feL3214-R3234)
+* Southern Grampians Waste Water Land Capability Hazard Classification
 
 ### CQL Filter
 
@@ -161,6 +164,38 @@ Example configurations:
       "LAYERS": "CROWNLAND_PLM25",
       "FORMAT": "image/GIF",
       "CQL_FILTER": "MNG_GROUP='COM Council'"
+    }
+  }
+}
+```
+
+==-
+
+### Selectability
+
+WMS layers are not selectable/queryable by default. (However there is [a plan](https://trello.com/c/NuPIDgSL/18-enable-wms-layers-getfeatureinfo-results-to-be-displayed-in-info-panel-by-default) to change Pozi's default behaviour for WMS layers.)
+
+To make WMS layers selectable, add `"parent": "Whats Here"` to the layer's configuration.
+
+```json
+  "parent": "Whats Here",
+```
+
+Also, if a WMS layer doesn't have a specified style, it may need an additional `query_layers` parameter to enable Pozi to fetch attributes for the layer.
+
+==- Layer without specified style
+
+```json
+{
+  "title": "Waste Water Land Capability Hazard Classification",
+  "group": "Land Capability",
+  "type": "TileWMS",
+  "parent": "Whats Here",
+  "config": {
+    "url": "https://data.gov.au/geoserver/wms",
+    "params": {
+      "layers": "ckan_088d79af_df5a_4bfe_87ce_6c7236a8216c",
+      "query_layers": "ckan_088d79af_df5a_4bfe_87ce_6c7236a8216c"
     }
   }
 }
