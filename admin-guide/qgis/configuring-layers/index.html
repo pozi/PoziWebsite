@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.715048956467">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.715064243445">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.715048956467" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.715064243445" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.715048956467" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.715064243445" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.715048956467" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.715064243445" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -491,11 +491,40 @@
 <li><strong>label text size</strong>: set to <code v-pre>10 points</code> or greater, and a white <code v-pre>1.8mm</code> buffer for better legibility</li>
 </ul>
 <br/>
-<doc-anchor-target id="virtual-fields">
+<doc-anchor-target id="managing-data-fields">
     <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#managing-data-fields">#</doc-anchor-trigger>
+        <span>Managing Data Fields</span>
+    </h2>
+</doc-anchor-target>
+<p>QGIS enables you to control what users see of the data without altering the source data.</p>
+<doc-anchor-target id="rename-fields">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#rename-fields">#</doc-anchor-trigger>
+        <span>Rename Fields</span>
+    </h3>
+</doc-anchor-target>
+<p>You can make field names more user-friendly by giving your field names an <em>alias</em>.</p>
+<p>Layer Properties &gt; Attributes Form &gt; select field &gt; Alias</p>
+<p><img src="../img/qgis-field-alias.png" style="width:600px" alt="" /></p>
+<doc-anchor-target id="hide-fields">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#hide-fields">#</doc-anchor-trigger>
+        <span>Hide Fields</span>
+    </h3>
+</doc-anchor-target>
+<p>You can prevent fields from the source data being displayed in Pozi&#x27;s info panel.</p>
+<p>Layer Properties &gt; Fields &gt; select field &gt; Configuration</p>
+<ul>
+<li>tick &#x27;Do not expose via WMS&#x27;</li>
+<li>tick &#x27;Do not expose via WFS&#x27;</li>
+</ul>
+<p><img src="../img/qgis-hide-fields.png" style="width:600px" alt="" /></p>
+<doc-anchor-target id="virtual-fields">
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#virtual-fields">#</doc-anchor-trigger>
         <span>Virtual Fields</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <p>You can control how your data appears to users without having to modify your source data by using the Field Calculator function in QGIS to create virtual fields.</p>
 <p>Some examples include:</p>
@@ -509,10 +538,10 @@
 </ul>
 <p>See the QGIS help guide for more information <a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/attribute_table.html#virtual-field">virtual fields</a> and <a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/attribute_table.html#using-the-field-calculator">using the field calculator</a>.</p>
 <doc-anchor-target id="create-link-field">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#create-link-field">#</doc-anchor-trigger>
         <span>Create Link Field</span>
-    </h3>
+    </h4>
 </doc-anchor-target>
 <p>This example shows how to generate a clickable link in Pozi by combining a URL string and an ID value from the data.</p>
 <ol>
