@@ -17,7 +17,7 @@ Settings > Options > General > Project Files
 
 ## Panels and Toolbars
 
-Right-click on any toolbar handle to reveal tickboxes for adding and removing panels and toolbars.
+Right-click on any toolbar to reveal tickboxes for adding and removing panels and toolbars.
 
 ![](./img/qgis-panel-and-toolbar-setup.png){style="width:600px"}
 
