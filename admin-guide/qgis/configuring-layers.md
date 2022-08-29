@@ -125,7 +125,29 @@ The following items are possible by configuring [virtual fields](#virtual-fields
 
 <br/>
 
-## Virtual Fields
+## Managing Data Fields
+
+QGIS enables you to control what users see of the data without altering the source data.
+### Rename Fields
+
+You can make field names more user-friendly by giving your field names an *alias*.
+
+Layer Properties > Attributes Form > select field > Alias
+
+![](./img/qgis-field-alias.png){style="width:600px"}
+
+### Hide Fields
+
+You can prevent fields from the source data being displayed in Pozi's info panel.
+
+Layer Properties > Fields > select field > Configuration
+
+* tick 'Do not expose via WMS'
+* tick 'Do not expose via WFS'
+
+![](./img/qgis-hide-fields.png){style="width:600px"}
+
+### Virtual Fields
 
 You can control how your data appears to users without having to modify your source data by using the Field Calculator function in QGIS to create virtual fields.
 
@@ -140,7 +162,7 @@ Some examples include:
 
 See the QGIS help guide for more information [virtual fields](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/attribute_table.html#virtual-field) and [using the field calculator](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/attribute_table.html#using-the-field-calculator).
 
-### Create Link Field
+#### Create Link Field
 
 This example shows how to generate a clickable link in Pozi by combining a URL string and an ID value from the data.
 
