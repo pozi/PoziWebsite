@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714792596967">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.715048956467">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.714792596967" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.715048956467" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.714792596967" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.715048956467" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.714792596967" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../../resources/js/prism.js?v=2.4.0.714792596967" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.715048956467" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../../resources/js/prism.js?v=2.4.0.715048956467" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -473,10 +473,12 @@
     </h4>
 </doc-anchor-target>
 <ol>
-<li>download the existing external SLD and open in text editor (VSCode or NotePad++ recommended)</li>
+<li>open SLD in text editor (VSCode or NotePad++ recommended)</li>
+<li>ensure <code v-pre>&lt;NamedLayer&gt;&lt;se:Name&gt;</code> is populated with the name that the server uses to identify the layer (eg the ckan id in data.gov.au)</li>
+<li>ensure any field names that specified in <code v-pre>&lt;ogc:PropertyName&gt;</code> settings match the case expected by the server (eg must be lower case for data.gov.au)</li>
 <li>find and replace double quotes with single quotes</li>
 <li>find and replace double spaces with blank</li>
-<li>find and replace line returns with blank</li>
+<li>find and replace line returns (use <code v-pre>\n</code> in &#x27;Extended&#x27; search mode in Notepad++) with blank</li>
 </ol>
 <p>The resulting text is a single line of XML.</p>
 <p>In the dataset config, replace the existing <code v-pre>sld</code> parameter with a new <code v-pre>sld_body</code> parameter, using the line of XML as the value.</p>
@@ -484,6 +486,7 @@
 <ul>
 <li><a href="https://github.com/pozi/PoziAppConfig/commit/c2f9bf6b3eb9998b27d85df266ebf48fc4ff80c5#diff-5a45ada4e9f3d1ed3db20f652cabe746c1767390718cf94228bc25a7576c9f7dL776-R776">Glen Eira Street Trees</a></li>
 <li><a href="https://github.com/pozi/PoziAppConfig/commit/d95812fd4691e86e0fac3de91d0e3ad5fbb7683b#diff-216128510370c47687518818e49f4d63083c96ba0b3686031cea3cc7dc0d98feL3214-R3234">Mitchell Contours</a></li>
+<li>Southern Grampians Waste Water Land Capability Hazard Classification</li>
 </ul>
 <doc-anchor-target id="cql-filter">
     <h3>
@@ -504,6 +507,36 @@
       &quot;LAYERS&quot;: &quot;CROWNLAND_PLM25&quot;,
       &quot;FORMAT&quot;: &quot;image/GIF&quot;,
       &quot;CQL_FILTER&quot;: &quot;MNG_GROUP='COM Council'&quot;
+    }
+  }
+}</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-anchor-target id="selectability">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#selectability">#</doc-anchor-trigger>
+        <span>Selectability</span>
+    </h3>
+</doc-anchor-target>
+<p>WMS layers are not selectable/queryable by default. (However there is <a href="https://trello.com/c/NuPIDgSL/18-enable-wms-layers-getfeatureinfo-results-to-be-displayed-in-info-panel-by-default">a plan</a> to change Pozi&#x27;s default behaviour for WMS layers.)</p>
+<p>To make WMS layers selectable, add <code v-pre>&quot;parent&quot;: &quot;Whats Here&quot;</code> to the layer&#x27;s configuration.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">  &quot;parent&quot;: &quot;Whats Here&quot;,</code></pre>
+</doc-codeblock></div>
+<p>Also, if a WMS layer doesn&#x27;t have a specified style, it may need an additional <code v-pre>query_layers</code> parameter to enable Pozi to fetch attributes for the layer.</p>
+<doc-panel id="layer-without-specified-style" collapsed>
+    <template #title>Layer without specified style</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;title&quot;: &quot;Waste Water Land Capability Hazard Classification&quot;,
+  &quot;group&quot;: &quot;Land Capability&quot;,
+  &quot;type&quot;: &quot;TileWMS&quot;,
+  &quot;parent&quot;: &quot;Whats Here&quot;,
+  &quot;config&quot;: {
+    &quot;url&quot;: &quot;https://data.gov.au/geoserver/wms&quot;,
+    &quot;params&quot;: {
+      &quot;layers&quot;: &quot;ckan_088d79af_df5a_4bfe_87ce_6c7236a8216c&quot;,
+      &quot;query_layers&quot;: &quot;ckan_088d79af_df5a_4bfe_87ce_6c7236a8216c&quot;
     }
   }
 }</code></pre>
