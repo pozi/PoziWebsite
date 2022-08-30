@@ -5,7 +5,7 @@ order: 100
 
 # Pozi Server
 
-*Geospatial API for your on-premise datasets*
+*Geospatial API for your local data*
 
 ## About
 
@@ -24,8 +24,8 @@ The Pozi web application aggregates internal and external data in the browser in
 
 Pozi Server is configured on your network with DNS rules that enable local users to access its API via a dedicated URL (typically `[yourservername].pozi.com`).
 
-* when a user inside the client's network uses Pozi, any request to `[yourservername].pozi.com` is directed by the local DNS rules to the internal server on which Pozi Connect Server is installed, and Pozi Connect Server responds with the requested data
-* when a user outside the organisation's network uses Pozi, any request to `[yourservername].pozi.com` quietly fails because it's not a valid endpoint on the internet (however any data from any public data sources will load in the app as normal)
+* when a user *inside* the client's network uses Pozi, any request to `[yourservername].pozi.com` is directed by the local DNS rules to the internal server on which Pozi Connect Server is installed, and Pozi Connect Server responds with the requested data
+* when a user *outside* the organisation's network uses Pozi, any request to `[yourservername].pozi.com` quietly fails because it's not a valid endpoint on the internet (however any data from any public data sources will load in the app as normal)
 
 IT managers maintain control over internal user access to Pozi Connect Server by configuring the network DNS and firewall rules. For example, access to Pozi Server can be restricted for specific users or groups of users with a group policy or firewall rules that blacklists the `[yourservername].pozi.com` endpoint
 
@@ -137,7 +137,7 @@ During the installation, the server/PC's `hosts` file is automatically updated t
 127.0.0.1 local.pozi.com
 ```
 
-This enables the local user to use the local Pozi Server instance as a web server. This will be useful for a standalone implementation or for demonstration purposes.
+This enables the local user to use the local Pozi Server instance as a web server. This is useful for a standalone implementation or for demonstration purposes.
 
 ### For Network Users
 
@@ -151,9 +151,9 @@ If your network setup uses OpenVPN, you may need to add the following line to th
 
 `dhcp-option DOMAIN [yourservername].pozi.com`
 
-To confirm the DNS is configured correctly, open a command prompt window and ping local.pozi.com. It should return a reply from the server on which Pozi Server is installed.
+To confirm the DNS is configured correctly, open a command prompt window and ping `[yourservername].pozi.com`. It should return a reply from the server on which Pozi Server is installed.
 
-When this is established, you can remove the `local.pozi.com` entry in the hosts file. Use Notepad++ in Administrator mode to carry out the edit.
+When this is established, you can remove the `local.pozi.com` entry in the hosts file that was created during the Pozi Server installation. Use Notepad++ in Administrator mode to carry out the edit.
 
 ## SSL Certificates
 
