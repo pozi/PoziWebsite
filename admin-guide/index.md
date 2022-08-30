@@ -11,7 +11,7 @@ The Pozi Administrator Guide contains self-service information for *Pozi Enterpr
 
 Administrators control the following aspects of the Pozi experience:
 
-* add and configure layers for viewing within your network
+* add and configure layers and linked datasets for viewing within your network
 * sync layers to Pozi cloud for external viewing
 * add layer to Unified Search index
 * embed custom maps and widgets in your website
@@ -21,7 +21,6 @@ Administrators control the following aspects of the Pozi experience:
 For other changes to the Pozi app experience, contact the Pozi Helpdesk:
 
 * register a new layer catalogue (ie, layer group) in Pozi
-* link a new child dataset to an existing layer
 * register new layers for viewing by public
 * enable a dataset as mail merge source
 * change the default basemap, search and imagery options

@@ -17,15 +17,16 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## Upcoming
 
-- [ ] enable administrators to configure child datasets within QGIS
 - [ ] don't unhighlight parent object when clicking on a non-spatial child record
 - [ ] obtain layer opacity setting from QGIS Server
+- [ ] obtain layer title/label field setting from QGIS Server
 - [ ] prevent Share links from capturing the panel state (unless specified in advanced options)
 
 ## Completed
 
 ### August 2022
 
+- [x] new: enable administrators to configure child datasets within QGIS
 - [x] new: display legend inline for switched-on layers
 - [x] new: enable loading of layers via WMTS catalogue
 - [x] improved: increase precision on measurement tools
@@ -34,6 +35,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [x] improved: unify appearance of layer options for stand-alone and catalogue layers
 - [x] improved: hide table when layer is turned off
 - [x] improved: render null and undefined values as empty string in table view
+- [x] improved: use favicons from alternative URLs for frequently used links which don't have their own favicon
 - [x] fixed: better remember state of expanded layer groups for sites with a lot of layers
 - [x] fixed: respect field order of source data in QGIS GetFeature queries
 - [x] fixed: horizontal alignment of links in info panel

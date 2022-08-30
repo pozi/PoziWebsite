@@ -28,9 +28,11 @@ Use cases:
   * representatives
 * more...
 
+Administrators can use QGIS to configure child datasets for viewing by internal users. The parent dataset can be an internal or external dataset.
+
 ## Add Dataset
 
-Add the source table for the child datasets to an [existing QGIS project](managing-qgis-projects) that has been configured for WFS (eg `Child Datasets.qgs`).
+Add the source table for the child dataset to a [QGIS project](managing-qgis-projects).
 
 1. open project file in QGIS
 2. Layer > Add Layer > pick from file or database options
@@ -38,43 +40,82 @@ Add the source table for the child datasets to an [existing QGIS project](managi
 4. Add
 5. Close
 6. Project > Properties > QGIS Server
-7. `WFS capabilities > Published`: tick on for each dataset
+7. `WFS capabilities > Published`: tick on for the new dataset
 8. OK
 9. Project > Save (`Ctrl` + `S`)
 
-Only the child dataset needs to be configured. There is no configuration required for the parent dataset for it to support a child dataset.
+## Configure Child Settings
 
-## Register Dataset
+The parent/child settings are maintained in the child layer's QGIS Server keyword list. Pozi obtains these settings, along with any other keywords, when it loads and imports and project's catalogue.
 
-### Obtain GetFeature URL
+Only the child dataset needs to be configured. There is no configuration required for the parent dataset for it to used by a child dataset.
 
-Construct a `GetFeature` URL by combining the following:
+Below are details of how to derive and combine the components of this setting.
 
-1. the project's [Advertised URL](/admin-guide/qgis/managing-qgis-projects/#construct-advertised-url) (eg `https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs`)
-2. WFS GetFeature request: `&service=WFS&version=1.1.0&request=GetFeature`
-3. table: `&typename=` + table name
+### Parent
 
-Combine these three text strings to create a `GetFeature` URL.
+The `parent` dataset contains the features which, when selected, will trigger a data request to the child dataset.
 
-Example `GetFeature` URL:
+For example, if the parent is the "Property" layer, then every time a user selects a feature in the Property layer, Pozi will trigger a request to the child dataset.
 
-https://bs-gis.pozi.com/iis/qgisserver?MAP=//bs-intra/GIS/System/POZI/QGIS%20Projects/Child%20Datasets.qgs&SERVICE=WFS&VERSION=1.1.0&REQUEST=GetFeature&OUTPUTFORMAT=application%2Fjson&TYPENAME=POZI_BridgeDefects
+Example: `parent=Property`
 
-Test your URL by pasting it in your browser and check that you get a valid response that returns records from the source.
+The parent layer can exist in the same QGIS project, or a different project, or even an external layer.
 
-### Submit Helpdesk Ticket
+### Parameter
 
-Email support@pozi.com with these details:
+The `parameter` is an expression that contains instructions for filtering the child dataset to return only records that relate to an individual parent feature.
 
-* subject: New child dataset
-* `GetFeature` URL
-* name of new child dataset(eg `Bridge Defects`)
-* name of field in child dataset that contains the link attribute (eg `Asset_ID`)
-* name of existing parent layer as it appears in Pozi (eg `Bridges`)
-* name of field in parent layer that contains the link attribute (eg `AssetID`)
-* whether to allow users to download results as CSV (Yes/No)
+Use the layer's Query Builder to construct and test your expression.
 
-Within 24 hours, the child dataset will be configured and available in Pozi.
+1. Layer Properties > Source > Query Builder
+2. double-click the name of the field to be used as the link - this will be added to the expression
+3. click `=` (or `IN` followed by an open bracket if you're expecting multiple input values, eg, a selection of multiple properties for a mail merge)
+4. click the Sample button to obtain a list of existing values from the target field
+5. double click one of the sample values to add it to the expression
+6. close any open bracket (if using `IN`)
+7. click Test
+
+![](./img/qgis-query-builder.png){style="width:500px"}
+
+If the test query returns one or more rows, your expression is valid, and it can be used in the child parameter. Clear the Query Result dialog box, select your expression text, and copy it to your clipboard.
+
+Exit the Query Builder by clicking Cancel. **DO NOT click OK**. (If you accidentally click OK, re-open the Query Builder and clear the expression before saving.)
+
+Construct the `parameter` text as follows:
+
+1. `parameter=` + `EXP_FILTER=` + the expression from your test pasted from the clipboard
+2. remove any double quotes from around the target field
+3. replace the sample value with the name of the link field from the *parent* dataset where the target value is obtained, enclosed in a pair of square brackets (eg, replace `1000900200` with `[Property Number]`)
+
+Example: `parameter=EXP_FILTER=Assess_NumberX IN ('[Property Number]')`
+
+Pozi will substitute any field names within square brackets with values from those fields from the parent.
+
+### Optional Settings
+
+These settings provide an override for some of the default behaviours in Pozi.
+
+* `downloadable=true`: allow Pozi to display a download option when multiple parent features are selected (eg, for a mail merge)
+* `enabled=false`: temporarily disable a dataset (without having to remove it completely)
+* `infoPanelCollapse=true`: collapse info results panel for this dataset
+* `promoteDetails=true`: display all child attributes instead of a preview
+
+[Developer reference](https://github.com/pozi/PoziApp/blob/master/app/src/config/catalog/KeywordsParser.ts)
+
+### Combine and Configure
+
+In the child dataset's Layer Properties, go to QGIS Server. Fill in the 'Keyword list' with the `parent`, `parameter` and optional settings derived above, each separated by commas.
+
+![](./img/qgis-server-keywords.png){style="width:600px"}
+
+``` Example Keyword list
+parent=Property, parameter=EXP_FILTER=Assess_NumberX in ('[Property Number]'), downloadable=true
+```
+
+Click OK, then save the project.
+
+Open your Pozi site in your browser, refresh the page, and test that you the child dataset displays in the info panel when you click on a parent feature.
 
 ## Troubleshooting
 
@@ -83,6 +124,7 @@ Within 24 hours, the child dataset will be configured and available in Pozi.
 * in Pozi, click on a parent feature for which you know a child feature exists
 * check that the layer is enabled for WFS. In QGIS, go to Project > Properties > QGIS Server > WFS Capabilities > your dataset > Published (tick on), then Save the project
 * check that the names of the fields in the child and parent datasets that are used for the link are consistent with the names supplied with the child dataset's registration in Pozi
+* check that there are no double quotes in the `parameter` setting
 
 ==- Results are slow to load
 
