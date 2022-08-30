@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.715136639020">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.715147271003">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,12 +35,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.715136639020" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.715147271003" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.715136639020" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.715147271003" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.715136639020" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.715136639020" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.715147271003" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.715147271003" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -311,7 +311,7 @@
         <span>Pozi Server</span>
     </h1>
 </doc-anchor-target>
-<p><em>Geospatial API for your on-premise datasets</em></p>
+<p><em>Geospatial API for your local data</em></p>
 <doc-anchor-target id="about">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#about">#</doc-anchor-trigger>
@@ -327,8 +327,8 @@
     <template #title>How Pozi Server Works</template>
 <p>Pozi Server is configured on your network with DNS rules that enable local users to access its API via a dedicated URL (typically <code v-pre>[yourservername].pozi.com</code>).</p>
 <ul>
-<li>when a user inside the client&#x27;s network uses Pozi, any request to <code v-pre>[yourservername].pozi.com</code> is directed by the local DNS rules to the internal server on which Pozi Connect Server is installed, and Pozi Connect Server responds with the requested data</li>
-<li>when a user outside the organisation&#x27;s network uses Pozi, any request to <code v-pre>[yourservername].pozi.com</code> quietly fails because it&#x27;s not a valid endpoint on the internet (however any data from any public data sources will load in the app as normal)</li>
+<li>when a user <em>inside</em> the client&#x27;s network uses Pozi, any request to <code v-pre>[yourservername].pozi.com</code> is directed by the local DNS rules to the internal server on which Pozi Connect Server is installed, and Pozi Connect Server responds with the requested data</li>
+<li>when a user <em>outside</em> the organisation&#x27;s network uses Pozi, any request to <code v-pre>[yourservername].pozi.com</code> quietly fails because it&#x27;s not a valid endpoint on the internet (however any data from any public data sources will load in the app as normal)</li>
 </ul>
 <p>IT managers maintain control over internal user access to Pozi Connect Server by configuring the network DNS and firewall rules. For example, access to Pozi Server can be restricted for specific users or groups of users with a group policy or firewall rules that blacklists the <code v-pre>[yourservername].pozi.com</code> endpoint</p>
 </doc-panel>
@@ -473,7 +473,7 @@
 <div class="codeblock-title">C:\Windows\System32\drivers\etc\hosts</div>
 <pre class="language-ini"><code v-pre class="language-ini">127.0.0.1 local.pozi.com</code></pre>
 </doc-codeblock></div>
-<p>This enables the local user to use the local Pozi Server instance as a web server. This will be useful for a standalone implementation or for demonstration purposes.</p>
+<p>This enables the local user to use the local Pozi Server instance as a web server. This is useful for a standalone implementation or for demonstration purposes.</p>
 <doc-anchor-target id="for-network-users">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#for-network-users">#</doc-anchor-trigger>
@@ -489,8 +489,8 @@
 </p>
 <p>If your network setup uses OpenVPN, you may need to add the following line to the OpenVPN client configuration file:</p>
 <p><code v-pre>dhcp-option DOMAIN [yourservername].pozi.com</code></p>
-<p>To confirm the DNS is configured correctly, open a command prompt window and ping local.pozi.com. It should return a reply from the server on which Pozi Server is installed.</p>
-<p>When this is established, you can remove the <code v-pre>local.pozi.com</code> entry in the hosts file. Use Notepad++ in Administrator mode to carry out the edit.</p>
+<p>To confirm the DNS is configured correctly, open a command prompt window and ping <code v-pre>[yourservername].pozi.com</code>. It should return a reply from the server on which Pozi Server is installed.</p>
+<p>When this is established, you can remove the <code v-pre>local.pozi.com</code> entry in the hosts file that was created during the Pozi Server installation. Use Notepad++ in Administrator mode to carry out the edit.</p>
 <doc-anchor-target id="ssl-certificates">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#ssl-certificates">#</doc-anchor-trigger>
