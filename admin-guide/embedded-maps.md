@@ -25,4 +25,5 @@ This is the resulting map from the above HTML:
 
 <iframe width="100%" height="500px" frameborder="0" scrolling="no" src="https://bendigo.pozi.com/"></iframe>
 
+</br>
 Insert the HTML in any webpage or CMS that supports iframes.

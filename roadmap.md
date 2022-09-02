@@ -87,6 +87,10 @@ We'll do a better job going forward keeping track of all new development and imp
 
 ---
 
+### March 2022
+
+- [x] new: support for vector tile basemaps
+
 ### January 2022
 
 - [x] new: display coordinates in alternative projections

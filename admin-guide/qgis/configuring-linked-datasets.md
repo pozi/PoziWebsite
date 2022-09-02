@@ -7,9 +7,9 @@ icon: link
 
 A linked dataset contains complementary attributes that relate to a features from a map layer.
 
-When a users selects a feature from a standard map layer (the 'parent' dataset), Pozi will fetch and display associated records from any linked table (the 'child' dataset) based on an attribute that is shared between the two.
+![Parent and child records](./img/info-panel-parent-and-child-records.png){style="width:400px"}
 
-![Parent and child records](./img/info-panel-parent-and-child-records.png){style="width:300px"}
+When a users selects a feature from a standard map layer (the 'parent' dataset), Pozi fetches and displays associated records from any linked table (the 'child' dataset) based on an attribute that's shared between the two.
 
 Use cases:
 
@@ -27,6 +27,14 @@ Use cases:
 * council wards
   * representatives
 * more...
+
+The parent record contains various attributes, such as the ones that are visible in the Details panel, other hidden attributes, and also the record's geometry. Any of these can be used as a key for querying other datasets. And any child record can become a parent of another dataset, and so on.
+
+In the above example:
+
+* `Property Information` is queried using the parent record's property number
+* `Property Parcels` is queried using the parent record's property pfi
+* `Property Planning Overlays` and `Zones` both use the parent record's geometry (ie, property boundary) in a spatial intersection query
 
 Administrators can use QGIS to configure child datasets for viewing by internal users. The parent dataset can be an internal or external dataset.
 
@@ -70,7 +78,7 @@ Use the layer's Query Builder to construct and test your expression.
 
 1. Layer Properties > Source > Query Builder
 2. double-click the name of the field to be used as the link - this will be added to the expression
-3. click `=` (or `IN` followed by an open bracket if you're expecting multiple input values, eg, a selection of multiple properties for a mail merge)
+3. click `=` (or if you're expecting multiple input values, use `IN` followed by an open bracket)
 4. click the Sample button to obtain a list of existing values from the target field
 5. double click one of the sample values to add it to the expression
 6. close any open bracket (if using `IN`)

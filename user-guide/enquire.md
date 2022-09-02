@@ -1,28 +1,46 @@
 ---
-title: Enquire
 sidebar_position: 3
 icon: location
 ---
 
-:::note Under Construction
+# Enquire
 
-*This page is a work in progress. Please refer to our existing Help Guide for information about this topic.*
+To discover information about any location on the map, click on the map or use the search tool to find your location.
 
-[Existing Help Guide](https://help.pozi.com/search?query=enquire)
-
-:::
-
----
-
-To discover information about any location on the map, simply click on the map or use the search tool to find your location. Information about the location or selected feature is displayed in Pozi's *Info Panel*.
+The Pozi *Info Panel* displays Details about the location or selected feature.
 
 ## What's Here
 
 When enquiring on a location via clicking on the map or doing a search, Pozi displays information from a variety of data sources that are relevant to the location. This enquiry mode is called *What's Here*.
 
+### Simple Selection
+
+Simple selections are triggered by any of the following events:
+
+* a single click on the map
+* using the search function
+* opening Pozi using a link that specifies a target location or feature id
+  * example: `https://westwimmera.pozi.com/?propnum=1018753`
+
+### Multi Selection
+
+In addition to enquiring on single locations, Pozi enables you to enquire on regions and multiple locations.
+
+#### Regions
+
+To enquire on a region:
+
+* click Tools > Select > Select by region
+* click on the map to start drawing
+* click on map locations to define the boundary of the enquiry region
+* double-click to finish
+
+Tip: to enquire on a *path* (for example, to select all the properties along a pipeline or other linear feature), use the region tool to draw a narrow region that approximates the path.
+
+
 ## Feature Selection
 
-Many layers in Pozi are directly interactive, allowing users to select individual features to query them.
+Any map layers that are configured from a *vector* data source are directly interactive, allowing you to select individual features on the map to view its details.
 
 When the cursor hovers over these features, the cursor changes to a pointing hand. Click to select the feature and view its attribute information in the Info Panel.
 
@@ -34,10 +52,10 @@ Pozi uses parent-child relationships between datasets to provide unlimited query
 
 ![](./img/info-panel-parent-and-child-records.png){style="width:400px"}
 
-The parent record contains various attributes, such as the ones that are visible in the Details panel, other hidden attributes, and also the record's geometry. Any of these can be used as a key for querying other datasets. And any child record can become a parent of another dataset, and so on.
+### Download Related Information
 
-In the above example:
+When related datasets have been configured for downloading, Pozi enables you to retrieve and download related information.
 
-* `Property Information` is queried using the parent record's property number
-* `Property Parcels` is queried using the parent record's property pfi
-* `Property Planning Overlays` and `Zones` both use the parent record's geometry (ie, property boundary) in a spatial intersection query
+If your target selection includes more than one feature (typically by doing a [multi selection](#multi-selection)), Pozi will display download options for permitted datasets that are related to the selected features. A common use case for internal users is retrieving property owner details for selected properties.
+
+Click the link to download a CSV file of the related features.
