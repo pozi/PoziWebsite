@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.715147271003">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.715394569101">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,12 +35,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.715147271003" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.715394569101" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.715147271003" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.715394569101" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.715147271003" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.715147271003" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.715394569101" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.715394569101" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -312,8 +312,8 @@
     </h1>
 </doc-anchor-target>
 <p>A linked dataset contains complementary attributes that relate to a features from a map layer.</p>
-<p>When a users selects a feature from a standard map layer (the &#x27;parent&#x27; dataset), Pozi will fetch and display associated records from any linked table (the &#x27;child&#x27; dataset) based on an attribute that is shared between the two.</p>
-<p><img src="../img/info-panel-parent-and-child-records.png" style="width:300px" alt="Parent and child records" /></p>
+<p><img src="../img/info-panel-parent-and-child-records.png" style="width:400px" alt="Parent and child records" /></p>
+<p>When a users selects a feature from a standard map layer (the &#x27;parent&#x27; dataset), Pozi fetches and displays associated records from any linked table (the &#x27;child&#x27; dataset) based on an attribute that&#x27;s shared between the two.</p>
 <p>Use cases:</p>
 <ul>
 <li>properties
@@ -339,6 +339,13 @@
 </ul>
 </li>
 <li>more...</li>
+</ul>
+<p>The parent record contains various attributes, such as the ones that are visible in the Details panel, other hidden attributes, and also the record&#x27;s geometry. Any of these can be used as a key for querying other datasets. And any child record can become a parent of another dataset, and so on.</p>
+<p>In the above example:</p>
+<ul>
+<li><code v-pre>Property Information</code> is queried using the parent record&#x27;s property number</li>
+<li><code v-pre>Property Parcels</code> is queried using the parent record&#x27;s property pfi</li>
+<li><code v-pre>Property Planning Overlays</code> and <code v-pre>Zones</code> both use the parent record&#x27;s geometry (ie, property boundary) in a spatial intersection query</li>
 </ul>
 <p>Administrators can use QGIS to configure child datasets for viewing by internal users. The parent dataset can be an internal or external dataset.</p>
 <doc-anchor-target id="add-dataset">
@@ -389,7 +396,7 @@
 <ol>
 <li>Layer Properties &gt; Source &gt; Query Builder</li>
 <li>double-click the name of the field to be used as the link - this will be added to the expression</li>
-<li>click <code v-pre>=</code> (or <code v-pre>IN</code> followed by an open bracket if you&#x27;re expecting multiple input values, eg, a selection of multiple properties for a mail merge)</li>
+<li>click <code v-pre>=</code> (or if you&#x27;re expecting multiple input values, use <code v-pre>IN</code> followed by an open bracket)</li>
 <li>click the Sample button to obtain a list of existing values from the target field</li>
 <li>double click one of the sample values to add it to the expression</li>
 <li>close any open bracket (if using <code v-pre>IN</code>)</li>
