@@ -1,14 +1,14 @@
 ---
-description: Azure Active Directory integration for Pozi GIS
+description: Azure AD Application Proxy integration for Pozi GIS
 icon: dot
 tags: [Pozi Enterprise Cloud, Cardinia Shire Council]
 ---
 
-# Azure Active Directory
+# Azure AD Application Proxy Directory
 
 *Azure AD integration is a feature of the **Pozi Enterprise Cloud** offering.*
 
-Pozi's [Azure Active Directory](https://azure.microsoft.com/en-au/services/active-directory/) integration enables your organisation's staff and other authorised users to access internal map layers in Pozi without needing to be connected to your network.
+Pozi's [Azure AD Application Proxy](https://azure.microsoft.com/en-au/services/active-directory/) integration enables your organisation's staff and other authorised users to access internal map layers in Pozi without needing to be connected to your network.
 
 ## How it works
 

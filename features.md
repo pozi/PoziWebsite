@@ -166,7 +166,7 @@ Enable staff to access map layers directly from your organisation's network, inc
 
 ## Pozi Enterprise Cloud
 
-Ultimate integration with your organisation's cloud infrastructure, with Azure Active Directory integration.
+Ultimate integration with your organisation's cloud infrastructure, with Azure AD Application Proxy integration.
 
 ---
 

@@ -63,5 +63,5 @@ Talk to us about your aims for integrating Pozi with your other cloud applicatio
 
 *Available in Pozi Enterprise Cloud package*
 
-* [Azure Active Directory](./azure-active-directory)
+* [Azure AD Application Proxy](./azure-active-directory)
 * AWS IAM

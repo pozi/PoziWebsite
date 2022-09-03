@@ -101,7 +101,7 @@ https://bendigo.pozi.com/#/layers[mylocalneighbourhoodall]/tab[info]/
 ### Security
 
 * public vs private
-* Azure Active Directory integration available
+* Azure AD Application Proxy integration available
 
 ### Embedded Maps
 

@@ -30,7 +30,7 @@ Pozi delivers powerful location-based functionality at a fraction of the cost of
 | *Perfect for publishing your organisation's data to the public* | *When your users demand a higher level of interaction* | *A high functioning replacement for your inhouse GIS enquiry tool* | *Ultimate integration with your organisation’s cloud infrastructure* |
 | <small>AUD</small><big>**$6K**</big><small>/year</small> | <small>AUD</small><big>**$9K**</big><small>/year</small> | <small>AUD</small><big>**$12K**</big><small>/year</small> | <small>AUD</small><big>**$15K**</big><small>/year</small> |
 | - | <small>All the features of Pozi Public, plus:</small> | <small>All the features of Pozi Pro, plus:</small> | <small>All the features of Pozi Enterprise, plus:</small> |
-| ✔️ Live, authoritative data | ✔️ Community consultation module | ✔️ GIS integration | 🚀 Azure Active Directory integration |
+| ✔️ Live, authoritative data | ✔️ Community consultation module | ✔️ GIS integration | 🚀 Azure AD Application Proxy integration |
 | ✔️ Customer support | ✔️ Advanced search | ✔️ Corporate system integrations | 📃 Enterprise Cloud Service Level Agreement |
 | ✔️ Responsive design | ✔️ Nearby places | ✔️ Public data publisher |  |
 | ✔️ Intelligent address search | ✔️ Multiple imagery layers | ✔️ Table view |  |
@@ -60,7 +60,7 @@ All Pozi subscriptions include:
 
 [!ref icon="paper-airplane" text="Request a free 60 day trial"](/trial/)
 
-[!ref icon="trophy" text="Already use Pozi? Upgrade to Pozi Enterprise"](/upgrade/)
+[!ref icon="trophy" text="Already use Pozi? ...Upgrade to Pozi Enterprise"](/upgrade/)
 
 <br/>
 
@@ -87,7 +87,7 @@ Use Pozi to visualise your 3D imagery. Toggle between 2D and 3D viewing modes. C
 
 <img src="/static/img/tweet-gallery/horsham_corellas_wrap_up.png" alt="" style="float:right;width:400px;margin:0px 40px;">
 
-The Pozi Pro, Enterprise and Enterprise Cloud offerings include up to two concurrent community consultation campaigns. You may purchase additional campaigns over and above the included ones.
+The Pozi Pro, Enterprise and Enterprise Cloud offerings include up to two concurrent community consultation campaigns. If you need more, you may purchase additional campaigns over and above the included ones.
 
 <small>AUD</small>$1500<small>/year</small>
 
@@ -112,7 +112,7 @@ Pozi Connect generates property and address change reports (M1s) for Victorian m
 
 ### Custom Development
 
-Our development services can be engaged for any custom development required to further enhance any aspect of Pozi functionality to suit your organisation's needs.
+You can engage our development services for any custom development to further enhance Pozi to suit your organisation's needs.
 
 We also offer clients the opportunity to sponsor development of new features, giving them direct input into the specification to ensure it meets their exact requirements.
 
@@ -161,11 +161,11 @@ For *Enterprise* and *Enterprise Cloud* subscribers, we offer access to our sour
 
 ### Tender Response
 
-If your organisation uses Request For Tender (RFT) or Request For Quote (RFQ) for service procurement, a premium will apply to the package cost and ongoing subscription. Talk to us about what additional costs will apply for your procurement method.
+If your organisation uses Request For Tender (RFT) or Request For Quote (RFQ) for software procurement, a premium will apply to the package cost and ongoing subscription. Talk to us about what additional costs will apply for your procurement method.
 
-Keep in mind that there are no lock-in contracts with Pozi. Avoid RFTs and RFQs altogether by taking up a year-at-a-time Pozi subscription, and avoid committing your organisation to a minimum spend that would exceed any procurement thresholds.
+Alternatively, you can avoid RFTs and RFQs altogether by keeping your organisation's commitments below its procurement thresholds. Take up a year-at-a-time Pozi subscription. There are no lock-in contracts with Pozi.
 
-Talk to us to learn how organisations like yours are avoiding RFTs and RFQs with a seamless transition to a simple annual Pozi subscription.
+Learn how organisations like yours avoid months of wasted effort on RFTs and RFQs by transitioning to a simple annual Pozi subscription.
 
 </br>
 
