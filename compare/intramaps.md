@@ -7,7 +7,7 @@ layout: central
 
 Is IntraMaps no longer growing with you or serving your organisation's needs?
 
-Pozi is the enterprise GIS viewer with the all features your users need, plus real support.
+Pozi is the enterprise GIS application with the all features your users need, plus real support.
 
 ## Why choose Pozi over IntraMaps?
 
@@ -33,7 +33,7 @@ If you know how to use QGIS, you can publish data in Pozi.
 
 There are no multi-day courses required to get you started.
 
-GIS administrators can take advantage of QGIS's powerful graphical user interface to configure layers in Pozi, including adding spatial and non-spatial data sources, filtering, advanced layer styling, labelling, dynamic data joins, virtual fields, debugging tools, and more.
+GIS administrators take advantage of QGIS's powerful geospatial toolkit to configure layers for Pozi, including adding new layers, filtering, styling, labelling, dynamic data joins, virtual fields, debugging tools, and more.
 
 ### Ease of Use
 
@@ -43,17 +43,17 @@ Users don't require expensive training to get the answers they need.
 
 Pozi enables users across your organisation to quickly access critical information, regardless of any previous GIS expertise.
 
-Pozi's adaptive interface displays only the information needed for the task at hand, whether it's visualising the map at full screen, viewing details about a selected feature or location, browsing available map layers, or searching for a location. By freeing up valuable screen space, users gain more insight and context around their area of interest.
+Pozi's adaptive interface displays only the information needed for the task at hand, whether it's viewing a full screen map, showing details about a selected feature or location, browsing available map layers, or searching for a location. By freeing up valuable screen space, users gain more insight and context around their area of interest.
 
 * intuitive workflows
-* touch friendly, mobile friendly
+* touch friendly, mobile ready
 * efficient use of screen space, free of clutter
-* no complex tools, menus or jargon
+* no complex toolbars, menus or jargon
 * modern, visually-appealing interface
 
 ### Public Ready
 
-Engage your community and external stakeholders with information that's relevant to them while keeping your organisation's internal data available only to internal users.
+Engage your community and external stakeholders with information that's relevant to them, while keeping your organisation's private data available only to internal users.
 
 Every Pozi site provides a public-facing map view by default.
 
@@ -61,19 +61,15 @@ Synchronise selected datasets from your network to the Pozi cloud platform for v
 
 And engage with the public using Pozi's two-way community consultation functionality. Gather information from the public about incidents, maintenance requests, feedback on strategic initiatives, community story-telling, and more.
 
-### Modules vs Bookmarks
+### Unified Map
 
-*Sick of maintaining multiple map modules?*
+Pozi avoids artificial data silos. Within a single map, users can discover, use and mix information for their individual needs, without switching between separate map modules.
 
-Pozi frees you from duplicating your configuration across separate modules. Pozi gives your end-users their own personalised view based on a single map.
+When users interact with layer groups within the layer panel, Pozi remembers how they left it so that their most relevant layers are ready to access as needed. Layers that aren't useful or haven't been recently accessed remain tucked away, but still discoverable and accessible in the current map.
 
-When users interact with layer groups within the layer panel, Pozi remembers how they left it so that their most relevant layers are ready to toggle on and off as needed. Layers that aren't useful or haven't been recently accessed remain tucked away.
+Users can also bookmark the current Pozi map view, enabling them to launch Pozi with their frequently-used map layers displayed by default.
 
-Users can also bookmark the current state of the Pozi map, enabling them to launch Pozi with their frequently-used map layers displayed by default.
-
-Pozi can be launched from saved views to suit specific workflows, projects or themes. There's no limit to the number of bookmarks that users can create and share. Users can also share customised map views with others to highlight specific areas or layers of interest.
-
-Pozi avoids the overhead of duplicating configuration across multiple modules, while enabling users to discover and use information for their individual needs.
+Pozi can be launched from these saved views to suit specific workflows, projects or themes. There's no limit to the number of views that users can create and share. Users can also share customised map views with others to highlight specific areas or layers of interest, including any custom map annotations.
 
 ### Performance
 
@@ -85,7 +81,7 @@ Users get the answers they need quicker in Pozi. The Pozi web app opens in secon
 
 Pozi clients benefit from being able to communicate directly with development and support crew during solution implementations and ongoing support.
 
-#### Have your own preferred GIS support provider?
+#### Third Party GIS support
 
 Do you already have your own GIS support provider? No worries. We'll work with them and provide access to the resources they need to deliver the support you deserve.
 
@@ -105,7 +101,7 @@ The future of web GIS is driven by live data integrations, web-optimised data fo
 
 Pozi invests for the future by keeping Pozi up-to-date with modern web technologies. We work with open source HTML5 technologies including [React](https://reactjs.org/), [Material UI](https://mui.com/), [OpenLayers 6](https://openlayers.org/), [TurfJS](https://turfjs.org/) and [GeoStyler](https://geostyler.org/) to ensure high performance, compatibility with modern data sources, and a high quality user experience.
 
-IntraMaps is built on top of an outdated version of OpenLayers, which ceased development in 2013. IntraMaps' performance and functionality remain tied to a legacy, unsupported code base, affecting its ability to innovate any further.
+IntraMaps is built on top of an outdated version of OpenLayers, which ceased development in 2013. IntraMaps' performance and functionality remain tied to an ageing, unsupported code base, affecting its ability to innovate any further.
 
 ### Transparent Pricing
 
@@ -166,7 +162,7 @@ When you fund the development of new features, you have ongoing access to the ne
 
 ==-
 
-## Unhappy with TechnologyOne?
+## Unhappy with the lack of support for Intramaps?
 
 You're not alone.
 
