@@ -6,14 +6,14 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.715669299404">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.715681303003">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>Azure AD Application Proxy Directory | Pozi Web GIS | Online Map</title>
-    <meta name="title" content="Azure AD Application Proxy Directory | Pozi Web GIS | Online Map">
+    <title>Azure AD Application Proxy | Pozi Web GIS | Online Map</title>
+    <meta name="title" content="Azure AD Application Proxy | Pozi Web GIS | Online Map">
     <meta name="description" content="Azure AD Application Proxy integration for Pozi GIS" />
 
     <!-- Canonical -->
@@ -22,24 +22,24 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pozi.com/admin-guide/integrations/azure-active-directory/">
-    <meta property="og:title" content="Azure AD Application Proxy Directory | Pozi Web GIS | Online Map">
+    <meta property="og:title" content="Azure AD Application Proxy | Pozi Web GIS | Online Map">
     <meta property="og:description" content="Azure AD Application Proxy integration for Pozi GIS">
     <meta property="og:image" content="https://pozi.com/admin-guide/integrations/img/azure-ad-login.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pozi.com/admin-guide/integrations/azure-active-directory/">
-    <meta property="twitter:title" content="Azure AD Application Proxy Directory | Pozi Web GIS | Online Map">
+    <meta property="twitter:title" content="Azure AD Application Proxy | Pozi Web GIS | Online Map">
     <meta property="twitter:description" content="Azure AD Application Proxy integration for Pozi GIS">
     <meta property="twitter:image" content="https://pozi.com/admin-guide/integrations/img/azure-ad-login.png">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.715669299404" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.715681303003" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.715669299404" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.715681303003" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.715669299404" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.715681303003" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -304,10 +304,10 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="azure-ad-application-proxy-directory" class="break-words">
+<doc-anchor-target id="azure-ad-application-proxy" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#azure-ad-application-proxy-directory">#</doc-anchor-trigger>
-        <span>Azure AD Application Proxy Directory</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#azure-ad-application-proxy">#</doc-anchor-trigger>
+        <span>Azure AD Application Proxy</span>
     </h1>
 </doc-anchor-target>
 <p><em>Azure AD integration is a feature of the <strong>Pozi Enterprise Cloud</strong> offering.</em></p>
@@ -331,25 +331,74 @@
 </p>
 <p>Once signed in, users will have access to internal datasets for as long their Microsoft account remains logged in.</p>
 <doc-anchor-target id="permissions">
-    <h2>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#permissions">#</doc-anchor-trigger>
         <span>Permissions</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <p>Whether a user can access private datasets is based on whether the user is given permission by the organisation to access the MS App Proxy endpoint that is dedicated for Pozi.</p>
 <p>As long as the staff member or other authorised user has permission to access the MS App Proxy endpoint ( eg <code v-pre>https://pozi-cardiniavicgovau.msappproxy.net/</code>), then they will have access to the internal datasets that have been configured within Pozi.</p>
 <doc-anchor-target id="url">
-    <h2>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#url">#</doc-anchor-trigger>
         <span>URL</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <p>Users use a separate URL that enforces a login to Azure Active Directory before the browser loads the Pozi site.</p>
 <p>Example:</p>
 <ul>
-<li>Public URL: <code v-pre>https://cardinia.pozi.com/</code></li>
-<li>Staff URL: <code v-pre>https://cardinia.enterprise.pozi.com/</code></li>
+<li>Public URL: <code v-pre>https://&lt;sitename&gt;.pozi.com/</code></li>
+<li>Staff URL: <code v-pre>https://&lt;sitename&gt;.enterprise.pozi.com/</code></li>
 </ul>
+<doc-anchor-target id="configuration">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#configuration">#</doc-anchor-trigger>
+        <span>Configuration</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="connector-group">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#connector-group">#</doc-anchor-trigger>
+        <span>Connector Group</span>
+    </h3>
+</doc-anchor-target>
+<p>Example:</p>
+<p><img src="../../../dev-guide/img/azure-settings.png" style="width:600px" alt="" /></p>
+<doc-anchor-target id="access-token-lifetime">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#access-token-lifetime">#</doc-anchor-trigger>
+        <span>Access Token Lifetime</span>
+    </h3>
+</doc-anchor-target>
+<p>Extend the access token lifetime from 1 hour (default) to 12 hours to enable a user to continue using Pozi without the app reloading in order to refresh the access token.</p>
+<p>Reference:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-understand-cors-issues">https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-understand-cors-issues</a> (Option 5)</li>
+<li><a href="https://docs.microsoft.com/en-us/answers/questions/63514/cors-issue-while-using-app-throught-azure-proxy-af.html">https://docs.microsoft.com/en-us/answers/questions/63514/cors-issue-while-using-app-throught-azure-proxy-af.html</a></li>
+<li><a href="https://docs.microsoft.com/en-us/answers/questions/656764/azuread-application-proxy-some-kind-of-timeout.html">https://docs.microsoft.com/en-us/answers/questions/656764/azuread-application-proxy-some-kind-of-timeout.html</a></li>
+</ul>
+<doc-anchor-target id="register-pozi">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#register-pozi">#</doc-anchor-trigger>
+        <span>Register Pozi</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>Set Pozi up in Azure as a registered app (admin privileges required): <code v-pre>https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/&lt;client_id&gt;</code></li>
+<li>Add the following URI as a registered application:
+<ul>
+<li><code v-pre>https://&lt;sitename&gt;.enterprise.pozi.com</code> (e.g. <a href="https://cardinia.enterprise.pozi.com">https://cardinia.enterprise.pozi.com</a>). Note; do not add a trailing slash</li>
+</ul>
+</li>
+<li>Add the following redirect URIs to the application (they are also sometimes called reply URLs):
+<ul>
+<li><a href="https://staging.pozi.com">https://staging.pozi.com</a> (for testing)</li>
+<li>http://localhost:3000 (for development/debugging)</li>
+</ul>
+</li>
+<li>Make sure that the above URIs are classed as <code v-pre>Single-Page Application</code>, otherwise you may get the following error: &#x60;AADSTS9002326: Cross-origin token redemption is permitted only for the &#x27;Single-Page Application&#x27; client-type.</li>
+</ul>
+<p>App registration -&gt; Authentication-&gt; platform type: SPA</p>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
                                     <span>
@@ -465,6 +514,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Azure AD Application Proxy Directory", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Azure AD Application Proxy", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
