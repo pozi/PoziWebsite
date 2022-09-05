@@ -1,8 +1,8 @@
 ---
 slug: going-cloud
 authors: Simon O'Keefe
-visibility: hidden
-description: What does it mean when one of your GIS software vendors announces that your GIS needs to "move to the cloud"?
+visibility: public
+description: What does it mean when one of your software vendors announces that your GIS needs to "move to the cloud"?
 tags: [cloud]
 ---
 
@@ -98,6 +98,6 @@ We've built Pozi for the future of web GIS, with live data integrations, support
 
 ---
 
-*Pozi is web platform that combines geographic information from local data sources and trusted web services to give your users the complete picture. Deploy for a fraction of cost of traditional GIS software, with no lock-in contracts.*
+*Pozi is web platform that combines geographic information from local data sources and trusted web services to give your users the complete picture. Deploy for a fraction of cost of traditional GIS software, with no lock-in contracts. **[Learn more.](/product/)***
 
 Photo by [Gülizar Şener](https://www.pexels.com/photo/body-of-water-during-daytime-160320/)
