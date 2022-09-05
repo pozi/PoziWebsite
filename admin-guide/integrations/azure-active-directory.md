@@ -8,7 +8,9 @@ tags: [Pozi Enterprise Cloud, Cardinia Shire Council]
 
 *Azure AD integration is a feature of the **Pozi Enterprise Cloud** offering.*
 
-Pozi's [Azure AD Application Proxy](https://azure.microsoft.com/en-au/services/active-directory/) integration enables your organisation's staff and other authorised users to access internal map layers in Pozi without needing to be connected to your network.
+Pozi's [Azure AD Application Proxy](https://azure.microsoft.com/en-au/services/active-directory/) integration enables your organisation's staff and other authorised users to access internal data sources in Pozi without needing to be connected to your network.
+
+![](/dev-guide/img/azure-app-proxy-overview.png){style="width:500px"}
 
 ## How it works
 
@@ -18,7 +20,7 @@ Pozi's [Azure AD Application Proxy](https://azure.microsoft.com/en-au/services/a
 
 If the user is not already logged in, the browser is redirected to the Microsoft login page.
 
-![](./img/azure-ad-login.png)
+![](./img/azure-ad-login.png){style="width:600px"}
 
 Once signed in, users will have access to internal datasets for as long their Microsoft account remains logged in.
 
@@ -39,13 +41,34 @@ Example:
 
 ## Configuration
 
-### Connector Group
+### Add App
 
-Example:
+Microsoft documentation: https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-add-on-premises-application#add-an-on-premises-app-to-azure-ad
+
+* Azure Application Proxy to point to https://local.pozi.com/ (or other previously configured DNS forward address)
+* ensure "Pre Authentication" is Azure Auth, not passthrough
+
+Other settings:
 
 ![](/dev-guide/img/azure-settings.png){style="width:600px"}
 
-### Access Token Lifetime
+When configured correctly, a request from a logged-in user to URL (for example)...
+
+`https://pozi-cardiniavicgovau.msappproxy.net/resourcecheck/cardinia.json`
+
+...should return the same response as a local request to...
+
+`https://local.pozi.com/resourcecheck/cardinia.json`
+
+Ensure it doesn't return a response to a non-logged-in or anonymous user.
+
+### Site URL
+
+Using `<sitename>.enterprise.pozi.com` forces user to authenticate before proceeding to the Pozi site. These users will gain access to the private datasets.
+
+Public users should continue to use `<sitename>.pozi.com`. They will not be prompted to authenticate, and they will have access to only public data.
+
+### Extend Access Token Lifetime
 
 Extend the access token lifetime from 1 hour (default) to 12 hours to enable a user to continue using Pozi without the app reloading in order to refresh the access token.
 
@@ -59,7 +82,7 @@ Reference:
 
 * Set Pozi up in Azure as a registered app (admin privileges required): `https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/<client_id>`
 * Add the following URI as a registered application:
-  * `https://<sitename>.enterprise.pozi.com` (e.g. https://cardinia.enterprise.pozi.com). Note; do not add a trailing slash
+  * `https://<sitename>.enterprise.pozi.com`. Note; do not add a trailing slash
 * Add the following redirect URIs to the application (they are also sometimes called reply URLs):
   * https://staging.pozi.com (for testing)
   * http://localhost:3000 (for development/debugging)

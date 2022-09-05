@@ -82,7 +82,7 @@ Pozi delivers efficiencies in business processes and human resources by connecti
 
 We enable software vendors, systems integrators and independent support providers to bring the power of location-based decision making into their business solutions.
 
-Pozi's lightweight footprint, modern API and library of [data connectors](admin-guide/integrations) enables enterprise applications to access powerful spatial visualisation, querying and analysis and capabilities.
+Pozi's lightweight footprint, modern API and library of [data connectors](/admin-guide/integrations) enables enterprise applications to access powerful spatial visualisation, querying and analysis and capabilities.
 
 <br/>
 

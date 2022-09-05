@@ -18,4 +18,4 @@ https://apps.councilwise.com.au/Module/Property/Details?filter=Property%20Number
 
 ## Data API
 
-https://cwcoreapi.councilwise.com.au/
+https://cwapp-help.helpdocs.com/general/setting-up-using-a-3rd-party-app-integration-api
