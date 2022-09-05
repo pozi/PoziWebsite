@@ -1,5 +1,5 @@
 ---
-slug: going-to-the-cloud
+slug: going-cloud
 authors: Simon O'Keefe
 visibility: hidden
 description: What does it mean when one of your GIS software vendors announces that your GIS needs to "move to the cloud"?
@@ -12,9 +12,7 @@ tags: [cloud]
 
 As developers of a cloud application, you'd think we at Pozi would be the first to try to convince you to move your organisation's GIS data to the cloud. After all, Pozi is a cloud-native app that excels in the online world. It works seamlessly with online APIs to connect users with live, trusted data across the web.
 
-But we recognise that your most critical users, data sources and systems often exist in **local ecosystems** such as your organisation's network or private cloud. That's why we developed Pozi's *hybrid cloud* architecture, to easily integrate with both local and remote resources.
-
-Without leaving the Pozi app, your most demanding users have access to live data from internal and external sources. It's the best of both worlds!
+But we recognise that your most critical users, data sources and systems often exist in **local ecosystems** such as your organisation's network or private cloud. That's why we developed Pozi's *hybrid cloud* architecture, which enables local data sources to be viewed securely within Pozi's cloud application.
 
 ***So what does it mean for your organisation when one of your software vendors announces that your GIS needs to "move to the cloud"?***
 
@@ -24,10 +22,10 @@ What's involved, and who benefits?
 
 ### "Going cloud" *can* make sense if...
 
-* your audience consists entirely of remote users or external stakeholders
+* your audience consists primarily of remote users or external stakeholders
 * the move delivers cost savings compared to your existing on-premise solution
 * the solution enables better integration with your other corporate data and applications
-* your organisation retains control over your data and processes
+* your organisation retains control over its data and processes
 
 ### But why "go cloud" when...
 
@@ -68,8 +66,9 @@ Ask your vendor if your organisation gains any advantages from moving to the clo
 
 Or will the move be a step backwards:
 
-* will it require your organisation's private corporate data to be replicated and hosted offsite?
+* will it lock in your organisation to a single vendor for all its GIS needs?
 * will it restrict integrations with your other GIS software and corporate systems?
+* will it require your organisation's private corporate data to be replicated and hosted offsite?
 * will it prevent the use of automated workflows such as database views and triggers?
 * will it make it harder for your GIS to connect directly with APIs and data from external providers?
 * will it prevent your organisation getting support from third party GIS support providers?
@@ -81,17 +80,24 @@ Or will the move be a step backwards:
 
 Are you hesitant for your organisation's geospatial knowledge to be moved into a closed platform?
 
+<img src="/static/img/undraw/undraw_map_re_60yf.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
+
 Pozi offers you an alternative.
 
 Pozi enables organisations like yours to leverage their own infrastructure to gain greater control over their data and user experience.
 
 Pozi's open architecture empowers organisations to integrate their spatial and other corporate data to suit their own requirements, and ensures maximum flexibility, control and usability.
 
-Pozi's new QGIS integration enables administrators to manage their corporate GIS using the power of QGIS, the world's most popular open-source geospatial power tool.
+Pozi's new QGIS integration enables administrators to configure their Pozi site using the power of QGIS, the world's most popular open-source geospatial power tool.
 
 We've built Pozi for the future of web GIS, with live data integrations, support for web-optimised data formats, and powerful in-browser geo-processing.
 
 [Talk to us](/contact) before committing your organisation to a cloud migration you didn't ask for.
 
+<br/>
+
 ---
-*Photo by [Gülizar Şener](https://www.pexels.com/photo/body-of-water-during-daytime-160320/)*
+
+*Pozi is web platform that combines geographic information from local data sources and trusted web services to give your users the complete picture. Deploy for a fraction of cost of traditional GIS software, with no lock-in contracts.*
+
+Photo by [Gülizar Şener](https://www.pexels.com/photo/body-of-water-during-daytime-160320/)

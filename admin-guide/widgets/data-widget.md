@@ -19,14 +19,14 @@ The Pozi data widget enables users to search any address to display specific det
 
 *Type '3 Queen Street' to try it out.*
 
-<iframe height="300px" width="100%" overflow="hidden" src="https://southerngrampians.pozi.com/widget.html#card=Waste%20Collection&fieldnames=Next Rubbish Pickup,Next Recycling Pickup,Next Organics Pickup&fontsize=20"></iframe>
+<iframe height="300px" width="100%" overflow="hidden" frameBorder="0" src="https://southerngrampians.pozi.com/widget.html#card=Waste%20Collection&fieldnames=Next Rubbish Pickup,Next Recycling Pickup,Next Organics Pickup&fontsize=20"></iframe>
 
 ---
 
 Embed code:
 
 ```
-<iframe height="300px" width="100%" overflow="hidden" src="https://southerngrampians.pozi.com/widget.html#card=Waste%20Collection&fieldnames=Next Rubbish Pickup,Next Recycling Pickup,Next Organics Pickup&fontsize=20"></iframe>
+<iframe height="300px" width="100%" overflow="hidden" frameBorder="0" src="https://southerngrampians.pozi.com/widget.html#card=Waste%20Collection&fieldnames=Next Rubbish Pickup,Next Recycling Pickup,Next Organics Pickup&fontsize=20"></iframe>
 ```
 
 ==-

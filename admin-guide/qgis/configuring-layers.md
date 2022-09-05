@@ -123,6 +123,14 @@ The following items are possible by configuring [virtual fields](#virtual-fields
 * **line thicknesses**: set to `1mm` or greater to enable users to more easily select line features
 * **label text size**: set to `10 points` or greater, and a white `1.8mm` buffer for better legibility
 
+!!! MapInfo Styles
+
+MapInfo tables sometimes contain embedded styles. QGIS Desktop may recognise and display the map features using these styles, but QGIS Server cannot serve the layer to Pozi without first overriding the style.
+
+If the layer appears in QGIS Symbology mode "Embedded", switch it to "Single Symbol" or "Categorised", and style it according to your preference.
+
+!!!
+
 <br/>
 
 ## Managing Data Fields
