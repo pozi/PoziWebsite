@@ -81,7 +81,7 @@ Obtaining GeoJSON endpoint:
 
 ## On Premise Integration
 
-ArcGIS Online datasets can also be configured for use with Pozi Server using VRT configuration.
+ArcGIS Online datasets can also be configured for internal use by using VRT configuration.
 
 Examples:
 
