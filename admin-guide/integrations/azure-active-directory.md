@@ -70,7 +70,9 @@ Public users should continue to use `<sitename>.pozi.com`. They will not be prom
 
 ### Register Pozi
 
-* Set Pozi up in Azure as a registered app (admin privileges required): `https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/<client_id>`
+* Set Pozi up in Azure as a registered app (admin privileges required): https://docs.microsoft.com/en-us/azure/healthcare-apis/register-application
+* Record the Application id (also known as as client id)
+* Set 'Allow public client flows' to true as Pozi is a public application and does not need access to secrets
 * Add the following URI as a registered application:
   * `https://<sitename>.enterprise.pozi.com`. Note; do not add a trailing slash
 * Add the following redirect URIs to the application (they are also sometimes called reply URLs):
@@ -79,4 +81,4 @@ Public users should continue to use `<sitename>.pozi.com`. They will not be prom
 * Make sure that the above URIs are classed as `Single-Page Application`, otherwise you may get the following error: `AADSTS9002326: Cross-origin token redemption is permitted only for the 'Single-Page Application' client-type
    - Steps: App registration -> Authentication-> platform type: SPA
 * Give Pozi the following permissions:
-  - API/Permissions Name: `User.Read`, Type: `Delegated`, Admin consent required: `No`
+  - API/Permissions Name: `User.Read`, Type: `Delegated`, Admin consent required: `No`. This should allow Pozi to determine access based on a user's role(s).
