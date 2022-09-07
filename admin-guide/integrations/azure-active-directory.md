@@ -76,6 +76,7 @@ Public users should continue to use `<sitename>.pozi.com`. They will not be prom
 * Add the following redirect URIs to the application (they are also sometimes called reply URLs):
   * https://staging.pozi.com (for testing/debugging)
   * http://localhost:3000 (for development)
-* Make sure that the above URIs are classed as `Single-Page Application`, otherwise you may get the following error: `AADSTS9002326: Cross-origin token redemption is permitted only for the 'Single-Page Application' client-type.
-
-App registration -> Authentication-> platform type: SPA
+* Make sure that the above URIs are classed as `Single-Page Application`, otherwise you may get the following error: `AADSTS9002326: Cross-origin token redemption is permitted only for the 'Single-Page Application' client-type
+* Steps: App registration -> Authentication-> platform type: SPA
+* Give Pozi the following permissions:
+  - API/Permissions Name: `User.Read`, Type: `Delegated`, Admin consent required: `No`
