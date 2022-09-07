@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.715847261436">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.715908188453">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.715847261436" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.715908188453" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.715847261436" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.715908188453" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.715847261436" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.715908188453" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -386,7 +386,9 @@
     </h3>
 </doc-anchor-target>
 <ul>
-<li>Set Pozi up in Azure as a registered app (admin privileges required): <code v-pre>https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/&lt;client_id&gt;</code></li>
+<li>Set Pozi up in Azure as a registered app (admin privileges required): <a href="https://docs.microsoft.com/en-us/azure/healthcare-apis/register-application">https://docs.microsoft.com/en-us/azure/healthcare-apis/register-application</a></li>
+<li>Record the Application id (also known as as client id)</li>
+<li>Set &#x27;Allow public client flows&#x27; to true as Pozi is a public application and does not need access to secrets</li>
 <li>Add the following URI as a registered application:
 <ul>
 <li><code v-pre>https://&lt;sitename&gt;.enterprise.pozi.com</code>. Note; do not add a trailing slash</li>
@@ -405,7 +407,7 @@
 </li>
 <li>Give Pozi the following permissions:
 <ul>
-<li>API/Permissions Name: <code v-pre>User.Read</code>, Type: <code v-pre>Delegated</code>, Admin consent required: <code v-pre>No</code></li>
+<li>API/Permissions Name: <code v-pre>User.Read</code>, Type: <code v-pre>Delegated</code>, Admin consent required: <code v-pre>No</code>. This should allow Pozi to determine access based on a user&#x27;s role(s).</li>
 </ul>
 </li>
 </ul>
