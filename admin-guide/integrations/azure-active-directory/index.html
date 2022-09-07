@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.715736728684">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.715846557326">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.715736728684" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.715846557326" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.715736728684" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.715846557326" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.715736728684" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.715846557326" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -379,19 +379,6 @@
 </doc-anchor-target>
 <p>Using <code v-pre>&lt;sitename&gt;.enterprise.pozi.com</code> forces user to authenticate before proceeding to the Pozi site. These users will gain access to the private datasets.</p>
 <p>Public users should continue to use <code v-pre>&lt;sitename&gt;.pozi.com</code>. They will not be prompted to authenticate, and they will have access to only public data.</p>
-<doc-anchor-target id="extend-access-token-lifetime">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#extend-access-token-lifetime">#</doc-anchor-trigger>
-        <span>Extend Access Token Lifetime</span>
-    </h3>
-</doc-anchor-target>
-<p>Extend the access token lifetime from 1 hour (default) to 12 hours to enable a user to continue using Pozi without the app reloading in order to refresh the access token.</p>
-<p>Reference:</p>
-<ul>
-<li><a href="https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-understand-cors-issues">https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-understand-cors-issues</a> (Option 5)</li>
-<li><a href="https://docs.microsoft.com/en-us/answers/questions/63514/cors-issue-while-using-app-throught-azure-proxy-af.html">https://docs.microsoft.com/en-us/answers/questions/63514/cors-issue-while-using-app-throught-azure-proxy-af.html</a></li>
-<li><a href="https://docs.microsoft.com/en-us/answers/questions/656764/azuread-application-proxy-some-kind-of-timeout.html">https://docs.microsoft.com/en-us/answers/questions/656764/azuread-application-proxy-some-kind-of-timeout.html</a></li>
-</ul>
 <doc-anchor-target id="register-pozi">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#register-pozi">#</doc-anchor-trigger>
@@ -407,8 +394,8 @@
 </li>
 <li>Add the following redirect URIs to the application (they are also sometimes called reply URLs):
 <ul>
-<li><a href="https://staging.pozi.com">https://staging.pozi.com</a> (for testing)</li>
-<li>http://localhost:3000 (for development/debugging)</li>
+<li><a href="https://staging.pozi.com">https://staging.pozi.com</a> (for testing/debugging)</li>
+<li>http://localhost:3000 (for development)</li>
 </ul>
 </li>
 <li>Make sure that the above URIs are classed as <code v-pre>Single-Page Application</code>, otherwise you may get the following error: &#x60;AADSTS9002326: Cross-origin token redemption is permitted only for the &#x27;Single-Page Application&#x27; client-type.</li>
