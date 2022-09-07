@@ -68,24 +68,14 @@ Using `<sitename>.enterprise.pozi.com` forces user to authenticate before procee
 
 Public users should continue to use `<sitename>.pozi.com`. They will not be prompted to authenticate, and they will have access to only public data.
 
-### Extend Access Token Lifetime
-
-Extend the access token lifetime from 1 hour (default) to 12 hours to enable a user to continue using Pozi without the app reloading in order to refresh the access token.
-
-Reference:
-
-* https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-understand-cors-issues (Option 5)
-* https://docs.microsoft.com/en-us/answers/questions/63514/cors-issue-while-using-app-throught-azure-proxy-af.html
-* https://docs.microsoft.com/en-us/answers/questions/656764/azuread-application-proxy-some-kind-of-timeout.html
-
 ### Register Pozi
 
 * Set Pozi up in Azure as a registered app (admin privileges required): `https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/<client_id>`
 * Add the following URI as a registered application:
   * `https://<sitename>.enterprise.pozi.com`. Note; do not add a trailing slash
 * Add the following redirect URIs to the application (they are also sometimes called reply URLs):
-  * https://staging.pozi.com (for testing)
-  * http://localhost:3000 (for development/debugging)
+  * https://staging.pozi.com (for testing/debugging)
+  * http://localhost:3000 (for development)
 * Make sure that the above URIs are classed as `Single-Page Application`, otherwise you may get the following error: `AADSTS9002326: Cross-origin token redemption is permitted only for the 'Single-Page Application' client-type.
 
 App registration -> Authentication-> platform type: SPA
