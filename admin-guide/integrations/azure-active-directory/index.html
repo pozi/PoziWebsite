@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.715910621524">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.715910819917">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.715910621524" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.715910819917" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.715910621524" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.715910819917" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.715910621524" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.715910819917" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -387,11 +387,11 @@
 </doc-anchor-target>
 <ul>
 <li>Set Pozi up in Azure as a registered app (admin privileges required): <a href="https://docs.microsoft.com/en-us/azure/healthcare-apis/register-application">https://docs.microsoft.com/en-us/azure/healthcare-apis/register-application</a></li>
-<li>Record the Application id (also known as as client id)</li>
+<li>Record the Application id (also known as as client id) as well as tenant id</li>
 <li>Set &#x27;Allow public client flows&#x27; to true as Pozi is a public application and does not need access to secrets</li>
 <li>Add the following URI as a registered application:
 <ul>
-<li><code v-pre>https://&lt;sitename&gt;.enterprise.pozi.com</code>. Note; do not add a trailing slash</li>
+<li><code v-pre>https://&lt;sitename&gt;.enterprise.pozi.com</code>. Note: do not add a trailing slash</li>
 </ul>
 </li>
 <li>Add the following redirect URIs to the application (they are also sometimes called reply URLs):
