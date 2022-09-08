@@ -76,8 +76,9 @@ Public users should continue to use `<sitename>.pozi.com`. They will not be prom
 * Add the following URI as a registered application:
   * `https://<sitename>.enterprise.pozi.com`. Note; do not add a trailing slash
 * Add the following redirect URIs to the application (they are also sometimes called reply URLs):
-  * https://staging.pozi.com (for testing/debugging)
-  * http://localhost:3000 (for development)
+  * `https://staging.pozi.com` (for testing/debugging)
+  * `http://localhost:3000` (for development)
+  * If needed, any extra URIs that the client uses (e.g. `https://cardinia-qgis.enterprise.pozi.com`)
 * Make sure that the above URIs are classed as `Single-Page Application`, otherwise you may get the following error: `AADSTS9002326: Cross-origin token redemption is permitted only for the 'Single-Page Application' client-type
    - Steps: App registration -> Authentication-> platform type: SPA
 * Give Pozi the following permissions:
