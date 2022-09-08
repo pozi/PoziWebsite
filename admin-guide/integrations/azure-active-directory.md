@@ -70,7 +70,7 @@ Public users should continue to use `<sitename>.pozi.com`. They will not be prom
 
 ### Register Pozi
 
-* Set Pozi up in Azure as a registered app (admin privileges required): https://docs.microsoft.com/en-us/azure/healthcare-apis/register-application
+* Set Pozi up in Azure as a registered app (admin privileges required): [https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal)
 * Record the Application id (also known as as client id) as well as tenant id
 * Set 'Allow public client flows' to true as Pozi is a public application and does not need access to secrets
 * Add the following URI as a registered application:
