@@ -71,10 +71,10 @@ Public users should continue to use `<sitename>.pozi.com`. They will not be prom
 ### Register Pozi
 
 * Set Pozi up in Azure as a registered app (admin privileges required): https://docs.microsoft.com/en-us/azure/healthcare-apis/register-application
-* Record the Application id (also known as as client id)
+* Record the Application id (also known as as client id) as well as tenant id
 * Set 'Allow public client flows' to true as Pozi is a public application and does not need access to secrets
 * Add the following URI as a registered application:
-  * `https://<sitename>.enterprise.pozi.com`. Note; do not add a trailing slash
+  * `https://<sitename>.enterprise.pozi.com`. Note: do not add a trailing slash
 * Add the following redirect URIs to the application (they are also sometimes called reply URLs):
   * `https://staging.pozi.com` (for testing/debugging)
   * `http://localhost:3000` (for development)
@@ -83,3 +83,4 @@ Public users should continue to use `<sitename>.pozi.com`. They will not be prom
    - Steps: App registration -> Authentication-> platform type: SPA
 * Give Pozi the following permissions:
   - API/Permissions Name: `User.Read`, Type: `Delegated`, Admin consent required: `No`. This should allow Pozi to determine access based on a user's role(s).
+
