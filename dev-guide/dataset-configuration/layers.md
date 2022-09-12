@@ -105,6 +105,16 @@ Attributes from the source data can be hidden from the info panel display by spe
 
 ### Transformers
 
+#### Point on Surface
+
+A `pointOnSurface` transformer enables Pozi to dynamically filter a vector layer to be display only the results that intersect with the current What's Here target geometry.
+
+```json
+    "transformer": {
+      "pointOnSurface": true
+    }
+```
+
 #### Rename and Order Fields
 
 ```json
@@ -127,7 +137,6 @@ If the source dataset complies with the [OpenCouncilData waste data spec](http:/
 
 ```json
     "transformer": {
-      "pointOnSurface": true,
       "garbage": true,
       "renameAndOrderFields": [
         {

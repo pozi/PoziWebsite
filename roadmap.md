@@ -94,6 +94,7 @@ We'll do a better job going forward keeping track of all new development and imp
 ### January 2022
 
 - [x] new: display coordinates in alternative projections
+- [x] improved: enable tolerance of WMS GetFeatureInfo clicks for QGIS Server
 
 ---
 

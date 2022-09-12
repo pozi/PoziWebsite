@@ -48,7 +48,7 @@ Preparation:
 
 ### CSV
 
-CSVs are ingested into the data.gov.au Data API where they can be queried.
+CSVs are ingested into the data.gov.au Data API where they can be queried. The first row should contain the field headings.
 
 If the data contains fields named `x`, `y`, `longitude`, `lng`, `lon`, `long`, `latitude` or `lat`, Pozi will use these to generate point geometries for each feature.
 
@@ -57,8 +57,6 @@ Example request: https://data.gov.au/api/action/datastore_search_sql?sql=SELECT%
 ### SLD
 
 Data files can be accompanied by SLD style files, which will be used by Pozi to style the layer.
-
-Example request: https://data.gov.au/api/action/datastore_search_sql?sql=SELECT%20*%20from%20%22306f9e0d-581a-4506-8de9-20283f4334a1%22
 
 ## Integration with Pozi Cloud
 
