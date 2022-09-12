@@ -339,4 +339,12 @@ Layers must be [enabled for WFS](#enable-layers-for-wfs) in order to access the 
 
 If you've already enabled a layer for WFS, and the table view option is still not available, it may be because the layer shares the same name as a layer folder. Rename the layer or folder so they are unique.
 
+==- Clicking on overlapping features shows only the details of one feature
+
+​When you select a vector feature in Pozi, it displays only the feature you've selected, and not any overlapping features that may lie underneath.
+​
+​This issue is mentioned briefly [above](#considerations-for-wfs), as a disadvantage of enabling WFS for a layer:
+
+​If you anticipate having overlapping features in a layer, consider NOT enabling the layer for WFS. Pozi will instead treat the layer as WMS. When clicking on a  location, Pozi will return the details for all overlapping features.
+​
 ==-

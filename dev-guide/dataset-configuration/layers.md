@@ -103,6 +103,16 @@ Attributes from the source data can be hidden from the info panel display by spe
   }
 ```
 
+### Linked Layers
+
+Trigger another layer to turn on when the configured layer is turned on. Useful for displaying a label layer on top of aerial photo layers.
+
+```json
+  "linkedLayers": [
+    "Vicmap Labels"
+  ]
+```
+
 ### Transformers
 
 #### Point on Surface
