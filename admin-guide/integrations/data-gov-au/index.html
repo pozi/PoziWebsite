@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.715911254130">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.716258973293">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.715911254130" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.716258973293" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.715911254130" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.716258973293" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.715911254130" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.716258973293" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -379,7 +379,7 @@
         <span>CSV</span>
     </h3>
 </doc-anchor-target>
-<p>CSVs are ingested into the data.gov.au Data API where they can be queried.</p>
+<p>CSVs are ingested into the data.gov.au Data API where they can be queried. The first row should contain the field headings.</p>
 <p>If the data contains fields named <code v-pre>x</code>, <code v-pre>y</code>, <code v-pre>longitude</code>, <code v-pre>lng</code>, <code v-pre>lon</code>, <code v-pre>long</code>, <code v-pre>latitude</code> or <code v-pre>lat</code>, Pozi will use these to generate point geometries for each feature.</p>
 <p>Example request: <a href="https://data.gov.au/api/action/datastore_search_sql?sql=SELECT%20*%20from%20%22306f9e0d-581a-4506-8de9-20283f4334a1%22">https://data.gov.au/api/action/datastore_search_sql?sql=SELECT%20*%20from%20%22306f9e0d-581a-4506-8de9-20283f4334a1%22</a></p>
 <doc-anchor-target id="sld">
@@ -389,7 +389,6 @@
     </h3>
 </doc-anchor-target>
 <p>Data files can be accompanied by SLD style files, which will be used by Pozi to style the layer.</p>
-<p>Example request: <a href="https://data.gov.au/api/action/datastore_search_sql?sql=SELECT%20*%20from%20%22306f9e0d-581a-4506-8de9-20283f4334a1%22">https://data.gov.au/api/action/datastore_search_sql?sql=SELECT%20*%20from%20%22306f9e0d-581a-4506-8de9-20283f4334a1%22</a></p>
 <doc-anchor-target id="integration-with-pozi-cloud">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#integration-with-pozi-cloud">#</doc-anchor-trigger>
