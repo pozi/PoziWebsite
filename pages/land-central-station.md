@@ -231,7 +231,7 @@ No.
 
 No council's property data is perfect. However, automation of property updates is possible with any level of data quality.
 
-Our existing M1 solution, Pozi Connect, has been generating M1s for councils for years, and already takes this into account. It's designed to not unmatch any property or remove any address information unless the council has more a complete record for that property with which to replace it. This same conservative approach will be applied for updates from the new consolidated dataset.
+Our existing M1 solution, Pozi Connect, has been generating M1s for councils for years, and already takes this into account. It's designed to not unmatch any property or remove any address information unless the council has a more complete record for that property with which to replace it. This same conservative approach will be applied for updates from the new consolidated dataset.
 
 ==- How will the system deal with special property attributes such as multi-assessment, access type and distance-based address?
 
