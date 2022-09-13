@@ -136,13 +136,6 @@ If the layer appears in QGIS Symbology mode "Embedded", switch it to "Single Sym
 ## Managing Data Fields
 
 QGIS enables you to control what users see of the data without altering the source data.
-### Rename Fields
-
-You can make field names more user-friendly by giving your field names an *alias*.
-
-Layer Properties > Attributes Form > select field > Alias
-
-![](./img/qgis-field-alias.png){style="width:600px"}
 
 ### Hide Fields
 
