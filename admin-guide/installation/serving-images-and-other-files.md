@@ -25,7 +25,7 @@ For example:
 * source file path: `\\HRCCSVRFILE01\shared\Images\Bridges\img_1001.jpg`
 * new URL:  `https://local.pozi.com/images/Bridges/img_1001.jpg`
 
-Update the image paths in the source data accordingly by prepending the URL prefix to any reference to the file name. This can be done within the data itself, or as a string expression if using a database view or VRT file.
+Update the image paths in the source data accordingly by prepending the URL prefix to any reference to the file name. This can be done within the data itself, or as a string expression if using a database view, VRT file or QGIS virtual field.
 
 ==- VRT Example
 

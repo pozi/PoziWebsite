@@ -27,7 +27,7 @@ What's involved, and who benefits?
 * the solution enables better integration with your other corporate data and applications
 * your organisation retains control over its data and processes
 
-### But why "go cloud" when...
+### But why go cloud when...
 
 #### ...your users are local
 
