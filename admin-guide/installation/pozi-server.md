@@ -296,4 +296,26 @@ Important note: any additional folders under the `server` folder that have been 
 
   If you encounter a message that says "The ping test to connect.pozi.com failed", ensure that your machine has permissions to connect to the `connect.pozi.com` domain.
 
+==- Ping test passes, but `https://local.pozi.com` cannot be accessed from a browser inside the network.
+
+  A possible reason for this may be that port 443 (SSL) is being blocked by Windows Firewall installed on the server.
+  
+  On the server where Pozi is installed, open `Windows Defender Firewall with Advanced Security` in Administrator mode.
+
+  In the `Inbound Rules` section select the first rule in the list.
+
+  ![Then push the `New Rule...` button.](/admin-guide/installation/img/firewall-create-ssl-rule.png)
+
+  ![Choose `Port` as the type of rule.](/admin-guide/installation/img/firewall-select-port-rule.png)
+
+  ![Select `Specify local ports` and enter `443` for the port.](/admin-guide/installation/img/firewall-specify-port-no.png)
+  
+  ![Keep the default of `Allow the connection`.](/admin-guide/installation/img/firewall-allow-connection.png)
+  
+  ![Unselect `Private` and `Public`. This rule should only apply to the `Domain`.](/admin-guide/installation/img/firewall-apply-to-domain.png)
+  
+  ![Name the rule something meaningful, so that it's purpose is understood.](/admin-guide/installation/img/firewall-name-rule.png)
+  
+  Once applied this firewall will allow all connections on port 443 from within the domain into the server. Check to see if the `https://local.pozi.com` can now be accessed from a browser.
+
 ==-
