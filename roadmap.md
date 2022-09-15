@@ -24,6 +24,12 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## Completed
 
+### September 2022
+
+- [x] improved: overhaul analytics capture using new Google Analytics GA4 (in preparation for monthly reports for clients)
+- [x] fixed: display clickable link in What's Here results when the selected layer's title attribute is a URL
+- [x] fixed: tolerate differences in upper/lower case in layer's specified ID field
+
 ### August 2022
 
 - [x] new: enable administrators to configure child datasets within QGIS

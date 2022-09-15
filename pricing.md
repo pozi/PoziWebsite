@@ -165,7 +165,7 @@ If your organisation uses Request For Tender (RFT) or Request For Quote (RFQ) fo
 
 Alternatively, you can avoid RFTs and RFQs altogether by keeping your organisation's commitments below its procurement thresholds. Take up a year-at-a-time Pozi subscription. There are no lock-in contracts with Pozi.
 
-Learn how organisations like yours avoid months of wasted effort on RFTs and RFQs by transitioning to a simple annual Pozi subscription.
+[Contact us](./contact/) to learn how organisations like yours avoid months of wasted effort on RFTs and RFQs by transitioning to a simple annual Pozi subscription.
 
 </br>
 

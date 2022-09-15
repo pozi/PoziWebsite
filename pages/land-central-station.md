@@ -261,15 +261,15 @@ Yes.
 
 Yes. Councils may choose to continue submitting M1s to VES using their current software and workflow.
 
-But ideally, in a scenario in which every council decides to switch, it becomes possible for DELWP to process all its updates with a more efficient format than the M1.
+But ideally, in a scenario in which every council decides to switch, it becomes possible for DELWP to internally process all its updates with a more efficient format than the M1.
 
 ==- Can this platform be used for managing and sharing other council data?
 
 Yes!
 
-For now, we're tackling council property data to eliminate the M1 burden.
+For now, we're focussing on council property data to eliminate the M1 burden.
 
-But in the future, it can be adapted to synchronise and consolidate any data that councils are required to provide in a standard format. The platform can automate the delivery of statewide spatial and non-spatial data from councils to any government agency.
+But in the future, the platform can be adapted to synchronise and consolidate any data that councils are required to provide in a standard format. The platform can automate the delivery of statewide spatial and non-spatial data from councils to any government agency.
 
 ==- Is it really going to be called Land Central Station?
 

@@ -21,6 +21,7 @@ Click on any of our client sites below to discover how Pozi serves these organis
 [!ref icon="/static/img/client-logos/bendigo.png" text="City of Greater Bendigo"](https://bendigo.pozi.com/)
 [!ref icon="/static/img/client-logos/horsham.png" text="Horsham Rural City Council"](https://horsham.pozi.com/)
 [!ref icon="/static/img/client-logos/macedonranges.png" text="Macedon Ranges Shire Council"](https://macedonranges.pozi.com/)
+[!ref icon="/static/img/client-logos/mansfield.png" text="Mansfield Shire Council"](https://mansfield.pozi.com/)
 [!ref icon="/static/img/client-logos/mitchell.png" text="Mitchell Shire Council"](https://mitchell.pozi.com/)
 [!ref icon="/static/img/client-logos/swanhill.png" text="Swan Hill Rural City Council"](https://swanhill.pozi.com/)
 [!ref icon="/static/img/client-logos/shepparton.png" text="Greater Shepparton City Council"](https://shepparton.pozi.com/)
