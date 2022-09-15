@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.716518235865">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.716551982307">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,12 +35,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.716518235865" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.716551982307" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.716518235865" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.716551982307" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.716518235865" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.716518235865" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.716551982307" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.716551982307" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -660,6 +660,19 @@
    <doc-panel id="ping-test-fails" collapsed>
        <template #title>Ping test fails</template>
 <p>If you encounter a message that says &quot;The ping test to connect.pozi.com failed&quot;, ensure that your machine has permissions to connect to the <code v-pre>connect.pozi.com</code> domain.</p>
+   </doc-panel>
+   <doc-panel id="ping-test-passes-but-https-local-pozi-com-cannot-be-accessed-from-a-browser-inside-the-network" collapsed>
+       <template #title>Ping test passes, but <code v-pre>https://local.pozi.com</code> cannot be accessed from a browser inside the network.</template>
+<p>A possible reason for this may be that port 443 (SSL) is being blocked by Windows Firewall installed on the server.</p>
+<p>On the server where Pozi is installed, open <code v-pre>Windows Defender Firewall with Advanced Security</code> in Administrator mode.</p>
+<p>In the <code v-pre>Inbound Rules</code> section select the first rule in the list.</p>
+<p><img src="../img/firewall-create-ssl-rule.png" alt="Then push the New Rule... button." /></p>
+<p><img src="../img/firewall-select-port-rule.png" alt="Choose Port as the type of rule." /></p>
+<p><img src="../img/firewall-specify-port-no.png" alt="Select Specify local ports and enter 443 for the port." /></p>
+<p><img src="../img/firewall-allow-connection.png" alt="Keep the default of Allow the connection." /></p>
+<p><img src="../img/firewall-apply-to-domain.png" alt="Unselect Private and Public. This rule should only apply to the Domain." /></p>
+<p><img src="../img/firewall-name-rule.png" alt="Name the rule something meaningful, so that it's purpose is understood." /></p>
+<p>Once applied this firewall will allow all connections on port 443 from within the domain into the server. Check to see if the <code v-pre>https://local.pozi.com</code> can now be accessed from a browser.</p>
    </doc-panel>
 </doc-panels>
 
