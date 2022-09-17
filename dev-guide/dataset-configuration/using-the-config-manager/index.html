@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.716631416918">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.716701425018">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.716631416918" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.716701425018" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.716631416918" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.716701425018" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.716631416918" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.716701425018" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -310,14 +310,14 @@
         <span>Using the Config Manager</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="ordering">
+<doc-anchor-target id="dataset-ordering">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#ordering">#</doc-anchor-trigger>
-        <span>Ordering</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dataset-ordering">#</doc-anchor-trigger>
+        <span>Dataset Ordering</span>
     </h2>
 </doc-anchor-target>
 <p>Dataset ordering affects the order in which they appear in the Layer Panel as well as the order of results in the Info Panel.</p>
-<p>To ensure that WMS GetFeatureInfo results appear at the top of the Info Panel, move all the Whats Here layers to the bottom, as well as other layers that don&#x27;t have a layer group such as searches.</p>
+<p>To ensure that WMS GetFeatureInfo results appear at the top of the Info Panel, move all &quot;Whats Here&quot; layers down below any layers that might be queryable via WMS GetFeatureInfo. Other datasets that don&#x27;t have groups (such as searches) should also be moved down to prevent these &quot;groupless&quot; layers appearing above any queryable layers.</p>
 <p>However the child datasets of the Property layer don&#x27;t seem to respect the order in which they are specified in the config.</p>
 <doc-anchor-target id="troubleshooting">
     <h2>
@@ -327,7 +327,7 @@
 </doc-anchor-target>
 <doc-panel id="the-login-page-doesn-t-respond-after-entering-credentials" collapsed>
     <template #title>The login page doesn&#x27;t respond after entering credentials</template>
-<p>Click the link for resetting the password. You might not need to actually reset the password, but clicking the link forces the page to respond. Return to the login page and try logging in again.</p>
+<p>Click the &quot;Forgot your password&quot; link to force the page to respond. Return to the login page and try logging in again.</p>
 </doc-panel>
 
                                 

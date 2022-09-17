@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.716631416918">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.716701425018">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.4.0.716631416918" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.716701425018" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.716631416918" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.716701425018" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.716631416918" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.716631416918" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.716701425018" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.716701425018" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -353,17 +353,86 @@ VectorTile
 Vicmap
 XYZ</code></pre>
 </doc-codeblock></div>
+<doc-anchor-target id="dataset-ordering">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dataset-ordering">#</doc-anchor-trigger>
+        <span>Dataset Ordering</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="layer-groups">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#layer-groups">#</doc-anchor-trigger>
+        <span>Layer Groups</span>
+    </h3>
+</doc-anchor-target>
+<p>The order of layers in the Pozi layer panel is influenced by the order in which the dataset appears in the Config Manager dataset list. The order of an individual layer is also affected by the layer&#x27;s <code v-pre>group</code> setting, and whether the group name is shared with any layer configured above it.</p>
+<p>The top layer in the list will generate a layer group based on the layer&#x27;s <code v-pre>group</code> setting. Any other layer configured with the same group name, regardless of how far down the list it appears, will be included in this same group.</p>
+<doc-anchor-target id="recommended-ordering">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#recommended-ordering">#</doc-anchor-trigger>
+        <span>Recommended Ordering</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>private layer catalogues</li>
+<li>standard layers</li>
+<li>Whats Here/child datasets
+<ul>
+<li>street view</li>
+<li>property/address</li>
+<li>other</li>
+<li>&quot;nearby&quot;</li>
+</ul>
+</li>
+<li>label layer</li>
+<li>imagery layers</li>
+<li>basemaps</li>
+<li>searches</li>
+</ul>
+<doc-anchor-target id="whats-here">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#whats-here">#</doc-anchor-trigger>
+        <span>Whats Here</span>
+    </h3>
+</doc-anchor-target>
+<p>Because <code v-pre>Whats Here</code> layers are configured to be hidden from the layer panel, it typically doesn&#x27;t matter where in the order they are defined. <em>However</em>, any &quot;Nearby&quot; datasets configured will display in the map as a normal layers. For this reason, these datasets need to be configured above the basemap, aerial and label layers.</p>
+<p>To ensure that WMS GetFeatureInfo results appear at the top of the Info Panel, move any &quot;Whats Here&quot; layers below any layers that might be queryable via WMS GetFeatureInfo.</p>
+<doc-anchor-target id="imagery">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#imagery">#</doc-anchor-trigger>
+        <span>Imagery</span>
+    </h3>
+</doc-anchor-target>
+<p>The topmost layer in Imagery group will be activated when the user clicks the Aerial photo button in the map.</p>
+<p>Layers in the Imagery group are listed with radio buttons instead of tickboxes.</p>
+<doc-anchor-target id="searches">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#searches">#</doc-anchor-trigger>
+        <span>Searches</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>the topmost search dataset becomes the default search presented to the user</li>
+<li>if the topmost search dataset(s) are private, public users will have the topmost non-private search as their default</li>
+</ul>
+<p>Layers in the Basemap group are listed with radio buttons instead of tickboxes.</p>
+<doc-anchor-target id="miscellenous">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#miscellenous">#</doc-anchor-trigger>
+        <span>Miscellenous</span>
+    </h2>
+</doc-anchor-target>
 <doc-anchor-target id="link-out">
-    <h4>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#link-out">#</doc-anchor-trigger>
         <span>Link-Out</span>
-    </h4>
+    </h3>
 </doc-anchor-target>
 <doc-anchor-target id="web-application">
-    <h5>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#web-application">#</doc-anchor-trigger>
         <span>Web Application</span>
-    </h5>
+    </h4>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-json"><code v-pre class="language-json">  &quot;externalLinks&quot;: [
@@ -376,10 +445,10 @@ XYZ</code></pre>
   ],</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="windows-application-via-url-protocol">
-    <h5>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#windows-application-via-url-protocol">#</doc-anchor-trigger>
         <span>Windows Application via URL Protocol</span>
-    </h5>
+    </h4>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-json"><code v-pre class="language-json">  &quot;externalLinks&quot;: [
