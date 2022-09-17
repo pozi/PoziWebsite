@@ -88,7 +88,27 @@ Notes:
 
 If the source of a *What's Here* dataset is a static GeoJSON, the configuration requires the `"pointOnSurface": true` transformer function.
 
-*To do: add example*
+==- Example
+
+```json
+{
+  "title": "Work Zone for Grading",
+  "type": "GeoJSON",
+  "parent": "Whats Here",
+  "showInLayerControl": false,
+  "config": {
+    "spatial": {
+      "loader": "geojson",
+      "url": "https://data.gov.au/data/dataset/3384d5aa-4c1c-4e4b-b58a-6ce1ebb75abc/resource/2e9ce837-8699-4523-839e-4548e11546d9/download/ssc_work_zones_epsg4326_polygon.geojson"
+    },
+    "transformer": {
+      "pointOnSurface": true
+    }
+  }
+}
+```
+
+==-
 
 ### Dynamic Datasets
 

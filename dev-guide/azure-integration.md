@@ -49,3 +49,11 @@ Public users should continue to use `[sitename].pozi.com`. They will not be prom
 ## Resource Check
 
 Example: https://pozi-cardiniavicgovau.msappproxy.net/resourcecheck/cardinia.json
+
+## Troubleshooting
+
+==- User is logged in to Microsoft but cannot access private datasets
+
+Ensure the user's browser's privacy settings allow third party cookies.
+
+==-
