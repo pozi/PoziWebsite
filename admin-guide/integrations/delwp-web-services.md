@@ -19,6 +19,8 @@ Instructions for publishing IWS imagery layers in Pozi:
 
 If you don't have credentials to log in to IWS, contact coordinated.imagery@delwp.vic.gov.au. New clients for Pozi will also need to pass any new credentials on to support@pozi.com so that Pozi can be configured to access to the layers. (Client credentials will remain private within Pozi's web proxy service).
 
+Credentials for the Image Web Server: http://services.land.vic.gov.au/MyProfile/
+
 ## Vicmap Basemap
 
 ## DataVic WMS/WFS

@@ -1,7 +1,8 @@
 ---
-title: Configuring Widgets
 order: 60
 ---
+
+# Widget Configuration
 
 It is not necessary to have developer access to configure Pozi widgets. Widget configuration instructions can be found on the [Widgets (Administrator Guide)](/admin-guide/widgets/) page.
 
