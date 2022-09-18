@@ -6,9 +6,13 @@ order: 100
 
 Catalogues are collections of layers that are available from a single endpoint.
 
-## QGIS Server
+## Settings
 
-### Configuration
+## Sources
+
+### QGIS Server
+
+#### Configuration
 
 !!!note
 
@@ -63,9 +67,9 @@ When specifying the URL for QGS project files, any backslashes must be converted
 
 ==-
 
-## WMS (Web Map Service)
+### WMS (Web Map Service)
 
-### Configuration
+#### Configuration
 
 ==- QGIS Server Example
 
@@ -100,7 +104,7 @@ When specifying the URL for QGS project files, any backslashes must be converted
 
 ==-
 
-### Single-Layer Catalogue
+#### Single-Layer Catalogue
 
 When you specify a reference to an individual layer in the GetCapabilities URL, you can effectively use the response as a single-layer catalogue.
 
@@ -109,9 +113,9 @@ Examples:
 * https://data.gov.au/geoserver/southern-grampians-contours/wms?request=GetCapabilities
 * https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/WATER_STORAGE/wms?request=getCapabilities
 
-### Custom Catalogues
+#### Custom Catalogues
 
-#### DataVic
+##### DataVic
 
 The [DataVic WMS GetCapabilities](https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms?request=getCapabilities) is a 1MB file containing over 600 layers. While it's possible for Pozi to consume this entire catalogue, it will slow down the app load, and the user would see all 600 layers in a single layer group.
 
@@ -119,7 +123,7 @@ To provide a faster and more useful user experience, the catalogue is customised
 
 These custom catalogue files can be hosted as static files.
 
-##### Vicmap Admin
+###### Vicmap Admin
 
 1. download [DataVic WMS GetCapabilities](https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms?request=getCapabilities) and save as `datavic-wms.xml`
 2. save copy as `datavic-wms-vmadmin.xml`
@@ -151,9 +155,9 @@ These custom catalogue files can be hosted as static files.
 
 ==-
 
-## WFS (Web Feature Service)
+### WFS (Web Feature Service)
 
-### Configuration
+#### Configuration
 
 ==- QGIS Server Example
 
@@ -184,9 +188,9 @@ These custom catalogue files can be hosted as static files.
 
 ==-
 
-#### Parameters
+##### Parameters
 
-##### Restrict results to bounding box
+###### Restrict results to bounding box
 
 ```json
   "config": {
@@ -214,7 +218,7 @@ These custom catalogue files can be hosted as static files.
 }
 ```
 
-##### OGC Filter
+###### OGC Filter
 
 WFS requests utilise OGC filters that can be applied to target specific records.
 
@@ -223,11 +227,11 @@ WFS requests utilise OGC filters that can be applied to target specific records.
 
 ==-
 
-### Custom Catalogues
+#### Custom Catalogues
 
-#### data.gov.au
+##### data.gov.au
 
-##### Southern Grampians Land Capability
+###### Southern Grampians Land Capability
 
 1. go to https://jsonformatter.org/xml-pretty-print
 2. Load Data > Load URL > `https://data.gov.au/geoserver/wfs?request=GetCapabilities`
