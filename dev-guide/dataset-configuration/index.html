@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.716701425018">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.716802225801">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.4.0.716701425018" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.716802225801" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.716701425018" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.716802225801" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.716701425018" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.716701425018" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.716802225801" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.716802225801" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -353,6 +353,220 @@ VectorTile
 Vicmap
 XYZ</code></pre>
 </doc-codeblock></div>
+<doc-anchor-target id="basic-example">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#basic-example">#</doc-anchor-trigger>
+        <span>Basic Example</span>
+    </h2>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;title&quot;: &quot;Maternal and Child Health Zones&quot;,
+  &quot;group&quot;: &quot;Family Services&quot;,
+  &quot;type&quot;: &quot;GeoJSON&quot;,
+  &quot;config&quot;: {
+    &quot;spatial&quot;: {
+      &quot;url&quot;: &quot;https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=data.gov.au/bendigo/cogb-community-mach-zones.shz&quot;,
+      &quot;label&quot;: &quot;Name&quot;,
+      &quot;id&quot;: &quot;Name&quot;
+    }
+  },
+  &quot;styleGeoStyler&quot;: {
+    &quot;type&quot;: &quot;SLD&quot;,
+    &quot;url&quot;: &quot;https://config.pozi.com/public/files/cogb_mach_zones.sld&quot;
+  },
+  &quot;opacity&quot;: 0.8,
+  &quot;queryable&quot;: true,
+  &quot;showInLayerControl&quot;: true
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="settings">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#settings">#</doc-anchor-trigger>
+        <span>Settings</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li><code v-pre>&quot;title&quot;:</code> use plural name where practical</li>
+<li><code v-pre>&quot;group&quot;:</code> the name of the layer group in which the layer will appear in the layer panel</li>
+</ul>
+<doc-anchor-target id="options">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#options">#</doc-anchor-trigger>
+        <span>Options</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="enabled">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#enabled">#</doc-anchor-trigger>
+        <span>Enabled</span>
+    </h4>
+</doc-anchor-target>
+<p>Set to <code v-pre>false</code> to prevent the dataset from being configured in Pozi. The default value is <code v-pre>true</code>.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">  &quot;enabled&quot;: false,</code></pre>
+</doc-codeblock></div>
+<p>This setting goes beyond simply hiding the layer as per the <code v-pre>showInLayerControl</code> setting. It causes Pozi to completely ignore the dataset and make it unavailable as a layer or child dataset. In the case of the source being a catalogue, it will prevent Pozi from sending a GetCapabilities request.</p>
+<doc-anchor-target id="queryable">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#queryable">#</doc-anchor-trigger>
+        <span>Queryable</span>
+    </h4>
+</doc-anchor-target>
+<p>Control whether the features in this layer are queryable/selectable by the user clicking in the map.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">  &quot;queryable&quot;: true,</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="opacity">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#opacity">#</doc-anchor-trigger>
+        <span>Opacity</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">  &quot;opacity&quot;: 0.7,</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="metadata">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#metadata">#</doc-anchor-trigger>
+        <span>Metadata</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">  &quot;about&quot;: {
+    &quot;source&quot;: &quot;National Public Toilet Map&quot;,
+    &quot;organisation&quot;: &quot;Australian Department of Health&quot;,
+    &quot;url&quot;: &quot;https://data.gov.au/dataset/ds-dga-553b3049-2b8b-46a2-95e6-640d7986a8c1&quot;
+  },</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="zoom-levels">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#zoom-levels">#</doc-anchor-trigger>
+        <span>Zoom Levels</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">  &quot;minZoom&quot;: 16,
+  &quot;maxResolution&quot;: 4</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="include-fields">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#include-fields">#</doc-anchor-trigger>
+        <span>Include Fields</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">  &quot;config&quot;: {
+    &quot;spatial&quot;: {
+      &quot;include&quot;: [
+        &quot;ADD_EZI_ADDRESS&quot;,
+        &quot;PROP_PROPNUM&quot;,
+        &quot;PROP_STATUS&quot;,
+        &quot;PLANNING PROPERTY REPORT&quot;
+      ]
+    }
+  }</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="exclude-fields">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exclude-fields">#</doc-anchor-trigger>
+        <span>Exclude Fields</span>
+    </h4>
+</doc-anchor-target>
+<p>Attributes from the source data can be hidden from the info panel display by specifying the fields in an <code v-pre>exclude</code> array, nested under the <code v-pre>spatial</code> setting.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">  &quot;config&quot;: {
+    &quot;spatial&quot;: {
+      &quot;exclude&quot;: [
+        &quot;type&quot;,
+        &quot;subtype&quot;
+      ]
+    }
+  }</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="linked-layers">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#linked-layers">#</doc-anchor-trigger>
+        <span>Linked Layers</span>
+    </h4>
+</doc-anchor-target>
+<p>Trigger another layer to turn on when the configured layer is turned on. Useful for displaying a label layer on top of aerial photo layers.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">  &quot;linkedLayers&quot;: [
+    &quot;Vicmap Labels&quot;
+  ]</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="transformers">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#transformers">#</doc-anchor-trigger>
+        <span>Transformers</span>
+    </h4>
+</doc-anchor-target>
+<doc-anchor-target id="point-on-surface">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#point-on-surface">#</doc-anchor-trigger>
+        <span>Point on Surface</span>
+    </h5>
+</doc-anchor-target>
+<p>A <code v-pre>pointOnSurface</code> transformer enables Pozi to dynamically filter a vector layer to be display only the results that intersect with the current What&#x27;s Here target geometry.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">    &quot;transformer&quot;: {
+      &quot;pointOnSurface&quot;: true
+    }</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="rename-and-order-fields">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#rename-and-order-fields">#</doc-anchor-trigger>
+        <span>Rename and Order Fields</span>
+    </h5>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">    &quot;transformer&quot;: {
+      &quot;renameAndOrderFields&quot;: [
+        {
+          &quot;wetland_no&quot;: &quot;Wetland Number&quot;
+        },
+        {
+          &quot;name_main&quot;: &quot;Name&quot;
+        },
+        {
+          &quot;name_alt&quot;: &quot;Name (Alternate)&quot;
+        },</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="garbage">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#garbage">#</doc-anchor-trigger>
+        <span>Garbage</span>
+    </h5>
+</doc-anchor-target>
+<p>If the source dataset complies with the <a href="http://standards.opencouncildata.org/#/garbage-collection-zones">OpenCouncilData waste data spec</a>, Pozi will use the information in the table to calculate and display the next waste collection date.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">    &quot;transformer&quot;: {
+      &quot;garbage&quot;: true,
+      &quot;renameAndOrderFields&quot;: [
+        {
+          &quot;rubbish_next_pickup&quot;: &quot;Next Rubbish Pickup&quot;
+        },
+        {
+          &quot;recycling_next_pickup&quot;: &quot;Next Recycling Pickup&quot;
+        },
+        {
+          &quot;green_waste_next_pickup&quot;: &quot;Next Organics Pickup&quot;
+        }
+      ]
+    }</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="promote-details">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#promote-details">#</doc-anchor-trigger>
+        <span>Promote Details</span>
+    </h4>
+</doc-anchor-target>
+<p>Display the feature&#x27;s attributes (which would normally be displayed in the Details panel of the child record) directly in within the parent, taking the place of the child title.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">  &quot;promoteDetails&quot;: true</code></pre>
+</doc-codeblock></div>
+<p>Only to be used when there is no requirement to view Location/Dimensions, Source or any child records.</p>
 <doc-anchor-target id="dataset-ordering">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#dataset-ordering">#</doc-anchor-trigger>
@@ -416,10 +630,10 @@ XYZ</code></pre>
 <li>if the topmost search dataset(s) are private, public users will have the topmost non-private search as their default</li>
 </ul>
 <p>Layers in the Basemap group are listed with radio buttons instead of tickboxes.</p>
-<doc-anchor-target id="miscellenous">
+<doc-anchor-target id="miscellaneous">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#miscellenous">#</doc-anchor-trigger>
-        <span>Miscellenous</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#miscellaneous">#</doc-anchor-trigger>
+        <span>Miscellaneous</span>
     </h2>
 </doc-anchor-target>
 <doc-anchor-target id="link-out">
