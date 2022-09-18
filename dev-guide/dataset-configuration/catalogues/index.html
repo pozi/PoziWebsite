@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.716802225801">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.716805366510">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.716802225801" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.716805366510" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.716802225801" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.716805366510" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.716802225801" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.716802225801" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.716805366510" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.716805366510" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -310,17 +310,29 @@
     </h1>
 </doc-anchor-target>
 <p>Catalogues are collections of layers that are available from a single endpoint.</p>
-<doc-anchor-target id="qgis-server">
+<doc-anchor-target id="settings">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#qgis-server">#</doc-anchor-trigger>
-        <span>QGIS Server</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#settings">#</doc-anchor-trigger>
+        <span>Settings</span>
     </h2>
 </doc-anchor-target>
-<doc-anchor-target id="configuration">
+<doc-anchor-target id="sources">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#sources">#</doc-anchor-trigger>
+        <span>Sources</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="qgis-server">
     <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#qgis-server">#</doc-anchor-trigger>
+        <span>QGIS Server</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="configuration">
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#configuration">#</doc-anchor-trigger>
         <span>Configuration</span>
-    </h3>
+    </h4>
 </doc-anchor-target>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
@@ -388,16 +400,16 @@
    </doc-panel>
 </doc-panels>
 <doc-anchor-target id="wms-web-map-service">
-    <h2>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#wms-web-map-service">#</doc-anchor-trigger>
         <span>WMS (Web Map Service)</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <doc-anchor-target id="configuration-1">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#configuration-1">#</doc-anchor-trigger>
         <span>Configuration</span>
-    </h3>
+    </h4>
 </doc-anchor-target>
 <doc-panels>
    <doc-panel id="qgis-server-example" collapsed>
@@ -433,10 +445,10 @@
    </doc-panel>
 </doc-panels>
 <doc-anchor-target id="single-layer-catalogue">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#single-layer-catalogue">#</doc-anchor-trigger>
         <span>Single-Layer Catalogue</span>
-    </h3>
+    </h4>
 </doc-anchor-target>
 <p>When you specify a reference to an individual layer in the GetCapabilities URL, you can effectively use the response as a single-layer catalogue.</p>
 <p>Examples:</p>
@@ -445,25 +457,25 @@
 <li><a href="https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/WATER_STORAGE/wms?request=getCapabilities">https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/WATER_STORAGE/wms?request=getCapabilities</a></li>
 </ul>
 <doc-anchor-target id="custom-catalogues">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#custom-catalogues">#</doc-anchor-trigger>
         <span>Custom Catalogues</span>
-    </h3>
+    </h4>
 </doc-anchor-target>
 <doc-anchor-target id="datavic">
-    <h4>
+    <h5>
         <doc-anchor-trigger class="header-anchor-trigger" to="#datavic">#</doc-anchor-trigger>
         <span>DataVic</span>
-    </h4>
+    </h5>
 </doc-anchor-target>
 <p>The <a href="https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms?request=getCapabilities">DataVic WMS GetCapabilities</a> is a 1MB file containing over 600 layers. While it&#x27;s possible for Pozi to consume this entire catalogue, it will slow down the app load, and the user would see all 600 layers in a single layer group.</p>
 <p>To provide a faster and more useful user experience, the catalogue is customised to remove unwanted layers and split it into separate catalogues to be shown in separate layer groups.</p>
 <p>These custom catalogue files can be hosted as static files.</p>
 <doc-anchor-target id="vicmap-admin">
-    <h5>
+    <h6>
         <doc-anchor-trigger class="header-anchor-trigger" to="#vicmap-admin">#</doc-anchor-trigger>
         <span>Vicmap Admin</span>
-    </h5>
+    </h6>
 </doc-anchor-target>
 <ol>
 <li>download <a href="https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms?request=getCapabilities">DataVic WMS GetCapabilities</a> and save as <code v-pre>datavic-wms.xml</code></li>
@@ -499,16 +511,16 @@
 </doc-codeblock></div>
 </doc-panel>
 <doc-anchor-target id="wfs-web-feature-service">
-    <h2>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#wfs-web-feature-service">#</doc-anchor-trigger>
         <span>WFS (Web Feature Service)</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <doc-anchor-target id="configuration-2">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#configuration-2">#</doc-anchor-trigger>
         <span>Configuration</span>
-    </h3>
+    </h4>
 </doc-anchor-target>
 <doc-panel id="qgis-server-example" collapsed>
     <template #title>QGIS Server Example</template>
@@ -538,16 +550,16 @@
 </ul>
 </doc-panel>
 <doc-anchor-target id="parameters">
-    <h4>
+    <h5>
         <doc-anchor-trigger class="header-anchor-trigger" to="#parameters">#</doc-anchor-trigger>
         <span>Parameters</span>
-    </h4>
+    </h5>
 </doc-anchor-target>
 <doc-anchor-target id="restrict-results-to-bounding-box">
-    <h5>
+    <h6>
         <doc-anchor-trigger class="header-anchor-trigger" to="#restrict-results-to-bounding-box">#</doc-anchor-trigger>
         <span>Restrict results to bounding box</span>
-    </h5>
+    </h6>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-json"><code v-pre class="language-json">  &quot;config&quot;: {
@@ -574,10 +586,10 @@
 }</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="ogc-filter">
-    <h5>
+    <h6>
         <doc-anchor-trigger class="header-anchor-trigger" to="#ogc-filter">#</doc-anchor-trigger>
         <span>OGC Filter</span>
-    </h5>
+    </h6>
 </doc-anchor-target>
 <p>WFS requests utilise OGC filters that can be applied to target specific records.</p>
 <ul>
@@ -586,22 +598,22 @@
 </ul>
 </doc-panel>
 <doc-anchor-target id="custom-catalogues-1">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#custom-catalogues-1">#</doc-anchor-trigger>
         <span>Custom Catalogues</span>
-    </h3>
-</doc-anchor-target>
-<doc-anchor-target id="datagovau">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#datagovau">#</doc-anchor-trigger>
-        <span>data.gov.au</span>
     </h4>
 </doc-anchor-target>
-<doc-anchor-target id="southern-grampians-land-capability">
+<doc-anchor-target id="datagovau">
     <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#datagovau">#</doc-anchor-trigger>
+        <span>data.gov.au</span>
+    </h5>
+</doc-anchor-target>
+<doc-anchor-target id="southern-grampians-land-capability">
+    <h6>
         <doc-anchor-trigger class="header-anchor-trigger" to="#southern-grampians-land-capability">#</doc-anchor-trigger>
         <span>Southern Grampians Land Capability</span>
-    </h5>
+    </h6>
 </doc-anchor-target>
 <ol>
 <li>go to <a href="https://jsonformatter.org/xml-pretty-print">https://jsonformatter.org/xml-pretty-print</a></li>
