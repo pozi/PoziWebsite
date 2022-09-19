@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.716887065116">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.716890488800">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.716887065116" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.716890488800" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.716887065116" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.716890488800" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.716887065116" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.716887065116" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.716890488800" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.716890488800" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -332,6 +332,12 @@
 <li><code v-pre>&quot;!(kinder* | *zones | *bus*)&quot;</code>: hide all layers that start with <code v-pre>kinder</code>, end with <code v-pre>zones</code> or have the word <code v-pre>bus</code> anywhere in the layer name</li>
 <li><code v-pre>&quot;(*urban* | *commercial*), !(*boundary | *dem*)&quot;</code>: show all layers that either have <code v-pre>urban</code> or <code v-pre>commercial</code> in their name but exclude any of these matching layers that end with <code v-pre>boundary</code> or have <code v-pre>dem</code> anywhere in the name</li>
 </ul>
+<doc-panel id="example" collapsed>
+    <template #title>Example</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">  &quot;layerFilter&quot;: &quot;(*urban*|*commercial*), !*boundary&quot;,</code></pre>
+</doc-codeblock></div>
+</doc-panel>
 <doc-anchor-target id="sources">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#sources">#</doc-anchor-trigger>
