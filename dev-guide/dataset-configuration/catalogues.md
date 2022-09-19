@@ -30,7 +30,7 @@ The matching is case-insensitive and allows for the use of wildcards for inclusi
 
 !!!note
 
-When specifying the URL for QGS project files, any backslashes must be converted to forward slashes.
+When specifying the URL for QGIS project files, any backslashes must be converted to forward slashes.
 
 !!!
 
