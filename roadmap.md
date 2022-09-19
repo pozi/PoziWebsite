@@ -18,7 +18,6 @@ We also offer clients the opportunity to sponsor development of new features, gi
 ## Upcoming
 
 - [ ] don't unhighlight parent object when clicking on a non-spatial child record
-- [ ] obtain layer opacity setting from QGIS Server
 - [ ] obtain layer title/label field setting from QGIS Server
 - [ ] prevent Share links from capturing the panel state (unless specified in advanced options)
 
@@ -26,6 +25,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ### September 2022
 
+- [x] new: use layer opacity setting from QGIS Server
 - [x] new: enable layer catalogues to be filtered to include/exclude layers
 - [x] new: use field name aliases from QGIS project
 - [x] improved: overhaul analytics capture using new Google Analytics GA4 (in preparation for monthly reports for clients)

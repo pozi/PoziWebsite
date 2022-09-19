@@ -292,11 +292,11 @@ Important note: any additional folders under the `server` folder that have been 
   .\nssm.exe install PoziConnectServer "C:\Program Files (x86)\Pozi\server\poziserver.exe"
   ```
 
-==- Ping test fails
+==- Ping test fails during installation
 
   If you encounter a message that says "The ping test to connect.pozi.com failed", ensure that your machine has permissions to connect to the `connect.pozi.com` domain.
 
-==- Ping test passes, but `https://local.pozi.com` cannot be accessed from a browser inside the network.
+==- Browser cannot reach `[servername].pozi.com`
 
   A possible reason for this may be that port 443 (SSL) is being blocked by Windows Firewall installed on the server.
   
@@ -326,6 +326,6 @@ Important note: any additional folders under the `server` folder that have been 
   
   ![](/admin-guide/installation/img/firewall-name-rule.png)
   
-  Once applied this firewall will allow all connections on port 443 from within the domain into the server. Check to see if the `https://local.pozi.com` can now be accessed from a browser.
+  Once applied this firewall will allow all connections on port 443 from within the domain into the server. Check to see if the `https://[servername].pozi.com` can now be accessed from a browser.
 
 ==-

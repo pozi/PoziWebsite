@@ -22,6 +22,14 @@ The matching is case-insensitive and allows for the use of wildcards for inclusi
 * `"!(kinder* | *zones | *bus*)"`: hide all layers that start with `kinder`, end with `zones` or have the word `bus` anywhere in the layer name
 * `"(*urban* | *commercial*), !(*boundary | *dem*)"`: show all layers that either have `urban` or `commercial` in their name but exclude any of these matching layers that end with `boundary` or have `dem` anywhere in the name
 
+==- Example
+
+```json
+  "layerFilter": "(*urban*|*commercial*), !*boundary",
+```
+
+==-
+
 ## Sources
 
 ### QGIS Server
