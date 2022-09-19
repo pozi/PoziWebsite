@@ -12,7 +12,7 @@ Catalogues are collections of layers that are available from a single endpoint.
 
 The `layerFilter` setting allows for managing what layers to show/hide. Only the layers that match the filter will be shown.
 
-The matching is case-insensitive and allows for the use of wildcards for inclusion/exclusion which makes it quite powerful.
+The matching is case-insensitive and allows for the use of wildcards for inclusion/exclusion, which makes it quite powerful.
 
 **Example filter settings**:
 
