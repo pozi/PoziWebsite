@@ -200,7 +200,7 @@ WFS (Web Feature Service) provides users with the ability to directly interact w
 #### Advantages
 
 * layers are fully interactive using Pozi's filter, report and table view functionality
-* after the layer is loaded in the browser, the browser doesn't not need to send further requests for the layer to the server every time the map moves
+* after the layer is loaded in the browser, the browser doesn't need to send further requests for the layer to the server every time the map moves
 * the cursor changes when hovering over object to indicate the feature is clickable
 * users can select an individual feature and display its details in Info Panel (without displaying results of features on other layers at the same location)
 
