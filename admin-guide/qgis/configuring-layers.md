@@ -191,11 +191,11 @@ If the value in the field is a URL (as in this example), Pozi will display it as
 
 If the value is a URL ending in `.png` or `.jpg`, Pozi will display a thumbnail of the target image.
 
-## Enable Layers for WFS
+## Publish as Vector Layer
 
-WFS (Web Feature Service) provides users with the ability to directly interact with map features as *vector* objects. When a WFS layer is turned on in Pozi, every feature from the source dataset is loaded in the browser, including all geometries and attributes.
+Publish a layer as a *vector layer* enables users to directly interact with map features. When a vector layer is turned on in Pozi, every feature from the source dataset is loaded in the browser, including all geometries and attributes. Users can make use of advanced functionality such as filtering and table view.
 
-### Considerations for WFS
+By default, QGIS Server does NOT expose layers as vectors. Evaluate the pros and cons of using vectors for your layer, and if appropriate, follow the directions below to enable it.
 
 #### Advantages
 
@@ -209,16 +209,14 @@ WFS (Web Feature Service) provides users with the ability to directly interact w
 * the browser can be easily overwhelmed when dealing with thousands of features or complex features with many vertices, resulting in slow map rendering
 * not all QGIS styles are supported in Pozi for vector features
 * only one vector feature can be selected at a time - info results are not displayed for any features that have been overlapped by another feature
-* cannot directly use text expressions for labels (but you can still make use of virtual fields for creating generating label values)
+* cannot directly use text expressions for labels (but you can still make use of virtual fields for creating generating custom label values)
 
-As a guideline, enable WFS only for layers with fewer than 5-10K features, or even fewer for layers with complex polylines or polygons.
+As a guideline, use vectors only for layers with fewer than 5-10K features, or even fewer for layers with complex polylines or polygons.
 
-### Enable WFS
-
-Once you've weighed up the pros and cons of using WFS for your layer, you can enable it as follows:
+### Enabling Vector Layer
 
 1. Project > Properties > QGIS Server
-2. `WFS capabilities > Published`: tick on for each layer to be published, or click `Select All` if all layers are required
+2. `WFS capabilities > Published`: tick on for each layer to be published (or you can click `Select All` if all layers are required)
 3. OK
 4. Project > Save (`Ctrl` + `S`)
 
