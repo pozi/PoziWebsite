@@ -16,16 +16,16 @@ The matching is case-insensitive and allows for the use of wildcards for inclusi
 
 **Example filter settings**:
 
-* `"kindergartens, schools"`: only show the layers that are called `kindergartens` or `schools`
-* `"kinder*, *zones, *bus*"`: show all layers that start with `kinder`, end with `zones` or have the word `bus` anywhere in the layer name
+* `"kindergartens; schools"`: only show the layers that are called `kindergartens` or `schools`
+* `"kinder*; *zones; *bus*"`: show all layers that start with `kinder`, end with `zones` or have the word `bus` anywhere in the layer name
 * `"!(child care centres | schools)"`: hide layers that are called `child care centres` or `schools`
 * `"!(kinder* | *zones | *bus*)"`: hide all layers that start with `kinder`, end with `zones` or have the word `bus` anywhere in the layer name
-* `"(*urban* | *commercial*), !(*boundary | *dem*)"`: show all layers that either have `urban` or `commercial` in their name but exclude any of these matching layers that end with `boundary` or have `dem` anywhere in the name
+* `"(*urban* | *commercial*); !(*boundary | *dem*)"`: show all layers that either have `urban` or `commercial` in their name but exclude any of these matching layers that end with `boundary` or have `dem` anywhere in the name
 
 ==- Example
 
 ```json
-  "layerFilter": "(*urban*|*commercial*), !*boundary",
+  "layerFilter": "(*urban*|*commercial*); !*boundary",
 ```
 
 ==-
