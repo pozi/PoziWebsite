@@ -72,7 +72,7 @@ Public users should continue to use `<sitename>.pozi.com`. They will not be prom
 
 * Set Pozi up in Azure as a registered app (admin privileges required): [https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal)
 * Record the Application id (also known as as client id) as well as tenant id
-* Set 'Allow public client flows' to true as Pozi is a public application and does not need access to secrets
+* Set 'Allow public client flows' to false
 * Add the following URI as a registered application:
   * `https://<sitename>.enterprise.pozi.com`. Note: do not add a trailing slash
 * Add the following redirect URIs to the application (they are also sometimes called reply URLs):
