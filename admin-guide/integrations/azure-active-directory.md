@@ -41,7 +41,7 @@ Example:
 
 ## Configuration
 
-### Add App
+### Azure Add App Proxy
 
 Microsoft documentation: https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-add-on-premises-application#add-an-on-premises-app-to-azure-ad
 
@@ -62,25 +62,28 @@ When configured correctly, a request from a logged-in user to URL (for example).
 
 Ensure it doesn't return a response to a non-logged-in or anonymous user.
 
+### Azure Add App Registration
+
+* Set Pozi up in Azure as a registered app (admin privileges required): [https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal)
+* Record the Application id (also known as as client id) as well as tenant id
+
+#### Authentication
+* Add the App Proxy URL to `Redirect URIs` to the `Web` section. E.g.:
+  * `https://pozi-cardiniavicgovau.msappproxy.net`
+* Add the following `Redirect URIs` to the `Single-page application` section:
+  * `https://<sitename>.enterprise.pozi.com/*`. Note: the wildcard is required
+  * `https://staging.pozi.com/*` (for testing/debugging)
+  * `http://localhost:3000/*` (for development)
+  * If needed, add any extra URIs that the client uses (e.g. `https://cardinia-qgis.enterprise.pozi.com/*`)
+* In `Implicit grant and hybrid flows`: select both `Access tokens` anda `ID tokens`
+* In `Advanced settings`: Set 'Allow public client flows' to `No`
+
+#### API Permissions
+* Give Pozi the following permissions:
+  - API/Permissions Name: `User.Read`, Type: `Delegated`, Admin consent required: `No`. This should allow Pozi to determine access based on a user's role(s).
+
 ### Site URL
 
 Using `<sitename>.enterprise.pozi.com` forces user to authenticate before proceeding to the Pozi site. These users will gain access to the private datasets.
 
 Public users should continue to use `<sitename>.pozi.com`. They will not be prompted to authenticate, and they will have access to only public data.
-
-### Register Pozi
-
-* Set Pozi up in Azure as a registered app (admin privileges required): [https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal)
-* Record the Application id (also known as as client id) as well as tenant id
-* Set 'Allow public client flows' to false
-* Add the following URI as a registered application:
-  * `https://<sitename>.enterprise.pozi.com`. Note: do not add a trailing slash
-* Add the following redirect URIs to the application (they are also sometimes called reply URLs):
-  * `https://staging.pozi.com` (for testing/debugging)
-  * `http://localhost:3000` (for development)
-  * If needed, any extra URIs that the client uses (e.g. `https://cardinia-qgis.enterprise.pozi.com`)
-* Make sure that the above URIs are classed as `Single-Page Application`, otherwise you may get the following error: `AADSTS9002326: Cross-origin token redemption is permitted only for the 'Single-Page Application' client-type
-   - Steps: App registration -> Authentication-> platform type: SPA
-* Give Pozi the following permissions:
-  - API/Permissions Name: `User.Read`, Type: `Delegated`, Admin consent required: `No`. This should allow Pozi to determine access based on a user's role(s).
-
