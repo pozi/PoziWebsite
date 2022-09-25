@@ -92,11 +92,11 @@ If the UI in `Single-page application` does not allow this, it may be possible t
             "type": "Spa"
         },
         {
-            "url": "https://next.enterprise.pozi.com/*",
+            "url": "https://cardinia-qgis.enterprise.pozi.com/*",
             "type": "Spa"
         },
         {
-            "url": "https://pozicloudserver-teampozi.msappproxy.net/",
+            "url": "https://pozi-cardiniavicgovau.msappproxy.net",
             "type": "Web"
         }
     ],
