@@ -39,9 +39,9 @@ Example:
 * Public URL: `https://<sitename>.pozi.com/`
 * Staff URL: `https://<sitename>.enterprise.pozi.com/`
 
-## Configuration
+## Azure Configuration
 
-### Azure Add App Proxy
+### App Proxy
 
 Microsoft documentation: https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-add-on-premises-application#add-an-on-premises-app-to-azure-ad
 
@@ -62,7 +62,7 @@ When configured correctly, a request from a logged-in user to URL (for example).
 
 Ensure it doesn't return a response to a non-logged-in or anonymous user.
 
-### Azure Add App Registration
+### App Registration
 
 * Set Pozi up in Azure as a registered app (admin privileges required): [https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal)
 * Record the Application id (also known as as client id) as well as tenant id
