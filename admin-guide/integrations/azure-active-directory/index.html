@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.717206954752">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.717390176662">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.717206954752" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.717390176662" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.717206954752" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.717390176662" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.717206954752" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.717390176662" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -353,10 +353,10 @@
         <span>Configuration</span>
     </h2>
 </doc-anchor-target>
-<doc-anchor-target id="add-app">
+<doc-anchor-target id="azure-add-app-proxy">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#add-app">#</doc-anchor-trigger>
-        <span>Add App</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#azure-add-app-proxy">#</doc-anchor-trigger>
+        <span>Azure Add App Proxy</span>
     </h3>
 </doc-anchor-target>
 <p>Microsoft documentation: <a href="https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-add-on-premises-application#add-an-on-premises-app-to-azure-ad">https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-add-on-premises-application#add-an-on-premises-app-to-azure-ad</a></p>
@@ -371,6 +371,52 @@
 <p>...should return the same response as a local request to...</p>
 <p><code v-pre>https://local.pozi.com/resourcecheck/cardinia.json</code></p>
 <p>Ensure it doesn&#x27;t return a response to a non-logged-in or anonymous user.</p>
+<doc-anchor-target id="azure-add-app-registration">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#azure-add-app-registration">#</doc-anchor-trigger>
+        <span>Azure Add App Registration</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>Set Pozi up in Azure as a registered app (admin privileges required): <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal">https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal</a></li>
+<li>Record the Application id (also known as as client id) as well as tenant id</li>
+</ul>
+<doc-anchor-target id="authentication">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#authentication">#</doc-anchor-trigger>
+        <span>Authentication</span>
+    </h4>
+</doc-anchor-target>
+<ul>
+<li>Add the App Proxy URL to <code v-pre>Redirect URIs</code> to the <code v-pre>Web</code> section. E.g.:
+<ul>
+<li><code v-pre>https://pozi-cardiniavicgovau.msappproxy.net</code></li>
+</ul>
+</li>
+<li>Add the following <code v-pre>Redirect URIs</code> to the <code v-pre>Single-page application</code> section:
+<ul>
+<li><code v-pre>https://&lt;sitename&gt;.enterprise.pozi.com/*</code>. Note: the wildcard is required</li>
+<li><code v-pre>https://staging.pozi.com/*</code> (for testing/debugging)</li>
+<li><code v-pre>http://localhost:3000/*</code> (for development)</li>
+<li>If needed, add any extra URIs that the client uses (e.g. <code v-pre>https://cardinia-qgis.enterprise.pozi.com/*</code>)</li>
+</ul>
+</li>
+<li>In <code v-pre>Implicit grant and hybrid flows</code>: select both <code v-pre>Access tokens</code> anda <code v-pre>ID tokens</code></li>
+<li>In <code v-pre>Advanced settings</code>: Set &#x27;Allow public client flows&#x27; to <code v-pre>No</code></li>
+</ul>
+<doc-anchor-target id="api-permissions">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#api-permissions">#</doc-anchor-trigger>
+        <span>API Permissions</span>
+    </h4>
+</doc-anchor-target>
+<ul>
+<li>Give Pozi the following permissions:
+<ul>
+<li>API/Permissions Name: <code v-pre>User.Read</code>, Type: <code v-pre>Delegated</code>, Admin consent required: <code v-pre>No</code>. This should allow Pozi to determine access based on a user&#x27;s role(s).</li>
+</ul>
+</li>
+</ul>
 <doc-anchor-target id="site-url">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#site-url">#</doc-anchor-trigger>
@@ -379,39 +425,6 @@
 </doc-anchor-target>
 <p>Using <code v-pre>&lt;sitename&gt;.enterprise.pozi.com</code> forces user to authenticate before proceeding to the Pozi site. These users will gain access to the private datasets.</p>
 <p>Public users should continue to use <code v-pre>&lt;sitename&gt;.pozi.com</code>. They will not be prompted to authenticate, and they will have access to only public data.</p>
-<doc-anchor-target id="register-pozi">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#register-pozi">#</doc-anchor-trigger>
-        <span>Register Pozi</span>
-    </h3>
-</doc-anchor-target>
-<ul>
-<li>Set Pozi up in Azure as a registered app (admin privileges required): <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal">https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal</a></li>
-<li>Record the Application id (also known as as client id) as well as tenant id</li>
-<li>Set &#x27;Allow public client flows&#x27; to false</li>
-<li>Add the following URI as a registered application:
-<ul>
-<li><code v-pre>https://&lt;sitename&gt;.enterprise.pozi.com</code>. Note: do not add a trailing slash</li>
-</ul>
-</li>
-<li>Add the following redirect URIs to the application (they are also sometimes called reply URLs):
-<ul>
-<li><code v-pre>https://staging.pozi.com</code> (for testing/debugging)</li>
-<li><code v-pre>http://localhost:3000</code> (for development)</li>
-<li>If needed, any extra URIs that the client uses (e.g. <code v-pre>https://cardinia-qgis.enterprise.pozi.com</code>)</li>
-</ul>
-</li>
-<li>Make sure that the above URIs are classed as <code v-pre>Single-Page Application</code>, otherwise you may get the following error: &#x60;AADSTS9002326: Cross-origin token redemption is permitted only for the &#x27;Single-Page Application&#x27; client-type
-<ul>
-<li>Steps: App registration -&gt; Authentication-&gt; platform type: SPA</li>
-</ul>
-</li>
-<li>Give Pozi the following permissions:
-<ul>
-<li>API/Permissions Name: <code v-pre>User.Read</code>, Type: <code v-pre>Delegated</code>, Admin consent required: <code v-pre>No</code>. This should allow Pozi to determine access based on a user&#x27;s role(s).</li>
-</ul>
-</li>
-</ul>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
                                     <span>
