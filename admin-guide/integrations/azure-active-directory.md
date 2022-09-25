@@ -76,7 +76,31 @@ Ensure it doesn't return a response to a non-logged-in or anonymous user.
   * `http://localhost:3000/*` (for development)
   * If needed, add any extra URIs that the client uses (e.g. `https://cardinia-qgis.enterprise.pozi.com/*`)
 * In `Implicit grant and hybrid flows`: select both `Access tokens` anda `ID tokens`
-* In `Advanced settings`: Set 'Allow public client flows' to `No`
+* In `Advanced settings`: Set `Allow public client flows` to `No`
+
+In order for Pozi to work properly, the Redirect URIs must be configured with wildcards, like: `https://cardinia.enterprise.pozi.com/*` .
+If the UI in `Single-page application` does not allow this, it may be possible to manually override this in the `Manifest`. Change the section `ReplyUrlsWithType` in a similar way to the following:
+
+```
+    "replyUrlsWithType": [
+        {
+            "url": "https://staging.pozi.com/*",
+            "type": "Spa"
+        },
+        {
+            "url": "http://localhost:3000/*",
+            "type": "Spa"
+        },
+        {
+            "url": "https://next.enterprise.pozi.com/*",
+            "type": "Spa"
+        },
+        {
+            "url": "https://pozicloudserver-teampozi.msappproxy.net/",
+            "type": "Web"
+        }
+    ],
+```
 
 #### API Permissions
 * Give Pozi the following permissions:
