@@ -75,7 +75,7 @@ Ensure it doesn't return a response to a non-logged-in or anonymous user.
   * `https://staging.pozi.com/*` (for testing/debugging)
   * `http://localhost:3000/*` (for development)
   * If needed, add any extra URIs that the client uses (e.g. `https://cardinia-qgis.enterprise.pozi.com/*`)
-* In `Implicit grant and hybrid flows`: select both `Access tokens` anda `ID tokens`
+* In `Implicit grant and hybrid flows`: select both `Access tokens` and `ID tokens`
 * In `Advanced settings`: Set `Allow public client flows` to `No`
 
 In order for Pozi to work properly, the Redirect URIs must be configured with wildcards, like: `https://cardinia.enterprise.pozi.com/*` .
