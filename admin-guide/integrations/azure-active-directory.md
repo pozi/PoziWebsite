@@ -69,7 +69,7 @@ Ensure it doesn't return a response to a non-logged-in or anonymous user.
 
 #### Authentication
 * Add the App Proxy URL to `Redirect URIs` to the `Web` section. E.g.:
-  * `https://pozi-cardiniavicgovau.msappproxy.net`
+  * `https://pozi-cardiniavicgovau.msappproxy.net/*`
 * Add the following `Redirect URIs` to the `Single-page application` section:
   * `https://<sitename>.enterprise.pozi.com/*`
   * `https://staging.pozi.com/*` (for testing/debugging)
@@ -96,7 +96,7 @@ If the UI in `Single-page application` does not allow this, it may be possible t
             "type": "Spa"
         },
         {
-            "url": "https://pozi-cardiniavicgovau.msappproxy.net",
+            "url": "https://pozi-cardiniavicgovau.msappproxy.net/*",
             "type": "Web"
         }
     ],
