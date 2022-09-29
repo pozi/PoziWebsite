@@ -31,7 +31,7 @@ There is no special configuration required for the parent dataset in order for i
 * WFS OGC: `FILTER=<Filter><PropertyIsEqualTo><PropertyName>` ChildDatasetIDField `</PropertyName><Literal>[` ParentDatasetIDField `]</Literal></PropertyIsEqualTo></Filter>`
 * VRT: `&options=-where|` ChildDatasetIDField ` in ('[` ParentDatasetIDField `]')`
 * WFS CQL
-* CKAN
+* CKAN Data API: `sql=SELECT * from \"e84991bd-93f8-4cb7-af39-72b933682f08\" WHERE \"WORK_ZONE\" IN ('[work_zone]')"`
 
 ==- WFS OGC Example
 
@@ -50,6 +50,23 @@ This example uses the selected bridge's `AssetID` value to do a lookup on a tabl
       "url": "https://bs-gis.pozi.com/iis/qgisserver?MAP=//bs-intra/GIS/System/POZI/QGIS%20Projects/Child%20Datasets.qgs&SERVICE=WFS&VERSION=1.1.0&REQUEST=GetFeature&OUTPUTFORMAT=application%2Fjson&TYPENAME=POZI_BridgeDefects&FILTER=<Filter><PropertyIsEqualTo><PropertyName>AssetID</PropertyName><Literal>[AssetID]</Literal></PropertyIsEqualTo></Filter>",
       "id": "AssetID",
       "label": "DefectDescription"
+    }
+  }
+}
+```
+
+==- CKAN Data API Example
+
+```json
+{
+  "title": "Grading Schedule",
+  "type": "GeoJSON",
+  "parent": "Work Zone for Grading",
+  "showInLayerControl": false,
+  "config": {
+    "spatial": {
+      "loader": "ckanapi",
+      "url": "https://data.gov.au/data/api/3/action/datastore_search_sql?sql=SELECT * from \"e84991bd-93f8-4cb7-af39-72b933682f08\" WHERE \"WORK_ZONE\" IN ('[work_zone]')"
     }
   }
 }

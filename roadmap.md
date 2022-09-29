@@ -17,6 +17,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## Upcoming
 
+- [ ] improve Azure Active Directory integration
 - [ ] don't unhighlight parent object when clicking on a non-spatial child record
 - [ ] obtain layer title/label field setting from QGIS Server
 - [ ] prevent Share links from capturing the panel state (unless specified in advanced options)

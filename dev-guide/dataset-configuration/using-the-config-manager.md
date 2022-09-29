@@ -15,6 +15,6 @@ However the child datasets of the Property layer don't seem to respect the order
 
 ==- The login page doesn't respond after entering credentials
 
-Click the "Forgot your password" link to force the page to respond. Return to the login page and try logging in again.
+Click the "Forgot your password" link to force the page to respond. Click "Back to Sign In" to return to the login page and try logging in again.
 
 ==-

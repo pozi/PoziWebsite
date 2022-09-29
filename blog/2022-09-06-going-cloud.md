@@ -84,7 +84,7 @@ Are you hesitant for your organisation's geospatial knowledge to be moved into a
 
 Pozi offers you an alternative.
 
-Pozi enables organisations like yours to leverage their own infrastructure to gain greater control over their data and user experience.
+Pozi enables organisations like yours to leverage their own infrastructure (physical network and/or private cloud) to gain greater control over their data and user experience.
 
 Pozi's open architecture empowers organisations to integrate their spatial and other corporate data to suit their own requirements, and ensures maximum flexibility, control and usability.
 

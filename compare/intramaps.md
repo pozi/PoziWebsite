@@ -77,9 +77,7 @@ Users get the answers they need quicker in Pozi. The Pozi web app opens in secon
 
 ### Real Support
 
-*When you ask Pozi for help, we'll acknowledge your request within 24 hours, and begin resolving your issue within 48 hours.*
-
-Pozi clients benefit from being able to communicate directly with development and support crew during solution implementations and ongoing support.
+When you ask Pozi for help, we'll acknowledge your request within 24 hours, and begin resolving your issue within 48 hours.
 
 #### Third Party GIS support
 
@@ -99,9 +97,9 @@ Pozi's open platform integrates with major vendor platforms and applications to 
 
 The future of web GIS is driven by live data integrations, web-optimised data formats and in-browser geo-processing.
 
-Pozi invests for the future by keeping Pozi up-to-date with modern web technologies. We work with open source HTML5 technologies including [React](https://reactjs.org/), [Material UI](https://mui.com/), [OpenLayers 6](https://openlayers.org/), [TurfJS](https://turfjs.org/) and [GeoStyler](https://geostyler.org/) to ensure high performance, compatibility with modern data sources, and a high quality user experience.
+Pozi invests for the future by keeping Pozi up-to-date with modern web technologies. We work with open source HTML5 technologies including [React](https://reactjs.org/), [Material UI](https://mui.com/), [OpenLayers 7](https://openlayers.org/), [TurfJS](https://turfjs.org/) and [GeoStyler](https://geostyler.org/) to ensure high performance, compatibility with modern data sources, and a high quality user experience.
 
-IntraMaps is built on top of an outdated version of OpenLayers, which ceased development in 2013. IntraMaps' performance and functionality remain tied to an ageing, unsupported code base, affecting its ability to innovate any further.
+IntraMaps is built on an outdated version of OpenLayers, which ceased development in 2013. IntraMaps' performance and functionality remain tied to an ageing, unsupported code base, putting into doubt its ability to innovate any further.
 
 ### Transparent Pricing
 
@@ -144,7 +142,7 @@ When you fund the development of new features, you have ongoing access to the ne
 * harness QGIS's extensive configuration and visualisation options to manage and publish your organisation's data
 * reduce administration overheads
   * direct integration with live data from internal and external sources
-  * reduce need for downloading, processing and republishing data from external sources
+  * reduce downloading, processing and republishing data from external sources
   * reduce duplication of corporate data to external hosting sites
 * real support
 
@@ -155,7 +153,7 @@ When you fund the development of new features, you have ongoing access to the ne
 * more efficient use of GIS budget
   * lower subscription cost
   * lower training requirements
-  * engage us to develop new functionality that will benefit your organisation
+  * put your GIS budget surplus towards development of custom functionality for Pozi
   * no lock-in contracts
   * procure without tenders/RFQs
 * risk-free - take advantage of our free trial

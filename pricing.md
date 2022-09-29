@@ -12,7 +12,7 @@ layout: central
 
 <br/>
 
-Pozi delivers powerful location-based functionality at a fraction of the cost of traditional Geographic Information System (GIS) software.
+Pozi delivers powerful location-based functionality at a fraction of the cost of traditional Geographic Information System software.
 
 ***No long-term, lock-in contracts***
 
@@ -30,7 +30,7 @@ Pozi delivers powerful location-based functionality at a fraction of the cost of
 | *Perfect for publishing your organisation's data to the public* | *When your users demand a higher level of interaction* | *A high functioning replacement for your inhouse GIS enquiry tool* | *Ultimate integration with your organisation’s cloud infrastructure* |
 | <small>AUD</small><big>**$6K**</big><small>/year</small> | <small>AUD</small><big>**$9K**</big><small>/year</small> | <small>AUD</small><big>**$12K**</big><small>/year</small> | <small>AUD</small><big>**$15K**</big><small>/year</small> |
 | - | <small>All the features of Pozi Public, plus:</small> | <small>All the features of Pozi Pro, plus:</small> | <small>All the features of Pozi Enterprise, plus:</small> |
-| ✔️ Live, authoritative data | ✔️ Community consultation module | ✔️ GIS integration | 🚀 Azure AD Application Proxy integration |
+| ✔️ Live, authoritative data | ✔️ Community consultation module | ✔️ QGIS integration | 🚀 Azure AD Application Proxy integration |
 | ✔️ Customer support | ✔️ Advanced search | ✔️ Corporate system integrations | 📃 Enterprise Cloud Service Level Agreement |
 | ✔️ Responsive design | ✔️ Nearby places | ✔️ Public data publisher |  |
 | ✔️ Intelligent address search | ✔️ Multiple imagery layers | ✔️ Table view |  |
@@ -163,9 +163,9 @@ For *Enterprise* and *Enterprise Cloud* subscribers, we offer access to our sour
 
 If your organisation uses Request For Tender (RFT) or Request For Quote (RFQ) for software procurement, a premium will apply to the package cost and ongoing subscription. Talk to us about what additional costs will apply for your procurement method.
 
-Alternatively, you can avoid RFTs and RFQs altogether by keeping your organisation's commitments below its procurement thresholds. Take up a year-at-a-time Pozi subscription. There are no lock-in contracts with Pozi.
+Alternatively, you can avoid RFTs and RFQs altogether with an annual Pozi subscription, thereby keeping your organisation's commitments below any procurement thresholds. There are no lock-in contracts with Pozi.
 
-[Contact us](./contact/) to learn how organisations like yours avoid months of wasted effort on RFTs and RFQs by transitioning to a simple annual Pozi subscription.
+[Contact us](./contact/) to learn how organisations like yours avoid months of wasted effort on RFTs and RFQs by switching to Pozi.
 
 </br>
 

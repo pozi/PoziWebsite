@@ -58,7 +58,8 @@ When specifying the URL for QGIS project files, any backslashes must be converte
   "styleGeoStyler": {
     "url": "https://bs-gis.pozi.com/iis/qgisserver?service=WMS&request=GetStyles&MAP=//bs-intra/GIS/System/POZI/QGIS Projects/Assets.qgs",
     "type": "SLD"
-  }
+  },
+  "showInLayerControl": true
 }
 ```
 

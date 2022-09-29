@@ -22,7 +22,6 @@ For other changes to the Pozi app experience, contact the Pozi Helpdesk:
 
 * register a new layer catalogue (ie, layer group) in Pozi
 * register new layers for viewing by public
-* enable a dataset as mail merge source
 * change the default basemap, search and imagery options
 * update branding
 
