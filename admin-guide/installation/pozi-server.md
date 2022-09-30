@@ -173,6 +173,19 @@ Within the `C:\Program Files (x86)\Pozi\userdata` folder, create a folder that c
 
 For instance, if the DNS is configured for `gis01.pozi.com`, create a folder called `gis01`.
 
+!!!
+
+The folder name may need to be slightly different to the subdomain from which the requests are sent. Check the `server.log` file after generating a request.
+
+``` server.log
+[2022-09-29T13:39:37.918] [INFO] default - subdomainsArr [ 'ysc-ap01' ]
+[2022-09-29T13:39:37.933] [INFO] default - Subdomain folder: yscap 01
+```
+
+In this example, the subdomain is `ysc-ap01`, and Pozi Server is expecting the userdata folder name to be `yscap 01`. Create the folder that Pozi Server expects to find.
+
+!!!
+
 The Pozi web app can then be configured to access any GIS data, virtual data files (`*.vrt`) or search index files (`*.db`) within this new location.
 
 Pozi Server will only serve files from within the folder that matches the subdomain of the originating request (eg `gis01.pozi.com`). This provides a level of security for IT Managers, who can blacklist the subdomain for any users who should not be allowed access to that data.

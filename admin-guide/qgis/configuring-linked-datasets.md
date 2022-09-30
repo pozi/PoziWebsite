@@ -56,6 +56,8 @@ Add the source table for the child dataset to a [QGIS project](managing-qgis-pro
 
 The parent/child settings are maintained in the child layer's QGIS Server keyword list. Pozi obtains these settings, along with any other keywords, when it loads and imports and project's catalogue.
 
+![](./img/qgis-server-keywords.png){style="width:600px"}
+
 Only the child dataset needs to be configured. There is no configuration required for the parent dataset for it to used by a child dataset.
 
 Below are details of how to derive and combine the components of this setting.
@@ -127,10 +129,14 @@ Open your Pozi site in your browser, refresh the page, and test that you the chi
 
 ## Troubleshooting
 
+==- Info Panel doesn't display results tab for new child dataset
+
+* check that the layer is enabled for WFS. In QGIS, go to Project > Properties > QGIS Server > WFS Capabilities > your dataset > Published (tick on), then Save the project
+* ensure the parent keyword value is configured accurately with the parent dataset name
+
 ==- Info Panel displays 'No results'
 
 * in Pozi, click on a parent feature for which you know a child feature exists
-* check that the layer is enabled for WFS. In QGIS, go to Project > Properties > QGIS Server > WFS Capabilities > your dataset > Published (tick on), then Save the project
 * check that the names of the fields in the child and parent datasets that are used for the link are consistent with the names supplied with the child dataset's registration in Pozi
 * check that there are no double quotes in the `parameter` setting
 
