@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.717751669178">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.717813525823">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,12 +35,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.717751669178" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.717813525823" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.717751669178" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.717813525823" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.717751669178" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.717751669178" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.717813525823" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.717813525823" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -373,6 +373,7 @@
     </h2>
 </doc-anchor-target>
 <p>The parent/child settings are maintained in the child layer&#x27;s QGIS Server keyword list. Pozi obtains these settings, along with any other keywords, when it loads and imports and project&#x27;s catalogue.</p>
+<p><img src="../img/qgis-server-keywords.png" style="width:600px" alt="" /></p>
 <p>Only the child dataset needs to be configured. There is no configuration required for the parent dataset for it to used by a child dataset.</p>
 <p>Below are details of how to derive and combine the components of this setting.</p>
 <doc-anchor-target id="parent">
@@ -448,11 +449,17 @@
     </h2>
 </doc-anchor-target>
 <doc-panels>
+   <doc-panel id="info-panel-doesn-t-display-results-tab-for-new-child-dataset" collapsed>
+       <template #title>Info Panel doesn&#x27;t display results tab for new child dataset</template>
+<ul>
+<li>check that the layer is enabled for WFS. In QGIS, go to Project &gt; Properties &gt; QGIS Server &gt; WFS Capabilities &gt; your dataset &gt; Published (tick on), then Save the project</li>
+<li>ensure the parent keyword value is configured accurately with the parent dataset name</li>
+</ul>
+   </doc-panel>
    <doc-panel id="info-panel-displays-no-results" collapsed>
        <template #title>Info Panel displays &#x27;No results&#x27;</template>
 <ul>
 <li>in Pozi, click on a parent feature for which you know a child feature exists</li>
-<li>check that the layer is enabled for WFS. In QGIS, go to Project &gt; Properties &gt; QGIS Server &gt; WFS Capabilities &gt; your dataset &gt; Published (tick on), then Save the project</li>
 <li>check that the names of the fields in the child and parent datasets that are used for the link are consistent with the names supplied with the child dataset&#x27;s registration in Pozi</li>
 <li>check that there are no double quotes in the <code v-pre>parameter</code> setting</li>
 </ul>
