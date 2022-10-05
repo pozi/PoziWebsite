@@ -21,6 +21,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [ ] don't unhighlight parent object when clicking on a non-spatial child record
 - [ ] obtain layer title/label field setting from QGIS Server
 - [ ] prevent Share links from capturing the panel state (unless specified in advanced options)
+- [ ] zoom/pan to selected feature on Pozi launch if URL contains a selected feature
 
 ## Completed
 

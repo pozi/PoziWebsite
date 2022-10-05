@@ -268,7 +268,10 @@ Any CSV data published to data.gov.au is automatically exposed through its CKAN 
 
 When configuring in Pozi, use `"loader": "ckanapi"` to instruct Pozi to convert the results to GeoJSON. If the data contains fields named `x`, `y`, `longitude`, `lng`, `lon`, `long`, `latitude` or `lat`, these are used to generate point geometries in the GeoJSON. Otherwise the geometry is null.
 
-Example request: https://data.gov.au/api/action/datastore_search_sql?sql=SELECT%20*%20from%20%22306f9e0d-581a-4506-8de9-20283f4334a1%22
+Example requests
+
+* https://data.gov.au/data/api/3/action/datastore_search?resource_id=306f9e0d-581a-4506-8de9-20283f4334a1
+* https://data.gov.au/api/action/datastore_search_sql?sql=SELECT%20*%20from%20%22306f9e0d-581a-4506-8de9-20283f4334a1%22
 
 ### Allowed Functions
 

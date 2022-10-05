@@ -127,6 +127,8 @@ The `C:\Program Files (x86)\Pozi` folder will be created by the installation pro
 6. tick Modify / Allow, then click OK
 7. click OK
 
+Similarly, for the service account under which the PoziConnectServer service is running, enable modify permissions on the `C:\Program Files (x86)\Pozi\server\server.log` file. This will enable the service to write to the log file.
+
 ## DNS Configuration
 
 ### For Local User

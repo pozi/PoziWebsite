@@ -12,7 +12,7 @@ tags: [cloud]
 
 As developers of a cloud application, you'd think we at Pozi would be the first to try to convince you to move your organisation's GIS data to the cloud. After all, Pozi is a cloud-native app that excels in the online world. It works seamlessly with online APIs to connect users with live, trusted data across the web.
 
-But we recognise that your most critical users, data sources and systems often exist in **local ecosystems** such as your organisation's network or private cloud. That's why we developed Pozi's *hybrid cloud* architecture, which enables local data sources to be viewed securely within Pozi's cloud application.
+But we recognise that your most critical users, data sources and systems often exist in **local ecosystems** such as your organisation's network or private cloud. That's why we developed Pozi's *hybrid cloud* architecture, which enables local data sources to be viewed securely within the Pozi application.
 
 ***So what does it mean for your organisation when one of your software vendors announces that your GIS needs to "move to the cloud"?***
 

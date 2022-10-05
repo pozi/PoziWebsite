@@ -110,6 +110,7 @@ These settings provide an override for some of the default behaviours in Pozi.
 * `enabled=false`: temporarily disable a dataset (without having to remove it completely)
 * `infoPanelCollapse=true`: collapse info results panel for this dataset
 * `promoteDetails=true`: display all child attributes instead of a preview
+* `visible=true`: display layer by default
 
 [Developer reference](https://github.com/pozi/PoziApp/blob/master/app/src/config/catalog/KeywordsParser.ts)
 
