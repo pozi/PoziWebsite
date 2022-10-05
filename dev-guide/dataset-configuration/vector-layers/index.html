@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.717813525823">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.718245909272">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.717813525823" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.718245909272" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.717813525823" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.718245909272" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.717813525823" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.717813525823" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.718245909272" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.718245909272" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -645,7 +645,11 @@
 </doc-anchor-target>
 <p>Any CSV data published to data.gov.au is automatically exposed through its CKAN API. The API accepts SQL requests and returns data in a JSON format (not GeoJSON).</p>
 <p>When configuring in Pozi, use <code v-pre>&quot;loader&quot;: &quot;ckanapi&quot;</code> to instruct Pozi to convert the results to GeoJSON. If the data contains fields named <code v-pre>x</code>, <code v-pre>y</code>, <code v-pre>longitude</code>, <code v-pre>lng</code>, <code v-pre>lon</code>, <code v-pre>long</code>, <code v-pre>latitude</code> or <code v-pre>lat</code>, these are used to generate point geometries in the GeoJSON. Otherwise the geometry is null.</p>
-<p>Example request: <a href="https://data.gov.au/api/action/datastore_search_sql?sql=SELECT%20*%20from%20%22306f9e0d-581a-4506-8de9-20283f4334a1%22">https://data.gov.au/api/action/datastore_search_sql?sql=SELECT%20*%20from%20%22306f9e0d-581a-4506-8de9-20283f4334a1%22</a></p>
+<p>Example requests</p>
+<ul>
+<li><a href="https://data.gov.au/data/api/3/action/datastore_search?resource_id=306f9e0d-581a-4506-8de9-20283f4334a1">https://data.gov.au/data/api/3/action/datastore_search?resource_id=306f9e0d-581a-4506-8de9-20283f4334a1</a></li>
+<li><a href="https://data.gov.au/api/action/datastore_search_sql?sql=SELECT%20*%20from%20%22306f9e0d-581a-4506-8de9-20283f4334a1%22">https://data.gov.au/api/action/datastore_search_sql?sql=SELECT%20*%20from%20%22306f9e0d-581a-4506-8de9-20283f4334a1%22</a></li>
+</ul>
 <doc-anchor-target id="allowed-functions">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#allowed-functions">#</doc-anchor-trigger>
