@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.718258868378">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.718327601064">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.718258868378" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.718327601064" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.718258868378" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.718327601064" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.718258868378" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.718327601064" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -653,6 +653,28 @@
 <p>To prevent the Info Panel from displaying results from specific layers (say, for aerial photos), update the <code v-pre>Data Sources</code> settings in the QGIS project.</p>
 <p>Project &gt; Properties &gt; Data Sources &gt; Identifiable &gt; untick to disable layer selectability</p>
 <br/>
+<doc-anchor-target id="optional-settings">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#optional-settings">#</doc-anchor-trigger>
+        <span>Optional Settings</span>
+    </h2>
+</doc-anchor-target>
+<p>Other settings can be configured using QGIS Server keyword list. Pozi obtains these settings, along with any other keywords, when it loads and imports and project&#x27;s catalogue.</p>
+<p>These settings provide an override for some of the default behaviours in Pozi.</p>
+<p>Layer Properties &gt; QGIS Server &gt; Keyword list</p>
+<ul>
+<li><code v-pre>enabled=false</code>: temporarily disable a dataset (without having to remove it completely)</li>
+<li><code v-pre>group=[group name]</code>: override which layer group the layer is listed under</li>
+<li><code v-pre>showInLayerControl=false</code>: don&#x27;t display layer in layer panel</li>
+<li><code v-pre>showLegend=false</code>: don&#x27;t display layer legend</li>
+<li><code v-pre>visible=true</code>: display layer by default</li>
+</ul>
+<p>When using multiple keyword settings, use commas to separate them.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example Keyword List</div>
+<pre class="language-none"><code v-pre class="language-none">showLegend=false, visible=true</code></pre>
+</doc-codeblock></div>
+<p><a href="https://github.com/pozi/PoziApp/blob/master/app/src/config/catalog/KeywordsParser.ts">Developer reference</a></p>
 <doc-anchor-target id="table-file-maintenance">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#table-file-maintenance">#</doc-anchor-trigger>
