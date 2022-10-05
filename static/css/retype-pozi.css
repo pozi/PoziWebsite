@@ -119,3 +119,7 @@
 .dark .dark\:text-blue-400 {
   border-color: rgba(var(--pozi-color-rgb-light), var(--pozi-alpha-1000)) !important;
 }
+
+.border-blue-500 {
+  border-color: rgba(var(--pozi-color-rgb-normal), var(--pozi-alpha-1000)) !important;
+}
