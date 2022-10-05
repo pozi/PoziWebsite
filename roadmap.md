@@ -25,6 +25,11 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## Completed
 
+### October 2022
+
+- [x] new: select by line
+- [x] fixed: prevent layers that have been configured as non-queryable in QGIS from appearing in *What's Here* results
+
 ### September 2022
 
 - [x] new: use layer opacity setting from QGIS Server

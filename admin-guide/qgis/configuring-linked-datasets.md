@@ -104,13 +104,12 @@ Pozi will substitute any field names within square brackets with values from tho
 
 ### Optional Settings
 
-These settings provide an override for some of the default behaviours in Pozi.
+These settings provide an override for some of the default layer behaviours in Pozi.
 
 * `downloadable=true`: allow Pozi to display a download option when multiple parent features are selected (eg, for a mail merge)
 * `enabled=false`: temporarily disable a dataset (without having to remove it completely)
 * `infoPanelCollapse=true`: collapse info results panel for this dataset
 * `promoteDetails=true`: display all child attributes instead of a preview
-* `visible=true`: display layer by default
 
 [Developer reference](https://github.com/pozi/PoziApp/blob/master/app/src/config/catalog/KeywordsParser.ts)
 

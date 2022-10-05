@@ -260,6 +260,28 @@ Project > Properties > Data Sources > Identifiable > untick to disable layer sel
 
 <br/>
 
+## Optional Settings
+
+Other settings can be configured using QGIS Server keyword list. Pozi obtains these settings, along with any other keywords, when it loads and imports and project's catalogue.
+
+These settings provide an override for some of the default behaviours in Pozi.
+
+Layer Properties > QGIS Server > Keyword list
+
+* `enabled=false`: temporarily disable a dataset (without having to remove it completely)
+* `group=[group name]`: override which layer group the layer is listed under
+* `showInLayerControl=false`: don't display layer in layer panel
+* `showLegend=false`: don't display layer legend
+* `visible=true`: display layer by default
+
+When using multiple keyword settings, use commas to separate them.
+
+``` Example Keyword List
+showLegend=false, visible=true
+```
+
+[Developer reference](https://github.com/pozi/PoziApp/blob/master/app/src/config/catalog/KeywordsParser.ts)
+
 ## Table File Maintenance
 
 If you need to move, rename or delete a source dataset from its file location or database, first remove the layer from any QGIS project to which the layer is registered, then save the QGIS project.
