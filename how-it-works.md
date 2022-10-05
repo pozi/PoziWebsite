@@ -20,13 +20,13 @@ Public users can easily access publicly available data.
 
 ![](/static/draw.io/network-diagram-enterprise.png)
 
-Users within the corporate network additional access to private data sources that are available only to internal users.
+Users who are connected to the corporate network (either physically or via VPN) have access to internal data sources.
 
 +++ Enterprise Cloud
 
 ![](/static/draw.io/network-diagram-enterprise-cloud.png)
 
-Users who are signed in to their Microsoft account gain access to private data sources that are made available through Microsoft App Proxy.
+Users who are signed in to their Microsoft account gain access to corporate data sources that are made available through Microsoft App Proxy.
 
 +++
 
