@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.718245909272">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.718246851185">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.718245909272" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.718246851185" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.718245909272" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.718246851185" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.718245909272" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.718246851185" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -390,42 +390,20 @@
 <ul>
 <li>Add the App Proxy URL to <code v-pre>Redirect URIs</code> to the <code v-pre>Web</code> section. E.g.:
 <ul>
-<li><code v-pre>https://pozi-cardiniavicgovau.msappproxy.net/*</code></li>
+<li><code v-pre>https://pozi-cardiniavicgovau.msappproxy.net</code></li>
 </ul>
 </li>
 <li>Add the following <code v-pre>Redirect URIs</code> to the <code v-pre>Single-page application</code> section:
 <ul>
-<li><code v-pre>https://&lt;sitename&gt;.enterprise.pozi.com/*</code></li>
-<li><code v-pre>https://staging.pozi.com/*</code> (for testing/debugging)</li>
-<li><code v-pre>http://localhost:3000/*</code> (for development)</li>
-<li>If needed, add any extra URIs that the client uses (e.g. <code v-pre>https://cardinia-qgis.enterprise.pozi.com/*</code>)</li>
+<li><code v-pre>https://&lt;sitename&gt;.enterprise.pozi.com</code></li>
+<li><code v-pre>https://staging.pozi.com/feature-azure</code> (for testing/debugging)</li>
+<li><code v-pre>http://localhost:3000</code> (for development)</li>
+<li>If needed, add any extra URIs that the client uses (e.g. <code v-pre>https://cardinia-qgis.enterprise.pozi.com</code>)</li>
 </ul>
 </li>
 <li>In <code v-pre>Implicit grant and hybrid flows</code>: select both <code v-pre>Access tokens</code> and <code v-pre>ID tokens</code></li>
 <li>In <code v-pre>Advanced settings</code>: Set <code v-pre>Allow public client flows</code> to <code v-pre>No</code></li>
 </ul>
-<p>In order for Pozi to work properly, the Redirect URIs must be configured with wildcards, like: <code v-pre>https://cardinia.enterprise.pozi.com/*</code> .
-If the UI in <code v-pre>Single-page application</code> does not allow this, it may be possible to manually override this in the <code v-pre>Manifest</code>. Change the section <code v-pre>ReplyUrlsWithType</code> in a similar way to the following:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">    &quot;replyUrlsWithType&quot;: [
-        {
-            &quot;url&quot;: &quot;https://staging.pozi.com/*&quot;,
-            &quot;type&quot;: &quot;Spa&quot;
-        },
-        {
-            &quot;url&quot;: &quot;http://localhost:3000/*&quot;,
-            &quot;type&quot;: &quot;Spa&quot;
-        },
-        {
-            &quot;url&quot;: &quot;https://cardinia-qgis.enterprise.pozi.com/*&quot;,
-            &quot;type&quot;: &quot;Spa&quot;
-        },
-        {
-            &quot;url&quot;: &quot;https://pozi-cardiniavicgovau.msappproxy.net/*&quot;,
-            &quot;type&quot;: &quot;Web&quot;
-        }
-    ],</code></pre>
-</doc-codeblock></div>
 <doc-anchor-target id="api-permissions">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#api-permissions">#</doc-anchor-trigger>
@@ -439,6 +417,7 @@ If the UI in <code v-pre>Single-page application</code> does not allow this, it 
 </ul>
 </li>
 </ul>
+<p>Important: a user authenticated with the council&#x27;s Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. <code v-pre>https://pozi-cardiniavicgovau.msappproxy.net/</code> as well as <code v-pre>https://pozi-cardiniavicgovau.msappproxy.net/iis/qgisserver/</code>).</p>
 <doc-anchor-target id="site-url">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#site-url">#</doc-anchor-trigger>
