@@ -69,42 +69,21 @@ Ensure it doesn't return a response to a non-logged-in or anonymous user.
 
 #### Authentication
 * Add the App Proxy URL to `Redirect URIs` to the `Web` section. E.g.:
-  * `https://pozi-cardiniavicgovau.msappproxy.net/*`
+  * `https://pozi-cardiniavicgovau.msappproxy.net`
 * Add the following `Redirect URIs` to the `Single-page application` section:
-  * `https://<sitename>.enterprise.pozi.com/*`
-  * `https://staging.pozi.com/*` (for testing/debugging)
-  * `http://localhost:3000/*` (for development)
-  * If needed, add any extra URIs that the client uses (e.g. `https://cardinia-qgis.enterprise.pozi.com/*`)
+  * `https://<sitename>.enterprise.pozi.com`
+  * `https://staging.pozi.com/feature-azure` (for testing/debugging)
+  * `http://localhost:3000` (for development)
+  * If needed, add any extra URIs that the client uses (e.g. `https://cardinia-qgis.enterprise.pozi.com`)
 * In `Implicit grant and hybrid flows`: select both `Access tokens` and `ID tokens`
 * In `Advanced settings`: Set `Allow public client flows` to `No`
 
-In order for Pozi to work properly, the Redirect URIs must be configured with wildcards, like: `https://cardinia.enterprise.pozi.com/*` .
-If the UI in `Single-page application` does not allow this, it may be possible to manually override this in the `Manifest`. Change the section `ReplyUrlsWithType` in a similar way to the following:
-
-```
-    "replyUrlsWithType": [
-        {
-            "url": "https://staging.pozi.com/*",
-            "type": "Spa"
-        },
-        {
-            "url": "http://localhost:3000/*",
-            "type": "Spa"
-        },
-        {
-            "url": "https://cardinia-qgis.enterprise.pozi.com/*",
-            "type": "Spa"
-        },
-        {
-            "url": "https://pozi-cardiniavicgovau.msappproxy.net/*",
-            "type": "Web"
-        }
-    ],
-```
 
 #### API Permissions
 * Give Pozi the following permissions:
   - API/Permissions Name: `User.Read`, Type: `Delegated`, Admin consent required: `No`. This should allow Pozi to determine access based on a user's role(s).
+
+Important: a user authenticated with the council's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://pozi-cardiniavicgovau.msappproxy.net/` as well as `https://pozi-cardiniavicgovau.msappproxy.net/iis/qgisserver/`). 
 
 ### Site URL
 
