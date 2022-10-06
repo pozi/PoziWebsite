@@ -68,6 +68,7 @@ Ensure it doesn't return a response to a non-logged-in or anonymous user.
 * Record the Application id (also known as as client id) as well as tenant id
 
 #### Authentication
+
 * Add the App Proxy URL to `Redirect URIs` to the `Web` section. E.g.:
   * `https://pozi-cardiniavicgovau.msappproxy.net`
 * Add the following `Redirect URIs` to the `Single-page application` section:
@@ -78,8 +79,8 @@ Ensure it doesn't return a response to a non-logged-in or anonymous user.
 * In `Implicit grant and hybrid flows`: select both `Access tokens` and `ID tokens`
 * In `Advanced settings`: Set `Allow public client flows` to `No`
 
-
 #### API Permissions
+
 * Give Pozi the following permissions:
   - API/Permissions Name: `User.Read`, Type: `Delegated`, Admin consent required: `No`. This should allow Pozi to determine access based on a user's role(s).
 
