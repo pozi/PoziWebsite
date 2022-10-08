@@ -70,13 +70,13 @@ Ensure it doesn't return a response to a non-logged-in or anonymous user.
 #### Authentication
 
 * Add the App Proxy URL to `Redirect URIs` to the `Web` section. E.g.:
-  * `https://pozi-cardiniavicgovau.msappproxy.net`
+  * `https://pozi-cardiniavicgovau.msappproxy.net/`
 * Add the following `Redirect URIs` to the `Single-page application` section:
-  * `https://<sitename>.enterprise.pozi.com`
-  * `https://staging.pozi.com/feature-azure` (for testing/debugging)
-  * `http://localhost:3000` (for development)
-  * If needed, add any extra URIs that the client uses (e.g. `https://cardinia-qgis.enterprise.pozi.com`)
-* In `Implicit grant and hybrid flows`: select both `Access tokens` and `ID tokens`
+  * `https://<sitename>.enterprise.pozi.com/`
+  * `https://staging.pozi.com/feature-azure/` (for testing/debugging)
+  * `http://localhost:3000/` (for development)
+  * If needed, add any extra URIs that the client uses (e.g. `https://cardinia-qgis.enterprise.pozi.com/`)
+* In `Implicit grant and hybrid flows`: `Access tokens` and `ID tokens` should remain unchecked
 * In `Advanced settings`: Set `Allow public client flows` to `No`
 
 #### API Permissions
