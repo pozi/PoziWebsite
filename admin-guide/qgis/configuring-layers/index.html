@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.718504146303">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.718674674711">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.718504146303" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.718674674711" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.718504146303" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.718674674711" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.718504146303" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.718674674711" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -393,28 +393,23 @@
         <span>Styling Layers</span>
     </h2>
 </doc-anchor-target>
-<p>Using QGIS, you can control many visual aspects of your layer.</p>
-<p>Reference:</p>
-<ul>
-<li><a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#single-symbol-renderer">basic symbols</a></li>
-<li><a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#categorized-renderer">thematic styling</a></li>
-<li><a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#labels-properties">add labels</a></li>
-</ul>
+<p>Using QGIS, you can control many visual aspects of your layer. You may apply a common style for all the features in a layer
+(<a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#single-symbol-renderer">Single Symbol</a>) or apply a thematic style that displays features according to any of its attributes (<a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#categorized-renderer">Categorized</a>).</p>
+<p>When Pozi fetches a layer using WMS, QGIS Server renders the layer exactly as configured in QGIS. When using WFS, the rendering is done by Pozi in the browser, which can cause the layer to appear differently compared to QGIS for complex styles.</p>
 <doc-anchor-target id="styling-for-vector-layers">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#styling-for-vector-layers">#</doc-anchor-trigger>
         <span>Styling for Vector Layers</span>
     </h3>
 </doc-anchor-target>
-<p>For any layers that are to be made accessible to Pozi as fully interactive <em>vector</em> layers (ie, WFS), use only the supported styles specified below. Even if you only intend to serve layer via WMS, keep the styling as simple as possible to make any future transition to WFS easier.</p>
-<doc-anchor-target id="supported">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#supported">#</doc-anchor-trigger>
-        <span>Supported</span>
-    </h4>
-</doc-anchor-target>
+<p>For any layers that are to be made accessible to Pozi as fully interactive <em>vector</em> layers (ie, WFS), use only the supported styles specified below.</p>
+<p>(If you need Pozi to display layers using a QGIS style that doesn&#x27;t appear in the below lists of supported styles, consider disabling WFS to force Pozi to retrieve the layer via WMS, and thus using the QGIS Server renderer.)</p>
+<doc-panels>
+   <doc-panel id="points" collapsed>
+       <template #title>Points</template>
+<p>Supported marker symbols:</p>
 <ul>
-<li>simple points, lines, polygons symbolisers
+<li>Simple Marker
 <ul>
 <li><code v-pre>square</code></li>
 <li><code v-pre>circle</code></li>
@@ -424,72 +419,60 @@
 <li><code v-pre>x</code></li>
 </ul>
 </li>
-<li>rule-based styles</li>
-<li>basic labels</li>
-<li>customisable legend text</li>
 </ul>
-<doc-anchor-target id="not-currently-supported">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#not-currently-supported">#</doc-anchor-trigger>
-        <span>Not currently supported</span>
-    </h4>
-</doc-anchor-target>
-<ul>
-<li>SVG marker symbols</li>
-<li><code v-pre>diamond</code>, <code v-pre>cross2</code>, <code v-pre>cross_fill</code> symbols</li>
-<li>symbol rotation</li>
-<li>fill hatching</li>
-<li>label offsets</li>
-<li>label buffer transparency</li>
-</ul>
-<doc-anchor-target id="workaround-required">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#workaround-required">#</doc-anchor-trigger>
-        <span>Workaround required</span>
-    </h4>
-</doc-anchor-target>
-<p>The following items are possible by configuring <doc-anchor-trigger to="#virtual-fields">virtual fields</doc-anchor-trigger> in QGIS:</p>
-<ul>
-<li>text expressions in labels (eg, replace all instances of &#x27;UNNAMED&#x27; with (blank))</li>
-<li>categorised styling based on a field name that contains spaces</li>
-</ul>
-<doc-anchor-target id="vector-style-tips">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#vector-style-tips">#</doc-anchor-trigger>
-        <span>Vector Style Tips</span>
-    </h4>
-</doc-anchor-target>
-<doc-anchor-target id="opacity">
-    <h5>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#opacity">#</doc-anchor-trigger>
-        <span>Opacity</span>
-    </h5>
-</doc-anchor-target>
-<ul>
-<li>any changes to opacity must be set in the style colour setting - the symbol&#x27;s overall opacity slider (as well as the layer&#x27;s overall opacity slider) has no effect</li>
-<li>for polygon features to be selectable, the fill opacity must be greater than <code v-pre>0</code> - it can be as little as <code v-pre>1%</code></li>
-</ul>
-<p><figure class="content-center">
-    <img src="../img/qgis-opacity-control.png" alt="" />
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<doc-anchor-target id="sizes">
-    <h5>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#sizes">#</doc-anchor-trigger>
-        <span>Sizes</span>
-    </h5>
-</doc-anchor-target>
-<ul>
-<li><strong>symbol</strong>
+<p>Note that SVG marker symbols are not supported, nor <code v-pre>diamond</code>, <code v-pre>cross2</code>, <code v-pre>cross_fill</code> symbols. Symbol rotation is not supported.</p>
+<p>Suggested sizes:</p>
 <ul>
 <li>set size to <code v-pre>4mm</code> or greater enable to easier interaction for users in the browser</li>
 <li>set stroke to white, <code v-pre>0.5mm</code> or greater to provide separation from the background</li>
 </ul>
-</li>
-<li><strong>line thicknesses</strong>: set to <code v-pre>1mm</code> or greater to enable users to more easily select line features</li>
-<li><strong>label text size</strong>: set to <code v-pre>10 points</code> or greater, and a white <code v-pre>1.8mm</code> buffer for better legibility</li>
+   </doc-panel>
+   <doc-panel id="lines" collapsed>
+       <template #title>Lines</template>
+<p>Supported lines:</p>
+<ul>
+<li>Simple Line
+<ul>
+<li>Solid Line</li>
+<li>No Pen</li>
+<li>Dash Line</li>
+<li>Dot Line</li>
+<li>Dash Dot Line</li>
+<li>Dash Dot Dot Line</li>
 </ul>
+</li>
+</ul>
+<p>Set line thicknesses to <code v-pre>1mm</code> or greater to enable users to more easily select line features.</p>
+   </doc-panel>
+   <doc-panel id="polygons" collapsed>
+       <template #title>Polygons</template>
+<p>Supported fills:</p>
+<ul>
+<li>Simple Fill
+<ul>
+<li>Solid</li>
+<li>No brush (see note below)</li>
+<li>Cross</li>
+<li>Diagonal X</li>
+</ul>
+</li>
+<li>Point Pattern Fill</li>
+</ul>
+<p><img src="../img/qgis-layer-styling-simple-fill.png" style="width:250px" alt="" /></p>
+<p>Note that the &#x27;No brush&#x27; fill will prevent users from being able to select a polygon by clicking within the polygon. To enable users to select a polygon feature by clicking anywhere within it, use the &#x27;Solid&#x27; fill, and set the opacity of the fill colour to a low or zero value.</p>
+   </doc-panel>
+</doc-panels>
+<p>Point, line and polygon features can optionally be configured to display labels.</p>
+<doc-panel id="labels" collapsed>
+    <template #title>Labels</template>
+<p><a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#labels-properties">QGIS Reference</a></p>
+<p>Notes:</p>
+<ul>
+<li>label offsets and label buffer transparency are not supported</li>
+<li>text expressions in labels (eg, combining values from multiple fields, or find-and-replace operations) are possible by configuring <doc-anchor-trigger to="#virtual-fields">virtual fields</doc-anchor-trigger></li>
+</ul>
+<p>Set label text size to <code v-pre>10 points</code> or greater, and a white <code v-pre>1.8mm</code> buffer for better legibility.</p>
+</doc-panel>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
     <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
@@ -505,10 +488,19 @@
         <div class="pr-5 ml-3 w-full">
             <h5>MapInfo Styles</h5>
 <p>MapInfo tables sometimes contain embedded styles. QGIS Desktop may recognise and display the map features using these styles, but QGIS Server cannot serve the layer to Pozi without first overriding the style.</p>
-<p>If the layer appears in QGIS Symbology mode &quot;Embedded&quot;, switch it to &quot;Single Symbol&quot; or &quot;Categorised&quot;, and style it according to your preference.</p>
+<p>If the layer appears in QGIS Symbology mode &quot;Embedded&quot;, switch it to &quot;Single Symbol&quot; or &quot;Categorized&quot;, and style it according to your preference.</p>
         </div>
     </div>
 </div>
+<doc-anchor-target id="opacity">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#opacity">#</doc-anchor-trigger>
+        <span>Opacity</span>
+    </h3>
+</doc-anchor-target>
+<p>Layer Styling &gt; Layer Rendering &gt; Opacity</p>
+<p><img src="../img/qgis-layer-styling-opacity.png" style="width:250px" alt="" /></p>
+<p>Layers are initially displayed in Pozi using the opacity value you&#x27;ve set - the user may then adjust the opacity up or down from the initial value.</p>
 <br/>
 <doc-anchor-target id="managing-data-fields">
     <h2>
@@ -545,6 +537,7 @@
 <li>perform calculations based on one or more existing values</li>
 <li>generate values based on the feature geometry (eg, length, area)</li>
 <li>do a find-and-replace within text values to change what is displayed to users</li>
+<li>duplicate an existing field, but use a different name (for example, for Pozi to support categorised styling, the target field name must not contain any spaces)</li>
 </ul>
 <p>See the QGIS help guide for more information <a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/attribute_table.html#virtual-field">virtual fields</a> and <a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/attribute_table.html#using-the-field-calculator">using the field calculator</a>.</p>
 <doc-anchor-target id="create-link-field">
@@ -573,6 +566,7 @@
 <p>If the value in the field is a URL (as in this example), Pozi will display it as a clickable link.</p>
 <p><img src="../img/pozi-info-panel-showing-link-from-virtual-field.png" style="width:300px" alt="" /></p>
 <p>If the value is a URL ending in <code v-pre>.png</code> or <code v-pre>.jpg</code>, Pozi will display a thumbnail of the target image.</p>
+<br/>
 <doc-anchor-target id="publish-as-vector-layer">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#publish-as-vector-layer">#</doc-anchor-trigger>
@@ -675,6 +669,7 @@
 <pre class="language-none"><code v-pre class="language-none">showLegend=false, visible=true</code></pre>
 </doc-codeblock></div>
 <p><a href="https://github.com/pozi/PoziApp/blob/master/app/src/config/catalog/KeywordsParser.ts">Developer reference</a></p>
+<br/>
 <doc-anchor-target id="table-file-maintenance">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#table-file-maintenance">#</doc-anchor-trigger>
