@@ -40,7 +40,7 @@ Administrators can use QGIS to configure child datasets for viewing by internal 
 
 ## Add Dataset
 
-Add the source table for the child dataset to a [QGIS project](managing-qgis-projects).
+Add the source table for the child dataset to a [QGIS project](managing-qgis-projects). The project can be an existing project that contains map layers or it can be a dedicated project that contains no layers and only child datasets.
 
 1. open project file in QGIS
 2. Layer > Add Layer > pick from file or database options
@@ -70,7 +70,7 @@ For example, if the parent is the "Property" layer, then every time a user selec
 
 Example: `parent=Property`
 
-The parent layer can exist in the same QGIS project, or a different project, or even an external layer.
+The parent layer can exist in the same QGIS project, or a different project, or even a layer from an external source.
 
 ### Parameter
 
@@ -125,7 +125,7 @@ parent=Property, parameter=EXP_FILTER=Assess_NumberX in ('[Property Number]'), d
 
 Click OK, then save the project.
 
-Open your Pozi site in your browser, refresh the page, and test that you the child dataset displays in the info panel when you click on a parent feature.
+Open your Pozi site in your browser, refresh the page, click on the map, select a parent record, and confirm that you can see the related child records in the info panel.
 
 ## Troubleshooting
 

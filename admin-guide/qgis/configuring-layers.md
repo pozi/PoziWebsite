@@ -65,71 +65,97 @@ Windows > IIS > (select server) > Application Pools > PoziQgisServer > Recycle
 
 ## Styling Layers
 
-Using QGIS, you can control many visual aspects of your layer.
+Using QGIS, you can control many visual aspects of your layer. You may apply a common style for all the features in a layer 
+([Single Symbol](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#single-symbol-renderer)) or apply a thematic style that displays features according to any of its attributes ([Categorized](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#categorized-renderer)).
 
-Reference:
-
-* [basic symbols](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#single-symbol-renderer)
-* [thematic styling](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#categorized-renderer)
-* [add labels](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#labels-properties)
+When Pozi fetches a layer using WMS, QGIS Server renders the layer exactly as configured in QGIS. When using WFS, the rendering is done by Pozi in the browser, which can cause the layer to appear differently compared to QGIS for complex styles. 
 
 ### Styling for Vector Layers
 
-For any layers that are to be made accessible to Pozi as fully interactive *vector* layers (ie, WFS), use only the supported styles specified below. Even if you only intend to serve layer via WMS, keep the styling as simple as possible to make any future transition to WFS easier.
+For any layers that are to be made accessible to Pozi as fully interactive *vector* layers (ie, WFS), use only the supported styles specified below.
 
-#### Supported
+(If you need Pozi to display layers using a QGIS style that doesn't appear in the below lists of supported styles, consider disabling WFS to force Pozi to retrieve the layer via WMS, and thus using the QGIS Server renderer.)
 
-* simple points, lines, polygons symbolisers
+==- Points
+
+Supported marker symbols:
+
+* Simple Marker
   * `square`
   * `circle`
   * `triangle`
   * `star`
   * `cross`
   * `x`
-* rule-based styles
-* basic labels
-* customisable legend text
 
-#### Not currently supported
+Note that SVG marker symbols are not supported, nor `diamond`, `cross2`, `cross_fill` symbols. Symbol rotation is not supported.
 
-* SVG marker symbols
-* `diamond`, `cross2`, `cross_fill` symbols
-* symbol rotation
-* fill hatching
-* label offsets
-* label buffer transparency
+Suggested sizes:
 
-#### Workaround required
+* set size to `4mm` or greater enable to easier interaction for users in the browser
+* set stroke to white, `0.5mm` or greater to provide separation from the background
 
-The following items are possible by configuring [virtual fields](#virtual-fields) in QGIS:
+==- Lines
 
-* text expressions in labels (eg, replace all instances of 'UNNAMED' with (blank))
-* categorised styling based on a field name that contains spaces
+Supported lines:
 
-#### Vector Style Tips
+* Simple Line
+  * Solid Line
+  * No Pen
+  * Dash Line
+  * Dot Line
+  * Dash Dot Line
+  * Dash Dot Dot Line
 
-##### Opacity
+Set line thicknesses to `1mm` or greater to enable users to more easily select line features.
 
-* any changes to opacity must be set in the style colour setting - the symbol's overall opacity slider (as well as the layer's overall opacity slider) has no effect
-* for polygon features to be selectable, the fill opacity must be greater than `0` - it can be as little as `1%`
+==- Polygons
 
-![](./img/qgis-opacity-control.png)
+Supported fills:
 
-##### Sizes
+* Simple Fill
+  * Solid
+  * No brush (see note below)
+  * Cross
+  * Diagonal X
+* Point Pattern Fill
 
-* **symbol**
-  * set size to `4mm` or greater enable to easier interaction for users in the browser
-  * set stroke to white, `0.5mm` or greater to provide separation from the background
-* **line thicknesses**: set to `1mm` or greater to enable users to more easily select line features
-* **label text size**: set to `10 points` or greater, and a white `1.8mm` buffer for better legibility
+![](./img/qgis-layer-styling-simple-fill.png){style="width:250px"}
+
+Note that the 'No brush' fill will prevent users from being able to select a polygon by clicking within the polygon. To enable users to select a polygon feature by clicking anywhere within it, use the 'Solid' fill, and set the opacity of the fill colour to a low or zero value.
+
+==-
+
+Point, line and polygon features can optionally be configured to display labels.
+
+==- Labels
+
+[QGIS Reference](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#labels-properties)
+
+Notes:
+
+* label offsets and label buffer transparency are not supported
+* text expressions in labels (eg, combining values from multiple fields, or find-and-replace operations) are possible by configuring [virtual fields](#virtual-fields)
+
+Set label text size to `10 points` or greater, and a white `1.8mm` buffer for better legibility.
+
+==-
 
 !!! MapInfo Styles
 
 MapInfo tables sometimes contain embedded styles. QGIS Desktop may recognise and display the map features using these styles, but QGIS Server cannot serve the layer to Pozi without first overriding the style.
 
-If the layer appears in QGIS Symbology mode "Embedded", switch it to "Single Symbol" or "Categorised", and style it according to your preference.
+If the layer appears in QGIS Symbology mode "Embedded", switch it to "Single Symbol" or "Categorized", and style it according to your preference.
 
 !!!
+
+### Opacity
+
+Layer Styling > Layer Rendering > Opacity
+
+![](./img/qgis-layer-styling-opacity.png){style="width:250px"}
+
+Layers are initially displayed in Pozi using the opacity value you've set - the user may then adjust the opacity up or down from the initial value.
 
 <br/>
 
@@ -160,6 +186,7 @@ Some examples include:
 * perform calculations based on one or more existing values
 * generate values based on the feature geometry (eg, length, area)
 * do a find-and-replace within text values to change what is displayed to users
+* duplicate an existing field, but use a different name (for example, for Pozi to support categorised styling, the target field name must not contain any spaces)
 
 See the QGIS help guide for more information [virtual fields](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/attribute_table.html#virtual-field) and [using the field calculator](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/attribute_table.html#using-the-field-calculator).
 
@@ -190,6 +217,8 @@ If the value in the field is a URL (as in this example), Pozi will display it as
 ![](img/pozi-info-panel-showing-link-from-virtual-field.png){style="width:300px"}
 
 If the value is a URL ending in `.png` or `.jpg`, Pozi will display a thumbnail of the target image.
+
+<br/>
 
 ## Publish as Vector Layer
 
@@ -281,6 +310,8 @@ showLegend=false, visible=true
 ```
 
 [Developer reference](https://github.com/pozi/PoziApp/blob/master/app/src/config/catalog/KeywordsParser.ts)
+
+<br/>
 
 ## Table File Maintenance
 
