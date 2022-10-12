@@ -1,17 +1,8 @@
 ---
-title: Map Widget
 icon: location
 ---
 
-:::note Under Construction
-
-*This page is a work in progress. Please refer to our existing Help Guide for information about this topic.*
-
-[Existing Help Guide](https://help.pozi.com/search?query=widgets)
-
-:::
-
----
+# Map Widget
 
 *Available for Pozi Pro, Enterprise and Enterprise Cloud customers*
 
@@ -23,15 +14,12 @@ The Pozi map widget enables users to search any address to launch an instance of
 
 <iframe height="200px" width="100%" overflow="hidden" src="https://southerngrampians.pozi.com/widget.html#newtab=true"></iframe>
 
----
+==-
 
-Embed code:
 
-```
+```html Example iframe embed code
 <iframe height="200px" width="100%" overflow="hidden" src="https://southerngrampians.pozi.com/widget.html#newtab=true"></iframe>
 ```
-
-==-
 
 ## Options
 

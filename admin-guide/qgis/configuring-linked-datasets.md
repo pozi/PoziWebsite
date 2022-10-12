@@ -127,6 +127,8 @@ Click OK, then save the project.
 
 Open your Pozi site in your browser, refresh the page, click on the map, select a parent record, and confirm that you can see the related child records in the info panel.
 
+Pozi automatically prevents the child table appearing in the layer panel due to the presence of the `parent` keyword. Do NOT add the table to the list of excluded layers in the QGIS Server settings, except if you want to disable the child dataset lookup.
+
 ## Troubleshooting
 
 ==- Info Panel doesn't display results tab for new child dataset

@@ -474,12 +474,12 @@ Set `"visible": true` for the default basemap.
     "group": "Basemap",
     "type": "XYZ",
     "config": {
-      "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/Basemaps/QldMap_Lite/MapServer/tile/{z}/{y}/{x}?blankTile=false&browserCache=Map"
+      "url": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Basemaps/QldMap_Lite/MapServer/tile/{z}/{y}/{x}?blankTile=false&browserCache=Map"
     }
   }
 ```
 
-Basemaps are available in `QldMap_Lite`, `QldBase_Pastel` and other variations: https://gisservices.information.qld.gov.au/arcgis/rest/services/Basemaps/.
+Basemaps are available in `QldMap_Lite`, `QldBase_Pastel` and other variations: https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Basemaps/.
 
 ==-
 
