@@ -149,6 +149,21 @@ If the layer appears in QGIS Symbology mode "Embedded", switch it to "Single Sym
 
 !!!
 
+#### Categorized Symbology
+
+Layers can be styled using the `Categorized` option. However, when publishing the layer as a vector layer, the following limitations apply:
+
+* the symbology must be based on a field, not an expression
+* the values must not be merged (ie, only one value per row)
+* the field name must not contain any spaces
+* the field must not use an alias name
+
+A workaround for these limitations is to use a suitably named virtual field which contains the required logic.
+
+For instance, the virtual field can contain a case statement to accept any number of input values (from one or more fields) and generate a specific value for use in subsequent styling.
+
+![](./img/qgis-layer-virtual-fields-for-styling-categories.png){style="width:800px"}
+
 ### Opacity
 
 Layer Styling > Layer Rendering > Opacity
@@ -337,6 +352,7 @@ Check the following:
 * Pozi is only able to display features that have at least one valid/non-null attribute. If any records in your data contain no attributes, populate some values into one of the fields.
 * Ensure the layer has a coordinate reference system set. Go to Layer Properties > Source > Assigned CRS, and pick a projection
 * For file-based layers, ensure that the file path is one that is recognised by the server. See [About layer file paths](#about-layer-file-paths) above.
+* Ensure that any categorised styling is based on a single field with a single value per row. See [Categorized Symbology](#categorized-symbology) above.
 
 ==- Layers are not displayed with the styling from QGIS
 
