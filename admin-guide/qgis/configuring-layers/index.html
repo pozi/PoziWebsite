@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.718849005566">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.718953397288">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.718849005566" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.718953397288" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.718849005566" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.718953397288" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.718849005566" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.718953397288" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -492,6 +492,22 @@
         </div>
     </div>
 </div>
+<doc-anchor-target id="categorized-symbology">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#categorized-symbology">#</doc-anchor-trigger>
+        <span>Categorized Symbology</span>
+    </h4>
+</doc-anchor-target>
+<p>Layers can be styled using the <code v-pre>Categorized</code> option. However, when publishing the layer as a vector layer, the following limitations apply:</p>
+<ul>
+<li>the symbology must be based on a field, not an expression</li>
+<li>the values must not be merged (ie, only one value per row)</li>
+<li>the field name must not contain any spaces</li>
+<li>the field must not use an alias name</li>
+</ul>
+<p>A workaround for these limitations is to use a suitably named virtual field which contains the required logic.</p>
+<p>For instance, the virtual field can contain a case statement to accept any number of input values (from one or more fields) and generate a specific value for use in subsequent styling.</p>
+<p><img src="../img/qgis-layer-virtual-fields-for-styling-categories.png" style="width:800px" alt="" /></p>
 <doc-anchor-target id="opacity">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#opacity">#</doc-anchor-trigger>
@@ -697,6 +713,7 @@
 <li>Pozi is only able to display features that have at least one valid/non-null attribute. If any records in your data contain no attributes, populate some values into one of the fields.</li>
 <li>Ensure the layer has a coordinate reference system set. Go to Layer Properties &gt; Source &gt; Assigned CRS, and pick a projection</li>
 <li>For file-based layers, ensure that the file path is one that is recognised by the server. See <doc-anchor-trigger to="#about-layer-file-paths">About layer file paths</doc-anchor-trigger> above.</li>
+<li>Ensure that any categorised styling is based on a single field with a single value per row. See <doc-anchor-trigger to="#categorized-symbology">Categorized Symbology</doc-anchor-trigger> above.</li>
 </ul>
    </doc-panel>
    <doc-panel id="layers-are-not-displayed-with-the-styling-from-qgis" collapsed>
