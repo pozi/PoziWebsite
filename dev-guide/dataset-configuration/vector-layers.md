@@ -387,6 +387,7 @@ Equivalent Pozi Server request example:
 
 * `https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=data.gov.au/bendigo/cogb-recreation-drinking-fountains.shz`
 * `https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=frankston/property-valuation-information.vrt&options=-where|propertynumber='214855'`
+* `https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=swanhill/shrccdogwastebags.vrt`
 
 ##### Advanced Example
 
@@ -454,6 +455,56 @@ Note: it's not possible to test this VRT locally as is typically done with an `o
 Here is an example of a request that returns all features with a "type" value of "Maternal and Child Health":
 
 [https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=frankston/council-facilities.vrt&options=-where|type='Maternal%20and%20Child%20Health'](https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=frankston/council-facilities.vrt&options=-where|type='Maternal%20and%20Child%20Health')
+
+#### Converting CSV to GeoJSON
+
+A client has uploaded a dataset in CSV format to data.gov.au or other online location.
+
+CSV datasets containing coordinate columns can be dynamically converted to GeoJSON using Pozi Server so that the data can be directly consumed within Pozi.
+
+Preparation:
+
+* ensure [Spreadsheet Layers plugin](https://plugins.qgis.org/plugins/SpreadsheetLayers/) is enabled in QGIS
+* download CSV locally
+* in QGIS, click Layer > Add Layer > Add spreadsheet layer
+* specify downloaded CSV
+* tick Geometry box and specify the columns to be used for X and Y
+* set Reference system to WGS84
+* click OK to save VRT
+
+If the CSV is online, and you want Pozi Server to reference the data live from the source, edit the resulting VRT file in a text editor. Within the `SrcDataSource` section, remove the reference to the local CSV and substitute in the CSV's online URL.
+
+```xml Example
+<SrcDataSource>https://data.gov.au/data/dataset/8b222b4c-3c6e-4f5f-b4b2-f7581bd6b138/resource/1ba745dc-d1ae-4758-8f85-8423f81f6af0/download/shrccdogwastebags.csv</SrcDataSource>
+```
+
+Place the resulting VRT file in a suitable location within the `userdata` folder.
+
+==- Example VRT file
+
+```xml Pozi\userdata\ec 21354118232\swanhill\shrccdogwastebags.vrt
+<?xml version="1.0" encoding="UTF-8"?>
+<OGRVRTDataSource>
+    <OGRVRTLayer name="shrccdogwastebags-shrccdogwastebags">
+        <SrcDataSource>https://data.gov.au/data/dataset/8b222b4c-3c6e-4f5f-b4b2-f7581bd6b138/resource/1ba745dc-d1ae-4758-8f85-8423f81f6af0/download/shrccdogwastebags.csv</SrcDataSource>
+        <!--Header=False-->
+        <SrcLayer>shrccdogwastebags</SrcLayer>
+        <Field name="UID" src="UID" type="String"/>
+        <Field name="TYPE" src="TYPE" type="String"/>
+        <Field name="DESC" src="DESC" type="String"/>
+        <Field name="IMAGE" src="IMAGE" type="String"/>
+        <GeometryType>wkbPoint</GeometryType>
+        <LayerSRS>EPSG:4326</LayerSRS>
+        <GeometryField encoding="PointFromColumns" x="LON" y="LAT"/>
+    </OGRVRTLayer>
+</OGRVRTDataSource>
+```
+
+==-
+
+If the VRT is configured on the Pozi Cloud Server, the target URL will look like this:
+
+https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=swanhill/shrccdogwastebags.vrt
 
 ---
 
