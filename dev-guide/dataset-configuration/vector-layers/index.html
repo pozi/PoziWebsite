@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.718953397288">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.719361884430">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.718953397288" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.719361884430" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.718953397288" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.719361884430" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.718953397288" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.718953397288" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.719361884430" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.719361884430" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -781,6 +781,7 @@
 <ul>
 <li><code v-pre>https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=data.gov.au/bendigo/cogb-recreation-drinking-fountains.shz</code></li>
 <li><code v-pre>https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=frankston/property-valuation-information.vrt&amp;options=-where|propertynumber='214855'</code></li>
+<li><code v-pre>https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=swanhill/shrccdogwastebags.vrt</code></li>
 </ul>
 <doc-anchor-target id="advanced-example">
     <h5>
@@ -865,6 +866,53 @@
 <p><a href="https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=frankston/council-facilities.vrt">https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=frankston/council-facilities.vrt</a></p>
 <p>Here is an example of a request that returns all features with a &quot;type&quot; value of &quot;Maternal and Child Health&quot;:</p>
 <p><a href="https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=frankston/council-facilities.vrt&amp;options=-where%7Ctype=%27Maternal%20and%20Child%20Health%27">https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=frankston/council-facilities.vrt&amp;options=-where|type=&#x27;Maternal%20and%20Child%20Health&#x27;</a></p>
+<doc-anchor-target id="converting-csv-to-geojson">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#converting-csv-to-geojson">#</doc-anchor-trigger>
+        <span>Converting CSV to GeoJSON</span>
+    </h4>
+</doc-anchor-target>
+<p>A client has uploaded a dataset in CSV format to data.gov.au or other online location.</p>
+<p>CSV datasets containing coordinate columns can be dynamically converted to GeoJSON using Pozi Server so that the data can be directly consumed within Pozi.</p>
+<p>Preparation:</p>
+<ul>
+<li>ensure <a href="https://plugins.qgis.org/plugins/SpreadsheetLayers/">Spreadsheet Layers plugin</a> is enabled in QGIS</li>
+<li>download CSV locally</li>
+<li>in QGIS, click Layer &gt; Add Layer &gt; Add spreadsheet layer</li>
+<li>specify downloaded CSV</li>
+<li>tick Geometry box and specify the columns to be used for X and Y</li>
+<li>set Reference system to WGS84</li>
+<li>click OK to save VRT</li>
+</ul>
+<p>If the CSV is online, and you want Pozi Server to reference the data live from the source, edit the resulting VRT file in a text editor. Within the <code v-pre>SrcDataSource</code> section, remove the reference to the local CSV and substitute in the CSV&#x27;s online URL.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;SrcDataSource&gt;https://data.gov.au/data/dataset/8b222b4c-3c6e-4f5f-b4b2-f7581bd6b138/resource/1ba745dc-d1ae-4758-8f85-8423f81f6af0/download/shrccdogwastebags.csv&lt;/SrcDataSource&gt;</code></pre>
+</doc-codeblock></div>
+<p>Place the resulting VRT file in a suitable location within the <code v-pre>userdata</code> folder.</p>
+<doc-panel id="example-vrt-file" collapsed>
+    <template #title>Example VRT file</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Pozi\userdata\ec 21354118232\swanhill\shrccdogwastebags.vrt</div>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;OGRVRTDataSource&gt;
+    &lt;OGRVRTLayer name=&quot;shrccdogwastebags-shrccdogwastebags&quot;&gt;
+        &lt;SrcDataSource&gt;https://data.gov.au/data/dataset/8b222b4c-3c6e-4f5f-b4b2-f7581bd6b138/resource/1ba745dc-d1ae-4758-8f85-8423f81f6af0/download/shrccdogwastebags.csv&lt;/SrcDataSource&gt;
+        &lt;!--Header=False--&gt;
+        &lt;SrcLayer&gt;shrccdogwastebags&lt;/SrcLayer&gt;
+        &lt;Field name=&quot;UID&quot; src=&quot;UID&quot; type=&quot;String&quot;/&gt;
+        &lt;Field name=&quot;TYPE&quot; src=&quot;TYPE&quot; type=&quot;String&quot;/&gt;
+        &lt;Field name=&quot;DESC&quot; src=&quot;DESC&quot; type=&quot;String&quot;/&gt;
+        &lt;Field name=&quot;IMAGE&quot; src=&quot;IMAGE&quot; type=&quot;String&quot;/&gt;
+        &lt;GeometryType&gt;wkbPoint&lt;/GeometryType&gt;
+        &lt;LayerSRS&gt;EPSG:4326&lt;/LayerSRS&gt;
+        &lt;GeometryField encoding=&quot;PointFromColumns&quot; x=&quot;LON&quot; y=&quot;LAT&quot;/&gt;
+    &lt;/OGRVRTLayer&gt;
+&lt;/OGRVRTDataSource&gt;</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<p>If the VRT is configured on the Pozi Cloud Server, the target URL will look like this:</p>
+<p><a href="https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=swanhill/shrccdogwastebags.vrt">https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=swanhill/shrccdogwastebags.vrt</a></p>
 <hr />
 <doc-anchor-target id="troubleshooting">
     <h2>
