@@ -122,6 +122,8 @@ QGIS will dynamically join your datasets, and users will see a seamless combinat
 
 </br>
 
+## Ready to learn more?
+
 :::centre
 
   <big>Get in touch to discover how to power your GIS with QGIS</big>
