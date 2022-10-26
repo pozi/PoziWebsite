@@ -22,75 +22,119 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [ ] obtain layer title/label field setting from QGIS Server
 - [ ] prevent Share links from capturing the panel state (unless specified in advanced options)
 - [ ] zoom/pan to selected feature on Pozi launch if URL contains a selected feature
-- [ ] use field name aliases from QGIS project
-- [ ] add button to clear current selection
+- [ ] print to scale
+- [ ] advanced selection capabilities
+- [ ] collaborate map annotations
 
 ## Completed
 
 ### October 2022
 
-- [x] new: select by line
-- [x] improved: exact matches in Unified Search are now sorted by preferred weighting
-- [x] improved: render HTML-formatted attributes as HTML
-- [x] fixed: prevent layers that have been configured as non-queryable in QGIS from appearing in *What's Here* results
-- [x] fixed: don't collapse layer groups that contain layers that match the layer filter
-- [x] fixed: update layer filter to not exclude some valid results
-- [x] fixed: gracefully handle tables that have an attribute field called 'geometry'
-- [x] fixed: ensure table can display when some records may contain no attributes
+#### New
+
+- [x] add 'Select by line' selection mode
+- [x] add button to clear current selection
+
+#### Improved
+
+- [x] use field name aliases from QGIS project
+- [x] sort exact matches in Unified Search by weighting
+- [x] render HTML-formatted attributes as HTML
+- [x] support categorised layer styles that are based on fields that have an alias
+
+#### Fixed
+
+- [x] prevent layers that have been configured as non-queryable in QGIS from appearing in *What's Here* results
+- [x] don't collapse layer groups that contain layers that match the layer filter
+- [x] update layer filter to not exclude some valid results
+- [x] gracefully handle tables that have an attribute field called 'geometry'
+- [x] ensure table can display when some records may contain no attributes
 
 ### September 2022
 
-- [x] new: use layer opacity setting from QGIS Server
-- [x] new: enable layer catalogues to be filtered to include/exclude layers
-- [x] improved: overhaul analytics capture using new Google Analytics GA4 (in preparation for monthly reports for clients)
-- [x] fixed: display clickable link in What's Here results when the selected layer's title attribute is a URL
-- [x] fixed: allow for differences in upper/lower case in layer's specified ID field
+#### New
+
+- [x] use layer opacity setting from QGIS Server
+- [x] enable layer catalogues to be filtered to include/exclude layers
+
+#### Improved
+
+- [x] overhaul analytics capture using new Google Analytics GA4 (in preparation for monthly reports for clients)
+
+#### Fixed
+
+- [x] display clickable link in What's Here results when the selected layer's title attribute is a URL
+- [x] allow for differences in upper/lower case in layer's specified ID field
 
 ### August 2022
 
-- [x] new: enable administrators to configure child datasets within QGIS
-- [x] new: display legend inline for switched-on layers
-- [x] new: enable loading of layers via WMTS catalogue
-- [x] improved: increase precision on measurement tools
-- [x] improved: enable more overrides for entire catalogue layers, such as opacity
-- [x] improved: after layer search, expand only groups that contain selected layer
-- [x] improved: unify appearance of layer options for stand-alone and catalogue layers
-- [x] improved: hide table when layer is turned off
-- [x] improved: render null and undefined values as empty string in table view
-- [x] improved: use favicons from alternative URLs for frequently used links which don't have their own favicon
-- [x] fixed: better remember state of expanded layer groups for sites with a lot of layers
-- [x] fixed: respect field order of source data in QGIS GetFeature queries
-- [x] fixed: horizontal alignment of links in info panel
+#### New
+
+- [x] enable administrators to configure child datasets within QGIS
+- [x] display legend inline for switched-on layers
+- [x] enable loading of layers via WMTS catalogue
+
+#### Improved
+
+- [x] increase precision on measurement tools
+- [x] enable more overrides for entire catalogue layers, such as opacity
+- [x] after layer search, expand only groups that contain selected layer
+- [x] unify appearance of layer options for stand-alone and catalogue layers
+- [x] hide table when layer is turned off
+- [x] render null and undefined values as empty string in table view
+- [x] use favicons from alternative URLs for frequently used links which don't have their own favicon
+
+#### Fixed
+
+- [x] better remember state of expanded layer groups for sites with a lot of layers
+- [x] respect field order of source data in QGIS GetFeature queries
+- [x] horizontal alignment of links in info panel
 
 ### July 2022
 
-- [x] new: obtain layer queryability setting from QGIS Server
-- [x] new: enable highlighting of selected features from QGIS Server layers
-- [x] improved: faster app loads by batch loading layers
-- [x] improved: faster app loads for return visitors by caching layer catalogue in the browser (via service workers)
-- [x] improved: enable layer filter to narrow down results within nested layer groups
-- [x] improved: slimmer left drawer takes up less screen real estate
-- [x] improved: show spinner during app load if waiting for slow data sources
-- [x] improved: even better evaluation of attributes to display for title of selected feature
-- [x] improved: layer panel now responds much quicker to layer reset and expanding large groups
-- [x] fixed: info panel failed to show feature details after initial viewing
-- [x] fixed: wait for local datasource check before attempting to get local layers
-- [x] fixed: table view now working for catalogue layers
+#### New
+
+- [x] obtain layer queryability setting from QGIS Server
+- [x] enable highlighting of selected features from QGIS Server layers
+
+#### Improved
+
+- [x] faster app loads by batch loading layers
+- [x] faster app loads for return visitors by caching layer catalogue in the browser (via service workers)
+- [x] enable layer filter to narrow down results within nested layer groups
+- [x] slimmer left drawer takes up less screen real estate
+- [x] show spinner during app load if waiting for slow data sources
+- [x] even better evaluation of attributes to display for title of selected feature
+- [x] layer panel now responds much quicker to layer reset and expanding large groups
+
+#### Fixed
+
+- [x] info panel failed to show feature details after initial viewing
+- [x] wait for local datasource check before attempting to get local layers
+- [x] table view now working for catalogue layers
 
 ### June 2022
 
 Our biggest release in over two years!
 
-- [x] new: **QGIS integration**
+#### New
+
+- [x] **QGIS integration**
   * import layer catalogue from QGIS Server and other WMS/WFS sources
   * build nested layer groups from WMS/QGIS catalogues
   * create Admin Guide, add content for using QGIS to create and maintain layer catalogues
-- [x] new: dynamically evaluate the most suitable attribute from any selected feature to display as feature's title
-- [x] new: display loading spinner for WMS layers
-- [x] improved: compact layer view
-- [x] improved: extend table view to full page width
+- [x] dynamically evaluate the most suitable attribute from any selected feature to display as feature's title
+- [x] display loading spinner for WMS layers
+
+#### Improved
+
+- [x] compact layer view
+- [x] extend table view to full page width
 - [x] upgrade to React v17
-- [x] fixed: prevent page from reloading on first visit
+
+#### Fixed
+
+- [x] prevent page from reloading on first visit
 
 ---
 
@@ -111,7 +155,7 @@ We'll do a better job going forward keeping track of all new development and imp
 
 ### March 2022
 
-- [x] new: support for vector tile basemaps
+- [x] support for vector tile basemaps
 
 ### January 2022
 
