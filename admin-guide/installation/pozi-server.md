@@ -24,10 +24,12 @@ The Pozi web application aggregates internal and external data in the browser in
 
 Pozi Server is configured on your network with DNS rules that enable local users to access its API via a dedicated URL (typically `[yourservername].pozi.com`).
 
-* when a user *inside* the client's network uses Pozi, any request to `[yourservername].pozi.com` is directed by the local DNS rules to the internal server on which Pozi Connect Server is installed, and Pozi Connect Server responds with the requested data
-* when a user *outside* the organisation's network uses Pozi, any request to `[yourservername].pozi.com` quietly fails because it's not a valid endpoint on the internet (however any data from any public data sources will load in the app as normal)
+![](/static/draw.io/network-diagram-enterprise.png)
 
-IT managers maintain control over internal user access to Pozi Connect Server by configuring the network DNS and firewall rules. For example, access to Pozi Server can be restricted for specific users or groups of users with a group policy or firewall rules that blacklists the `[yourservername].pozi.com` endpoint
+* when a user *inside* the corporate network uses Pozi, any request to `[yourservername].pozi.com` is directed by the local DNS rules to the internal server on which Pozi Connect Server is installed, and Pozi Connect Server responds with the requested data
+* when a user *outside* the corporate network uses Pozi, any request to `[yourservername].pozi.com` quietly fails because it's not a valid endpoint on the internet (however any data from any public data sources will load in the app as normal)
+
+IT managers maintain control over internal user access to Pozi Connect Server by configuring the network DNS and firewall rules. For example, access to Pozi Server can be restricted for specific users or groups of users with a group policy or firewall rules that blacklists the `[yourservername].pozi.com` endpoint.
 
 ==-
 

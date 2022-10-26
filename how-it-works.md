@@ -6,7 +6,7 @@ layout: central
 
 Pozi is a web application that aggregates spatial and non-spatial data from various public and private sources.
 
-The hybrid cloud architecture of the Pozi platform connects users directly to live, authoritative data sources to maintain information integrity and eliminate data double-handling.
+Pozi's *hybrid cloud* architecture connects users directly to live, authoritative data sources to maintain information integrity and eliminate data double-handling.
 
 ## Architecture
 

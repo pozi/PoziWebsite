@@ -22,19 +22,26 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [ ] obtain layer title/label field setting from QGIS Server
 - [ ] prevent Share links from capturing the panel state (unless specified in advanced options)
 - [ ] zoom/pan to selected feature on Pozi launch if URL contains a selected feature
+- [ ] use field name aliases from QGIS project
+- [ ] add button to clear current selection
 
 ## Completed
 
 ### October 2022
 
 - [x] new: select by line
+- [x] improved: exact matches in Unified Search are now sorted by preferred weighting
+- [x] improved: render HTML-formatted attributes as HTML
 - [x] fixed: prevent layers that have been configured as non-queryable in QGIS from appearing in *What's Here* results
+- [x] fixed: don't collapse layer groups that contain layers that match the layer filter
+- [x] fixed: update layer filter to not exclude some valid results
+- [x] fixed: gracefully handle tables that have an attribute field called 'geometry'
+- [x] fixed: ensure table can display when some records may contain no attributes
 
 ### September 2022
 
 - [x] new: use layer opacity setting from QGIS Server
 - [x] new: enable layer catalogues to be filtered to include/exclude layers
-- [x] new: use field name aliases from QGIS project
 - [x] improved: overhaul analytics capture using new Google Analytics GA4 (in preparation for monthly reports for clients)
 - [x] fixed: display clickable link in What's Here results when the selected layer's title attribute is a URL
 - [x] fixed: allow for differences in upper/lower case in layer's specified ID field

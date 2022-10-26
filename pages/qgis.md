@@ -18,61 +18,109 @@ layout: central
 
 :::centre
 
+  # Enterprise GIS
+
   # Powered by QGIS
 
-  <big>Manage your organisation's geospatial data with QGIS.</big>
+  <big>**Manage your organisation's geospatial data with QGIS**</big>
 
-  Build your users' Pozi experience using QGIS - import spatial and non-spatial data, style layers, build data joins, apply geo-processing, and more.
+  <big>Ultimate control for your corporate GIS - publish spatial and non-spatial datasets, style layers, create data joins, apply geo-processing, and more.</big>
 
 :::
 
---![](/static/img/tweet-gallery/northern_grampians_waste_route_styling.png)--
+--![](/static/img/screenshots/qgis-to-pozi.png)--
 
 :::centre
 
-<big>QGIS is ultimate toolkit for publishing location-based information to users within your organisation</big>
+<big>**Design in QGIS. Publish in Pozi.**</big>
+
+<big>QGIS is the ultimate toolkit for publishing location-based information to users across your organisation</big>
 
 :::
 
+</br>
+
 ## Ultimate control
 
-Use QGIS to easily manage and publish map layers across your organisation.
+Use QGIS to easily manage and publish map layers to your users.
 
-Simply add layers to a QGIS project to make them available in Pozi. Easily apply styling, customise fields, join datasets, and more, all within the familiar QGIS open source desktop application.
-
-Benefits:
+Easily apply styling, customise fields, join datasets, and more, all within the familiar QGIS open source desktop application.
 
 * maintain control over map layers available to staff
 * quickly respond to staff requirements
 * build your organisation's in-house capabilities for maintaining GIS configuration
-* make it easier for users to discover and access specialised datasets that are useful to their workflows
+* make it easier for users to discover and access specialised datasets they need
+
+--![Pozi displays a flood model map rendered by QGIS from a CSV file containing spot height values](/static/img/screenshots/swan-hill-flood-model-map-from-csv.png)--
 
 Functionality for Administrators:
 
-* add/remove map layers
-* organise layers in nested groups
-* control styling, filtering, thematic maps
+* manage spatial and non-spatial datasets
+* organise map layers in groups and nested folders
+* control layer styling, filtering, thematic maps
 * expose/hide data fields, and use field name aliases
 * create virtual fields with calculations and text expressions
 * create dynamic table joins to link non-spatial data to map layers
 
-### Styling
-
-### Filtering
-
-### Joining
-
-### Publishing
+</br>
 
 ## Enterprise performance from QGIS Server
 
-Pozi's QGIS integration is powered by [QGIS Server](https://docs.qgis.org/3.22/en/docs/server_manual/introduction.html), installed on your network or private cloud. QGIS Server is a standards-based WMS/WFS server, with the same high performance as MapServer and GeoServer, with the bonus of managing your users' Pozi experience using QGIS.
+<img src="/static/img/qgis-logo.png " alt="" style="float:right;width:120px;margin:0px 40px;">
+
+Pozi's QGIS integration is powered by [QGIS Server](https://docs.qgis.org/3.22/en/docs/server_manual/introduction.html). QGIS Server is a standards-based WMS/WFS server, with the same high performance as MapServer and GeoServer, with the bonus of using QGIS's powerful configuration tools for managing your users' Pozi experience.
 
 Configure your layers in dedicated QGIS projects; the layers are immediately available for internal Pozi users.
 
 QGIS Server is [certified by the OGC](https://www.opengeospatial.org/resource/products/details/?pid=1496) as an [OGC reference implementation](https://blog.qgis.org/2018/06/27/qgis-server-certified-as-official-ogc-reference-implementation/).
 
----
+</br>
+
+## How it works
+
+### Architecture and Security
+
+QGIS Server is installed on your network (physical or private cloud) as part of the Pozi Server implementation.
+
+Pozi's *hybrid cloud* architecture enables any user to access the Pozi web application and **public** datasets from wherever they are. However internal datasets that you publish with QGIS are available only to those users who are on your organisation's corporate network.
+
+![](/static/draw.io/network-diagram-enterprise.png)
+
+Users within your organisation's network have access to the layers you publish with QGIS Server.
+
+Any users outside of your network will still have access to the public datasets that are configured for your site, but they will not have access to internal datasets.
+
+### Configuration
+
+<img src="/admin-guide/qgis/img/qgis-projects-and-pozi-layer-groups.png" alt="" style="float:right;width:400px;margin:0px 40px;">
+
+Add and configure your layers in dedicated QGIS projects to make them available in Pozi.
+
+Each QGIS project represents a *layer group* in Pozi.
+
+Layer groups can contain nested folders of layers, just as you've configured in QGIS.
+
+<br clear="all" />
+
+## Advanced Functionality
+
+### Styling
+
+Control the appearance of your map layers using QGIS's advanced styling interface.
+
+Display your data using thematic/categorised colours and/or symbols, with fine-tune control over the layer appearance. Even customise your layer legend.
+
+### Joining
+
+Dynamically join spatial and non-spatial data sources to create combined layers.
+
+For instance, you can maintain your asset location data in a shapefile or spatial database while letting your asset management system take care of all asset attributes and history.
+
+By using dynamic joins, you don't need to duplicate attributes from one source to another, and you don't need scheduled tasks to join them.
+
+QGIS will dynamically join your datasets, and users will see a seamless combination of authoritative spatial and non-spatial information in a single layer.
+
+</br>
 
 :::centre
 

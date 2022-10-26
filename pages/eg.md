@@ -60,6 +60,12 @@ https://primer.github.io/octicons/
 
 ## Images
 
+### Caption
+
+![Pozi displays a flood model map which is dynamically rendered by QGIS from a CSV file of spot heights](/static/img/screenshots/swan-hill-flood-model-map-from-csv.png)
+
+### Control Position and Size
+
 ![](/static/img/undraw/undraw_interview_re_e5jn.svg"){style="width:300px"}
 
 <img src="/static/img/undraw/undraw_interview_re_e5jn.svg" alt="" style="float:right;width:200px;margin:0px 40px;">

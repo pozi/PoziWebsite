@@ -12,7 +12,9 @@ category: Pozi Connect
 
 We have a vision to simplify the way Victorian councils integrate their property information into Vicmap.
 
-[!button variant="secondary" size="2xl" icon="comment" text="Read our plan, and have your say!"](/land-central-station/)
+***We've extended the deadline for submissions. If you haven't already filled in our survey, please click the button to fill in our survey!***
+
+[!button variant="secondary" size="2xl" icon="comment" text="Read our plan, and have your say"](/land-central-station/)
 
 !!!
 

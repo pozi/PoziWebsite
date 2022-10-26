@@ -47,7 +47,7 @@ title: Integrations
 * Shire of Yarra Ranges
 * South Gippsland Shire Council
 * Greater Shepparton City Council
-* Moreland City Council
+* Merri-bek City Council
 * Moonee Valley City Council
 * Maroondah City Council
 * Macedon Ranges Shire Council

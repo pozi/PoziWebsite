@@ -36,6 +36,12 @@ Layer Properties > Fields > Field Calculator > Create virtual field:
 
 For more information, see the instructions for working with [virtual fields](../qgis/configuring-layers#virtual-fields).
 
+!!! The `mydata` protocol
+
+Because the `mydata` URL prefix is a non-standard link, it is whitelisted within the Pozi application so that it can be displayed as a clickable link. If you're using the examples on this page as the basis for setting up a new protocol handler, contact Pozi Support to have it added to the Pozi whitelist.
+
+!!!
+
 +++ VRT Configuration
 
 An example configuration in the VRT file is as follows:
