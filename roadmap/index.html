@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.720074737600">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.720079026454">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=2.4.0.720074737600" rel="stylesheet" />
+    <link href="../resources/css/retype.css?v=2.4.0.720079026454" rel="stylesheet" />
 
-    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.720074737600" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.720079026454" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.720074737600" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.720079026454" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -328,8 +328,9 @@
 <li class="task-list-item"><input disabled="disabled" type="checkbox" /> obtain layer title/label field setting from QGIS Server</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" /> prevent Share links from capturing the panel state (unless specified in advanced options)</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" /> zoom/pan to selected feature on Pozi launch if URL contains a selected feature</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" /> use field name aliases from QGIS project</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" /> add button to clear current selection</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> print to scale</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> advanced selection capabilities</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> collaborate map annotations</li>
 </ul>
 <doc-anchor-target id="completed">
     <h2>
@@ -343,15 +344,40 @@
         <span>October 2022</span>
     </h3>
 </doc-anchor-target>
+<doc-anchor-target id="new">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#new">#</doc-anchor-trigger>
+        <span>New</span>
+    </h4>
+</doc-anchor-target>
 <ul class="contains-task-list">
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> new: select by line</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> improved: exact matches in Unified Search are now sorted by preferred weighting</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> improved: render HTML-formatted attributes as HTML</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> fixed: prevent layers that have been configured as non-queryable in QGIS from appearing in <em>What&#x27;s Here</em> results</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> fixed: don&#x27;t collapse layer groups that contain layers that match the layer filter</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> fixed: update layer filter to not exclude some valid results</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> fixed: gracefully handle tables that have an attribute field called &#x27;geometry&#x27;</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> fixed: ensure table can display when some records may contain no attributes</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> add &#x27;Select by line&#x27; selection mode</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> add button to clear current selection</li>
+</ul>
+<doc-anchor-target id="improved">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#improved">#</doc-anchor-trigger>
+        <span>Improved</span>
+    </h4>
+</doc-anchor-target>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> use field name aliases from QGIS project</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> sort exact matches in Unified Search by weighting</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> render HTML-formatted attributes as HTML</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> support categorised layer styles that are based on fields that have an alias</li>
+</ul>
+<doc-anchor-target id="fixed">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fixed">#</doc-anchor-trigger>
+        <span>Fixed</span>
+    </h4>
+</doc-anchor-target>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> prevent layers that have been configured as non-queryable in QGIS from appearing in <em>What&#x27;s Here</em> results</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> don&#x27;t collapse layer groups that contain layers that match the layer filter</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> update layer filter to not exclude some valid results</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> gracefully handle tables that have an attribute field called &#x27;geometry&#x27;</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> ensure table can display when some records may contain no attributes</li>
 </ul>
 <doc-anchor-target id="september-2022">
     <h3>
@@ -359,12 +385,34 @@
         <span>September 2022</span>
     </h3>
 </doc-anchor-target>
+<doc-anchor-target id="new-1">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#new-1">#</doc-anchor-trigger>
+        <span>New</span>
+    </h4>
+</doc-anchor-target>
 <ul class="contains-task-list">
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> new: use layer opacity setting from QGIS Server</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> new: enable layer catalogues to be filtered to include/exclude layers</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> improved: overhaul analytics capture using new Google Analytics GA4 (in preparation for monthly reports for clients)</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> fixed: display clickable link in What&#x27;s Here results when the selected layer&#x27;s title attribute is a URL</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> fixed: allow for differences in upper/lower case in layer&#x27;s specified ID field</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> use layer opacity setting from QGIS Server</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> enable layer catalogues to be filtered to include/exclude layers</li>
+</ul>
+<doc-anchor-target id="improved-1">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#improved-1">#</doc-anchor-trigger>
+        <span>Improved</span>
+    </h4>
+</doc-anchor-target>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> overhaul analytics capture using new Google Analytics GA4 (in preparation for monthly reports for clients)</li>
+</ul>
+<doc-anchor-target id="fixed-1">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fixed-1">#</doc-anchor-trigger>
+        <span>Fixed</span>
+    </h4>
+</doc-anchor-target>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> display clickable link in What&#x27;s Here results when the selected layer&#x27;s title attribute is a URL</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> allow for differences in upper/lower case in layer&#x27;s specified ID field</li>
 </ul>
 <doc-anchor-target id="august-2022">
     <h3>
@@ -372,20 +420,42 @@
         <span>August 2022</span>
     </h3>
 </doc-anchor-target>
+<doc-anchor-target id="new-2">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#new-2">#</doc-anchor-trigger>
+        <span>New</span>
+    </h4>
+</doc-anchor-target>
 <ul class="contains-task-list">
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> new: enable administrators to configure child datasets within QGIS</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> new: display legend inline for switched-on layers</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> new: enable loading of layers via WMTS catalogue</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> improved: increase precision on measurement tools</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> improved: enable more overrides for entire catalogue layers, such as opacity</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> improved: after layer search, expand only groups that contain selected layer</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> improved: unify appearance of layer options for stand-alone and catalogue layers</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> improved: hide table when layer is turned off</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> improved: render null and undefined values as empty string in table view</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> improved: use favicons from alternative URLs for frequently used links which don&#x27;t have their own favicon</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> fixed: better remember state of expanded layer groups for sites with a lot of layers</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> fixed: respect field order of source data in QGIS GetFeature queries</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> fixed: horizontal alignment of links in info panel</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> enable administrators to configure child datasets within QGIS</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> display legend inline for switched-on layers</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> enable loading of layers via WMTS catalogue</li>
+</ul>
+<doc-anchor-target id="improved-2">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#improved-2">#</doc-anchor-trigger>
+        <span>Improved</span>
+    </h4>
+</doc-anchor-target>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> increase precision on measurement tools</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> enable more overrides for entire catalogue layers, such as opacity</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> after layer search, expand only groups that contain selected layer</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> unify appearance of layer options for stand-alone and catalogue layers</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> hide table when layer is turned off</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> render null and undefined values as empty string in table view</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> use favicons from alternative URLs for frequently used links which don&#x27;t have their own favicon</li>
+</ul>
+<doc-anchor-target id="fixed-2">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fixed-2">#</doc-anchor-trigger>
+        <span>Fixed</span>
+    </h4>
+</doc-anchor-target>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> better remember state of expanded layer groups for sites with a lot of layers</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> respect field order of source data in QGIS GetFeature queries</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> horizontal alignment of links in info panel</li>
 </ul>
 <doc-anchor-target id="july-2022">
     <h3>
@@ -393,19 +463,41 @@
         <span>July 2022</span>
     </h3>
 </doc-anchor-target>
+<doc-anchor-target id="new-3">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#new-3">#</doc-anchor-trigger>
+        <span>New</span>
+    </h4>
+</doc-anchor-target>
 <ul class="contains-task-list">
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> new: obtain layer queryability setting from QGIS Server</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> new: enable highlighting of selected features from QGIS Server layers</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> improved: faster app loads by batch loading layers</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> improved: faster app loads for return visitors by caching layer catalogue in the browser (via service workers)</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> improved: enable layer filter to narrow down results within nested layer groups</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> improved: slimmer left drawer takes up less screen real estate</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> improved: show spinner during app load if waiting for slow data sources</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> improved: even better evaluation of attributes to display for title of selected feature</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> improved: layer panel now responds much quicker to layer reset and expanding large groups</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> fixed: info panel failed to show feature details after initial viewing</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> fixed: wait for local datasource check before attempting to get local layers</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> fixed: table view now working for catalogue layers</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> obtain layer queryability setting from QGIS Server</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> enable highlighting of selected features from QGIS Server layers</li>
+</ul>
+<doc-anchor-target id="improved-3">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#improved-3">#</doc-anchor-trigger>
+        <span>Improved</span>
+    </h4>
+</doc-anchor-target>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> faster app loads by batch loading layers</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> faster app loads for return visitors by caching layer catalogue in the browser (via service workers)</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> enable layer filter to narrow down results within nested layer groups</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> slimmer left drawer takes up less screen real estate</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> show spinner during app load if waiting for slow data sources</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> even better evaluation of attributes to display for title of selected feature</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> layer panel now responds much quicker to layer reset and expanding large groups</li>
+</ul>
+<doc-anchor-target id="fixed-3">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fixed-3">#</doc-anchor-trigger>
+        <span>Fixed</span>
+    </h4>
+</doc-anchor-target>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> info panel failed to show feature details after initial viewing</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> wait for local datasource check before attempting to get local layers</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> table view now working for catalogue layers</li>
 </ul>
 <doc-anchor-target id="june-2022">
     <h3>
@@ -414,20 +506,42 @@
     </h3>
 </doc-anchor-target>
 <p>Our biggest release in over two years!</p>
+<doc-anchor-target id="new-4">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#new-4">#</doc-anchor-trigger>
+        <span>New</span>
+    </h4>
+</doc-anchor-target>
 <ul class="contains-task-list">
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> new: <strong>QGIS integration</strong>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> <strong>QGIS integration</strong>
 <ul>
 <li>import layer catalogue from QGIS Server and other WMS/WFS sources</li>
 <li>build nested layer groups from WMS/QGIS catalogues</li>
 <li>create Admin Guide, add content for using QGIS to create and maintain layer catalogues</li>
 </ul>
 </li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> new: dynamically evaluate the most suitable attribute from any selected feature to display as feature&#x27;s title</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> new: display loading spinner for WMS layers</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> improved: compact layer view</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> improved: extend table view to full page width</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> dynamically evaluate the most suitable attribute from any selected feature to display as feature&#x27;s title</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> display loading spinner for WMS layers</li>
+</ul>
+<doc-anchor-target id="improved-4">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#improved-4">#</doc-anchor-trigger>
+        <span>Improved</span>
+    </h4>
+</doc-anchor-target>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> compact layer view</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> extend table view to full page width</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> upgrade to React v17</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> fixed: prevent page from reloading on first visit</li>
+</ul>
+<doc-anchor-target id="fixed-4">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fixed-4">#</doc-anchor-trigger>
+        <span>Fixed</span>
+    </h4>
+</doc-anchor-target>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> prevent page from reloading on first visit</li>
 </ul>
 <hr />
 <div class="flex mb-6">
@@ -459,7 +573,7 @@
     </h3>
 </doc-anchor-target>
 <ul class="contains-task-list">
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> new: support for vector tile basemaps</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> support for vector tile basemaps</li>
 </ul>
 <doc-anchor-target id="january-2022">
     <h3>
