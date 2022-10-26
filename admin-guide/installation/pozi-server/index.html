@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.719361884430">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.720074173137">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -24,23 +24,23 @@
     <meta property="og:url" content="https://pozi.com/admin-guide/installation/pozi-server/">
     <meta property="og:title" content="Pozi Server | Pozi Web GIS | Online Map">
     <meta property="og:description" content="Step-by-step instructions for setting up Pozi Server on your network">
-    <meta property="og:image" content="https://pozi.com/admin-guide/installation/img/dns-manager.png">
+    <meta property="og:image" content="https://pozi.com/static/draw.io/network-diagram-enterprise.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pozi.com/admin-guide/installation/pozi-server/">
     <meta property="twitter:title" content="Pozi Server | Pozi Web GIS | Online Map">
     <meta property="twitter:description" content="Step-by-step instructions for setting up Pozi Server on your network">
-    <meta property="twitter:image" content="https://pozi.com/admin-guide/installation/img/dns-manager.png">
+    <meta property="twitter:image" content="https://pozi.com/static/draw.io/network-diagram-enterprise.png">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.719361884430" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.720074173137" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.719361884430" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.720074173137" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.719361884430" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.719361884430" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.720074173137" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.720074173137" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -326,11 +326,16 @@
 <doc-panel id="how-pozi-server-works" collapsed>
     <template #title>How Pozi Server Works</template>
 <p>Pozi Server is configured on your network with DNS rules that enable local users to access its API via a dedicated URL (typically <code v-pre>[yourservername].pozi.com</code>).</p>
+<p><figure class="content-center">
+    <img src="../../../static/draw.io/network-diagram-enterprise.png" alt="" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <ul>
-<li>when a user <em>inside</em> the client&#x27;s network uses Pozi, any request to <code v-pre>[yourservername].pozi.com</code> is directed by the local DNS rules to the internal server on which Pozi Connect Server is installed, and Pozi Connect Server responds with the requested data</li>
-<li>when a user <em>outside</em> the organisation&#x27;s network uses Pozi, any request to <code v-pre>[yourservername].pozi.com</code> quietly fails because it&#x27;s not a valid endpoint on the internet (however any data from any public data sources will load in the app as normal)</li>
+<li>when a user <em>inside</em> the corporate network uses Pozi, any request to <code v-pre>[yourservername].pozi.com</code> is directed by the local DNS rules to the internal server on which Pozi Connect Server is installed, and Pozi Connect Server responds with the requested data</li>
+<li>when a user <em>outside</em> the corporate network uses Pozi, any request to <code v-pre>[yourservername].pozi.com</code> quietly fails because it&#x27;s not a valid endpoint on the internet (however any data from any public data sources will load in the app as normal)</li>
 </ul>
-<p>IT managers maintain control over internal user access to Pozi Connect Server by configuring the network DNS and firewall rules. For example, access to Pozi Server can be restricted for specific users or groups of users with a group policy or firewall rules that blacklists the <code v-pre>[yourservername].pozi.com</code> endpoint</p>
+<p>IT managers maintain control over internal user access to Pozi Connect Server by configuring the network DNS and firewall rules. For example, access to Pozi Server can be restricted for specific users or groups of users with a group policy or firewall rules that blacklists the <code v-pre>[yourservername].pozi.com</code> endpoint.</p>
 </doc-panel>
 <doc-anchor-target id="prerequisites">
     <h2>

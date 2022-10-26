@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.719361884430">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.720074173137">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=2.4.0.719361884430" rel="stylesheet" />
+    <link href="../resources/css/retype.css?v=2.4.0.720074173137" rel="stylesheet" />
 
-    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.719361884430" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.720074173137" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.719361884430" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.720074173137" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -328,6 +328,8 @@
 <li class="task-list-item"><input disabled="disabled" type="checkbox" /> obtain layer title/label field setting from QGIS Server</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" /> prevent Share links from capturing the panel state (unless specified in advanced options)</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" /> zoom/pan to selected feature on Pozi launch if URL contains a selected feature</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> use field name aliases from QGIS project</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> add button to clear current selection</li>
 </ul>
 <doc-anchor-target id="completed">
     <h2>
@@ -343,7 +345,13 @@
 </doc-anchor-target>
 <ul class="contains-task-list">
 <li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> new: select by line</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> improved: exact matches in Unified Search are now sorted by preferred weighting</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> improved: render HTML-formatted attributes as HTML</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> fixed: prevent layers that have been configured as non-queryable in QGIS from appearing in <em>What&#x27;s Here</em> results</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> fixed: don&#x27;t collapse layer groups that contain layers that match the layer filter</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> fixed: update layer filter to not exclude some valid results</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> fixed: gracefully handle tables that have an attribute field called &#x27;geometry&#x27;</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> fixed: ensure table can display when some records may contain no attributes</li>
 </ul>
 <doc-anchor-target id="september-2022">
     <h3>
@@ -354,7 +362,6 @@
 <ul class="contains-task-list">
 <li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> new: use layer opacity setting from QGIS Server</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> new: enable layer catalogues to be filtered to include/exclude layers</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> new: use field name aliases from QGIS project</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> improved: overhaul analytics capture using new Google Analytics GA4 (in preparation for monthly reports for clients)</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> fixed: display clickable link in What&#x27;s Here results when the selected layer&#x27;s title attribute is a URL</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> fixed: allow for differences in upper/lower case in layer&#x27;s specified ID field</li>
