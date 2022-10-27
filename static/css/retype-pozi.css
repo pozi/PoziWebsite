@@ -123,3 +123,12 @@
 .border-blue-500 {
   border-color: rgba(var(--pozi-color-rgb-normal), var(--pozi-alpha-1000)) !important;
 }
+
+
+/**************************************/
+/* Input elements                     */
+/**************************************/
+.docs-markdown ul.contains-task-list input:checked:before,
+.dark .docs-markdown ul.contains-task-list input:checked:before {
+  background-color: #616161;
+}
