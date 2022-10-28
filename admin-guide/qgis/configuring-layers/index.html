@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.720232078170">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.720242275438">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.720232078170" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.720242275438" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.720232078170" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.720242275438" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.720232078170" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.720242275438" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -387,6 +387,54 @@
         </div>
     </div>
 </div>
+<br>
+<doc-anchor-target id="publish-as-vector-layer">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#publish-as-vector-layer">#</doc-anchor-trigger>
+        <span>Publish as Vector Layer</span>
+    </h2>
+</doc-anchor-target>
+<p>Publishing a layer as a <em>vector layer</em> enables users to directly interact with map features. When a vector layer is turned on in Pozi, every feature from the source dataset is loaded in the browser, including all geometries and attributes. Users can make use of advanced functionality such as filtering and table view.</p>
+<p>By default, QGIS Server does NOT expose layers as vectors. Evaluate the pros and cons of using vectors for your layer, and if appropriate, follow the directions below to enable it.</p>
+<doc-anchor-target id="advantages">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#advantages">#</doc-anchor-trigger>
+        <span>Advantages</span>
+    </h4>
+</doc-anchor-target>
+<ul>
+<li>layers are fully interactive using Pozi&#x27;s filter, report and table view functionality</li>
+<li>after the layer is loaded in the browser, the browser doesn&#x27;t need to send further requests for the layer to the server every time the map moves</li>
+<li>the cursor changes when hovering over object to indicate the feature is clickable</li>
+<li>users can select an individual feature and display its details in Info Panel (without displaying results of features on other layers at the same location)</li>
+</ul>
+<doc-anchor-target id="disadvantages">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#disadvantages">#</doc-anchor-trigger>
+        <span>Disadvantages</span>
+    </h4>
+</doc-anchor-target>
+<ul>
+<li>the browser can be easily overwhelmed when dealing with thousands of features or complex features with many vertices, resulting in slow map rendering</li>
+<li>not all QGIS styles are supported in Pozi for vector features</li>
+<li>only one vector feature can be selected at a time - info results are not displayed for any features that have been overlapped by another feature</li>
+<li>cannot directly use text expressions for labels (but you can still make use of virtual fields for creating generating custom label values)</li>
+</ul>
+<p>As a guideline, use vectors only for layers with fewer than 5-10K features, or even fewer for layers with complex polylines or polygons.</p>
+<doc-anchor-target id="enabling-vector-layer">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#enabling-vector-layer">#</doc-anchor-trigger>
+        <span>Enabling Vector Layer</span>
+    </h3>
+</doc-anchor-target>
+<ol>
+<li>Project &gt; Properties &gt; QGIS Server</li>
+<li><code v-pre>WFS capabilities &gt; Published</code>: tick on for each layer to be published (or you can click <code v-pre>Select All</code> if all layers are required)</li>
+<li>OK</li>
+<li>Project &gt; Save (<code v-pre>Ctrl</code> + <code v-pre>S</code>)</li>
+</ol>
+<p><img src="../img/qgis-project-properties-wfs-configuration.png" style="width:500px" alt="QGIS Project Properties WFS Configuration" /></p>
+<br/>
 <doc-anchor-target id="styling-layers">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#styling-layers">#</doc-anchor-trigger>
@@ -402,7 +450,7 @@
         <span>Styling for Vector Layers</span>
     </h3>
 </doc-anchor-target>
-<p>For any layers that are to be made accessible to Pozi as fully interactive <em>vector</em> layers (ie, WFS), use only the supported styles specified below.</p>
+<p>For any layers that are to be made accessible to Pozi as fully interactive <em>vector</em> layers (ie, WFS-enabled), use only the supported styles specified below.</p>
 <p>(If you need Pozi to display layers using a QGIS style that doesn&#x27;t appear in the below lists of supported styles, consider disabling WFS to force Pozi to retrieve the layer via WMS, and thus using the QGIS Server renderer.)</p>
 <doc-panels>
    <doc-panel id="points" collapsed>
@@ -582,53 +630,6 @@
 <p>If the value in the field is a URL (as in this example), Pozi will display it as a clickable link.</p>
 <p><img src="../img/pozi-info-panel-showing-link-from-virtual-field.png" style="width:300px" alt="" /></p>
 <p>If the value is a URL ending in <code v-pre>.png</code> or <code v-pre>.jpg</code>, Pozi will display a thumbnail of the target image.</p>
-<br/>
-<doc-anchor-target id="publish-as-vector-layer">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#publish-as-vector-layer">#</doc-anchor-trigger>
-        <span>Publish as Vector Layer</span>
-    </h2>
-</doc-anchor-target>
-<p>Publishing a layer as a <em>vector layer</em> enables users to directly interact with map features. When a vector layer is turned on in Pozi, every feature from the source dataset is loaded in the browser, including all geometries and attributes. Users can make use of advanced functionality such as filtering and table view.</p>
-<p>By default, QGIS Server does NOT expose layers as vectors. Evaluate the pros and cons of using vectors for your layer, and if appropriate, follow the directions below to enable it.</p>
-<doc-anchor-target id="advantages">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#advantages">#</doc-anchor-trigger>
-        <span>Advantages</span>
-    </h4>
-</doc-anchor-target>
-<ul>
-<li>layers are fully interactive using Pozi&#x27;s filter, report and table view functionality</li>
-<li>after the layer is loaded in the browser, the browser doesn&#x27;t need to send further requests for the layer to the server every time the map moves</li>
-<li>the cursor changes when hovering over object to indicate the feature is clickable</li>
-<li>users can select an individual feature and display its details in Info Panel (without displaying results of features on other layers at the same location)</li>
-</ul>
-<doc-anchor-target id="disadvantages">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#disadvantages">#</doc-anchor-trigger>
-        <span>Disadvantages</span>
-    </h4>
-</doc-anchor-target>
-<ul>
-<li>the browser can be easily overwhelmed when dealing with thousands of features or complex features with many vertices, resulting in slow map rendering</li>
-<li>not all QGIS styles are supported in Pozi for vector features</li>
-<li>only one vector feature can be selected at a time - info results are not displayed for any features that have been overlapped by another feature</li>
-<li>cannot directly use text expressions for labels (but you can still make use of virtual fields for creating generating custom label values)</li>
-</ul>
-<p>As a guideline, use vectors only for layers with fewer than 5-10K features, or even fewer for layers with complex polylines or polygons.</p>
-<doc-anchor-target id="enabling-vector-layer">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#enabling-vector-layer">#</doc-anchor-trigger>
-        <span>Enabling Vector Layer</span>
-    </h3>
-</doc-anchor-target>
-<ol>
-<li>Project &gt; Properties &gt; QGIS Server</li>
-<li><code v-pre>WFS capabilities &gt; Published</code>: tick on for each layer to be published (or you can click <code v-pre>Select All</code> if all layers are required)</li>
-<li>OK</li>
-<li>Project &gt; Save (<code v-pre>Ctrl</code> + <code v-pre>S</code>)</li>
-</ol>
-<p><img src="../img/qgis-project-properties-wfs-configuration.png" style="width:500px" alt="QGIS Project Properties WFS Configuration" /></p>
 <br/>
 <doc-anchor-target id="feature-title">
     <h2>
