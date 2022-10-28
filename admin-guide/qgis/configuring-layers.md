@@ -63,6 +63,41 @@ Windows > IIS > (select server) > Application Pools > PoziQgisServer > Recycle
 
 !!!
 
+<br>
+
+## Publish as Vector Layer
+
+Publishing a layer as a *vector layer* enables users to directly interact with map features. When a vector layer is turned on in Pozi, every feature from the source dataset is loaded in the browser, including all geometries and attributes. Users can make use of advanced functionality such as filtering and table view.
+
+By default, QGIS Server does NOT expose layers as vectors. Evaluate the pros and cons of using vectors for your layer, and if appropriate, follow the directions below to enable it.
+
+#### Advantages
+
+* layers are fully interactive using Pozi's filter, report and table view functionality
+* after the layer is loaded in the browser, the browser doesn't need to send further requests for the layer to the server every time the map moves
+* the cursor changes when hovering over object to indicate the feature is clickable
+* users can select an individual feature and display its details in Info Panel (without displaying results of features on other layers at the same location)
+
+#### Disadvantages
+
+* the browser can be easily overwhelmed when dealing with thousands of features or complex features with many vertices, resulting in slow map rendering
+* not all QGIS styles are supported in Pozi for vector features
+* only one vector feature can be selected at a time - info results are not displayed for any features that have been overlapped by another feature
+* cannot directly use text expressions for labels (but you can still make use of virtual fields for creating generating custom label values)
+
+As a guideline, use vectors only for layers with fewer than 5-10K features, or even fewer for layers with complex polylines or polygons.
+
+### Enabling Vector Layer
+
+1. Project > Properties > QGIS Server
+2. `WFS capabilities > Published`: tick on for each layer to be published (or you can click `Select All` if all layers are required)
+3. OK
+4. Project > Save (`Ctrl` + `S`)
+
+![QGIS Project Properties WFS Configuration](./img/qgis-project-properties-wfs-configuration.png){style="width:500px"}
+
+<br/>
+
 ## Styling Layers
 
 Using QGIS, you can control many visual aspects of your layer. You may apply a common style for all the features in a layer 
@@ -72,7 +107,7 @@ When Pozi fetches a layer using WMS, QGIS Server renders the layer exactly as co
 
 ### Styling for Vector Layers
 
-For any layers that are to be made accessible to Pozi as fully interactive *vector* layers (ie, WFS), use only the supported styles specified below.
+For any layers that are to be made accessible to Pozi as fully interactive *vector* layers (ie, WFS-enabled), use only the supported styles specified below.
 
 (If you need Pozi to display layers using a QGIS style that doesn't appear in the below lists of supported styles, consider disabling WFS to force Pozi to retrieve the layer via WMS, and thus using the QGIS Server renderer.)
 
@@ -232,39 +267,6 @@ If the value in the field is a URL (as in this example), Pozi will display it as
 ![](img/pozi-info-panel-showing-link-from-virtual-field.png){style="width:300px"}
 
 If the value is a URL ending in `.png` or `.jpg`, Pozi will display a thumbnail of the target image.
-
-<br/>
-
-## Publish as Vector Layer
-
-Publishing a layer as a *vector layer* enables users to directly interact with map features. When a vector layer is turned on in Pozi, every feature from the source dataset is loaded in the browser, including all geometries and attributes. Users can make use of advanced functionality such as filtering and table view.
-
-By default, QGIS Server does NOT expose layers as vectors. Evaluate the pros and cons of using vectors for your layer, and if appropriate, follow the directions below to enable it.
-
-#### Advantages
-
-* layers are fully interactive using Pozi's filter, report and table view functionality
-* after the layer is loaded in the browser, the browser doesn't need to send further requests for the layer to the server every time the map moves
-* the cursor changes when hovering over object to indicate the feature is clickable
-* users can select an individual feature and display its details in Info Panel (without displaying results of features on other layers at the same location)
-
-#### Disadvantages
-
-* the browser can be easily overwhelmed when dealing with thousands of features or complex features with many vertices, resulting in slow map rendering
-* not all QGIS styles are supported in Pozi for vector features
-* only one vector feature can be selected at a time - info results are not displayed for any features that have been overlapped by another feature
-* cannot directly use text expressions for labels (but you can still make use of virtual fields for creating generating custom label values)
-
-As a guideline, use vectors only for layers with fewer than 5-10K features, or even fewer for layers with complex polylines or polygons.
-
-### Enabling Vector Layer
-
-1. Project > Properties > QGIS Server
-2. `WFS capabilities > Published`: tick on for each layer to be published (or you can click `Select All` if all layers are required)
-3. OK
-4. Project > Save (`Ctrl` + `S`)
-
-![QGIS Project Properties WFS Configuration](./img/qgis-project-properties-wfs-configuration.png){style="width:500px"}
 
 <br/>
 

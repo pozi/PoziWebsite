@@ -6,7 +6,7 @@ icon: stack
 
 # Explore Pozi
 
-<img src="/static/img/undraw/undraw_information_tab_re_f0w3.svg" alt="" style="float:right;width:350px;margin:0px 40px;">
+<img src="/static/img/undraw/undraw_information_tab_re_f0w3.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
 
 For organisations that rely on geographic information for critical decision-making and stakeholder engagement, Pozi is a web platform that connects users with relevant location-based data to build a detailed and definitive view of their world.
 

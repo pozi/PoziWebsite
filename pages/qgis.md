@@ -51,9 +51,13 @@ Easily apply styling, customise fields, join datasets, and more, all within the 
 * build your organisation's in-house capabilities for maintaining GIS configuration
 * make it easier for users to discover and access specialised datasets they need
 
+</br>
+
 --![Pozi displays a flood model map rendered by QGIS from a CSV file containing spot height values](/static/img/screenshots/swan-hill-flood-model-map-from-csv.png)--
 
-Functionality for Administrators:
+</br>
+
+### Benefits for Administrators
 
 * manage spatial and non-spatial datasets
 * organise map layers in groups and nested folders
@@ -101,6 +105,7 @@ Each QGIS project represents a *layer group* in Pozi.
 Layer groups can contain nested folders of layers, just as you've configured in QGIS.
 
 <br clear="all" />
+</br>
 
 ## Advanced Functionality
 
@@ -119,6 +124,12 @@ For instance, you can maintain your asset location data in a shapefile or spatia
 By using dynamic joins, you don't need to duplicate attributes from one source to another, and you don't need scheduled tasks to join them.
 
 QGIS will dynamically join your datasets, and users will see a seamless combination of authoritative spatial and non-spatial information in a single layer.
+
+### And More...
+
+* nested layer groups
+* table and field name aliases
+* virtual fields
 
 </br>
 

@@ -158,6 +158,8 @@ With Pozi Enterprise, staff will see live data for asset status, as well as insp
 Enable staff to access map layers directly from your organisation's network, including: MapInfo TAB, Esri Shapefile, PostGIS, SQL Server Spatial, GeoPackage, and any other GDAL-compatible source (SQLite, DXF, CSV, XLSX, VRT and more).
 |||
 
+[!button variant="info" icon="stack" size="2xl" corners="pill" text="Powered by QGIS >"](/qgis/)
+
 [!ref icon="trophy" text="Upgrade to Pozi Enterprise"](/upgrade/)
 
 <br/>
@@ -167,6 +169,8 @@ Enable staff to access map layers directly from your organisation's network, inc
 ## Pozi Enterprise Cloud
 
 Ultimate integration with your organisation's cloud infrastructure, with Azure AD Application Proxy integration.
+
+![](/static/draw.io/network-diagram-enterprise-cloud.png)
 
 ---
 

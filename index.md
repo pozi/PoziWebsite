@@ -132,17 +132,29 @@ Our team works with you to customise and maintain your map application - you're 
 
 <!--- END SECTION - CLIENTS --->
 
+<!--- START SECTION - QGIS --->
+
 :::centre
 
 # Powered by QGIS
 
-  <br/>
-
-  Use QGIS to configure your layers in Pozi, including adding data sources, layer styling, filtering, data joins, metadata, and more.
-
 :::
 
 --![](/static/img/screenshots/qgis-to-pozi.png)--
+
+:::centre
+
+  Use QGIS to configure your layers in Pozi, including adding data sources, layer styling, filtering, data joins, metadata, nested groups, and more.
+
+  <br/>
+
+  [!button icon="stack" size="2xl" corners="pill" text="Learn more >"](/qgis/)
+
+:::
+
+<br/>
+
+<!--- END SECTION - QGIS --->
 
 <!--- START SECTION - SHOWCASE --->
 
