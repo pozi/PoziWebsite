@@ -17,14 +17,19 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## Upcoming
 
+### New Features
+
+- [ ] print to scale
+- [ ] collaborate map annotations
+- [ ] interactive bulk spatial selection for ad-hoc layers
+
+### Enhancements
+
 - [ ] improve Azure Active Directory integration
 - [ ] don't unhighlight parent object when clicking on a non-spatial child record
 - [ ] obtain layer title/label field setting from QGIS Server
-- [ ] prevent Share links from capturing the panel state (unless specified in advanced options)
+- [ ] prevent Share links from including the panel state (unless specified in advanced options)
 - [ ] zoom/pan to selected feature on Pozi launch if URL contains a selected feature
-- [ ] print to scale
-- [ ] advanced selection capabilities
-- [ ] collaborate map annotations
 
 ## Completed
 
@@ -41,6 +46,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [x] sort exact matches in Unified Search by weighting
 - [x] render HTML-formatted attributes as HTML
 - [x] support categorised layer styles that are based on fields that have an alias
+- [x] display nicer message when attempting to download dataset that contains zero records
 
 #### Fixed
 

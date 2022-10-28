@@ -14,6 +14,8 @@ icon: paintbrush
 
 ---
 
+![](/static/img/tweet-gallery/northern_grampians_waste_route_styling.png){style="width:600px"}
+
 ## Styled Layer Descriptor (SLD)
 
 ### Generating SLDs

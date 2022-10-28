@@ -132,6 +132,18 @@ Our team works with you to customise and maintain your map application - you're 
 
 <!--- END SECTION - CLIENTS --->
 
+:::centre
+
+# Powered by QGIS
+
+  <br/>
+
+  Use QGIS to configure your layers in Pozi, including adding data sources, layer styling, filtering, data joins, metadata, and more.
+
+:::
+
+--![](/static/img/screenshots/qgis-to-pozi.png)--
+
 <!--- START SECTION - SHOWCASE --->
 
 :::centre
@@ -167,18 +179,6 @@ Promote local places, facilities events and services to customers
 <br/>
 
 <big>Pozi is an intuitive, interactive, location-based communication platform for your internal and external users that aggregates geographic information from multiple sources in an simple web interface, at a fraction of the cost of traditional Geographic Information System (GIS) software.</big>
-
-:::
-
-:::centre
-
-## Powered by QGIS
-
-  <img src="/static/img/tweet-gallery/northern_grampians_waste_route_styling.png">
-  <br/>
-  <br/>
-
-  Use QGIS to configure your layers in Pozi, including adding data sources, layer styling, filtering, data joins, metadata, and more.
 
 :::
 
