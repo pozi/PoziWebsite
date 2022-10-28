@@ -397,7 +397,7 @@ Use QGIS to determine identify any slow-loading projects. If one or more of your
 
 ==- Can't see the layer option for switching on the table view
 
-Layers must be [enabled for WFS](#enable-layers-for-wfs) in order to access the table view.
+Layers must be [enabled as a vector layer](#enabling-vector-layer) in order to access the table view.
 
 If you've already enabled a layer for WFS, and the table view option is still not available, it may be because the layer shares the same name as a layer folder. Rename the layer or folder so they are unique.
 
@@ -405,7 +405,7 @@ If you've already enabled a layer for WFS, and the table view option is still no
 
 ​When you select a vector feature in Pozi, it displays only the feature you've selected, and not any overlapping features that may lie underneath.
 ​
-​This issue is mentioned briefly [above](#considerations-for-wfs), as a disadvantage of enabling WFS for a layer:
+​This issue is mentioned briefly [above](#disadvantages), as a disadvantage of enabling WFS for a layer:
 
 ​If you anticipate having overlapping features in a layer, consider NOT enabling the layer for WFS. Pozi will instead treat the layer as WMS. When clicking on a  location, Pozi will return the details for all overlapping features.
 ​
