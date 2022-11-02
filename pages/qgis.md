@@ -46,10 +46,14 @@ Use QGIS to easily manage and publish map layers to your users.
 
 Easily apply styling, customise fields, join datasets, and more, all within the familiar QGIS open source desktop application.
 
-* maintain control over map layers available to staff
+* customise your users' Pozi experience
 * quickly respond to staff requirements
 * build your organisation's in-house capabilities for maintaining GIS configuration
 * make it easier for users to discover and access specialised datasets they need
+
+Integrate with local and remote spatial data sources in any format, and build live links to your other non-spatial corporate systems.
+
+<big>On-premise, or cloud - the choice is yours.</big>
 
 </br>
 
@@ -57,14 +61,14 @@ Easily apply styling, customise fields, join datasets, and more, all within the 
 
 </br>
 
-### Benefits for Administrators
+### Features
 
 * manage spatial and non-spatial datasets
-* organise map layers in groups and nested folders
 * control layer styling, filtering, thematic maps
 * expose/hide data fields, and use field name aliases
 * create virtual fields with calculations and text expressions
 * create dynamic table joins to link non-spatial data to map layers
+* organise map layers in groups and nested folders
 
 </br>
 
@@ -72,9 +76,9 @@ Easily apply styling, customise fields, join datasets, and more, all within the 
 
 <img src="/static/img/qgis-logo.png " alt="" style="float:right;width:120px;margin:0px 40px;">
 
-Pozi's QGIS integration is powered by [QGIS Server](https://docs.qgis.org/3.22/en/docs/server_manual/introduction.html). QGIS Server is a standards-based WMS/WFS server, with the same high performance as MapServer and GeoServer, with the bonus of using QGIS's powerful configuration tools for managing your users' Pozi experience.
+Pozi's QGIS integration is powered by [QGIS Server](https://docs.qgis.org/3.22/en/docs/server_manual/introduction.html).
 
-Configure your layers in dedicated QGIS projects; the layers are immediately available for internal Pozi users.
+QGIS Server is a standards-based, open source WMS/WFS server, with the same high performance as MapServer and GeoServer, with the bonus of using QGIS's powerful configuration tools for managing your users' Pozi experience.
 
 QGIS Server is [certified by the OGC](https://www.opengeospatial.org/resource/products/details/?pid=1496) as an [OGC reference implementation](https://blog.qgis.org/2018/06/27/qgis-server-certified-as-official-ogc-reference-implementation/).
 
@@ -92,13 +96,13 @@ Pozi's *hybrid cloud* architecture enables any user to access the Pozi web appli
 
 Users within your organisation's network have access to the layers you publish with QGIS Server.
 
-Any users outside of your network will still have access to the public datasets that are configured for your site, but they will not have access to internal datasets.
+Any users outside of your network will still have access to the public datasets that are available for your site, but they will not have access to internal datasets.
 
 ### Configuration
 
 <img src="/admin-guide/qgis/img/qgis-projects-and-pozi-layer-groups.png" alt="" style="float:right;width:400px;margin:0px 40px;">
 
-Add and configure your layers in dedicated QGIS projects to make them available in Pozi.
+Manage and configure your layers in dedicated QGIS projects. The changes you make in the projects are immediately available for Pozi users across your organisation.
 
 Each QGIS project represents a *layer group* in Pozi.
 

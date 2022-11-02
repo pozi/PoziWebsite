@@ -88,7 +88,7 @@ Pozi enables organisations like yours to leverage their own infrastructure (phys
 
 Pozi's open architecture empowers organisations to integrate their spatial and other corporate data to suit their own requirements, and ensures maximum flexibility, control and usability.
 
-Pozi's new QGIS integration enables administrators to configure their Pozi site using the power of QGIS, the world's most popular open-source geospatial power tool.
+Pozi's new [QGIS integration](/qgis/) enables administrators to configure their Pozi site using the power of QGIS, the world's most popular open-source geospatial power tool.
 
 We've built Pozi for the future of web GIS, with live data integrations, support for web-optimised data formats, and powerful in-browser geo-processing.
 
