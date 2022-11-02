@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.720242574781">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.720744528920">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=2.4.0.720242574781" rel="stylesheet" />
+    <link href="../resources/css/retype.css?v=2.4.0.720744528920" rel="stylesheet" />
 
-    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.720242574781" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.720744528920" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.720242574781" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.720744528920" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -350,11 +350,13 @@
 <p>Use QGIS to easily manage and publish map layers to your users.</p>
 <p>Easily apply styling, customise fields, join datasets, and more, all within the familiar QGIS open source desktop application.</p>
 <ul>
-<li>maintain control over map layers available to staff</li>
+<li>customise your users&#x27; Pozi experience</li>
 <li>quickly respond to staff requirements</li>
 <li>build your organisation&#x27;s in-house capabilities for maintaining GIS configuration</li>
 <li>make it easier for users to discover and access specialised datasets they need</li>
 </ul>
+<p>Integrate with local and remote spatial data sources in any format, and build live links to your other non-spatial corporate systems.</p>
+<p><big>On-premise, or cloud - the choice is yours.</big></p>
 </br>
 <p><figure class="content-centerplus">
     <img src="../static/img/screenshots/swan-hill-flood-model-map-from-csv.png" class="w-full" alt="Pozi displays a flood model map rendered by QGIS from a CSV file containing spot height values" />
@@ -362,19 +364,19 @@
 </figure>
 </p>
 </br>
-<doc-anchor-target id="benefits-for-administrators">
+<doc-anchor-target id="features">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#benefits-for-administrators">#</doc-anchor-trigger>
-        <span>Benefits for Administrators</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#features">#</doc-anchor-trigger>
+        <span>Features</span>
     </h3>
 </doc-anchor-target>
 <ul>
 <li>manage spatial and non-spatial datasets</li>
-<li>organise map layers in groups and nested folders</li>
 <li>control layer styling, filtering, thematic maps</li>
 <li>expose/hide data fields, and use field name aliases</li>
 <li>create virtual fields with calculations and text expressions</li>
 <li>create dynamic table joins to link non-spatial data to map layers</li>
+<li>organise map layers in groups and nested folders</li>
 </ul>
 </br>
 <doc-anchor-target id="enterprise-performance-from-qgis-server">
@@ -384,8 +386,8 @@
     </h2>
 </doc-anchor-target>
 <img src="/static/img/qgis-logo.png " alt="" style="float:right;width:120px;margin:0px 40px;">
-<p>Pozi&#x27;s QGIS integration is powered by <a href="https://docs.qgis.org/3.22/en/docs/server_manual/introduction.html">QGIS Server</a>. QGIS Server is a standards-based WMS/WFS server, with the same high performance as MapServer and GeoServer, with the bonus of using QGIS&#x27;s powerful configuration tools for managing your users&#x27; Pozi experience.</p>
-<p>Configure your layers in dedicated QGIS projects; the layers are immediately available for internal Pozi users.</p>
+<p>Pozi&#x27;s QGIS integration is powered by <a href="https://docs.qgis.org/3.22/en/docs/server_manual/introduction.html">QGIS Server</a>.</p>
+<p>QGIS Server is a standards-based, open source WMS/WFS server, with the same high performance as MapServer and GeoServer, with the bonus of using QGIS&#x27;s powerful configuration tools for managing your users&#x27; Pozi experience.</p>
 <p>QGIS Server is <a href="https://www.opengeospatial.org/resource/products/details/?pid=1496">certified by the OGC</a> as an <a href="https://blog.qgis.org/2018/06/27/qgis-server-certified-as-official-ogc-reference-implementation/">OGC reference implementation</a>.</p>
 </br>
 <doc-anchor-target id="how-it-works">
@@ -408,7 +410,7 @@
 </figure>
 </p>
 <p>Users within your organisation&#x27;s network have access to the layers you publish with QGIS Server.</p>
-<p>Any users outside of your network will still have access to the public datasets that are configured for your site, but they will not have access to internal datasets.</p>
+<p>Any users outside of your network will still have access to the public datasets that are available for your site, but they will not have access to internal datasets.</p>
 <doc-anchor-target id="configuration">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#configuration">#</doc-anchor-trigger>
@@ -416,7 +418,7 @@
     </h3>
 </doc-anchor-target>
 <img src="/admin-guide/qgis/img/qgis-projects-and-pozi-layer-groups.png" alt="" style="float:right;width:400px;margin:0px 40px;">
-<p>Add and configure your layers in dedicated QGIS projects to make them available in Pozi.</p>
+<p>Manage and configure your layers in dedicated QGIS projects. The changes you make in the projects are immediately available for Pozi users across your organisation.</p>
 <p>Each QGIS project represents a <em>layer group</em> in Pozi.</p>
 <p>Layer groups can contain nested folders of layers, just as you&#x27;ve configured in QGIS.</p>
 <br clear="all" />
