@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.720746017621">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.720757481612">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.720746017621" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.720757481612" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.720746017621" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.720757481612" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.720746017621" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.720757481612" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -551,7 +551,6 @@
 <li>the symbology must be based on a field, not an expression</li>
 <li>the values must not be merged (ie, only one value per row)</li>
 <li>the field name must not contain any spaces</li>
-<li>the field must not use an alias name</li>
 </ul>
 <p>A workaround for these limitations is to use a suitably named virtual field which contains the required logic.</p>
 <p>For instance, the virtual field can contain a case statement to accept any number of input values (from one or more fields) and generate a specific value for use in subsequent styling.</p>
@@ -586,6 +585,15 @@
 <li>tick &#x27;Do not expose via WFS&#x27;</li>
 </ul>
 <p><img src="../img/qgis-hide-fields.png" style="width:600px" alt="" /></p>
+<doc-anchor-target id="rename-fields">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#rename-fields">#</doc-anchor-trigger>
+        <span>Rename Fields</span>
+    </h3>
+</doc-anchor-target>
+<p>You can make field names more user-friendly by giving your field names an <em>alias</em>.</p>
+<p>Layer Properties &gt; Attributes Form &gt; select field &gt; Alias</p>
+<p><img src="../img/qgis-field-alias.png" style="width:600px" alt="" /></p>
 <doc-anchor-target id="virtual-fields">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#virtual-fields">#</doc-anchor-trigger>
