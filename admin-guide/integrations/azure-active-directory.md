@@ -91,3 +91,54 @@ Important: a user authenticated with the council's Azure AD through Pozi will ne
 Using `<sitename>.enterprise.pozi.com` forces user to authenticate before proceeding to the Pozi site. These users will gain access to the private datasets.
 
 Public users should continue to use `<sitename>.pozi.com`. They will not be prompted to authenticate, and they will have access to only public data.
+
+### Token-based Authentication/Authorisation
+
+:::note Under Construction
+
+*This section is a work in progress. Please get in touch with us before following any of the steps below*
+
+:::
+
+* TO BE WRITTEN
+
+### App Roles
+
+:::note Under Construction
+
+*This section is a work in progress. Please get in touch with us before following any of the steps below*
+
+:::
+
+It is possible to assign app roles to users and groups and make those roles available through our token-based authentication/authorisation (which is currently still experimental).
+
+The instructions below follow the [Microsoft guide on adding app roles](https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-add-app-roles-in-azure-ad-apps).
+
+#### Create App Roles
+
+* Go to the App Proxy application in the `App registrations` sections and select `App roles`
+* Create the following app role for read access to Pozi Server:
+  - Display name: `Pozi Server Read Access`
+  - Allowed member types: `Users/Groups`
+  - Value: `PoziServer.Read`
+  - Description: `Read access to Pozi Server`
+  - Do you want to enable this app role?: `✔`
+* Create the following app role for write access to Pozi Server:
+  - Display name: `Pozi Server Write Access`
+  - Allowed member types: `Users/Groups`
+  - Value: `PoziServer.Write`
+  - Description: `Write access to Pozi Server`
+  - Do you want to enable this app role?: `✔`
+
+#### Assign App Roles to Users/Groups
+
+* Got App Proxy application in the `Enterprise applications` section and in the `Manage` category, select `Users and groups`
+* Select all users/groups that should get read access to Pozi Server and click on `Edit` in the top of the page
+* Click on `Select a role` and select the role `Pozi Server Read Access` and click on `Select` in the bottom of the page
+* For enabling write access follow the same steps again but now select the role `Pozi Server Write Access`
+* Currently, the Azure UI shows one row per role per user/group. That is expected behaviour.
+
+#### App Roles in Tokens
+
+* The roles defined above will automatically become available in the authentication tokens in the browser, allowing Pozi to change its behaviour depending on the roles that the user (or the group they are in) have.
+
