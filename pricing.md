@@ -27,12 +27,12 @@ Pozi delivers powerful location-based functionality at a fraction of the cost of
 
 | :icon-megaphone: <h3>Public</h3> | :icon-tools: <h3>Pro</h3> | :icon-organization: &nbsp; *<small>Most popular</small>* <h3>Enterprise</h3> | :icon-rocket: <h3>Enterprise Cloud</h3> | { class="compact" }
 ---    | ---
-| *Perfect for publishing your organisation's data to the public* | *When your users demand a higher level of interaction* | *A high functioning replacement for your inhouse GIS enquiry tool* | *Ultimate integration with your organisation’s cloud infrastructure* |
+| *Perfect for publishing your organisation's data to the public* | *When your users demand a higher level of interaction* | *Highly functional inhouse GIS enquiry tool* | *Ultimate integration with your organisation's cloud infrastructure* |
 | <small>AUD</small><big>**$6K**</big><small>/year</small> | <small>AUD</small><big>**$9K**</big><small>/year</small> | <small>AUD</small><big>**$12K**</big><small>/year</small> | <small>AUD</small><big>**$15K**</big><small>/year</small> |
 | - | <small>All the features of Pozi Public, plus:</small> | <small>All the features of Pozi Pro, plus:</small> | <small>All the features of Pozi Enterprise, plus:</small> |
-| ✔️ Live, authoritative data | ✔️ Community consultation module | ✔️ QGIS integration | 🚀 Azure AD Application Proxy integration |
+| ✔️ Live, authoritative data | ✔️ Community consultation module | ✔️ [QGIS integration](/qgis/) | 🚀 Azure AD Application Proxy integration |
 | ✔️ Customer support | ✔️ Advanced search | ✔️ Corporate system integrations | 📃 Enterprise Cloud Service Level Agreement |
-| ✔️ Responsive design | ✔️ Nearby places | ✔️ Public data publisher |  |
+| ✔️ Responsive design | ✔️ Nearby places | ✔️ Public data sync |  |
 | ✔️ Intelligent address search | ✔️ Multiple imagery layers | ✔️ Table view |  |
 | ✔️ GPS location | ✔️ Map widget |  |  |
 | ✔️ Aerial imagery | ✔️ Data widget |  |  |

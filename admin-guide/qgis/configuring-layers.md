@@ -191,7 +191,6 @@ Layers can be styled using the `Categorized` option. However, when publishing th
 * the symbology must be based on a field, not an expression
 * the values must not be merged (ie, only one value per row)
 * the field name must not contain any spaces
-* the field must not use an alias name
 
 A workaround for these limitations is to use a suitably named virtual field which contains the required logic.
 
@@ -223,6 +222,14 @@ Layer Properties > Fields > select field > Configuration
 * tick 'Do not expose via WFS'
 
 ![](./img/qgis-hide-fields.png){style="width:600px"}
+
+### Rename Fields
+
+You can make field names more user-friendly by giving your field names an *alias*.
+
+Layer Properties > Attributes Form > select field > Alias
+
+![](./img/qgis-field-alias.png){style="width:600px"}
 
 ### Virtual Fields
 
