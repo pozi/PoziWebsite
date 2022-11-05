@@ -132,7 +132,7 @@ The instructions below follow the [Microsoft guide on adding app roles](https://
 
 #### Assign App Roles to Users/Groups
 
-* Got App Proxy application in the `Enterprise applications` section and in the `Manage` category, select `Users and groups`
+* Go to the App Proxy application in the `Enterprise applications` section and in the `Manage` category, select `Users and groups`
 * Select all users/groups that should get read access to Pozi Server and click on `Edit` in the top of the page
 * Click on `Select a role` and select the role `Pozi Server Read Access` and click on `Select` in the bottom of the page
 * For enabling write access follow the same steps again but now select the role `Pozi Server Write Access`
