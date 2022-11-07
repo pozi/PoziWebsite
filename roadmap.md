@@ -19,19 +19,26 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ### New Features
 
-- [ ] print to scale
-- [ ] collaborate map annotations
 - [ ] interactive bulk spatial selection for ad-hoc layers
+- [ ] collaborate map annotations
 
 ### Enhancements
 
 - [ ] improve Azure Active Directory integration
 - [ ] don't unhighlight parent object when clicking on a non-spatial child record
-- [ ] obtain layer title/label field setting from QGIS Server
 - [ ] prevent Share links from including the panel state (unless specified in advanced options)
 - [ ] zoom/pan to selected feature on Pozi launch if URL contains a selected feature
 
 ## Completed
+
+### November 2022
+
+#### New
+
+- [x] print to scale
+- [x] obtain layer title/label field setting from QGIS Server
+- [x] grey out layer name when not visible at current zoom
+- [x] enable ArcGIS basemap integration
 
 ### October 2022
 

@@ -92,11 +92,19 @@ QGIS Server is installed on your network (physical or private cloud) as part of 
 
 Pozi's *hybrid cloud* architecture enables any user to access the Pozi web application and **public** datasets from wherever they are. However internal datasets that you publish with QGIS are available only to those users who are on your organisation's corporate network.
 
++++ Enterprise
+
 ![](/static/draw.io/network-diagram-enterprise.png)
 
-Users within your organisation's network have access to the layers you publish with QGIS Server.
+Users who are connected to the corporate network (either physically or via VPN) have access to internal data sources.
 
-Any users outside of your network will still have access to the public datasets that are available for your site, but they will not have access to internal datasets.
++++ Enterprise Cloud
+
+![](/static/draw.io/network-diagram-enterprise-cloud.png)
+
+Users who are signed in to their Microsoft account gain access to corporate data sources that are made available through Microsoft App Proxy.
+
++++
 
 ### Configuration
 

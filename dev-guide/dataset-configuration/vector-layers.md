@@ -203,6 +203,19 @@ Obtaining GeoJSON endpoint:
 `&resultRecordCount=1`
 
 [[Example]](https://services3.arcgis.com/TJxZpUnYIJOvcYwE/arcgis/rest/services/CILZones/FeatureServer/0/query?f=geojson&outFields=*&resultRecordCount=1&where=1=1)
+
+#### Specify Fields
+
+`&outFields=*`
+
+Specify `*` or individual field names separated by commas.
+
+#### Change Projection
+
+`&outSR=4283`
+
+Override the default output projection to solve any alignment issues.
+
 #### Spatial Intersection
 
 `/query?f=geojson&outFields=*&returnGeometry=true&inSR=4326&spatialRel=esriSpatialRelIntersects&geometryType=[$esriGeometryType]&geometry=[$esriGeometry]`
