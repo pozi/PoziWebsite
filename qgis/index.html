@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.720938541421">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.721104670328">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=2.4.0.720938541421" rel="stylesheet" />
+    <link href="../resources/css/retype.css?v=2.4.0.721104670328" rel="stylesheet" />
 
-    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.720938541421" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.721104670328" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.720938541421" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.721104670328" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -404,13 +404,26 @@
 </doc-anchor-target>
 <p>QGIS Server is installed on your network (physical or private cloud) as part of the Pozi Server implementation.</p>
 <p>Pozi&#x27;s <em>hybrid cloud</em> architecture enables any user to access the Pozi web application and <strong>public</strong> datasets from wherever they are. However internal datasets that you publish with QGIS are available only to those users who are on your organisation&#x27;s corporate network.</p>
+<doc-tabs>
+<doc-tab id="enterprise">
+<template #title>Enterprise</template>
 <p><figure class="content-center">
     <img src="../static/draw.io/network-diagram-enterprise.png" alt="" />
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
-<p>Users within your organisation&#x27;s network have access to the layers you publish with QGIS Server.</p>
-<p>Any users outside of your network will still have access to the public datasets that are available for your site, but they will not have access to internal datasets.</p>
+<p>Users who are connected to the corporate network (either physically or via VPN) have access to internal data sources.</p>
+</doc-tab>
+<doc-tab id="enterprise-cloud">
+<template #title>Enterprise Cloud</template>
+<p><figure class="content-center">
+    <img src="../static/draw.io/network-diagram-enterprise-cloud.png" alt="" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>Users who are signed in to their Microsoft account gain access to corporate data sources that are made available through Microsoft App Proxy.</p>
+</doc-tab>
+</doc-tabs>
 <doc-anchor-target id="configuration">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#configuration">#</doc-anchor-trigger>
