@@ -16,7 +16,7 @@ This update ensures that Pozi Connect imports only the latest data from DELWP's 
 
 We've also taken the opportunity to improve the PIQA reporting capabilities, provide more detailed M1 file name, and improve the installation experience.
 
-**[Upgrade to Pozi Connect 2.9.3](https://docs.pozi.com/pozi-connect/installation/)**
+**[Upgrade to Pozi Connect 2.9.3](/pozi-connect/installation.md)**
 
 ------
 
@@ -59,6 +59,6 @@ If you decide to extract your DataShare downloads to a different location (for i
 
 The new Pozi Docs site provides step-by-step instructions for downloading and installing Pozi Connect 2.9.3.
 
-**[Get Pozi Connect 2.9.3](https://docs.pozi.com/pozi-connect/installation/)**
+**[Get Pozi Connect 2.9.3](/pozi-connect/installation.md)**
 
 For assistance with this upgrade, contact support@pozi.com.

@@ -14,7 +14,7 @@ Pozi Connect 2.9.3 is now available for you to download and install.
 
 We've enhanced Pozi Connect to work with DELWP's new DataShare Vicmap data downloads. We've also taken the opportunity to improve other aspects of Pozi Connect's M1 workflow to give you better quality M1s than ever before. Download and install the latest Pozi Connect now!
 
-**[Upgrade to Pozi Connect 2.9](https://docs.pozi.com/pozi-connect/installation/)**
+**[Upgrade to Pozi Connect 2.9](/pozi-connect/installation.md)**
 
 ------
 
@@ -69,6 +69,6 @@ If you decide to extract your DataShare downloads to a different location (for i
 
 The new Pozi Docs site provides step-by-step instructions for downloading and installing Pozi Connect 2.9.
 
-**[Get Pozi Connect 2.9](https://docs.pozi.com/pozi-connect/installation/)**
+**[Get Pozi Connect 2.9](/pozi-connect/installation.md)**
 
 For assistance with this upgrade, contact support@pozi.com.
