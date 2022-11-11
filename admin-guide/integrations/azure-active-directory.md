@@ -79,6 +79,29 @@ Ensure it doesn't return a response to a non-logged-in or anonymous user.
 * In `Implicit grant and hybrid flows`: `Access tokens` and `ID tokens` should remain unchecked
 * In `Advanced settings`: Set `Allow public client flows` to `No`
 
+#### Authorisation
+
+All going well, it should be possible to visit the App Proxy URL (in our example case: `https://pozi-cardiniavicgovau.msappproxy.net/`). If an error is shown like: `Sorry, but we’re having trouble with signing you in.` with a text similar to below, then we will need to give the relevant users/groups access.
+
+Example authorisation error:
+
+*AADSTS50105: Your administrator has configured the application Pozi Server ('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx') to block users unless they are specifically granted ('assigned') access to the application. The signed in user 'xxxxxxxxx.xxxxxxx@xxxxxxxxxxx.xxx.xxx.xx') is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application.
+*
+
+**Steps to authorise users/groups**
+
+* In the Azure Portal, go to Enterprise Applications, select the enterprise application for the Pozi Application Proxy
+* Under `Manage`, select `Users and groups`
+* If no users/groups have been defined, it will say something like `No application assignments found`
+* Click on `+ Add user/group`
+* In the next page, click on the text `None selected` under`Users and groups
+* On the right a panel should pop up with all available users/groups. Assuming that we want all users to have access, click on the group `All users` and click on `Select` in the bottom.
+* It is worth taking note of the the info text `When you assign a group to an application, only users directly in the group will have access. The assignment does not cascade to nested groups.`, especially when one chooses a group that contains other groups. In the case of `All users`, this is not an issue.
+* Under `Select a role`, the role `User` is preselected and cannot be changed. That is OK.
+* Click on `Assign` in the bottom of the page.
+
+Access should now be granted to the application proxy and the URL should be accessible.
+
 #### API Permissions
 
 * Give Pozi the following permissions:
