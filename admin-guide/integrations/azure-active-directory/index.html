@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.721436235870">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.721456824725">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.721436235870" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.721456824725" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.721436235870" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.721456824725" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.721436235870" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.721456824725" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -404,6 +404,29 @@
 <li>In <code v-pre>Implicit grant and hybrid flows</code>: <code v-pre>Access tokens</code> and <code v-pre>ID tokens</code> should remain unchecked</li>
 <li>In <code v-pre>Advanced settings</code>: Set <code v-pre>Allow public client flows</code> to <code v-pre>No</code></li>
 </ul>
+<doc-anchor-target id="authorisation">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#authorisation">#</doc-anchor-trigger>
+        <span>Authorisation</span>
+    </h4>
+</doc-anchor-target>
+<p>All going well, it should be possible to visit the App Proxy URL (in our example case: <code v-pre>https://pozi-cardiniavicgovau.msappproxy.net/</code>). If an error is shown like: <code v-pre>Sorry, but we’re having trouble with signing you in.</code> with a text similar to below, then we will need to give the relevant users/groups access.</p>
+<p>Example authorisation error:</p>
+<p>*AADSTS50105: Your administrator has configured the application Pozi Server (&#x27;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&#x27;) to block users unless they are specifically granted (&#x27;assigned&#x27;) access to the application. The signed in user <a href="mailto:%27xxxxxxxxx.xxxxxxx@xxxxxxxxxxx.xxx.xxx.xx">&#x27;xxxxxxxxx.xxxxxxx@xxxxxxxxxxx.xxx.xxx.xx</a>&#x27;) is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application.
+*</p>
+<p><strong>Steps to authorise users/groups</strong></p>
+<ul>
+<li>In the Azure Portal, go to Enterprise Applications, select the enterprise application for the Pozi Application Proxy</li>
+<li>Under <code v-pre>Manage</code>, select <code v-pre>Users and groups</code></li>
+<li>If no users/groups have been defined, it will say something like <code v-pre>No application assignments found</code></li>
+<li>Click on <code v-pre>+ Add user/group</code></li>
+<li>In the next page, click on the text <code v-pre>None selected</code> under&#x60;Users and groups</li>
+<li>On the right a panel should pop up with all available users/groups. Assuming that we want all users to have access, click on the group <code v-pre>All users</code> and click on <code v-pre>Select</code> in the bottom.</li>
+<li>It is worth taking note of the the info text <code v-pre>When you assign a group to an application, only users directly in the group will have access. The assignment does not cascade to nested groups.</code>, especially when one chooses a group that contains other groups. In the case of <code v-pre>All users</code>, this is not an issue.</li>
+<li>Under <code v-pre>Select a role</code>, the role <code v-pre>User</code> is preselected and cannot be changed. That is OK.</li>
+<li>Click on <code v-pre>Assign</code> in the bottom of the page.</li>
+</ul>
+<p>Access should now be granted to the application proxy and the URL should be accessible.</p>
 <doc-anchor-target id="api-permissions">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#api-permissions">#</doc-anchor-trigger>
