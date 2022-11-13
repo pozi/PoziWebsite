@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.721457919855">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.721631958935">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.721457919855" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.721631958935" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.721457919855" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.721631958935" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.721457919855" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.721631958935" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -645,22 +645,12 @@
         <span>Feature Title</span>
     </h2>
 </doc-anchor-target>
-<p>When users select a feature from the map, Pozi will pick a value from the selected feature&#x27;s attributes to display prominently at the top of the Info Panel.</p>
-<doc-panel id="priority-field-names" collapsed>
-    <template #title>Priority Field Names</template>
-<p>Pozi dynamically evaluates the selected feature, and attempts to obtain a title value using any fields with any of these names if they exist and if they contain a value:</p>
-<ul>
-<li><code v-pre>label</code> or <code v-pre>*label</code></li>
-<li><code v-pre>ezi_address</code></li>
-<li><code v-pre>name</code> or <code v-pre>*name</code></li>
-<li><code v-pre>title</code> or <code v-pre>*title</code></li>
-<li><code v-pre>description</code> or <code v-pre>*description</code></li>
-</ul>
-<p><em>Note: the asterisk above represents a wildcard, meaning that the field name may begin with any text.</em></p>
-<p>This list is subject to change. <a href="https://github.com/pozi/PoziApp/blob/master/app/src/drawer/tabs/info/Label.ts">(Developer Notes)</a></p>
-</doc-panel>
-<p>You can manipulate your source data using virtual fields in QGIS to promote your chosen field by using any variation of the priority names.</p>
-<p>See <a href="https://docs.qgis.org/latest/en/docs/user_manual/expressions/expression.html">https://docs.qgis.org/latest/en/docs/user_manual/expressions/expression.html</a></p>
+<p>When users select a feature from the map, Pozi prominently displays one of the feature&#x27;s attributes at the top of the Info Panel as the feature&#x27;s title.</p>
+<p><img src="../img/info-panel-title.png" style="width:800px" alt="" /></p>
+<p>Typically the title will be the name of the feature or some other useful information to distinguish the feature from others in the same layer.</p>
+<p>The field from which this attribute is obtained is defined in QGIS in Layer Properties &gt; Display &gt; Display Name.</p>
+<p><img src="../img/qgis-layer-display-field.png" style="width:500px" alt="" /></p>
+<p>Please note that Pozi cannot use the display field if the field name has been given an alias.</p>
 <br/>
 <doc-anchor-target id="selectability">
     <h2>
@@ -671,6 +661,7 @@
 <p><small>#selectable #queryable #identifiable</small></p>
 <p>To prevent the Info Panel from displaying results from specific layers (say, for aerial photos), update the <code v-pre>Data Sources</code> settings in the QGIS project.</p>
 <p>Project &gt; Properties &gt; Data Sources &gt; Identifiable &gt; untick to disable layer selectability</p>
+<p><img src="../img/qgis-layer-identifiable.png" style="width:450px" alt="" /></p>
 <br/>
 <doc-anchor-target id="optional-settings">
     <h2>

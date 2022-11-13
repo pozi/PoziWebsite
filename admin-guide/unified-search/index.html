@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.721457919855">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.721631958935">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.4.0.721457919855" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.721631958935" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.721457919855" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.721631958935" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.721457919855" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.721631958935" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.721631958935" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -308,7 +309,7 @@
         <span>Unified Search</span>
     </h1>
 </doc-anchor-target>
-<p>The Unified Search is a general purpose search utility designed to handle common user searches with the Pozi app. Users can type their search into the autocomplete search box and see results such addresses, assets, features of interest, properties, parcels, animal tags and more. Picking a result will zoom the map to the location.</p>
+<p>The Unified Search is a general purpose search utility designed to handle common user searches with the Pozi app. Users can type their search into the autocomplete search box and see results such addresses, assets, features of interest, properties, parcels, permit numbers, animal tags and more. Picking a result will zoom the map to the location.</p>
 <p>The Unified Search is a specific implementation of the <a href="../pipeline/">Pozi Pipeline</a> ETL tool. It generates a search index in the form of a SQLite file which Pozi can query to fetch its search results. The process is run on a routine basis to keep the search index up-to-date.</p>
 <doc-anchor-target id="configuration">
     <h2>
@@ -318,14 +319,175 @@
 </doc-anchor-target>
 <p>Pozi Pipeline is configured to loop through a folder of VRT files, each of which is a virtual dataset that points to a source dataset and includes specific formatting information that enables the search index to be built.</p>
 <p>There is no limit to the number of datasets that can be configured in the search. However, the more that is added, the more potential for the search results of less useful features to crowd out the more important results.</p>
-<p>The listed file names will indicate what is currently configured for searching. (Files that contain configurations for non-spatial data sources are prefixed with zzz to force them to the bottom because the spatial ones need to be be processed first.)</p>
-<doc-anchor-target id="dataset-configuration-in-vrt-files">
+<doc-anchor-target id="vrt-file-structure">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#dataset-configuration-in-vrt-files">#</doc-anchor-trigger>
-        <span>Dataset Configuration in VRT Files</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#vrt-file-structure">#</doc-anchor-trigger>
+        <span>VRT File Structure</span>
     </h3>
 </doc-anchor-target>
-<p>The Unified Search doesn&#x27;t support wildcards. However the index can be configured to take into account some variations if it is anticipated what the user might type in. (For instance, users searching for a crown allotment can start their query with &#x27;CA&#x27; because the parcel search has been configured with a string expression <code v-pre>|| ' CA ' ||</code> to anticipate this.) If there is a particular search that would require a wildcard, the VRT file can similarly be configured to include the characters that users might type in.</p>
+<doc-panel id="example-vrt-file" collapsed>
+    <template #title>Example VRT File</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;OGRVRTDataSource&gt;
+    &lt;OGRVRTLayer name=&quot;ngsc_assets_bridge_id&quot;&gt;
+        &lt;SrcDataSource&gt;\\Hollop\d\GIS_Data\Active\_NGSC\Assets\Bridges.geojson&lt;/SrcDataSource&gt;
+        &lt;SrcSQL dialect=&quot;sqlite&quot;&gt;
+            select
+                'BRIDGE ASSET ID' as category,
+                AssetID || ' ' || cast ( cast ( substr ( AssetID , 4 , 99 ) as integer ) as varchar ) as search_text,
+                AssetID as display_text,
+                'ngsc_assets_bridges:asset_id:' || AssetID as search_key,
+                '' as forward_search_key,
+                'bridges' as map_layer,
+                'AssetID' as map_layer_id_field,
+                AssetID as map_layer_id,
+                1 / cast ( ( select count(*) from NGSCBridges ) as float ) as weight,
+                round ( st_minx ( st_transform ( geometry , 4326 ) ) , 6 ) as minx,
+                round ( st_miny ( st_transform ( geometry , 4326 ) ) , 6 ) as miny,
+                round ( st_maxx ( st_transform ( geometry , 4326 ) ) , 6 ) as maxx,
+                round ( st_maxy ( st_transform ( geometry , 4326 ) ) , 6 ) as maxy,
+                st_transform ( st_pointonsurface ( geometry ) , 4326 ) as geometry
+            from
+			    NGSCBridges
+        &lt;/SrcSQL&gt;
+        &lt;GeometryType&gt;wkbPoint&lt;/GeometryType&gt;
+    &lt;/OGRVRTLayer&gt;
+&lt;/OGRVRTDataSource&gt;</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-anchor-target id="vrt-file-name">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#vrt-file-name">#</doc-anchor-trigger>
+        <span>VRT File Name</span>
+    </h3>
+</doc-anchor-target>
+<p>Give the VRT file a name that uniquely identifies its source, dataset and search function.</p>
+<doc-anchor-target id="spatial-vrts">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#spatial-vrts">#</doc-anchor-trigger>
+        <span>Spatial VRTs</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example VRT File Name</div>
+<pre class="language-none"><code v-pre class="language-none">ngsc_assets_bridge_id.vrt</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="non-spatial-vrts">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#non-spatial-vrts">#</doc-anchor-trigger>
+        <span>Non-Spatial VRTs</span>
+    </h4>
+</doc-anchor-target>
+<p>When the search index is created, the VRT files are processed in alphabetical file order. The first VRT file <em>must</em> be a dataset that contains feature geometries in order for the search index file to be created correctly.</p>
+<p>To ensure that a non-spatial dataset is never processed first, prefix all non-spatial VRT files with <code v-pre>zzz_</code> to force them to be processed last.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example VRT File Name for Non-Spatial Dataset</div>
+<pre class="language-none"><code v-pre class="language-none">zzz_authority_property_owner.vrt</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="ogrvrtlayer">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#ogrvrtlayer">#</doc-anchor-trigger>
+        <span><code v-pre>OGRVRTLayer</code></span>
+    </h3>
+</doc-anchor-target>
+<p>This is a required component for any VRT file. The Unified Search function does not require any specific value. However for the sake of convention, use the same name as the VRT file itself.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example OGRVRTLayer</div>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;OGRVRTLayer name=&quot;ngsc_assets_bridge_id&quot;&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="srcdatasource">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#srcdatasource">#</doc-anchor-trigger>
+        <span><code v-pre>SrcDataSource</code></span>
+    </h3>
+</doc-anchor-target>
+<p>This is the file path or ODBC connection string of the source dataset.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example file path</div>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;SrcDataSource&gt;\\Hollop\d\GIS_Data\Source\Vicmap\VMFEAT\FOI_POINT.tab&lt;/SrcDataSource&gt;</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example SQL Server connection string</div>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;SrcDataSource&gt;MSSQL:server=myservername;database=mydatabasename;tables=mytablename&lt;/SrcDataSource&gt;</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example ODBC connection string</div>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;SrcDataSource&gt;ODBC:DRIVER={SQL Server};SERVER=myservername;DATABASE=mydatabasename,mytablename&lt;/SrcDataSource&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="srcsql">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#srcsql">#</doc-anchor-trigger>
+        <span><code v-pre>SrcSQL</code></span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="category">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#category">#</doc-anchor-trigger>
+        <span><code v-pre>category</code></span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="search_text">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#search_text">#</doc-anchor-trigger>
+        <span><code v-pre>search_text</code></span>
+    </h3>
+</doc-anchor-target>
+<p>The Unified Search doesn&#x27;t support wildcards. However the index can be configured to take into account some text variations if it is anticipated what the user might type in. (For instance, users searching for a crown allotment can start their query with &#x27;CA&#x27; because the parcel search has been configured with a string expression <code v-pre>|| ' CA ' ||</code> to anticipate this.) If there is a particular search that would require a wildcard, the VRT file can similarly be configured to include the characters that users might type in.</p>
+<doc-anchor-target id="display_text">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#display_text">#</doc-anchor-trigger>
+        <span><code v-pre>display_text</code></span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="search_key">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#search_key">#</doc-anchor-trigger>
+        <span><code v-pre>search_key</code></span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="forward_search_key">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#forward_search_key">#</doc-anchor-trigger>
+        <span><code v-pre>forward_search_key</code></span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="map_layer">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#map_layer">#</doc-anchor-trigger>
+        <span><code v-pre>map_layer</code></span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="map_layer_id_field">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#map_layer_id_field">#</doc-anchor-trigger>
+        <span><code v-pre>map_layer_id_field</code></span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="map_layer_id">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#map_layer_id">#</doc-anchor-trigger>
+        <span><code v-pre>map_layer_id</code></span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="weight">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#weight">#</doc-anchor-trigger>
+        <span><code v-pre>weight</code></span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="minx-miny-maxx-maxy">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#minx-miny-maxx-maxy">#</doc-anchor-trigger>
+        <span><code v-pre>minx</code>, <code v-pre>miny</code>, <code v-pre>maxx</code>, <code v-pre>maxy</code></span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="geometry">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#geometry">#</doc-anchor-trigger>
+        <span><code v-pre>geometry</code></span>
+    </h3>
+</doc-anchor-target>
 <doc-anchor-target id="troubleshooting">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#troubleshooting">#</doc-anchor-trigger>
@@ -448,6 +610,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Unified Search", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Unified Search", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
