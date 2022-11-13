@@ -279,27 +279,17 @@ If the value is a URL ending in `.png` or `.jpg`, Pozi will display a thumbnail 
 
 ## Feature Title
 
-When users select a feature from the map, Pozi will pick a value from the selected feature's attributes to display prominently at the top of the Info Panel.
+When users select a feature from the map, Pozi prominently displays one of the feature's attributes at the top of the Info Panel as the feature's title.
 
-==- Priority Field Names
+![](img/info-panel-title.png){style="width:800px"}
 
-Pozi dynamically evaluates the selected feature, and attempts to obtain a title value using any fields with any of these names if they exist and if they contain a value:
+Typically the title will be the name of the feature or some other useful information to distinguish the feature from others in the same layer.
 
-* `label` or `*label`
-* `ezi_address`
-* `name` or `*name`
-* `title` or `*title`
-* `description` or `*description`
+The field from which this attribute is obtained is defined in QGIS in Layer Properties > Display > Display Name.
 
-*Note: the asterisk above represents a wildcard, meaning that the field name may begin with any text.*
+![](img/qgis-layer-display-field.png){style="width:500px"}
 
-This list is subject to change. [(Developer Notes)](https://github.com/pozi/PoziApp/blob/master/app/src/drawer/tabs/info/Label.ts)
-
-==-
-
-You can manipulate your source data using virtual fields in QGIS to promote your chosen field by using any variation of the priority names.
-
-See https://docs.qgis.org/latest/en/docs/user_manual/expressions/expression.html
+Please note that Pozi cannot use the display field if the field name has been given an alias.
 
 <br/>
 
@@ -310,6 +300,8 @@ See https://docs.qgis.org/latest/en/docs/user_manual/expressions/expression.html
 To prevent the Info Panel from displaying results from specific layers (say, for aerial photos), update the `Data Sources` settings in the QGIS project.
 
 Project > Properties > Data Sources > Identifiable > untick to disable layer selectability
+
+![](img/qgis-layer-identifiable.png){style="width:450px"}
 
 <br/>
 

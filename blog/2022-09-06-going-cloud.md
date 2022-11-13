@@ -72,13 +72,13 @@ Or will the move be a step backwards:
 * will it prevent the use of automated workflows such as database views and triggers?
 * will it make it harder for your GIS to connect directly with APIs and data from external providers?
 * will it prevent your organisation getting support from third party GIS support providers?
-* will it lock you in further to using an ageing, complex, inefficient GIS viewer?
+* will it lock you in to an ageing GIS viewer that doesn't keep pace with modern web technologies?
 
 ---
 
 ## Where to from here?
 
-Are you hesitant for your organisation's geospatial knowledge to be moved into a closed platform?
+Are you hesitant for your organisation's collective geospatial knowledge to be moved into a closed platform?
 
 <img src="/static/img/undraw/undraw_map_re_60yf.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
