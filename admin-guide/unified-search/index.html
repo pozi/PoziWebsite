@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.721631958935">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.723796995603">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.4.0.721631958935" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.723796995603" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.721631958935" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.723796995603" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.721631958935" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.721631958935" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.723796995603" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.723796995603" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -488,6 +488,29 @@
         <span><code v-pre>geometry</code></span>
     </h3>
 </doc-anchor-target>
+<doc-anchor-target id="building-and-updating-search-index">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#building-and-updating-search-index">#</doc-anchor-trigger>
+        <span>Building and updating search index</span>
+    </h2>
+</doc-anchor-target>
+<p>In Window Task Scheduler, click Create Basic Task and configure the following:</p>
+<ul>
+<li>Name: eg Pozi Nightly Updater</li>
+<li>Trigger: Daily</li>
+<li>Start: eg 4am</li>
+<li>Action: Start a program</li>
+<li>Program/script: browse to batch file</li>
+<li>Start in: C:\Program Files (x86)\Pozi\userdata\tasks</li>
+<li>Open the Properties dialog for this task when I click Finish: tick on</li>
+</ul>
+<p>Additional Settings:</p>
+<ul>
+<li>Change User or Group &gt; set as the domain user that is set up for running Pozi Server</li>
+<li>Run whether user is logged on or not: toggle on</li>
+<li>Finish</li>
+</ul>
+<p>Test by right-clicking new scheduled task and selecting Run. Check the Pipeline log file to ensure updates are proceeding as expected.</p>
 <doc-anchor-target id="troubleshooting">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#troubleshooting">#</doc-anchor-trigger>
