@@ -4,14 +4,6 @@ icon: dot
 
 # data.gov.au
 
-:::note Under Construction
-
-*This page is a work in progress. Please refer to our existing Help Guide for information about this topic.*
-
-[Existing Help Guide](https://help.pozi.com/article/34-data-publishing)
-
-:::
-
 Data.gov.au is a federal government data portal where Australian government organisations can publish open data.
 
 * [data.gov.au website](https://data.gov.au/)

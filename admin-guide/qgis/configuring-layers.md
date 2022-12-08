@@ -285,7 +285,9 @@ When users select a feature from the map, Pozi prominently displays one of the f
 
 Typically the title will be the name of the feature or some other useful information to distinguish the feature from others in the same layer.
 
-The field from which this attribute is obtained is defined in QGIS in Layer Properties > Display > Display Name.
+The field from which this attribute is obtained is defined in QGIS.
+
+Layer Properties > Display > Display Name
 
 ![](img/qgis-layer-display-field.png){style="width:500px"}
 

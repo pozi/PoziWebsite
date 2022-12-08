@@ -277,6 +277,25 @@ The `?` at the end of the style URL allows Pozi to add layer parameters (as it n
 
 ==-
 
+### WMTS (Web Map Tile Service)
+
+==- Example
+
+```json
+{
+  "title": "Vicmap Basemaps",
+  "group": "Basemap",
+  "type": "WMTSCapabilities",
+  "config": {
+    "spatial": {
+      "url": "https://base.maps.vic.gov.au/service?SERVICE=WMTS&REQUEST=Getcapabilities"
+    }
+  }
+}
+```
+
+==-
+
 ## Settings
 
 ### `layerFilter`

@@ -260,6 +260,11 @@ The layer name from the permissions list needs to modified to reflect the actual
 
 ###### Example 2
 
+* before: `\land\aerial\mallee_2020dec23_air_vis_20cm_mga54\mallee_2020dec23_air_vis_20cm_mga54.ecw`
+* after: `aerial_mallee_2020dec23_air_vis_20cm_mga54`
+
+###### Example 3
+
 * before: `\land\aerial\towns\navarre_2016dec23_air_cir_10cm_mga54.ecw`
 * after: `towns_navarre_2016dec23_air_cir_10cm_mga54`
 

@@ -133,7 +133,25 @@ The Unified Search doesn't support wildcards. However the index can be configure
 ### `geometry`
 
 
+## Building and updating search index
 
+In Window Task Scheduler, click Create Basic Task and configure the following:
+
+* Name: eg Pozi Nightly Updater
+* Trigger: Daily
+* Start: eg 4am
+* Action: Start a program
+* Program/script: browse to batch file
+* Start in: C:\Program Files (x86)\Pozi\userdata\tasks
+* Open the Properties dialog for this task when I click Finish: tick on
+
+Additional Settings:
+
+* Change User or Group > set as the domain user that is set up for running Pozi Server
+* Run whether user is logged on or not: toggle on
+* Finish
+
+Test by right-clicking new scheduled task and selecting Run. Check the Pipeline log file to ensure updates are proceeding as expected.
 
 ## Troubleshooting
 

@@ -174,6 +174,29 @@ Ultimate integration with your organisation's cloud infrastructure, with Azure A
 
 ---
 
+## Feature Round-Up
+
+* Unified Search: search across multiple datasets in a single autocomplete search box
+* Table View: view, filter and search layer features in an interactive table view that's synchronised to the map
+* Layer Search: easily find map layers by typing in the layer search box to reveal layers that match the layer name, group name or associated metadata
+* Print: generate print-ready PDFs with organisation logo in various page sizes and orientations; optionally add a report with statistics of features within the current map view
+* Metadata: view information about layers, including source and description
+* Annotation: mark up a map with points, lines, shapes and text, and easily share the marked-up map with others
+* Measure: obtain distance and area measurements using the interactive measuring tools, or view dimensions for any selected feature
+* Select: identify features at any location or within a region using point and area selection modes
+* Share: customise a map with specific layers and location, and generate a link to share with others or bookmark for later use
+* Information: view feature attributes, linked documents, web links, media previews and related attributes from other non-spatial sources; no pre-processing, joining or data duplication required
+* Export data: download CSVs of selected features and linked data (eg, download a list of property owner details from selected properties for a mail merge)
+* Export map: download geo-referenced map images for use in desktop GIS or presentations
+* Progressive Web App: add Pozi to the home screen of any device or desktop and launch it and switch between it and other apps as if it were a native application
+* Community Consultation: collect community feedback about user-selected locations or pre-defined map features
+* Web API: launch Pozi from other applications, controlling aspects like zooming to a specific property and adding map layers
+* Web Widgets: embed address search widgets in web pages to launch a map or display location-specific information
+* Publisher: sync internal datasets to the Pozi cloud for publishing to the public and other external stakeholders
+* Pipeline: schedule tasks for performing routine geospatial data workflows
+
+---
+
 :::section
 
   ## Get in touch

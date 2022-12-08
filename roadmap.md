@@ -31,6 +31,12 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## Completed
 
+### December 2022
+
+#### Improved
+
+- [x] switch property endpoints for Victorian municipalities to DELWP's ArcGIS Online service for improved performance and reliability
+
 ### November 2022
 
 #### New
@@ -39,6 +45,15 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [x] obtain layer title/label field setting from QGIS Server
 - [x] grey out layer name when not visible at current zoom
 - [x] enable ArcGIS basemap integration
+
+#### Improved
+
+- [x] change behaviour of clicking on partially-ticked layer folder tickbox to turn OFF all layers
+
+#### Fixed
+
+- [x] change pinch-zoom to resize the map instead of the whole interface
+- [x] enable large queries when using Azure App Proxy
 
 ### October 2022
 
@@ -96,12 +111,17 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [x] hide table when layer is turned off
 - [x] render null and undefined values as empty string in table view
 - [x] use favicons from alternative URLs for frequently used links which don't have their own favicon
+- [x] switch Vicmap Basemap to new XYZ tile service
 
 #### Fixed
 
 - [x] better remember state of expanded layer groups for sites with a lot of layers
 - [x] respect field order of source data in QGIS GetFeature queries
 - [x] horizontal alignment of links in info panel
+- [x] vertical padding around vector legends
+- [x] some legend images were not displaying
+- [x] some bubble icons were not displaying
+- [x] some layer groups couldn't expand/collapse in some situations
 
 ### July 2022
 
@@ -119,6 +139,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [x] show spinner during app load if waiting for slow data sources
 - [x] even better evaluation of attributes to display for title of selected feature
 - [x] layer panel now responds much quicker to layer reset and expanding large groups
+- [x] disable accordion collapse when layer search is active
 
 #### Fixed
 
@@ -144,6 +165,7 @@ Our biggest release in over two years!
 - [x] compact layer view
 - [x] extend table view to full page width
 - [x] upgrade to React v17
+- [x] when zooming to search result, zoom in/out to accommodate geometry or bounding coords of target
 
 #### Fixed
 
@@ -166,9 +188,13 @@ We'll do a better job going forward keeping track of all new development and imp
 
 ---
 
+### April 2022
+
+- [x] improved: make hyperlinks look nice in widget results
+
 ### March 2022
 
-- [x] support for vector tile basemaps
+- [x] new: support for vector tile basemaps
 
 ### January 2022
 
@@ -184,6 +210,15 @@ We'll do a better job going forward keeping track of all new development and imp
 ### November 2021
 
 - [x] improved: filter address search results by municipality
+- [x] improved: use a default style for layers with missing/invalid styles
+
+### October 2021
+
+- [x] improved: consolidate highlight styles
+- [x] improved: change caching policy for public layers to avoid serving outdated data
+- [x] improved: upgrade to OpenLayers 6.8
+- [x] improved: upgrade to TurfJS 6.5
+- [x] improved: open Config Manager page in new tab
 
 ### July 2021
 

@@ -352,6 +352,14 @@ Uses `WARD_NUM` from parent record to do a lookup.
 
 ==-
 
+### Submitting CSV files to data.gov.au
+
+Take care when publishing CSV files in data.gov.au to ensure the output from the Data API is current with the uploaded file.
+
+The support team at data.gov.au has provided this information:
+
+> We have found that data in the format csv_geo_au format doesn't trigger the datastore load automatically. It doesn't automatically recognise it as a csv. If you find it doesn't load and if you have access to manage the resource, go to the Datastore tab. Clicking 'Upload to datastore' should update the table.
+
 ## Pozi Server
 
 Pozi Server provides an on-premise API for organisations' spatial and non-spatial data.
