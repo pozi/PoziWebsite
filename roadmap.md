@@ -171,6 +171,59 @@ Our biggest release in over two years!
 
 - [x] prevent page from reloading on first visit
 
+### April 2022
+
+- [x] improved: make hyperlinks look nice in widget results
+- [x] improved: enable vector tile basemap to be the default basemap
+- [x] improved: prevent search results from covering search input box
+- [x] fixed: prevent child lookup failing when a parent value is blank
+
+### March 2022
+
+- [x] new: support for vector tile basemaps
+- [x] improved: zoom to more suitable zoom level when searching on mobile
+- [x] fixed: restore highlighting for selected features
+- [x] fixed: remove scrollbar from widget
+- [x] fixed: ensure map always zooms out to show feature selected from "Nearby" list
+
+### February 2022
+
+- [x] new: implement optional setting to display all feature details directly in What's Here results instead of only previewing the feature's title
+- [x] improved: enable users to view more than 10 results in Search query
+- [x] improved: improve cursor focus in Search panel
+- [x] fixed: clear old search results when doing a new search
+
+### January 2022
+
+- [x] new: display coordinates in alternative projections
+- [x] improved: enable tolerance of WMS GetFeatureInfo clicks for QGIS Server
+- [x] improved: update Property Planning Report links
+
+---
+
+### December 2021
+
+- [x] improved: apply subtle fill to generic polygon styles
+- [x] improved: display selected feature areas with three significant digits
+- [x] improved: increase precision of measuring tool results
+- [x] improved: enable line feature labels to follow the line
+- [x] fixed: layer alignment with basemap/aerial when printed
+- [x] fixed: generate valid Esri geometries on selected features to enable better integration with ArcGIS Online
+
+### November 2021
+
+- [x] new: display legend generated from SLD
+- [x] improved: filter address search results by municipality
+- [x] improved: use a default style for layers with missing/invalid styles
+
+### October 2021
+
+- [x] improved: consolidate highlight styles
+- [x] improved: change caching policy for public layers to avoid serving outdated data
+- [x] improved: upgrade to OpenLayers 6.8
+- [x] improved: upgrade to TurfJS 6.5
+- [x] improved: open Config Manager page in new tab
+
 ---
 
 !!!
@@ -187,38 +240,6 @@ We'll do a better job going forward keeping track of all new development and imp
 !!!
 
 ---
-
-### April 2022
-
-- [x] improved: make hyperlinks look nice in widget results
-
-### March 2022
-
-- [x] new: support for vector tile basemaps
-
-### January 2022
-
-- [x] new: display coordinates in alternative projections
-- [x] improved: enable tolerance of WMS GetFeatureInfo clicks for QGIS Server
-
----
-
-### December 2021
-
-- [x] fixed: generate valid Esri geometries on selected features to enable better integration with ArcGIS Online
-
-### November 2021
-
-- [x] improved: filter address search results by municipality
-- [x] improved: use a default style for layers with missing/invalid styles
-
-### October 2021
-
-- [x] improved: consolidate highlight styles
-- [x] improved: change caching policy for public layers to avoid serving outdated data
-- [x] improved: upgrade to OpenLayers 6.8
-- [x] improved: upgrade to TurfJS 6.5
-- [x] improved: open Config Manager page in new tab
 
 ### July 2021
 
