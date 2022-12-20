@@ -35,8 +35,18 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ### December 2022
 
+#### New
+
+- [x] ⚡ Azure Active Directory token-based authentication
+  * more robust authentication process with more persistent login
+  * support AD logins in Edge browser
+  * support AD logins on iOS devices
+
 #### Improved
 
+- [x] 👍 enable fine zoom level control when using Shift-click zoom
+- [x] 👍 improve load times and label appearance for QGIS Server WMS layers by changing default layer format from tiled to full image
+- [x] 👍 enable URLs that use the Pozi Proxy to be cached by service workers
 - [x] 👍 switch property endpoints for Victorian municipalities to DELWP's ArcGIS Online service for improved performance and reliability
 
 ### November 2022
@@ -51,12 +61,15 @@ We also offer clients the opportunity to sponsor development of new features, gi
 #### Improved
 
 - [x] 👍 change behaviour of clicking on partially-ticked layer folder tickbox to turn OFF all layers
+- [x] 👍 don't automatically display labels when there is a field called 'label'
 
 #### Fixed
 
 - [x] 🪲 change pinch-zoom to resize the map instead of the whole interface
 - [x] 🪲 enable large queries when using Azure App Proxy
 - [x] 🪲 restore routing functionality by updating MapQuest API setting
+- [x] 🪲 fix report function for tables that have an attribute field called 'geometry'
+- [x] 🪲 fix blank background in print
 
 ### October 2022
 
