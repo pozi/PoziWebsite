@@ -162,3 +162,11 @@ Email support@pozi.com with these details:
 Within 24 hours, the new layer group will be configured and available for users to view in Pozi.
 
 During this time, and any time afterwards, you may continue to [add and configure layers](/admin-guide/qgis/configuring-layers/) in your new project.
+
+## Troubleshooting
+
+==- None of the project's layers are displaying in Pozi
+
+Check that advertised URLs contains the exact path and file name of the .qgs project file.
+
+==-

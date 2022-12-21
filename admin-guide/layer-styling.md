@@ -4,16 +4,6 @@ sidebar_position: 4
 icon: paintbrush
 ---
 
-:::note Under Construction
-
-*This page is a work in progress. Please refer to our existing Help Guide for information about this topic.*
-
-[Existing Help Guide](https://help.pozi.com/search?query=layer+styling)
-
-:::
-
----
-
 ![](/static/img/tweet-gallery/northern_grampians_waste_route_styling.png){style="width:600px"}
 
 ## Styled Layer Descriptor (SLD)
@@ -23,7 +13,7 @@ icon: paintbrush
 1. open your source dataset in QGIS
 2. style the layer using the QGIS styling controls
 3. export the style to an SLD file
-4. place SLD file in public sync folder, along with the corresponding GeoJSON file
+4. include the SLD file with the GeoJSON file that you upload or sync
 
 ![Creating SLD in QGIS](./img/creating-sld-in-qgis.gif)
 

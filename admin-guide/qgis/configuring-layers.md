@@ -319,6 +319,7 @@ Layer Properties > QGIS Server > Keyword list
 * `group=[group name]`: override which layer group the layer is listed under
 * `showInLayerControl=false`: don't display layer in layer panel
 * `showLegend=false`: don't display layer legend
+* `type=TileWMS`: for WMS layers, render as image tiles
 * `visible=true`: display layer by default
 
 When using multiple keyword settings, use commas to separate them.
