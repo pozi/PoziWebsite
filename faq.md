@@ -17,7 +17,7 @@ Pozi uses Progressive Web App (PWA) technology, enabling users to add Pozi to th
 
 ==- Is it possible to limit what attributes are shown?
 
-You can absolutely configure what fields your users see by using the layer configuration options in QGIS. You can even modify the field names that your users see, as well as create virtual fields to display values derived or calculated from existing fields. This can all be done without modifying your data or setting up views in SQL Server.
+You can configure what fields your users see by using the layer configuration options in QGIS. You can even modify the field names that your users see, as well as create virtual fields to display values derived or calculated from existing fields. This can all be done without modifying your data or setting up views in SQL Server.
 
 ==-
 
