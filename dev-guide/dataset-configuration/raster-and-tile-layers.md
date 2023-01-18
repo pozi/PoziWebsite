@@ -226,7 +226,7 @@ The topmost imagery layer can be toggled by the Aerial button at the top right o
       "url": "https://developer.here.com/documentation/map-tile/topics/what-is.html"
     },
     "config": {
-      "url": "https://{1-4}.aerial.maps.api.here.com/maptiler/v2/maptile/newest/hybrid.day/{z}/{x}/{y}/256/png8?lg=ENG&app_id=ourappid&token=ourtoken"
+      "url": "https://{1-4}.aerial.maps.api.here.com/maptile/2.1/maptile/newest/hybrid.day/{z}/{x}/{y}/256/png8?lg=ENG&app_id=ourappid&token=ourtoken"
     }
   }
   ```
@@ -392,7 +392,7 @@ Set `"visible": true` for the default basemap.
       "url": "https://developer.here.com/documentation/map-tile/topics/what-is.html"
     },
     "config": {
-      "url": "https://{1-4}.base.maps.api.here.com/maptiler/v2/maptile/newest/normal.day/{z}/{x}/{y}/256/png8?lg=ENG&app_id=ourappid&token=ourtoken"
+      "url": "https://{1-4}.base.maps.api.here.com/maptile/2.1/maptile/newest/normal.day/{z}/{x}/{y}/256/png8?lg=ENG&app_id=ourappid&token=ourtoken"
     }
   }
   ```
