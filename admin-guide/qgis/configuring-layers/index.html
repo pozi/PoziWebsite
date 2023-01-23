@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.727326023957">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.727756595975">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.727326023957" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.727756595975" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.727326023957" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.727756595975" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.727326023957" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.727756595975" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -723,6 +723,11 @@
        <template #title>Layers are not displayed with the styling from QGIS</template>
 <p>Pozi will display layers in a generic style if it cannot process the style that was configured in QGIS.</p>
 <p>Simplify the style in the QGIS project and try again. Replace hatch styles with semi-opaque fills. Replace custom point symbols with one of the standard symbols specified above.</p>
+   </doc-panel>
+   <doc-panel id="selected-features-from-wms-layers-are-displayed-with-a-mis-shaped-highlight" collapsed>
+       <template #title>Selected features from WMS layers are displayed with a mis-shaped highlight</template>
+<p>It&#x27;s possible that the GetFeatureInfo response coordinates do not have enough precision.</p>
+<p>Open the affected QGIS project(s), go to Project &gt; Properties &gt; QGIS Server &gt; WMS Capabilities &gt; GetFeatureInfo geometry precision, and set it to 8 decimal places.</p>
    </doc-panel>
    <doc-panel id="labels-are-not-appearing-as-expected" collapsed>
        <template #title>Labels are not appearing as expected</template>
