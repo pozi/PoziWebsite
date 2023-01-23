@@ -21,7 +21,7 @@ Support requests: support@pozi.com
 #### Address
 
 Pozi Pty Ltd<br/>
-Level 7, 575 Bourke Street<br/>
+Level 19, 15 William Street<br/>
 Melbourne VIC 3000<br/>
 Australia
 

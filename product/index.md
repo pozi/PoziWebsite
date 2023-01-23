@@ -12,6 +12,10 @@ For organisations that rely on geographic information for critical decision-maki
 
 Unlike traditional GIS software, Pozi is built from the ground up to integrate directly with live data from trusted sources to deliver powerful enquiry and analytical capabilities while avoiding duplication of data and effort.
 
+> "Hugely better than other GIS system I have used in other councils. It makes my job a lot easier.​"
+>
+> *Staff member at **Cardinia Shire Council** after induction training*
+
 ## Benefits
 
 ==- For casual users

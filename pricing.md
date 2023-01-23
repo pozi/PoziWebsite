@@ -27,7 +27,7 @@ Pozi delivers powerful location-based functionality at a fraction of the cost of
 
 | :icon-megaphone: <h3>Public</h3> | :icon-tools: <h3>Pro</h3> | :icon-organization: &nbsp; *<small>Most popular</small>* <h3>Enterprise</h3> | :icon-rocket: <h3>Enterprise Cloud</h3> | { class="compact" }
 ---    | ---
-| *Perfect for publishing your organisation's data to the public* | *When your users demand a higher level of interaction* | *Highly functional inhouse GIS enquiry tool* | *Ultimate integration with your organisation's cloud infrastructure* |
+| *Perfect for publishing your organisation's data to the public* | *When your users demand a higher level of interaction* | *Highly functional corporate geospatial solution* | *Ultimate integration with your organisation's cloud infrastructure* |
 | <small>AUD</small><big>**$6K**</big><small>/year</small> | <small>AUD</small><big>**$9K**</big><small>/year</small> | <small>AUD</small><big>**$12K**</big><small>/year</small> | <small>AUD</small><big>**$15K**</big><small>/year</small> |
 | - | <small>All the features of Pozi Public, plus:</small> | <small>All the features of Pozi Pro, plus:</small> | <small>All the features of Pozi Enterprise, plus:</small> |
 | ✔️ Live, authoritative data | ✔️ Community consultation module | ✔️ [QGIS integration](/qgis/) | 🚀 Azure AD Application Proxy integration |
@@ -104,7 +104,7 @@ The Pozi Pro, Enterprise and Enterprise Cloud offerings include up to two concur
 
 Pozi Connect generates property and address change reports (M1s) for Victorian municipalities. We customise Pozi Connect to integrate with your council's corporate property system, install it and provide training. The first twelve months support are included.
 
-<small>AUD</small>$6K
+<small>AUD</small>$6K implementation, plus $1500<small>/year</small>
 
 [!ref text="Learn more"](/pozi-connect/m1s/)
 
@@ -122,7 +122,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 * new functionality
 * custom integrations for corporate applications
 
-<small>AUD</small>$1500/day
+<small>AUD</small>$1500<small>/day</small>
 
 <br/>
 
@@ -155,7 +155,7 @@ For *Enterprise* and *Enterprise Cloud* subscribers, we offer access to our sour
 
 ==-
 
-<small>AUD</small>$1800/year
+<small>AUD</small>$1800<small>/year</small>
 
 </br>
 
@@ -165,7 +165,7 @@ For *Enterprise* and *Enterprise Cloud* subscribers, we offer access to our sour
 
 If your organisation uses Request For Tender (RFT) or Request For Quote (RFQ) for software procurement, a premium will apply to the package cost and ongoing subscription. Talk to us about what additional costs will apply for your procurement method.
 
-Alternatively, you can avoid RFTs and RFQs altogether with an annual Pozi subscription, thereby keeping your organisation's commitments below any procurement thresholds. There are no lock-in contracts with Pozi.
+Alternatively, you can avoid RFTs and RFQs altogether with an annual Pozi subscription to keep your organisation's commitments below any procurement thresholds. There are no lock-in contracts with Pozi.
 
 [Contact us](./contact/) to learn how organisations like yours avoid months of wasted effort on RFTs and RFQs by switching to Pozi.
 

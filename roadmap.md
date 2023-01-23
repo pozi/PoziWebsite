@@ -33,6 +33,12 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## Completed
 
+### January 2023
+
+#### Improved
+
+- [x] 👍 update HERE Map API to v2.1
+
 ### December 2022
 
 #### New
@@ -48,6 +54,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [x] 👍 improve load times and label appearance for QGIS Server WMS layers by changing default layer format from tiled to full image
 - [x] 👍 enable URLs that use the Pozi Proxy to be cached by service workers
 - [x] 👍 switch property endpoints for Victorian municipalities to DELWP's ArcGIS Online service for improved performance and reliability
+- [x] 👍 add support for mixed-case field names in waste collection pickup date calculation
 
 ### November 2022
 

@@ -21,6 +21,13 @@ If you don't have credentials to log in to IWS, contact coordinated.imagery@delw
 
 Credentials for the Image Web Server: http://services.land.vic.gov.au/MyProfile/
 
-## Vicmap Basemap
+## MapShare
+
+DELWP's MapShare service is powered by ArcGIS Online.
+
+There is a known limitation for *What's Here* queries whereby the service cannot return results when there are more than six input geometries (ie, an initial selection plus five point locations using Ctrl-click).
 
 ## DataVic WMS/WFS
+
+## Vicmap Basemap
+

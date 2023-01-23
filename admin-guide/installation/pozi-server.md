@@ -93,9 +93,9 @@ Desktop shortcuts:
   * Admin Guide: https://pozi.com/admin-guide/
 * GIS data folder
 * Pozi folder: `C:\Program Files (x86)\Pozi`
-* GDAL Shell:`C:\Program Files (x86)\Pozi\server\pipeline\.shell.cmd`
+* GDAL Shell: `C:\OSGeo4W\OSGeo4W.bat`
 * Pozi Server log: `C:\Program Files (x86)\Pozi\server\server.log`
-* QGIS Server log:`C:\Program Files (x86)\Pozi\server\iis\logs\qgis_server.log`
+* QGIS Server log: `C:\Program Files (x86)\Pozi\server\iis\logs\qgis_server.log`
 
 Pin to taskbar:
 

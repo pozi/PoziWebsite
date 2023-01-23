@@ -365,6 +365,12 @@ Pozi will display layers in a generic style if it cannot process the style that 
 
 Simplify the style in the QGIS project and try again. Replace hatch styles with semi-opaque fills. Replace custom point symbols with one of the standard symbols specified above.
 
+==- Selected features from WMS layers are displayed with a mis-shaped highlight
+
+It's possible that the GetFeatureInfo response coordinates do not have enough precision.
+
+Open the affected QGIS project(s), go to Project > Properties > QGIS Server > WMS Capabilities > GetFeatureInfo geometry precision, and set it to 8 decimal places.
+
 ==- Labels are not appearing as expected
 
 There are some limitations for labels on vector features in Pozi:
