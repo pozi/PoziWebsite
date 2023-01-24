@@ -63,7 +63,7 @@ Peter then gave kudos to another Council citing the potential of Pozi mapping: �
 
 ![](/static/img/Horsham-Pozi-GIS-aerial-images.webp){style="width:500px"}
 
-*Horsham Rural City Council promoting Pozi GIS Community Map improved wth aerial images*
+*Horsham Rural City Council promoting Pozi GIS Community Map improved with aerial images*
 
 One of the big rules of media and PR is if you’ve helped a journalist and/or media organisation once, you’ll often be first point-of-contact for future press opportunities, even if it’s a quick update for its readers and viewers on an original news story.
 

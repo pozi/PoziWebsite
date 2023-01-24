@@ -40,7 +40,7 @@ Enable internal users to view and interact with corporate GIS layers on your org
   - send Pozi property selection to property system (mailouts, planning application notifications, etc)
 - Asset System
 - CRM
-- integration with any web-based corporate applications wth open APIs
+- integration with any web-based corporate applications with open APIs
 - launch Pozi from any application with map pre-zoomed to specific feature
 
 ### Unified Search

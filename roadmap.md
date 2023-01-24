@@ -24,7 +24,6 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ### Enhancements
 
-- [ ] improve Azure Active Directory integration
 - [ ] don't unhighlight parent object when clicking on a non-spatial child record
 - [ ] prevent Share links from including the panel state (unless specified in advanced options)
 - [ ] zoom/pan to selected feature on Pozi launch if URL contains a selected feature
