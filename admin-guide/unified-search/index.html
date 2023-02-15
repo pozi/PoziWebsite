@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.727913878370">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.729747807078">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.4.0.727913878370" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.729747807078" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.727913878370" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.729747807078" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.727913878370" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.727913878370" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.729747807078" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.729747807078" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -319,43 +319,6 @@
 </doc-anchor-target>
 <p>Pozi Pipeline is configured to loop through a folder of VRT files, each of which is a virtual dataset that points to a source dataset and includes specific formatting information that enables the search index to be built.</p>
 <p>There is no limit to the number of datasets that can be configured in the search. However, the more that is added, the more potential for the search results of less useful features to crowd out the more important results.</p>
-<doc-anchor-target id="vrt-file-structure">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#vrt-file-structure">#</doc-anchor-trigger>
-        <span>VRT File Structure</span>
-    </h3>
-</doc-anchor-target>
-<doc-panel id="example-vrt-file" collapsed>
-    <template #title>Example VRT File</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-markup"><code v-pre class="language-markup">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;OGRVRTDataSource&gt;
-    &lt;OGRVRTLayer name=&quot;ngsc_assets_bridge_id&quot;&gt;
-        &lt;SrcDataSource&gt;\\Hollop\d\GIS_Data\Active\_NGSC\Assets\Bridges.geojson&lt;/SrcDataSource&gt;
-        &lt;SrcSQL dialect=&quot;sqlite&quot;&gt;
-            select
-                'BRIDGE ASSET ID' as category,
-                AssetID || ' ' || cast ( cast ( substr ( AssetID , 4 , 99 ) as integer ) as varchar ) as search_text,
-                AssetID as display_text,
-                'ngsc_assets_bridges:asset_id:' || AssetID as search_key,
-                '' as forward_search_key,
-                'bridges' as map_layer,
-                'AssetID' as map_layer_id_field,
-                AssetID as map_layer_id,
-                1 / cast ( ( select count(*) from NGSCBridges ) as float ) as weight,
-                round ( st_minx ( st_transform ( geometry , 4326 ) ) , 6 ) as minx,
-                round ( st_miny ( st_transform ( geometry , 4326 ) ) , 6 ) as miny,
-                round ( st_maxx ( st_transform ( geometry , 4326 ) ) , 6 ) as maxx,
-                round ( st_maxy ( st_transform ( geometry , 4326 ) ) , 6 ) as maxy,
-                st_transform ( st_pointonsurface ( geometry ) , 4326 ) as geometry
-            from
-			    NGSCBridges
-        &lt;/SrcSQL&gt;
-        &lt;GeometryType&gt;wkbPoint&lt;/GeometryType&gt;
-    &lt;/OGRVRTLayer&gt;
-&lt;/OGRVRTDataSource&gt;</code></pre>
-</doc-codeblock></div>
-</doc-panel>
 <doc-anchor-target id="vrt-file-name">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#vrt-file-name">#</doc-anchor-trigger>
@@ -363,16 +326,7 @@
     </h3>
 </doc-anchor-target>
 <p>Give the VRT file a name that uniquely identifies its source, dataset and search function.</p>
-<doc-anchor-target id="spatial-vrts">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#spatial-vrts">#</doc-anchor-trigger>
-        <span>Spatial VRTs</span>
-    </h4>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<div class="codeblock-title">Example VRT File Name</div>
-<pre class="language-none"><code v-pre class="language-none">ngsc_assets_bridge_id.vrt</code></pre>
-</doc-codeblock></div>
+<p>Example: <code v-pre>ngsc_assets_bridge_id.vrt</code></p>
 <doc-anchor-target id="non-spatial-vrts">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#non-spatial-vrts">#</doc-anchor-trigger>
@@ -381,113 +335,229 @@
 </doc-anchor-target>
 <p>When the search index is created, the VRT files are processed in alphabetical file order. The first VRT file <em>must</em> be a dataset that contains feature geometries in order for the search index file to be created correctly.</p>
 <p>To ensure that a non-spatial dataset is never processed first, prefix all non-spatial VRT files with <code v-pre>zzz_</code> to force them to be processed last.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<div class="codeblock-title">Example VRT File Name for Non-Spatial Dataset</div>
-<pre class="language-none"><code v-pre class="language-none">zzz_authority_property_owner.vrt</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="ogrvrtlayer">
+<p>Example: <code v-pre>zzz_authority_property_owner.vrt</code></p>
+<doc-anchor-target id="vrt-file-structure">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#ogrvrtlayer">#</doc-anchor-trigger>
-        <span><code v-pre>OGRVRTLayer</code></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#vrt-file-structure">#</doc-anchor-trigger>
+        <span>VRT File Structure</span>
     </h3>
+</doc-anchor-target>
+<doc-panel id="example-vrt-file">
+    <template #title>Example VRT File</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">csc_asset_open_spaces_id.vrt</div>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;OGRVRTDataSource&gt;
+    &lt;OGRVRTLayer name=&quot;csc_asset_open_spaces_id&quot;&gt;
+        &lt;SrcDataSource&gt;MSSQL:server=gisassets.db.cardinia.vic.gov.au;database=GISAssets&lt;/SrcDataSource&gt;
+        &lt;SrcSQL dialect=&quot;sqlite&quot;&gt;
+            with input as ( 
+                select
+                    *,
+                    st_transform ( shape , 4326 ) as wgs84geometry
+                from
+                    &quot;sdeadmin.ASSET_OPEN_SPACES&quot;
+            )
+            select
+                'OPEN SPACE' as category,
+                cast ( AssetID as varchar ) as search_text,
+                cast ( AssetID as varchar ) as display_text,
+                'asset_open_spaces:id:' + cast ( AssetID as varchar ) as search_key,
+                '' as forward_search_key,
+                'openspaces' as map_layer,
+                'AssetID' as map_layer_id_field,
+                cast ( AssetID as varchar ) as map_layer_id,
+                1 / cast ( ( select count(*) from input ) as float ) as weight,
+                round ( st_minx ( wgs84geometry ) , 6 ) as minx,
+                round ( st_miny ( wgs84geometry ) , 6 ) as miny,
+                round ( st_maxx ( wgs84geometry ) , 6 ) as maxx,
+                round ( st_maxy ( wgs84geometry ) , 6 ) as maxy,
+                st_pointonsurface ( wgs84geometry ) as geometry
+            from
+                input
+        &lt;/SrcSQL&gt;
+        &lt;GeometryType&gt;wkbPoint&lt;/GeometryType&gt;
+    &lt;/OGRVRTLayer&gt;
+&lt;/OGRVRTDataSource&gt;</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-anchor-target id="parameters">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#parameters">#</doc-anchor-trigger>
+        <span>Parameters</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="ogrvrtlayer">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#ogrvrtlayer">#</doc-anchor-trigger>
+        <span>OGRVRTLayer</span>
+    </h4>
 </doc-anchor-target>
 <p>This is a required component for any VRT file. The Unified Search function does not require any specific value. However for the sake of convention, use the same name as the VRT file itself.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<div class="codeblock-title">Example OGRVRTLayer</div>
-<pre class="language-markup"><code v-pre class="language-markup">&lt;OGRVRTLayer name=&quot;ngsc_assets_bridge_id&quot;&gt;</code></pre>
-</doc-codeblock></div>
+<p>Example: <code v-pre>&lt;OGRVRTLayer name=&quot;ngsc_assets_bridge_id&quot;&gt;</code></p>
 <doc-anchor-target id="srcdatasource">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#srcdatasource">#</doc-anchor-trigger>
-        <span><code v-pre>SrcDataSource</code></span>
-    </h3>
+        <span>SrcDataSource</span>
+    </h4>
 </doc-anchor-target>
 <p>This is the file path or ODBC connection string of the source dataset.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<div class="codeblock-title">Example file path</div>
-<pre class="language-markup"><code v-pre class="language-markup">&lt;SrcDataSource&gt;\\Hollop\d\GIS_Data\Source\Vicmap\VMFEAT\FOI_POINT.tab&lt;/SrcDataSource&gt;</code></pre>
-</doc-codeblock></div>
-<div class="codeblock-wrapper"><doc-codeblock>
-<div class="codeblock-title">Example SQL Server connection string</div>
-<pre class="language-markup"><code v-pre class="language-markup">&lt;SrcDataSource&gt;MSSQL:server=myservername;database=mydatabasename;tables=mytablename&lt;/SrcDataSource&gt;</code></pre>
-</doc-codeblock></div>
-<div class="codeblock-wrapper"><doc-codeblock>
-<div class="codeblock-title">Example ODBC connection string</div>
-<pre class="language-markup"><code v-pre class="language-markup">&lt;SrcDataSource&gt;ODBC:DRIVER={SQL Server};SERVER=myservername;DATABASE=mydatabasename,mytablename&lt;/SrcDataSource&gt;</code></pre>
-</doc-codeblock></div>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Data Source</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File path</td>
+<td><code v-pre>&lt;SrcDataSource&gt;\\Hollop\d\GIS_Data\Source\Vicmap\VMFEAT\FOI_POINT.tab&lt;/SrcDataSource&gt;</code></td>
+</tr>
+<tr>
+<td>SQL Server connection string</td>
+<td><code v-pre>&lt;SrcDataSource&gt;MSSQL:server=myservername;database=mydatabasename;tables=mytablename&lt;/SrcDataSource&gt;</code></td>
+</tr>
+<tr>
+<td>ODBC connection string</td>
+<td><code v-pre>&lt;SrcDataSource&gt;ODBC:DRIVER={SQL Server};SERVER=myservername;DATABASE=mydatabasename,mytablename&lt;/SrcDataSource&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</div>
 <doc-anchor-target id="srcsql">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#srcsql">#</doc-anchor-trigger>
         <span><code v-pre>SrcSQL</code></span>
+    </h4>
+</doc-anchor-target>
+<doc-anchor-target id="geometrytype">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#geometrytype">#</doc-anchor-trigger>
+        <span><code v-pre>GeometryType</code></span>
+    </h4>
+</doc-anchor-target>
+<doc-anchor-target id="input-query">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#input-query">#</doc-anchor-trigger>
+        <span>Input Query</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="source-table">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#source-table">#</doc-anchor-trigger>
+        <span>Source Table</span>
+    </h4>
+</doc-anchor-target>
+<ul>
+<li>name of source table</li>
+<li>insert after the <code v-pre>from</code> clause in the input subquery</li>
+<li>prefix with the schema name if the table is in a database schema different to the database default (typically <code v-pre>.dbo</code>)</li>
+<li>wrap in double quotes to avoid any issues with spaces or non-standard characters</li>
+</ul>
+<doc-anchor-target id="geometry">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#geometry">#</doc-anchor-trigger>
+        <span>Geometry</span>
+    </h4>
+</doc-anchor-target>
+<ul>
+<li>name of the geometry field in the source data</li>
+<li>insert in the <code v-pre>st_transform</code> function</li>
+<li>for Shapefiles, use <code v-pre>geometry</code></li>
+<li>for other sources, it may be <code v-pre>geometry</code>, <code v-pre>shape</code>, <code v-pre>geom</code> or <code v-pre>the_geom</code></li>
+</ul>
+<doc-anchor-target id="query-fields">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#query-fields">#</doc-anchor-trigger>
+        <span>Query Fields</span>
     </h3>
 </doc-anchor-target>
 <doc-anchor-target id="category">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#category">#</doc-anchor-trigger>
         <span><code v-pre>category</code></span>
-    </h3>
+    </h4>
 </doc-anchor-target>
+<p>This is the text that is displayed next to the result in the Pozi search window. It describes what the search text refers to, such as an address, property pfi, bridge id, etc.</p>
 <doc-anchor-target id="search_text">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#search_text">#</doc-anchor-trigger>
         <span><code v-pre>search_text</code></span>
-    </h3>
+    </h4>
 </doc-anchor-target>
+<p>This is the name of the field (or an expression) that contains the text you want to be searchable.</p>
 <p>The Unified Search doesn&#x27;t support wildcards. However the index can be configured to take into account some text variations if it is anticipated what the user might type in. (For instance, users searching for a crown allotment can start their query with &#x27;CA&#x27; because the parcel search has been configured with a string expression <code v-pre>|| ' CA ' ||</code> to anticipate this.) If there is a particular search that would require a wildcard, the VRT file can similarly be configured to include the characters that users might type in.</p>
 <doc-anchor-target id="display_text">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#display_text">#</doc-anchor-trigger>
         <span><code v-pre>display_text</code></span>
-    </h3>
+    </h4>
 </doc-anchor-target>
+<p>This is the name of the field (or an expression) that contains the text that is displayed in the search results in Pozi.</p>
+<p>It is often the same as the <code v-pre>search_text</code>, but not always. You may want to display extra information to the user that isn&#x27;t suitable for being searchable. For instance, if you want the user to search by an animal tag number, you can display the tag number followed by the animal&#x27;s type or breed, which are not useful attributes for being searchable.</p>
 <doc-anchor-target id="search_key">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#search_key">#</doc-anchor-trigger>
         <span><code v-pre>search_key</code></span>
-    </h3>
+    </h4>
 </doc-anchor-target>
+<p>This is an expression which constructs a unique value for every feature within the search index (ie, unique across all input tables). To ensure each record has a unique search key, include the name of the data source, the name of field being indexed, and the unique value of the feature.</p>
 <doc-anchor-target id="forward_search_key">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#forward_search_key">#</doc-anchor-trigger>
         <span><code v-pre>forward_search_key</code></span>
-    </h3>
+    </h4>
 </doc-anchor-target>
+<p>For any non-spatial records that are included in the search index, Pozi needs to know the id of the spatial feature that it is related to.</p>
+<p>This field contains the unique search key (see above) of the related spatial feature.</p>
 <doc-anchor-target id="map_layer">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#map_layer">#</doc-anchor-trigger>
         <span><code v-pre>map_layer</code></span>
-    </h3>
+    </h4>
 </doc-anchor-target>
+<p>This is the name of the layer as it is known in Pozi. Pozi will then know which layer to turn on when performing the search.</p>
+<p>Use lower case and remove any spaces or special characters.</p>
 <doc-anchor-target id="map_layer_id_field">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#map_layer_id_field">#</doc-anchor-trigger>
         <span><code v-pre>map_layer_id_field</code></span>
-    </h3>
+    </h4>
 </doc-anchor-target>
 <doc-anchor-target id="map_layer_id">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#map_layer_id">#</doc-anchor-trigger>
         <span><code v-pre>map_layer_id</code></span>
-    </h3>
+    </h4>
 </doc-anchor-target>
 <doc-anchor-target id="weight">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#weight">#</doc-anchor-trigger>
         <span><code v-pre>weight</code></span>
-    </h3>
+    </h4>
 </doc-anchor-target>
 <doc-anchor-target id="minx-miny-maxx-maxy">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#minx-miny-maxx-maxy">#</doc-anchor-trigger>
         <span><code v-pre>minx</code>, <code v-pre>miny</code>, <code v-pre>maxx</code>, <code v-pre>maxy</code></span>
-    </h3>
+    </h4>
 </doc-anchor-target>
-<doc-anchor-target id="geometry">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#geometry">#</doc-anchor-trigger>
+<doc-anchor-target id="geometry-1">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#geometry-1">#</doc-anchor-trigger>
         <span><code v-pre>geometry</code></span>
-    </h3>
+    </h4>
 </doc-anchor-target>
+<doc-anchor-target id="testing">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#testing">#</doc-anchor-trigger>
+        <span>Testing</span>
+    </h2>
+</doc-anchor-target>
+<p>Open a GDAL shell command window, and run <code v-pre>ogrinfo [VRT file path] -al -so</code> to test whether the VRT file is valid.</p>
+<p>You may also need to run <code v-pre>ogrinfo [data source file path or connection string] -al -so</code> to look at the source data field names.</p>
 <doc-anchor-target id="building-and-updating-search-index">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#building-and-updating-search-index">#</doc-anchor-trigger>
