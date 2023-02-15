@@ -23,7 +23,7 @@ Pozi respects your organisation's autonomy and strategic technology decisions.
 
 Connect your users directly with your organisation's spatial data, plus live data from corporate applications, government data services and web APIs.
 
-Pozi delivers live information from trusted sources to your users - not copies or snapshots that require dedicated workflows for compiling, processing and uploading data.
+Pozi delivers live information from trusted sources to your users - not copies or snapshots that require specialised workflows for compiling, processing and uploading data.
 
 ### Ease of Configuration
 
@@ -153,7 +153,7 @@ When you fund the development of new features, you have ongoing access to the ne
 * more efficient use of GIS budget
   * lower subscription cost
   * lower training requirements
-  * put your GIS budget surplus towards development of custom functionality for Pozi
+  * put your GIS budget surplus towards development of custom functionality for your Pozi site
   * no lock-in contracts
   * procure without tenders/RFQs
 * risk-free - take advantage of our free trial

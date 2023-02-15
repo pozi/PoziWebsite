@@ -15,6 +15,14 @@ Settings > Options > General > Project Files
 * Prompt for confirmation when a layer is to be removed: untick
 * Default project file format: QGS Project
 
+## View Settings
+
+When opening a layer's attribute table, the default behaviour for QGIS is to open it as a separate window. Use the following setting to instead dock attribute tables under the map in the current QGIS window.
+
+Settings > Options > Data Sources > Open attribute table as docked window > tick 
+
+![](./img/qgis-options-table-in-docked-window.png){style="width:600px"}
+
 ## Panels and Toolbars
 
 Right-click on any toolbar to reveal tickboxes for adding and removing panels and toolbars.

@@ -25,7 +25,7 @@ Pozi delivers powerful location-based functionality at a fraction of the cost of
 
 <div class="pricingTable">
 
-| :icon-megaphone: <h3>Public</h3> | :icon-tools: <h3>Pro</h3> | :icon-organization: &nbsp; *<small>Most popular</small>* <h3>Enterprise</h3> | :icon-rocket: <h3>Enterprise Cloud</h3> | { class="compact" }
+| :icon-megaphone: <h3>Public</h3> | :icon-tools: <h3>Pro</h3> | :icon-organization: <h3>Enterprise</h3> | :icon-rocket: <h3>Enterprise Cloud</h3> | { class="compact" }
 ---    | ---
 | *Perfect for publishing your organisation's data to the public* | *When your users demand a higher level of interaction* | *Highly functional corporate geospatial solution* | *Ultimate integration with your organisation's cloud infrastructure* |
 | <small>AUD</small><big>**$6K**</big><small>/year</small> | <small>AUD</small><big>**$9K**</big><small>/year</small> | <small>AUD</small><big>**$12K**</big><small>/year</small> | <small>AUD</small><big>**$15K**</big><small>/year</small> |
@@ -108,6 +108,12 @@ Pozi Connect generates property and address change reports (M1s) for Victorian m
 
 [!ref text="Learn more"](/pozi-connect/m1s/)
 
+#### Reconfiguration
+
+If your council is already using Pozi Connect, and you've switched to a new property system, we'll reconfigure your Pozi Connect to integrate with your new property system.
+
+<small>AUD</small>$1800
+
 <br clear="all" />
 
 ---
@@ -163,9 +169,9 @@ For *Enterprise* and *Enterprise Cloud* subscribers, we offer access to our sour
 
 ### Tender Response
 
-If your organisation uses Request For Tender (RFT) or Request For Quote (RFQ) for software procurement, a premium will apply to the package cost and ongoing subscription. Talk to us about what additional costs will apply for your procurement method.
+If your organisation uses Expression of Interest (EOI), Request For Tender (RFT), or Request For Quote (RFQ) for software procurement, a premium will apply to the package cost and ongoing subscription. A minimum three-year commitment will also apply. Talk to us about what additional costs will apply for your procurement method.
 
-Alternatively, you can avoid RFTs and RFQs altogether with an annual Pozi subscription to keep your organisation's commitments below any procurement thresholds. There are no lock-in contracts with Pozi.
+Alternatively, you can avoid RFTs and RFQs altogether with an annual Pozi subscription to keep your organisation's commitments below any procurement thresholds. There are no lock-in contracts with standard Pozi subscriptions.
 
 [Contact us](./contact/) to learn how organisations like yours avoid months of wasted effort on RFTs and RFQs by switching to Pozi.
 

@@ -19,18 +19,50 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ### New Features
 
+- [ ] Pozi Publisher - ultimate spatial data catalogue management
+  - publish map layers to the public from QGIS projects
+  - improve start-up performance by pre-generating map catalogues
+  - tap into external data providers with minimal configuration
+- [ ] monthly analytics reports
+- [ ] fine-grained user permission control utlising Azure AD
+- [ ] display tables of selected features
 - [ ] interactive bulk spatial selection for ad-hoc layers
 - [ ] collaborate map annotations
+- [ ] alternative layer download format options
+- [ ] 3D view
 
 ### Enhancements
 
+- [ ] dynamic loading of layer catalogues
+  - improve start-up time
+  - enable clients to add custom layers from external sources
 - [ ] don't unhighlight parent object when clicking on a non-spatial child record
 - [ ] prevent Share links from including the panel state (unless specified in advanced options)
 - [ ] zoom/pan to selected feature on Pozi launch if URL contains a selected feature
+- [ ] display What's Here target on Pozi launch if URL contains a target
+- [ ] improve representation of what's highlighted on the map to better correspond with what exactly is being queried
 
 ---
 
 ## Completed
+
+### February 2023
+
+#### New
+
+- [x] ⚡ fallback data sources: enable critical datasets to be configured a "fallback" source so that if one fails, Pozi will switch over to a secondary source
+
+#### Improved
+
+- [x] 👍 make user-drawn polygon and line selections more visually consistent with the point selection
+- [x] 👍 persist user-drawn polygon and line selection on map until cleared
+- [x] 👍 remove "Nearby" layer when What's Here results are cleared
+- [x] 👍 hide Info panel from print/PDF output when there are no current results
+- [x] 👍 upgrade to OpenLayers 7.2.2 and latest versions of GeoStyler libraries
+
+#### Fixed
+
+- [x] 🪲 unticking a layer's tickbox while the layer finder was displaying only filtered results caused other layers to turn off
 
 ### January 2023
 

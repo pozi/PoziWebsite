@@ -324,9 +324,7 @@ Layer Properties > QGIS Server > Keyword list
 
 When using multiple keyword settings, use commas to separate them.
 
-``` Example Keyword List
-showLegend=false, visible=true
-```
+Example: `showLegend=false, visible=true`
 
 [Developer reference](https://github.com/pozi/PoziApp/blob/master/app/src/config/catalog/KeywordsParser.ts)
 

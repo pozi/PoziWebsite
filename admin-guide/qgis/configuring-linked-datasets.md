@@ -119,9 +119,7 @@ In the child dataset's Layer Properties, go to QGIS Server. Fill in the 'Keyword
 
 ![](./img/qgis-server-keywords.png){style="width:600px"}
 
-``` Example Keyword list
-parent=Property, parameter=EXP_FILTER=Assess_NumberX in ('[Property Number]'), downloadable=true
-```
+Example: `parent=Property, parameter=EXP_FILTER=Assess_NumberX in ('[Property Number]'), downloadable=true`
 
 Click OK, then save the project.
 
