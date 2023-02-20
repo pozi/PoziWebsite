@@ -81,8 +81,6 @@ This May 2022 release contains the following changes since the March 2022 (v2.9.
 * new `.zip` distribution
 * configuration updates for Port Phillip, Central Goldfields, Loddon, Strathbogie
 
-See a complete history of all of Pozi Connect's changes [here](https://github.com/pozi/PoziConnectConfig/commits/master/~Shared/).
-
 For installation instructions, visit [https://pozi.com/pozi-connect/installation/](https://pozi.com/pozi-connect/installation/).
 ```
 

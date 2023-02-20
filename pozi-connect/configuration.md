@@ -110,10 +110,11 @@ Example:
 
 *Note: specify file path or connection, then comma, then table name*
 
-* SQLite (.sqlite, .db)
-* PostGIS
-* Oracle
-* ODBC
+* [SQLite](https://gdal.org/drivers/vector/sqlite.html)
+* [PostGIS](https://gdal.org/drivers/vector/pg.html)
+* [Oracle](https://gdal.org/drivers/vector/oci.html)
+* [ODBC](https://gdal.org/drivers/vector/odbc.html)
+* [MSSQL](https://gdal.org/drivers/vector/mssqlspatial.html)
 
 A reference guide for the SQL functions in SQLite and Spatialite is [here](https://www.gaia-gis.it/gaia-sins/spatialite-sql-4.2.0.html). A tutorial with examples is [here](https://www.gaia-gis.it/gaia-sins/spatialite-tutorial-2.3.1.html).
 

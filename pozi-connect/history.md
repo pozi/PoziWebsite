@@ -3,8 +3,7 @@ title: Release History
 order: -100
 ---
 
-Here are some of Pozi Connect's improvements and bug fixes. (For a complete history of all changes, see [here](
-https://github.com/pozi/PoziConnectConfig/commits/master/~Shared/))
+Here are some of Pozi Connect's improvements and bug fixes.
 
 ### Version 2.9.4 (May 2022)
 
@@ -318,8 +317,3 @@ https://github.com/pozi/PoziConnectConfig/commits/master/~Shared/))
 
 * introduce council parcel audit
 * check for valid property numbers
-
-## Complete History
-
-For a complete history of all changes, see:
-https://github.com/pozi/PoziConnectConfig/commits/master/~Shared/
