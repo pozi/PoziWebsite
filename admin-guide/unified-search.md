@@ -7,7 +7,7 @@ tags: [Pozi Enterprise]
 
 The Unified Search is a general purpose search utility designed to handle common user searches with the Pozi app. Users can type their search into the autocomplete search box and see results such addresses, assets, features of interest, properties, parcels, permit numbers, animal tags and more. Picking a result will zoom the map to the location.
 
-The Unified Search is a specific implementation of the [Pozi Pipeline](./pipeline/) ETL tool. It generates a search index in the form of a SQLite file which Pozi can query to fetch its search results. The process is run on a routine basis to keep the search index up-to-date.
+The Unified Search is a custom implementation of the [Pozi Pipeline](./pipeline/) ETL tool. It generates a search index in the form of a SQLite file which Pozi Server can query to fetch its search results. The process is run on a routine basis to keep the search index up-to-date.
 
 ## Configuration
 
@@ -15,17 +15,19 @@ Pozi Pipeline is configured to loop through a folder of VRT files, each of which
 
 There is no limit to the number of datasets that can be configured in the search. However, the more that is added, the more potential for the search results of less useful features to crowd out the more important results.
 
+Note: if you want to index multiple fields in the same table, create separate VRT files each target field. For example, one for an asset id and one for an asset name.
+
 ### VRT File Name
 
-Give the VRT file a name that uniquely identifies its source, dataset and search function.
+Give the VRT file a name that uniquely identifies its source, dataset and search function. When done right, an alphabetical listing of the VRT files will display them in natural groupings of layers from common sources.
 
 Example: `ngsc_assets_bridge_id.vrt`
 
 #### Non-Spatial VRTs
 
-When the search index is created, the VRT files are processed in alphabetical file order. The first VRT file *must* be a dataset that contains feature geometries in order for the search index file to be created correctly.
+When the search index is created, the VRT files are processed in alphabetical file order. The first VRT file *must* be a dataset that contains feature geometries for the search index file to be created correctly.
 
-To ensure that a non-spatial dataset is never processed first, prefix all non-spatial VRT files with `zzz_` to force them to be processed last.
+To ensure that a non-spatial dataset is *never* processed first, prefix all non-spatial VRT files with `zzz_` to force them to be processed last.
 
 Example: `zzz_authority_property_owner.vrt`
 
@@ -75,13 +77,13 @@ Example: `zzz_authority_property_owner.vrt`
 
 #### OGRVRTLayer
 
-This is a required component for any VRT file. The Unified Search function does not require any specific value. However for the sake of convention, use the same name as the VRT file itself.
+This is a required component for any VRT file. The Unified Search function does not need any specific value here. However for the sake of convention, use the same name as the VRT file itself.
 
 Example: `<OGRVRTLayer name="ngsc_assets_bridge_id">`
 
 #### SrcDataSource
 
-This is the file path or ODBC connection string of the source dataset.
+The file path or database connection string of the source dataset.
 
 |Data Source|Example|
 |--|--|
@@ -91,77 +93,60 @@ This is the file path or ODBC connection string of the source dataset.
 
 #### `SrcSQL`
 
-#### `GeometryType`
+The query goes inside this section. Include `dialect="sqlite"` to ensure the queries are processed using the SQLite syntax. (If it is not included, the source database (eg SQL Server) will try to process the query, and it may use different syntax and geometry operators.)
+
+Example: `<SrcSQL dialect="sqlite">`
 
 ### Input Query
+
+The input table is processed into an internal representation called `input` that is used on the subsequent attribute query. This helps to avoid duplicate processing on the input geometry.
 
 #### Source Table
 
 * name of source table
 * insert after the `from` clause in the input subquery
-* prefix with the schema name if the table is in a database schema different to the database default (typically `.dbo`)
-* wrap in double quotes to avoid any issues with spaces or non-standard characters
+* prefix with the schema name if the table is in a database schema different to the database default (the default is typically `.dbo`)
+* enclose in double quotes to avoid any issues with spaces or non-standard characters
+
+Example: `from "sdeadmin.ASSET_OPEN_SPACES"`
 
 #### Geometry
 
 * name of the geometry field in the source data
-* insert in the `st_transform` function
+* insert in the `st_transform` function to force the output geometry to WGS84
 * for Shapefiles, use `geometry`
+* for SQL Server, try `geom` or `shape`
 * for other sources, it may be `geometry`, `shape`, `geom` or `the_geom`
 
-### Query Fields
+Example: `st_transform ( shape , 4326 ) as wgs84geometry`
 
-#### `category`
+#### Attribute Query
 
-This is the text that is displayed next to the result in the Pozi search window. It describes what the search text refers to, such as an address, property pfi, bridge id, etc.
+|Query Field|Description|Example|
+|--|--|--|
+|`category`|The text that is displayed next to the result in the Pozi search window. It describes what the search text refers to, such as an address, property number, property pfi, bridge id, asset id, etc. This text needs to be enclosed in single quotes.|`'OPEN SPACE ASSET ID' as category`|
+|`search_text`|The name of the field (or an expression) that contains the text you want to be searchable. Use a `cast` function to convert any number values to character.|`cast ( AssetID as varchar ) as search_text`|
+|`display_text`|The field (or an expression) that contains the text that is displayed in the search results in Pozi. It is typically the same as the `search_text`, but it can also be manipulated to display additional information that's not included in the search text. Use a `cast` function to convert any number values to character.|`cast ( AssetID as varchar ) as display_text`|
+|`search_key`|An expression which constructs a unique value for every feature within the search index (ie, unique across all input tables). To ensure each record has a unique search key, include the name of the data source, the name of field being indexed, and the unique value of the feature.|`'asset_open_spaces:assetid:' || cast ( AssetID as varchar ) as search_key`|
+|`forward_search_key`|For any non-spatial records that are included in the search index, Pozi needs to know the id of the spatial feature that it is related to. This field contains the unique search key (see above) of the related spatial feature.|`'vmprop_property:pr_propnum:' + assessment_number as forward_search_key`|
+|`map_layer`|If the search needs to turn on a map layer, this is the name of the layer as it is known in Pozi. Use lower case and remove any spaces or special characters.|`'openspaces' as map_layer`|
+|`map_layer_id_field`|If the search needs to turn on a map layer, this is the name of the field in the map layer that contains the id value. This text needs to be enclosed in single quotes.|`'AssetID' as map_layer_id_field`|
+|`map_layer_id`|If the search needs to turn on a map layer, this is id value that Pozi will use to identify the target feature in the layer. Use a `cast` function to convert any number values to character.|`'cast ( AssetID as varchar ) as map_layer_id`|
+|`weight`|When viewing search results, it is usually desirable to see any matching results from datasets with fewer features higher in the results than datasets with more features. This expression generates a value that is the inverse of the number of records in the dataset.Priority can be adjusted further by altering the numerator.|`1 / cast ( ( select count(*) from input ) as float ) as weight`|
+|`minx`, `miny`, `maxx`, `maxy`|For any spatial features, these contain the values of feature's bounding box|`round ( st_minx ( wgs84geometry ) , 6 ) as minx`|
+|`geometry`|For any spatial features, this contains a geometry of a point at the centroid or somehwere on the surface of the feature|`st_pointonsurface ( wgs84geometry ) as geometry`|
 
-#### `search_text`
+#### `GeometryType`
 
-This is the name of the field (or an expression) that contains the text you want to be searchable.
+The Unified Search stores all input features as point features. Use `wkbPoint`.
 
-The Unified Search doesn't support wildcards. However the index can be configured to take into account some text variations if it is anticipated what the user might type in. (For instance, users searching for a crown allotment can start their query with 'CA' because the parcel search has been configured with a string expression `|| ' CA ' ||` to anticipate this.) If there is a particular search that would require a wildcard, the VRT file can similarly be configured to include the characters that users might type in.
-
-#### `display_text`
-
-This is the name of the field (or an expression) that contains the text that is displayed in the search results in Pozi.
-
-It is often the same as the `search_text`, but not always. You may want to display extra information to the user that isn't suitable for being searchable. For instance, if you want the user to search by an animal tag number, you can display the tag number followed by the animal's type or breed, which are not useful attributes for being searchable.
-
-#### `search_key`
-
-This is an expression which constructs a unique value for every feature within the search index (ie, unique across all input tables). To ensure each record has a unique search key, include the name of the data source, the name of field being indexed, and the unique value of the feature.
-
-#### `forward_search_key`
-
-For any non-spatial records that are included in the search index, Pozi needs to know the id of the spatial feature that it is related to.
-
-This field contains the unique search key (see above) of the related spatial feature.
-
-#### `map_layer`
-
-This is the name of the layer as it is known in Pozi. Pozi will then know which layer to turn on when performing the search.
-
-Use lower case and remove any spaces or special characters.
-
-#### `map_layer_id_field`
-
-
-#### `map_layer_id`
-
-
-#### `weight`
-
-
-#### `minx`, `miny`, `maxx`, `maxy`
-
-
-#### `geometry`
+Example: `<GeometryType>wkbPoint</GeometryType>`
 
 ## Testing
 
-Open a GDAL shell command window, and run `ogrinfo [VRT file path] -al -so` to test whether the VRT file is valid.
+After constructing your VRT file, open a GDAL Shell command window, and run `ogrinfo [VRT file path] -al -so` to test whether the VRT file is valid.
 
-You may also need to run `ogrinfo [data source file path or connection string] -al -so` to look at the source data field names.
+To assist you in the constrution of the VRT file, you may also use the GDAL Shell to run `ogrinfo [data source file path or connection string] -al -so` to look at the source data field names. This is especially useful when you need to determine the name of the geometry field.
 
 ## Building and updating search index
 
