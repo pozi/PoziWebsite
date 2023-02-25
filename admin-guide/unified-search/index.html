@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.730351372529">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.730620944028">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.4.0.730351372529" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.730620944028" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.730351372529" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.730620944028" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.730351372529" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.730351372529" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.730620944028" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.730620944028" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -310,7 +310,7 @@
     </h1>
 </doc-anchor-target>
 <p>The Unified Search is a general purpose search utility designed to handle common user searches with the Pozi app. Users can type their search into the autocomplete search box and see results such addresses, assets, features of interest, properties, parcels, permit numbers, animal tags and more. Picking a result will zoom the map to the location.</p>
-<p>The Unified Search is a specific implementation of the <a href="../pipeline/">Pozi Pipeline</a> ETL tool. It generates a search index in the form of a SQLite file which Pozi can query to fetch its search results. The process is run on a routine basis to keep the search index up-to-date.</p>
+<p>The Unified Search is a custom implementation of the <a href="../pipeline/">Pozi Pipeline</a> ETL tool. It generates a search index in the form of a SQLite file which Pozi Server can query to fetch its search results. The process is run on a routine basis to keep the search index up-to-date.</p>
 <doc-anchor-target id="configuration">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#configuration">#</doc-anchor-trigger>
@@ -319,13 +319,14 @@
 </doc-anchor-target>
 <p>Pozi Pipeline is configured to loop through a folder of VRT files, each of which is a virtual dataset that points to a source dataset and includes specific formatting information that enables the search index to be built.</p>
 <p>There is no limit to the number of datasets that can be configured in the search. However, the more that is added, the more potential for the search results of less useful features to crowd out the more important results.</p>
+<p>Note: if you want to index multiple fields in the same table, create separate VRT files each target field. For example, one for an asset id and one for an asset name.</p>
 <doc-anchor-target id="vrt-file-name">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#vrt-file-name">#</doc-anchor-trigger>
         <span>VRT File Name</span>
     </h3>
 </doc-anchor-target>
-<p>Give the VRT file a name that uniquely identifies its source, dataset and search function.</p>
+<p>Give the VRT file a name that uniquely identifies its source, dataset and search function. When done right, an alphabetical listing of the VRT files will display them in natural groupings of layers from common sources.</p>
 <p>Example: <code v-pre>ngsc_assets_bridge_id.vrt</code></p>
 <doc-anchor-target id="non-spatial-vrts">
     <h4>
@@ -333,8 +334,8 @@
         <span>Non-Spatial VRTs</span>
     </h4>
 </doc-anchor-target>
-<p>When the search index is created, the VRT files are processed in alphabetical file order. The first VRT file <em>must</em> be a dataset that contains feature geometries in order for the search index file to be created correctly.</p>
-<p>To ensure that a non-spatial dataset is never processed first, prefix all non-spatial VRT files with <code v-pre>zzz_</code> to force them to be processed last.</p>
+<p>When the search index is created, the VRT files are processed in alphabetical file order. The first VRT file <em>must</em> be a dataset that contains feature geometries for the search index file to be created correctly.</p>
+<p>To ensure that a non-spatial dataset is <em>never</em> processed first, prefix all non-spatial VRT files with <code v-pre>zzz_</code> to force them to be processed last.</p>
 <p>Example: <code v-pre>zzz_authority_property_owner.vrt</code></p>
 <doc-anchor-target id="vrt-file-structure">
     <h3>
@@ -393,7 +394,7 @@
         <span>OGRVRTLayer</span>
     </h4>
 </doc-anchor-target>
-<p>This is a required component for any VRT file. The Unified Search function does not require any specific value. However for the sake of convention, use the same name as the VRT file itself.</p>
+<p>This is a required component for any VRT file. The Unified Search function does not need any specific value here. However for the sake of convention, use the same name as the VRT file itself.</p>
 <p>Example: <code v-pre>&lt;OGRVRTLayer name=&quot;ngsc_assets_bridge_id&quot;&gt;</code></p>
 <doc-anchor-target id="srcdatasource">
     <h4>
@@ -401,7 +402,7 @@
         <span>SrcDataSource</span>
     </h4>
 </doc-anchor-target>
-<p>This is the file path or ODBC connection string of the source dataset.</p>
+<p>The file path or database connection string of the source dataset.</p>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -432,18 +433,15 @@
         <span><code v-pre>SrcSQL</code></span>
     </h4>
 </doc-anchor-target>
-<doc-anchor-target id="geometrytype">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#geometrytype">#</doc-anchor-trigger>
-        <span><code v-pre>GeometryType</code></span>
-    </h4>
-</doc-anchor-target>
+<p>The query goes inside this section. Include <code v-pre>dialect=&quot;sqlite&quot;</code> to ensure the queries are processed using the SQLite syntax. (If it is not included, the source database (eg SQL Server) will try to process the query, and it may use different syntax and geometry operators.)</p>
+<p>Example: <code v-pre>&lt;SrcSQL dialect=&quot;sqlite&quot;&gt;</code></p>
 <doc-anchor-target id="input-query">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#input-query">#</doc-anchor-trigger>
         <span>Input Query</span>
     </h3>
 </doc-anchor-target>
+<p>The input table is processed into an internal representation called <code v-pre>input</code> that is used on the subsequent attribute query. This helps to avoid duplicate processing on the input geometry.</p>
 <doc-anchor-target id="source-table">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#source-table">#</doc-anchor-trigger>
@@ -453,9 +451,10 @@
 <ul>
 <li>name of source table</li>
 <li>insert after the <code v-pre>from</code> clause in the input subquery</li>
-<li>prefix with the schema name if the table is in a database schema different to the database default (typically <code v-pre>.dbo</code>)</li>
-<li>wrap in double quotes to avoid any issues with spaces or non-standard characters</li>
+<li>prefix with the schema name if the table is in a database schema different to the database default (the default is typically <code v-pre>.dbo</code>)</li>
+<li>enclose in double quotes to avoid any issues with spaces or non-standard characters</li>
 </ul>
+<p>Example: <code v-pre>from &quot;sdeadmin.ASSET_OPEN_SPACES&quot;</code></p>
 <doc-anchor-target id="geometry">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#geometry">#</doc-anchor-trigger>
@@ -464,100 +463,102 @@
 </doc-anchor-target>
 <ul>
 <li>name of the geometry field in the source data</li>
-<li>insert in the <code v-pre>st_transform</code> function</li>
+<li>insert in the <code v-pre>st_transform</code> function to force the output geometry to WGS84</li>
 <li>for Shapefiles, use <code v-pre>geometry</code></li>
+<li>for SQL Server, try <code v-pre>geom</code> or <code v-pre>shape</code></li>
 <li>for other sources, it may be <code v-pre>geometry</code>, <code v-pre>shape</code>, <code v-pre>geom</code> or <code v-pre>the_geom</code></li>
 </ul>
-<doc-anchor-target id="query-fields">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#query-fields">#</doc-anchor-trigger>
-        <span>Query Fields</span>
-    </h3>
-</doc-anchor-target>
-<doc-anchor-target id="category">
+<p>Example: <code v-pre>st_transform ( shape , 4326 ) as wgs84geometry</code></p>
+<doc-anchor-target id="attribute-query">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#category">#</doc-anchor-trigger>
-        <span><code v-pre>category</code></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#attribute-query">#</doc-anchor-trigger>
+        <span>Attribute Query</span>
     </h4>
 </doc-anchor-target>
-<p>This is the text that is displayed next to the result in the Pozi search window. It describes what the search text refers to, such as an address, property pfi, bridge id, etc.</p>
-<doc-anchor-target id="search_text">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Query Field</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code v-pre>category</code></td>
+<td>The text that is displayed next to the result in the Pozi search window. It describes what the search text refers to, such as an address, property number, property pfi, bridge id, asset id, etc. This text needs to be enclosed in single quotes.</td>
+<td><code v-pre>'OPEN SPACE ASSET ID' as category</code></td>
+</tr>
+<tr>
+<td><code v-pre>search_text</code></td>
+<td>The name of the field (or an expression) that contains the text you want to be searchable. Use a <code v-pre>cast</code> function to convert any number values to character.</td>
+<td><code v-pre>cast ( AssetID as varchar ) as search_text</code></td>
+</tr>
+<tr>
+<td><code v-pre>display_text</code></td>
+<td>The field (or an expression) that contains the text that is displayed in the search results in Pozi. It is typically the same as the <code v-pre>search_text</code>, but it can also be manipulated to display additional information that&#x27;s not included in the search text. Use a <code v-pre>cast</code> function to convert any number values to character.</td>
+<td><code v-pre>cast ( AssetID as varchar ) as display_text</code></td>
+</tr>
+<tr>
+<td><code v-pre>search_key</code></td>
+<td>An expression which constructs a unique value for every feature within the search index (ie, unique across all input tables). To ensure each record has a unique search key, include the name of the data source, the name of field being indexed, and the unique value of the feature.</td>
+<td><code v-pre>'asset_open_spaces:assetid:' || cast ( AssetID as varchar ) as search_key</code></td>
+</tr>
+<tr>
+<td><code v-pre>forward_search_key</code></td>
+<td>For any non-spatial records that are included in the search index, Pozi needs to know the id of the spatial feature that it is related to. This field contains the unique search key (see above) of the related spatial feature.</td>
+<td><code v-pre>'vmprop_property:pr_propnum:' + assessment_number as forward_search_key</code></td>
+</tr>
+<tr>
+<td><code v-pre>map_layer</code></td>
+<td>If the search needs to turn on a map layer, this is the name of the layer as it is known in Pozi. Use lower case and remove any spaces or special characters.</td>
+<td><code v-pre>'openspaces' as map_layer</code></td>
+</tr>
+<tr>
+<td><code v-pre>map_layer_id_field</code></td>
+<td>If the search needs to turn on a map layer, this is the name of the field in the map layer that contains the id value. This text needs to be enclosed in single quotes.</td>
+<td><code v-pre>'AssetID' as map_layer_id_field</code></td>
+</tr>
+<tr>
+<td><code v-pre>map_layer_id</code></td>
+<td>If the search needs to turn on a map layer, this is id value that Pozi will use to identify the target feature in the layer. Use a <code v-pre>cast</code> function to convert any number values to character.</td>
+<td><code v-pre>'cast ( AssetID as varchar ) as map_layer_id</code></td>
+</tr>
+<tr>
+<td><code v-pre>weight</code></td>
+<td>When viewing search results, it is usually desirable to see any matching results from datasets with fewer features higher in the results than datasets with more features. This expression generates a value that is the inverse of the number of records in the dataset.Priority can be adjusted further by altering the numerator.</td>
+<td><code v-pre>1 / cast ( ( select count(*) from input ) as float ) as weight</code></td>
+</tr>
+<tr>
+<td><code v-pre>minx</code>, <code v-pre>miny</code>, <code v-pre>maxx</code>, <code v-pre>maxy</code></td>
+<td>For any spatial features, these contain the values of feature&#x27;s bounding box</td>
+<td><code v-pre>round ( st_minx ( wgs84geometry ) , 6 ) as minx</code></td>
+</tr>
+<tr>
+<td><code v-pre>geometry</code></td>
+<td>For any spatial features, this contains a geometry of a point at the centroid or somehwere on the surface of the feature</td>
+<td><code v-pre>st_pointonsurface ( wgs84geometry ) as geometry</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="geometrytype">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#search_text">#</doc-anchor-trigger>
-        <span><code v-pre>search_text</code></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#geometrytype">#</doc-anchor-trigger>
+        <span><code v-pre>GeometryType</code></span>
     </h4>
 </doc-anchor-target>
-<p>This is the name of the field (or an expression) that contains the text you want to be searchable.</p>
-<p>The Unified Search doesn&#x27;t support wildcards. However the index can be configured to take into account some text variations if it is anticipated what the user might type in. (For instance, users searching for a crown allotment can start their query with &#x27;CA&#x27; because the parcel search has been configured with a string expression <code v-pre>|| ' CA ' ||</code> to anticipate this.) If there is a particular search that would require a wildcard, the VRT file can similarly be configured to include the characters that users might type in.</p>
-<doc-anchor-target id="display_text">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#display_text">#</doc-anchor-trigger>
-        <span><code v-pre>display_text</code></span>
-    </h4>
-</doc-anchor-target>
-<p>This is the name of the field (or an expression) that contains the text that is displayed in the search results in Pozi.</p>
-<p>It is often the same as the <code v-pre>search_text</code>, but not always. You may want to display extra information to the user that isn&#x27;t suitable for being searchable. For instance, if you want the user to search by an animal tag number, you can display the tag number followed by the animal&#x27;s type or breed, which are not useful attributes for being searchable.</p>
-<doc-anchor-target id="search_key">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#search_key">#</doc-anchor-trigger>
-        <span><code v-pre>search_key</code></span>
-    </h4>
-</doc-anchor-target>
-<p>This is an expression which constructs a unique value for every feature within the search index (ie, unique across all input tables). To ensure each record has a unique search key, include the name of the data source, the name of field being indexed, and the unique value of the feature.</p>
-<doc-anchor-target id="forward_search_key">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#forward_search_key">#</doc-anchor-trigger>
-        <span><code v-pre>forward_search_key</code></span>
-    </h4>
-</doc-anchor-target>
-<p>For any non-spatial records that are included in the search index, Pozi needs to know the id of the spatial feature that it is related to.</p>
-<p>This field contains the unique search key (see above) of the related spatial feature.</p>
-<doc-anchor-target id="map_layer">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#map_layer">#</doc-anchor-trigger>
-        <span><code v-pre>map_layer</code></span>
-    </h4>
-</doc-anchor-target>
-<p>This is the name of the layer as it is known in Pozi. Pozi will then know which layer to turn on when performing the search.</p>
-<p>Use lower case and remove any spaces or special characters.</p>
-<doc-anchor-target id="map_layer_id_field">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#map_layer_id_field">#</doc-anchor-trigger>
-        <span><code v-pre>map_layer_id_field</code></span>
-    </h4>
-</doc-anchor-target>
-<doc-anchor-target id="map_layer_id">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#map_layer_id">#</doc-anchor-trigger>
-        <span><code v-pre>map_layer_id</code></span>
-    </h4>
-</doc-anchor-target>
-<doc-anchor-target id="weight">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#weight">#</doc-anchor-trigger>
-        <span><code v-pre>weight</code></span>
-    </h4>
-</doc-anchor-target>
-<doc-anchor-target id="minx-miny-maxx-maxy">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#minx-miny-maxx-maxy">#</doc-anchor-trigger>
-        <span><code v-pre>minx</code>, <code v-pre>miny</code>, <code v-pre>maxx</code>, <code v-pre>maxy</code></span>
-    </h4>
-</doc-anchor-target>
-<doc-anchor-target id="geometry-1">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#geometry-1">#</doc-anchor-trigger>
-        <span><code v-pre>geometry</code></span>
-    </h4>
-</doc-anchor-target>
+<p>The Unified Search stores all input features as point features. Use <code v-pre>wkbPoint</code>.</p>
+<p>Example: <code v-pre>&lt;GeometryType&gt;wkbPoint&lt;/GeometryType&gt;</code></p>
 <doc-anchor-target id="testing">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#testing">#</doc-anchor-trigger>
         <span>Testing</span>
     </h2>
 </doc-anchor-target>
-<p>Open a GDAL shell command window, and run <code v-pre>ogrinfo [VRT file path] -al -so</code> to test whether the VRT file is valid.</p>
-<p>You may also need to run <code v-pre>ogrinfo [data source file path or connection string] -al -so</code> to look at the source data field names.</p>
+<p>After constructing your VRT file, open a GDAL Shell command window, and run <code v-pre>ogrinfo [VRT file path] -al -so</code> to test whether the VRT file is valid.</p>
+<p>To assist you in the constrution of the VRT file, you may also use the GDAL Shell to run <code v-pre>ogrinfo [data source file path or connection string] -al -so</code> to look at the source data field names. This is especially useful when you need to determine the name of the geometry field.</p>
 <doc-anchor-target id="building-and-updating-search-index">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#building-and-updating-search-index">#</doc-anchor-trigger>
