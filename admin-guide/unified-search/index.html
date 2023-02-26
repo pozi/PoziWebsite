@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.730620944028">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.730769694458">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.4.0.730620944028" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.730769694458" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.730620944028" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.730769694458" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.730620944028" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.730620944028" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.730769694458" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.730769694458" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -317,7 +317,7 @@
         <span>Configuration</span>
     </h2>
 </doc-anchor-target>
-<p>Pozi Pipeline is configured to loop through a folder of VRT files, each of which is a virtual dataset that points to a source dataset and includes specific formatting information that enables the search index to be built.</p>
+<p>To build the Unified Search index, Pozi Pipeline is configured to loop through a folder of VRT files, each of which is a virtual dataset that points to a source dataset and includes specific formatting information that enables the search index to be built.</p>
 <p>There is no limit to the number of datasets that can be configured in the search. However, the more that is added, the more potential for the search results of less useful features to crowd out the more important results.</p>
 <p>Note: if you want to index multiple fields in the same table, create separate VRT files each target field. For example, one for an asset id and one for an asset name.</p>
 <doc-anchor-target id="vrt-file-name">
@@ -326,7 +326,7 @@
         <span>VRT File Name</span>
     </h3>
 </doc-anchor-target>
-<p>Give the VRT file a name that uniquely identifies its source, dataset and search function. When done right, an alphabetical listing of the VRT files will display them in natural groupings of layers from common sources.</p>
+<p>Give the VRT file a name that uniquely identifies its source, dataset and search function. When done correctly, an alphabetical listing of the VRT files will display them in natural groupings of layers from common sources.</p>
 <p>Example: <code v-pre>ngsc_assets_bridge_id.vrt</code></p>
 <doc-anchor-target id="non-spatial-vrts">
     <h4>
@@ -334,7 +334,7 @@
         <span>Non-Spatial VRTs</span>
     </h4>
 </doc-anchor-target>
-<p>When the search index is created, the VRT files are processed in alphabetical file order. The first VRT file <em>must</em> be a dataset that contains feature geometries for the search index file to be created correctly.</p>
+<p>When the search index is being built, the VRT files are processed in alphabetical file order. The first VRT file <em>must</em> be a dataset that contains feature geometries for the search index file to be created correctly.</p>
 <p>To ensure that a non-spatial dataset is <em>never</em> processed first, prefix all non-spatial VRT files with <code v-pre>zzz_</code> to force them to be processed last.</p>
 <p>Example: <code v-pre>zzz_authority_property_owner.vrt</code></p>
 <doc-anchor-target id="vrt-file-structure">
@@ -430,10 +430,10 @@
 <doc-anchor-target id="srcsql">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#srcsql">#</doc-anchor-trigger>
-        <span><code v-pre>SrcSQL</code></span>
+        <span>SrcSQL</span>
     </h4>
 </doc-anchor-target>
-<p>The query goes inside this section. Include <code v-pre>dialect=&quot;sqlite&quot;</code> to ensure the queries are processed using the SQLite syntax. (If it is not included, the source database (eg SQL Server) will try to process the query, and it may use different syntax and geometry operators.)</p>
+<p>The query goes inside this section. Include <code v-pre>dialect=&quot;sqlite&quot;</code> to ensure the queries are processed using the SQLite syntax. (If the dialect setting is not included, the source database (eg SQL Server) will try to process the query, and it may use different syntax and geometry operators.)</p>
 <p>Example: <code v-pre>&lt;SrcSQL dialect=&quot;sqlite&quot;&gt;</code></p>
 <doc-anchor-target id="input-query">
     <h3>
@@ -441,7 +441,14 @@
         <span>Input Query</span>
     </h3>
 </doc-anchor-target>
-<p>The input table is processed into an internal representation called <code v-pre>input</code> that is used on the subsequent attribute query. This helps to avoid duplicate processing on the input geometry.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">select
+    *,
+    st_transform ( GEOMETRY FIELD NAME , 4326 ) as wgs84geometry
+from
+    SOURCE TABLE NAME</code></pre>
+</doc-codeblock></div>
+<p>The source table is processed into an internal representation called <code v-pre>input</code> that is used on the subsequent attribute query. This simplifies the query and helps to avoid duplicate processing on the input geometry.</p>
 <doc-anchor-target id="source-table">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#source-table">#</doc-anchor-trigger>
@@ -455,18 +462,19 @@
 <li>enclose in double quotes to avoid any issues with spaces or non-standard characters</li>
 </ul>
 <p>Example: <code v-pre>from &quot;sdeadmin.ASSET_OPEN_SPACES&quot;</code></p>
-<doc-anchor-target id="geometry">
+<doc-anchor-target id="geometry-field">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#geometry">#</doc-anchor-trigger>
-        <span>Geometry</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#geometry-field">#</doc-anchor-trigger>
+        <span>Geometry Field</span>
     </h4>
 </doc-anchor-target>
 <ul>
 <li>name of the geometry field in the source data</li>
-<li>insert in the <code v-pre>st_transform</code> function to force the output geometry to WGS84</li>
 <li>for Shapefiles, use <code v-pre>geometry</code></li>
 <li>for SQL Server, try <code v-pre>geom</code> or <code v-pre>shape</code></li>
 <li>for other sources, it may be <code v-pre>geometry</code>, <code v-pre>shape</code>, <code v-pre>geom</code> or <code v-pre>the_geom</code></li>
+<li>you can use the GDAL Shell to run an <code v-pre>ogringo</code> command on the source table to return the name of the geometry field</li>
+<li>use the <code v-pre>st_transform</code> function to force the output geometry to WGS84</li>
 </ul>
 <p>Example: <code v-pre>st_transform ( shape , 4326 ) as wgs84geometry</code></p>
 <doc-anchor-target id="attribute-query">
@@ -487,7 +495,7 @@
 <tbody>
 <tr>
 <td><code v-pre>category</code></td>
-<td>The text that is displayed next to the result in the Pozi search window. It describes what the search text refers to, such as an address, property number, property pfi, bridge id, asset id, etc. This text needs to be enclosed in single quotes.</td>
+<td>The text that is displayed next to the result in the Pozi search window. It describes to the user what the search text refers to, such as an address, property number, property pfi, bridge id, asset id, etc. This text needs to be enclosed in single quotes.</td>
 <td><code v-pre>'OPEN SPACE ASSET ID' as category</code></td>
 </tr>
 <tr>
@@ -497,22 +505,22 @@
 </tr>
 <tr>
 <td><code v-pre>display_text</code></td>
-<td>The field (or an expression) that contains the text that is displayed in the search results in Pozi. It is typically the same as the <code v-pre>search_text</code>, but it can also be manipulated to display additional information that&#x27;s not included in the search text. Use a <code v-pre>cast</code> function to convert any number values to character.</td>
+<td>The name of the field (or an expression) that contains the text that is displayed in the search results in Pozi. It is typically the same as the <code v-pre>search_text</code>. Use a <code v-pre>cast</code> function to convert any number values to character.</td>
 <td><code v-pre>cast ( AssetID as varchar ) as display_text</code></td>
 </tr>
 <tr>
 <td><code v-pre>search_key</code></td>
-<td>An expression which constructs a unique value for every feature within the search index (ie, unique across all input tables). To ensure each record has a unique search key, include the name of the data source, the name of field being indexed, and the unique value of the feature.</td>
+<td>A unique value for every feature within the search index (ie, unique across all input tables). To ensure each record has a unique search key, include the name of the data source, the name of field being indexed, and the unique value of the feature, each separated by a colon.</td>
 <td><code v-pre>'asset_open_spaces:assetid:' || cast ( AssetID as varchar ) as search_key</code></td>
 </tr>
 <tr>
 <td><code v-pre>forward_search_key</code></td>
-<td>For any non-spatial records that are included in the search index, Pozi needs to know the id of the spatial feature that it is related to. This field contains the unique search key (see above) of the related spatial feature.</td>
+<td>For non-spatial records, Pozi needs to know the id of the spatial feature that it is related to. This field contains the unique search key (see <code v-pre>search_key</code> above) of the related spatial feature.</td>
 <td><code v-pre>'vmprop_property:pr_propnum:' + assessment_number as forward_search_key</code></td>
 </tr>
 <tr>
 <td><code v-pre>map_layer</code></td>
-<td>If the search needs to turn on a map layer, this is the name of the layer as it is known in Pozi. Use lower case and remove any spaces or special characters.</td>
+<td>If the search needs to turn on a map layer, this is the layer id used in Pozi. Start with the layer name as it is configured in QGIS, change to lower case, and remove any spaces or special characters.</td>
 <td><code v-pre>'openspaces' as map_layer</code></td>
 </tr>
 <tr>
@@ -527,7 +535,7 @@
 </tr>
 <tr>
 <td><code v-pre>weight</code></td>
-<td>When viewing search results, it is usually desirable to see any matching results from datasets with fewer features higher in the results than datasets with more features. This expression generates a value that is the inverse of the number of records in the dataset.Priority can be adjusted further by altering the numerator.</td>
+<td>When viewing search results, it is usually desirable to see any matching results from datasets with fewer features higher in the results than datasets with more features. This expression generates a value that is the inverse of the number of records in the dataset. The weighting can be adjusted further by increasing or decreasing the numerator.</td>
 <td><code v-pre>1 / cast ( ( select count(*) from input ) as float ) as weight</code></td>
 </tr>
 <tr>
@@ -546,7 +554,7 @@
 <doc-anchor-target id="geometrytype">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#geometrytype">#</doc-anchor-trigger>
-        <span><code v-pre>GeometryType</code></span>
+        <span>GeometryType</span>
     </h4>
 </doc-anchor-target>
 <p>The Unified Search stores all input features as point features. Use <code v-pre>wkbPoint</code>.</p>
@@ -558,7 +566,7 @@
     </h2>
 </doc-anchor-target>
 <p>After constructing your VRT file, open a GDAL Shell command window, and run <code v-pre>ogrinfo [VRT file path] -al -so</code> to test whether the VRT file is valid.</p>
-<p>To assist you in the constrution of the VRT file, you may also use the GDAL Shell to run <code v-pre>ogrinfo [data source file path or connection string] -al -so</code> to look at the source data field names. This is especially useful when you need to determine the name of the geometry field.</p>
+<p>The GDAL shell can also be useful during the construction of the VRT file. Using the source layer as the input, run <code v-pre>ogrinfo [data source file path or connection string] -al -so</code> to look at the source data field names, including the name of the geometry field.</p>
 <doc-anchor-target id="building-and-updating-search-index">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#building-and-updating-search-index">#</doc-anchor-trigger>
