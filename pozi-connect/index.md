@@ -12,6 +12,18 @@ Pozi Connect is a powerful data extraction and processing application that extra
 
 It generates map layers from corporate databases (spatial and non-spatial), performs spatial data analysis, converts between data formats (Esri SHP, MapInfo TAB, GeoPackage, KML, CSV, XLS/XLSX, GeoJSON and others), loads data into spatial databases (SQL Server, SQLite/Spatialite, PostGIS, Oracle Spatial), and generally automates many of the tasks that GIS Administrators find themselves doing on a regular basis.
 
+## Why Use Pozi Connect?
+
+PoziConnect provides a simple interface for accessing, processing, analysing and exporting spatial and non-spatial data.
+
+It uses the power of the popular open source [GDAL/OGR translator library](https://www.gdal.org/index.html), with these important enhancements:
+
+* it provides a simple interface that exposes typical translation functions that administrators can preconfigure using INI files and enable users to select and adjust according to specific tasks
+* it uses the bare minimum information required to complete a task; for example:
+  * it doesn't care if a destination file or table already exists - it has the intelligence to create or overwrite as necessary
+  * it uses the specified source and destination file extensions to determine the required translation settings
+* it provides access to Python and database functions within the configuration for operations like indexing and file operations
+
 ## Use Cases
 
 ### M1

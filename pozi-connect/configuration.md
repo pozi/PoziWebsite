@@ -4,18 +4,6 @@ sidebar_label: Configuration
 sidebar_position: 2
 ---
 
-PoziConnect provides a simple interface for accessing, processing, analysing and exporting spatial and non-spatial data.
-
-It uses the power of the popular open source [GDAL/OGR translator library](https://www.gdal.org/index.html), with these important enhancements:
-
-* it provides a simple interface that exposes typical translation functions that administrators can preconfigure using INI files and enable users to select and adjust according to specific tasks
-* it uses the bare minimum information required to complete a task; for example:
-  * it doesn't care if a destination file or table already exists - it has the intelligence to create or overwrite as necessary
-  * it uses the specified source and destination file extensions to determine the required translation settings
-* it provides access to Python and database functions within the configuration for operations like indexing and file operations
-
----
-
 ## Running as a batch task
 
 To run multiple Pozi Connect tasks sequentially and avoid having to open up Pozi Connect and pick and run individual tasks, you can configure a 'recipe' for Pozi Connect to follow. This is useful if you have a series of tasks you regularly need to run (for example, M1s) or for setting up as a scheduled task.
