@@ -14,7 +14,7 @@ order: 100
 * GitHub
 * Help Scout
 * Trello
-* LastPass
+* BitWarden
 * Pozi Cloud Server
 * Slack
 
@@ -24,8 +24,9 @@ order: 100
 * [PoziAppConfig](https://github.com/pozi/PoziAppConfig/settings/access)
 * [PoziClientConfig](https://github.com/pozi/PoziClientConfig/settings/access)
 * [PoziProxy](https://github.com/pozi/PoziProxy/settings/access)
+* [PoziPublisher](https://github.com/pozi/PoziPublisher/settings/access)
 * [PoziServer](https://github.com/pozi/PoziServer/settings/access)
-* [PoziWebsite](https://github.com/pozi/settings/access)
+* [PoziWebsite](https://github.com/pozi/PoziWebsite/settings/access)
 
 ### Recommended PC Setup
 

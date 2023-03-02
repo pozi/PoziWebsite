@@ -521,23 +521,3 @@ Basemaps are available in `QldMap_Lite`, `QldBase_Pastel` and other variations: 
 ![](./img/vicmap-legacy-basemap.png){style="width:305px"}
 
 ==-
-
-#### Vector Tiles
-
-==- MapTiler GL
-
-  ```json
-  {
-    "title": "MapTiler GL Vector Basemap",
-    "group": "Basemap",
-    "type": "Mapbox-GL",
-    "config": {
-      "spatial": {
-        "url": "https://api.maptiler.com/maps/streets/style.json?key=ourkey"
-      }
-    }
-  }
-  ```
-
-==-
-

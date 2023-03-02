@@ -1,7 +1,7 @@
 ---
 description: GIS integration for Mapbox
 icon: dot
-tags: [Wimmera Catchment Management Authority, City of Greater Bendigo]
+tags: [Wimmera Catchment Management Authority, City of Greater Bendigo, Northern Grampians Shire Council]
 ---
 
 # Mapbox

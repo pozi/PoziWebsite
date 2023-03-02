@@ -50,3 +50,4 @@ Data Widgets:
 * [Swan Hill Waste Collection Days](https://www.swanhill.vic.gov.au/environment-and-waste/waste-and-recycling/kerbside/collection-days-and-calendar/)
 * [Frankston Bin Information](https://www.frankston.vic.gov.au/My-Property/Waste-and-recycling/My-bins/Bin-collections)
 * [Northern Grampians Bin Collection Date](https://www.ngshire.vic.gov.au/Residents/Bins-recycling-and-waste/Check-your-bin-collection-date)
+* [Horsham Waste Collection Days](https://www.hrcc.vic.gov.au/Residents/Waste-and-recycling/Collection-Services)

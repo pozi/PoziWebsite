@@ -107,6 +107,12 @@ Control whether the features in this layer are queryable/selectable by the user 
   "maxResolution": 4
 ```
 
+#### Prevent Click
+
+```json
+  "preventClick": true
+```
+
 #### Include Fields
 
 ```json

@@ -188,6 +188,12 @@ Obtaining GeoJSON endpoint:
 3. go to URL, click desired layer from Layer list, and copy URL [[example]](https://services3.arcgis.com/TJxZpUnYIJOvcYwE/ArcGIS/rest/services/CILZones/FeatureServer/0)
 4. append parameters (see reference below) [[example]](https://services3.arcgis.com/TJxZpUnYIJOvcYwE/arcgis/rest/services/CILZones/FeatureServer/0/query?f=geojson&outFields=*&where=1=1)
 
+### Example Services
+
+- https://enterprise.mapshare.vic.gov.au/server/rest/services/Hosted
+- https://corp-gis.mapshare.vic.gov.au/arcgis/rest/services/Mapshare
+- https://services6.arcgis.com/GB33F62SbDxJjwEL/arcgis/rest/services
+
 ### Parameters
 
 [[Example REST Services API]](https://services3.arcgis.com/TJxZpUnYIJOvcYwE/arcgis/rest/services/CILZones/FeatureServer/0/query?f=html&outFields=*&where=1=1)
@@ -434,13 +440,19 @@ In the Pozi config, the double quotes must be escaped with backslashes
 Pozi Server applies the following parameters by default to all requests:
 
 * `-f GeoJSON`
-* `lco RFC7946=YES` ([more info](https://gdal.org/drivers/vector/geojson.html#rfc-7946-write-support))
+* `-lco RFC7946=YES` ([more info](https://gdal.org/drivers/vector/geojson.html#rfc-7946-write-support))
 
 #### Simplify
 
 Apply geometry generalisation on polyline and polygon features to eliminate unneeded vertices. Note that the simplification unit is based on the *source* data. For sources in degrees, a simplification value of 0.00001 is approximately 1m.
 
 `-simplify 0.00001`
+
+#### Explode Collections
+
+Produce one feature for each geometry in any kind of geometry collection in the source file.
+
+`-explodecollections`
 
 #### Spatial Intersection
 

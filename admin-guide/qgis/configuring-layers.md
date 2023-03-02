@@ -43,7 +43,7 @@ Pozi does not currently support duplicate layer names within a site.
 
 If you have two layers that share a name, even if they are maintained in separate QGIS projects, [alter the layer name](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#source-properties) on one or both layers in the affected QGIS project(s) so that they are no longer the same.
 
-Similarly, layer folder names must also be unique, and must not share a name with any layer within a site.
+Similarly, *layer folder* names must be unique, and must not share a name with any layer or layer folder within a site.
 
 ==-
 
@@ -188,15 +188,17 @@ If the layer appears in QGIS Symbology mode "Embedded", switch it to "Single Sym
 
 Layers can be styled using the `Categorized` option. However, when publishing the layer as a vector layer, the following limitations apply:
 
-* the symbology must be based on a field, not an expression
+* the symbology must be based on a field (real or virtual), not an expression
 * the values must not be merged (ie, only one value per row)
 * the field name must not contain any spaces
 
-A workaround for these limitations is to use a suitably named virtual field which contains the required logic.
+You can work around these limitations by creating a suitably named virtual field that contains the required logic.
 
-For instance, the virtual field can contain a case statement to accept any number of input values (from one or more fields) and generate a specific value for use in subsequent styling.
+For instance, the virtual field can contain a case statement to accept any number of input values (from one or more fields) and generate specific values for use in subsequent styling.
 
 ![](./img/qgis-layer-virtual-fields-for-styling-categories.png){style="width:800px"}
+
+See [Virtual Fields](#virtual-fields) below for more information.
 
 ### Opacity
 
@@ -235,7 +237,7 @@ Layer Properties > Attributes Form > select field > Alias
 
 You can control how your data appears to users without having to modify your source data by using the Field Calculator function in QGIS to create virtual fields.
 
-Some examples include:
+Some use cases for virtual fields include:
 
 * generate a link for a web page or photo by combining a URL string and an ID value
 * combine fields (eg first name plus last name, or street address plus locality)
@@ -291,7 +293,7 @@ Layer Properties > Display > Display Name
 
 ![](img/qgis-layer-display-field.png){style="width:500px"}
 
-Please note that Pozi cannot use the display field if the field name has been given an alias.
+Please note that Pozi cannot use the display field if the field name has been given an [alias](#rename-fields).
 
 <br/>
 
@@ -309,7 +311,7 @@ Project > Properties > Data Sources > Identifiable > untick to disable layer sel
 
 ## Optional Settings
 
-Other settings can be configured using QGIS Server keyword list. Pozi obtains these settings, along with any other keywords, when it loads and imports and project's catalogue.
+Other settings can be configured using QGIS Server keyword list. Pozi obtains these settings when it loads and imports each project's catalogue.
 
 These settings provide an override for some of the default behaviours in Pozi.
 
@@ -319,7 +321,7 @@ Layer Properties > QGIS Server > Keyword list
 * `group=[group name]`: override which layer group the layer is listed under
 * `showInLayerControl=false`: don't display layer in layer panel
 * `showLegend=false`: don't display layer legend
-* `type=TileWMS`: for WMS layers, render as image tiles
+* `type=TileWMS`: for WMS layers, render as image tiles (instead of a single image)
 * `visible=true`: display layer by default
 
 When using multiple keyword settings, use commas to separate them.

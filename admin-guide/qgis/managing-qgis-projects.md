@@ -169,4 +169,12 @@ During this time, and any time afterwards, you may continue to [add and configur
 
 Check that advertised URLs contains the exact path and file name of the .qgs project file.
 
+Check the Network panel in your browser console as you turn on layers. Look at the `GetFeature` requests and preview the response. If it contains bounding box coordinates but no records, there may be an issue with IIS.
+
+Open the IIS Manager, and recycle the PoziQgisServer application pool.
+
+![IIS recycle](./img/iis-application-pool-recycle.png){style="width:600px"}
+
 ==-
+
+For further assistance, contact support@pozi.com.
