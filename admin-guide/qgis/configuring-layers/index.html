@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.730769694458">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.731046861213">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.730769694458" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.731046861213" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.730769694458" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.731046861213" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.730769694458" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.731046861213" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -360,7 +360,7 @@
        <template #title>About layer names</template>
 <p>Pozi does not currently support duplicate layer names within a site.</p>
 <p>If you have two layers that share a name, even if they are maintained in separate QGIS projects, <a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#source-properties">alter the layer name</a> on one or both layers in the affected QGIS project(s) so that they are no longer the same.</p>
-<p>Similarly, layer folder names must also be unique, and must not share a name with any layer within a site.</p>
+<p>Similarly, <em>layer folder</em> names must be unique, and must not share a name with any layer or layer folder within a site.</p>
    </doc-panel>
 </doc-panels>
 <p>Some common layer configuration tasks you can do in QGIS include:</p>
@@ -548,13 +548,14 @@
 </doc-anchor-target>
 <p>Layers can be styled using the <code v-pre>Categorized</code> option. However, when publishing the layer as a vector layer, the following limitations apply:</p>
 <ul>
-<li>the symbology must be based on a field, not an expression</li>
+<li>the symbology must be based on a field (real or virtual), not an expression</li>
 <li>the values must not be merged (ie, only one value per row)</li>
 <li>the field name must not contain any spaces</li>
 </ul>
-<p>A workaround for these limitations is to use a suitably named virtual field which contains the required logic.</p>
-<p>For instance, the virtual field can contain a case statement to accept any number of input values (from one or more fields) and generate a specific value for use in subsequent styling.</p>
+<p>You can work around these limitations by creating a suitably named virtual field that contains the required logic.</p>
+<p>For instance, the virtual field can contain a case statement to accept any number of input values (from one or more fields) and generate specific values for use in subsequent styling.</p>
 <p><img src="../img/qgis-layer-virtual-fields-for-styling-categories.png" style="width:800px" alt="" /></p>
+<p>See <doc-anchor-trigger to="#virtual-fields">Virtual Fields</doc-anchor-trigger> below for more information.</p>
 <doc-anchor-target id="opacity">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#opacity">#</doc-anchor-trigger>
@@ -601,7 +602,7 @@
     </h3>
 </doc-anchor-target>
 <p>You can control how your data appears to users without having to modify your source data by using the Field Calculator function in QGIS to create virtual fields.</p>
-<p>Some examples include:</p>
+<p>Some use cases for virtual fields include:</p>
 <ul>
 <li>generate a link for a web page or photo by combining a URL string and an ID value</li>
 <li>combine fields (eg first name plus last name, or street address plus locality)</li>
@@ -651,7 +652,7 @@
 <p>The field from which this attribute is obtained is defined in QGIS.</p>
 <p>Layer Properties &gt; Display &gt; Display Name</p>
 <p><img src="../img/qgis-layer-display-field.png" style="width:500px" alt="" /></p>
-<p>Please note that Pozi cannot use the display field if the field name has been given an alias.</p>
+<p>Please note that Pozi cannot use the display field if the field name has been given an <doc-anchor-trigger to="#rename-fields">alias</doc-anchor-trigger>.</p>
 <br/>
 <doc-anchor-target id="selectability">
     <h2>
@@ -670,7 +671,7 @@
         <span>Optional Settings</span>
     </h2>
 </doc-anchor-target>
-<p>Other settings can be configured using QGIS Server keyword list. Pozi obtains these settings, along with any other keywords, when it loads and imports and project&#x27;s catalogue.</p>
+<p>Other settings can be configured using QGIS Server keyword list. Pozi obtains these settings when it loads and imports each project&#x27;s catalogue.</p>
 <p>These settings provide an override for some of the default behaviours in Pozi.</p>
 <p>Layer Properties &gt; QGIS Server &gt; Keyword list</p>
 <ul>
@@ -678,7 +679,7 @@
 <li><code v-pre>group=[group name]</code>: override which layer group the layer is listed under</li>
 <li><code v-pre>showInLayerControl=false</code>: don&#x27;t display layer in layer panel</li>
 <li><code v-pre>showLegend=false</code>: don&#x27;t display layer legend</li>
-<li><code v-pre>type=TileWMS</code>: for WMS layers, render as image tiles</li>
+<li><code v-pre>type=TileWMS</code>: for WMS layers, render as image tiles (instead of a single image)</li>
 <li><code v-pre>visible=true</code>: display layer by default</li>
 </ul>
 <p>When using multiple keyword settings, use commas to separate them.</p>

@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.730769694458">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.731046861213">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.730769694458" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.731046861213" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.730769694458" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.731046861213" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.730769694458" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.730769694458" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.731046861213" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.731046861213" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -542,6 +542,17 @@
 <li>go to URL, click desired layer from Layer list, and copy URL <a href="https://services3.arcgis.com/TJxZpUnYIJOvcYwE/ArcGIS/rest/services/CILZones/FeatureServer/0">[example]</a></li>
 <li>append parameters (see reference below) <a href="https://services3.arcgis.com/TJxZpUnYIJOvcYwE/arcgis/rest/services/CILZones/FeatureServer/0/query?f=geojson&amp;outFields=*&amp;where=1=1">[example]</a></li>
 </ol>
+<doc-anchor-target id="example-services">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#example-services">#</doc-anchor-trigger>
+        <span>Example Services</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><a href="https://enterprise.mapshare.vic.gov.au/server/rest/services/Hosted">https://enterprise.mapshare.vic.gov.au/server/rest/services/Hosted</a></li>
+<li><a href="https://corp-gis.mapshare.vic.gov.au/arcgis/rest/services/Mapshare">https://corp-gis.mapshare.vic.gov.au/arcgis/rest/services/Mapshare</a></li>
+<li><a href="https://services6.arcgis.com/GB33F62SbDxJjwEL/arcgis/rest/services">https://services6.arcgis.com/GB33F62SbDxJjwEL/arcgis/rest/services</a></li>
+</ul>
 <doc-anchor-target id="parameters-1">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#parameters-1">#</doc-anchor-trigger>
@@ -839,7 +850,7 @@
 <p>Pozi Server applies the following parameters by default to all requests:</p>
 <ul>
 <li><code v-pre>-f GeoJSON</code></li>
-<li><code v-pre>lco RFC7946=YES</code> (<a href="https://gdal.org/drivers/vector/geojson.html#rfc-7946-write-support">more info</a>)</li>
+<li><code v-pre>-lco RFC7946=YES</code> (<a href="https://gdal.org/drivers/vector/geojson.html#rfc-7946-write-support">more info</a>)</li>
 </ul>
 <doc-anchor-target id="simplify">
     <h4>
@@ -849,6 +860,14 @@
 </doc-anchor-target>
 <p>Apply geometry generalisation on polyline and polygon features to eliminate unneeded vertices. Note that the simplification unit is based on the <em>source</em> data. For sources in degrees, a simplification value of 0.00001 is approximately 1m.</p>
 <p><code v-pre>-simplify 0.00001</code></p>
+<doc-anchor-target id="explode-collections">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#explode-collections">#</doc-anchor-trigger>
+        <span>Explode Collections</span>
+    </h4>
+</doc-anchor-target>
+<p>Produce one feature for each geometry in any kind of geometry collection in the source file.</p>
+<p><code v-pre>-explodecollections</code></p>
 <doc-anchor-target id="spatial-intersection-1">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#spatial-intersection-1">#</doc-anchor-trigger>
@@ -973,10 +992,10 @@
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../dev-guide/dataset-configuration/raster-and-tile-layers/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../dev-guide/dataset-configuration/vector-tile-layers/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Raster and Tile Layers</span>
+                                                <span class="block mt-1">Vector Tile Layers</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
