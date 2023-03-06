@@ -1,7 +1,7 @@
 ---
 description: GIS integration for CouncilWise
 icon: dot
-tags: [Pozi Enterprise, Yarriambiack Shire Council, West Wimmera Shire Council]
+tags: [Pozi Enterprise, Yarriambiack Shire Council, West Wimmera Shire Council, Southern Grampians Shire Council]
 ---
 
 # CouncilWise
@@ -10,11 +10,15 @@ tags: [Pozi Enterprise, Yarriambiack Shire Council, West Wimmera Shire Council]
 
 Properties in Pozi are configured with a link that is dynamically populated with the property number.
 
-![](img/councilwise-linkout.png)
+![](img/councilwise-linkout.png){style="width:800px"}
 
 For example:
 
-https://apps.councilwise.com.au/Module/Property/Details?filter=Property%20Number=1019322
+https://apps.councilwise.com.au/Module/Property/Details?filter=Property%20Number=913
+
+## Link-In
+
+https://cwapp-help.helpdocs.com/properties/gis-integration
 
 ## Data API
 

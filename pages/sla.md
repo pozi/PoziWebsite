@@ -62,7 +62,7 @@ The following Service Provider(s) and Customer(s) will be used as the basis of t
 
 | **Severity Level** | **Description**                       | **Target Response** |
 | ------------------ | ------------------------------------- | ------------------- |
-| 1. Critical        | Service down                          | Within 2 hour       |
+| 1. Critical        | Service down                          | Within 2 hours      |
 | 2. Urgent          | Service affected, end-users impacted  | Within 4 hours      |
 | 3. Important       | Potential for impact if not addressed | Within 24 hours     |
 | 4. Informational   | Inquiry for information               | Within 48 hours     |

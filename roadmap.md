@@ -24,7 +24,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
   - improve start-up performance by pre-generating map catalogues
   - tap into external data providers with minimal configuration
 - [ ] monthly analytics reports
-- [ ] fine-grained user permission control utlising Azure AD
+- [ ] fine-grained user permission control utilising Azure AD
 - [ ] display tables of selected features
 - [ ] interactive bulk spatial selection for ad-hoc layers
 - [ ] collaborate map annotations
@@ -46,6 +46,19 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## Completed
 
+### March 2023
+
+#### Improved
+
+- [x] 👍 display a loading spinner while waiting for What's Here results
+- [x] 👍 add favicon for Conquest links
+- [x] 👍 add favicon for Greenlight links
+
+#### Fixed
+
+- [x] 🪲 restore map to fullscreen after closing drawer on mobile
+- [x] 🪲 Jotform forms were sometimes not shown on initial click
+
 ### February 2023
 
 #### New
@@ -59,6 +72,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [x] 👍 remove "Nearby" layer when What's Here results are cleared
 - [x] 👍 hide Info panel from print/PDF output when there are no current results
 - [x] 👍 upgrade to OpenLayers 7.2.2 and latest versions of GeoStyler libraries
+- [x] 👍 improve Unified Search documentation
 
 #### Fixed
 

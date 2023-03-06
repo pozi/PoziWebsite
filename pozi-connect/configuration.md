@@ -4,6 +4,20 @@ sidebar_label: Configuration
 sidebar_position: 2
 ---
 
+## Data Sources
+
+Database connection strings can be configured in any of these formats:
+
+* `ODBC:DSN=dsnname`
+* `ODBC:DRIVER={SQL Server};SERVER=servername;DATABASE=databasename`
+* `MSSQL:SERVER=servername;DATABASE=databasename`
+
+You can test your connection string using a command prompt running GDAL/OGR.
+
+```
+ogrinfo "MSSQL:SERVER=servername;DATABASE=databasename"
+```
+
 ## Running as a batch task
 
 To run multiple Pozi Connect tasks sequentially and avoid having to open up Pozi Connect and pick and run individual tasks, you can configure a 'recipe' for Pozi Connect to follow. This is useful if you have a series of tasks you regularly need to run (for example, M1s) or for setting up as a scheduled task.
