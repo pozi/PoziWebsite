@@ -176,7 +176,7 @@ We're passionate about solving this problem once and for all.
 
 ==- Is this solution already built?
 
-No. But we will build it if we can get buy-in from councils and DELWP.
+No. But we will work with DELWP to make it happen if there is sufficient demand.
 
 ==- How does a cloud service help with M1s?
 
