@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.731400445813">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.732065790266">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.4.0.731400445813" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.732065790266" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.731400445813" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.732065790266" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.731400445813" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.731400445813" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.732065790266" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.732065790266" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -347,6 +347,7 @@
 <li>check <a href="https://github.com/pozi/PoziConnectConfig/commits/master/%7EShared">https://github.com/pozi/PoziConnectConfig/commits/master/~Shared</a> and identify general changes made since last release</li>
 <li>check <a href="https://github.com/pozi/PoziConnectConfig/commits/master/">https://github.com/pozi/PoziConnectConfig/commits/master/</a> and identify site-specific changes made since last release</li>
 <li>edit <code v-pre>M1 Shared - Generate M1.ini</code> &gt; <code v-pre>[Generate M1 Spreadsheet]</code> &gt; <code v-pre>Destination</code>, increment the M1 version number with new minor version number (if necessary)</li>
+<li>find and replace <code v-pre>'https://pozi.com/property-dashboard/2-10'</code> with new version number</li>
 </ul>
 <doc-anchor-target id="prepare-poziconnect-repository">
     <h2>
@@ -356,7 +357,6 @@
 </doc-anchor-target>
 <ul>
 <li>if there&#x27;s been an update of the GDAL library, update <code v-pre>setenv_python.bat</code></li>
-<li>update <code v-pre>PoziWebsite/pozi-connect/history.md</code> with dot points about recent changes (identified above)</li>
 <li>if logo has changed since last release, run <code v-pre>PoziConnect\PoziConnect.bat</code> to trigger regeneration of <code v-pre>gui_logo_png.py</code></li>
 <li>run <code v-pre>PoziConnect\build.bat</code>; type in new version number when prompted</li>
 <li>embed thumbnail logo in <code v-pre>PoziConnect.exe</code>
@@ -408,13 +408,13 @@
 </doc-anchor-target>
 <ul>
 <li>create new PoziConnect release: <a href="https://github.com/pozi/PoziConnect/releases/new">https://github.com/pozi/PoziConnect/releases/new</a></li>
-<li>Tag version: (eg, v2.9.2)</li>
-<li>Release title: (eg Release 2.9.2)</li>
+<li>Tag version: (eg, v2.10.0)</li>
+<li>Release title: (eg Release 2.10.0)</li>
 <li>Description: (example)</li>
 </ul>
 <p>Example:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-markdown"><code v-pre class="language-markdown">Welcome to Pozi Connect v2.9.4
+<pre class="language-markdown"><code v-pre class="language-markdown">Welcome to Pozi Connect v2.10.0
 
 **Click the .msi link below to download this release.**
 
@@ -445,10 +445,29 @@ For installation instructions, visit [https://pozi.com/pozi-connect/installation
 <li>create zip from files/folders within <code v-pre>PoziConnect\dist\</code> (ie, no overall top-level folder)</li>
 <li>rename zip file (eg <code v-pre>PoziConnectM1.2.x.x.zip</code>)</li>
 <li>upload to <a href="https://s3.console.aws.amazon.com/s3/buckets/connect.pozi.com/m1/">https://s3.console.aws.amazon.com/s3/buckets/connect.pozi.com/m1/</a></li>
-<li>set &quot;Manage public permissions&quot; to &quot;Grant public read access to this object(s)&quot;</li>
+<li>select new zip file &gt; Object actions &gt; Make public using ACL &gt; Make public</li>
 <li>download <code v-pre>manifest-m1-production.json</code></li>
 <li>edit with latest date and version number</li>
 <li>upload back to S3, make public</li>
+</ul>
+<doc-anchor-target id="notify-users">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#notify-users">#</doc-anchor-trigger>
+        <span>Notify Users</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="website">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#website">#</doc-anchor-trigger>
+        <span>Website</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>update <code v-pre>pozi-connect\history.md</code> with dot points about recent changes (identified above)</li>
+<li>update <code v-pre>pozi-connect\m1s\release-notes.md</code> with summary of changes</li>
+<li>copy <code v-pre>property-dashboard-2-10</code> page and name it after the new version</li>
+<li>update the existing <code v-pre>property-dashboard-2-10</code> page to display message that user needs to upgrade</li>
+<li>commit changes in GitHub to publish to live site</li>
 </ul>
 <doc-anchor-target id="blog">
     <h3>
