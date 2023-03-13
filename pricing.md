@@ -29,7 +29,7 @@ Pozi delivers powerful location-based functionality at a fraction of the cost of
 ---    | ---
 | *Perfect for publishing your organisation's data to the public* | *When your users demand a higher level of interaction* | *Highly functional corporate geospatial solution* | *Ultimate integration with your organisation's cloud infrastructure* |
 | <small>AUD</small><big>**$6K**</big><small>/year</small> | <small>AUD</small><big>**$9K**</big><small>/year</small> | <small>AUD</small><big>**$12K**</big><small>/year</small> | <small>AUD</small><big>**$15K**</big><small>/year</small> |
-| - | <small>All the features of Pozi Public, plus:</small> | <small>All the features of Pozi Pro, plus:</small> | <small>All the features of Pozi Enterprise, plus:</small> |
+| | <small>All the features of Pozi Public, plus:</small> | <small>All the features of Pozi Pro, plus:</small> | <small>All the features of Pozi Enterprise, plus:</small> |
 | ✔️ Live, authoritative data | ✔️ Community consultation module | ✔️ [QGIS integration](/qgis/) | 🚀 Azure AD Application Proxy integration |
 | ✔️ Customer support | ✔️ Advanced search | ✔️ Corporate system integrations | 📃 Enterprise Cloud Service Level Agreement |
 | ✔️ Responsive design | ✔️ Nearby places | ✔️ Public data sync |  |

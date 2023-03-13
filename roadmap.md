@@ -51,6 +51,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 #### Improved
 
 - [x] 👍 display a loading spinner while waiting for What's Here results
+- [x] 👍 when displaying dimensions for features that are more than 1 ha and less than 10 sqkm, use area unit of ha instead of sqkm
 - [x] 👍 add favicon for Conquest links
 - [x] 👍 add favicon for Greenlight links
 
@@ -58,6 +59,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 - [x] 🪲 restore map to fullscreen after closing drawer on mobile
 - [x] 🪲 Jotform forms were sometimes not shown on initial click
+- [x] 🪲 'Select by Property PFI list (CSV)' function is now working again
 
 ### February 2023
 

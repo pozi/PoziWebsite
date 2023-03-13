@@ -24,7 +24,7 @@ Administrators control the following aspects of the Pozi experience:
 [!ref icon="tools" text="Issues with individual layers"](/admin-guide/qgis/configuring-layers#troubleshooting)
 [!ref icon="tools" text="Issues with projects/layer groups"](/admin-guide/qgis/managing-qgis-projects#troubleshooting)
 
-==- Issue with ALL internal layer groups
+==- Issue affecting *ALL* internal layer groups
 
 If you are not able to view any layer groups from your internal sources, remote into the server on which Pozi Server is installed, go to Control Panel > Administrative Tools > Services > PoziConnectServer > right-click > Restart.
 
