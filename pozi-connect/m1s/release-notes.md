@@ -4,6 +4,14 @@ sidebar_label: Release Notes
 order: 100
 ---
 
+## Pozi Connect 2.10
+
+*March 2023*
+
+In January 2023, the DELWP introduced a subtle change to Vicmap data model that impacted Pozi Connect's ability to differentiate road parcels from normal parcels. As a consequence, Pozi Connect started generating unwanted edits on the M1 related to road parcels.
+
+In this new release, we've adapted Pozi Connect to recognise and filter out road parcels from its results.
+
 ## Pozi Connect 2.9
 
 *February 2022*

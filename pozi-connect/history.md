@@ -5,6 +5,13 @@ order: -100
 
 Here are some of Pozi Connect's improvements and bug fixes.
 
+### Version 2.10.0 (March 2023)
+
+* use new `road` field in Parcel table to determine road status instead of `desc_type`
+* update Vicmap Reference tables
+* launch property dashboard on custom webpage for the current version of Pozi Connect
+* configuration updates for Brimbank, Buloke, Central Goldfields, Indigo, Macedon Ranges, Merri-bek, Port Phillip, Strathbogie, Towong, Wangaratta, West Wimmera
+
 ### Version 2.9.4 (May 2022)
 
 * update web links

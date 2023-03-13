@@ -28,11 +28,11 @@ mklink /D C:\Users\Simon\GitHub\PoziConnect\tasks C:\Users\Simon\GitHub\PoziConn
 * check https://github.com/pozi/PoziConnectConfig/commits/master/~Shared and identify general changes made since last release
 * check https://github.com/pozi/PoziConnectConfig/commits/master/ and identify site-specific changes made since last release
 * edit `M1 Shared - Generate M1.ini` > `[Generate M1 Spreadsheet]` > `Destination`, increment the M1 version number with new minor version number (if necessary)
+* find and replace `'https://pozi.com/property-dashboard/2-10'` with new version number
 
 ## Prepare PoziConnect Repository
 
 * if there's been an update of the GDAL library, update `setenv_python.bat`
-* update `PoziWebsite/pozi-connect/history.md` with dot points about recent changes (identified above)
 * if logo has changed since last release, run `PoziConnect\PoziConnect.bat` to trigger regeneration of `gui_logo_png.py`
 * run `PoziConnect\build.bat`; type in new version number when prompted
 * embed thumbnail logo in `PoziConnect.exe`
@@ -64,14 +64,14 @@ Clients in locked-down IT environments may prefer a simple zip file instead of t
 ### GitHub
 
 * create new PoziConnect release: https://github.com/pozi/PoziConnect/releases/new
-* Tag version: (eg, v2.9.2)
-* Release title: (eg Release 2.9.2)
+* Tag version: (eg, v2.10.0)
+* Release title: (eg Release 2.10.0)
 * Description: (example)
 
 Example:
 
 ```md
-Welcome to Pozi Connect v2.9.4
+Welcome to Pozi Connect v2.10.0
 
 **Click the .msi link below to download this release.**
 
@@ -100,10 +100,20 @@ This is the alternative distribution which, for clients who have this installed,
 * create zip from files/folders within `PoziConnect\dist\` (ie, no overall top-level folder)
 * rename zip file (eg `PoziConnectM1.2.x.x.zip`)
 * upload to https://s3.console.aws.amazon.com/s3/buckets/connect.pozi.com/m1/
-* set "Manage public permissions" to "Grant public read access to this object(s)"
+* select new zip file > Object actions > Make public using ACL > Make public
 * download `manifest-m1-production.json`
 * edit with latest date and version number
 * upload back to S3, make public
+
+## Notify Users
+
+### Website
+
+* update `pozi-connect\history.md` with dot points about recent changes (identified above)
+* update `pozi-connect\m1s\release-notes.md` with summary of changes
+* copy `property-dashboard-2-10` page and name it after the new version
+* update the existing `property-dashboard-2-10` page to display message that user needs to upgrade
+* commit changes in GitHub to publish to live site
 
 ### Blog
 

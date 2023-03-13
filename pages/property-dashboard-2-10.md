@@ -1,16 +1,12 @@
 ---
-route: /property-dashboard
+route: /property-dashboard/2-10
 visibility: hidden
 category: Pozi Connect
 ---
 
 # Property Dashboard
 
-!!!warning Upgrade to the latest Pozi Connect now
-
-Pozi Connect v2.10 has been released and it contains critical fixes to cater for recent changes in the Vicmap Property data model.
-
-[Upgrade now!](/pozi-connect/installation.md)
+!!!success You're on the latest version of Pozi Connect :-)
 !!!
 
 ==- **Sick of M1s?**
