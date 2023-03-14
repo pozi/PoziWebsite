@@ -24,7 +24,7 @@ In January 2023, DEECA introduced a change to Vicmap data model that impacted Po
 
 <img src="/static/img/undraw/undraw_tourist_map_re_293e.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
-In this new release, we've adapted Pozi Connect to recognise and filter out road parcels from its results. Specifically, it uses new `road` field in Parcel table to determine the road status instead of the existing `desc_type` field.
+In this new release, we've adapted Pozi Connect to recognise and filter out road parcels from its results. Specifically, it uses the new `road` field in Parcel table to determine the road status instead of the existing `desc_type` field.
 
 We've also taken the opportunity to change how Pozi Connect launches the Property Dashboard. After Pozi Connect generates the M1, it now opens a custom webpage that is targeted for the version of Pozi Connect you're currently using. The custom page enables us to put version-specific information, such as warning you if you're using an out-of-date version of Pozi Connect.
 
