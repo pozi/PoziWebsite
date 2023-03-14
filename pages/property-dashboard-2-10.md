@@ -6,7 +6,7 @@ category: Pozi Connect
 
 # Property Dashboard
 
-!!!success You're on the latest version of Pozi Connect :-)
+!!!success You're on the latest version of Pozi Connect 😄
 !!!
 
 ==- **Sick of M1s?**
