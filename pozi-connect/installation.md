@@ -27,7 +27,7 @@ For peace of mind when performing an upgrade on an existing Pozi Connect install
 
 ### Download Pozi Connect Installer
 
-Go to [https://github.com/pozi/PoziConnect/releases/latest](https://github.com/pozi/PoziConnect/releases/latest)
+Go to the <a href="https://github.com/pozi/PoziConnect/releases/latest" target="_blank">Pozi Connect download page</a>.
 
 ![](./img/download.png){style="width:500px"}
 
