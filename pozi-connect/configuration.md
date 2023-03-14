@@ -12,11 +12,13 @@ Database connection strings can be configured in any of these formats:
 * `ODBC:DRIVER={SQL Server};SERVER=servername;DATABASE=databasename`
 * `MSSQL:SERVER=servername;DATABASE=databasename`
 
-You can test your connection string using a command prompt running GDAL/OGR.
+You can test your connection string using a command prompt running GDAL/OGR. If you have QGIS installed via OSGeo4W, you can open the command prompt by running `C:\OSGeo4W\OSGeo4W.bat`. Alternatively you can use the one provided with Pozi Connect at `PoziConnect\vendor\release-xxxx-gdal-x-x-x-mapserver-x-x-x\SDKShell.bat`.
 
 ```
 ogrinfo "MSSQL:SERVER=servername;DATABASE=databasename"
 ```
+
+If you have the correct connection string for your database, a list of available tables will be displayed. If you don't see your tables listed, please talk to your IT Administrator to obtain the correct connection string or enable the required permissions.
 
 ## Running as a batch task
 
