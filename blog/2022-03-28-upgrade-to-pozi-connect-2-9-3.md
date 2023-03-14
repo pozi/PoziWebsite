@@ -10,6 +10,8 @@ category: Pozi Connect
 
 *Note: this announcement is for users of the Pozi Connect desktop application.*
 
+![](/static/img/undraw/undraw_collaborating_re_l43g.svg){style="width:300px"}
+
 Pozi Connect 2.9.3 is now available for you to download and install.
 
 This update ensures that Pozi Connect imports only the latest data from DELWP's new DataShare Vicmap data downloads. Some clients has reported to us that Pozi Connect was still generating M1s based on old data. This update forces Pozi Connect to import only the latest data, and report an error if it can't find it.

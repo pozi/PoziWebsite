@@ -10,6 +10,8 @@ category: Pozi Connect
 
 *An announcement is for users of the Pozi Connect desktop application.*
 
+![](/static/img/undraw/undraw_collaborating_re_l43g.svg){style="width:300px"}
+
 Pozi Connect 2.9.3 is now available for you to download and install.
 
 We've enhanced Pozi Connect to work with DELWP's new DataShare Vicmap data downloads. We've also taken the opportunity to improve other aspects of Pozi Connect's M1 workflow to give you better quality M1s than ever before. Download and install the latest Pozi Connect now!
