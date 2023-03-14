@@ -37,6 +37,12 @@ Click on the link to the `PoziConnect-*.*.*.msi` file to download the installer.
 
 Double-click the downloaded Pozi Connect `.msi` file to launch the installer.
 
+### Accept Security Prompts
+
+If you see a prompt saying "Windows protected your PC"... click the *More info* link.
+
+You'll then see a message about "Unknown Publisher". Click on *Run anyway*.
+
 ### Start Setup Wizard
 
 ![](./img/installation_01.png){style="width:400px"}
