@@ -19,6 +19,12 @@ Standard | <big>Big</big> | <small>Small</small>
 
 [!ref icon="plug" text="Reference link"](/admin-guide/integrations/)
 
+### Links
+
+#### Open in new tab
+
+<a href="https://github.com/pozi/PoziConnect/releases/latest" target="_blank">Pozi Connect download page</a>
+
 ## Layout
 
 ==- Collapsed by default

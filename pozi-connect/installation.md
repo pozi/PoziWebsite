@@ -9,7 +9,7 @@ order: 50
 
 *This is a brief overview of the steps involved. For step-by-step instructions, including details of the prompts you'll encounter, go to the **Step-by-Step Instructions** below.*
 
-1. go to [https://github.com/pozi/PoziConnect/releases/latest](https://github.com/pozi/PoziConnect/releases/latest)
+1. go to the <a href="https://github.com/pozi/PoziConnect/releases/latest" target="_blank">Pozi Connect download page</a>
 2. click on the link to the `PoziConnect-*.*.*.msi` file to download the installer
 3. run the installer
 4. change the default path to the desired PoziConnect location on your network (pick the location of the existing installation if you have previously installed it)
