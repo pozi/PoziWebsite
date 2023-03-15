@@ -20,7 +20,7 @@ Pozi Connect 2.10.0 is now available for you to download and install.
 
 ## Why Upgrade?
 
-In January 2023, DEECA introduced a change to Vicmap data model that impacted Pozi Connect's ability to differentiate road parcels from normal parcels. As a consequence, Pozi Connect started generating unwanted edits on the M1 related to road parcels.
+In January 2023, DEECA introduced a change to the Vicmap Property data model that impacted Pozi Connect's ability to differentiate road parcels from normal parcels. As a consequence, Pozi Connect started generating unwanted edits on the M1 related to road parcels.
 
 <img src="/static/img/undraw/undraw_tourist_map_re_293e.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 

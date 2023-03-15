@@ -119,6 +119,10 @@ This is the alternative distribution which, for clients who have this installed,
 
 * duplicate previous Pozi Connect release blog post
 * update details
+* send test email
+  * check subject line
+  * check body content, spacing, alignment
+  * check links
 * publish
 * copy content as HTML to clipboard
 
