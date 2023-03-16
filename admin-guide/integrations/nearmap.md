@@ -6,8 +6,7 @@ tags: [Pozi Enterprise, Cardinia Shire Council]
 
 # Nearmap
 
-![](/static/img/tweet-gallery/Open_Office_Integration.png)
-
+Pozi integrates directly with the Nearmap API so your users get fast access to the latest high-resolution imagery. No downloading or double-handing required.
 
 Try an interactive view here:
 

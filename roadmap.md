@@ -50,6 +50,8 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 #### Improved
 
+- [x] 👍 enable support for WMTS catalogues as basemaps
+- [x] 👍 support for CORS-restricted catalogues by sending requests through a proxy
 - [x] 👍 display a loading spinner while waiting for What's Here results
 - [x] 👍 when displaying dimensions for features that are more than 1 ha and less than 10 sqkm, use area unit of ha instead of sqkm
 - [x] 👍 add favicon for Conquest links
