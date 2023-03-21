@@ -19,26 +19,11 @@ icon: paintbrush
 
 ### Styling Options
 
-Supported:
+Refer to our QGIS styling guide for vector layers:
 
-* simple points, lines, polygons symbolisers
-  * `square`
-  * `circle`
-  * `triangle`
-  * `star`
-  * `cross`
-  * `x`
-* rule-based styles
-* basic labels
-* customisable legend text
+[!ref](./qgis/configuring-layers/#styling-for-vector-layers)
 
-Not currently supported:
-
-* fill hatching
-* label offsets
-* rules based on a field name that contains spaces
-
-Tips
+Additional tips:
 
 * opacity must be defined in the colour - the layer's global opacity slider has no effect
 * for polygon features to be selectable, the fill opacity must be greater than `0` - it can be as little as 1%

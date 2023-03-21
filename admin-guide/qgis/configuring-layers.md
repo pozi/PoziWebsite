@@ -53,16 +53,6 @@ Some common layer configuration tasks you can do in QGIS include:
 * [filter data](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#query-builder)
 * [modify fields](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#fields-properties)
 
-!!!warning
-
-Some changes may not be available immediately in Pozi. If you encounter an issue such as a recently added or renamed layer not loading, restart the IIS application pool on the server.
-
-Windows > IIS > (select server) > Application Pools > PoziQgisServer > Recycle
-
-![](./img/iis-application-pool-recycle.png){style="width:400px"}
-
-!!!
-
 <br>
 
 ## Publish as Vector Layer
@@ -103,11 +93,11 @@ As a guideline, use vectors only for layers with fewer than 5-10K features, or e
 Using QGIS, you can control many visual aspects of your layer. You may apply a common style for all the features in a layer 
 ([Single Symbol](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#single-symbol-renderer)) or apply a thematic style that displays features according to any of its attributes ([Categorized](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#categorized-renderer)).
 
-When Pozi fetches a layer using WMS, QGIS Server renders the layer exactly as configured in QGIS. When using WFS, the rendering is done by Pozi in the browser, which can cause the layer to appear differently compared to QGIS for complex styles. 
+When Pozi fetches a layer using WMS, QGIS Server renders the layer exactly as configured in QGIS. When using WFS, the rendering is done by Pozi in the browser, which can cause the layer to appear differently compared to QGIS for some styling options. 
 
 ### Styling for Vector Layers
 
-For any layers that are to be made accessible to Pozi as fully interactive *vector* layers (ie, WFS-enabled), use only the supported styles specified below.
+When styling *vector* layers (ie, WFS-enabled), use only the supported styles specified below.
 
 (If you need Pozi to display layers using a QGIS style that doesn't appear in the below lists of supported styles, consider disabling WFS to force Pozi to retrieve the layer via WMS, and thus using the QGIS Server renderer.)
 
@@ -137,12 +127,17 @@ Supported lines:
 * Simple Line
   * Solid Line
   * No Pen
-  * Dash Line
-  * Dot Line
-  * Dash Dot Line
-  * Dash Dot Dot Line
+  * Custom Dash Pattern
 
-Set line thicknesses to `1mm` or greater to enable users to more easily select line features.
+Set line thicknesses to `2mm` or greater to enable users to easily select line features.
+
+To style a line with dots and/or dashes:
+
+* set the cap style to `flat`
+* tick "Use custom dash pattern"
+* specify a dash pattern (eg, `4 2`) in millimeters.
+
+![](./img/qgis-layer-styling-line-custom-dash-pattern.png){style="width:450px"}
 
 ==- Polygons
 
@@ -155,9 +150,9 @@ Supported fills:
   * Diagonal X
 * Point Pattern Fill
 
-![](./img/qgis-layer-styling-simple-fill.png){style="width:250px"}
+![](./img/qgis-layer-styling-simple-fill.png){style="width:350px"}
 
-Note that the 'No brush' fill will prevent users from being able to select a polygon by clicking within the polygon. To enable users to select a polygon feature by clicking anywhere within it, use the 'Solid' fill, and set the opacity of the fill colour to a low or zero value.
+Note that the 'No brush' fill will prevent users from being able to select a polygon by clicking within the polygon. To enable users to select a polygon feature by clicking inside it, use the 'Solid' fill, and set the opacity of the fill colour to a low or zero value.
 
 ==-
 
@@ -204,7 +199,7 @@ See [Virtual Fields](#virtual-fields) below for more information.
 
 Layer Styling > Layer Rendering > Opacity
 
-![](./img/qgis-layer-styling-opacity.png){style="width:250px"}
+![](./img/qgis-layer-styling-opacity.png){style="width:300px"}
 
 Layers are initially displayed in Pozi using the opacity value you've set - the user may then adjust the opacity up or down from the initial value.
 
@@ -231,7 +226,7 @@ You can make field names more user-friendly by giving your field names an *alias
 
 Layer Properties > Attributes Form > select field > Alias
 
-![](./img/qgis-field-alias.png){style="width:600px"}
+![](./img/qgis-field-alias.png){style="width:700px"}
 
 ### Virtual Fields
 
@@ -265,11 +260,11 @@ Tips for building expressions:
 * use `||` to combine strings
 * enclose static text with single quotes
 
-![](img/qgis-field-calculator.png){style="width:600px"}
+![](img/qgis-field-calculator.png){style="width:700px"}
 
 The resulting virtual field appears in QGIS and Pozi as if it were standard field.
 
-![](img/qgis-table-with-virtual-field.png){style="width:600px"}
+![](img/qgis-table-with-virtual-field.png){style="width:700px"}
 
 If the value in the field is a URL (as in this example), Pozi will display it as a clickable link.
 
@@ -291,7 +286,7 @@ The field from which this attribute is obtained is defined in QGIS.
 
 Layer Properties > Display > Display Name
 
-![](img/qgis-layer-display-field.png){style="width:500px"}
+![](img/qgis-layer-display-field.png){style="width:600px"}
 
 Please note that Pozi cannot use the display field if the field name has been given an [alias](#rename-fields).
 
@@ -353,7 +348,6 @@ Restart the service(s) after you make your changes.
 Check the following:
 
 * Open the source project in QGIS and see if the layers can be visualised. If not, check whether the source database connection or file path has changed or been removed.
-* If your project is configured as a WFS source, check that the layer is enabled for WFS. Go to Project > Properties > QGIS Server > WFS Capabilities > your layer > Published (tick on)
 * Pozi is only able to display features that have at least one valid/non-null attribute. If any records in your data contain no attributes, populate some values into one of the fields.
 * Ensure the layer has a coordinate reference system set. Go to Layer Properties > Source > Assigned CRS, and pick a projection
 * For file-based layers, ensure that the file path is one that is recognised by the server. See [About layer file paths](#about-layer-file-paths) above.
@@ -363,7 +357,7 @@ Check the following:
 
 Pozi will display layers in a generic style if it cannot process the style that was configured in QGIS.
 
-Simplify the style in the QGIS project and try again. Replace hatch styles with semi-opaque fills. Replace custom point symbols with one of the standard symbols specified above.
+Simplify the style in the QGIS project and try again. Replace hatch styles with semi-opaque fills. Replace custom point symbols with one of the [standard symbols](#points) specified above.
 
 ==- Selected features from WMS layers are displayed with a mis-shaped highlight
 
@@ -418,4 +412,12 @@ If you've already enabled a layer for WFS, and the table view option is still no
 
 ​If you anticipate having overlapping features in a layer, consider NOT enabling the layer for WFS. Pozi will instead treat the layer as WMS. When clicking on a  location, Pozi will return the details for all overlapping features.
 ​
+==- Can't see the latest changes from QGIS in Pozi
+
+Some changes may not be available immediately in Pozi. If you encounter an issue such as a recently added or renamed layer not loading, restart the IIS application pool on the server.
+
+Windows > IIS > (select server) > Application Pools > PoziQgisServer > Recycle
+
+![](./img/iis-application-pool-recycle.png){style="width:500px"}
+
 ==-
