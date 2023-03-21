@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.732758168524">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.732758201478">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.732758168524" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.732758201478" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.732758168524" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.732758201478" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.732758168524" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.732758168524" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.732758201478" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.732758201478" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -445,6 +445,46 @@
 </doc-codeblock></div>
    </doc-panel>
 </doc-panels>
+<doc-anchor-target id="parameters">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#parameters">#</doc-anchor-trigger>
+        <span>Parameters</span>
+    </h5>
+</doc-anchor-target>
+<doc-anchor-target id="use-alternative-getfeatureinfo-request-parameters">
+    <h6>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#use-alternative-getfeatureinfo-request-parameters">#</doc-anchor-trigger>
+        <span>Use alternative <code v-pre>GetFeatureInfo</code> request parameters</span>
+    </h6>
+</doc-anchor-target>
+<p>By default, Pozi generates its <code v-pre>GetFeatureInfo</code> requests to use <code v-pre>info_format=application/json</code>.</p>
+<p>However, if the endpoint is an ArcGIS server, it may respond with the following error: &quot;Parameter &#x27;InfoFormat&#x27; contains unacceptable value.&quot; This is because ArcGIS&#x27;s WMS GetFeatureInfo requires the parameter <code v-pre>info_format=application/geojson</code>.</p>
+<p>Override Pozi&#x27;s default <code v-pre>GetFeatureInfo</code> behaviour as follows:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">  &quot;config&quot;: {
+    &quot;spatial&quot;: {
+      &quot;params&quot;: {
+        &quot;info_format&quot;: &quot;application/geojson&quot;
+      }</code></pre>
+</doc-codeblock></div>
+<doc-panel id="example" collapsed>
+    <template #title>Example</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;title&quot;: &quot;Society - Schools And School Catchments&quot;,
+  &quot;group&quot;: &quot;Society&quot;,
+  &quot;type&quot;: &quot;WMSGetCapabilities&quot;,
+  &quot;config&quot;: {
+    &quot;spatial&quot;: {
+      &quot;url&quot;: &quot;https://spatial-gis.information.qld.gov.au/arcgis/services/Society/SchoolsAndSchoolCatchments/MapServer/WMSServer?&amp;service=WMS&amp;request=GetCapabilities&quot;,
+      &quot;params&quot;: {
+        &quot;info_format&quot;: &quot;application/geojson&quot;
+      }
+    }
+  }
+}</code></pre>
+</doc-codeblock></div>
+</doc-panel>
 <doc-anchor-target id="single-layer-catalogue">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#single-layer-catalogue">#</doc-anchor-trigger>
@@ -550,9 +590,9 @@
 <li><code v-pre>request=GetStyles</code> (not GetCapabilities)</li>
 </ul>
 </doc-panel>
-<doc-anchor-target id="parameters">
+<doc-anchor-target id="parameters-1">
     <h5>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#parameters">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#parameters-1">#</doc-anchor-trigger>
         <span>Parameters</span>
     </h5>
 </doc-anchor-target>
@@ -565,9 +605,9 @@
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-json"><code v-pre class="language-json">  &quot;config&quot;: {
     &quot;spatial&quot;: {
-    &quot;params&quot;: {
-      &quot;BBOX&quot;: &quot;-38.27,144.66,-38.24,144.71&quot;
-    }</code></pre>
+      &quot;params&quot;: {
+        &quot;BBOX&quot;: &quot;-38.27,144.66,-38.24,144.71&quot;
+      }</code></pre>
 </doc-codeblock></div>
 <doc-panel id="example" collapsed>
     <template #title>Example</template>
@@ -702,7 +742,17 @@
 <doc-panel id="example" collapsed>
     <template #title>Example</template>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-json"><code v-pre class="language-json">  &quot;layerFilter&quot;: &quot;(*urban*|*commercial*); !*boundary&quot;,</code></pre>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;title&quot;: &quot;Transportation - State Road Information&quot;,
+  &quot;group&quot;: &quot;Transportation&quot;,
+  &quot;type&quot;: &quot;WMSGetCapabilities&quot;,
+  &quot;config&quot;: {
+    &quot;spatial&quot;: {
+      &quot;url&quot;: &quot;https://spatial-gis.information.qld.gov.au/arcgis/services/Transportation/StateRoadInformation/MapServer/WMSServer?&amp;service=WMS&amp;request=GetCapabilities&quot;
+    }
+  },
+  &quot;layerFilter&quot;: &quot;!*not available*&quot;
+}</code></pre>
 </doc-codeblock></div>
 </doc-panel>
 

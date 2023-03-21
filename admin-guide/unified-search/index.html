@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.732758168524">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.732758201478">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.4.0.732758168524" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.732758201478" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.732758168524" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.732758201478" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.732758168524" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.732758168524" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.732758201478" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.732758201478" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -596,10 +596,16 @@ from
         <span>Troubleshooting</span>
     </h2>
 </doc-anchor-target>
-<doc-panel id="search-results-are-not-showing-new-records" collapsed>
-    <template #title>Search results are not showing new records</template>
+<doc-panels>
+   <doc-panel id="search-results-are-not-showing-new-records" collapsed>
+       <template #title>Search results are not showing new records</template>
 <p>The source data may be out of date. Open the relevant VRT file in a text editor, identify the source table path in the <code v-pre>OGRVRTLayer</code> element, navigate to the source table folder, and check the file date.</p>
-</doc-panel>
+   </doc-panel>
+   <doc-panel id="target-layer-is-not-displayed-after-clicking-on-search-result" collapsed>
+       <template #title>Target layer is not displayed after clicking on search result</template>
+<p>Ensure that <code v-pre>map_layer</code> value in the VRT contains no spaces or special characters</p>
+   </doc-panel>
+</doc-panels>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
                                     <span>
