@@ -92,22 +92,22 @@ WMS GetMap requests can be made with an `sld` parameter that contains the URL of
 
 ==- Layer with external SLD
 
-  *Note: the layer name is not specified in the config because it is specified within the SLD itself.*
+*Note: the layer name is not specified in the config because it is specified within the SLD itself.*
 
-  ```json
-  {
-    "title": "Localities",
-    "group": "Administrative",
-    "type": "TileWMS",
-    "config": {
-      "url": "https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms",
-      "params": {
-        "SLD": "http://files.pozi.com/config/sld/datavic-VMADMIN_LOCALITY_POLYGON-BENDIGO.sld",
-        "FORMAT": "image/png8"
-      }
+```json
+{
+  "title": "Localities",
+  "group": "Administrative",
+  "type": "TileWMS",
+  "config": {
+    "url": "https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms",
+    "params": {
+      "SLD": "http://files.pozi.com/config/sld/datavic-VMADMIN_LOCALITY_POLYGON-BENDIGO.sld",
+      "FORMAT": "image/png8"
     }
   }
-  ```
+}
+```
 
 ==-
 
@@ -117,19 +117,19 @@ WMS GetMap requests can be made with an `sld_body` parameter that contains the S
 
 ==- Layer with embedded SLD
 
-  ```json
-  {
-    "title": "Park and Street Trees",
-    "group": "Council Facilities and Services",
-    "type": "TileWMS",
-    "config": {
-      "url": "https://data.gov.au/geoserver/wms",
-      "params": {
-        "sld_body": "<?xml version='1.0' encoding='UTF-8'?><StyledLayerDescriptor xmlns='http://www.opengis.net/sld' xmlns:ogc='http://www.opengis.net/ogc' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' version='1.1.0' xmlns:xlink='http://www.w3.org/1999/xlink' units='mm' xsi:schemaLocation='http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd' xmlns:se='http://www.opengis.net/se'><NamedLayer><se:Name>ckan_ed15e3ea_48dc_47d2_afa6_518e6f5276e1</se:Name><UserStyle><se:Name>Glen Eira - Trees</se:Name><se:FeatureTypeStyle><se:Rule><se:Name>Single symbol</se:Name><se:PointSymbolizer><se:Graphic><se:Mark><se:WellKnownName>circle</se:WellKnownName><se:Fill><se:SvgParameter name='fill'>#33a02c</se:SvgParameter></se:Fill><se:Stroke><se:SvgParameter name='stroke'>#000000</se:SvgParameter></se:Stroke></se:Mark><se:Size>10</se:Size></se:Graphic></se:PointSymbolizer></se:Rule></se:FeatureTypeStyle></UserStyle></NamedLayer></StyledLayerDescriptor>"
-      }
+```json
+{
+  "title": "Park and Street Trees",
+  "group": "Council Facilities and Services",
+  "type": "TileWMS",
+  "config": {
+    "url": "https://data.gov.au/geoserver/wms",
+    "params": {
+      "sld_body": "<?xml version='1.0' encoding='UTF-8'?><StyledLayerDescriptor xmlns='http://www.opengis.net/sld' xmlns:ogc='http://www.opengis.net/ogc' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' version='1.1.0' xmlns:xlink='http://www.w3.org/1999/xlink' units='mm' xsi:schemaLocation='http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd' xmlns:se='http://www.opengis.net/se'><NamedLayer><se:Name>ckan_ed15e3ea_48dc_47d2_afa6_518e6f5276e1</se:Name><UserStyle><se:Name>Glen Eira - Trees</se:Name><se:FeatureTypeStyle><se:Rule><se:Name>Single symbol</se:Name><se:PointSymbolizer><se:Graphic><se:Mark><se:WellKnownName>circle</se:WellKnownName><se:Fill><se:SvgParameter name='fill'>#33a02c</se:SvgParameter></se:Fill><se:Stroke><se:SvgParameter name='stroke'>#000000</se:SvgParameter></se:Stroke></se:Mark><se:Size>10</se:Size></se:Graphic></se:PointSymbolizer></se:Rule></se:FeatureTypeStyle></UserStyle></NamedLayer></StyledLayerDescriptor>"
     }
   }
-  ```
+}
+```
 
 ==-
 
@@ -216,20 +216,33 @@ The topmost imagery layer can be toggled by the Aerial button at the top right o
 
 ==- HERE Satellite
 
-  ```json
-  {
-    "title": "HERE Satellite",
-    "group": "Aerial",
-    "type": "XYZ",
-    "about": {
-      "organisation": "HERE Technologies",
-      "url": "https://developer.here.com/documentation/map-tile/topics/what-is.html"
-    },
-    "config": {
-      "url": "https://{1-4}.aerial.maps.api.here.com/maptile/2.1/maptile/newest/hybrid.day/{z}/{x}/{y}/256/png8?lg=ENG&app_id=ourappid&token=ourtoken"
-    }
+```json
+{
+  "title": "HERE Satellite",
+  "group": "Aerial",
+  "type": "XYZ",
+  "about": {
+    "organisation": "HERE Technologies",
+    "url": "https://developer.here.com/documentation/map-tile/topics/what-is.html"
+  },
+  "config": {
+    "url": "https://{1-4}.aerial.maps.api.here.com/maptile/2.1/maptile/newest/hybrid.day/{z}/{x}/{y}/256/png8?lg=ENG&app_id=ourappid&token=ourtoken"
   }
-  ```
+}
+```
+
+==- ArcGIS World Imagery
+
+```json
+{
+  "title": "ArcGIS World Imagery",
+  "group": "Imagery",
+  "type": "XYZ",
+  "config": {
+    "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+  }
+}
+```
 
 ==-
 
@@ -363,125 +376,125 @@ Set `"visible": true` for the default basemap.
 
 ==- OpenStreetMap
 
-  ```json
-  {
-    "title": "OpenStreetMap",
-    "group": "Basemap",
-    "type": "XYZ",
-    "about": {
-      "organisation": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/about"
-    },
-    "config": {
-      "url": "https://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-    }
+```json
+{
+  "title": "OpenStreetMap",
+  "group": "Basemap",
+  "type": "XYZ",
+  "about": {
+    "organisation": "OpenStreetMap",
+    "url": "https://www.openstreetmap.org/about"
+  },
+  "config": {
+    "url": "https://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png"
   }
-  ```
+}
+```
 
   Other OpenStreetMap layers are available at https://wiki.openstreetmap.org/wiki/Tile_servers.
 
 ==- HERE
 
-  ```json
-  {
-    "title": "HERE Map",
-    "group": "Basemap",
-    "type": "XYZ",
-    "about": {
-      "organisation": "HERE Technologies",
-      "url": "https://developer.here.com/documentation/map-tile/topics/what-is.html"
-    },
-    "config": {
-      "url": "https://{1-4}.base.maps.api.here.com/maptile/2.1/maptile/newest/normal.day/{z}/{x}/{y}/256/png8?lg=ENG&app_id=ourappid&token=ourtoken"
-    }
+```json
+{
+  "title": "HERE Map",
+  "group": "Basemap",
+  "type": "XYZ",
+  "about": {
+    "organisation": "HERE Technologies",
+    "url": "https://developer.here.com/documentation/map-tile/topics/what-is.html"
+  },
+  "config": {
+    "url": "https://{1-4}.base.maps.api.here.com/maptile/2.1/maptile/newest/normal.day/{z}/{x}/{y}/256/png8?lg=ENG&app_id=ourappid&token=ourtoken"
   }
-  ```
+}
+```
 
 ==- Stamen Watercolor
 
-  ```json
-  {
-    "title": "Stamen Watercolor",
-    "group": "Basemap",
-    "type": "XYZ",
-    "about": {
-      "organisation": "Stamen",
-      "url": "http://maps.stamen.com"
-    },
-    "config": {
-      "url": "https://stamen-tiles-{a-d}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg"
-    }
+```json
+{
+  "title": "Stamen Watercolor",
+  "group": "Basemap",
+  "type": "XYZ",
+  "about": {
+    "organisation": "Stamen",
+    "url": "http://maps.stamen.com"
+  },
+  "config": {
+    "url": "https://stamen-tiles-{a-d}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg"
   }
-  ```
+}
+```
 
 ==- Stamen Terrain
 
-  ```json
-  {
-    "title": "Stamen Terrain",
-    "group": "Basemap",
-    "type": "XYZ",
-    "about": {
-      "organisation": "Stamen",
-      "url": "http://maps.stamen.com"
-    },
-    "config": {
-      "url": "https://stamen-tiles-{a-d}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png"
-    }
+```json
+{
+  "title": "Stamen Terrain",
+  "group": "Basemap",
+  "type": "XYZ",
+  "about": {
+    "organisation": "Stamen",
+    "url": "http://maps.stamen.com"
+  },
+  "config": {
+    "url": "https://stamen-tiles-{a-d}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png"
   }
-  ```
+}
+```
 
 ==- Vicmap
 
-  ```json
-  {
-    "title": "Vicmap",
-    "group": "Basemap",
-    "type": "XYZ",
-    "visible": true,
-    "about": {
-      "source": "Vicmap Maps and Services",
-      "organisation": "DELWP",
-      "url": "https://www.land.vic.gov.au/maps-and-spatial/data-services/vicmap-basemap/licensing-and-copyright"
-    },
-    "config": {
-      "url": "https://base.maps.vic.gov.au/wmts/CARTO_WM_256/EPSG:3857:256/{z}/{x}/{y}.png"
-    }
+```json
+{
+  "title": "Vicmap",
+  "group": "Basemap",
+  "type": "XYZ",
+  "visible": true,
+  "about": {
+    "source": "Vicmap Maps and Services",
+    "organisation": "DELWP",
+    "url": "https://www.land.vic.gov.au/maps-and-spatial/data-services/vicmap-basemap/licensing-and-copyright"
+  },
+  "config": {
+    "url": "https://base.maps.vic.gov.au/wmts/CARTO_WM_256/EPSG:3857:256/{z}/{x}/{y}.png"
   }
-  ```
+}
+```
 
-  https://base.maps.vic.gov.au/service?SERVICE=WMTS&REQUEST=Getcapabilities
+https://base.maps.vic.gov.au/service?SERVICE=WMTS&REQUEST=Getcapabilities
 
 ==- Mapscape
 
-  Pozi is not currently licensed for Mapscape. This configuration is for evaluation purposes only.
+Pozi is not currently licensed for Mapscape. This configuration is for evaluation purposes only.
 
-  ```json
-  {
-    "title": "Mapscape",
-    "group": "Basemap",
-    "type": "XYZ",
-    "about": {
-      "organisation": "Spatial Vision",
-      "url": "https://spatialvision.com.au/mapscape/"
-    },
-    "config": {
-      "url": "https://proxy.pozi.com/https://mapscape.maps.em.vic.gov.au/color/{z}/{x}/{y}.png"
-    }
+```json
+{
+  "title": "Mapscape",
+  "group": "Basemap",
+  "type": "XYZ",
+  "about": {
+    "organisation": "Spatial Vision",
+    "url": "https://spatialvision.com.au/mapscape/"
+  },
+  "config": {
+    "url": "https://proxy.pozi.com/https://mapscape.maps.em.vic.gov.au/color/{z}/{x}/{y}.png"
   }
-  ```
+}
+```
 
 ==- Queensland Globe
 
-  ```json
-  {
-    "title": "Queensland Globe Lite",
-    "group": "Basemap",
-    "type": "XYZ",
-    "config": {
-      "url": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Basemaps/QldMap_Lite/MapServer/tile/{z}/{y}/{x}?blankTile=false&browserCache=Map"
-    }
+```json
+{
+  "title": "Queensland Globe Lite",
+  "group": "Basemap",
+  "type": "XYZ",
+  "config": {
+    "url": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Basemaps/QldMap_Lite/MapServer/tile/{z}/{y}/{x}?blankTile=false&browserCache=Map"
   }
+}
 ```
 
 Basemaps are available in `QldMap_Lite`, `QldBase_Pastel` and other variations: https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Basemaps/.

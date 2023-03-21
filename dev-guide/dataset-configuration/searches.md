@@ -24,6 +24,28 @@ For municipal client site:
 * update Geocode Earth search config to replace bounding box parameters with `boundary.gid=` parameter
 * check results
 
+==- Example
+
+```json
+{
+  "title": "Address Search",
+  "type": "Search",
+  "showInLayerControl": false,
+  "search": {
+    "enabled": true,
+    "id": "address",
+    "autocomplete": true,
+    "type": "mapzen"
+  },
+  "config": {
+    "spatial": {
+      "url": "https://api.geocode.earth/v1/autocomplete?text=(searchquery)&layers=address,street&boundary.gid=whosonfirst:county:102049053&api_key=xxxx"
+    }
+  },
+  "showInLayerControlRawConfig": false
+}
+```
+
 ### Filter by Bounding Coordinates
 
 ==- Example
@@ -52,8 +74,7 @@ For municipal client site:
   },
   "config": {
     "spatial": {
-      "url": "https://api.geocode.earth/v1/autocomplete?text=(searchquery)&layers=address,street&boundary.rect.min_lat=[min_lat]&boundary.rect.min_lon=[min_lon]&boundary.rect.max_lat=[max_lat]&boundary.rect.max_lon=[max_lon]&api_key=ge-39bfbedc55be11c0",
-      "id": "$id"
+      "url": "https://api.geocode.earth/v1/autocomplete?text=(searchquery)&layers=address,street&boundary.rect.min_lat=[min_lat]&boundary.rect.min_lon=[min_lon]&boundary.rect.max_lat=[max_lat]&boundary.rect.max_lon=[max_lon]&api_key=ge-39bfbedc55be11c0"
     }
   }
 }

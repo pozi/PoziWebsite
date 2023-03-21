@@ -181,6 +181,10 @@ Test by right-clicking new scheduled task and selecting Run. Check the Pipeline 
 
 ==- Search results are not showing new records
 
-  The source data may be out of date. Open the relevant VRT file in a text editor, identify the source table path in the `OGRVRTLayer` element, navigate to the source table folder, and check the file date.
+The source data may be out of date. Open the relevant VRT file in a text editor, identify the source table path in the `OGRVRTLayer` element, navigate to the source table folder, and check the file date.
+
+==- Target layer is not displayed after clicking on search result
+
+Ensure that `map_layer` value in the VRT contains no spaces or special characters
 
 ==-

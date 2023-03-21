@@ -109,6 +109,44 @@ When specifying the URL for QGIS project files, any backslashes must be converte
 
 ==-
 
+##### Parameters
+
+###### Use alternative `GetFeatureInfo` request parameters
+
+By default, Pozi generates its `GetFeatureInfo` requests to use `info_format=application/json`.
+
+However, if the endpoint is an ArcGIS server, it may respond with the following error: "Parameter 'InfoFormat' contains unacceptable value." This is because ArcGIS's WMS GetFeatureInfo requires the parameter `info_format=application/geojson`.
+
+Override Pozi's default `GetFeatureInfo` behaviour as follows:
+
+```json
+  "config": {
+    "spatial": {
+      "params": {
+        "info_format": "application/geojson"
+      }
+```
+
+==- Example
+
+```json
+{
+  "title": "Society - Schools And School Catchments",
+  "group": "Society",
+  "type": "WMSGetCapabilities",
+  "config": {
+    "spatial": {
+      "url": "https://spatial-gis.information.qld.gov.au/arcgis/services/Society/SchoolsAndSchoolCatchments/MapServer/WMSServer?&service=WMS&request=GetCapabilities",
+      "params": {
+        "info_format": "application/geojson"
+      }
+    }
+  }
+}
+```
+
+==-
+
 #### Single-Layer Catalogue
 
 When you specify a reference to an individual layer in the GetCapabilities URL, you can effectively use the response as a single-layer catalogue.
@@ -200,9 +238,9 @@ These custom catalogue files can be hosted as static files.
 ```json
   "config": {
     "spatial": {
-    "params": {
-      "BBOX": "-38.27,144.66,-38.24,144.71"
-    }
+      "params": {
+        "BBOX": "-38.27,144.66,-38.24,144.71"
+      }
 ```
 
 ==- Example
@@ -315,7 +353,17 @@ The matching is case-insensitive and allows for the use of wildcards for inclusi
 ==- Example
 
 ```json
-  "layerFilter": "(*urban*|*commercial*); !*boundary",
+{
+  "title": "Transportation - State Road Information",
+  "group": "Transportation",
+  "type": "WMSGetCapabilities",
+  "config": {
+    "spatial": {
+      "url": "https://spatial-gis.information.qld.gov.au/arcgis/services/Transportation/StateRoadInformation/MapServer/WMSServer?&service=WMS&request=GetCapabilities"
+    }
+  },
+  "layerFilter": "!*not available*"
+}
 ```
 
 ==-
