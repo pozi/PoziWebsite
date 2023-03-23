@@ -160,11 +160,48 @@ When you fund the development of new features, you have ongoing access to the ne
 
 ==-
 
+## Comparison
+
+<style>
+    .comparisonTable th {
+        background: #E9E9E9;
+    }
+    /* .comparisonTable tr:nth-child(1) { background: #F9F9F9; }
+    .comparisonTable tr:nth-child(4) { background: #F9F9F9; } */
+</style>
+
+<div class="comparisonTable">
+
+| &nbsp; | <h3>Intramaps</h3> | <h3>Pozi</h3> |
+| --- |:---:|:---:|
+| <big>**User Experience**</big> | | |
+| Responsive design | ✔️ | ✔️ |
+| Annotation | ✔️ | ✔️ |
+| Print | ✔️ | ✔️ |
+| Multi-feature selection | ✔️ | ✔️ |
+| Linked data | ✔️ | ✔️ |
+| Mail merge | ✔️ | ✔️ |
+| Data entry | ✔️ | (coming soon) |
+| Unified Search |  | ✔️ |
+| <big>**Administration**</big> | | |
+| Configuration tool(s) | MapManager & ConfigManager | QGIS Desktop |
+| Connections for all major data formats | ✔️ | ✔️ |
+| SQL queries | ✔️ | ✔️ |
+| Online reference and training material |  | ✔️ |
+| <big>**Technology**</big> | | |
+| Map Library | OpenLayers 2 (2013) | OpenLayers 7 (2023) |
+| OGC standards compliant (WMS/WFS) | ✔️ | ✔️ |
+| Vector Tiles |    | ✔️ |
+| <big>**Security**</big> | | |
+| User access | Active Directory | Azure Active Directory and App Proxy |
+
+</div>
+
 ## Unhappy with the lack of support for Intramaps?
 
 You're not alone.
 
-But with Pozi, your GIS is no longer tied to single vendor and its technology decisions.
+But with Pozi, your organisation's GIS is no longer locked to single software vendor.
 
 ### On a contract?
 
