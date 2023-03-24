@@ -34,7 +34,7 @@ As long as the staff member or other authorised user has permission to access th
 
 Users use a separate URL that enforces a login to Azure Active Directory before the browser loads the Pozi site.
 
-Example:
+**Example**:
 
 * Public URL: `https://<sitename>.pozi.com/`
 * Staff URL: `https://<sitename>.enterprise.pozi.com/`
@@ -43,7 +43,7 @@ Example:
 
 ### Application Proxy (Enterprise Application)
 
-`Azure`: **Enterprise Applications** => **<PoziServer>** => **Application Proxy**
+`Azure`: **Enterprise Applications** => **`<PoziServer>`** => **Application Proxy**
 
 Follow the Microsoft documentation for set up:
 
@@ -57,12 +57,13 @@ The following settings are for a Pozi server setup with only QGIS Server and IIS
 
 * **Internal Url** : `http://<servername>/`. Replace `<servername>` with the actual name of the server.
 
-When visiting the above URL on the internal network, it should show an Internet Information Services welcome page.
+  When visiting the above URL on the internal network, it should show an Internet Information Services welcome page.
 
 * **External Url**: `https://<poziservername>-<councilname>.msapproxy.net`.
 
-Choose a name for `<poziservername>` that easily relates to the actual server that Pozi is running on in the internal network (e.g. `poziserver`).
-The `<councilname>` is a name that has been given to the organisation by MS Azure.
+  Choose a name for `<poziservername>` that easily relates to the actual server that Pozi is running on in the internal network (e.g. `poziserver`).
+
+  The `<councilname>` is a name that has been given to the organisation by MS Azure.
 
 * **Pre Authentication**: `Azure Active Directory`.
 
@@ -83,7 +84,7 @@ The following settings are for a Pozi server setup with a Pozi Server installati
 
 * **Internal Url** : `https://local.pozi.com` (or any other URL that uses a local DNS with a locally signed SSL certificate pointing to the server that runs PoziServer)
 
-When visiting the above URL on the internal network, it should show a Pozi Connect Server welcome page.
+  When visiting the above URL on the internal network, it should show a Pozi Connect Server welcome page.
 
 All other settings here (like **External Url** and **Pre Authentication** are the same as above)
 
@@ -96,6 +97,7 @@ When configured correctly, a request from a logged-in user to URL (for example).
 `https://local.pozi.com/resourcecheck/cardinia.json`
 
 Ensure it doesn't return a response to a non-logged-in or anonymous user.
+
 #### Other settings:
 
 ![](/dev-guide/img/azure-settings.png){style="width:600px"}
@@ -103,7 +105,7 @@ Ensure it doesn't return a response to a non-logged-in or anonymous user.
 
 ### App Registration
 
-`Azure`: **App Registrations** => **<PoziServer>**
+`Azure`: **App Registrations** => **`<PoziServer>`**
 
 * Set Pozi up in Azure as a registered app (admin privileges required): [https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal)
 * Record the Application id (also known as as client id) as well as tenant id
@@ -145,7 +147,7 @@ AADSTS50105: Your administrator has configured the application Pozi Server ('xxx
 
 **Steps to authorise users/groups**
 
-`Azure`: **Enterprise Applications** => **<PoziServer>**
+`Azure`: **Enterprise Applications** => **`<PoziServer>`**
 
 * In the Azure Portal, go to Enterprise Applications, select the enterprise application for the Pozi Application Proxy
 * Under `Manage`, select `Users and groups`
