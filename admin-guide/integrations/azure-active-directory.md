@@ -1,7 +1,7 @@
 ---
 description: Azure AD Application Proxy integration for Pozi GIS
 icon: dot
-tags: [Pozi Enterprise Cloud, Cardinia Shire Council]
+tags: [Pozi Enterprise Cloud]
 ---
 
 # Azure AD Application Proxy
@@ -14,8 +14,8 @@ Pozi's [Azure AD Application Proxy](https://azure.microsoft.com/en-au/services/a
 
 ## How it works
 
-1. user visits the dedicated Pozi Enterprise address (eg `cardinia.enterprise.pozi.com`)
-2. Pozi app sends a request to client's MS App Proxy endpoint (eg `https://pozi-cardiniavicgovau.msappproxy.net/resourcecheck/cardinia.json`)
+1. user visits the dedicated Pozi Enterprise address (eg `<sitename>.enterprise.pozi.com`)
+2. Pozi app sends a request to client's MS App Proxy endpoint (eg `https://<poziservername>-<councilname>.msapproxy.net/resourcecheck/<sitename>.json`)
 3. if user is signed in to their Microsoft account, Pozi continues to load, and the user will have access to the internal datasets configured for Pozi within the organisation's app proxy
 
 If the user is not already logged in, the browser is redirected to the Microsoft login page.
@@ -28,7 +28,7 @@ Once signed in, users will have access to internal datasets for as long their Mi
 
 Whether a user can access private datasets is based on whether the user is given permission by the organisation to access the MS App Proxy endpoint that is dedicated for Pozi.
 
-As long as the staff member or other authorised user has permission to access the MS App Proxy endpoint ( eg `https://pozi-cardiniavicgovau.msappproxy.net/`), then they will have access to the internal datasets that have been configured within Pozi.
+As long as the staff member or other authorised user has permission to access the MS App Proxy endpoint ( eg `https://<poziservername>-<councilname>.msapproxy.net/`), then they will have access to the internal datasets that have been configured within Pozi.
 
 ### URL
 
@@ -90,11 +90,11 @@ All other settings here (like **External Url** and **Pre Authentication** are th
 
 When configured correctly, a request from a logged-in user to URL (for example)...
 
-`https://pozi-cardiniavicgovau.msappproxy.net/resourcecheck/cardinia.json`
+`https://<poziservername>-<councilname>.msapproxy.net/resourcecheck/<sitename>.json`
 
 ...should return the same response as a local request to...
 
-`https://local.pozi.com/resourcecheck/cardinia.json`
+`https://local.pozi.com/resourcecheck/<sitename>.json`
 
 Ensure it doesn't return a response to a non-logged-in or anonymous user.
 
@@ -115,7 +115,7 @@ Ensure it doesn't return a response to a non-logged-in or anonymous user.
 ##### Web - Redirect URIs
 
 Add the App Proxy Url to `Redirect URIs` to the `Web` section. E.g.:
-  * `https://pozi-cardiniavicgovau.msappproxy.net/`
+  * `https://<poziservername>-<councilname>.msapproxy.net/`
 
 ##### Single Page Application - Redirect URIs
 
@@ -123,7 +123,7 @@ Add the following `Redirect URIs` to the `Single-page application` section:
   * `https://<sitename>.enterprise.pozi.com/`
   * `https://staging.pozi.com/master/` (for client testing/debugging)
   * `http://localhost:3000/` (for Pozi development purposes)
-  * If needed, add any extra URIs that the client uses (e.g. `https://cardinia-qgis.enterprise.pozi.com/`)
+  * If needed, add any extra URIs that the client uses (e.g. `https://<sitename>-qgis.enterprise.pozi.com/`)
 
 #### Implicit grant and hybrid flows:
 
@@ -135,7 +135,7 @@ Add the following `Redirect URIs` to the `Single-page application` section:
 
 #### Authorisation
 
-All going well, it should be possible to visit the App Proxy URL (in our example case: `https://pozi-cardiniavicgovau.msappproxy.net/`). If an error is shown like: `Sorry, but we’re having trouble with signing you in.` with a text similar to below, then we will need to give the relevant users/groups access.
+All going well, it should be possible to visit the App Proxy URL (in our example case: `https://<poziservername>-<councilname>.msapproxy.net/`). If an error is shown like: `Sorry, but we’re having trouble with signing you in.` with a text similar to below, then we will need to give the relevant users/groups access.
 
 
 
@@ -166,7 +166,7 @@ Access should now be granted to the application proxy and the URL should be acce
 * Give Pozi the following permissions:
   - API/Permissions Name: `User.Read`, Type: `Delegated`, Admin consent required: `No`. This should allow Pozi to determine access based on a user's role(s).
 
-<!-- Important: a user authenticated with the council's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://pozi-cardiniavicgovau.msappproxy.net/`). -->
+<!-- Important: a user authenticated with the council's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://<poziservername>-<councilname>.msapproxy.net/`). -->
 
 ### Site URL (Enterprise vs public)
 
