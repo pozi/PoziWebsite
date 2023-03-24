@@ -52,7 +52,7 @@ https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-pr
 Choose, depending on the way the Pozi Server has been configured one of the 2 following sections for the correct settings.
 
 
-## IIS + QGIS Server only (i.e. without Pozi Connect Server) (Preferred)
+#### IIS + QGIS Server only (i.e. without Pozi Connect Server) (Preferred)
 The following settings are for a Pozi server setup with only QGIS Server and IIS.
 
 * **Internal Url** : `http://<servername>/`. Replace `<servername>` with the actual name of the server.
@@ -78,7 +78,7 @@ When configured correctly, a request from a logged-in user to URL (for example).
 
 Ensure it doesn't return a response to a non-logged-in or anonymous user.
 
-## Pozi Connect Server + local DNS (Legacy)
+#### Pozi Connect Server + local DNS (Legacy)
 The following settings are for a Pozi server setup with a Pozi Server installation that proxies all QGIS Server and IIS requests.
 
 * **Internal Url** : `https://local.pozi.com` (or any other URL that uses a local DNS with a locally signed SSL certificate pointing to the server that runs PoziServer)
@@ -96,7 +96,7 @@ When configured correctly, a request from a logged-in user to URL (for example).
 `https://local.pozi.com/resourcecheck/cardinia.json`
 
 Ensure it doesn't return a response to a non-logged-in or anonymous user.
-## Other settings:
+#### Other settings:
 
 ![](/dev-guide/img/azure-settings.png){style="width:600px"}
 
@@ -180,7 +180,7 @@ Public users should continue to use `<sitename>.pozi.com`. They will not be prom
 
 * TO BE WRITTEN
 
-### App Roles
+<!-- ### App Roles
 
 :::note Under Construction
 
@@ -218,5 +218,5 @@ The instructions below follow the [Microsoft guide on adding app roles](https://
 
 #### App Roles in Tokens
 
-* The roles defined above will automatically become available in the authentication tokens in the browser, allowing Pozi to change its behaviour depending on the roles that the user (or the group they are in) have.
+* The roles defined above will automatically become available in the authentication tokens in the browser, allowing Pozi to change its behaviour depending on the roles that the user (or the group they are in) have. -->
 
