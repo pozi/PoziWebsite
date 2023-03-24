@@ -43,7 +43,7 @@ Users use a separate URL that enforces a login to Azure Active Directory before 
 
 ### Application Proxy (Enterprise Application)
 
-`Azure`: **Enterprise Applications** => **`<PoziServer>`** => **Application Proxy**
+`Azure`: **Enterprise Applications** => **\<PoziServer\>** => **Application Proxy**
 
 Follow the Microsoft documentation for set up:
 
@@ -105,7 +105,7 @@ Ensure it doesn't return a response to a non-logged-in or anonymous user.
 
 ### App Registration
 
-`Azure`: **App Registrations** => **`<PoziServer>`**
+`Azure`: **App Registrations** => **\<PoziServer\>**
 
 * Set Pozi up in Azure as a registered app (admin privileges required): [https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal)
 * Record the Application id (also known as as client id) as well as tenant id
@@ -147,7 +147,7 @@ AADSTS50105: Your administrator has configured the application Pozi Server ('xxx
 
 **Steps to authorise users/groups**
 
-`Azure`: **Enterprise Applications** => **`<PoziServer>`**
+`Azure`: **Enterprise Applications** => **\<PoziServer\>**
 
 * In the Azure Portal, go to Enterprise Applications, select the enterprise application for the Pozi Application Proxy
 * Under `Manage`, select `Users and groups`
