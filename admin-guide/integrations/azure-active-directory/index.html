@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.732935162248">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.732945573789">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.732935162248" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.732945573789" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.732935162248" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.732945573789" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.732935162248" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.732945573789" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -353,30 +353,72 @@
         <span>Azure Configuration</span>
     </h2>
 </doc-anchor-target>
-<doc-anchor-target id="app-proxy">
+<doc-anchor-target id="application-proxy-enterprise-application">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#app-proxy">#</doc-anchor-trigger>
-        <span>App Proxy</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#application-proxy-enterprise-application">#</doc-anchor-trigger>
+        <span>Application Proxy (Enterprise Application)</span>
     </h3>
 </doc-anchor-target>
-<p>Microsoft documentation: <a href="https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-add-on-premises-application#add-an-on-premises-app-to-azure-ad">https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-add-on-premises-application#add-an-on-premises-app-to-azure-ad</a></p>
+<p><code v-pre>Azure</code>: <strong>Applications</strong> =&gt; <strong>Enterprise Applications</strong> =&gt; <strong><PoziServer></strong> =&gt; <strong>Application Proxy</strong></p>
+<p>Follow the Microsoft documentation for set up:</p>
+<p><a href="https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-add-on-premises-application#add-an-on-premises-app-to-azure-ad">https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-add-on-premises-application#add-an-on-premises-app-to-azure-ad</a></p>
+<p>Choose, depending on the way the Pozi Server has been configured one of the 2 following sections for the correct settings.</p>
+<doc-anchor-target id="iis--qgis-server-only-ie-without-pozi-connect-server-preferred">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#iis--qgis-server-only-ie-without-pozi-connect-server-preferred">#</doc-anchor-trigger>
+        <span>IIS + QGIS Server only (i.e. without Pozi Connect Server) (Preferred)</span>
+    </h2>
+</doc-anchor-target>
+<p>The following settings are for a Pozi server setup with only QGIS Server and IIS.</p>
 <ul>
-<li>Azure Application Proxy to point to <a href="https://local.pozi.com/">https://local.pozi.com/</a> (or other previously configured DNS forward address)</li>
-<li>ensure &quot;Pre Authentication&quot; is Azure Auth, not passthrough</li>
+<li><strong>Internal Url</strong> : <code v-pre>http://&lt;servername&gt;/</code>. Replace <code v-pre>&lt;servername&gt;</code> with the actual name of the server.</li>
 </ul>
-<p>Other settings:</p>
-<p><img src="../../../dev-guide/img/azure-settings.png" style="width:600px" alt="" /></p>
+<p>When visiting the above URL on the internal network, it should show an Internet Information Services welcome page.</p>
+<ul>
+<li><strong>External Url</strong>: <code v-pre>https://&lt;poziservername&gt;-&lt;councilname&gt;.msapproxy.net</code>.</li>
+</ul>
+<p>Choose a name for <code v-pre>&lt;poziservername&gt;</code> that easily relates to the actual server that Pozi is running on in the internal network (e.g. <code v-pre>poziserver</code>).
+The <code v-pre>&lt;councilname&gt;</code> is a name that has been given to the organisation by MS Azure.</p>
+<ul>
+<li><strong>Pre Authentication</strong>: <code v-pre>Azure Active Directory</code>.</li>
+</ul>
+<p>Do <strong>not</strong> choose <code v-pre>Passthrough</code> as that will give any visitor access to the internal network, potentially creating a security risk.</p>
+<p>When configured correctly, a request from a logged-in user to URL (for example)...</p>
+<p><code v-pre>https://&lt;poziservername&gt;-&lt;councilname&gt;.msapproxy.net/pozi/qgisserver/wfs3.json</code></p>
+<p>...should return the same response as a local request to...</p>
+<p><code v-pre>http://&lt;servername&gt;/pozi/qgisserver/wfs3.json</code></p>
+<p>Ensure it doesn&#x27;t return a response to a non-logged-in or anonymous user.</p>
+<doc-anchor-target id="pozi-connect-server--local-dns-legacy">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pozi-connect-server--local-dns-legacy">#</doc-anchor-trigger>
+        <span>Pozi Connect Server + local DNS (Legacy)</span>
+    </h2>
+</doc-anchor-target>
+<p>The following settings are for a Pozi server setup with a Pozi Server installation that proxies all QGIS Server and IIS requests.</p>
+<ul>
+<li><strong>Internal Url</strong> : <code v-pre>https://local.pozi.com</code> (or any other URL that uses a local DNS with a locally signed SSL certificate pointing to the server that runs PoziServer)</li>
+</ul>
+<p>When visiting the above URL on the internal network, it should show a Pozi Connect Server welcome page.</p>
+<p>All other settings here (like <strong>External Url</strong> and <strong>Pre Authentication</strong> are the same as above)</p>
 <p>When configured correctly, a request from a logged-in user to URL (for example)...</p>
 <p><code v-pre>https://pozi-cardiniavicgovau.msappproxy.net/resourcecheck/cardinia.json</code></p>
 <p>...should return the same response as a local request to...</p>
 <p><code v-pre>https://local.pozi.com/resourcecheck/cardinia.json</code></p>
 <p>Ensure it doesn&#x27;t return a response to a non-logged-in or anonymous user.</p>
+<doc-anchor-target id="other-settings">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#other-settings">#</doc-anchor-trigger>
+        <span>Other settings:</span>
+    </h2>
+</doc-anchor-target>
+<p><img src="../../../dev-guide/img/azure-settings.png" style="width:600px" alt="" /></p>
 <doc-anchor-target id="app-registration">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#app-registration">#</doc-anchor-trigger>
         <span>App Registration</span>
     </h3>
 </doc-anchor-target>
+<p><code v-pre>Azure</code>: <strong>Applications</strong> =&gt; <strong>App Registrations</strong> =&gt; <strong><PoziServer></strong></p>
 <ul>
 <li>Set Pozi up in Azure as a registered app (admin privileges required): <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal">https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal</a></li>
 <li>Record the Application id (also known as as client id) as well as tenant id</li>
@@ -387,22 +429,46 @@
         <span>Authentication</span>
     </h4>
 </doc-anchor-target>
-<ul>
-<li>Add the App Proxy URL to <code v-pre>Redirect URIs</code> to the <code v-pre>Web</code> section. E.g.:
+<doc-anchor-target id="web---redirect-uris">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#web---redirect-uris">#</doc-anchor-trigger>
+        <span>Web - Redirect URIs</span>
+    </h5>
+</doc-anchor-target>
+<p>Add the App Proxy Url to <code v-pre>Redirect URIs</code> to the <code v-pre>Web</code> section. E.g.:</p>
 <ul>
 <li><code v-pre>https://pozi-cardiniavicgovau.msappproxy.net/</code></li>
 </ul>
-</li>
-<li>Add the following <code v-pre>Redirect URIs</code> to the <code v-pre>Single-page application</code> section:
+<doc-anchor-target id="single-page-application---redirect-uris">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#single-page-application---redirect-uris">#</doc-anchor-trigger>
+        <span>Single Page Application - Redirect URIs</span>
+    </h5>
+</doc-anchor-target>
+<p>Add the following <code v-pre>Redirect URIs</code> to the <code v-pre>Single-page application</code> section:</p>
 <ul>
 <li><code v-pre>https://&lt;sitename&gt;.enterprise.pozi.com/</code></li>
-<li><code v-pre>https://staging.pozi.com/master/</code> (for testing/debugging)</li>
-<li><code v-pre>http://localhost:3000/</code> (for development)</li>
+<li><code v-pre>https://staging.pozi.com/master/</code> (for client testing/debugging)</li>
+<li><code v-pre>http://localhost:3000/</code> (for Pozi development purposes)</li>
 <li>If needed, add any extra URIs that the client uses (e.g. <code v-pre>https://cardinia-qgis.enterprise.pozi.com/</code>)</li>
 </ul>
-</li>
-<li>In <code v-pre>Implicit grant and hybrid flows</code>: <code v-pre>Access tokens</code> and <code v-pre>ID tokens</code> should remain unchecked</li>
-<li>In <code v-pre>Advanced settings</code>: Set <code v-pre>Allow public client flows</code> to <code v-pre>No</code></li>
+<doc-anchor-target id="implicit-grant-and-hybrid-flows">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#implicit-grant-and-hybrid-flows">#</doc-anchor-trigger>
+        <span>Implicit grant and hybrid flows:</span>
+    </h4>
+</doc-anchor-target>
+<ul>
+<li><code v-pre>Access tokens</code> and <code v-pre>ID tokens</code> should remain unchecked</li>
+</ul>
+<doc-anchor-target id="advanced-settings">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#advanced-settings">#</doc-anchor-trigger>
+        <span>Advanced settings:</span>
+    </h4>
+</doc-anchor-target>
+<ul>
+<li>Set <code v-pre>Allow public client flows</code> to <code v-pre>No</code></li>
 </ul>
 <doc-anchor-target id="authorisation">
     <h4>
@@ -455,11 +521,11 @@
 </ul>
 </li>
 </ul>
-<p>Important: a user authenticated with the council&#x27;s Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. <code v-pre>https://pozi-cardiniavicgovau.msappproxy.net/</code> as well as <code v-pre>https://pozi-cardiniavicgovau.msappproxy.net/iis/qgisserver/</code>).</p>
-<doc-anchor-target id="site-url">
+<p>Important: a user authenticated with the council&#x27;s Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. <code v-pre>https://pozi-cardiniavicgovau.msappproxy.net/</code>).</p>
+<doc-anchor-target id="site-url-enterprise-vs-public">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#site-url">#</doc-anchor-trigger>
-        <span>Site URL</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#site-url-enterprise-vs-public">#</doc-anchor-trigger>
+        <span>Site URL (Enterprise vs public)</span>
     </h3>
 </doc-anchor-target>
 <p>Using <code v-pre>&lt;sitename&gt;.enterprise.pozi.com</code> forces user to authenticate before proceeding to the Pozi site. These users will gain access to the private datasets.</p>
