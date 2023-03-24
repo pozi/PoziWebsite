@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.732946061778">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.732946552952">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.732946061778" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.732946552952" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.732946061778" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.732946552952" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.732946061778" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.732946552952" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -359,7 +359,7 @@
         <span>Application Proxy (Enterprise Application)</span>
     </h3>
 </doc-anchor-target>
-<p><code v-pre>Azure</code>: <strong>Applications</strong> =&gt; <strong>Enterprise Applications</strong> =&gt; <strong><PoziServer></strong> =&gt; <strong>Application Proxy</strong></p>
+<p><code v-pre>Azure</code>: <strong>Enterprise Applications</strong> =&gt; <strong><PoziServer></strong> =&gt; <strong>Application Proxy</strong></p>
 <p>Follow the Microsoft documentation for set up:</p>
 <p><a href="https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-add-on-premises-application#add-an-on-premises-app-to-azure-ad">https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-add-on-premises-application#add-an-on-premises-app-to-azure-ad</a></p>
 <p>Choose, depending on the way the Pozi Server has been configured one of the 2 following sections for the correct settings.</p>
@@ -418,7 +418,7 @@ The <code v-pre>&lt;councilname&gt;</code> is a name that has been given to the 
         <span>App Registration</span>
     </h3>
 </doc-anchor-target>
-<p><code v-pre>Azure</code>: <strong>Applications</strong> =&gt; <strong>App Registrations</strong> =&gt; <strong><PoziServer></strong></p>
+<p><code v-pre>Azure</code>: <strong>App Registrations</strong> =&gt; <strong><PoziServer></strong></p>
 <ul>
 <li>Set Pozi up in Azure as a registered app (admin privileges required): <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal">https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal</a></li>
 <li>Record the Application id (also known as as client id) as well as tenant id</li>
@@ -496,6 +496,7 @@ The <code v-pre>&lt;councilname&gt;</code> is a name that has been given to the 
     </div>
 </div>
 <p><strong>Steps to authorise users/groups</strong></p>
+<p><code v-pre>Azure</code>: <strong>Enterprise Applications</strong> =&gt; <strong><PoziServer></strong></p>
 <ul>
 <li>In the Azure Portal, go to Enterprise Applications, select the enterprise application for the Pozi Application Proxy</li>
 <li>Under <code v-pre>Manage</code>, select <code v-pre>Users and groups</code></li>
@@ -521,7 +522,7 @@ The <code v-pre>&lt;councilname&gt;</code> is a name that has been given to the 
 </ul>
 </li>
 </ul>
-<p>Important: a user authenticated with the council&#x27;s Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. <code v-pre>https://pozi-cardiniavicgovau.msappproxy.net/</code>).</p>
+<!-- Important: a user authenticated with the council's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://pozi-cardiniavicgovau.msappproxy.net/`). -->
 <doc-anchor-target id="site-url-enterprise-vs-public">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#site-url-enterprise-vs-public">#</doc-anchor-trigger>
@@ -530,33 +531,15 @@ The <code v-pre>&lt;councilname&gt;</code> is a name that has been given to the 
 </doc-anchor-target>
 <p>Using <code v-pre>&lt;sitename&gt;.enterprise.pozi.com</code> forces user to authenticate before proceeding to the Pozi site. These users will gain access to the private datasets.</p>
 <p>Public users should continue to use <code v-pre>&lt;sitename&gt;.pozi.com</code>. They will not be prompted to authenticate, and they will have access to only public data.</p>
-<doc-anchor-target id="token-based-authenticationauthorisation">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#token-based-authenticationauthorisation">#</doc-anchor-trigger>
-        <span>Token-based Authentication/Authorisation</span>
-    </h3>
-</doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-500 dark:bg-dark-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-500 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-            <h5>Under Construction</h5>
-<p><em>This section is a work in progress. Please get in touch with us before following any of the steps below</em></p>
-        </div>
-    </div>
-</div>
-<ul>
-<li>TO BE WRITTEN</li>
-</ul>
+<!-- ### Token-based Authentication/Authorisation
+
+:::note Under Construction
+
+*This section is a work in progress. Please get in touch with us before following any of the steps below*
+
+:::
+
+* TO BE WRITTEN -->
 <!-- ### App Roles
 
 :::note Under Construction
