@@ -50,6 +50,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 #### Improved
 
+- [x] 👍 maintain existing feature highlight when clicking/hovering on a non-spatial child record
 - [x] 👍 enable support for WMTS catalogues as basemaps
 - [x] 👍 support for CORS-restricted catalogues by sending requests through a proxy
 - [x] 👍 display a loading spinner while waiting for What's Here results
@@ -62,6 +63,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [x] 🪲 restore map to fullscreen after closing drawer on mobile
 - [x] 🪲 Jotform forms were sometimes not shown on initial click
 - [x] 🪲 'Select by Property PFI list (CSV)' function is now working again
+- [x] 🪲 prevent WMTS basemap disappearing when layer refresh button is clicked
 
 ### February 2023
 
