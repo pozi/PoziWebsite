@@ -52,7 +52,7 @@ https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-pr
 Choose, depending on the way the Pozi Server has been configured one of the 2 following sections for the correct settings.
 
 
-#### IIS + QGIS Server only (i.e. without Pozi Connect Server) (Preferred)
+#### PREFERRED: IIS + QGIS Server only (i.e. without Pozi Connect Server)
 The following settings are for a Pozi server setup with only QGIS Server and IIS.
 
 * **Internal Url** : `http://<servername>/`. Replace `<servername>` with the actual name of the server.
@@ -79,7 +79,7 @@ When configured correctly, a request from a logged-in user to URL (for example).
 
 Ensure it doesn't return a response to a non-logged-in or anonymous user.
 
-#### Pozi Connect Server + local DNS (Legacy)
+#### LEGACY: Pozi Connect Server + local DNS
 The following settings are for a Pozi server setup with a Pozi Server installation that proxies all QGIS Server and IIS requests.
 
 * **Internal Url** : `https://local.pozi.com` (or any other URL that uses a local DNS with a locally signed SSL certificate pointing to the server that runs PoziServer)
