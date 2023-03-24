@@ -41,16 +41,51 @@ Example:
 
 ## Azure Configuration
 
-### App Proxy
+### Application Proxy (Enterprise Application)
 
-Microsoft documentation: https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-add-on-premises-application#add-an-on-premises-app-to-azure-ad
+`Azure`: **Applications** => **Enterprise Applications** => **<PoziServer>** => **Application Proxy**
 
-* Azure Application Proxy to point to https://local.pozi.com/ (or other previously configured DNS forward address)
-* ensure "Pre Authentication" is Azure Auth, not passthrough
+Follow the Microsoft documentation for set up:
 
-Other settings:
+https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-add-on-premises-application#add-an-on-premises-app-to-azure-ad
 
-![](/dev-guide/img/azure-settings.png){style="width:600px"}
+Choose, depending on the way the Pozi Server has been configured one of the 2 following sections for the correct settings.
+
+
+## IIS + QGIS Server only (i.e. without Pozi Connect Server) (Preferred)
+The following settings are for a Pozi server setup with only QGIS Server and IIS.
+
+* **Internal Url** : `http://<servername>/`. Replace `<servername>` with the actual name of the server.
+
+When visiting the above URL on the internal network, it should show an Internet Information Services welcome page.
+
+* **External Url**: `https://<poziservername>-<councilname>.msapproxy.net`.
+
+Choose a name for `<poziservername>` that easily relates to the actual server that Pozi is running on in the internal network (e.g. `poziserver`).
+The `<councilname>` is a name that has been given to the organisation by MS Azure.
+
+* **Pre Authentication**: `Azure Active Directory`.
+
+Do **not** choose `Passthrough` as that will give any visitor access to the internal network, potentially creating a security risk.
+
+When configured correctly, a request from a logged-in user to URL (for example)...
+
+`https://<poziservername>-<councilname>.msapproxy.net/pozi/qgisserver/wfs3.json`
+
+...should return the same response as a local request to...
+
+`http://<servername>/pozi/qgisserver/wfs3.json`
+
+Ensure it doesn't return a response to a non-logged-in or anonymous user.
+
+## Pozi Connect Server + local DNS (Legacy)
+The following settings are for a Pozi server setup with a Pozi Server installation that proxies all QGIS Server and IIS requests.
+
+* **Internal Url** : `https://local.pozi.com` (or any other URL that uses a local DNS with a locally signed SSL certificate pointing to the server that runs PoziServer)
+
+When visiting the above URL on the internal network, it should show a Pozi Connect Server welcome page.
+
+All other settings here (like **External Url** and **Pre Authentication** are the same as above)
 
 When configured correctly, a request from a logged-in user to URL (for example)...
 
@@ -61,23 +96,40 @@ When configured correctly, a request from a logged-in user to URL (for example).
 `https://local.pozi.com/resourcecheck/cardinia.json`
 
 Ensure it doesn't return a response to a non-logged-in or anonymous user.
+## Other settings:
+
+![](/dev-guide/img/azure-settings.png){style="width:600px"}
+
 
 ### App Registration
+
+`Azure`: **Applications** => **App Registrations** => **<PoziServer>**
 
 * Set Pozi up in Azure as a registered app (admin privileges required): [https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal)
 * Record the Application id (also known as as client id) as well as tenant id
 
 #### Authentication
 
-* Add the App Proxy URL to `Redirect URIs` to the `Web` section. E.g.:
+##### Web - Redirect URIs
+
+Add the App Proxy Url to `Redirect URIs` to the `Web` section. E.g.:
   * `https://pozi-cardiniavicgovau.msappproxy.net/`
-* Add the following `Redirect URIs` to the `Single-page application` section:
+
+##### Single Page Application - Redirect URIs
+
+Add the following `Redirect URIs` to the `Single-page application` section:
   * `https://<sitename>.enterprise.pozi.com/`
-  * `https://staging.pozi.com/master/` (for testing/debugging)
-  * `http://localhost:3000/` (for development)
+  * `https://staging.pozi.com/master/` (for client testing/debugging)
+  * `http://localhost:3000/` (for Pozi development purposes)
   * If needed, add any extra URIs that the client uses (e.g. `https://cardinia-qgis.enterprise.pozi.com/`)
-* In `Implicit grant and hybrid flows`: `Access tokens` and `ID tokens` should remain unchecked
-* In `Advanced settings`: Set `Allow public client flows` to `No`
+
+#### Implicit grant and hybrid flows:
+
+* `Access tokens` and `ID tokens` should remain unchecked
+
+#### Advanced settings:
+
+ * Set `Allow public client flows` to `No`
 
 #### Authorisation
 
@@ -110,9 +162,9 @@ Access should now be granted to the application proxy and the URL should be acce
 * Give Pozi the following permissions:
   - API/Permissions Name: `User.Read`, Type: `Delegated`, Admin consent required: `No`. This should allow Pozi to determine access based on a user's role(s).
 
-Important: a user authenticated with the council's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://pozi-cardiniavicgovau.msappproxy.net/` as well as `https://pozi-cardiniavicgovau.msappproxy.net/iis/qgisserver/`). 
+Important: a user authenticated with the council's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://pozi-cardiniavicgovau.msappproxy.net/`).
 
-### Site URL
+### Site URL (Enterprise vs public)
 
 Using `<sitename>.enterprise.pozi.com` forces user to authenticate before proceeding to the Pozi site. These users will gain access to the private datasets.
 
