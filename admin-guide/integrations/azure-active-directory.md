@@ -43,7 +43,7 @@ Example:
 
 ### Application Proxy (Enterprise Application)
 
-`Azure`: **Applications** => **Enterprise Applications** => **<PoziServer>** => **Application Proxy**
+`Azure`: **Enterprise Applications** => **<PoziServer>** => **Application Proxy**
 
 Follow the Microsoft documentation for set up:
 
@@ -103,7 +103,7 @@ Ensure it doesn't return a response to a non-logged-in or anonymous user.
 
 ### App Registration
 
-`Azure`: **Applications** => **App Registrations** => **<PoziServer>**
+`Azure`: **App Registrations** => **<PoziServer>**
 
 * Set Pozi up in Azure as a registered app (admin privileges required): [https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal)
 * Record the Application id (also known as as client id) as well as tenant id
@@ -145,6 +145,8 @@ AADSTS50105: Your administrator has configured the application Pozi Server ('xxx
 
 **Steps to authorise users/groups**
 
+`Azure`: **Enterprise Applications** => **<PoziServer>**
+
 * In the Azure Portal, go to Enterprise Applications, select the enterprise application for the Pozi Application Proxy
 * Under `Manage`, select `Users and groups`
 * If no users/groups have been defined, it will say something like `No application assignments found`
@@ -162,7 +164,7 @@ Access should now be granted to the application proxy and the URL should be acce
 * Give Pozi the following permissions:
   - API/Permissions Name: `User.Read`, Type: `Delegated`, Admin consent required: `No`. This should allow Pozi to determine access based on a user's role(s).
 
-Important: a user authenticated with the council's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://pozi-cardiniavicgovau.msappproxy.net/`).
+<!-- Important: a user authenticated with the council's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://pozi-cardiniavicgovau.msappproxy.net/`). -->
 
 ### Site URL (Enterprise vs public)
 
@@ -170,7 +172,7 @@ Using `<sitename>.enterprise.pozi.com` forces user to authenticate before procee
 
 Public users should continue to use `<sitename>.pozi.com`. They will not be prompted to authenticate, and they will have access to only public data.
 
-### Token-based Authentication/Authorisation
+<!-- ### Token-based Authentication/Authorisation
 
 :::note Under Construction
 
@@ -178,7 +180,7 @@ Public users should continue to use `<sitename>.pozi.com`. They will not be prom
 
 :::
 
-* TO BE WRITTEN
+* TO BE WRITTEN -->
 
 <!-- ### App Roles
 
