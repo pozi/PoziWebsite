@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.732947072514">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.732947611781">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.732947072514" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.732947611781" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.732947072514" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.732947611781" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.732947072514" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.732947611781" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -320,8 +320,8 @@
     </h2>
 </doc-anchor-target>
 <ol>
-<li>user visits the dedicated Pozi Enterprise address (eg <code v-pre>cardinia.enterprise.pozi.com</code>)</li>
-<li>Pozi app sends a request to client&#x27;s MS App Proxy endpoint (eg <code v-pre>https://pozi-cardiniavicgovau.msappproxy.net/resourcecheck/cardinia.json</code>)</li>
+<li>user visits the dedicated Pozi Enterprise address (eg <code v-pre>&lt;sitename&gt;.enterprise.pozi.com</code>)</li>
+<li>Pozi app sends a request to client&#x27;s MS App Proxy endpoint (eg <code v-pre>https://&lt;poziservername&gt;-&lt;councilname&gt;.msapproxy.net/resourcecheck/&lt;sitename&gt;.json</code>)</li>
 <li>if user is signed in to their Microsoft account, Pozi continues to load, and the user will have access to the internal datasets configured for Pozi within the organisation&#x27;s app proxy</li>
 </ol>
 <p>If the user is not already logged in, the browser is redirected to the Microsoft login page.</p>
@@ -334,7 +334,7 @@
     </h3>
 </doc-anchor-target>
 <p>Whether a user can access private datasets is based on whether the user is given permission by the organisation to access the MS App Proxy endpoint that is dedicated for Pozi.</p>
-<p>As long as the staff member or other authorised user has permission to access the MS App Proxy endpoint ( eg <code v-pre>https://pozi-cardiniavicgovau.msappproxy.net/</code>), then they will have access to the internal datasets that have been configured within Pozi.</p>
+<p>As long as the staff member or other authorised user has permission to access the MS App Proxy endpoint ( eg <code v-pre>https://&lt;poziservername&gt;-&lt;councilname&gt;.msapproxy.net/</code>), then they will have access to the internal datasets that have been configured within Pozi.</p>
 <doc-anchor-target id="url">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#url">#</doc-anchor-trigger>
@@ -401,9 +401,9 @@
 </ul>
 <p>All other settings here (like <strong>External Url</strong> and <strong>Pre Authentication</strong> are the same as above)</p>
 <p>When configured correctly, a request from a logged-in user to URL (for example)...</p>
-<p><code v-pre>https://pozi-cardiniavicgovau.msappproxy.net/resourcecheck/cardinia.json</code></p>
+<p><code v-pre>https://&lt;poziservername&gt;-&lt;councilname&gt;.msapproxy.net/resourcecheck/&lt;sitename&gt;.json</code></p>
 <p>...should return the same response as a local request to...</p>
-<p><code v-pre>https://local.pozi.com/resourcecheck/cardinia.json</code></p>
+<p><code v-pre>https://local.pozi.com/resourcecheck/&lt;sitename&gt;.json</code></p>
 <p>Ensure it doesn&#x27;t return a response to a non-logged-in or anonymous user.</p>
 <doc-anchor-target id="other-settings">
     <h4>
@@ -437,7 +437,7 @@
 </doc-anchor-target>
 <p>Add the App Proxy Url to <code v-pre>Redirect URIs</code> to the <code v-pre>Web</code> section. E.g.:</p>
 <ul>
-<li><code v-pre>https://pozi-cardiniavicgovau.msappproxy.net/</code></li>
+<li><code v-pre>https://&lt;poziservername&gt;-&lt;councilname&gt;.msapproxy.net/</code></li>
 </ul>
 <doc-anchor-target id="single-page-application---redirect-uris">
     <h5>
@@ -450,7 +450,7 @@
 <li><code v-pre>https://&lt;sitename&gt;.enterprise.pozi.com/</code></li>
 <li><code v-pre>https://staging.pozi.com/master/</code> (for client testing/debugging)</li>
 <li><code v-pre>http://localhost:3000/</code> (for Pozi development purposes)</li>
-<li>If needed, add any extra URIs that the client uses (e.g. <code v-pre>https://cardinia-qgis.enterprise.pozi.com/</code>)</li>
+<li>If needed, add any extra URIs that the client uses (e.g. <code v-pre>https://&lt;sitename&gt;-qgis.enterprise.pozi.com/</code>)</li>
 </ul>
 <doc-anchor-target id="implicit-grant-and-hybrid-flows">
     <h4>
@@ -476,7 +476,7 @@
         <span>Authorisation</span>
     </h4>
 </doc-anchor-target>
-<p>All going well, it should be possible to visit the App Proxy URL (in our example case: <code v-pre>https://pozi-cardiniavicgovau.msappproxy.net/</code>). If an error is shown like: <code v-pre>Sorry, but we’re having trouble with signing you in.</code> with a text similar to below, then we will need to give the relevant users/groups access.</p>
+<p>All going well, it should be possible to visit the App Proxy URL (in our example case: <code v-pre>https://&lt;poziservername&gt;-&lt;councilname&gt;.msapproxy.net/</code>). If an error is shown like: <code v-pre>Sorry, but we’re having trouble with signing you in.</code> with a text similar to below, then we will need to give the relevant users/groups access.</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-500 dark:bg-dark-400"></div>
     <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
@@ -522,7 +522,7 @@
 </ul>
 </li>
 </ul>
-<!-- Important: a user authenticated with the council's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://pozi-cardiniavicgovau.msappproxy.net/`). -->
+<!-- Important: a user authenticated with the council's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://<poziservername>-<councilname>.msapproxy.net/`). -->
 <doc-anchor-target id="site-url-enterprise-vs-public">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#site-url-enterprise-vs-public">#</doc-anchor-trigger>
@@ -587,9 +587,6 @@ The instructions below follow the [Microsoft guide on adding app roles](https://
                                         </a>
                                         <span class="mr-2"><a href="../../../tags/pozi-enterprise-cloud/" class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
                                     <span>pozi enterprise cloud</span>
-                                </a></span>
-                                        <span class="mr-2"><a href="../../../tags/cardinia-shire-council/" class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
-                                    <span>cardinia shire council</span>
                                 </a></span>
                                     </span>
                                 </div>
