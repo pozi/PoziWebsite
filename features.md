@@ -193,7 +193,6 @@ Ultimate integration with your organisation's cloud infrastructure, with Azure A
 * Web API: launch Pozi from other applications, controlling aspects like zooming to a specific property and adding map layers
 * Web Widgets: embed address search widgets in web pages to launch a map or display location-specific information
 * Publisher: sync internal datasets to the Pozi cloud for publishing to the public and other external stakeholders
-* Pipeline: schedule tasks for performing routine geospatial data workflows
 
 ---
 

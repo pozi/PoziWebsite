@@ -1,11 +1,11 @@
 ---
-title: Publisher
+title: Sync
 order: 50
 ---
 
-# Pozi Publisher Configuration
+# Pozi Sync Configuration
 
-Pozi's "Publisher" functionality is enabled by PoziConnect Server Sync, utilising the Pozi AWS S3 cloud storage to maintain a mirror of their local files.
+Pozi's sync functionality is enabled by PoziConnect Server, utilising the Pozi AWS S3 cloud storage to maintain a mirror of local files.
 
 ## Create IAM User and Policy
 
