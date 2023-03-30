@@ -15,7 +15,7 @@ Pozi's [Azure AD Application Proxy](https://azure.microsoft.com/en-au/services/a
 ## How it works
 
 1. user visits the dedicated Pozi Enterprise address (eg `<sitename>.enterprise.pozi.com`)
-2. Pozi app sends a request to client's MS App Proxy endpoint (eg `https://poziserver-<councilname>.msapproxy.net/resourcecheck/<sitename>.json`)
+2. Pozi app sends a request to client's MS App Proxy endpoint (eg `https://poziserver-<councilname>.msapproxy.net/pozi/qgisserver/wfs3.json`)
 3. if user is signed in to their Microsoft account, Pozi continues to load, and the user will have access to the internal datasets configured for Pozi within the organisation's app proxy
 
 If the user is not already logged in, the browser is redirected to the Microsoft login page.
@@ -28,16 +28,16 @@ Once signed in, users will have access to internal datasets for as long their Mi
 
 Whether a user can access private datasets is based on whether the user is given permission by the organisation to access the MS App Proxy endpoint that is dedicated for Pozi.
 
-As long as the staff member or other authorised user has permission to access the MS App Proxy endpoint ( eg `https://poziserver-<councilname>.msapproxy.net/`), then they will have access to the internal datasets that have been configured within Pozi.
+As long as the staff member or other authorised user has permission to access the MS App Proxy endpoint ( eg `https://poziserver-<councilname>.msapproxy.net/pozi/`), then they will have access to the internal datasets that have been configured within Pozi.
 
-### URL
+### Url
 
-Users use a separate URL that enforces a login to Azure Active Directory before the browser loads the Pozi site.
+Users use a separate Url that enforces a login to Azure Active Directory before the browser loads the Pozi site.
 
 **Example**:
 
-* Public URL: `https://<sitename>.pozi.com/`
-* Staff URL: `https://<sitename>.enterprise.pozi.com/`
+* Public Url: `https://<sitename>.pozi.com/`
+* Staff Url: `https://<sitename>.enterprise.pozi.com/`
 
 ## Azure Configuration
 
@@ -148,7 +148,7 @@ Add the following `Redirect URIs` to the `Single-page application` section:
 
 #### Authorisation
 
-All going well, it should be possible to visit the App Proxy URL (in our example case: `https://poziserver-<councilname>.msappproxy.net/`). If an error is shown like: `Sorry, but we’re having trouble with signing you in.` with a text similar to below, then we will need to give the relevant users/groups access.
+All going well, it should be possible to visit the App Proxy Url (in our example case: `https://poziserver-<councilname>.msappproxy.net/`). If an error is shown like: `Sorry, but we’re having trouble with signing you in.` with a text similar to below, then we will need to give the relevant users/groups access.
 
 
 
@@ -172,7 +172,7 @@ AADSTS50105: Your administrator has configured the application Pozi Server ('xxx
 * Under `Select a role`, the role `User` is preselected and cannot be changed. That is OK.
 * Click on `Assign` in the bottom of the page.
 
-Access should now be granted to the application proxy and the URL should be accessible.
+Access should now be granted to the application proxy and the Url should be accessible.
 
 #### API Permissions
 
@@ -181,7 +181,7 @@ Access should now be granted to the application proxy and the URL should be acce
 
 <!-- Important: a user authenticated with the council's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://poziserver-<councilname>.msapproxy.net/`). -->
 
-### Site URL (Enterprise vs public)
+### Site Url (Enterprise vs public)
 
 Using `<sitename>.enterprise.pozi.com` forces user to authenticate before proceeding to the Pozi site. These users will gain access to the private datasets.
 
