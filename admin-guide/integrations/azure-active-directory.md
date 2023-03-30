@@ -15,7 +15,7 @@ Pozi's [Azure AD Application Proxy](https://azure.microsoft.com/en-au/services/a
 ## How it works
 
 1. user visits the dedicated Pozi Enterprise address (eg `<sitename>.enterprise.pozi.com`)
-2. Pozi app sends a request to client's MS App Proxy endpoint (eg `https://poziserver-<councilname>.msapproxy.net/pozi/qgisserver/wfs3.json`)
+2. Pozi app sends a request to client's MS App Proxy endpoint (eg `https://poziserver-<clientname>.msapproxy.net/pozi/qgisserver/wfs3.json`)
 3. if user is signed in to their Microsoft account, Pozi continues to load, and the user will have access to the internal datasets configured for Pozi within the organisation's app proxy
 
 If the user is not already logged in, the browser is redirected to the Microsoft login page.
@@ -28,7 +28,7 @@ Once signed in, users will have access to internal datasets for as long their Mi
 
 Whether a user can access private datasets is based on whether the user is given permission by the organisation to access the MS App Proxy endpoint that is dedicated for Pozi.
 
-As long as the staff member or other authorised user has permission to access the MS App Proxy endpoint ( eg `https://poziserver-<councilname>.msapproxy.net/pozi/`), then they will have access to the internal datasets that have been configured within Pozi.
+As long as the staff member or other authorised user has permission to access the MS App Proxy endpoint ( eg `https://poziserver-<clientname>.msapproxy.net/pozi/`), then they will have access to the internal datasets that have been configured within Pozi.
 
 ### Url
 
@@ -62,9 +62,9 @@ The following settings are for a Pozi server setup with only QGIS Server and IIS
 
   To test internal Url on the internal network, opening the following Url in the browser should show a QGIS Server landing page:`http://<servername>/pozi/qgisserver/wfs3`
 
-* **External Url**: `https://poziserver-<councilname>.msapproxy.net/pozi/`.
+* **External Url**: `https://poziserver-<clientname>.msapproxy.net/pozi/`.
 
-  The `<councilname>` is a name that has been given to the organisation by MS Azure. The Url `https://poziserver-<councilname>.msapproxy.net/pozi/qgisserver/wfs3` should show the same landing page as in the Internal Url section above.
+  The `<clientname>` is a name that has been given to the organisation by MS Azure. The Url `https://poziserver-<clientname>.msapproxy.net/pozi/qgisserver/wfs3` should show the same landing page as in the Internal Url section above.
 
 * **Pre Authentication**: `Azure Active Directory`.
 
@@ -72,7 +72,7 @@ Do **not** choose `Passthrough` as that will give any visitor access to the inte
 
 When configured correctly, a request from a logged-in user to Url (for example)...
 
-`https://poziserver-<councilname>.msapproxy.net/pozi/qgisserver/wfs3.json`
+`https://poziserver-<clientname>.msapproxy.net/pozi/qgisserver/wfs3.json`
 
 ...should return the same response as a local request to...
 
@@ -94,7 +94,7 @@ All other settings here (like **External Url** and **Pre Authentication** are th
 
 When configured correctly, a request from a logged-in user to Url (for example)...
 
-`https://poziserver-<councilname>.msapproxy.net/resourcecheck/<sitename>.json`
+`https://poziserver-<clientname>.msapproxy.net/resourcecheck/<sitename>.json`
 
 ...should return the same response as a local request to...
 
@@ -127,7 +127,7 @@ Ensure it doesn't return a response to a non-logged-in or anonymous user.
 ##### Web - Redirect URIs
 
 Add the App Proxy Url to `Redirect URIs` to the `Web` section. E.g.:
-  * `https://poziserver-<councilname>.msappproxy.net/pozi/`
+  * `https://poziserver-<clientname>.msappproxy.net/pozi/`
 
 ##### Single Page Application - Redirect URIs
 
@@ -152,7 +152,7 @@ Please make sure that the URIs all have a trailing slash ('/') and note that the
 
 #### Authorisation
 
-All going well, it should be possible to visit the App Proxy Url (in our example case: `https://poziserver-<councilname>.msappproxy.net/`). If an error is shown like: `Sorry, but we’re having trouble with signing you in.` with a text similar to below, then we will need to give the relevant users/groups access.
+All going well, it should be possible to visit the App Proxy Url (in our example case: `https://poziserver-<clientname>.msappproxy.net/`). If an error is shown like: `Sorry, but we’re having trouble with signing you in.` with a text similar to below, then we will need to give the relevant users/groups access.
 
 
 
@@ -183,7 +183,7 @@ Access should now be granted to the application proxy and the Url should be acce
 * Give Pozi the following permissions:
   - API/Permissions Name: `User.Read`, Type: `Delegated`, Admin consent required: `No`. This should allow Pozi to determine access based on a user's role(s).
 
-<!-- Important: a user authenticated with the council's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://poziserver-<councilname>.msapproxy.net/`). -->
+<!-- Important: a user authenticated with the client's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://poziserver-<clientname>.msapproxy.net/`). -->
 
 ### Site Url (Enterprise vs public)
 
@@ -195,7 +195,7 @@ Public users should continue to use `<sitename>.pozi.com`. They will not be prom
 
 After completion of the configuration, Pozi would like to receive the following from the client:
 
-* The external app proxy URl (something like https://poziserver-<councilname>.msappproxy.net/)
+* The external app proxy URl (something like https://poziserver-<clientname>.msappproxy.net/)
 
 * The `client id` (sometimes called 'application id') and has the following structure: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The client id is defined in Enterprise Applications => Properties.
 

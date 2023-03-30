@@ -6,16 +6,11 @@ description: Take a tour of Pozi. Discover how organisations are using this mode
 
 # Tour
 
-Looking to improve your users' GIS experience?
-
-Take a tour of Pozi.
-
 ## Why Pozi?
 
-* worked with organisations for 20 years
+* live, authoritative data
 * focussed on ease of use
 * compatibility, open platform, open standards
-* live, authoritative data
 
 The tour starts with the user experience, and then well look at the back-end.
 
