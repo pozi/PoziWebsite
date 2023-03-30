@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.733468896424">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.733529439864">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,12 +35,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.733468896424" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.733529439864" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.733468896424" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.733529439864" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.733468896424" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.733468896424" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.733529439864" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.733529439864" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -484,7 +484,7 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='TEMP',value='C:\Windows\Temp']&quot; /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='PYTHONHOME',value='C:\OSGeo4W\apps\Python39']&quot; /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_SERVER_IGNORE_BAD_LAYERS',value='1']&quot; /commit:apphost
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_SERVER_LOG_FILE',value='C:\Program Files (x86)\Pozi\server\iis\logs\qgis_server.log']&quot; /commit:apphost
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_SERVER_LOG_FILE',value='C:\Pozi\IIS\QgisServer\qgis_server.log']&quot; /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_SERVER_LOG_LEVEL',value='1']&quot; /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_PLUGINPATH',value='C:\OSGeo4W\apps\qgis-ltr\plugins']&quot; /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='GDAL_DRIVER_PATH',value='C:\OSGeo4W\apps\gdal\lib\gdalplugins']&quot; /commit:apphost
@@ -562,7 +562,7 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
 </tr>
 <tr>
 <td>QGIS_SERVER_LOG_FILE</td>
-<td><code v-pre>C:\Program Files (x86)\Pozi\server\iis\logs\qgis_server.log</code></td>
+<td><code v-pre>C:\Pozi\IIS\QgisServer\qgis_server.log</code></td>
 </tr>
 <tr>
 <td>QGIS_SERVER_LOG_LEVEL</td>

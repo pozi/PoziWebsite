@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.733468896424">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.733529439864">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.733468896424" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.733529439864" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.733468896424" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.733529439864" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.733468896424" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.733529439864" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -321,7 +321,7 @@
 </doc-anchor-target>
 <ol>
 <li>user visits the dedicated Pozi Enterprise address (eg <code v-pre>&lt;sitename&gt;.enterprise.pozi.com</code>)</li>
-<li>Pozi app sends a request to client&#x27;s MS App Proxy endpoint (eg <code v-pre>https://poziserver-&lt;councilname&gt;.msapproxy.net/pozi/qgisserver/wfs3.json</code>)</li>
+<li>Pozi app sends a request to client&#x27;s MS App Proxy endpoint (eg <code v-pre>https://poziserver-&lt;clientname&gt;.msapproxy.net/pozi/qgisserver/wfs3.json</code>)</li>
 <li>if user is signed in to their Microsoft account, Pozi continues to load, and the user will have access to the internal datasets configured for Pozi within the organisation&#x27;s app proxy</li>
 </ol>
 <p>If the user is not already logged in, the browser is redirected to the Microsoft login page.</p>
@@ -334,7 +334,7 @@
     </h3>
 </doc-anchor-target>
 <p>Whether a user can access private datasets is based on whether the user is given permission by the organisation to access the MS App Proxy endpoint that is dedicated for Pozi.</p>
-<p>As long as the staff member or other authorised user has permission to access the MS App Proxy endpoint ( eg <code v-pre>https://poziserver-&lt;councilname&gt;.msapproxy.net/pozi/</code>), then they will have access to the internal datasets that have been configured within Pozi.</p>
+<p>As long as the staff member or other authorised user has permission to access the MS App Proxy endpoint ( eg <code v-pre>https://poziserver-&lt;clientname&gt;.msapproxy.net/pozi/</code>), then they will have access to the internal datasets that have been configured within Pozi.</p>
 <doc-anchor-target id="url">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#url">#</doc-anchor-trigger>
@@ -372,15 +372,15 @@
 <li><p><strong>Internal Url</strong> : <code v-pre>http://&lt;servername&gt;/pozi/</code>. Replace <code v-pre>&lt;servername&gt;</code> with the actual name of the server.</p>
 <p>To test internal Url on the internal network, opening the following Url in the browser should show a QGIS Server landing page:<code v-pre>http://&lt;servername&gt;/pozi/qgisserver/wfs3</code></p>
 </li>
-<li><p><strong>External Url</strong>: <code v-pre>https://poziserver-&lt;councilname&gt;.msapproxy.net/pozi/</code>.</p>
-<p>The <code v-pre>&lt;councilname&gt;</code> is a name that has been given to the organisation by MS Azure. The Url <code v-pre>https://poziserver-&lt;councilname&gt;.msapproxy.net/pozi/qgisserver/wfs3</code> should show the same landing page as in the Internal Url section above.</p>
+<li><p><strong>External Url</strong>: <code v-pre>https://poziserver-&lt;clientname&gt;.msapproxy.net/pozi/</code>.</p>
+<p>The <code v-pre>&lt;clientname&gt;</code> is a name that has been given to the organisation by MS Azure. The Url <code v-pre>https://poziserver-&lt;clientname&gt;.msapproxy.net/pozi/qgisserver/wfs3</code> should show the same landing page as in the Internal Url section above.</p>
 </li>
 <li><p><strong>Pre Authentication</strong>: <code v-pre>Azure Active Directory</code>.</p>
 </li>
 </ul>
 <p>Do <strong>not</strong> choose <code v-pre>Passthrough</code> as that will give any visitor access to the internal network, potentially creating a security risk.</p>
 <p>When configured correctly, a request from a logged-in user to Url (for example)...</p>
-<p><code v-pre>https://poziserver-&lt;councilname&gt;.msapproxy.net/pozi/qgisserver/wfs3.json</code></p>
+<p><code v-pre>https://poziserver-&lt;clientname&gt;.msapproxy.net/pozi/qgisserver/wfs3.json</code></p>
 <p>...should return the same response as a local request to...</p>
 <p><code v-pre>http://&lt;servername&gt;/pozi/qgisserver/wfs3.json</code></p>
 <p>Ensure it doesn&#x27;t return a response to a non-logged-in or anonymous user.</p>
@@ -396,7 +396,7 @@
 </ul>
 <p>All other settings here (like <strong>External Url</strong> and <strong>Pre Authentication</strong> are the same as above)</p>
 <p>When configured correctly, a request from a logged-in user to Url (for example)...</p>
-<p><code v-pre>https://poziserver-&lt;councilname&gt;.msapproxy.net/resourcecheck/&lt;sitename&gt;.json</code></p>
+<p><code v-pre>https://poziserver-&lt;clientname&gt;.msapproxy.net/resourcecheck/&lt;sitename&gt;.json</code></p>
 <p>...should return the same response as a local request to...</p>
 <p><code v-pre>https://local.pozi.com/resourcecheck/&lt;sitename&gt;.json</code></p>
 <p>Ensure it doesn&#x27;t return a response to a non-logged-in or anonymous user.</p>
@@ -440,7 +440,7 @@
 </doc-anchor-target>
 <p>Add the App Proxy Url to <code v-pre>Redirect URIs</code> to the <code v-pre>Web</code> section. E.g.:</p>
 <ul>
-<li><code v-pre>https://poziserver-&lt;councilname&gt;.msappproxy.net/pozi/</code></li>
+<li><code v-pre>https://poziserver-&lt;clientname&gt;.msappproxy.net/pozi/</code></li>
 </ul>
 <doc-anchor-target id="single-page-application---redirect-uris">
     <h5>
@@ -482,7 +482,7 @@
         <span>Authorisation</span>
     </h4>
 </doc-anchor-target>
-<p>All going well, it should be possible to visit the App Proxy Url (in our example case: <code v-pre>https://poziserver-&lt;councilname&gt;.msappproxy.net/</code>). If an error is shown like: <code v-pre>Sorry, but we’re having trouble with signing you in.</code> with a text similar to below, then we will need to give the relevant users/groups access.</p>
+<p>All going well, it should be possible to visit the App Proxy Url (in our example case: <code v-pre>https://poziserver-&lt;clientname&gt;.msappproxy.net/</code>). If an error is shown like: <code v-pre>Sorry, but we’re having trouble with signing you in.</code> with a text similar to below, then we will need to give the relevant users/groups access.</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-500 dark:bg-dark-400"></div>
     <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
@@ -528,7 +528,7 @@
 </ul>
 </li>
 </ul>
-<!-- Important: a user authenticated with the council's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://poziserver-<councilname>.msapproxy.net/`). -->
+<!-- Important: a user authenticated with the client's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://poziserver-<clientname>.msapproxy.net/`). -->
 <doc-anchor-target id="site-url-enterprise-vs-public">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#site-url-enterprise-vs-public">#</doc-anchor-trigger>
@@ -545,7 +545,7 @@
 </doc-anchor-target>
 <p>After completion of the configuration, Pozi would like to receive the following from the client:</p>
 <ul>
-<li><p>The external app proxy URl (something like https://poziserver-<councilname>.msappproxy.net/)</p>
+<li><p>The external app proxy URl (something like https://poziserver-<clientname>.msappproxy.net/)</p>
 </li>
 <li><p>The <code v-pre>client id</code> (sometimes called &#x27;application id&#x27;) and has the following structure: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The client id is defined in Enterprise Applications =&gt; Properties.</p>
 </li>
