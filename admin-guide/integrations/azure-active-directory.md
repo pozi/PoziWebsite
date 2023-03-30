@@ -55,11 +55,11 @@ Choose, depending on the way the Pozi Server has been configured one of the 2 fo
 #### PREFERRED: IIS + QGIS Server only (i.e. without Pozi Connect Server)
 The following settings are for a Pozi server setup with only QGIS Server and IIS.
 
-* **Internal Url** : `http://<servername>/`. Replace `<servername>` with the actual name of the server.
+* **Internal Url** : `http://<servername>/pozi/`. Replace `<servername>` with the actual name of the server.
 
   When visiting the above URL on the internal network, it should show an Internet Information Services welcome page.
 
-* **External Url**: `https://<poziservername>-<councilname>.msapproxy.net`.
+* **External Url**: `https://<poziservername>-<councilname>.msapproxy.net/pozi/`.
 
   Choose a name for `<poziservername>` that easily relates to the actual server that Pozi is running on in the internal network (e.g. `poziserver`).
 
@@ -115,7 +115,7 @@ Ensure it doesn't return a response to a non-logged-in or anonymous user.
 ##### Web - Redirect URIs
 
 Add the App Proxy Url to `Redirect URIs` to the `Web` section. E.g.:
-  * `https://<poziservername>-<councilname>.msapproxy.net/`
+  * `https://<poziservername>-<councilname>.msappproxy.net/pozi/`
 
 ##### Single Page Application - Redirect URIs
 
@@ -136,7 +136,7 @@ Add the following `Redirect URIs` to the `Single-page application` section:
 
 #### Authorisation
 
-All going well, it should be possible to visit the App Proxy URL (in our example case: `https://<poziservername>-<councilname>.msapproxy.net/`). If an error is shown like: `Sorry, but we’re having trouble with signing you in.` with a text similar to below, then we will need to give the relevant users/groups access.
+All going well, it should be possible to visit the App Proxy URL (in our example case: `https://<poziservername>-<councilname>.msappproxy.net/`). If an error is shown like: `Sorry, but we’re having trouble with signing you in.` with a text similar to below, then we will need to give the relevant users/groups access.
 
 
 
