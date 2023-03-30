@@ -138,6 +138,10 @@ Add the following `Redirect URIs` to the `Single-page application` section:
   * `https://staging.pozi.com/` (for client testing/debugging)
   * `https://staging.pozi.com/master/` (for client testing/debugging)
 
+All the URIs above will be needed for Pozi to be fully functional.
+
+Please make sure that the URIs all have a trailing slash ('/') and note that the localhost URI is `http` (and not `https`).
+
 #### Implicit grant and hybrid flows:
 
 * `Access tokens` and `ID tokens` should remain unchecked
@@ -186,6 +190,20 @@ Access should now be granted to the application proxy and the Url should be acce
 Using `<sitename>.enterprise.pozi.com` forces user to authenticate before proceeding to the Pozi site. These users will gain access to the private datasets.
 
 Public users should continue to use `<sitename>.pozi.com`. They will not be prompted to authenticate, and they will have access to only public data.
+
+### Information to send back to Pozi
+
+After completion of the configuration, Pozi would like to receive the following from the client:
+
+* The external app proxy URl (something like https://poziserver-<councilname>.msappproxy.net/)
+
+* The `client id` (sometimes called 'application id') and has the following structure: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The client id is defined in Enterprise Applications => Properties.
+
+* The `tenant id`, which looks like xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The tenant id is defined in Azure Active Directory => Overview."
+
+* A copy/paste and/or screenshot of all the relevant settings
+
+
 
 <!-- ### Token-based Authentication/Authorisation
 
