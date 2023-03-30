@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.733464744415">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.733466049176">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.733464744415" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.733466049176" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.733464744415" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.733466049176" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.733464744415" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.733466049176" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -372,16 +372,16 @@
 <p>The following settings are for a Pozi server setup with only QGIS Server and IIS.</p>
 <ul>
 <li><p><strong>Internal Url</strong> : <code v-pre>http://&lt;servername&gt;/pozi/</code>. Replace <code v-pre>&lt;servername&gt;</code> with the actual name of the server.</p>
-<p>When visiting the above URL on the internal network, it should show an Internet Information Services welcome page.</p>
+<p>To test internal Url on the internal network, opening the following Url in the browser should show a QGIS Server landing page:<code v-pre>http://&lt;servername&gt;/pozi/qgisserver/wfs3</code></p>
 </li>
 <li><p><strong>External Url</strong>: <code v-pre>https://poziserver-&lt;councilname&gt;.msapproxy.net/pozi/</code>.</p>
-<p>The <code v-pre>&lt;councilname&gt;</code> is a name that has been given to the organisation by MS Azure.</p>
+<p>The <code v-pre>&lt;councilname&gt;</code> is a name that has been given to the organisation by MS Azure. The Url <code v-pre>https://poziserver-&lt;councilname&gt;.msapproxy.net/pozi/qgisserver/wfs3</code> should show the same landing page as in the Internal Url section above.</p>
 </li>
 <li><p><strong>Pre Authentication</strong>: <code v-pre>Azure Active Directory</code>.</p>
 </li>
 </ul>
 <p>Do <strong>not</strong> choose <code v-pre>Passthrough</code> as that will give any visitor access to the internal network, potentially creating a security risk.</p>
-<p>When configured correctly, a request from a logged-in user to URL (for example)...</p>
+<p>When configured correctly, a request from a logged-in user to Url (for example)...</p>
 <p><code v-pre>https://poziserver-&lt;councilname&gt;.msapproxy.net/pozi/qgisserver/wfs3.json</code></p>
 <p>...should return the same response as a local request to...</p>
 <p><code v-pre>http://&lt;servername&gt;/pozi/qgisserver/wfs3.json</code></p>
@@ -394,12 +394,12 @@
 </doc-anchor-target>
 <p>The following settings are for a Pozi server setup with a Pozi Server installation that proxies all QGIS Server and IIS requests.</p>
 <ul>
-<li><p><strong>Internal Url</strong> : <code v-pre>https://local.pozi.com</code> (or any other URL that uses a local DNS with a locally signed SSL certificate pointing to the server that runs PoziServer)</p>
-<p>When visiting the above URL on the internal network, it should show a Pozi Connect Server welcome page.</p>
+<li><p><strong>Internal Url</strong> : <code v-pre>https://local.pozi.com</code> (or any other Url that uses a local DNS with a locally signed SSL certificate pointing to the server that runs PoziServer)</p>
+<p>When visiting the above Url on the internal network, it should show a Pozi Connect Server welcome page.</p>
 </li>
 </ul>
 <p>All other settings here (like <strong>External Url</strong> and <strong>Pre Authentication</strong> are the same as above)</p>
-<p>When configured correctly, a request from a logged-in user to URL (for example)...</p>
+<p>When configured correctly, a request from a logged-in user to Url (for example)...</p>
 <p><code v-pre>https://poziserver-&lt;councilname&gt;.msapproxy.net/resourcecheck/&lt;sitename&gt;.json</code></p>
 <p>...should return the same response as a local request to...</p>
 <p><code v-pre>https://local.pozi.com/resourcecheck/&lt;sitename&gt;.json</code></p>
