@@ -15,7 +15,7 @@ Pozi's [Azure AD Application Proxy](https://azure.microsoft.com/en-au/services/a
 ## How it works
 
 1. user visits the dedicated Pozi Enterprise address (eg `<sitename>.enterprise.pozi.com`)
-2. Pozi app sends a request to client's MS App Proxy endpoint (eg `https://<poziservername>-<councilname>.msapproxy.net/resourcecheck/<sitename>.json`)
+2. Pozi app sends a request to client's MS App Proxy endpoint (eg `https://poziserver-<councilname>.msapproxy.net/resourcecheck/<sitename>.json`)
 3. if user is signed in to their Microsoft account, Pozi continues to load, and the user will have access to the internal datasets configured for Pozi within the organisation's app proxy
 
 If the user is not already logged in, the browser is redirected to the Microsoft login page.
@@ -28,7 +28,7 @@ Once signed in, users will have access to internal datasets for as long their Mi
 
 Whether a user can access private datasets is based on whether the user is given permission by the organisation to access the MS App Proxy endpoint that is dedicated for Pozi.
 
-As long as the staff member or other authorised user has permission to access the MS App Proxy endpoint ( eg `https://<poziservername>-<councilname>.msapproxy.net/`), then they will have access to the internal datasets that have been configured within Pozi.
+As long as the staff member or other authorised user has permission to access the MS App Proxy endpoint ( eg `https://poziserver-<councilname>.msapproxy.net/`), then they will have access to the internal datasets that have been configured within Pozi.
 
 ### URL
 
@@ -43,7 +43,7 @@ Users use a separate URL that enforces a login to Azure Active Directory before 
 
 ### Application Proxy (Enterprise Application)
 
-`Azure`: **Enterprise Applications** => **\<PoziServer\>** => **Application Proxy**
+`Azure`: **Enterprise Applications** ⇒ **PoziServer** ⇒ **Application Proxy**
 
 Follow the Microsoft documentation for set up:
 
@@ -59,9 +59,7 @@ The following settings are for a Pozi server setup with only QGIS Server and IIS
 
   When visiting the above URL on the internal network, it should show an Internet Information Services welcome page.
 
-* **External Url**: `https://<poziservername>-<councilname>.msapproxy.net/pozi/`.
-
-  Choose a name for `<poziservername>` that easily relates to the actual server that Pozi is running on in the internal network (e.g. `poziserver`).
+* **External Url**: `https://poziserver-<councilname>.msapproxy.net/pozi/`.
 
   The `<councilname>` is a name that has been given to the organisation by MS Azure.
 
@@ -71,7 +69,7 @@ Do **not** choose `Passthrough` as that will give any visitor access to the inte
 
 When configured correctly, a request from a logged-in user to URL (for example)...
 
-`https://<poziservername>-<councilname>.msapproxy.net/pozi/qgisserver/wfs3.json`
+`https://poziserver-<councilname>.msapproxy.net/pozi/qgisserver/wfs3.json`
 
 ...should return the same response as a local request to...
 
@@ -90,7 +88,7 @@ All other settings here (like **External Url** and **Pre Authentication** are th
 
 When configured correctly, a request from a logged-in user to URL (for example)...
 
-`https://<poziservername>-<councilname>.msapproxy.net/resourcecheck/<sitename>.json`
+`https://poziserver-<councilname>.msapproxy.net/resourcecheck/<sitename>.json`
 
 ...should return the same response as a local request to...
 
@@ -105,7 +103,7 @@ Ensure it doesn't return a response to a non-logged-in or anonymous user.
 
 ### App Registration
 
-`Azure`: **App Registrations** => **\<PoziServer\>**
+`Azure`: **App Registrations** ⇒ **PoziServer**
 
 * Set Pozi up in Azure as a registered app (admin privileges required): [https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal)
 * Record the Application id (also known as as client id) as well as tenant id
@@ -115,7 +113,7 @@ Ensure it doesn't return a response to a non-logged-in or anonymous user.
 ##### Web - Redirect URIs
 
 Add the App Proxy Url to `Redirect URIs` to the `Web` section. E.g.:
-  * `https://<poziservername>-<councilname>.msappproxy.net/pozi/`
+  * `https://poziserver-<councilname>.msappproxy.net/pozi/`
 
 ##### Single Page Application - Redirect URIs
 
@@ -136,7 +134,7 @@ Add the following `Redirect URIs` to the `Single-page application` section:
 
 #### Authorisation
 
-All going well, it should be possible to visit the App Proxy URL (in our example case: `https://<poziservername>-<councilname>.msappproxy.net/`). If an error is shown like: `Sorry, but we’re having trouble with signing you in.` with a text similar to below, then we will need to give the relevant users/groups access.
+All going well, it should be possible to visit the App Proxy URL (in our example case: `https://poziserver-<councilname>.msappproxy.net/`). If an error is shown like: `Sorry, but we’re having trouble with signing you in.` with a text similar to below, then we will need to give the relevant users/groups access.
 
 
 
@@ -148,7 +146,7 @@ AADSTS50105: Your administrator has configured the application Pozi Server ('xxx
 
 **Steps to authorise users/groups**
 
-`Azure`: **Enterprise Applications** => **\<PoziServer\>**
+`Azure`: **Enterprise Applications** ⇒ **PoziServer**
 
 * In the Azure Portal, go to Enterprise Applications, select the enterprise application for the Pozi Application Proxy
 * Under `Manage`, select `Users and groups`
@@ -167,7 +165,7 @@ Access should now be granted to the application proxy and the URL should be acce
 * Give Pozi the following permissions:
   - API/Permissions Name: `User.Read`, Type: `Delegated`, Admin consent required: `No`. This should allow Pozi to determine access based on a user's role(s).
 
-<!-- Important: a user authenticated with the council's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://<poziservername>-<councilname>.msapproxy.net/`). -->
+<!-- Important: a user authenticated with the council's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://poziserver-<councilname>.msapproxy.net/`). -->
 
 ### Site URL (Enterprise vs public)
 
