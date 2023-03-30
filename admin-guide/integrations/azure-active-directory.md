@@ -98,7 +98,13 @@ Ensure it doesn't return a response to a non-logged-in or anonymous user.
 
 #### Other settings:
 
-![](/dev-guide/img/azure-settings.png){style="width:600px"}
+<!-- ![](/dev-guide/img/azure-settings.png){style="width:600px"} -->
+
+**Advanced**:
+
+* **Translate Urls in headers**: ☑
+* **Translate Urls in application body**: ☑
+* **Validate Backend SSL certificate**: ☑
 
 
 ### App Registration
