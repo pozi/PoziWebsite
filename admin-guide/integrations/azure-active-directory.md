@@ -121,9 +121,10 @@ Add the App Proxy Url to `Redirect URIs` to the `Web` section. E.g.:
 
 Add the following `Redirect URIs` to the `Single-page application` section:
   * `https://<sitename>.enterprise.pozi.com/`
-  * `https://staging.pozi.com/master/` (for client testing/debugging)
-  * `http://localhost:3000/` (for Pozi development purposes)
   * If needed, add any extra URIs that the client uses (e.g. `https://<sitename>-qgis.enterprise.pozi.com/`)
+  * `http://localhost:3000/` (for Pozi development purposes)
+  * `https://staging.pozi.com/` (for client testing/debugging)
+  * `https://staging.pozi.com/master/` (for client testing/debugging)
 
 #### Implicit grant and hybrid flows:
 
