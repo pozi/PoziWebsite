@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.733466649864">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.733467304490">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.733466649864" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.733467304490" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.733466649864" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.733467304490" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.733466649864" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.733467304490" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -363,12 +363,10 @@
 <p>Follow the Microsoft documentation for set up:</p>
 <p><a href="https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-add-on-premises-application#add-an-on-premises-app-to-azure-ad">https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-add-on-premises-application#add-an-on-premises-app-to-azure-ad</a></p>
 <p>Choose, depending on the way the Pozi Server has been configured one of the 2 following sections for the correct settings.</p>
-<doc-anchor-target id="preferred-iis--qgis-server-only-ie-without-pozi-connect-server">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#preferred-iis--qgis-server-only-ie-without-pozi-connect-server">#</doc-anchor-trigger>
-        <span>PREFERRED: IIS + QGIS Server only (i.e. without Pozi Connect Server)</span>
-    </h4>
-</doc-anchor-target>
+<doc-tabs>
+<doc-tab id="current">
+<template #title>Current</template>
+<p><em>IIS + QGIS Server only (i.e. without Pozi Connect Server)</em></p>
 <p>The following settings are for a Pozi server setup with only QGIS Server and IIS.</p>
 <ul>
 <li><p><strong>Internal Url</strong> : <code v-pre>http://&lt;servername&gt;/pozi/</code>. Replace <code v-pre>&lt;servername&gt;</code> with the actual name of the server.</p>
@@ -386,12 +384,10 @@
 <p>...should return the same response as a local request to...</p>
 <p><code v-pre>http://&lt;servername&gt;/pozi/qgisserver/wfs3.json</code></p>
 <p>Ensure it doesn&#x27;t return a response to a non-logged-in or anonymous user.</p>
-<doc-anchor-target id="legacy-pozi-connect-server--local-dns">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#legacy-pozi-connect-server--local-dns">#</doc-anchor-trigger>
-        <span>LEGACY: Pozi Connect Server + local DNS</span>
-    </h4>
-</doc-anchor-target>
+</doc-tab>
+<doc-tab id="legacy">
+<template #title>Legacy</template>
+<p><em>Pozi Connect Server + local DNS</em></p>
 <p>The following settings are for a Pozi server setup with a Pozi Server installation that proxies all QGIS Server and IIS requests.</p>
 <ul>
 <li><p><strong>Internal Url</strong> : <code v-pre>https://local.pozi.com</code> (or any other Url that uses a local DNS with a locally signed SSL certificate pointing to the server that runs PoziServer)</p>
@@ -404,6 +400,8 @@
 <p>...should return the same response as a local request to...</p>
 <p><code v-pre>https://local.pozi.com/resourcecheck/&lt;sitename&gt;.json</code></p>
 <p>Ensure it doesn&#x27;t return a response to a non-logged-in or anonymous user.</p>
+</doc-tab>
+</doc-tabs>
 <doc-anchor-target id="other-settings">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#other-settings">#</doc-anchor-trigger>
