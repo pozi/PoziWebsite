@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.733467304490">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.733468896424">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.733467304490" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.733468896424" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.733467304490" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.733468896424" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.733467304490" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.733468896424" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -321,7 +321,7 @@
 </doc-anchor-target>
 <ol>
 <li>user visits the dedicated Pozi Enterprise address (eg <code v-pre>&lt;sitename&gt;.enterprise.pozi.com</code>)</li>
-<li>Pozi app sends a request to client&#x27;s MS App Proxy endpoint (eg <code v-pre>https://poziserver-&lt;councilname&gt;.msapproxy.net/resourcecheck/&lt;sitename&gt;.json</code>)</li>
+<li>Pozi app sends a request to client&#x27;s MS App Proxy endpoint (eg <code v-pre>https://poziserver-&lt;councilname&gt;.msapproxy.net/pozi/qgisserver/wfs3.json</code>)</li>
 <li>if user is signed in to their Microsoft account, Pozi continues to load, and the user will have access to the internal datasets configured for Pozi within the organisation&#x27;s app proxy</li>
 </ol>
 <p>If the user is not already logged in, the browser is redirected to the Microsoft login page.</p>
@@ -334,18 +334,18 @@
     </h3>
 </doc-anchor-target>
 <p>Whether a user can access private datasets is based on whether the user is given permission by the organisation to access the MS App Proxy endpoint that is dedicated for Pozi.</p>
-<p>As long as the staff member or other authorised user has permission to access the MS App Proxy endpoint ( eg <code v-pre>https://poziserver-&lt;councilname&gt;.msapproxy.net/</code>), then they will have access to the internal datasets that have been configured within Pozi.</p>
+<p>As long as the staff member or other authorised user has permission to access the MS App Proxy endpoint ( eg <code v-pre>https://poziserver-&lt;councilname&gt;.msapproxy.net/pozi/</code>), then they will have access to the internal datasets that have been configured within Pozi.</p>
 <doc-anchor-target id="url">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#url">#</doc-anchor-trigger>
-        <span>URL</span>
+        <span>Url</span>
     </h3>
 </doc-anchor-target>
-<p>Users use a separate URL that enforces a login to Azure Active Directory before the browser loads the Pozi site.</p>
+<p>Users use a separate Url that enforces a login to Azure Active Directory before the browser loads the Pozi site.</p>
 <p><strong>Example</strong>:</p>
 <ul>
-<li>Public URL: <code v-pre>https://&lt;sitename&gt;.pozi.com/</code></li>
-<li>Staff URL: <code v-pre>https://&lt;sitename&gt;.enterprise.pozi.com/</code></li>
+<li>Public Url: <code v-pre>https://&lt;sitename&gt;.pozi.com/</code></li>
+<li>Staff Url: <code v-pre>https://&lt;sitename&gt;.enterprise.pozi.com/</code></li>
 </ul>
 <doc-anchor-target id="azure-configuration">
     <h2>
@@ -456,6 +456,8 @@
 <li><code v-pre>https://staging.pozi.com/</code> (for client testing/debugging)</li>
 <li><code v-pre>https://staging.pozi.com/master/</code> (for client testing/debugging)</li>
 </ul>
+<p>All the URIs above will be needed for Pozi to be fully functional.</p>
+<p>Please make sure that the URIs all have a trailing slash (&#x27;/&#x27;) and note that the localhost URI is <code v-pre>http</code> (and not <code v-pre>https</code>).</p>
 <doc-anchor-target id="implicit-grant-and-hybrid-flows">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#implicit-grant-and-hybrid-flows">#</doc-anchor-trigger>
@@ -480,7 +482,7 @@
         <span>Authorisation</span>
     </h4>
 </doc-anchor-target>
-<p>All going well, it should be possible to visit the App Proxy URL (in our example case: <code v-pre>https://poziserver-&lt;councilname&gt;.msappproxy.net/</code>). If an error is shown like: <code v-pre>Sorry, but we’re having trouble with signing you in.</code> with a text similar to below, then we will need to give the relevant users/groups access.</p>
+<p>All going well, it should be possible to visit the App Proxy Url (in our example case: <code v-pre>https://poziserver-&lt;councilname&gt;.msappproxy.net/</code>). If an error is shown like: <code v-pre>Sorry, but we’re having trouble with signing you in.</code> with a text similar to below, then we will need to give the relevant users/groups access.</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-500 dark:bg-dark-400"></div>
     <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
@@ -512,7 +514,7 @@
 <li>Under <code v-pre>Select a role</code>, the role <code v-pre>User</code> is preselected and cannot be changed. That is OK.</li>
 <li>Click on <code v-pre>Assign</code> in the bottom of the page.</li>
 </ul>
-<p>Access should now be granted to the application proxy and the URL should be accessible.</p>
+<p>Access should now be granted to the application proxy and the Url should be accessible.</p>
 <doc-anchor-target id="api-permissions">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#api-permissions">#</doc-anchor-trigger>
@@ -530,11 +532,28 @@
 <doc-anchor-target id="site-url-enterprise-vs-public">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#site-url-enterprise-vs-public">#</doc-anchor-trigger>
-        <span>Site URL (Enterprise vs public)</span>
+        <span>Site Url (Enterprise vs public)</span>
     </h3>
 </doc-anchor-target>
 <p>Using <code v-pre>&lt;sitename&gt;.enterprise.pozi.com</code> forces user to authenticate before proceeding to the Pozi site. These users will gain access to the private datasets.</p>
 <p>Public users should continue to use <code v-pre>&lt;sitename&gt;.pozi.com</code>. They will not be prompted to authenticate, and they will have access to only public data.</p>
+<doc-anchor-target id="information-to-send-back-to-pozi">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#information-to-send-back-to-pozi">#</doc-anchor-trigger>
+        <span>Information to send back to Pozi</span>
+    </h3>
+</doc-anchor-target>
+<p>After completion of the configuration, Pozi would like to receive the following from the client:</p>
+<ul>
+<li><p>The external app proxy URl (something like https://poziserver-<councilname>.msappproxy.net/)</p>
+</li>
+<li><p>The <code v-pre>client id</code> (sometimes called &#x27;application id&#x27;) and has the following structure: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The client id is defined in Enterprise Applications =&gt; Properties.</p>
+</li>
+<li><p>The <code v-pre>tenant id</code>, which looks like xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The tenant id is defined in Azure Active Directory =&gt; Overview.&quot;</p>
+</li>
+<li><p>A copy/paste and/or screenshot of all the relevant settings</p>
+</li>
+</ul>
 <!-- ### Token-based Authentication/Authorisation
 
 :::note Under Construction
