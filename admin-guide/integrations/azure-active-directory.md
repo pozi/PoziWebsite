@@ -57,17 +57,17 @@ The following settings are for a Pozi server setup with only QGIS Server and IIS
 
 * **Internal Url** : `http://<servername>/pozi/`. Replace `<servername>` with the actual name of the server.
 
-  When visiting the above URL on the internal network, it should show an Internet Information Services welcome page.
+  To test internal Url on the internal network, opening the following Url in the browser should show a QGIS Server landing page:`http://<servername>/pozi/qgisserver/wfs3`
 
 * **External Url**: `https://poziserver-<councilname>.msapproxy.net/pozi/`.
 
-  The `<councilname>` is a name that has been given to the organisation by MS Azure.
+  The `<councilname>` is a name that has been given to the organisation by MS Azure. The Url `https://poziserver-<councilname>.msapproxy.net/pozi/qgisserver/wfs3` should show the same landing page as in the Internal Url section above.
 
 * **Pre Authentication**: `Azure Active Directory`.
 
 Do **not** choose `Passthrough` as that will give any visitor access to the internal network, potentially creating a security risk.
 
-When configured correctly, a request from a logged-in user to URL (for example)...
+When configured correctly, a request from a logged-in user to Url (for example)...
 
 `https://poziserver-<councilname>.msapproxy.net/pozi/qgisserver/wfs3.json`
 
@@ -80,13 +80,13 @@ Ensure it doesn't return a response to a non-logged-in or anonymous user.
 #### LEGACY: Pozi Connect Server + local DNS
 The following settings are for a Pozi server setup with a Pozi Server installation that proxies all QGIS Server and IIS requests.
 
-* **Internal Url** : `https://local.pozi.com` (or any other URL that uses a local DNS with a locally signed SSL certificate pointing to the server that runs PoziServer)
+* **Internal Url** : `https://local.pozi.com` (or any other Url that uses a local DNS with a locally signed SSL certificate pointing to the server that runs PoziServer)
 
-  When visiting the above URL on the internal network, it should show a Pozi Connect Server welcome page.
+  When visiting the above Url on the internal network, it should show a Pozi Connect Server welcome page.
 
 All other settings here (like **External Url** and **Pre Authentication** are the same as above)
 
-When configured correctly, a request from a logged-in user to URL (for example)...
+When configured correctly, a request from a logged-in user to Url (for example)...
 
 `https://poziserver-<councilname>.msapproxy.net/resourcecheck/<sitename>.json`
 
