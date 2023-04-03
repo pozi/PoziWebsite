@@ -195,11 +195,12 @@ Public users should continue to use `<sitename>.pozi.com`. They will not be prom
 
 After completion of the configuration, Pozi would like to receive the following from the client:
 
-* The external app proxy URl (something like https://poziserver-<clientname>.msappproxy.net/)
+* The **internal** app proxy URl (something like `http://<servername>/pozi/`)
+* The **external** app proxy URl (something like `https://poziserver-<clientname>.msappproxy.net/pozi/`)
 
-* The `client id` (sometimes called 'application id') and has the following structure: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The client id is defined in Enterprise Applications => Properties.
+* The **`client id`** (sometimes called 'application id') and has the following structure: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The client id is defined in Enterprise Applications => Properties.
 
-* The `tenant id`, which looks like xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The tenant id is defined in Azure Active Directory => Overview."
+* The **`tenant id`**, which looks like xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The tenant id is defined in Azure Active Directory => Overview."
 
 * A copy/paste and/or screenshot of all the relevant settings
 
