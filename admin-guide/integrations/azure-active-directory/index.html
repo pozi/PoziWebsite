@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.733529439864">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.733821450393">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.733529439864" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.733821450393" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.733529439864" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.733821450393" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.733529439864" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.733821450393" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -545,11 +545,13 @@
 </doc-anchor-target>
 <p>After completion of the configuration, Pozi would like to receive the following from the client:</p>
 <ul>
-<li><p>The external app proxy URl (something like https://poziserver-<clientname>.msappproxy.net/)</p>
+<li><p>The <strong>internal</strong> app proxy URl (something like <code v-pre>http://&lt;servername&gt;/pozi/</code>)</p>
 </li>
-<li><p>The <code v-pre>client id</code> (sometimes called &#x27;application id&#x27;) and has the following structure: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The client id is defined in Enterprise Applications =&gt; Properties.</p>
+<li><p>The <strong>external</strong> app proxy URl (something like <code v-pre>https://poziserver-&lt;clientname&gt;.msappproxy.net/pozi/</code>)</p>
 </li>
-<li><p>The <code v-pre>tenant id</code>, which looks like xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The tenant id is defined in Azure Active Directory =&gt; Overview.&quot;</p>
+<li><p>The <strong><code v-pre>client id</code></strong> (sometimes called &#x27;application id&#x27;) and has the following structure: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The client id is defined in Enterprise Applications =&gt; Properties.</p>
+</li>
+<li><p>The <strong><code v-pre>tenant id</code></strong>, which looks like xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The tenant id is defined in Azure Active Directory =&gt; Overview.&quot;</p>
 </li>
 <li><p>A copy/paste and/or screenshot of all the relevant settings</p>
 </li>
