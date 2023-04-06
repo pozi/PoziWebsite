@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.734067522891">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.734067539171">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.4.0.734067522891" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.734067539171" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.734067522891" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.734067539171" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.734067522891" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.734067539171" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.734067539171" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -320,45 +321,87 @@
 <ul>
 <li>Log into <a href="https://ap-southeast-2.console.aws.amazon.com/console/home?region=ap-southeast-2#">AWS Console</a></li>
 <li>Go to <a href="https://console.aws.amazon.com/iam/home?region=ap-southeast-2#/home">IAM</a> section (Drop down menu My Security Credentials)</li>
-<li>Click on <code v-pre>Policies</code> (left menu)
-<ul>
-<li>Find and select <code v-pre>PoziConnectSiteTest</code> policy</li>
-<li>Click <code v-pre>Edit policy</code></li>
-<li>Click JSON tab</li>
-<li>Select all and copy the JSON</li>
-<li>Click Cancel</li>
-</ul>
-</li>
 <li>Click <code v-pre>Policies</code> (left menu)
 <ul>
 <li>Click Create Policy</li>
-<li>Click JSON tab, overwrite existing JSON with JSON text copied above</li>
-<li>Change the client-specific settings (eg, change <code v-pre>test</code> to <code v-pre>centralgoldfields</code>)</li>
-<li><code v-pre>Next: Tags</code> &gt; <code v-pre>Next: Review</code> &gt; <code v-pre>Name</code>: enter &#x27;PoziConnectSite[sitename]&#x27; (eg, &#x27;PoziConnectSiteCentralGoldfields&#x27;)</li>
-<li><code v-pre>Create Policy</code></li>
+<li>Click JSON tab, overwrite existing JSON with the following</li>
 </ul>
 </li>
+</ul>
+<doc-panel id="policy" collapsed>
+    <template #title>Policy</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+    &quot;Version&quot;: &quot;2012-10-17&quot;,
+    &quot;Statement&quot;: [
+        {
+            &quot;Sid&quot;: &quot;VisualEditor0&quot;,
+            &quot;Effect&quot;: &quot;Allow&quot;,
+            &quot;Action&quot;: [
+                &quot;s3:PutObject&quot;,
+                &quot;s3:GetObjectAcl&quot;,
+                &quot;s3:GetObject&quot;,
+                &quot;s3:DeleteObject&quot;,
+                &quot;s3:PutObjectAcl&quot;
+            ],
+            &quot;Resource&quot;: [
+                &quot;arn:aws:s3:::connect.pozi.com/userdata/site-publisher&quot;,
+                &quot;arn:aws:s3:::connect.pozi.com/userdata/site-publisher/*&quot;
+            ]
+        },
+        {
+            &quot;Sid&quot;: &quot;VisualEditor1&quot;,
+            &quot;Effect&quot;: &quot;Allow&quot;,
+            &quot;Action&quot;: &quot;s3:ListBucket&quot;,
+            &quot;Resource&quot;: &quot;arn:aws:s3:::connect.pozi.com&quot;
+        }
+    ]
+}</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<ul>
+<li>Change the client-specific settings (eg, change <code v-pre>site</code> to <code v-pre>gleneira</code>)</li>
+<li><code v-pre>Next: Tags</code> &gt; <code v-pre>Next: Review</code> &gt; <code v-pre>Name</code>: enter &#x27;PoziPublisher-[site]&#x27; (eg, &#x27;PoziPublisher-GlenEira&#x27;)</li>
+<li><code v-pre>Create Policy</code></li>
 <li>Click on <code v-pre>Users</code> (left menu)
 <ul>
-<li>Click <code v-pre>Add user</code></li>
-<li>Set name to PoziConnectSite[SITENAME] ... e.g. PoziConnectSiteCentralGoldfields</li>
-<li>Tick <code v-pre>Access key - Programmatic access</code></li>
-<li>Click <code v-pre>Next: Permissions</code></li>
-<li>Click <code v-pre>Attach existing policies directly</code>, search for &quot;PoziConnect&quot;, then tick the box nect to the policy just created above</li>
-<li>Click <code v-pre>Next: Tags</code></li>
-<li>Click <code v-pre>Next: Review</code></li>
+<li>Click <code v-pre>Add users</code></li>
+<li>Set name to &#x27;PoziPublisher-[site]&#x27; (eg, &#x27;PoziPublisher-GlenEira&#x27;)</li>
+<li>Click <code v-pre>Next</code></li>
+<li>Click <code v-pre>Attach existing policies directly</code>, search for &quot;PoziPublisher&quot;, then tick the box nect to the policy just created above</li>
+<li>Click <code v-pre>Next</code></li>
 <li>Click <code v-pre>Create user</code></li>
+<li>Click <code v-pre>View user</code></li>
+<li>Click <code v-pre>Security credentials</code></li>
+<li>Click <code v-pre>Create access key</code></li>
+<li>Click <code v-pre>Application running outside AWS</code></li>
+<li>Click <code v-pre>Next</code></li>
+<li>Set <code v-pre>Description tag value</code> to &quot;Pozi Publisher&quot;</li>
+<li>Click <code v-pre>Create access key</code></li>
 <li>Note/save the <code v-pre>Access key ID</code> and <code v-pre>Secret access key</code> (click &#x27;Show&#x27;)</li>
-<li>Click <code v-pre>Close</code></li>
+<li>Click <code v-pre>Done</code></li>
 </ul>
 </li>
 </ul>
-<doc-anchor-target id="finalise">
+<doc-anchor-target id="onsite-configuration">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#finalise">#</doc-anchor-trigger>
-        <span>Finalise</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#onsite-configuration">#</doc-anchor-trigger>
+        <span>Onsite Configuration</span>
     </h2>
 </doc-anchor-target>
+<doc-tabs>
+<doc-tab id="pozi-publisher">
+<template #title>Pozi Publisher</template>
+<p>Update Pozi Publisher tasks with the new credentials.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">[AWS]
+bucket=connect.pozi.com/userdata/[site]-publisher
+key=[Access key ID]
+secret=[Secret access key]</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab id="pozi-sync-legacy">
+<template #title>Pozi Sync (Legacy)</template>
 <p>Enter in the credentials into the client&#x27;s Pozi Connect Server <a href="https://local.pozi.com/settingssync">Data Sync</a> page.</p>
 <ul>
 <li>Pozi Cloud Username: <code v-pre>[Access key ID]</code></li>
@@ -373,6 +416,8 @@
 </p>
 <p>Restart the Pozi Server service for the settings to take effect.</p>
 <p>Windows &gt; Services &gt; PoziConnectServer &gt; right-click &gt; Restart</p>
+</doc-tab>
+</doc-tabs>
 
                                 
                                 <!-- Required only on API pages -->
@@ -475,6 +520,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Sync", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Sync", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
