@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.733821450393">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.734067522891">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.733821450393" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.734067522891" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.733821450393" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.734067522891" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.733821450393" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.734067522891" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -316,6 +316,22 @@
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
+<doc-anchor-target id="configure-source-in-qgis">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#configure-source-in-qgis">#</doc-anchor-trigger>
+        <span>Configure Source in QGIS</span>
+    </h2>
+</doc-anchor-target>
+<ol>
+<li>QGIS &gt; Layer &gt; Add Layer &gt; Add Vector Layer</li>
+<li>Source Type: Protocol: HTTP(S), cloud, etc</li>
+<li>Protocol Type: GeoJSON</li>
+<li>URI: your Asset Edge Reflect API URL</li>
+</ol>
+<p>Note: if the URL supplied to you contains <code v-pre>Kml3=</code>, replace it with <code v-pre>GeoJson=</code>.</p>
+<p><img src="../img/assetege-reflect-add-layer.png" style="width:400px" alt="" /></p>
+<p>Preview your new layer, and give it a user-friendly layer name.</p>
+<p><img src="../img/assetege-reflect-preview-and-rename-layer.png" style="width:400px" alt="" /></p>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
                                     <span>
