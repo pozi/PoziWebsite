@@ -25,10 +25,6 @@ Advantages:
 
 Pozi Enterprise unlocks a range of advanced functionality and integrations.
 
-### Publisher
-
-Synchronise selected internal datasets to public cloud.
-
 ### GIS Integration
 
 Enable internal users to view and interact with corporate GIS layers on your organisation's network. Supported formats include SQL Server, MapInfo TAB, Esri SHP, GeoJSON and many more.

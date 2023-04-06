@@ -46,6 +46,12 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## Completed
 
+### April 2023
+
+#### Fixed
+
+- [x] 🪲 fix waste collection next pickup calculation misreporting date as 'Today' instead of 'Tomorrow' in some circumstances
+
 ### March 2023
 
 #### Improved
