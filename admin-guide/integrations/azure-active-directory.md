@@ -191,6 +191,8 @@ Access should now be granted to the application proxy and the Url should be acce
 
 In order for us to be able to provide support and troubleshoot any potential issues, we ask our clients to create an account that has the same permissions/groups/roles as the users of Pozi through Azure AD Application Proxy.
 
+No administrator privileges are required.
+
 ### Information to send back to Pozi
 
 After completion of the configuration, Pozi would like to receive the following from the client:
