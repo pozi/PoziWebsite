@@ -30,9 +30,11 @@ Whether a user can access private datasets is based on whether the user is given
 
 As long as the staff member or other authorised user has permission to access the MS App Proxy endpoint ( eg `https://poziserver-<clientname>.msapproxy.net/pozi/`), then they will have access to the internal datasets that have been configured within Pozi.
 
-### Url
+### Site Url
 
-Users use a separate Url that enforces a login to Azure Active Directory before the browser loads the Pozi site.
+Using `<sitename>.enterprise.pozi.com` enables a user to be authenticated before proceeding to the Pozi site. These users will gain access to the private datasets.
+
+Public users should continue to use `<sitename>.pozi.com`. They will not be prompted to authenticate, and they will have access to only public data.
 
 **Example**:
 
@@ -185,11 +187,9 @@ Access should now be granted to the application proxy and the Url should be acce
 
 <!-- Important: a user authenticated with the client's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://poziserver-<clientname>.msapproxy.net/`). -->
 
-### Site Url (Enterprise vs public)
+### Azure AD Pozi Support Account
 
-Using `<sitename>.enterprise.pozi.com` forces user to authenticate before proceeding to the Pozi site. These users will gain access to the private datasets.
-
-Public users should continue to use `<sitename>.pozi.com`. They will not be prompted to authenticate, and they will have access to only public data.
+In order for us to be able to provide support and troubleshoot any potential issues, we ask our clients to create an account that has the same permissions/groups/roles as the users of Pozi through Azure AD Application Proxy.
 
 ### Information to send back to Pozi
 
@@ -201,6 +201,8 @@ After completion of the configuration, Pozi would like to receive the following 
 * The **`client id`** (sometimes called 'application id') and has the following structure: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The client id is defined in Enterprise Applications => Properties.
 
 * The **`tenant id`**, which looks like xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The tenant id is defined in Azure Active Directory => Overview."
+
+* The **credentials** (email address + password) of the Pozi Support user account that will have access to the Pozi Azure AD Application Proxy. Please get in touch with us on how to securely provide us with these details.
 
 * A copy/paste and/or screenshot of all the relevant settings
 
