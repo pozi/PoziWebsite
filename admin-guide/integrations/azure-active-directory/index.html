@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.734070546236">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.734160738878">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.734070546236" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.734160738878" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.734070546236" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.734160738878" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.734070546236" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.734160738878" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -335,13 +335,14 @@
 </doc-anchor-target>
 <p>Whether a user can access private datasets is based on whether the user is given permission by the organisation to access the MS App Proxy endpoint that is dedicated for Pozi.</p>
 <p>As long as the staff member or other authorised user has permission to access the MS App Proxy endpoint ( eg <code v-pre>https://poziserver-&lt;clientname&gt;.msapproxy.net/pozi/</code>), then they will have access to the internal datasets that have been configured within Pozi.</p>
-<doc-anchor-target id="url">
+<doc-anchor-target id="site-url">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#url">#</doc-anchor-trigger>
-        <span>Url</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#site-url">#</doc-anchor-trigger>
+        <span>Site Url</span>
     </h3>
 </doc-anchor-target>
-<p>Users use a separate Url that enforces a login to Azure Active Directory before the browser loads the Pozi site.</p>
+<p>Using <code v-pre>&lt;sitename&gt;.enterprise.pozi.com</code> enables a user to be authenticated before proceeding to the Pozi site. These users will gain access to the private datasets.</p>
+<p>Public users should continue to use <code v-pre>&lt;sitename&gt;.pozi.com</code>. They will not be prompted to authenticate, and they will have access to only public data.</p>
 <p><strong>Example</strong>:</p>
 <ul>
 <li>Public Url: <code v-pre>https://&lt;sitename&gt;.pozi.com/</code></li>
@@ -529,14 +530,13 @@
 </li>
 </ul>
 <!-- Important: a user authenticated with the client's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://poziserver-<clientname>.msapproxy.net/`). -->
-<doc-anchor-target id="site-url-enterprise-vs-public">
+<doc-anchor-target id="azure-ad-pozi-support-account">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#site-url-enterprise-vs-public">#</doc-anchor-trigger>
-        <span>Site Url (Enterprise vs public)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#azure-ad-pozi-support-account">#</doc-anchor-trigger>
+        <span>Azure AD Pozi Support Account</span>
     </h3>
 </doc-anchor-target>
-<p>Using <code v-pre>&lt;sitename&gt;.enterprise.pozi.com</code> forces user to authenticate before proceeding to the Pozi site. These users will gain access to the private datasets.</p>
-<p>Public users should continue to use <code v-pre>&lt;sitename&gt;.pozi.com</code>. They will not be prompted to authenticate, and they will have access to only public data.</p>
+<p>In order for us to be able to provide support and troubleshoot any potential issues, we ask our clients to create an account that has the same permissions/groups/roles as the users of Pozi through Azure AD Application Proxy.</p>
 <doc-anchor-target id="information-to-send-back-to-pozi">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#information-to-send-back-to-pozi">#</doc-anchor-trigger>
@@ -552,6 +552,8 @@
 <li><p>The <strong><code v-pre>client id</code></strong> (sometimes called &#x27;application id&#x27;) and has the following structure: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The client id is defined in Enterprise Applications =&gt; Properties.</p>
 </li>
 <li><p>The <strong><code v-pre>tenant id</code></strong>, which looks like xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The tenant id is defined in Azure Active Directory =&gt; Overview.&quot;</p>
+</li>
+<li><p>The <strong>credentials</strong> (email address + password) of the Pozi Support user account that will have access to the Pozi Azure AD Application Proxy. Please get in touch with us on how to securely provide us with these details.</p>
 </li>
 <li><p>A copy/paste and/or screenshot of all the relevant settings</p>
 </li>
