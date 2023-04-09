@@ -100,7 +100,7 @@ See [Configuring Layers](/admin-guide/qgis/configuring-layers.md) for details ab
 
 Remember to use only UNC paths for file-based layers.
 
-When you're done, remember to [enable any layers for WFS](/admin-guide/qgis/configuring-layers/#enable-wfs) if required.
+When you're done, remember to [enable any layers for WFS](/admin-guide/qgis/configuring-layers/#publish-as-vector-layer) if required.
 
 <br/>
 
