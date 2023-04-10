@@ -14,7 +14,7 @@ Unlike traditional GIS software, Pozi is built from the ground up to integrate d
 
 > "Hugely better than other GIS system I have used in other councils. It makes my job a lot easier.​"
 >
-> *Staff member at **Cardinia Shire Council** after induction training*
+> *Staff member at **Cardinia Shire Council***
 
 ## Benefits
 

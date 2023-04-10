@@ -28,7 +28,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [ ] display tables of selected features
 - [ ] interactive bulk spatial selection for ad-hoc layers
 - [ ] collaborate map annotations
-- [ ] alternative layer download format options
+- [ ] alternative layer download format options - GeoJSON, SHP, KML, GeoPackage, CSV and other popular formats
 - [ ] 3D view
 
 ### Enhancements
@@ -36,11 +36,9 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [ ] dynamic loading of layer catalogues
   - improve start-up time
   - enable clients to add custom layers from external sources
-- [ ] don't unhighlight parent object when clicking on a non-spatial child record
 - [ ] prevent Share links from including the panel state (unless specified in advanced options)
 - [ ] zoom/pan to selected feature on Pozi launch if URL contains a selected feature
 - [ ] display What's Here target on Pozi launch if URL contains a target
-- [ ] improve representation of what's highlighted on the map to better correspond with what exactly is being queried
 
 ---
 

@@ -85,6 +85,23 @@ Use Pozi to visualise your 3D imagery. Toggle between 2D and 3D viewing modes. C
 
 ---
 
+### Mobile Data Capture Hosting
+
+Capture geospatial data easily through your mobile device and share it with the team for seamless collaboration.
+
+<img src="/static/img/mergin-maps-logo.svg" alt="" style="float:right;width:300px;margin:20px 40px;">
+
+Pozi provides an Australian-hosted [Mergin](https://merginmaps.com/) server to enable your team to collaborate safely with others on the same geodata. See colleagues' updates in near real time, even from the field. Works offline. Edits are merged automatically. View and edit geodata in the field. Integrate with existing GIS infrastructure using open formats.
+
+Bundled with Pozi site: <small>AUD</small>$3K<small>/year</small>
+<br/>
+Standalone: <small>AUD</small>$5K<small>/year</small>
+
+<br clear="all" />
+<br/>
+
+---
+
 ### Community Consultation
 
 <img src="/static/img/tweet-gallery/horsham_corellas_wrap_up.png" alt="" style="float:right;width:400px;margin:0px 40px;">
@@ -122,7 +139,7 @@ If your council is already using Pozi Connect, and you've switched to a new prop
 
 You can engage our development services for any custom development to further enhance Pozi to suit your organisation's needs.
 
-We also offer clients the opportunity to sponsor development of new features, giving them direct input into the specification to ensure it meets their exact requirements.
+We also offer clients the opportunity to sponsor development of new features, giving you direct input into the specification to ensure it meets their exact requirements.
 
 * custom workflows
 * new functionality
@@ -149,7 +166,7 @@ For *Enterprise* and *Enterprise Cloud* subscribers, we offer access to our sour
 * create backup copies of the source code
 * review code to check for security vulnerabilities
 * contribute to code by submitting pull requests for new features, bugfixes and documentation updates
-* use the code to recreate Pozi on organisation's internal infrastructure for the exclusive use of the organisation ONLY IF Pozi is no longer offered as a service
+* use the code to recreate Pozi on your organisation's internal infrastructure for the exclusive use of the organisation ONLY IF Pozi is no longer offered as a service
 
 ##### Prohibited Usage
 
