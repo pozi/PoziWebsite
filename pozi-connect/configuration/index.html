@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.734585478589">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.734658015997">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.4.0.734585478589" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.734658015997" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.734585478589" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.734658015997" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.734585478589" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.734585478589" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.734658015997" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.734658015997" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -388,7 +388,7 @@ Melton\Melton M1 - 3 - Generate M1.ini</code></pre>
 <ul>
 <li>If key name ends with <code v-pre>folder</code>, the interface offers the user a button to launch an Open Folder dialog.</li>
 <li>If key name ends with <code v-pre>file</code>, the interface offers the user a button to launch an Open File dialog</li>
-<li>If key name ends with <code v-pre>password</code>, the interface displays dummy characters in place of the populated or typed characters</li>
+<li>If key name ends with <code v-pre>password</code>, the interface displays placeholder characters in place of the populated or typed characters</li>
 </ul>
 <p>Examples:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
@@ -396,13 +396,13 @@ Melton\Melton M1 - 3 - Generate M1.ini</code></pre>
 Vicmap_Address_Folder:
 Vicmap_Property_Folder:
 LGA_Code: 302
-Database_File: Output\Ballarat.sqlite
+Database_File: output\DB\Ballarat.sqlite
 
 [User Settings]
-Pathway_DSN: pthprod
-Pathway_User_ID:
-Pathway_Password:
-Pathway_Table_Prefix: pthdbo.</code></pre>
+Data_Source: ODBC:DSN=pthprod
+Username:
+Password:
+Table_Prefix: pthdbo.</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="general-settings">
     <h3>
@@ -416,8 +416,8 @@ Pathway_Table_Prefix: pthdbo.</code></pre>
 Description:
     Extract Pathway address and parcel
     information into Pozi Connect database
-Pathway_Connection: ODBC:DSN={Pathway_DSN};UID={Pathway_User_ID};PWD={Pathway_Password}
-Database_File: Output\Ballarat.sqlite</code></pre>
+Database_Connection: {Data_Source};UID={Username};PWD={Password}
+Database_File: output\DB\Ballarat.sqlite</code></pre>
 </doc-codeblock></div>
 <hr />
 <doc-anchor-target id="parameters">
