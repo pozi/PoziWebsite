@@ -280,7 +280,7 @@ When users select a feature from the map, Pozi prominently displays one of the f
 
 ![](img/info-panel-title.png){style="width:800px"}
 
-Typically the title will be the name of the feature or some other useful information to distinguish the feature from others in the same layer.
+Ideally the title will be the name of the feature or some other useful information to distinguish the feature from others in the same layer.
 
 The field from which this attribute is obtained is defined in QGIS.
 

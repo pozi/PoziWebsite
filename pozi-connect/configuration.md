@@ -72,7 +72,7 @@ Notes:
 
 * If key name ends with `folder`, the interface offers the user a button to launch an Open Folder dialog.
 * If key name ends with `file`, the interface offers the user a button to launch an Open File dialog
-* If key name ends with `password`, the interface displays dummy characters in place of the populated or typed characters
+* If key name ends with `password`, the interface displays placeholder characters in place of the populated or typed characters
 
 Examples:
 
@@ -81,13 +81,13 @@ Examples:
 Vicmap_Address_Folder:
 Vicmap_Property_Folder:
 LGA_Code: 302
-Database_File: Output\Ballarat.sqlite
+Database_File: output\DB\Ballarat.sqlite
 
 [User Settings]
-Pathway_DSN: pthprod
-Pathway_User_ID:
-Pathway_Password:
-Pathway_Table_Prefix: pthdbo.
+Data_Source: ODBC:DSN=pthprod
+Username:
+Password:
+Table_Prefix: pthdbo.
 ```
 
 ### General Settings
@@ -98,8 +98,8 @@ Example:
     Description:
         Extract Pathway address and parcel
         information into Pozi Connect database
-    Pathway_Connection: ODBC:DSN={Pathway_DSN};UID={Pathway_User_ID};PWD={Pathway_Password}
-    Database_File: Output\Ballarat.sqlite
+    Database_Connection: {Data_Source};UID={Username};PWD={Password}
+    Database_File: output\DB\Ballarat.sqlite
 
 ---
 

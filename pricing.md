@@ -85,7 +85,7 @@ Use Pozi to visualise your 3D imagery. Toggle between 2D and 3D viewing modes. C
 
 ---
 
-### Mobile Data Capture Hosting
+### Mobile Data Capture
 
 Capture geospatial data easily through your mobile device and share it with the team for seamless collaboration.
 
