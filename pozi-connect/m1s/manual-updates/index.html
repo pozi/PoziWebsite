@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.734658015997">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.734750796840">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.734658015997" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.734750796840" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.734658015997" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.734750796840" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.734658015997" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.734750796840" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -309,12 +309,47 @@
     </h1>
 </doc-anchor-target>
 <p>In some scenarios, Pozi Connect is not able to generate an appropriate update. You can manually update the M1 spreadsheet to give you the outcome you want.</p>
-<p>Below are some edits you can make. For all other equiries with manual M1 updates, please contact <a href="mailto:gis.helpdesk@delwp.vic.gov.au">gis.helpdesk@delwp.vic.gov.au</a> for assistance.</p>
+<p>Below are some edits you can make. For all other enquiries with manual M1 updates, please contact <a href="mailto:gis.helpdesk@delwp.vic.gov.au">gis.helpdesk@delwp.vic.gov.au</a> for assistance.</p>
+<doc-anchor-target id="update-distance-based-address">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#update-distance-based-address">#</doc-anchor-trigger>
+        <span>Update distance-based address</span>
+    </h3>
+</doc-anchor-target>
+<p>You may encounter a scenario where Pozi Connect will notify you in the M1 Comments field of a &#x27;P&#x27; edit that is likely to be rejected by DEECA. This is because the existing location of a primary distance-based address is within a parcel that Pozi Connect is trying to transfer out of the property.</p>
+<p>The warning appears as:</p>
+<p><code v-pre>**WARNING**: transfer of parcel includes existing primary distance-based address</code></p>
+<p>The solution is to submit a manual M1 address update (&#x27;S&#x27; edit) to update the coordinates of the property&#x27;s primary address so it falls within any of the parcels that are still owned by the property and is <strong>not within any parcel that you&#x27;re trying to transfer out of the property</strong>.</p>
+<p>Use your GIS or <a href="https://vicmap.pozi.com/">Pozi&#x27;s dedicated M1 map</a> to obtain the coordinates of the updated property entrance.</p>
+<p>Obtaining coordinates using Pozi:</p>
+<ol>
+<li>locate the property on the map</li>
+<li>click the Aerial button at the top right of the page</li>
+<li>click on property entrance approximately 8m inside the property boundary</li>
+<li>at the botton of the <em>What&#x27;s Here</em> panel, click on the &#x27;Location/Dimensions&#x27; tab</li>
+<li>select your local datum (currently supported datums are MGA54 and MGA55)</li>
+<li>copy the easting and northing values</li>
+</ol>
+<p>Add a row at the bottom of your next M1 with the following columns filled in:</p>
+<ul>
+<li><code v-pre>lga_code</code></li>
+<li><code v-pre>propnum</code></li>
+<li><code v-pre>house_number_1</code> (the house number may need to change if the existing number no longer represents 10x distance along the road of the updated property entrance)</li>
+<li><code v-pre>road_name</code></li>
+<li><code v-pre>road_type</code></li>
+<li><code v-pre>locality_name</code></li>
+<li><code v-pre>distance_related_flag</code> (Y)</li>
+<li><code v-pre>is_primary</code> (Y)</li>
+<li><code v-pre>easting</code></li>
+<li><code v-pre>northing</code></li>
+<li><code v-pre>datum_proj</code> MGA54 or MGA55</li>
+<li><code v-pre>edit_code</code> (S)</li>
+</ul>
 <doc-anchor-target id="update-parcel-that-has-no-spi">
-    <h4>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#update-parcel-that-has-no-spi">#</doc-anchor-trigger>
         <span>Update parcel that has no SPI</span>
-    </h4>
+    </h3>
 </doc-anchor-target>
 <p>Add rows to the bottom of the M1.
 ​
