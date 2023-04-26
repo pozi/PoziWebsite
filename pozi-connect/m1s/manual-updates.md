@@ -10,7 +10,7 @@ Below are some edits you can make. For all other enquiries with manual M1 update
 
 ### Update distance-based address
 
-You may encounter a scenario where Pozi Connect will notify you in the M1 Comments field of a 'P' edit that is likely to be rejected by DEECA. This is because the existing location of a primary distance-based address is within a parcel that Pozi Connect is trying to transfer out of the property.
+You may encounter a scenario where Pozi Connect will notify you in the `comments` field of your M1 about a 'P' edit that is likely to be rejected by DEECA. This is because the existing location of a primary distance-based address is within a parcel that Pozi Connect is trying to transfer out of the property.
 
 The warning appears as:
 
