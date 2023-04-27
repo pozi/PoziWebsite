@@ -79,12 +79,12 @@ As a guideline, use vectors only for layers with fewer than 5-10K features, or e
 
 ### Enabling Vector Layer
 
-1. Project > Properties > QGIS Server
-2. `WFS capabilities > Published`: tick on for each layer to be published (or you can click `Select All` if all layers are required)
+1. Project > Properties > QGIS Server > WFS/OAPIF
+2. `Published`: tick on for each layer to be published as a vector layer (or you can click `Publish All` if *all* layers are required)
 3. OK
 4. Project > Save (`Ctrl` + `S`)
 
-![QGIS Project Properties WFS Configuration](./img/qgis-project-properties-wfs-configuration.png){style="width:500px"}
+![QGIS Project Properties WFS Configuration](./img/qgis-project-properties-wfs-configuration.png){style="width:700px"}
 
 <br/>
 

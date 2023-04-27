@@ -77,7 +77,7 @@ Copy the URL to your clipboard for subsequent configuration below.
 3. update WMTS capabilities settings
    * `Published layers > Project > Published`: tick on
    * `Advertised URL`: enter Advertised URL
-4. update the WFS capabilities settings:
+4. update the WFS/OAPIF capabilities settings:
    * `Advertised URL`: enter Advertised URL
 5. OK
 
