@@ -46,7 +46,7 @@ Pozi Enterprise Cloud leverages your organisation's Azure Active Directory to co
 
 [Pozi Publisher](/publisher/) is a powerful new application to give you ultimate control of your organisation's geospatial data.
 
-#### Streamlined Publishing to Public
+#### Publish to Public
 
 Keep the public informed with information from your organisation's geospatial knowledge. Pozi Publisher enables you to effortlessly publish any of your organisation's internally-maintained datasets out to the public.
 
