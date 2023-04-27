@@ -138,7 +138,6 @@ Add the following `Redirect URIs` to the `Single-page application` section:
   * If needed, add any extra URIs that the client uses (e.g. `https://<sitename>-azure.enterprise.pozi.com/`)
   * `http://localhost:3000/` (for Pozi development purposes)
   * `https://staging.pozi.com/` (for client testing/debugging)
-  * `https://staging.pozi.com/master/` (for client testing/debugging)
 
 All the URIs above will be needed for Pozi to be fully functional.
 
