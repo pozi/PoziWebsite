@@ -113,7 +113,7 @@ P1PLN_PROP_TRANSFER
 P1PRC_ASSOCIATION
 ```
 
-The Association table is likely to be quite large (possibly 100s of MBs). Apply a filter to it to reduce it down before downloading it.
+The Association table is likely to be quite large (possibly 100s of MBs). You may choose to apply a filter to it to reduce it down before downloading it.
 
 ```sql
 SELECT key1,key2,association_type,date_ended

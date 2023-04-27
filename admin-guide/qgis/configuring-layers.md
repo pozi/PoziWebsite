@@ -93,7 +93,7 @@ As a guideline, use vectors only for layers with fewer than 5-10K features, or e
 Using QGIS, you can control many visual aspects of your layer. You may apply a common style for all the features in a layer 
 ([Single Symbol](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#single-symbol-renderer)) or apply a thematic style that displays features according to any of its attributes ([Categorized](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#categorized-renderer)).
 
-When Pozi fetches a layer using WMS, QGIS Server renders the layer exactly as configured in QGIS. When using WFS, the rendering is done by Pozi in the browser, which can cause the layer to appear differently compared to QGIS for some styling options. 
+When Pozi fetches a layer using WMS (ie, *not* vector), QGIS Server renders the layer exactly as configured in QGIS. When using WFS (ie, vector), the rendering is done by Pozi in the browser, which can cause the layer to appear differently compared to QGIS for some styling options. 
 
 ### Styling for Vector Layers
 
