@@ -181,19 +181,28 @@ When you fund the development of new features, you have ongoing access to the ne
 | Multi-feature selection | ✔️ | ✔️ |
 | Linked data | ✔️ | ✔️ |
 | Mail merge | ✔️ | ✔️ |
+| Share link | ✔️ | ✔️ |
 | Data entry | ✔️ | (coming soon) |
 | Unified Search |  | ✔️ |
 | <big>**Administration**</big> | | |
 | Configuration tool(s) | MapManager & ConfigManager | QGIS Desktop |
-| Connections for all major data formats | ✔️ | ✔️ |
 | SQL queries | ✔️ | ✔️ |
 | Online reference and training material |  | ✔️ |
+| Rapid help desk support |  | ✔️ |
+| Custom development available |  | ✔️ |
 | <big>**Technology**</big> | | |
 | Map Library | OpenLayers 2 (2013) | OpenLayers 7 (2023) |
 | OGC standards compliant (WMS/WFS) | ✔️ | ✔️ |
 | Vector Tiles |    | ✔️ |
+| <big>**Data Integrations**</big> | | |
+| Cloud database | ✔️ | ✔️ |
+| On-premise databases and files |  | ✔️ |
+| Live web services |  | ✔️ |
 | <big>**Security**</big> | | |
 | User access | Active Directory | Azure Active Directory and App Proxy |
+| <big>**Procurement**</big> | | |
+| Pricing | $$$ | $ |
+| Lock-in contract | multi-year | single-year |
 
 </div>
 
