@@ -39,6 +39,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [ ] prevent Share links from including the panel state (unless specified in advanced options)
 - [ ] zoom/pan to selected feature on Pozi launch if URL contains a selected feature
 - [ ] display What's Here target on Pozi launch if URL contains a target
+- [ ] rename column headings in table view to match any field name aliases
 
 ---
 
