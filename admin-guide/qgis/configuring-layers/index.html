@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.736486707333">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.736759022888">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.736486707333" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.736759022888" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.736486707333" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.736759022888" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.736486707333" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.736759022888" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -700,12 +700,13 @@
 <li>Ensure the layer has a coordinate reference system set. Go to Layer Properties &gt; Source &gt; Assigned CRS, and pick a projection</li>
 <li>For file-based layers, ensure that the file path is one that is recognised by the server. See <doc-anchor-trigger to="#about-layer-file-paths">About layer file paths</doc-anchor-trigger> above.</li>
 <li>Ensure that any categorised styling is based on a single field with a single value per row. See <doc-anchor-trigger to="#categorized-symbology">Categorized Symbology</doc-anchor-trigger> above.</li>
+<li>If the layer source is a MapInfo table, ensure that the symbology type is <em>not</em> &quot;Embedded Symbols&quot;. Change it to another type such as &quot;Single Symbol&quot; or &quot;Categorized&quot;.</li>
 </ul>
    </doc-panel>
-   <doc-panel id="layers-are-not-displayed-with-the-styling-from-qgis" collapsed>
-       <template #title>Layers are not displayed with the styling from QGIS</template>
-<p>Pozi will display layers in a generic style if it cannot process the style that was configured in QGIS.</p>
-<p>Simplify the style in the QGIS project and try again. Replace hatch styles with semi-opaque fills. Replace custom point symbols with one of the <doc-anchor-trigger to="#points">standard symbols</doc-anchor-trigger> specified above.</p>
+   <doc-panel id="layers-are-displayed-but-not-with-the-styling-from-qgis" collapsed>
+       <template #title>Layers are displayed, but not with the styling from QGIS</template>
+<p>Pozi will display layers in a generic style (often purple) if it cannot process the style that was configured in QGIS.</p>
+<p>Simplify the style in the QGIS project and try again. For point features, replace custom point symbols with one of the <doc-anchor-trigger to="#points">standard symbols</doc-anchor-trigger> specified above. For polygon features, replace hatch styles with semi-opaque fills or any of the <doc-anchor-trigger to="#polygons">supported fill styles</doc-anchor-trigger> specified above.</p>
    </doc-panel>
    <doc-panel id="selected-features-from-wms-layers-are-displayed-with-a-mis-shaped-highlight" collapsed>
        <template #title>Selected features from WMS layers are displayed with a mis-shaped highlight</template>
