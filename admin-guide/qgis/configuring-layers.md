@@ -352,12 +352,13 @@ Check the following:
 * Ensure the layer has a coordinate reference system set. Go to Layer Properties > Source > Assigned CRS, and pick a projection
 * For file-based layers, ensure that the file path is one that is recognised by the server. See [About layer file paths](#about-layer-file-paths) above.
 * Ensure that any categorised styling is based on a single field with a single value per row. See [Categorized Symbology](#categorized-symbology) above.
+* If the layer source is a MapInfo table, ensure that the symbology type is *not* "Embedded Symbols". Change it to another type such as "Single Symbol" or "Categorized".
 
-==- Layers are not displayed with the styling from QGIS
+==- Layers are displayed, but not with the styling from QGIS
 
-Pozi will display layers in a generic style if it cannot process the style that was configured in QGIS.
+Pozi will display layers in a generic style (often purple) if it cannot process the style that was configured in QGIS.
 
-Simplify the style in the QGIS project and try again. Replace hatch styles with semi-opaque fills. Replace custom point symbols with one of the [standard symbols](#points) specified above.
+Simplify the style in the QGIS project and try again. For point features, replace custom point symbols with one of the [standard symbols](#points) specified above. For polygon features, replace hatch styles with semi-opaque fills or any of the [supported fill styles](#polygons) specified above.
 
 ==- Selected features from WMS layers are displayed with a mis-shaped highlight
 

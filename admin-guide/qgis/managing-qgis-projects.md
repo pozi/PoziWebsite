@@ -36,15 +36,11 @@ Create new project from scratch:
 
 It's useful to include a basemap in the project to provide visual context for the layers you will add on top.
 
-#### Example
+#### Vicmap Basemap Example
 
 If you've [set up](/admin-guide/qgis/setting-up-qgis/#basemap) 'Vicmap Basemap' as a WMS/WMTS source, you can easily one of its layers as your basemap.
 
-Browser > WMS/WMTS > Vicmap Basemap > Vicmap Basemap - Web Mercator - Cartographic
-
-![Add Vicmap Basemap](./img/qgis-add-wmts-layer.png){style="width:250px"}
-
-<br/>
+Browser > WMS/WMTS > Vicmap Basemap > Vicmap Basemap - VicGrid2020 - Cartographic
 
 ## Configure Web Services
 ### Construct Advertised URL
