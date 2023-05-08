@@ -39,6 +39,7 @@ title: Integrations
 * City of Greater Bendigo
 * City of Monash
 * City of Ballarat
+* City of Darebin
 * Nillumbik Shire Council
 * Frankston City Council
 * Glen Eira City Council
@@ -67,6 +68,7 @@ title: Integrations
 * Golden Plains Shire Council
 * Mansfield Shire Council
 * Pyrenees Shire Council
+
 ## TechnologyOne
 
 ### On-Premise
