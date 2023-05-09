@@ -28,9 +28,9 @@ After Pozi configures and implements Pozi Connect for your council, you can gene
 
 ## Vicmap Maintenance Cycle
 
-Vicmap data is maintained by DELWP. Councils obtain updates of [Vicmap Address](https://datashare.maps.vic.gov.au/search?q=uuid%3Db9e9146d-8378-5c37-b6cd-63e3a8d05d02) and [Vicmap Property Simplified 1](https://datashare.maps.vic.gov.au/search?q=uuid%3Da752b99e-baee-502e-a58b-7d15fa6c57cd) by downloading it weekly (recommended) or fortnightly from the [DELWP DataShare](https://datashare.maps.vic.gov.au/).
+Vicmap data is maintained by DEECA. Councils obtain updates of [Vicmap Address](https://datashare.maps.vic.gov.au/search?q=uuid%3Db9e9146d-8378-5c37-b6cd-63e3a8d05d02) and [Vicmap Property Simplified 1](https://datashare.maps.vic.gov.au/search?q=uuid%3Da752b99e-baee-502e-a58b-7d15fa6c57cd) by downloading it weekly (recommended) or fortnightly from the [DEECA DataShare](https://datashare.maps.vic.gov.au/).
 
-Pozi Connect uses this downloaded Vicmap data (as well as the council's current rates data) to automatically generate the required M1s. When the M1 is submitted, it feeds into the Vicmap maintenance cycle. The changes will not be immediate because of the DELWP/Jacobs maintenance schedules and occasional backlogs. Allow at least two weeks before you can expect to see the changes in Vicmap.
+Pozi Connect uses this downloaded Vicmap data (as well as the council's current rates data) to automatically generate the required M1s. When the M1 is submitted, it feeds into the Vicmap maintenance cycle. The changes will not be immediate because of the DEECA/Jacobs maintenance schedules and occasional backlogs. Allow at least two weeks before you can expect to see the changes in Vicmap.
 
 Manual M1s (or using software like Common Ground) are no longer required for routine data maintenance. Pozi Connect takes care of most property number and address updates when you run it on a regular basis. It will even use any rural address point locations that you specify in a point table (if Pozi Connect is configured for it).
 
@@ -43,7 +43,7 @@ Download and unzip the following MapInfo or SHP datasets to the predefined locat
 
 (If you do not know the predefined locations on your network for these datasets, launch Pozi Connect and pick the M1 task that relates to importing Vicmap. The network location is shown there.)
 
-If you have not already done so, set up a weekly repeat order for both datasets at [DELWP DataShare](https://datashare.maps.vic.gov.au/).
+If you have not already done so, set up a weekly repeat order for both datasets at [DEECA DataShare](https://datashare.maps.vic.gov.au/).
 
 ### Unzipping DataShare Files
 

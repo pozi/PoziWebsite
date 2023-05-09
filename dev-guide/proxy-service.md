@@ -19,7 +19,7 @@ Examples:
 Some third party data services require that credentials or a key be appended to any data request. In order to keep these credentials out of public view, these requests can be routed via Pozi Proxy, which adds the necessary credentials.
 
 * Nearmap
-* DELWP Image Web Server
+* DEECA Image Web Server
 * Google Maps API (for Street View imagery)
 * Geocode Earth
 * HERE

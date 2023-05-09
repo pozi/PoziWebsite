@@ -48,7 +48,7 @@ Two-thirds of Victorian councils use Pozi Connect as a critical component in the
 
 ### PIQA
 
-Each year, Victoria's Department of Environment, Land, Water & Planning (DELWP) requires councils to supply it with an extract of property and address information from their internal property systems to be used for DELWP's annual Property Information Quality Audit (PIQA).
+Each year, Victoria's Department of Energy, Environment and Climate Action (DEECA) requires councils to supply it with an extract of property and address information from their internal property systems to be used for DEECA's annual Property Information Quality Audit (PIQA).
 
 The process of extracting, filtering and formatting this data is time consuming and often overwhelming for councils, and can require the participation and co-operation of council staff members across GIS, Rates and IT departments.
 

@@ -3,7 +3,7 @@ title: Pozi Connect M1 Precise Addressing
 sidebar_label: Precise Addressing
 ---
 
-By default, property addresses positions are determined by DELWP. Based on information provided by the council (such as what parcels are occupied by the property, and the address attributes), address points are placed automatically inside the property boundary, typically at eight metres inside the centre of the property frontage.
+By default, property addresses positions are determined by DEECA. Based on information provided by the council (such as what parcels are occupied by the property, and the address attributes), address points are placed automatically inside the property boundary, typically at eight metres inside the centre of the property frontage.
 
 Councils have the option of specifying the exact location in their M1s. This is the basis of rural (distance-based) addressing, but it can also be used within urban areas to make addresses more usable. It is especially useful to specify separate address locations for multi-assessment properties, where each property can have its own separate entrance.
 

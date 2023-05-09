@@ -2,7 +2,7 @@
 icon: dot
 ---
 
-# DELWP Web Services
+# DEECA Web Services
 
 ## Image Web Server
 
@@ -44,7 +44,7 @@ Credentials for the Image Web Server: http://services.land.vic.gov.au/MyProfile/
 
 ## MapShare
 
-DELWP's MapShare service is powered by ArcGIS Online.
+DEECA's MapShare service is powered by ArcGIS Online.
 
 - [FeatureServer](https://enterprise.mapshare.vic.gov.au/server/rest/services)
 

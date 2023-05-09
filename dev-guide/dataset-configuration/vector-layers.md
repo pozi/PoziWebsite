@@ -40,111 +40,167 @@ order: 90
 
 ### Sources
 
-#### DELWP DataVic
+#### DEECA Open Data Platform
 
-This service is soon to be retired. See 'DELWP DataVic (New)' below for details about the replacement service.
-
-* [GetCapabilities](https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wfs?request=getCapabilities)
-* [Example GetFeature request](https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/ows?SERVICE=WFS&VERSION=1.1.0&REQUEST=GetFeature&srsName=EPSG%3A4326&typeNames=VMPROP_PROPERTY_ADDRESS&maxFeatures=500&outputFormat=application%2Fjson&CQL_FILTER=INTERSECTS(SHAPE,MULTIPOINT((-37.63734881455353%20142.54281720678077))))
+* [GetCapabilities](https://opendata.maps.vic.gov.au/geoserver/ows?SERVICE=WFS&VERSION=1.1.0&REQUEST=GetCapabilities)
+* [Example GetFeature request](https://opendata.maps.vic.gov.au/geoserver/ows?SERVICE=WFS&VERSION=1.1.0&REQUEST=GetFeature&srsName=EPSG%3A4326&typeNames=v_property_mp_address&maxFeatures=500&outputFormat=application%2Fjson&cql_filter=propv_graphic_type%3D%27P%27+and+intersects(geom,point(-37.63735%20142.54282)))
 
 ==- Example GetFeature response
 
-  ```json
-  {
-    "type": "FeatureCollection",
-    "totalFeatures": 0,
-    "features": [
-      {
-        "type": "Feature",
-        "id": "VMPROP_PROPERTY_ADDRESS.fid--6743268f_18002ec837b_-1ca8",
-        "geometry": {
-          "type": "MultiPolygon",
-          "coordinates": [
+```json
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "v_property_mp_address.fid--1f9d29d5_187fde80260_-3f65",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
             [
               [
-                [
-                  142.54240828000002,
-                  -37.63798631692974
-                ],
-                [
-                  142.5426353,
-                  -37.63799418692975
-                ],
-                [
-                  142.54309909,
-                  -37.63801027692977
-                ],
-                [
-                  142.5431305,
-                  -37.63745822692918
-                ],
-                [
-                  142.54316143,
-                  -37.63691479692864
-                ],
-                [
-                  142.54269784000002,
-                  -37.63689760692861
-                ],
-                [
-                  142.54247388,
-                  -37.63688930692861
-                ],
-                [
-                  142.54240828000002,
-                  -37.63798631692974
-                ]
+                142.542415,
+                -37.637973
+              ],
+              [
+                142.54248,
+                -37.636876
+              ],
+              [
+                142.542704,
+                -37.636884
+              ],
+              [
+                142.543168,
+                -37.636901
+              ],
+              [
+                142.543137,
+                -37.637445
+              ],
+              [
+                142.543105,
+                -37.637997
+              ],
+              [
+                142.542642,
+                -37.637981
+              ],
+              [
+                142.542415,
+                -37.637973
               ]
             ]
           ]
-        },
-        "geometry_name": "SHAPE",
-        "properties": {
-          "PROP_PFI": "45024104",
-          "PROP_LGA_CODE": "362",
-          "PROP_PROPNUM": "8812",
-          "PROP_STATUS": "A",
-          "PROP_UFI": 670906596,
-          "PROP_UFI_CREATED": "2022-01-19T21:52:34Z",
-          "PROPV_PFI": "373897",
-          "PROPV_GRAPHIC_TYPE": "P",
-          "ADD_PFI": "54003688",
-          "ADD_EZI_ADDRESS": "10 HANSON STREET GLENTHOMPSON 3293",
-          "ADD_IS_PRIMARY": "Y",
-          "ADD_STATE": "VIC",
-          "ADD_POSTCODE": "3293",
-          "ADD_LOCALITY_NAME": "GLENTHOMPSON",
-          "ADD_NUM_ROAD_ADDRESS": "10 HANSON STREET",
-          "ADD_UFI_CREATED": "2009-12-16T01:48:05Z",
-          "ADD_LABEL_ADDRESS": "Y",
-          "ADD_HOUSE_NUMBER_1": 10,
-          "ADD_HOUSE_NUMBER_2": null,
-          "ADD_DISP_NUMBER_1": null,
-          "ADD_DISP_NUMBER_2": null,
-          "ADD_ROAD_NAME": "HANSON",
-          "ADD_ROAD_TYPE": "STREET",
-          "ADD_ROAD_SUFFIX": null,
-          "ADD_BUILDING_NAME": null,
-          "ADD_BLG_UNIT_TYPE": null,
-          "ADD_NUM_ADDRESS": "10"
-        }
-      }
-    ],
-    "crs": {
-      "type": "name",
+        ]
+      },
+      "geometry_name": "geom",
       "properties": {
-        "name": "urn:ogc:def:crs:EPSG::4326"
-      }
+        "prop_pfi": "45024104",
+        "prop_lga_code": "362",
+        "prop_propnum": "8812",
+        "prop_property_type": "O",
+        "prop_multi_assessment": "N",
+        "prop_status": "A",
+        "prop_pfi_created": null,
+        "prop_ufi": 670906596,
+        "prop_ufi_created": "2022-01-20T08:52:34Z",
+        "prop_ufi_old": 204643309,
+        "prop_task_id": 346879,
+        "propv_pfi": "373897",
+        "propv_base_pfi": null,
+        "propv_centroid_pfi": "130492567",
+        "propv_graphic_type": "P",
+        "propv_z_level": "G",
+        "propv_pfi_created": null,
+        "propv_ufi": 415187041,
+        "propv_ufi_created": "2013-10-21T16:22:43Z",
+        "propv_ufi_old": 373035084,
+        "propv_task_id": null,
+        "add_pfi": "54003688",
+        "add_property_pfi": "45024104",
+        "add_ezi_address": "10 HANSON STREET GLENTHOMPSON 3293",
+        "add_source": "LGO",
+        "add_source_verified": "2009-12-07T00:00:00Z",
+        "add_is_primary": "Y",
+        "add_geocode_feature": "E",
+        "add_distance_related_flag": "N",
+        "add_location_descriptor": null,
+        "add_blg_unit_type": null,
+        "add_blg_unit_prefix_1": null,
+        "add_blg_unit_id_1": null,
+        "add_blg_unit_suffix_1": null,
+        "add_blg_unit_prefix_2": null,
+        "add_blg_unit_id_2": null,
+        "add_blg_unit_suffix_2": null,
+        "add_floor_type": null,
+        "add_floor_prefix_1": null,
+        "add_floor_no_1": null,
+        "add_floor_suffix_1": null,
+        "add_floor_prefix_2": null,
+        "add_floor_no_2": null,
+        "add_floor_suffix_2": null,
+        "add_building_name": null,
+        "add_complex_name": null,
+        "add_house_prefix_1": null,
+        "add_house_number_1": 10,
+        "add_house_suffix_1": null,
+        "add_house_prefix_2": null,
+        "add_house_number_2": null,
+        "add_house_suffix_2": null,
+        "add_disp_prefix_1": null,
+        "add_disp_number_1": null,
+        "add_disp_suffix_1": null,
+        "add_disp_prefix_2": null,
+        "add_disp_number_2": null,
+        "add_disp_suffix_2": null,
+        "add_road_name": "HANSON",
+        "add_road_type": "STREET",
+        "add_road_suffix": null,
+        "add_locality_name": "GLENTHOMPSON",
+        "add_state": "VIC",
+        "add_postcode": "3293",
+        "add_mesh_block": "20542410000",
+        "add_num_road_address": "10 HANSON STREET",
+        "add_num_address": "10",
+        "add_address_class": "S",
+        "add_outside_property": "N",
+        "add_label_address": "Y",
+        "add_feature_quality_id": null,
+        "add_pfi_created": null,
+        "add_ufi_created": "2009-12-16T12:48:05Z",
+        "add_ufi_old": null,
+        "vdpid": 1083765
+      },
+      "bbox": [
+        142.542415,
+        -37.637997,
+        142.543168,
+        -37.636876
+      ]
     }
-  }
-  ```
+  ],
+  "totalFeatures": 1,
+  "numberMatched": 1,
+  "numberReturned": 1,
+  "timeStamp": "2023-05-09T01:32:42.286Z",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:EPSG::4326"
+    }
+  },
+  "bbox": [
+    142.542415,
+    -37.637997,
+    142.543168,
+    -37.636876
+  ]
+}
+```
 
 ==-
-
-#### DELWP DataVic (New)
-
-* [GetCapabilities](https://geoserver-uat.maps.vic.gov.au/geoserver/ows?service=WFS&request=getCapabilities)
-* [Example GetFeature request](https://geoserver-uat.maps.vic.gov.au/geoserver/ows?SERVICE=WFS&REQUEST=GetFeature&typeNames=open-data-platform:v_property_mp_address&outputFormat=application%2Fjson&CQL_FILTER=INTERSECTS(shape,point(-37.80736%20144.95948)))
 
 #### data.gov.au
 
