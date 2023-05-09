@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.736851192714">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.736921817804">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -14,7 +14,7 @@
     <!-- Primary Meta Tags -->
     <title>Vector Layers | Pozi Web GIS | Online Map</title>
     <meta name="title" content="Vector Layers | Pozi Web GIS | Online Map">
-    <meta name="description" content="This service is soon to be retired. See 'DELWP DataVic (New)' below for details about the replacement service." />
+    <meta name="description" content="GetCapabilities" />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://pozi.com/dev-guide/dataset-configuration/vector-layers/" />
@@ -23,22 +23,22 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pozi.com/dev-guide/dataset-configuration/vector-layers/">
     <meta property="og:title" content="Vector Layers | Pozi Web GIS | Online Map">
-    <meta property="og:description" content="This service is soon to be retired. See 'DELWP DataVic (New)' below for details about the replacement service.">
+    <meta property="og:description" content="GetCapabilities">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pozi.com/dev-guide/dataset-configuration/vector-layers/">
     <meta property="twitter:title" content="Vector Layers | Pozi Web GIS | Online Map">
-    <meta property="twitter:description" content="This service is soon to be retired. See 'DELWP DataVic (New)' below for details about the replacement service.">
+    <meta property="twitter:description" content="GetCapabilities">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.736851192714" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.736921817804" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.736851192714" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.736921817804" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.736851192714" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.736851192714" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.736921817804" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.736921817804" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -355,119 +355,171 @@
         <span>Sources</span>
     </h3>
 </doc-anchor-target>
-<doc-anchor-target id="delwp-datavic">
+<doc-anchor-target id="deeca-open-data-platform">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#delwp-datavic">#</doc-anchor-trigger>
-        <span>DELWP DataVic</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#deeca-open-data-platform">#</doc-anchor-trigger>
+        <span>DEECA Open Data Platform</span>
     </h4>
 </doc-anchor-target>
-<p>This service is soon to be retired. See &#x27;DELWP DataVic (New)&#x27; below for details about the replacement service.</p>
 <ul>
-<li><a href="https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wfs?request=getCapabilities">GetCapabilities</a></li>
-<li><a href="https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/ows?SERVICE=WFS&amp;VERSION=1.1.0&amp;REQUEST=GetFeature&amp;srsName=EPSG%3A4326&amp;typeNames=VMPROP_PROPERTY_ADDRESS&amp;maxFeatures=500&amp;outputFormat=application%2Fjson&amp;CQL_FILTER=INTERSECTS(SHAPE,MULTIPOINT((-37.63734881455353%20142.54281720678077)))">Example GetFeature request</a></li>
+<li><a href="https://opendata.maps.vic.gov.au/geoserver/ows?SERVICE=WFS&amp;VERSION=1.1.0&amp;REQUEST=GetCapabilities">GetCapabilities</a></li>
+<li><a href="https://opendata.maps.vic.gov.au/geoserver/ows?SERVICE=WFS&amp;VERSION=1.1.0&amp;REQUEST=GetFeature&amp;srsName=EPSG%3A4326&amp;typeNames=v_property_mp_address&amp;maxFeatures=500&amp;outputFormat=application%2Fjson&amp;cql_filter=propv_graphic_type%3D%27P%27+and+intersects(geom,point(-37.63735%20142.54282))">Example GetFeature request</a></li>
 </ul>
 <doc-panel id="example-getfeature-response" collapsed>
     <template #title>Example GetFeature response</template>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-json"><code v-pre class="language-json">{
   &quot;type&quot;: &quot;FeatureCollection&quot;,
-  &quot;totalFeatures&quot;: 0,
   &quot;features&quot;: [
     {
       &quot;type&quot;: &quot;Feature&quot;,
-      &quot;id&quot;: &quot;VMPROP_PROPERTY_ADDRESS.fid--6743268f_18002ec837b_-1ca8&quot;,
+      &quot;id&quot;: &quot;v_property_mp_address.fid--1f9d29d5_187fde80260_-3f65&quot;,
       &quot;geometry&quot;: {
         &quot;type&quot;: &quot;MultiPolygon&quot;,
         &quot;coordinates&quot;: [
           [
             [
               [
-                142.54240828000002,
-                -37.63798631692974
+                142.542415,
+                -37.637973
               ],
               [
-                142.5426353,
-                -37.63799418692975
+                142.54248,
+                -37.636876
               ],
               [
-                142.54309909,
-                -37.63801027692977
+                142.542704,
+                -37.636884
               ],
               [
-                142.5431305,
-                -37.63745822692918
+                142.543168,
+                -37.636901
               ],
               [
-                142.54316143,
-                -37.63691479692864
+                142.543137,
+                -37.637445
               ],
               [
-                142.54269784000002,
-                -37.63689760692861
+                142.543105,
+                -37.637997
               ],
               [
-                142.54247388,
-                -37.63688930692861
+                142.542642,
+                -37.637981
               ],
               [
-                142.54240828000002,
-                -37.63798631692974
+                142.542415,
+                -37.637973
               ]
             ]
           ]
         ]
       },
-      &quot;geometry_name&quot;: &quot;SHAPE&quot;,
+      &quot;geometry_name&quot;: &quot;geom&quot;,
       &quot;properties&quot;: {
-        &quot;PROP_PFI&quot;: &quot;45024104&quot;,
-        &quot;PROP_LGA_CODE&quot;: &quot;362&quot;,
-        &quot;PROP_PROPNUM&quot;: &quot;8812&quot;,
-        &quot;PROP_STATUS&quot;: &quot;A&quot;,
-        &quot;PROP_UFI&quot;: 670906596,
-        &quot;PROP_UFI_CREATED&quot;: &quot;2022-01-19T21:52:34Z&quot;,
-        &quot;PROPV_PFI&quot;: &quot;373897&quot;,
-        &quot;PROPV_GRAPHIC_TYPE&quot;: &quot;P&quot;,
-        &quot;ADD_PFI&quot;: &quot;54003688&quot;,
-        &quot;ADD_EZI_ADDRESS&quot;: &quot;10 HANSON STREET GLENTHOMPSON 3293&quot;,
-        &quot;ADD_IS_PRIMARY&quot;: &quot;Y&quot;,
-        &quot;ADD_STATE&quot;: &quot;VIC&quot;,
-        &quot;ADD_POSTCODE&quot;: &quot;3293&quot;,
-        &quot;ADD_LOCALITY_NAME&quot;: &quot;GLENTHOMPSON&quot;,
-        &quot;ADD_NUM_ROAD_ADDRESS&quot;: &quot;10 HANSON STREET&quot;,
-        &quot;ADD_UFI_CREATED&quot;: &quot;2009-12-16T01:48:05Z&quot;,
-        &quot;ADD_LABEL_ADDRESS&quot;: &quot;Y&quot;,
-        &quot;ADD_HOUSE_NUMBER_1&quot;: 10,
-        &quot;ADD_HOUSE_NUMBER_2&quot;: null,
-        &quot;ADD_DISP_NUMBER_1&quot;: null,
-        &quot;ADD_DISP_NUMBER_2&quot;: null,
-        &quot;ADD_ROAD_NAME&quot;: &quot;HANSON&quot;,
-        &quot;ADD_ROAD_TYPE&quot;: &quot;STREET&quot;,
-        &quot;ADD_ROAD_SUFFIX&quot;: null,
-        &quot;ADD_BUILDING_NAME&quot;: null,
-        &quot;ADD_BLG_UNIT_TYPE&quot;: null,
-        &quot;ADD_NUM_ADDRESS&quot;: &quot;10&quot;
-      }
+        &quot;prop_pfi&quot;: &quot;45024104&quot;,
+        &quot;prop_lga_code&quot;: &quot;362&quot;,
+        &quot;prop_propnum&quot;: &quot;8812&quot;,
+        &quot;prop_property_type&quot;: &quot;O&quot;,
+        &quot;prop_multi_assessment&quot;: &quot;N&quot;,
+        &quot;prop_status&quot;: &quot;A&quot;,
+        &quot;prop_pfi_created&quot;: null,
+        &quot;prop_ufi&quot;: 670906596,
+        &quot;prop_ufi_created&quot;: &quot;2022-01-20T08:52:34Z&quot;,
+        &quot;prop_ufi_old&quot;: 204643309,
+        &quot;prop_task_id&quot;: 346879,
+        &quot;propv_pfi&quot;: &quot;373897&quot;,
+        &quot;propv_base_pfi&quot;: null,
+        &quot;propv_centroid_pfi&quot;: &quot;130492567&quot;,
+        &quot;propv_graphic_type&quot;: &quot;P&quot;,
+        &quot;propv_z_level&quot;: &quot;G&quot;,
+        &quot;propv_pfi_created&quot;: null,
+        &quot;propv_ufi&quot;: 415187041,
+        &quot;propv_ufi_created&quot;: &quot;2013-10-21T16:22:43Z&quot;,
+        &quot;propv_ufi_old&quot;: 373035084,
+        &quot;propv_task_id&quot;: null,
+        &quot;add_pfi&quot;: &quot;54003688&quot;,
+        &quot;add_property_pfi&quot;: &quot;45024104&quot;,
+        &quot;add_ezi_address&quot;: &quot;10 HANSON STREET GLENTHOMPSON 3293&quot;,
+        &quot;add_source&quot;: &quot;LGO&quot;,
+        &quot;add_source_verified&quot;: &quot;2009-12-07T00:00:00Z&quot;,
+        &quot;add_is_primary&quot;: &quot;Y&quot;,
+        &quot;add_geocode_feature&quot;: &quot;E&quot;,
+        &quot;add_distance_related_flag&quot;: &quot;N&quot;,
+        &quot;add_location_descriptor&quot;: null,
+        &quot;add_blg_unit_type&quot;: null,
+        &quot;add_blg_unit_prefix_1&quot;: null,
+        &quot;add_blg_unit_id_1&quot;: null,
+        &quot;add_blg_unit_suffix_1&quot;: null,
+        &quot;add_blg_unit_prefix_2&quot;: null,
+        &quot;add_blg_unit_id_2&quot;: null,
+        &quot;add_blg_unit_suffix_2&quot;: null,
+        &quot;add_floor_type&quot;: null,
+        &quot;add_floor_prefix_1&quot;: null,
+        &quot;add_floor_no_1&quot;: null,
+        &quot;add_floor_suffix_1&quot;: null,
+        &quot;add_floor_prefix_2&quot;: null,
+        &quot;add_floor_no_2&quot;: null,
+        &quot;add_floor_suffix_2&quot;: null,
+        &quot;add_building_name&quot;: null,
+        &quot;add_complex_name&quot;: null,
+        &quot;add_house_prefix_1&quot;: null,
+        &quot;add_house_number_1&quot;: 10,
+        &quot;add_house_suffix_1&quot;: null,
+        &quot;add_house_prefix_2&quot;: null,
+        &quot;add_house_number_2&quot;: null,
+        &quot;add_house_suffix_2&quot;: null,
+        &quot;add_disp_prefix_1&quot;: null,
+        &quot;add_disp_number_1&quot;: null,
+        &quot;add_disp_suffix_1&quot;: null,
+        &quot;add_disp_prefix_2&quot;: null,
+        &quot;add_disp_number_2&quot;: null,
+        &quot;add_disp_suffix_2&quot;: null,
+        &quot;add_road_name&quot;: &quot;HANSON&quot;,
+        &quot;add_road_type&quot;: &quot;STREET&quot;,
+        &quot;add_road_suffix&quot;: null,
+        &quot;add_locality_name&quot;: &quot;GLENTHOMPSON&quot;,
+        &quot;add_state&quot;: &quot;VIC&quot;,
+        &quot;add_postcode&quot;: &quot;3293&quot;,
+        &quot;add_mesh_block&quot;: &quot;20542410000&quot;,
+        &quot;add_num_road_address&quot;: &quot;10 HANSON STREET&quot;,
+        &quot;add_num_address&quot;: &quot;10&quot;,
+        &quot;add_address_class&quot;: &quot;S&quot;,
+        &quot;add_outside_property&quot;: &quot;N&quot;,
+        &quot;add_label_address&quot;: &quot;Y&quot;,
+        &quot;add_feature_quality_id&quot;: null,
+        &quot;add_pfi_created&quot;: null,
+        &quot;add_ufi_created&quot;: &quot;2009-12-16T12:48:05Z&quot;,
+        &quot;add_ufi_old&quot;: null,
+        &quot;vdpid&quot;: 1083765
+      },
+      &quot;bbox&quot;: [
+        142.542415,
+        -37.637997,
+        142.543168,
+        -37.636876
+      ]
     }
   ],
+  &quot;totalFeatures&quot;: 1,
+  &quot;numberMatched&quot;: 1,
+  &quot;numberReturned&quot;: 1,
+  &quot;timeStamp&quot;: &quot;2023-05-09T01:32:42.286Z&quot;,
   &quot;crs&quot;: {
     &quot;type&quot;: &quot;name&quot;,
     &quot;properties&quot;: {
       &quot;name&quot;: &quot;urn:ogc:def:crs:EPSG::4326&quot;
     }
-  }
+  },
+  &quot;bbox&quot;: [
+    142.542415,
+    -37.637997,
+    142.543168,
+    -37.636876
+  ]
 }</code></pre>
 </doc-codeblock></div>
 </doc-panel>
-<doc-anchor-target id="delwp-datavic-new">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#delwp-datavic-new">#</doc-anchor-trigger>
-        <span>DELWP DataVic (New)</span>
-    </h4>
-</doc-anchor-target>
-<ul>
-<li><a href="https://geoserver-uat.maps.vic.gov.au/geoserver/ows?service=WFS&amp;request=getCapabilities">GetCapabilities</a></li>
-<li><a href="https://geoserver-uat.maps.vic.gov.au/geoserver/ows?SERVICE=WFS&amp;REQUEST=GetFeature&amp;typeNames=open-data-platform:v_property_mp_address&amp;outputFormat=application%2Fjson&amp;CQL_FILTER=INTERSECTS(shape,point(-37.80736%20144.95948))">Example GetFeature request</a></li>
-</ul>
 <doc-anchor-target id="datagovau">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#datagovau">#</doc-anchor-trigger>
