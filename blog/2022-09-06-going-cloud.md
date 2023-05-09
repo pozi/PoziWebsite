@@ -88,7 +88,7 @@ Pozi enables organisations like yours to regain greater control over your data a
 
 Pozi's open architecture empowers organisations to integrate their spatial and other corporate data to suit their own requirements, and ensures maximum flexibility, control and usability.
 
-Pozi's new [QGIS integration](/qgis/) enables administrators to configure their Pozi site using the power of QGIS, the world's most popular open-source geospatial power tool.
+Pozi's new [QGIS integration](/qgis/) enables administrators to configure their Pozi site using the power of QGIS, the world's most popular open-source geospatial software.
 
 Pozi's new Azure Active Directory integration enables organisations to distribute its geospatial data to users where they need it - in the office, working remotely, or out in the field.
 
