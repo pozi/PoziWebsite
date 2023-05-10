@@ -336,6 +336,30 @@ The `?` at the end of the style URL allows Pozi to add layer parameters (as it n
 
 ## Settings
 
+### `folder`
+
+When `"folder": true` is specified, the catalogue layers will appear within a layer folder, named after the catalogue title. In this way, multiple catalogues can appear in the one layer group, each with their own folder.
+
+==- Example
+
+In this example, the catalogue layers will appear within a folder called 'Vicmap Admin' within the 'Vicmap' layer group.
+
+```json
+{
+  "title": "Vicmap Admin",
+  "group": "Vicmap",
+  "type": "WMSGetCapabilities",
+  "config": {
+    "spatial": {
+      "url": "https://config.pozi.com/public/files/catalogues/deeca-opendataplatform-wms-vmadmin.xml"
+    }
+  },
+  "folder": true
+}
+```
+
+==-
+
 ### `layerFilter`
 
 The `layerFilter` setting allows for managing what layers to show/hide. Only the layers that match the filter will be shown.
