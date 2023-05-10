@@ -31,7 +31,7 @@ ogrinfo "ODBC:DRIVER={SQL Server};SERVER=servername;DATABASE=databasename;UID=my
 
 +++
 
-If you have the correct connection string for your database, a list of available tables will be displayed. If you don't see your tables listed, please talk to your IT Administrator to obtain the correct connection string or enable the required permissions.
+If you have entered the correct connection string for your database, a list of available tables will be displayed. If you don't see your tables listed, please talk to your IT Administrator to obtain the correct connection string or enable the required permissions.
 
 ## Running as a batch task
 
