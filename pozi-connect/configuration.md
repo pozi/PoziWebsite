@@ -12,7 +12,6 @@ Database connection strings can be configured in any of these formats:
 
 * `ODBC:DSN=dsnname`
 * `ODBC:DRIVER={SQL Server};SERVER=servername;DATABASE=databasename`
-* `MSSQL:SERVER=servername;DATABASE=databasename`
 
 ### Testing the Connection String
 
