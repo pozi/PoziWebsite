@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.736999168411">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.737074905993">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.736999168411" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.737074905993" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.736999168411" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.737074905993" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.736999168411" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.736999168411" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.737074905993" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.737074905993" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -723,6 +723,30 @@
         <span>Settings</span>
     </h2>
 </doc-anchor-target>
+<doc-anchor-target id="folder">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#folder">#</doc-anchor-trigger>
+        <span><code v-pre>folder</code></span>
+    </h3>
+</doc-anchor-target>
+<p>When <code v-pre>&quot;folder&quot;: true</code> is specified, the catalogue layers will appear within a layer folder, named after the catalogue title. In this way, multiple catalogues can appear in the one layer group, each with their own folder.</p>
+<doc-panel id="example" collapsed>
+    <template #title>Example</template>
+<p>In this example, the catalogue layers will appear within a folder called &#x27;Vicmap Admin&#x27; within the &#x27;Vicmap&#x27; layer group.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;title&quot;: &quot;Vicmap Admin&quot;,
+  &quot;group&quot;: &quot;Vicmap&quot;,
+  &quot;type&quot;: &quot;WMSGetCapabilities&quot;,
+  &quot;config&quot;: {
+    &quot;spatial&quot;: {
+      &quot;url&quot;: &quot;https://config.pozi.com/public/files/catalogues/deeca-opendataplatform-wms-vmadmin.xml&quot;
+    }
+  },
+  &quot;folder&quot;: true
+}</code></pre>
+</doc-codeblock></div>
+</doc-panel>
 <doc-anchor-target id="layerfilter">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#layerfilter">#</doc-anchor-trigger>
