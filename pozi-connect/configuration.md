@@ -20,13 +20,13 @@ You can test your connection string using a command prompt running GDAL/OGR. If 
 +++ Trusted User
 
 ```
-ogrinfo "ODBC:DRIVER={SQL Server};DATABASE=databasename"
+ogrinfo "ODBC:DRIVER={SQL Server};SERVER=servername;DATABASE=databasename"
 ```
 
 +++ Basic Authentication
 
 ```
-ogrinfo "ODBC:DRIVER={SQL Server};DATABASE=databasename;UID=myusername;PWD=mypassword"
+ogrinfo "ODBC:DRIVER={SQL Server};SERVER=servername;DATABASE=databasename;UID=myusername;PWD=mypassword"
 ```
 
 +++
