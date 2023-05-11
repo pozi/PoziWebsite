@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.737074905993">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.737094287070">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.737074905993" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.737094287070" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.737074905993" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.737094287070" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.737074905993" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.737094287070" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -651,6 +651,16 @@
 <p>Project &gt; Properties &gt; Data Sources &gt; Identifiable &gt; untick to disable layer selectability</p>
 <p><img src="../img/qgis-layer-identifiable.png" style="width:450px" alt="" /></p>
 <br/>
+<doc-anchor-target id="exclude-layers">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exclude-layers">#</doc-anchor-trigger>
+        <span>Exclude Layers</span>
+    </h2>
+</doc-anchor-target>
+<p>Your QGIS project may contain layers that are not needed for viewing in Pozi. For instance, your project may contain basemap layers that provide context for viewing map layers in QGIS, but you don&#x27;t want these to appear in the project&#x27;s layer group in Pozi.</p>
+<p>To exclude any layers from appearing in Pozi:</p>
+<p>Project &gt; Properties &gt; QGIS Server &gt; WMS &gt; <code v-pre>Exclude layers</code> (tick) &gt; add &gt; pick layers to exclude &gt; OK</p>
+<p><img src="../img/qgis-project-wms-exclude-layers.png" style="width:500px" alt="QGIS project WMS exclude layers" /></p>
 <doc-anchor-target id="optional-settings">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#optional-settings">#</doc-anchor-trigger>
