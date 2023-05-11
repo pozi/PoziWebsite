@@ -304,6 +304,16 @@ Project > Properties > Data Sources > Identifiable > untick to disable layer sel
 
 <br/>
 
+## Exclude Layers
+
+Your QGIS project may contain layers that are not needed for viewing in Pozi. For instance, your project may contain basemap layers that provide context for viewing map layers in QGIS, but you don't want these to appear in the project's layer group in Pozi.
+
+To exclude any layers from appearing in Pozi:
+
+Project > Properties > QGIS Server > WMS > `Exclude layers` (tick) > add > pick layers to exclude > OK
+
+![QGIS project WMS exclude layers](img/qgis-project-wms-exclude-layers.png){style="width:500px"}
+
 ## Optional Settings
 
 Other settings can be configured using QGIS Server keyword list. Pozi obtains these settings when it loads and imports each project's catalogue.

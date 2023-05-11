@@ -66,14 +66,14 @@ Copy the URL to your clipboard for subsequent configuration below.
 ### Enable Web Services
 
 1. Project > Properties > QGIS Server
-2. update WMS capabilities settings
+2. WMS
    * `Exclude layers` (tick) > add > pick any background layers you don't need to see in Pozi
    * `Add geometry to feature response`: tick on
    * `Advertised URL`: enter Advertised URL (from above)
-3. update WMTS capabilities settings
+3. WMTS
    * `Published layers > Project > Published`: tick on
    * `Advertised URL`: enter Advertised URL
-4. update the WFS/OAPIF capabilities settings:
+4. WFS/OAPIF
    * `Advertised URL`: enter Advertised URL
 5. OK
 
