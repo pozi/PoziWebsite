@@ -181,7 +181,13 @@ If the layer appears in QGIS Symbology mode "Embedded", switch it to "Single Sym
 
 #### Categorized Symbology
 
-Layers can be styled using the `Categorized` option. However, when publishing the layer as a vector layer, the following limitations apply:
+Layers can be styled using the `Categorized` option. Pick the field to use for the category from the drop-down list, then click the Classify button.
+
+![Categorized styling](img/qgis-layer-styling-categorized.png){style="width:500px"}
+
+##### Limitations
+
+When publishing the layer as a vector layer, the following limitations apply:
 
 * the symbology must be based on a field (real or virtual), not an expression
 * the values must not be merged (ie, only one value per row)
@@ -194,6 +200,14 @@ For instance, the virtual field can contain a case statement to accept any numbe
 ![](./img/qgis-layer-virtual-fields-for-styling-categories.png){style="width:800px"}
 
 See [Virtual Fields](#virtual-fields) below for more information.
+
+##### Fallback Style
+
+When using the Classify button to generate styles for each unique value, QGIS automatically generates an additional **fallback** style for "*all other values*". However this function is not supported in Pozi, and Pozi will display **all** the layer's features with the fallback style.
+
+![](img/qgis-layer-styling-categorized-remove-all-other-values.png){style="width:600px"}
+
+Delete the "*all other values*" item from the list before saving.
 
 ### Opacity
 
@@ -369,6 +383,8 @@ Check the following:
 Pozi will display layers in a generic style (often purple) if it cannot process the style that was configured in QGIS.
 
 Simplify the style in the QGIS project and try again. For point features, replace custom point symbols with one of the [standard symbols](#points) specified above. For polygon features, replace hatch styles with semi-opaque fills or any of the [supported fill styles](#polygons) specified above.
+
+If using a *categoized* style, remove any style that QGIS generates for *all other values*. See [Fallback Style](#fallback-style) above.
 
 ==- Selected features from WMS layers are displayed with a mis-shaped highlight
 
