@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.737094287070">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.737354536849">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.737094287070" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.737354536849" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.737094287070" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.737354536849" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.737094287070" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.737354536849" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -532,7 +532,15 @@
         <span>Categorized Symbology</span>
     </h4>
 </doc-anchor-target>
-<p>Layers can be styled using the <code v-pre>Categorized</code> option. However, when publishing the layer as a vector layer, the following limitations apply:</p>
+<p>Layers can be styled using the <code v-pre>Categorized</code> option. Pick the field to use for the category from the drop-down list, then click the Classify button.</p>
+<p><img src="../img/qgis-layer-styling-categorized.png" style="width:500px" alt="Categorized styling" /></p>
+<doc-anchor-target id="limitations">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#limitations">#</doc-anchor-trigger>
+        <span>Limitations</span>
+    </h5>
+</doc-anchor-target>
+<p>When publishing the layer as a vector layer, the following limitations apply:</p>
 <ul>
 <li>the symbology must be based on a field (real or virtual), not an expression</li>
 <li>the values must not be merged (ie, only one value per row)</li>
@@ -542,6 +550,15 @@
 <p>For instance, the virtual field can contain a case statement to accept any number of input values (from one or more fields) and generate specific values for use in subsequent styling.</p>
 <p><img src="../img/qgis-layer-virtual-fields-for-styling-categories.png" style="width:800px" alt="" /></p>
 <p>See <doc-anchor-trigger to="#virtual-fields">Virtual Fields</doc-anchor-trigger> below for more information.</p>
+<doc-anchor-target id="fallback-style">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fallback-style">#</doc-anchor-trigger>
+        <span>Fallback Style</span>
+    </h5>
+</doc-anchor-target>
+<p>When using the Classify button to generate styles for each unique value, QGIS automatically generates an additional <strong>fallback</strong> style for &quot;<em>all other values</em>&quot;. However this function is not supported in Pozi, and Pozi will display <strong>all</strong> the layer&#x27;s features with the fallback style.</p>
+<p><img src="../img/qgis-layer-styling-categorized-remove-all-other-values.png" style="width:600px" alt="" /></p>
+<p>Delete the &quot;<em>all other values</em>&quot; item from the list before saving.</p>
 <doc-anchor-target id="opacity">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#opacity">#</doc-anchor-trigger>
@@ -717,6 +734,7 @@
        <template #title>Layers are displayed, but not with the styling from QGIS</template>
 <p>Pozi will display layers in a generic style (often purple) if it cannot process the style that was configured in QGIS.</p>
 <p>Simplify the style in the QGIS project and try again. For point features, replace custom point symbols with one of the <doc-anchor-trigger to="#points">standard symbols</doc-anchor-trigger> specified above. For polygon features, replace hatch styles with semi-opaque fills or any of the <doc-anchor-trigger to="#polygons">supported fill styles</doc-anchor-trigger> specified above.</p>
+<p>If using a <em>categoized</em> style, remove any style that QGIS generates for <em>all other values</em>. See <doc-anchor-trigger to="#fallback-style">Fallback Style</doc-anchor-trigger> above.</p>
    </doc-panel>
    <doc-panel id="selected-features-from-wms-layers-are-displayed-with-a-mis-shaped-highlight" collapsed>
        <template #title>Selected features from WMS layers are displayed with a mis-shaped highlight</template>
