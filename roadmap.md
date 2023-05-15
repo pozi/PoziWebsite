@@ -23,9 +23,8 @@ We also offer clients the opportunity to sponsor development of new features, gi
   - publish map layers to the public from QGIS projects
   - improve start-up performance by pre-generating map catalogues
   - tap into external data providers with minimal configuration
-- [ ] monthly analytics reports
 - [ ] fine-grained user permission control utilising Azure AD
-- [ ] display tables of selected features
+- [ ] display tables of only selected features
 - [ ] interactive bulk spatial selection for ad-hoc layers
 - [ ] collaborate map annotations
 - [ ] alternative layer download format options - GeoJSON, SHP, KML, GeoPackage, CSV and other popular formats
@@ -45,11 +44,26 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## Completed
 
+### May 2023
+
+#### New
+
+- [x] ⚡ Pozi Community Forum - online collaboration for Pozi clients
+- [x] ⚡ monthly analytics reports
+
 ### April 2023
+
+#### Improved
+
+- [x] 👍 add support for tiled layers from WMS catalogue
+- [x] 👍 enable radio buttons as alternative to tickboxes for custom imagery layer groups
+- [x] 👍 add catalogue configuration option to order layers alphabetically
+- [x] 👍 upgrade OpenLayers, GeoStyler and more to latest versions
 
 #### Fixed
 
 - [x] 🪲 fix waste collection next pickup calculation misreporting date as 'Today' instead of 'Tomorrow' in some circumstances
+- [x] 🪲 fix issue that prevented enterprise sites from installing Pozi as a Progressive Web App on mobile devices
 
 ### March 2023
 

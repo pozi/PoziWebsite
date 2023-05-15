@@ -76,11 +76,7 @@ Copy the URL to your clipboard for subsequent configuration below.
 4. WFS/OAPIF
    * `Advertised URL`: enter Advertised URL
 5. OK
-
-![QGIS Project Properties WMS Configuration](./img/qgis-project-properties-configuration.png){style="width:600px"}
-
-6. OK
-7. Project > Save  (`Ctrl` + `S`)
+6. Project > Save  (`Ctrl` + `S`)
 
 ### Further Settings
 
