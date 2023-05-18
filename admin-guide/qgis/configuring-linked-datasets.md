@@ -107,7 +107,7 @@ Pozi will substitute any field names within square brackets with values from tho
 These settings provide an override for some of the default layer behaviours in Pozi.
 
 * `downloadable=true`: allow Pozi to display a download option when multiple parent features are selected (eg, for a mail merge)
-* `enabled=false`: temporarily disable a dataset (without having to remove it completely)
+* `enabled=false`: temporarily disable a dataset in Pozi (without having to remove it from QGIS)
 * `infoPanelCollapse=true`: collapse info results panel for this dataset
 * `promoteDetails=true`: display all child attributes instead of a preview
 

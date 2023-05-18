@@ -242,6 +242,8 @@ Layer Properties > Attributes Form > select field > Alias
 
 ![](./img/qgis-field-alias.png){style="width:700px"}
 
+*Please note that column headings in Pozi's table view currently shows the original field names and not the aliases.*
+
 ### Virtual Fields
 
 You can control how your data appears to users without having to modify your source data by using the Field Calculator function in QGIS to create virtual fields.
@@ -280,7 +282,7 @@ The resulting virtual field appears in QGIS and Pozi as if it were standard fiel
 
 ![](img/qgis-table-with-virtual-field.png){style="width:700px"}
 
-If the value in the field is a URL (as in this example), Pozi will display it as a clickable link.
+If the value in the field is a URL (as in this example), Pozi will display it as a clickable link, using the field name as the link text.
 
 ![](img/pozi-info-panel-showing-link-from-virtual-field.png){style="width:300px"}
 
@@ -294,9 +296,9 @@ When users select a feature from the map, Pozi prominently displays one of the f
 
 ![](img/info-panel-title.png){style="width:800px"}
 
-Ideally the title will be the name of the feature or some other useful information to distinguish the feature from others in the same layer.
+The title should be the name of the feature or some other useful information to distinguish the feature from others in the same layer.
 
-The field from which this attribute is obtained is defined in QGIS.
+You can control which field is used for the layer's title in QGIS.
 
 Layer Properties > Display > Display Name
 
@@ -336,7 +338,7 @@ These settings provide an override for some of the default behaviours in Pozi.
 
 Layer Properties > QGIS Server > Keyword list
 
-* `enabled=false`: temporarily disable a dataset (without having to remove it completely)
+* `enabled=false`: temporarily disable a dataset in Pozi (without having to remove it from QGIS)
 * `group=[group name]`: override which layer group the layer is listed under
 * `showInLayerControl=false`: don't display layer in layer panel
 * `showLegend=false`: don't display layer legend
