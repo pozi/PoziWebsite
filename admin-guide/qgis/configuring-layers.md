@@ -376,6 +376,7 @@ Check the following:
 * Ensure the layer has a coordinate reference system set. Go to Layer Properties > Source > Assigned CRS, and pick a projection
 * For file-based layers, ensure that the file path is one that is recognised by the server. See [About layer file paths](#about-layer-file-paths) above.
 * Ensure that any categorised styling is based on a single field with a single value per row. See [Categorized Symbology](#categorized-symbology) above.
+* Ensure that any categorised styling is based on a field that is exposed as WFS (ie, ensure the field option 'Do not expose via WFS' is *unticked*).
 * If the layer source is a MapInfo table, ensure that the symbology type is *not* "Embedded Symbols". Change it to another type such as "Single Symbol" or "Categorized".
 
 ==- Layers are displayed, but not with the styling from QGIS
