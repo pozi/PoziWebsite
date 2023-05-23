@@ -188,21 +188,25 @@ When you fund the development of new features, you have ongoing access to the ne
 | Configuration tool(s) | MapManager & ConfigManager | QGIS Desktop |
 | SQL queries | ✔️ | ✔️ |
 | Online reference and training material |  | ✔️ |
-| Rapid help desk support |  | ✔️ |
 | Custom development available |  | ✔️ |
 | <big>**Technology**</big> | | |
-| Map Library | OpenLayers 2 (2013) | OpenLayers 7 (2023) |
+| Supported Map Servers | MapServer | QGIS Server, GeoServer, MapServer, ArcGIS Server |
+| Mapping Javascript Library | OpenLayers v2 - 2013 | OpenLayers v7 - 2023 |
 | OGC standards compliant (WMS/WFS) | ✔️ | ✔️ |
 | Vector Tiles |    | ✔️ |
 | <big>**Data Integrations**</big> | | |
 | Cloud database | ✔️ | ✔️ |
 | On-premise databases and files |  | ✔️ |
 | Live web services |  | ✔️ |
+| <big>**Support**</big> | | |
+| Rapid help desk support |  | ✔️ |
+| Community Forum |  | ✔️ |
+| Preview upcoming features |  | ✔️ |
 | <big>**Security**</big> | | |
 | User access | Active Directory | Azure Active Directory and App Proxy |
 | <big>**Procurement**</big> | | |
 | Pricing | $$$ | $ |
-| Lock-in contract | multi-year | single-year |
+| Commitment | multi-year lock-in contract | pay as you go |
 
 </div>
 
