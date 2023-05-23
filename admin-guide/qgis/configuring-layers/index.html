@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.737451701174">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.738134511838">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.737451701174" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.738134511838" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.737451701174" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.738134511838" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.737451701174" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.738134511838" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -598,6 +598,7 @@
 <p>You can make field names more user-friendly by giving your field names an <em>alias</em>.</p>
 <p>Layer Properties &gt; Attributes Form &gt; select field &gt; Alias</p>
 <p><img src="../img/qgis-field-alias.png" style="width:700px" alt="" /></p>
+<p><em>Please note that column headings in Pozi&#x27;s table view currently shows the original field names and not the aliases.</em></p>
 <doc-anchor-target id="virtual-fields">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#virtual-fields">#</doc-anchor-trigger>
@@ -639,7 +640,7 @@
 <p><img src="../img/qgis-field-calculator.png" style="width:700px" alt="" /></p>
 <p>The resulting virtual field appears in QGIS and Pozi as if it were standard field.</p>
 <p><img src="../img/qgis-table-with-virtual-field.png" style="width:700px" alt="" /></p>
-<p>If the value in the field is a URL (as in this example), Pozi will display it as a clickable link.</p>
+<p>If the value in the field is a URL (as in this example), Pozi will display it as a clickable link, using the field name as the link text.</p>
 <p><img src="../img/pozi-info-panel-showing-link-from-virtual-field.png" style="width:300px" alt="" /></p>
 <p>If the value is a URL ending in <code v-pre>.png</code> or <code v-pre>.jpg</code>, Pozi will display a thumbnail of the target image.</p>
 <br/>
@@ -651,8 +652,8 @@
 </doc-anchor-target>
 <p>When users select a feature from the map, Pozi prominently displays one of the feature&#x27;s attributes at the top of the Info Panel as the feature&#x27;s title.</p>
 <p><img src="../img/info-panel-title.png" style="width:800px" alt="" /></p>
-<p>Ideally the title will be the name of the feature or some other useful information to distinguish the feature from others in the same layer.</p>
-<p>The field from which this attribute is obtained is defined in QGIS.</p>
+<p>The title should be the name of the feature or some other useful information to distinguish the feature from others in the same layer.</p>
+<p>You can control which field is used for the layer&#x27;s title in QGIS.</p>
 <p>Layer Properties &gt; Display &gt; Display Name</p>
 <p><img src="../img/qgis-layer-display-field.png" style="width:600px" alt="" /></p>
 <p>Please note that Pozi cannot use the display field if the field name has been given an <doc-anchor-trigger to="#rename-fields">alias</doc-anchor-trigger>.</p>
@@ -688,7 +689,7 @@
 <p>These settings provide an override for some of the default behaviours in Pozi.</p>
 <p>Layer Properties &gt; QGIS Server &gt; Keyword list</p>
 <ul>
-<li><code v-pre>enabled=false</code>: temporarily disable a dataset (without having to remove it completely)</li>
+<li><code v-pre>enabled=false</code>: temporarily disable a dataset in Pozi (without having to remove it from QGIS)</li>
 <li><code v-pre>group=[group name]</code>: override which layer group the layer is listed under</li>
 <li><code v-pre>showInLayerControl=false</code>: don&#x27;t display layer in layer panel</li>
 <li><code v-pre>showLegend=false</code>: don&#x27;t display layer legend</li>
@@ -727,6 +728,7 @@
 <li>Ensure the layer has a coordinate reference system set. Go to Layer Properties &gt; Source &gt; Assigned CRS, and pick a projection</li>
 <li>For file-based layers, ensure that the file path is one that is recognised by the server. See <doc-anchor-trigger to="#about-layer-file-paths">About layer file paths</doc-anchor-trigger> above.</li>
 <li>Ensure that any categorised styling is based on a single field with a single value per row. See <doc-anchor-trigger to="#categorized-symbology">Categorized Symbology</doc-anchor-trigger> above.</li>
+<li>Ensure that any categorised styling is based on a field that is exposed as WFS (ie, ensure the field option &#x27;Do not expose via WFS&#x27; is <em>unticked</em>).</li>
 <li>If the layer source is a MapInfo table, ensure that the symbology type is <em>not</em> &quot;Embedded Symbols&quot;. Change it to another type such as &quot;Single Symbol&quot; or &quot;Categorized&quot;.</li>
 </ul>
    </doc-panel>
