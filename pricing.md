@@ -62,7 +62,7 @@ Discounts are available for multi-year commitments.
 
 [!ref icon="paper-airplane" text="Request a free 60 day trial"](/trial/)
 
-[!ref icon="trophy" text="Already use Pozi? ...Upgrade to Pozi Enterprise"](/upgrade/)
+[!ref icon="trophy" text="Already use Pozi? ...Upgrade to Pozi Enterprise Cloud"](/enterprise-cloud/)
 
 <br/>
 
