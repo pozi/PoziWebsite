@@ -188,7 +188,7 @@ For *Enterprise* and *Enterprise Cloud* subscribers, we offer access to our sour
 
 If your organisation uses Expression of Interest (EOI), Request For Tender (RFT), or Request For Quote (RFQ) for software procurement, a premium will apply to the package cost and ongoing subscription. A minimum three-year commitment will also apply. Talk to us about what additional costs will apply for your procurement method.
 
-Alternatively, you can avoid RFTs and RFQs altogether with an annual Pozi subscription to keep your organisation's commitments below any procurement thresholds. There are no lock-in contracts with standard Pozi subscriptions.
+Alternatively, you can avoid RFTs and RFQs altogether with a pay-as-you-go Pozi subscription. Minimise your organisation's commitment and pick a plan that keeps your expenditure below any procurement thresholds. There are no lock-in contracts with standard annual Pozi subscriptions.
 
 [Contact us](./contact/) to learn how organisations like yours avoid months of wasted effort on RFTs and RFQs by switching to Pozi.
 
