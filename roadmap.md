@@ -26,7 +26,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [ ] fine-grained user permission control utilising Azure AD
 - [ ] display tables of only selected features
 - [ ] interactive bulk spatial selection for ad-hoc layers
-- [ ] collaborate map annotations
+- [ ] collaborative map annotations
 - [ ] alternative layer download format options - GeoJSON, SHP, KML, GeoPackage, CSV and other popular formats
 - [ ] 3D view
 
@@ -38,7 +38,6 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [ ] prevent Share links from including the panel state (unless specified in advanced options)
 - [ ] zoom/pan to selected feature on Pozi launch if URL contains a selected feature
 - [ ] display What's Here target on Pozi launch if URL contains a target
-- [ ] rename column headings in table view to match any field name aliases
 
 ---
 
@@ -48,8 +47,26 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 #### New
 
+- [x] ⚡ map feature tooltips!
 - [x] ⚡ Pozi Community Forum - online collaboration for Pozi clients
 - [x] ⚡ monthly analytics reports
+
+#### Improved
+
+- [x] 👍 support field alias names in table view, filter and report modes
+- [x] 👍 add SSO logout button
+- [x] 👍 smoother load experience - show buttons only after map is loaded and controls are usable
+- [x] 👍 enable Enterprise Cloud customers to preview any dev branch in staging
+- [x] 👍 add projections support for catalogues and WMS layers
+- [x] 👍 enable catalogues to appear as folders inside of layer groups
+- [x] 👍 enable user to download annotation layer, whether the user created the annotations or not
+- [x] 👍 add WFS projection plus GML loader support
+- [x] 👍 update to new Vic Gov data endpoints
+- [x] 👍 smoother load experience - show buttons only after map is loaded and controls are usable
+
+#### Fixed
+
+- [x] 🪲 fix errors when there are no layer attributes
 
 ### April 2023
 

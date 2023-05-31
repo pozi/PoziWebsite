@@ -121,9 +121,11 @@ In the child dataset's Layer Properties, go to QGIS Server. Fill in the 'Keyword
 
 Example: `parent=Property, parameter=EXP_FILTER=Assess_NumberX in ('[Property Number]'), downloadable=true`
 
+*Note: `EXP_FILTER` doesn't support spaces in the child dataset's lookup field name. If this field contains a space, use a field alias to replace any spaces with underscores.*
+
 Click OK, then save the project.
 
-Open your Pozi site in your browser, refresh the page, click on the map, select a parent record, and confirm that you can see the related child records in the info panel.
+Open your Pozi site in your browser, refresh the page, click on the map, select a parent record, and confirm that you can see the related child record(s) in the info panel.
 
 Pozi automatically prevents the child table appearing in the layer panel due to the presence of the `parent` keyword. Do NOT add the table to the list of excluded layers in the QGIS Server settings, except if you want to disable the child dataset lookup.
 
