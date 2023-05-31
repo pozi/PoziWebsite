@@ -8,16 +8,9 @@ order: 85
 
 ### Services
 
-#### DELWP DataVic
+#### DEECA Open Data Platform
 
-This service is soon to be retired. See 'DELWP DataVic (New)' below for details about the replacement service.
-
-* [GetCapabilities](https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms?request=getCapabilities)
-
-#### DELWP DataVic (New)
-
-* [GetCapabilities](https://geoserver-uat.maps.vic.gov.au/geoserver/ows?service=WMS&request=getCapabilities)
-* [GeoWebCache](https://geoserver-uat.maps.vic.gov.au/geoserver/gwc/)
+* [GetCapabilities](https://opendata.maps.vic.gov.au/geoserver/ows?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetCapabilities)
 
 #### data.gov.au
 
@@ -246,7 +239,7 @@ The topmost imagery layer can be toggled by the Aerial button at the top right o
 
 ==-
 
-### DELWP Image Web Server
+### DEECA Image Web Server
 
 * [About](https://www.land.vic.gov.au/maps-and-spatial/imagery/about-image-web-server)
 * [Login](http://images.land.vic.gov.au/iwsadmin/)

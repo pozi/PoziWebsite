@@ -41,3 +41,21 @@ For other changes to the Pozi app experience, contact the Pozi Helpdesk:
 * solve an issue that's not covered in our Troubleshooting pages
 
 support@pozi.com
+
+---
+
+## Join Our Community!
+
+We are excited to invite you to our new community forum exclusively for Pozi administrators. As a valued member of our community, we know you want to stay up-to-date with all the exciting developments happening at Pozi.
+
+<img src="../static/img/undraw/undraw_amusement_park_17oe.svg" alt="" style="float:right;width:500px;margin:10px 40px;">
+
+Our forum will give you access to new features, exclusive content, and important announcements that will help you get the most out of your Pozi experience. You will also be able to connect with other Pozi users, discuss important topics, and have a little fun along the way.
+
+By joining our community forum, you'll not only stay informed about important information that affects your organization's use of Pozi but also gain access to your monthly usage analytics. This means you'll be able to track how your organization is performing and make data-driven decisions about how to optimize your Pozi usage.
+
+Don't miss out on this opportunity to engage with the Pozi community and get the most out of your Pozi experience. Contact info@pozi.com and request your invitation.
+
+Already a member? Then head on over!
+
+[!ref icon="people" text="Pozi Community"](https://community.pozi.com/)

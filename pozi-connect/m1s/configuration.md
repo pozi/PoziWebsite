@@ -18,7 +18,7 @@ order: 90
 
 ### Working with Alternative Table Names
 
-In 2021-2022, DELWP changed the names of two of the Vicmap Property Simplified 1 tables that Pozi Connect relies upon.
+In 2021-2022, DEECA changed the names of two of the Vicmap Property Simplified 1 tables that Pozi Connect relies upon.
 
 * `PARCEL_MP` > `V_PARCEL_MP`
 * `PROPERTY_MP` > `V_PROPERTY_MP`

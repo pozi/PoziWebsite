@@ -6,19 +6,32 @@ sidebar_position: 2
 
 ## Data Sources
 
+### Formatting the Connection String
+
 Database connection strings can be configured in any of these formats:
 
 * `ODBC:DSN=dsnname`
 * `ODBC:DRIVER={SQL Server};SERVER=servername;DATABASE=databasename`
-* `MSSQL:SERVER=servername;DATABASE=databasename`
+
+### Testing the Connection String
 
 You can test your connection string using a command prompt running GDAL/OGR. If you have QGIS installed via OSGeo4W, you can open the command prompt by running `C:\OSGeo4W\OSGeo4W.bat`. Alternatively you can use the one provided with Pozi Connect at `PoziConnect\vendor\release-xxxx-gdal-x-x-x-mapserver-x-x-x\SDKShell.bat`.
 
++++ Trusted User
+
 ```
-ogrinfo "MSSQL:SERVER=servername;DATABASE=databasename"
+ogrinfo "ODBC:DRIVER={SQL Server};SERVER=servername;DATABASE=databasename"
 ```
 
-If you have the correct connection string for your database, a list of available tables will be displayed. If you don't see your tables listed, please talk to your IT Administrator to obtain the correct connection string or enable the required permissions.
++++ Basic Authentication
+
+```
+ogrinfo "ODBC:DRIVER={SQL Server};SERVER=servername;DATABASE=databasename;UID=myusername;PWD=mypassword"
+```
+
++++
+
+If you have entered the correct connection string for your database, a list of available tables will be displayed. If you don't see your tables listed, please talk to your IT Administrator to obtain the correct connection string or enable the required permissions.
 
 ## Running as a batch task
 
@@ -58,7 +71,7 @@ Notes:
 
 * If key name ends with `folder`, the interface offers the user a button to launch an Open Folder dialog.
 * If key name ends with `file`, the interface offers the user a button to launch an Open File dialog
-* If key name ends with `password`, the interface displays dummy characters in place of the populated or typed characters
+* If key name ends with `password`, the interface displays placeholder characters in place of the populated or typed characters
 
 Examples:
 
@@ -67,13 +80,13 @@ Examples:
 Vicmap_Address_Folder:
 Vicmap_Property_Folder:
 LGA_Code: 302
-Database_File: Output\Ballarat.sqlite
+Database_File: output\DB\Ballarat.sqlite
 
 [User Settings]
-Pathway_DSN: pthprod
-Pathway_User_ID:
-Pathway_Password:
-Pathway_Table_Prefix: pthdbo.
+Data_Source: ODBC:DSN=pthprod
+Username:
+Password:
+Table_Prefix: pthdbo.
 ```
 
 ### General Settings
@@ -84,8 +97,8 @@ Example:
     Description:
         Extract Pathway address and parcel
         information into Pozi Connect database
-    Pathway_Connection: ODBC:DSN={Pathway_DSN};UID={Pathway_User_ID};PWD={Pathway_Password}
-    Database_File: Output\Ballarat.sqlite
+    Database_Connection: {Data_Source};UID={Username};PWD={Password}
+    Database_File: output\DB\Ballarat.sqlite
 
 ---
 

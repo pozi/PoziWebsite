@@ -79,12 +79,12 @@ As a guideline, use vectors only for layers with fewer than 5-10K features, or e
 
 ### Enabling Vector Layer
 
-1. Project > Properties > QGIS Server
-2. `WFS capabilities > Published`: tick on for each layer to be published (or you can click `Select All` if all layers are required)
+1. Project > Properties > QGIS Server > WFS/OAPIF
+2. `Published`: tick on for each layer to be published as a vector layer (or you can click `Publish All` if *all* layers are required)
 3. OK
 4. Project > Save (`Ctrl` + `S`)
 
-![QGIS Project Properties WFS Configuration](./img/qgis-project-properties-wfs-configuration.png){style="width:500px"}
+![QGIS Project Properties WFS Configuration](./img/qgis-project-properties-wfs-configuration.png){style="width:700px"}
 
 <br/>
 
@@ -93,7 +93,7 @@ As a guideline, use vectors only for layers with fewer than 5-10K features, or e
 Using QGIS, you can control many visual aspects of your layer. You may apply a common style for all the features in a layer 
 ([Single Symbol](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#single-symbol-renderer)) or apply a thematic style that displays features according to any of its attributes ([Categorized](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#categorized-renderer)).
 
-When Pozi fetches a layer using WMS, QGIS Server renders the layer exactly as configured in QGIS. When using WFS, the rendering is done by Pozi in the browser, which can cause the layer to appear differently compared to QGIS for some styling options. 
+When Pozi fetches a layer using WMS (ie, *not* vector), QGIS Server renders the layer exactly as configured in QGIS. When using WFS (ie, vector), the rendering is done by Pozi in the browser, which can cause the layer to appear differently compared to QGIS for some styling options. 
 
 ### Styling for Vector Layers
 
@@ -181,7 +181,13 @@ If the layer appears in QGIS Symbology mode "Embedded", switch it to "Single Sym
 
 #### Categorized Symbology
 
-Layers can be styled using the `Categorized` option. However, when publishing the layer as a vector layer, the following limitations apply:
+Layers can be styled using the `Categorized` option. Pick the field to use for the category from the drop-down list, then click the Classify button.
+
+![Categorized styling](img/qgis-layer-styling-categorized.png){style="width:500px"}
+
+##### Limitations
+
+When publishing the layer as a vector layer, the following limitations apply:
 
 * the symbology must be based on a field (real or virtual), not an expression
 * the values must not be merged (ie, only one value per row)
@@ -194,6 +200,14 @@ For instance, the virtual field can contain a case statement to accept any numbe
 ![](./img/qgis-layer-virtual-fields-for-styling-categories.png){style="width:800px"}
 
 See [Virtual Fields](#virtual-fields) below for more information.
+
+##### Fallback Style
+
+When using the Classify button to generate styles for each unique value, QGIS automatically generates an additional **fallback** style for "*all other values*". However this function is not supported in Pozi, and Pozi will display **all** the layer's features with the fallback style.
+
+![](img/qgis-layer-styling-categorized-remove-all-other-values.png){style="width:600px"}
+
+Delete the "*all other values*" item from the list before saving.
 
 ### Opacity
 
@@ -227,6 +241,8 @@ You can make field names more user-friendly by giving your field names an *alias
 Layer Properties > Attributes Form > select field > Alias
 
 ![](./img/qgis-field-alias.png){style="width:700px"}
+
+*Please note that column headings in Pozi's table view currently shows the original field names and not the aliases.*
 
 ### Virtual Fields
 
@@ -266,7 +282,7 @@ The resulting virtual field appears in QGIS and Pozi as if it were standard fiel
 
 ![](img/qgis-table-with-virtual-field.png){style="width:700px"}
 
-If the value in the field is a URL (as in this example), Pozi will display it as a clickable link.
+If the value in the field is a URL (as in this example), Pozi will display it as a clickable link, using the field name as the link text.
 
 ![](img/pozi-info-panel-showing-link-from-virtual-field.png){style="width:300px"}
 
@@ -280,9 +296,9 @@ When users select a feature from the map, Pozi prominently displays one of the f
 
 ![](img/info-panel-title.png){style="width:800px"}
 
-Typically the title will be the name of the feature or some other useful information to distinguish the feature from others in the same layer.
+The title should be the name of the feature or some other useful information to distinguish the feature from others in the same layer.
 
-The field from which this attribute is obtained is defined in QGIS.
+You can control which field is used for the layer's title in QGIS.
 
 Layer Properties > Display > Display Name
 
@@ -304,6 +320,16 @@ Project > Properties > Data Sources > Identifiable > untick to disable layer sel
 
 <br/>
 
+## Exclude Layers
+
+Your QGIS project may contain layers that are not needed for viewing in Pozi. For instance, your project may contain basemap layers that provide context for viewing map layers in QGIS, but you don't want these to appear in the project's layer group in Pozi.
+
+To exclude any layers from appearing in Pozi:
+
+Project > Properties > QGIS Server > WMS > `Exclude layers` (tick) > add > pick layers to exclude > OK
+
+![QGIS project WMS exclude layers](img/qgis-project-wms-exclude-layers.png){style="width:500px"}
+
 ## Optional Settings
 
 Other settings can be configured using QGIS Server keyword list. Pozi obtains these settings when it loads and imports each project's catalogue.
@@ -312,7 +338,7 @@ These settings provide an override for some of the default behaviours in Pozi.
 
 Layer Properties > QGIS Server > Keyword list
 
-* `enabled=false`: temporarily disable a dataset (without having to remove it completely)
+* `enabled=false`: temporarily disable a dataset in Pozi (without having to remove it from QGIS)
 * `group=[group name]`: override which layer group the layer is listed under
 * `showInLayerControl=false`: don't display layer in layer panel
 * `showLegend=false`: don't display layer legend
@@ -352,12 +378,16 @@ Check the following:
 * Ensure the layer has a coordinate reference system set. Go to Layer Properties > Source > Assigned CRS, and pick a projection
 * For file-based layers, ensure that the file path is one that is recognised by the server. See [About layer file paths](#about-layer-file-paths) above.
 * Ensure that any categorised styling is based on a single field with a single value per row. See [Categorized Symbology](#categorized-symbology) above.
+* Ensure that any categorised styling is based on a field that is exposed as WFS (ie, ensure the field option 'Do not expose via WFS' is *unticked*).
+* If the layer source is a MapInfo table, ensure that the symbology type is *not* "Embedded Symbols". Change it to another type such as "Single Symbol" or "Categorized".
 
-==- Layers are not displayed with the styling from QGIS
+==- Layers are displayed, but not with the styling from QGIS
 
-Pozi will display layers in a generic style if it cannot process the style that was configured in QGIS.
+Pozi will display layers in a generic style (often purple) if it cannot process the style that was configured in QGIS.
 
-Simplify the style in the QGIS project and try again. Replace hatch styles with semi-opaque fills. Replace custom point symbols with one of the [standard symbols](#points) specified above.
+Simplify the style in the QGIS project and try again. For point features, replace custom point symbols with one of the [standard symbols](#points) specified above. For polygon features, replace hatch styles with semi-opaque fills or any of the [supported fill styles](#polygons) specified above.
+
+If using a *categoized* style, remove any style that QGIS generates for *all other values*. See [Fallback Style](#fallback-style) above.
 
 ==- Selected features from WMS layers are displayed with a mis-shaped highlight
 

@@ -12,13 +12,13 @@ Organisations can more easily manage data, reduce duplication, and identify sour
 
 The recommended structure is a network folder hierarchy based on the name of each dataset's source organisation or department. Every dataset has a single source, and only one possible location in the hierarchy.
 
-When naming of the network folders, it is acceptable to use any recognisable abbreviations for organisation names (eg DELWP) to keep file paths short. Individual dataset folder names are also abbreviated where the data supplier also uses a standard abbreviation (eg AAV, CIP, VMPROP).
+When naming of the network folders, it is acceptable to use any recognisable abbreviations for organisation names (eg DEECA) to keep file paths short. Individual dataset folder names are also abbreviated where the data supplier also uses a standard abbreviation (eg AAV, CIP, VMPROP).
 
 ```
 GIS
 ├── Admin
 ├── Data
-│   ├── DELWP
+│   ├── DEECA
 │   │   ├── VMADD
 │   │   ├── VMADMIN
 │   │   ├── VMELEV
@@ -45,7 +45,7 @@ GIS
 
 ### Victorian State Government
 
-Organisations based in Victoria, Australia can download regular updates of 'Vicmap' authoritative datasets that are maintained by the Department of Environment, Land, Water and Planning (DELWP).
+Organisations based in Victoria, Australia can download regular updates of 'Vicmap' authoritative datasets that are maintained by the Department of Energy, Environment and Climate Action (DEECA).
 
 Go to [https://datashare.maps.vic.gov.au/](https://datashare.maps.vic.gov.au/), search for the datasets of interest, and set up repeat orders. Pozi is compatible with any of the formats listed, with the exception of MapInfo Extended.
 

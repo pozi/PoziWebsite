@@ -39,6 +39,7 @@ title: Integrations
 * City of Greater Bendigo
 * City of Monash
 * City of Ballarat
+* City of Darebin
 * Nillumbik Shire Council
 * Frankston City Council
 * Glen Eira City Council
@@ -67,6 +68,7 @@ title: Integrations
 * Golden Plains Shire Council
 * Mansfield Shire Council
 * Pyrenees Shire Council
+
 ## TechnologyOne
 
 ### On-Premise
@@ -113,7 +115,7 @@ P1PLN_PROP_TRANSFER
 P1PRC_ASSOCIATION
 ```
 
-The Association table is likely to be quite large (possibly 100s of MBs). Apply a filter to it to reduce it down before downloading it.
+The Association table is likely to be quite large (possibly 100s of MBs). You may choose to apply a filter to it to reduce it down before downloading it.
 
 ```sql
 SELECT key1,key2,association_type,date_ended

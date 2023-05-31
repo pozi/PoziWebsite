@@ -138,7 +138,6 @@ Add the following `Redirect URIs` to the `Single-page application` section:
   * If needed, add any extra URIs that the client uses (e.g. `https://<sitename>-azure.enterprise.pozi.com/`)
   * `http://localhost:3000/` (for Pozi development purposes)
   * `https://staging.pozi.com/` (for client testing/debugging)
-  * `https://staging.pozi.com/master/` (for client testing/debugging)
 
 All the URIs above will be needed for Pozi to be fully functional.
 
@@ -197,16 +196,12 @@ No administrator privileges are required.
 
 After completion of the configuration, Pozi would like to receive the following from the client:
 
-* The **internal** app proxy URl (something like `http://<servername>/pozi/`)
-* The **external** app proxy URl (something like `https://poziserver-<clientname>.msappproxy.net/pozi/`)
-
-* The **`client id`** (sometimes called 'application id') and has the following structure: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The client id is defined in Enterprise Applications => Properties.
-
-* The **`tenant id`**, which looks like xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The tenant id is defined in Azure Active Directory => Overview."
-
-* The **credentials** (email address + password) of the Pozi Support user account that will have access to the Pozi Azure AD Application Proxy. Please get in touch with us on how to securely provide us with these details.
-
-* A copy/paste and/or screenshot of all the relevant settings
+- [ ] The **internal** app proxy URl (something like `http://<servername>/pozi/`)
+- [ ] The **external** app proxy URl (something like `https://poziserver-<clientname>.msappproxy.net/pozi/`)
+- [ ] The **`client id`** (sometimes called 'application id') and has the following structure: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The client id is defined in Enterprise Applications => Properties.
+- [ ] The **`tenant id`**, which looks like xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The tenant id is defined in Azure Active Directory => Overview."
+- [ ] The **credentials** (email address + password) of the Pozi Support user account that will have access to the Pozi Azure AD Application Proxy. Please get in touch with us on how to securely provide us with these details.
+- [ ] A copy/paste and/or screenshot of all the relevant settings
 
 
 

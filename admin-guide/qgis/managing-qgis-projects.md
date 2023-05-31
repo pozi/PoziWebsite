@@ -36,15 +36,11 @@ Create new project from scratch:
 
 It's useful to include a basemap in the project to provide visual context for the layers you will add on top.
 
-#### Example
+#### Vicmap Basemap Example
 
 If you've [set up](/admin-guide/qgis/setting-up-qgis/#basemap) 'Vicmap Basemap' as a WMS/WMTS source, you can easily one of its layers as your basemap.
 
-Browser > WMS/WMTS > Vicmap Basemap > Vicmap Basemap - Web Mercator - Cartographic
-
-![Add Vicmap Basemap](./img/qgis-add-wmts-layer.png){style="width:250px"}
-
-<br/>
+Browser > WMS/WMTS > Vicmap Basemap > Vicmap Basemap - VicGrid2020 - Cartographic
 
 ## Configure Web Services
 ### Construct Advertised URL
@@ -70,21 +66,17 @@ Copy the URL to your clipboard for subsequent configuration below.
 ### Enable Web Services
 
 1. Project > Properties > QGIS Server
-2. update WMS capabilities settings
+2. WMS
    * `Exclude layers` (tick) > add > pick any background layers you don't need to see in Pozi
    * `Add geometry to feature response`: tick on
    * `Advertised URL`: enter Advertised URL (from above)
-3. update WMTS capabilities settings
+3. WMTS
    * `Published layers > Project > Published`: tick on
    * `Advertised URL`: enter Advertised URL
-4. update the WFS capabilities settings:
+4. WFS/OAPIF
    * `Advertised URL`: enter Advertised URL
 5. OK
-
-![QGIS Project Properties WMS Configuration](./img/qgis-project-properties-configuration.png){style="width:600px"}
-
-6. OK
-7. Project > Save  (`Ctrl` + `S`)
+6. Project > Save  (`Ctrl` + `S`)
 
 ### Further Settings
 
@@ -100,7 +92,7 @@ See [Configuring Layers](/admin-guide/qgis/configuring-layers.md) for details ab
 
 Remember to use only UNC paths for file-based layers.
 
-When you're done, remember to [enable any layers for WFS](/admin-guide/qgis/configuring-layers/#enable-wfs) if required.
+When you're done, remember to [enable any layers for WFS](/admin-guide/qgis/configuring-layers/#publish-as-vector-layer) if required.
 
 <br/>
 

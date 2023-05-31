@@ -39,11 +39,11 @@ GIS administrators take advantage of QGIS's powerful geospatial toolkit to confi
 
 Pozi's ease of use improves user engagement and promotes more informed decision-making.
 
-Users don't require expensive training to get the answers they need.
+Users don't require expensive training in order to get the answers they need.
 
 Pozi enables users across your organisation to quickly access critical information, regardless of any previous GIS expertise.
 
-Pozi's adaptive interface displays only the information needed for the task at hand, whether it's viewing a full screen map, showing details about a selected feature or location, browsing available map layers, or searching for a location. Pozi enables users to gain more insight and context around their area of interest by eliminating distractions and freeing up valuable screen space.
+Pozi's adaptive interface displays only the information needed for the task at hand, whether it's viewing a full screen map, showing details about a selected feature or location, browsing available map layers, or searching for a location.
 
 * intuitive workflows
 * touch friendly, mobile ready
@@ -53,7 +53,7 @@ Pozi's adaptive interface displays only the information needed for the task at h
 
 ### Public Ready
 
-Engage your community and external stakeholders with information that's relevant to them, while keeping your organisation's private data available only to internal users.
+Engage your community and external stakeholders with information that's relevant to them, while keeping your organisation's private data available only to authorised users.
 
 Every Pozi site provides a public-facing map view by default.
 
@@ -63,7 +63,7 @@ And engage with the public using Pozi's two-way community consultation functiona
 
 ### Unified Map
 
-Pozi avoids artificial data silos that are caused by managing data in separate modules. Within a single Pozi map, users can discover, use and mix information for their individual needs, without having to switch between separate map modules.
+Pozi avoids artificial data silos that are caused by managing data in separate modules. Within a single Pozi map, users can discover, use and combine information for their individual needs, without having to switch between separate map modules.
 
 When users interact with layer groups within the layer panel, Pozi remembers how they left it so that their most relevant layers are ready to access as needed. Layers that aren't useful or haven't been recently accessed remain tucked away, but still discoverable and accessible in the current map.
 
@@ -83,7 +83,7 @@ When you ask Pozi for help, we'll acknowledge your request within 24 hours, and 
 
 Do you already have your own GIS support provider? No worries. We'll work with them and provide access to the resources they need to deliver the support you deserve.
 
-We don't put restrictions on who you ask for support. Pozi's open architecture enables any GIS support provider to customise and maintain Pozi to your organisation's requirements.
+Pozi's open architecture enables any GIS support provider to customise and maintain Pozi to your organisation's requirements.
 
 ### Purpose-Driven
 

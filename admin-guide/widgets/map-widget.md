@@ -27,7 +27,7 @@ The Pozi map widget enables users to search any address to launch an instance of
 
 If this parameter is added, the current page will be redirected to the Pozi map zoomed to the address.
 
-`reditect=true`
+`redirect=true`
 
 ### New Tab
 
