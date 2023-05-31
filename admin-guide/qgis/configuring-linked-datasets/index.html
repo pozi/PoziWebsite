@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.738134511838">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.738823463442">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,12 +35,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.738134511838" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.738823463442" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.738134511838" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.738823463442" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.738134511838" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.738134511838" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.738823463442" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.738823463442" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -437,8 +437,9 @@
 <p>In the child dataset&#x27;s Layer Properties, go to QGIS Server. Fill in the &#x27;Keyword list&#x27; with the <code v-pre>parent</code>, <code v-pre>parameter</code> and optional settings derived above, each separated by commas.</p>
 <p><img src="../img/qgis-server-keywords.png" style="width:600px" alt="" /></p>
 <p>Example: <code v-pre>parent=Property, parameter=EXP_FILTER=Assess_NumberX in ('[Property Number]'), downloadable=true</code></p>
+<p><em>Note: <code v-pre>EXP_FILTER</code> doesn&#x27;t support spaces in the child dataset&#x27;s lookup field name. If this field contains a space, use a field alias to replace any spaces with underscores.</em></p>
 <p>Click OK, then save the project.</p>
-<p>Open your Pozi site in your browser, refresh the page, click on the map, select a parent record, and confirm that you can see the related child records in the info panel.</p>
+<p>Open your Pozi site in your browser, refresh the page, click on the map, select a parent record, and confirm that you can see the related child record(s) in the info panel.</p>
 <p>Pozi automatically prevents the child table appearing in the layer panel due to the presence of the <code v-pre>parent</code> keyword. Do NOT add the table to the list of excluded layers in the QGIS Server settings, except if you want to disable the child dataset lookup.</p>
 <doc-anchor-target id="troubleshooting">
     <h2>
