@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "retypeapp": "3.0.1"
+    "retypeapp": "2.4.0"
   },
   "devDependencies": {
     "browser-sync": "2.27.9",
