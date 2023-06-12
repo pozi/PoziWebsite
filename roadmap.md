@@ -28,6 +28,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [ ] interactive bulk spatial selection for ad-hoc layers
 - [ ] collaborative map annotations
 - [ ] alternative layer download format options - GeoJSON, SHP, KML, GeoPackage, CSV and other popular formats
+- [ ] support for Google Maps basemap
 - [ ] 3D view
 
 ### Enhancements
@@ -43,6 +44,18 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## Completed
 
+### June 2023
+
+#### Improved
+
+- [x] 👍 add support for beta Vicmap vector tile basemap
+- [x] 👍 don't display tooltips for non-selectable layers
+
+#### Fixed
+
+- [x] 🪲 prevent page refresh from touch gesture on mobile
+- [x] 🪲 fix touch event registering in the wrong spot on mobile
+
 ### May 2023
 
 #### New
@@ -57,7 +70,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [x] 👍 add SSO logout button
 - [x] 👍 smoother load experience - show buttons only after map is loaded and controls are usable
 - [x] 👍 enable Enterprise Cloud customers to preview any dev branch in staging
-- [x] 👍 add projections support for catalogues and WMS layers
+- [x] 👍 add projection support for catalogues and WMS layers
 - [x] 👍 enable catalogues to appear as folders inside of layer groups
 - [x] 👍 enable user to download annotation layer, whether the user created the annotations or not
 - [x] 👍 add WFS projection plus GML loader support

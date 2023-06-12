@@ -392,3 +392,7 @@ The matching is case-insensitive and allows for the use of wildcards for inclusi
 
 ==-
 
+### `flatten`
+
+When `"flatten": true` is specified, Pozi will ignore any layer folders specified WMS response, and arrange all layers at the top level of the layer group.
+

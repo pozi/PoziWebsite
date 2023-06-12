@@ -76,7 +76,6 @@ title: Integrations
 * Shire of Campaspe
 * Manningham City Council
 * Rural City of Wangaratta
-* Hepburn Shire Council
 * Warrnambool City Council
 * Baw Baw Shire Council
 * City of Stonnington
@@ -88,6 +87,7 @@ title: Integrations
 
 ### OneCouncil
 
+* Hepburn Shire Council
 * Mitchell Shire Council
 * City of Port Phillip
 

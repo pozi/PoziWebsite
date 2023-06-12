@@ -5,6 +5,10 @@ order: -100
 
 Here are some of Pozi Connect's improvements and bug fixes.
 
+### Version 2.10.1 (June 2023)
+
+* configuration updates for Hepburn
+
 ### Version 2.10.0 (March 2023)
 
 * use new `road` field in Parcel table to determine road status instead of `desc_type`

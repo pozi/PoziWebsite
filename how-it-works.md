@@ -32,7 +32,7 @@ Users who are connected to the corporate network (either physically or via VPN) 
 
 ![](/static/draw.io/network-diagram-enterprise-cloud.png)
 
-Users who are signed in to their Microsoft account gain access to corporate data sources that are made available through Microsoft App Proxy.
+Users who are signed in to their Microsoft account gain access to corporate data sources through Microsoft App Proxy.
 
 +++
 
