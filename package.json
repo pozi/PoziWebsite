@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "retypeapp": "2.4.0"
+    "retypeapp": "3.0.3"
   },
   "devDependencies": {
     "browser-sync": "2.27.9",
@@ -9,6 +9,7 @@
   "scripts": {
     "retype-watch-no-browser": "DISPLAY=:none retype watch",
     "browser-sync": "browser-sync start --no-open --files \".\" --ignore \"node_modules\" \".git\" --port 3010 --proxy http://localhost:5000/ --reload-delay 1500",
+    "build": "retype build",
     "start": "concurrently \"npm:retype-watch-no-browser\" \"npm:browser-sync\""
   }
 }
