@@ -1,18 +1,16 @@
 ---
-order: 88
+order: 90
 ---
 
-# QGIS Server (New)
+# QGIS Server
 
 !!! About this page
 
-This document contains instructions for setting up QGIS Server *without Pozi Server*. This is specific to new installations of QGIS Server for Pozi *Enterprise Cloud* clients from 30 March 2023 onwards.
+This document contains instructions for installing and configuring QGIS Server for use in conjunction with Azure AD (ie, without Pozi Server). This is the new preferred method of implementing QGIS Server.
 
 !!!
 
 ## Installation
-
-On the server on which Pozi Server is installed:
 
 * if any previous version of QGIS Desktop has been installed using the stand-alone installer, uninstall it
 * go to [https://trac.osgeo.org/osgeo4w/](https://trac.osgeo.org/osgeo4w/)
@@ -30,6 +28,7 @@ On the server on which Pozi Server is installed:
   * Web
     * `qgis-ltr-server`
 * Next > accept defaults > "Install these packages..." > Next > "I agree..." > Next
+* upon completion, close the installer, then move the `osgeo4w-setup.exe` file to `C:\OSGeo4W\` for convenient access for running again to perform future upgrades
 
 ## IIS Integration
 
@@ -195,6 +194,30 @@ Create PoziQgisServer application pool:
 Set permissions for `IIS AppPool\PoziQgisServer` :
 
 IIS > select server > Application Pools > PoziQgisServer > Advanced settings > Identity > Application Pool Identity > Custom account > enter details of the domain user that runs Pozi "service" account (include the domain prefix and backslash, or use the email address of the domain user)
+
+## Testing
+
+Construct a WMS GetProjectSettings request for any existing QGIS project file as follows:
+
+```
+http://localhost/pozi/qgisserver?service=WMS&map=C:/Projects/SomeProject.qgs&request=GetProjectSettings
+```
+
+Substitute `C:/Projects/SomeProject.qgs` with the file path of an actual QGIS project file.
+
+Enter the constructed URL into the address bar of your browser, hit Enter, and you should see an XML file that describes the data endpoints for the project's layers.
+
+## Updating
+
+Right-click on `C:\OSGeo4W\osgeo4w-setup.exe` file, and "Run as administrator". Accept all defaults.
+
+If the setup file doesn't exist at that location, download it from [https://trac.osgeo.org/osgeo4w/](https://trac.osgeo.org/osgeo4w/).
+
+During the update process, if the installer displays a message about files being locked, stop the IIS application pool.
+
+IIS > *Server Name* > Application Pools > PoziQgisServer - right-click, and select 'Stop'
+
+Upon completion of the update process, right-click, and select 'Start'.
 
 <br/>
 

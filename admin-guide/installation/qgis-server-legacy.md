@@ -1,9 +1,14 @@
 ---
-title: QGIS Server 
-order: 90
+order: 88
 ---
 
-# QGIS Server
+# QGIS Server (Legacy)
+
+!!! About this page
+
+This document contains instructions for setting up QGIS Server *with* Pozi Server. This is no longer the preferred way to set up QGIS Server. See [QGIS Server Installation](/admin-guide/installation/qgis-server.md) for setting up QGIS Server with Azure AD.
+
+!!!
 
 ## Installation
 
