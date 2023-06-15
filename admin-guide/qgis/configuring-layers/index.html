@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.740119551276">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.740120140014">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.0.3">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.0.3.740119551276" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=3.0.3.740120140014" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.740119551276" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.740120140014" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=3.0.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.740119551276" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.740120140014" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -641,7 +641,7 @@
 <p><img src="../img/qgis-table-with-virtual-field.png" style="width:700px" alt="" /></p>
 <p>If the value in the field is a URL (as in this example), Pozi will display it as a clickable link, using the field name as the link text.</p>
 <p><img src="../img/pozi-info-panel-showing-link-from-virtual-field.png" style="width:300px" alt="" /></p>
-<p>If the value is a URL ending in <code v-pre>.png</code> or <code v-pre>.jpg</code>, Pozi will display a thumbnail of the target image.</p>
+<p>If the value is a string ending in <code v-pre>.png</code> or <code v-pre>.jpg</code>, Pozi will attempt to display a thumbnail of the target image. If you want Pozi to display the image, ensure that the string is a valid URL.</p>
 <br/>
 <doc-anchor-target id="feature-title">
     <h2>
@@ -655,7 +655,7 @@
 <p>You can control which field is used for the layer&#x27;s title in QGIS.</p>
 <p>Layer Properties &gt; Display &gt; Display Name</p>
 <p><img src="../img/qgis-layer-display-field.png" style="width:600px" alt="" /></p>
-<p>Please note that Pozi cannot use the display field if the field name has been given an <doc-anchor-trigger to="#rename-fields">alias</doc-anchor-trigger>.</p>
+<p>Please note that Pozi cannot use the display field if the field name has been given an <doc-anchor-trigger to="#rename-fields">alias</doc-anchor-trigger>. Consider creating a virtual field with the desired name and use that as the display field.</p>
 <br/>
 <doc-anchor-target id="selectability">
     <h2>
