@@ -284,7 +284,7 @@ If the value in the field is a URL (as in this example), Pozi will display it as
 
 ![](img/pozi-info-panel-showing-link-from-virtual-field.png){style="width:300px"}
 
-If the value is a URL ending in `.png` or `.jpg`, Pozi will display a thumbnail of the target image.
+If the value is a string ending in `.png` or `.jpg`, Pozi will attempt to display a thumbnail of the target image. If you want Pozi to display the image, ensure that the string is a valid URL.
 
 <br/>
 
@@ -302,7 +302,7 @@ Layer Properties > Display > Display Name
 
 ![](img/qgis-layer-display-field.png){style="width:600px"}
 
-Please note that Pozi cannot use the display field if the field name has been given an [alias](#rename-fields).
+Please note that Pozi cannot use the display field if the field name has been given an [alias](#rename-fields). Consider creating a virtual field with the desired name and use that as the display field.
 
 <br/>
 
