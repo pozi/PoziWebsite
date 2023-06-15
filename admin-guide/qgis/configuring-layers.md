@@ -242,8 +242,6 @@ Layer Properties > Attributes Form > select field > Alias
 
 ![](./img/qgis-field-alias.png){style="width:700px"}
 
-*Please note that column headings in Pozi's table view currently shows the original field names and not the aliases.*
-
 ### Virtual Fields
 
 You can control how your data appears to users without having to modify your source data by using the Field Calculator function in QGIS to create virtual fields.
