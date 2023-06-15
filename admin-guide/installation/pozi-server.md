@@ -1,9 +1,9 @@
 ---
 description: Step-by-step instructions for setting up Pozi Server on your network
-order: 100
+order: 85
 ---
 
-# Pozi Server
+# Pozi Server (Legacy)
 
 *Geospatial API for your local data*
 

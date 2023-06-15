@@ -2,11 +2,11 @@
 order: 88
 ---
 
-# QGIS Server (New)
+# QGIS Server (Legacy)
 
 !!! About this page
 
-This document contains instructions for setting up QGIS Server *without Pozi Server*. This is specific to new installations of QGIS Server for Pozi *Enterprise Cloud* clients from 30 March 2023 onwards.
+This document contains instructions for setting up QGIS Server *with* Pozi Server. This is no longer the preferred way to set up QGIS Server. See [QGIS Server Installation](/admin-guide/installation/qgis-server.md) for setting up QGIS Server with Azure AD.
 
 !!!
 
@@ -33,6 +33,14 @@ On the server on which Pozi Server is installed:
 
 ## IIS Integration
 
+QGIS Server IIS Integration using FastCGI.
+
+NOTE: Pozi Server 2.2.8 ships with default configuration files for QGIS Server IIS Integration using FastCGI -- the following folder is assumed to exist if you have installed Pozi Server to the default `C:\Program Files (x86)\Pozi` location:
+
+```
+C:\Program Files (x86)\Pozi\server\iis\Pozi\QgisServer
+```
+
 ### Install IIS
 
 !!!secondary Copying and pasting using command prompt
@@ -54,12 +62,25 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
 
 If IIS has not previously been set up on the server, the command prompt may return `Restart Windows to complete this operation`.  Restarting may be necessary for the subsequent configuration.
 
-### Prepare Folders
+### Configure IIS
 
-- create folder path: `C:\Pozi\IIS\QgisServer`
-- create `web.config` file at this location with the following content
+```cmd
+"%systemroot%\system32\inetsrv\appcmd" add app /site.name:"Default Web Site" /path:/Pozi /physicalPath:"C:\Program Files (x86)\Pozi\server\iis\Pozi"
+"%systemroot%\system32\inetsrv\appcmd" add app /site.name:"Default Web Site" /path:/Pozi/QgisServer /physicalPath:"C:\Program Files (x86)\Pozi\server\iis\Pozi\QgisServer"
 
-```xml C:\Pozi\IIS\QgisServer\web.config
+```
+
+If the command prompt returns `"C:\Windows\system32\inetsrv\appcmd" is not recognised as an internal or external command`, then a restart may be required before re-attempting this configuration step.
+
+There should be `web.config` file located at the following path:
+
+```
+C:\Program Files (x86)\Pozi\server\iis\Pozi\QgisServer
+```
+
+NOTE: If you have installed QGIS Server to a location other than the default `C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe` then you will need to update that path in the `web.config` below:
+
+```xml !#5 C:\Program Files (x86)\Pozi\server\iis\Pozi\QgisServer\web.config
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <system.webServer>
@@ -77,17 +98,9 @@ If IIS has not previously been set up on the server, the command prompt may retu
 </configuration>
 ```
 
-NOTE: If you have installed QGIS Server to a location other than the default `C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe` then you will need to update that path in the `web.config` file. You'll also need to make the necessary substitutions in many of the commands below.
+Back in the command prompt, run the following:
 
-### Configure IIS
-
-```cmd
-"%systemroot%\system32\inetsrv\appcmd" add app /site.name:"Default Web Site" /path:/Pozi /physicalPath:"C:\Pozi\IIS"
-"%systemroot%\system32\inetsrv\appcmd" add app /site.name:"Default Web Site" /path:/Pozi/QgisServer /physicalPath:"C:\Pozi\IIS\QgisServer"
-
-```
-
-If the command prompt returns `"C:\Windows\system32\inetsrv\appcmd" is not recognised as an internal or external command`, then a restart may be required before re-attempting this configuration step.
+NOTE: If you have installed QGIS Server to a location other than the default `C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe` then you will need to update that path in the commands below:
 
 ```cmd
 %windir%\system32\inetsrv\appcmd.exe unlock config -section:system.webServer/handlers
@@ -97,6 +110,24 @@ If the command prompt returns `"C:\Windows\system32\inetsrv\appcmd" is not recog
 ```
 
 ### Configure Environment Variables
+
+!!!warning Migrating to GDAL 3.5
+
+When upgrading an existing installation from prior to June 2022, the following changes need to be made:
+
+Changed:
+
+* `GDAL_DRIVER_PATH` = `C:\OSGeo4W\apps\gdal\lib\gdalplugins` (previously `C:\OSGeo4W\bin\gdalplugins`)
+
+New (not previously configured or documented by us prior to GDAL 3.5 change):
+
+* `GDAL_DATA` = `C:\OSGeo4W\apps\gdal\share\gdal`
+* `PYTHONPATH` = `C:\OSGeo4W\apps\qgis-ltr\python`
+* `PROJ_LIB` = `C:\OSGeo4W\share\proj`
+
+The instructions and scripts below assume a new installation which will include GDAL 3.5.
+
+!!!
 
 +++ Command Prompt
 
@@ -123,7 +154,7 @@ Copy and paste the following into the command prompt:
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='TEMP',value='C:\Windows\Temp']" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='PYTHONHOME',value='C:\OSGeo4W\apps\Python39']" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_SERVER_IGNORE_BAD_LAYERS',value='1']" /commit:apphost
-"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_SERVER_LOG_FILE',value='C:\Pozi\IIS\QgisServer\qgis_server.log']" /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_SERVER_LOG_FILE',value='C:\Program Files (x86)\Pozi\server\iis\logs\qgis_server.log']" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_SERVER_LOG_LEVEL',value='1']" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_PLUGINPATH',value='C:\OSGeo4W\apps\qgis-ltr\plugins']" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='GDAL_DRIVER_PATH',value='C:\OSGeo4W\apps\gdal\lib\gdalplugins']" /commit:apphost
@@ -155,7 +186,7 @@ QT_PLUGIN_PATH | `C:\OSGeo4W\apps\qt5\plugins`
 TEMP | `C:\Windows\Temp`
 PYTHONHOME | `C:\OSGeo4W\apps\Python39`
 QGIS_SERVER_IGNORE_BAD_LAYERS | `1`
-QGIS_SERVER_LOG_FILE | `C:\Pozi\IIS\QgisServer\qgis_server.log`
+QGIS_SERVER_LOG_FILE | `C:\Program Files (x86)\Pozi\server\iis\logs\qgis_server.log`
 QGIS_SERVER_LOG_LEVEL | `1`
 QGIS_PLUGINPATH | `C:\OSGeo4W\apps\qgis-ltr\plugins`
 GDAL_DRIVER_PATH | `C:\OSGeo4W\apps\gdal\lib\gdalplugins`
@@ -195,6 +226,60 @@ Create PoziQgisServer application pool:
 Set permissions for `IIS AppPool\PoziQgisServer` :
 
 IIS > select server > Application Pools > PoziQgisServer > Advanced settings > Identity > Application Pool Identity > Custom account > enter details of the domain user that runs Pozi "service" account (include the domain prefix and backslash, or use the email address of the domain user)
+
+### Configuring Clean URLs for QGIS Server FastCGI
+
+The following instructions relate to hiding the QGIS project file path from the GetCapabilities URL.
+
+```cmd
+mkdir "C:\Program Files (x86)\Pozi\server\iis\Pozi\QgisServer\Next\Vicmap"
+xcopy "C:\Program Files (x86)\Pozi\server\iis\Pozi\QgisServer\web.config" "C:\Program Files (x86)\Pozi\server\iis\Pozi\QgisServer\Next\Vicmap"
+
+```
+
+Open the new `web.config` file located in the `C:\Program Files (x86)\Pozi\server\iis\Pozi\QgisServer\Next\Vicmap` folder and replace the `PoziQgisServerFastCgi` with `'PoziQgisServerNextVicmapFastCgi` -- please note that this handler name has to be unique which is why we are replacing it:
+
+```xml !#5 web.config
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <system.webServer>
+        <handlers>
+            <add name="PoziQgisServerNextVicmapFastCgi" path="*" verb="*" type="" modules="FastCgiModule" scriptProcessor="C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe"
+            resourceType="Unspecified" requireAccess="Script" allowPathInfo="false" preCondition=""  />
+        </handlers>
+        <caching enabled="true" enableKernelCache="true" />
+    </system.webServer>
+</configuration>
+```
+
+Below we are going to create another application pool that we are going to set the `MAP` environment variable for:
+
+```cmd
+"%systemroot%\system32\inetsrv\appcmd" add app /site.name:"Default Web Site" /path:/Pozi/QgisServer/Next/Vicmap /physicalPath:"C:\Program Files (x86)\Pozi\server\iis\Pozi\QgisServer\Next\Vicmap"
+"%systemroot%\system32\inetsrv\appcmd.exe" add apppool /name:"PoziQgisServerNextVicmap"
+"%systemroot%\system32\inetsrv\appcmd.exe" set app "Default Web Site/Pozi/QgisServer/Next/Vicmap" /applicationPool:"PoziQgisServerNextVicmap"
+
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.applicationHost/applicationPools /+"[name='PoziQgisServerNextVicmap'].recycling.periodicRestart.schedule.[value='02:00:00']" /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set apppool "PoziQgisServerNextVicmap" /recycling.periodicRestart.time:00:00:00
+"%systemroot%\system32\inetsrv\appcmd.exe" set apppool "PoziQgisServerNextVicmap" /processModel.idleTimeout:00:00:00
+"%systemroot%\system32\inetsrv\appcmd.exe" set apppool "PoziQgisServerNextVicmap" /startMode:AlwaysRunning
+"%systemroot%\system32\inetsrv\appcmd.exe" set app "Default Web Site/Pozi/QgisServer/Next/Vicmap" /preloadEnabled:true
+
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.applicationHost/applicationPools /+"[name='PoziQgisServerNextVicmap'].environmentVariables.[name='QGIS_PROJECT_FILE',value='C:\Program Files (x86)\Pozi\server\data\local\sample\queenscliffe\vicmap_iis_clean.qgs']" /commit:apphost
+
+```
+
+And now QGIS Server should respond to query for that `QGIS_PROJECT_FILE` without including it in URL:
+
+http://local.pozi.com:3001/iis/qgisserver/next/vicmap?service=WMS&request=GetCapabilities
+
+!!!secondary Additional Reference for Clean URLs
+
+Development notes that may contain useful additional information for Pozi developers:
+
+* [https://github.com/pozi/PoziServer/pull/40#issuecomment-972331899](https://github.com/pozi/PoziServer/pull/40#issuecomment-972331899)
+
+!!!
 
 <br/>
 
