@@ -13,3 +13,5 @@ For more info, see https://retype.com/guides/getting-started/
 Run `retype watch`
 
 View at http://localhost:5000/
+
+If an error message appears in the console, try running `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser` before running `retype watch` again.

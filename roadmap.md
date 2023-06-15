@@ -50,6 +50,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 - [x] 👍 add support for beta Vicmap vector tile basemap
 - [x] 👍 don't display tooltips for non-selectable layers
+- [x] 👍 enable override of catalogue layer selectability
 
 #### Fixed
 
