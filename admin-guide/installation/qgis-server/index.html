@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.740120140014">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.740214347760">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.0.3">
@@ -14,7 +14,7 @@
     <!-- Primary Meta Tags -->
     <title>QGIS Server | Pozi Web GIS | Online Map</title>
     <meta name="title" content="QGIS Server | Pozi Web GIS | Online Map">
-    <meta name="description" content="This document contains instructions for installing and configuring QGIS Server for use in conjunction with Azure AD (ie, without Pozi Server)." />
+    <meta name="description" content="if any previous version of QGIS Desktop has been installed using the stand-alone installer, uninstall it" />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://pozi.com/admin-guide/installation/qgis-server/" />
@@ -23,24 +23,21 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pozi.com/admin-guide/installation/qgis-server/">
     <meta property="og:title" content="QGIS Server | Pozi Web GIS | Online Map">
-    <meta property="og:description" content="This document contains instructions for installing and configuring QGIS Server for use in conjunction with Azure AD (ie, without Pozi Server).">
-    <meta property="og:image" content="https://pozi.com/admin-guide/installation/img/pozi-qgis-server-iis.png">
+    <meta property="og:description" content="if any previous version of QGIS Desktop has been installed using the stand-alone installer, uninstall it">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pozi.com/admin-guide/installation/qgis-server/">
     <meta property="twitter:title" content="QGIS Server | Pozi Web GIS | Online Map">
-    <meta property="twitter:description" content="This document contains instructions for installing and configuring QGIS Server for use in conjunction with Azure AD (ie, without Pozi Server).">
-    <meta property="twitter:image" content="https://pozi.com/admin-guide/installation/img/pozi-qgis-server-iis.png">
+    <meta property="twitter:description" content="if any previous version of QGIS Desktop has been installed using the stand-alone installer, uninstall it">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.0.3.740120140014" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=3.0.3.740214347760" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.740120140014" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.740214347760" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=3.0.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.740120140014" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=3.0.3.740120140014" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.740214347760" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -311,24 +308,6 @@
         <span>QGIS Server</span>
     </h1>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-            <h5>About this page</h5>
-<p>This document contains instructions for installing and configuring QGIS Server for use in conjunction with Azure AD (ie, without Pozi Server). This is the new preferred method of implementing QGIS Server.</p>
-        </div>
-    </div>
-</div>
 <doc-anchor-target id="installation">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#installation">#</doc-anchor-trigger>
@@ -366,290 +345,6 @@
 <li>Next &gt; accept defaults &gt; &quot;Install these packages...&quot; &gt; Next &gt; &quot;I agree...&quot; &gt; Next</li>
 <li>upon completion, close the installer, then move the <code v-pre>osgeo4w-setup.exe</code> file to <code v-pre>C:\OSGeo4W\</code> for convenient access for running again to perform future upgrades</li>
 </ul>
-<doc-anchor-target id="iis-integration">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#iis-integration">#</doc-anchor-trigger>
-        <span>IIS Integration</span>
-    </h2>
-</doc-anchor-target>
-<doc-anchor-target id="install-iis">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#install-iis">#</doc-anchor-trigger>
-        <span>Install IIS</span>
-    </h3>
-</doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-500 dark:bg-dark-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-500 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-            <h5>Copying and pasting using command prompt</h5>
-<p>When copying and pasting multiple lines into the command prompt, all lines will be executed except the last one. You must hit <code v-pre>Enter</code> for the last line to be executed.</p>
-        </div>
-    </div>
-</div>
-<p>In a new command prompt window, running as administrator:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-batch"><code v-pre class="language-batch">dism /online /enable-feature /featurename:IIS-WebServerRole
-dism /online /enable-feature /featurename:IIS-WebServer
-dism /online /enable-feature /featurename:IIS-ApplicationDevelopment
-dism /online /enable-feature /featurename:IIS-ApplicationInit
-dism /Online /Enable-Feature /FeatureName:IIS-CGI
-</code></pre>
-</doc-codeblock></div>
-<p>If IIS has not previously been set up on the server, the command prompt may return <code v-pre>Restart Windows to complete this operation</code>.  Restarting may be necessary for the subsequent configuration.</p>
-<doc-anchor-target id="prepare-folders">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#prepare-folders">#</doc-anchor-trigger>
-        <span>Prepare Folders</span>
-    </h3>
-</doc-anchor-target>
-<ul>
-<li>create folder path: <code v-pre>C:\Pozi\IIS\QgisServer</code></li>
-<li>create <code v-pre>web.config</code> file at this location with the following content</li>
-</ul>
-<div class="codeblock-wrapper"><doc-codeblock>
-<div class="codeblock-title">C:\Pozi\IIS\QgisServer\web.config</div>
-<pre class="language-markup"><code v-pre class="language-markup">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;configuration&gt;
-    &lt;system.webServer&gt;
-        &lt;handlers&gt;
-            &lt;add name=&quot;PoziQgisServerFastCgi&quot; path=&quot;*&quot; verb=&quot;*&quot; type=&quot;&quot; modules=&quot;FastCgiModule&quot; scriptProcessor=&quot;C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe&quot;
-            resourceType=&quot;Unspecified&quot; requireAccess=&quot;Script&quot; allowPathInfo=&quot;false&quot; preCondition=&quot;&quot;  /&gt;
-        &lt;/handlers&gt;
-        &lt;security&gt;
-            &lt;requestFiltering&gt;
-                &lt;requestLimits maxQueryString=&quot;32768&quot;/&gt;
-            &lt;/requestFiltering&gt;
-        &lt;/security&gt;
-        &lt;caching enabled=&quot;true&quot; enableKernelCache=&quot;true&quot; /&gt;
-    &lt;/system.webServer&gt;
-&lt;/configuration&gt;</code></pre>
-</doc-codeblock></div>
-<p>NOTE: If you have installed QGIS Server to a location other than the default <code v-pre>C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe</code> then you will need to update that path in the <code v-pre>web.config</code> file. You&#x27;ll also need to make the necessary substitutions in many of the commands below.</p>
-<doc-anchor-target id="configure-iis">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#configure-iis">#</doc-anchor-trigger>
-        <span>Configure IIS</span>
-    </h3>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-batch"><code v-pre class="language-batch">&quot;%systemroot%\system32\inetsrv\appcmd&quot; add app /site.name:&quot;Default Web Site&quot; /path:/Pozi /physicalPath:&quot;C:\Pozi\IIS&quot;
-&quot;%systemroot%\system32\inetsrv\appcmd&quot; add app /site.name:&quot;Default Web Site&quot; /path:/Pozi/QgisServer /physicalPath:&quot;C:\Pozi\IIS\QgisServer&quot;
-</code></pre>
-</doc-codeblock></div>
-<p>If the command prompt returns <code v-pre>&quot;C:\Windows\system32\inetsrv\appcmd&quot; is not recognised as an internal or external command</code>, then a restart may be required before re-attempting this configuration step.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-batch"><code v-pre class="language-batch">%windir%\system32\inetsrv\appcmd.exe unlock config -section:system.webServer/handlers
-&quot;%systemroot%\system32\inetsrv\appcmd&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe',idleTimeout='604800']&quot; /commit:apphost
-&quot;%systemroot%\system32\inetsrv\appcmd&quot; set config /section:isapiCgiRestriction /+&quot;[path='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe',description='PoziQgisServer',allowed='True']&quot;
-</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="configure-environment-variables">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#configure-environment-variables">#</doc-anchor-trigger>
-        <span>Configure Environment Variables</span>
-    </h3>
-</doc-anchor-target>
-<doc-tabs>
-<doc-tab id="command-prompt">
-<template #title>Command Prompt</template>
-<p>Copy and paste the following into the command prompt:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-batch"><code v-pre class="language-batch">:: Clear any potentially pre-existing env vars (handy when doing upgrades)
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /-&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables
-
-:: Set env vars
-
-:: The PATH variable required
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='PATH',value='C:\OSGeo4W\apps\qgis-ltr\bin;C:\OSGeo4W\apps\qt5\bin;C:\OSGeo4W\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32\WBem']&quot; /commit:apphost
-
-:: The following env vars may be optional
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='O4W_QT_PREFIX',value='C:\OSGeo4W\apps\Qt5']&quot; /commit:apphost
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='O4W_QT_BINARIES',value='C:\OSGeo4W\apps\Qt5\bin']&quot; /commit:apphost
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='O4W_QT_PLUGINS',value='C:\OSGeo4W\apps\Qt5\plugins']&quot; /commit:apphost
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='O4W_QT_LIBRARIES',value='C:\OSGeo4W\apps\Qt5\lib']&quot; /commit:apphost
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='O4W_QT_TRANSLATIONS',value='C:\OSGeo4W\apps\Qt5\translations']&quot; /commit:apphost
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='O4W_QT_HEADERS',value='C:\OSGeo4W\apps\Qt5\include']&quot; /commit:apphost
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_PREFIX_PATH',value='C:\OSGeo4W\apps\qgis-ltr']&quot; /commit:apphost
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QT_PLUGIN_PATH',value='C:\OSGeo4W\apps\qt5\plugins']&quot; /commit:apphost
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='TEMP',value='C:\Windows\Temp']&quot; /commit:apphost
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='PYTHONHOME',value='C:\OSGeo4W\apps\Python39']&quot; /commit:apphost
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_SERVER_IGNORE_BAD_LAYERS',value='1']&quot; /commit:apphost
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_SERVER_LOG_FILE',value='C:\Pozi\IIS\QgisServer\qgis_server.log']&quot; /commit:apphost
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_SERVER_LOG_LEVEL',value='1']&quot; /commit:apphost
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_PLUGINPATH',value='C:\OSGeo4W\apps\qgis-ltr\plugins']&quot; /commit:apphost
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='GDAL_DRIVER_PATH',value='C:\OSGeo4W\apps\gdal\lib\gdalplugins']&quot; /commit:apphost
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='GDAL_DATA',value='C:\OSGeo4W\apps\gdal\share\gdal']&quot; /commit:apphost
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='PYTHONPATH',value='C:\OSGeo4W\apps\qgis-ltr\python']&quot; /commit:apphost
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='PROJ_LIB',value='C:\OSGeo4W\share\proj']&quot; /commit:apphost
-</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-<doc-tab id="manual-configuration">
-<template #title>Manual Configuration</template>
-<p>If the command prompt option doesn&#x27;t work, you can configure the environment variables manually.</p>
-<p><figure class="content-center">
-    <img src="../img/pozi-qgis-server-iis.png" alt="FastCGI Settings" />
-    <figcaption class="caption">FastCGI Settings</figcaption>
-</figure>
-</p>
-<p>Windows &gt; IIS &gt; select server &gt; Fast CGISettings &gt; select <code v-pre>qgis_mapserv.fcgi.exe</code> application &gt; Edit &gt; Environment variables:</p>
-<div class="table-wrapper scrollbar overflow-hidden">
-<table class="comfortable">
-<thead>
-<tr>
-<th>Name</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>PATH</td>
-<td><code v-pre>C:\OSGeo4W\apps\qgis-ltr\bin;C:\OSGeo4W\apps\qt5\bin;C:\OSGeo4W\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32\WBem</code></td>
-</tr>
-<tr>
-<td>O4W_QT_PREFIX</td>
-<td><code v-pre>C:\OSGeo4W\apps\Qt5</code></td>
-</tr>
-<tr>
-<td>O4W_QT_BINARIES</td>
-<td><code v-pre>C:\OSGeo4W\apps\Qt5\bin</code></td>
-</tr>
-<tr>
-<td>O4W_QT_PLUGINS</td>
-<td><code v-pre>C:\OSGeo4W\apps\Qt5\plugins</code></td>
-</tr>
-<tr>
-<td>O4W_QT_LIBRARIES</td>
-<td><code v-pre>C:\OSGeo4W\apps\Qt5\lib</code></td>
-</tr>
-<tr>
-<td>O4W_QT_TRANSLATIONS</td>
-<td><code v-pre>C:\OSGeo4W\apps\Qt5\translations</code></td>
-</tr>
-<tr>
-<td>O4W_QT_HEADERS</td>
-<td><code v-pre>C:\OSGeo4W\apps\Qt5\include</code></td>
-</tr>
-<tr>
-<td>QGIS_PREFIX_PATH</td>
-<td><code v-pre>C:\OSGeo4W\apps\qgis-ltr</code></td>
-</tr>
-<tr>
-<td>QT_PLUGIN_PATH</td>
-<td><code v-pre>C:\OSGeo4W\apps\qt5\plugins</code></td>
-</tr>
-<tr>
-<td>TEMP</td>
-<td><code v-pre>C:\Windows\Temp</code></td>
-</tr>
-<tr>
-<td>PYTHONHOME</td>
-<td><code v-pre>C:\OSGeo4W\apps\Python39</code></td>
-</tr>
-<tr>
-<td>QGIS_SERVER_IGNORE_BAD_LAYERS</td>
-<td><code v-pre>1</code></td>
-</tr>
-<tr>
-<td>QGIS_SERVER_LOG_FILE</td>
-<td><code v-pre>C:\Pozi\IIS\QgisServer\qgis_server.log</code></td>
-</tr>
-<tr>
-<td>QGIS_SERVER_LOG_LEVEL</td>
-<td><code v-pre>1</code></td>
-</tr>
-<tr>
-<td>QGIS_PLUGINPATH</td>
-<td><code v-pre>C:\OSGeo4W\apps\qgis-ltr\plugins</code></td>
-</tr>
-<tr>
-<td>GDAL_DRIVER_PATH</td>
-<td><code v-pre>C:\OSGeo4W\apps\gdal\lib\gdalplugins</code></td>
-</tr>
-<tr>
-<td>GDAL_DATA</td>
-<td><code v-pre>C:\OSGeo4W\apps\gdal\share\gdal</code></td>
-</tr>
-<tr>
-<td>PYTHONPATH</td>
-<td><code v-pre>C:\OSGeo4W\apps\qgis-ltr\python</code></td>
-</tr>
-<tr>
-<td>PROJ_LIB</td>
-<td><code v-pre>C:\OSGeo4W\share\proj</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>(End of <code v-pre>Manual Configuration</code> instructions)</p>
-</doc-tab>
-</doc-tabs>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-            <h5>Log Levels</h5>
-<p>The above script/instructions sets the <code v-pre>QGIS_SERVER_LOG_LEVEL</code> value to <code v-pre>1</code> to capture warnings and critical events in the log. If you want to capture <em>all</em> activity for troubleshooting purposes, set the value to <code v-pre>0</code> in the GUI.</p>
-<p>More information about QGIS log levels is at <a href="https://docs.qgis.org/latest/en/docs/server_manual/config.html#qgis-server-log-level">https://docs.qgis.org/latest/en/docs/server_manual/config.html#qgis-server-log-level</a></p>
-        </div>
-    </div>
-</div>
-<doc-anchor-target id="application-pool">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#application-pool">#</doc-anchor-trigger>
-        <span>Application Pool</span>
-    </h3>
-</doc-anchor-target>
-<p>Create PoziQgisServer application pool:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-batch"><code v-pre class="language-batch">&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; add apppool /name:&quot;PoziQgisServer&quot;
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set app &quot;Default Web Site/Pozi/QgisServer&quot; /applicationPool:&quot;PoziQgisServer&quot;
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.applicationHost/applicationPools /+&quot;[name='PoziQgisServer'].recycling.periodicRestart.schedule.[value='02:00:00']&quot; /commit:apphost
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set apppool &quot;PoziQgisServer&quot; /recycling.periodicRestart.time:00:00:00
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set apppool &quot;PoziQgisServer&quot; /processModel.idleTimeout:00:00:00
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set apppool &quot;PoziQgisServer&quot; /startMode:AlwaysRunning
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set app &quot;Default Web Site/Pozi/QgisServer&quot; /preloadEnabled:true
-</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="permissions">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#permissions">#</doc-anchor-trigger>
-        <span>Permissions</span>
-    </h3>
-</doc-anchor-target>
-<p>Set permissions for <code v-pre>IIS AppPool\PoziQgisServer</code> :</p>
-<p>IIS &gt; select server &gt; Application Pools &gt; PoziQgisServer &gt; Advanced settings &gt; Identity &gt; Application Pool Identity &gt; Custom account &gt; enter details of the domain user that runs Pozi &quot;service&quot; account (include the domain prefix and backslash, or use the email address of the domain user)</p>
-<doc-anchor-target id="testing">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#testing">#</doc-anchor-trigger>
-        <span>Testing</span>
-    </h2>
-</doc-anchor-target>
-<p>Construct a WMS GetProjectSettings request for any existing QGIS project file as follows:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">http://localhost/pozi/qgisserver?service=WMS&amp;map=C:/Projects/SomeProject.qgs&amp;request=GetProjectSettings</code></pre>
-</doc-codeblock></div>
-<p>Substitute <code v-pre>C:/Projects/SomeProject.qgs</code> with the file path of an actual QGIS project file.</p>
-<p>Enter the constructed URL into the address bar of your browser, hit Enter, and you should see an XML file that describes the data endpoints for the project&#x27;s layers.</p>
 <doc-anchor-target id="updating">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#updating">#</doc-anchor-trigger>
@@ -661,77 +356,49 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
 <p>During the update process, if the installer displays a message about files being locked, stop the IIS application pool.</p>
 <p>IIS &gt; <em>Server Name</em> &gt; Application Pools &gt; PoziQgisServer - right-click, and select &#x27;Stop&#x27;</p>
 <p>Upon completion of the update process, right-click, and select &#x27;Start&#x27;.</p>
-<br/>
-<hr />
-<doc-anchor-target id="troubleshooting">
+<doc-anchor-target id="optional-setup">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#troubleshooting">#</doc-anchor-trigger>
-        <span>Troubleshooting</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#optional-setup">#</doc-anchor-trigger>
+        <span>Optional Setup</span>
     </h2>
 </doc-anchor-target>
 <doc-panels>
-   <doc-panel id="ecw-layers-are-not-rendered" collapsed>
-       <template #title>ECW layers are not rendered</template>
-<p>Depending on how QGIS has been installed, some dependency paths may vary.</p>
-<doc-anchor-target id="gdal_driver_path">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#gdal_driver_path">#</doc-anchor-trigger>
-        <span><code v-pre>GDAL_DRIVER_PATH</code></span>
-    </h4>
-</doc-anchor-target>
+   <doc-panel id="useful-supplementary-software" collapsed>
+       <template #title>Useful supplementary software</template>
 <ul>
-<li>GDAL 3.4 and earlier: <code v-pre>C:\OSGeo4W\bin\gdalplugins</code></li>
-<li>GDAL 3.5: <code v-pre>C:\OSGeo4W\apps\gdal\lib\gdalplugins</code></li>
+<li><a href="https://notepad-plus-plus.org/downloads/">Notepad++</a></li>
+<li><a href="https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh/">JSON Viewer browser extension</a></li>
+<li><a href="https://www.tadviewer.com/">TAD Viewer</a> for previewing CSV files</li>
+<li><a href="https://sqlitebrowser.org/dl/">DB Browser for SQLite</a></li>
 </ul>
-<p>Update the <code v-pre>GDAL_DRIVER_PATH</code> environment variable accordingly.</p>
    </doc-panel>
-   <doc-panel id="qgis-desktop-doesn-t-open" collapsed>
-       <template #title>QGIS Desktop doesn&#x27;t open</template>
-<p>If you experience an &quot;Error loading QGIS&quot; message, it may specify a file named <code v-pre>qgis-ltr-bin.env</code> that might not exist in your installation:</p>
-<blockquote>
-<p>Error loading QGIS
-Oops, looks like an error loading QGIS</p>
-<p>Details:
-Could not load qgis_app.dll
-Windows Error: The specified module could not be found.</p>
-<p>Help:
-Check C:\OSGeo4W\bin\qgis-ltr-bin.env for correct environment paths</p>
-</blockquote>
-<p>Use a text editor to recreate the missing file with the following content:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<div class="codeblock-title">C:\OSGeo4W\bin\qgis-ltr-bin.env</div>
-<pre class="language-batch"><code v-pre class="language-batch">PATH=C:\OSGeo4W\apps\qgis-ltr\bin;C:\OSGeo4W\apps\qt5\bin;C:\OSGeo4W\apps\Python39\Scripts;C:\OSGeo4W\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32\WBem
-GDAL_DATA=C:\OSGeo4W\apps\gdal\share\gdal
-GDAL_DRIVER_PATH=C:\OSGeo4W\apps\gdal\lib\gdalplugins
-GDAL_FILENAME_IS_UTF8=YES
-JPEGMEM=1000000
-OSGEO4W_ROOT=C:\OSGeo4W
-PROJ_LIB=C:\OSGeo4W\share\proj
-PYTHONHOME=C:\OSGeo4W\apps\Python39
-PYTHONUTF8=1
-QGIS_PREFIX_PATH=C:/OSGeo4W/apps/qgis-ltr
-QT_PLUGIN_PATH=C:\OSGeo4W\apps\qgis-ltr\qtplugins;C:\OSGeo4W\apps\qt5\plugins
-VSI_CACHE=TRUE
-VSI_CACHE_SIZE=1000000
-O4W_QT_PREFIX=C:/OSGeo4W/apps/Qt5
-O4W_QT_BINARIES=C:/OSGeo4W/apps/Qt5/bin
-O4W_QT_PLUGINS=C:/OSGeo4W/apps/Qt5/plugins
-O4W_QT_LIBRARIES=C:/OSGeo4W/apps/Qt5/lib
-O4W_QT_TRANSLATIONS=C:/OSGeo4W/apps/Qt5/translations
-O4W_QT_HEADERS=C:/OSGeo4W/apps/Qt5/include
-QGIS_WIN_APP_NAME=OSGeo4W\QGIS Desktop 3.22.8</code></pre>
-</doc-codeblock></div>
-<p>Check that the <code v-pre>GDAL_DATA</code> and <code v-pre>GDAL_DRIVER_PATH</code> paths exist for your installation. If not, update the file accordingly.</p>
-<p>If you are denied permission to create or edit the file in the destination location, create the file elsewhere and move it to <code v-pre>C:\OSGeo4W\bin\</code> using Windows Explorer.</p>
-<p><a href="https://github.com/qgis/QGIS/issues/49148#issuecomment-1174459434">Further details about this issue</a></p>
-   </doc-panel>
-   <doc-panel id="iis-seems-to-go-to-sleep" collapsed>
-       <template #title>IIS seems to &quot;go to sleep&quot;</template>
-<p>IIS &gt; select server &gt; Application Pools &gt; PoziQgisServer &gt; Advanced Settings:</p>
+   <doc-panel id="useful-desktop-preparation" collapsed>
+       <template #title>Useful desktop preparation</template>
+<p>Desktop shortcuts:</p>
 <ul>
-<li>General &gt; Start Mode &gt; <code v-pre>AlwaysRunning</code></li>
-<li>Process Model &gt; Idle Time-out (minutes) &gt; <code v-pre>0</code></li>
-<li>Recycling &gt; Regular Time Interval (minutes) &gt; <code v-pre>0</code></li>
+<li>Pozi webpage shortcuts
+<ul>
+<li>live site: <code v-pre>https://[sitename].pozi.com/</code></li>
+<li>staging/testing site: <code v-pre>https://staging.pozi.com/master/#/site[sitename]/</code></li>
+<li>config page: <code v-pre>https://staging.pozi.com/master/#/site[sitename]/config[true]/preview[true]/</code></li>
+<li>Admin Guide: <a href="https://pozi.com/admin-guide/">https://pozi.com/admin-guide/</a></li>
+</ul>
+</li>
+<li>GIS data folder</li>
+<li>Pozi folder: <code v-pre>C:\Pozi</code></li>
+<li>GDAL Shell: <code v-pre>C:\OSGeo4W\OSGeo4W.bat</code></li>
+<li>QGIS Server log: <code v-pre>C:\Pozi\IIS\QgisServer\qgis_server.log</code></li>
+</ul>
+<p>Pin to taskbar:</p>
+<ul>
+<li>Windows &gt; IIS</li>
+<li>QGIS Desktop</li>
+</ul>
+<p>File associations:</p>
+<ul>
+<li><code v-pre>.config</code> &gt; Notepad++</li>
+<li><code v-pre>.sld</code> &gt; Notepad++</li>
+<li><code v-pre>.vrt</code> &gt; Notepad++</li>
 </ul>
    </doc-panel>
 </doc-panels>
@@ -750,20 +417,20 @@ QGIS_WIN_APP_NAME=OSGeo4W\QGIS Desktop 3.22.8</code></pre>
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../admin-guide/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../admin-guide/installation/prerequisites/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Administrator Guide</span>
+                                                <span class="block mt-1">Prerequisites</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../admin-guide/installation/qgis-server-legacy/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../admin-guide/installation/iis/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">QGIS Server (Legacy)</span>
+                                                <span class="block mt-1">IIS</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -837,6 +504,6 @@ QGIS_WIN_APP_NAME=OSGeo4W\QGIS Desktop 3.22.8</code></pre>
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "QGIS Server", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "QGIS Server", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
