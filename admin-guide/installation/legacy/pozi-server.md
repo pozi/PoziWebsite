@@ -3,9 +3,7 @@ description: Step-by-step instructions for setting up Pozi Server on your networ
 order: 85
 ---
 
-# Pozi Server (Legacy)
-
-*Geospatial API for your local data*
+# Pozi Server
 
 ## About
 
@@ -33,30 +31,6 @@ IT managers maintain control over internal user access to Pozi Connect Server by
 
 ==-
 
-## Prerequisites
-
-Prior to installation, ask your network administrator to set up two domain user accounts.
-
-**Support Account**
-
-- [ ] example name: `PoziSupport`
-- [ ] read-only permissions on GIS file locations
-- [ ] trusted read-only user of GIS database and any relevant corporate databases
-- [ ] **local admin on server**
-- [ ] **access for remote support by Pozi staff**
-- [ ] internet access
-
-**Service Account**
-
-- [ ] example name: `PoziService`
-- [ ] read-only permissions on GIS file locations
-- [ ] trusted read-only user of GIS database and any relevant corporate databases
-- [ ] **permissions for running scheduled tasks**
-- [ ] **credentials must never expire**
-- [ ] internet access (needed to communicate with connect.pozi.com for software updates)
-
-Provide these credentials to your Pozi support contact, along with any instructions for remote access.
-
 ## Download and Install
 
 1. download the [Pozi Connect Server installer](https://connect.pozi.com/installer/PoziConnectInstaller.exe)
@@ -69,45 +43,6 @@ The Pozi Server application is often referred to as "Pozi Connect Server". This 
 ***Pozi Server*** (what this page is about) is the API that the Pozi web app uses for accessing the local data. It runs as a Windows service (PoziConnectServer), and auto-updates with the help of the Updater (PoziConnectUpdater) service.
 
 ***[Pozi Connect](/pozi-connect/)*** is the desktop application used by Victorian municipalities for generating property data change reports (M1s). It is distributed as a Windows installer, and councils are notified by email when there are new versions available to download and install.
-
-==-
-
-### Optional Setup
-
-==- Useful supplementary software
-
-* [Notepad++](https://notepad-plus-plus.org/downloads/)
-* [JSON Viewer browser extension](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh/)
-* [TAD Viewer](https://www.tadviewer.com/) for previewing CSV files
-* [DB Browser for SQLite](https://sqlitebrowser.org/dl/)
-
-==- Useful desktop preparation
-
-Desktop shortcuts:
-
-* Pozi webpage shortcuts
-  * live site: `https://[sitename].pozi.com/`
-  * staging/testing site: `https://staging.pozi.com/master/#/site[sitename]/`
-  * config page: `https://staging.pozi.com/master/#/site[sitename]/config[true]/preview[true]/`
-  * Pozi Server: `https://[servername].pozi.com/`
-  * Admin Guide: https://pozi.com/admin-guide/
-* GIS data folder
-* Pozi folder: `C:\Program Files (x86)\Pozi`
-* GDAL Shell: `C:\OSGeo4W\OSGeo4W.bat`
-* Pozi Server log: `C:\Program Files (x86)\Pozi\server\server.log`
-* QGIS Server log: `C:\Program Files (x86)\Pozi\server\iis\logs\qgis_server.log`
-
-Pin to taskbar:
-
-* Windows > Services
-* Windows > IIS
-* QGIS Desktop
-
-File associations:
-
-* `.config` > Notepad++
-* `.sld` > Notepad++
-* `.vrt` > Notepad++
 
 ==-
 
