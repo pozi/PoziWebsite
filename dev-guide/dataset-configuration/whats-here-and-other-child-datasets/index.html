@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.740214347760">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.740561796814">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.0.3">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.0.3.740214347760" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=3.0.3.740561796814" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.740214347760" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.740561796814" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=3.0.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.740214347760" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=3.0.3.740214347760" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.740561796814" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=3.0.3.740561796814" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -455,15 +455,50 @@
         <span>Dynamic Datasets</span>
     </h3>
 </doc-anchor-target>
-<p>If the source of a <em>What&#x27;s Here</em> dataset is an API such as WFS, CKAN or Street View, the request URL needs to include parameter(s) which describes the What&#x27;s Here geometry:</p>
+<p>If the source of a <em>What&#x27;s Here</em> dataset is an API such as WFS, CKAN or Street View, the request URL needs to include parameter(s) which describes the target geometry:</p>
 <ul>
-<li><code v-pre>$cqlgeometry</code></li>
+<li><code v-pre>$cqlgeometry</code> or <code v-pre>$cqlgeometrysimplified</code></li>
 <li><code v-pre>$wkt</code></li>
 <li><code v-pre>$esriGeometry</code> &amp; <code v-pre>$esriGeometryType</code></li>
 <li><code v-pre>$longitude</code> &amp; <code v-pre>$latitude</code></li>
 </ul>
 <p>A complete list of geometry parameters is available <a href="https://github.com/pozi/PoziApp/blob/feature-config-manager-improvements/app/src/map/GetGeometryProperties.js#L66-L80">here</a>.</p>
-<p><em>To do: add example</em></p>
+<doc-panels>
+   <doc-panel id="example-street-view" collapsed>
+       <template #title>Example: Street View</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;title&quot;: &quot;Street View&quot;,
+  &quot;type&quot;: &quot;Image&quot;,
+  &quot;parent&quot;: &quot;Whats Here&quot;,
+  &quot;showInLayerControl&quot;: false,
+  &quot;config&quot;: {
+    &quot;spatial&quot;: {
+      &quot;url&quot;: &quot;https://proxy.pozi.com/https://maps.googleapis.com/maps/api/streetview?size=340x105&amp;location=[$latitude],[$longitude]&amp;authkey=streetview&quot;,
+      &quot;href&quot;: &quot;http://maps.google.com.au/maps?layer=c&amp;cbll=[$latitude],[$longitude]&quot;
+    }
+  }
+}</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="example-use-selected-property-to-request-intersecting-planning-zones" collapsed>
+       <template #title>Example: Use selected property to request intersecting planning zones</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;title&quot;: &quot;Property Planning Zones&quot;,
+  &quot;type&quot;: &quot;GeoJSON&quot;,
+  &quot;parent&quot;: &quot;Property&quot;,
+  &quot;showInLayerControl&quot;: false,
+  &quot;config&quot;: {
+    &quot;spatial&quot;: {
+      &quot;url&quot;: &quot;https://opendata.maps.vic.gov.au/geoserver/ows?SERVICE=WFS&amp;VERSION=1.1.0&amp;REQUEST=GetFeature&amp;srsName=EPSG:4326&amp;typeNames=plan_zone&amp;maxFeatures=1000&amp;outputFormat=application%2Fjson&amp;cql_filter=intersects(geom,[$cqlgeometrysimplified])&quot;,
+      &quot;label&quot;: &quot;zone_description&quot;,
+      &quot;id&quot;: &quot;pfi&quot;
+    }
+  }
+}</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
 
                                 
                                 <!-- Required only on API pages -->
