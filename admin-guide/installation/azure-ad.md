@@ -64,7 +64,7 @@ Ensure it doesn't return a response to a non-logged-in or anonymous user.
 
 +++
 
-### Other settings:
+### Other settings
 
 <!-- ![](/dev-guide/img/azure-settings.png){style="width:600px"} -->
 
@@ -100,11 +100,11 @@ All the URIs above will be needed for Pozi to be fully functional.
 
 Please make sure that the URIs all have a trailing slash ('/') and note that the localhost URI is `http` (and not `https`).
 
-### Implicit grant and hybrid flows:
+### Implicit grant and hybrid flows
 
 * `Access tokens` and `ID tokens` should remain unchecked
 
-### Advanced settings:
+### Advanced settings
 
  * Set `Allow public client flows` to `No`
 

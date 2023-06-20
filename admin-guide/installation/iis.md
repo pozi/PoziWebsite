@@ -175,7 +175,7 @@ Construct a WMS GetProjectSettings request for any existing QGIS project file as
 http://localhost/pozi/qgisserver?service=WMS&map=C:/Projects/SomeProject.qgs&request=GetProjectSettings
 ```
 
-Substitute `C:/Projects/SomeProject.qgs` with the file path of an actual QGIS project file.
+Substitute `C:/Projects/SomeProject.qgs` with the file path of an actual QGIS project file. Any backslashes in the path must be replaced with forward slashes.
 
 Enter the constructed URL into the address bar of your browser, hit Enter, and you should see an XML file that describes the data endpoints for the project's layers.
 

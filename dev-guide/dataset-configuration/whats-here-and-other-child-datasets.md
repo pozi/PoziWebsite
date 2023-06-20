@@ -129,12 +129,47 @@ If the source of a *What's Here* dataset is a static GeoJSON, the configuration 
 
 ### Dynamic Datasets
 
-If the source of a *What's Here* dataset is an API such as WFS, CKAN or Street View, the request URL needs to include parameter(s) which describes the What's Here geometry:
-* `$cqlgeometry`
+If the source of a *What's Here* dataset is an API such as WFS, CKAN or Street View, the request URL needs to include parameter(s) which describes the target geometry:
+
+* `$cqlgeometry` or `$cqlgeometrysimplified`
 * `$wkt`
 * `$esriGeometry` & `$esriGeometryType`
 * `$longitude` & `$latitude`
 
 A complete list of geometry parameters is available [here](https://github.com/pozi/PoziApp/blob/feature-config-manager-improvements/app/src/map/GetGeometryProperties.js#L66-L80).
 
-*To do: add example*
+
+==- Example: Street View
+
+```json
+{
+  "title": "Street View",
+  "type": "Image",
+  "parent": "Whats Here",
+  "showInLayerControl": false,
+  "config": {
+    "spatial": {
+      "url": "https://proxy.pozi.com/https://maps.googleapis.com/maps/api/streetview?size=340x105&location=[$latitude],[$longitude]&authkey=streetview",
+      "href": "http://maps.google.com.au/maps?layer=c&cbll=[$latitude],[$longitude]"
+    }
+  }
+}
+```
+
+==- Example: Use selected property to request intersecting planning zones
+
+```json
+{
+  "title": "Property Planning Zones",
+  "type": "GeoJSON",
+  "parent": "Property",
+  "showInLayerControl": false,
+  "config": {
+    "spatial": {
+      "url": "https://opendata.maps.vic.gov.au/geoserver/ows?SERVICE=WFS&VERSION=1.1.0&REQUEST=GetFeature&srsName=EPSG:4326&typeNames=plan_zone&maxFeatures=1000&outputFormat=application%2Fjson&cql_filter=intersects(geom,[$cqlgeometrysimplified])",
+      "label": "zone_description",
+      "id": "pfi"
+    }
+  }
+}
+```

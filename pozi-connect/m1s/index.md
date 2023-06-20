@@ -38,8 +38,8 @@ Manual M1s (or using software like Common Ground) are no longer required for rou
 
 Download and unzip the following MapInfo or SHP datasets to the predefined location on your network:
 
-* Vicmap Address
-* Vicmap Property Simplified v1
+- [Vicmap Address](https://datashare.maps.vic.gov.au/search?q=uuid%3Db9e9146d-8378-5c37-b6cd-63e3a8d05d02)
+- [Vicmap Property Simplified 1](https://datashare.maps.vic.gov.au/search?q=uuid%3Da752b99e-baee-502e-a58b-7d15fa6c57cd)
 
 (If you do not know the predefined locations on your network for these datasets, launch Pozi Connect and pick the M1 task that relates to importing Vicmap. The network location is shown there.)
 

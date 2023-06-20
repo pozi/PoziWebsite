@@ -18,13 +18,11 @@ When an attribute value is a URL ending in `.jpg` or `.png`, Pozi displays the i
 
 The Pozi info panel can display feature details with rich text when the attributes are formatted with HTML.
 
-Example feature:
+Example attribute value:
 
-|Formatted Content | Title | Attribute A | Attribute B | Attribute C | ID
-|--|--|--|--|--|--|
-|`<h1>Big heading</h1><h2>Medium heading</h2><h3>Small heading</h3><p>Paragraph</p><p>Another paragraph</p><ul><li>Point 1</li><li>Point 2</li></ul><p><a href=\"https://www.example.com/ \" target=\"_blank\">A link</a></p>`|`Feature Name`|`Value`|`Value`|`Value`|`101`|
+`<h1>Big heading</h1><h2>Medium heading</h2><h3>Small heading</h3><p>Paragraph</p><p>Another paragraph</p><ul><li>Point 1</li><li>Point 2</li></ul><p><a href=\"https://www.example.com/ \" target=\"_blank\">A link</a></p>`
 
-When this feature is selected in Pozi, it will display like this:
+When this feature is selected in Pozi, this attribute displays like this:
 
 ![Screenshot of Info Panel](./img/info-panel.png){style="width:300px"}
 
