@@ -24,6 +24,17 @@ order: 90
 * Next > accept defaults > "Install these packages..." > Next > "I agree..." > Next
 * upon completion, close the installer, then move the `osgeo4w-setup.exe` file to `C:\OSGeo4W\` for convenient access for running again to perform future upgrades
 
+## Graphics
+
+1. contact Pozi Support to request download link for `qgis-fontawesome-pro-6.4.0.zip`
+2. download zip file from link
+3. unzip file to `C:\Pozi\QGIS Assets\Pozi SVGs\`
+4. confirm that the correct folder structure exists - the majority of the SVG files should be in `C:\Pozi\QGIS Assets\Pozi SVGs\fontawesome-pro-6\regular\`
+5. QGIS > Settings > Options > System > SVG Paths
+  - remove `C:\Users\username\AppData\Roaming\QGIS\QGIS3\profiles\default\svg\`
+  - remove `C:\OSGeo4W\apps\qgis-ltr\svg\`
+  - add `C:\Pozi\QGIS Assets\Pozi SVGs`
+
 ## Updating
 
 Right-click on `C:\OSGeo4W\osgeo4w-setup.exe` file, and "Run as administrator". Accept all defaults.

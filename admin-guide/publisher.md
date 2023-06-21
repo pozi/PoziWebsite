@@ -45,11 +45,11 @@ The catalogue is the unit around which the Pozi Publisher workflow is based, eit
 
 | Section | Key | Description | Example |
 | --- | --- | --- | --- |
-| **`[Input]`** | `source` | QGIS project folder | `source=C:\Pozi\Projects`
-| | | QGIS project file | `source=C:\Pozi\Projects\Assets.qgs`
-| | | QGIS GetProjectSettings URL | `source=http://localhost/pozi/qgisserver?MAP=C:/Pozi/Projects/Assets.qgs&SERVICE=WMS&REQUEST=GetProjectSettings` |
-| | | WFS URL | `source=https://data.gov.au/geoserver/wfs?SERVICE=WFS&REQUEST=GetCapabilities` |
-| | | WMS URL | `source=https://iws.maps.vic.gov.au/erdas-iws/ogc/wms/RDP?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities` |
+| **`[Input]`** | `folder` | QGIS project folder | `folder=C:\Pozi\Projects`
+| | `file` | QGIS project file | `file=C:\Pozi\Projects\Assets.qgs`
+| | ??? | QGIS GetProjectSettings URL | ???`=http://localhost/pozi/qgisserver?MAP=C:/Pozi/Projects/Assets.qgs&SERVICE=WMS&REQUEST=GetProjectSettings` |
+| | `wfs` | WFS URL | `wfs=https://data.gov.au/geoserver/wfs?SERVICE=WFS&REQUEST=GetCapabilities` |
+| | `wms` | WMS URL | `wms=https://iws.maps.vic.gov.au/erdas-iws/ogc/wms/RDP?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities` |
 | **`[Output]`** | `folder` | Destination folder for catalogue XML files | `folder=C:\Pozi\Cache` |
 | | `name` | Name of destination XML file | `name=deeca-iws-wms-southerngrampians` |
 | | `dataFolder` | Destination folder for GeoJSON and SLD files | `dataFolder=C:\Pozi\Cache` |
@@ -77,7 +77,7 @@ Generate production-ready OGC-compliant map catalogues from QGIS projects.
 
 ```ini
 [Input]
-source=\\cscgisweb02\d$\Pozi
+folder=\\cscgisweb02\d$\Pozi
 
 [Output]
 folder=C:\Pozi\Cache
