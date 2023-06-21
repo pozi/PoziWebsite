@@ -47,14 +47,14 @@ The catalogue is the unit around which the Pozi Publisher workflow is based, eit
 | --- | --- | --- | --- |
 | **`[Input]`** | `folder` | QGIS project folder | `folder=C:\Pozi\Projects`
 | | `file` | QGIS project file | `file=C:\Pozi\Projects\Assets.qgs`
-| | ??? | QGIS GetProjectSettings URL | ???`=http://localhost/pozi/qgisserver?MAP=C:/Pozi/Projects/Assets.qgs&SERVICE=WMS&REQUEST=GetProjectSettings` |
+| | `wms` | QGIS GetProjectSettings URL | `wms=http://localhost/pozi/qgisserver?MAP=C:/Pozi/Projects/Assets.qgs&SERVICE=WMS&REQUEST=GetProjectSettings` |
 | | `wfs` | WFS URL | `wfs=https://data.gov.au/geoserver/wfs?SERVICE=WFS&REQUEST=GetCapabilities` |
 | | `wms` | WMS URL | `wms=https://iws.maps.vic.gov.au/erdas-iws/ogc/wms/RDP?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities` |
-| **`[Output]`** | `folder` | Destination folder for catalogue XML files | `folder=C:\Pozi\Cache` |
+| **`[Output]`** | `folder` | Destination folder for catalogue XML files, and also GeoJSON and SLD files for QGIS projects that have the setting `export=true` added to the `Keyword list` in either the project's or individual layer's settings.  | `folder=C:\Pozi\Cache` |
 | | `name` | Name of destination XML file | `name=deeca-iws-wms-southerngrampians` |
-| | `dataFolder` | Destination folder for GeoJSON and SLD files | `dataFolder=C:\Pozi\Cache` |
+| | `dataFolder` | Destination folder for GeoJSON and SLD files when data is being extracted from a WFS service.  If a QGIS project is being used data will be extracted into a subfolder of the output `folder` with the same name as the XML file.  To enable data and style file extraction from a QGIS file, add `export=true` to the `Keyword list` either in the project's settings for all WFS layers, or individually to the `Keyword list` of specific layers. | `dataFolder=C:\Pozi\Cache` |
 | | `backupFolder` | Destination folder for creating time-stamped backup QGIS files, to enable version control. | `dataFolder=C:\Pozi\Backup` |
-| | `searchFolder` | Destination for SearchDB file | `searchFolder=C:\Pozi\Search` |
+| | `searchFolder` | Destination for SearchDB file.  In order to set up a field for searching, go to the relevant layer's properties.  Make sure the layer is published as WFS, and then add `searchField={fieldName}` into the `Keyword list` for the layer.  To also specify an ID field add `idField={idFieldName}` into the `Keyword list`.  Settings added in the `Keyword list` should be comma delimited. | `searchFolder=C:\Pozi\Search` |
 | | `order` | Comma-delimited list of layers in the order they should be presented in the output file. Regular expressions are recognised, so asterisks (*) should be used if the full name isn't going to be specified. Once the layers in the list have been processed, any remaining layers will be kept in their original order. **Note:** This uses layer names after `Replace` statements have been completed. | `order=*Centre,Kindergartens,Maternal Child Health Centres,Playgrounds,*Court*` |
 | **`[QGIS_Server]`** | `url` | If the `source` is a QGIS project file or folder of files (as opposed to a URL), specify the URL of the QGIS Server which is needed to serve the required `GetProjectSettings` responses. | `url=http://localhost/pozi/qgisserver` |
 | **`[Filters]`** | `exclude` | Comma-delimited list of layers to exclude from the output. Will exclude any layer that has a `title` which contains this text. | `exclude=meeting-rooms,soccer` |
