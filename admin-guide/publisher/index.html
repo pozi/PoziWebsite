@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.740638683121">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.740641112853">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.0.3">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.0.3.740638683121" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=3.0.3.740641112853" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=3.0.3.740638683121" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=3.0.3.740641112853" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=3.0.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=3.0.3.740638683121" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=3.0.3.740638683121" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=3.0.3.740641112853" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=3.0.3.740641112853" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -399,9 +399,9 @@
 </tr>
 <tr>
 <td></td>
-<td>???</td>
+<td><code v-pre>wms</code></td>
 <td>QGIS GetProjectSettings URL</td>
-<td>???<code v-pre>=http://localhost/pozi/qgisserver?MAP=C:/Pozi/Projects/Assets.qgs&amp;SERVICE=WMS&amp;REQUEST=GetProjectSettings</code></td>
+<td><code v-pre>wms=http://localhost/pozi/qgisserver?MAP=C:/Pozi/Projects/Assets.qgs&amp;SERVICE=WMS&amp;REQUEST=GetProjectSettings</code></td>
 </tr>
 <tr>
 <td></td>
@@ -418,7 +418,7 @@
 <tr>
 <td><strong><code v-pre>[Output]</code></strong></td>
 <td><code v-pre>folder</code></td>
-<td>Destination folder for catalogue XML files</td>
+<td>Destination folder for catalogue XML files, and also GeoJSON and SLD files for QGIS projects that have the setting <code v-pre>export=true</code> added to the <code v-pre>Keyword list</code> in either the project&#x27;s or individual layer&#x27;s settings.</td>
 <td><code v-pre>folder=C:\Pozi\Cache</code></td>
 </tr>
 <tr>
@@ -430,7 +430,7 @@
 <tr>
 <td></td>
 <td><code v-pre>dataFolder</code></td>
-<td>Destination folder for GeoJSON and SLD files</td>
+<td>Destination folder for GeoJSON and SLD files when data is being extracted from a WFS service.  If a QGIS project is being used data will be extracted into a subfolder of the output <code v-pre>folder</code> with the same name as the XML file.  To enable data and style file extraction from a QGIS file, add <code v-pre>export=true</code> to the <code v-pre>Keyword list</code> either in the project&#x27;s settings for all WFS layers, or individually to the <code v-pre>Keyword list</code> of specific layers.</td>
 <td><code v-pre>dataFolder=C:\Pozi\Cache</code></td>
 </tr>
 <tr>
@@ -442,7 +442,7 @@
 <tr>
 <td></td>
 <td><code v-pre>searchFolder</code></td>
-<td>Destination for SearchDB file</td>
+<td>Destination for SearchDB file.  In order to set up a field for searching, go to the relevant layer&#x27;s properties.  Make sure the layer is published as WFS, and then add <code v-pre>searchField={fieldName}</code> into the <code v-pre>Keyword list</code> for the layer.  To also specify an ID field add <code v-pre>idField={idFieldName}</code> into the <code v-pre>Keyword list</code>.  Settings added in the <code v-pre>Keyword list</code> should be comma delimited.</td>
 <td><code v-pre>searchFolder=C:\Pozi\Search</code></td>
 </tr>
 <tr>
