@@ -278,11 +278,13 @@ Specify `*` or individual field names separated by commas.
 
 Override the default output projection to solve any alignment issues.
 
+Note that some projections such as 4283 are supported only in ArcGIS Enterprise 10.9.1 and later, and not in 10.8.1.
+
 #### Spatial Intersection
 
 `/query?f=geojson&outFields=*&returnGeometry=true&inSR=4326&spatialRel=esriSpatialRelIntersects&geometryType=[$esriGeometryType]&geometry=[$esriGeometry]`
 
-[[Example]](https://services3.arcgis.com/TJxZpUnYIJOvcYwE/arcgis/rest/services/CILZones/FeatureServer/0/query?f=geojson&outFields=*&returnGeometry=true&inSR=4326&spatialRel=esriSpatialRelIntersects&geometryType=[$esriGeometryType]&geometry=[$esriGeometry])
+[[Example]](https://enterprise.mapshare.vic.gov.au/server/rest/services/Hosted/Vicmap_Property_Address/FeatureServer/0/query?where=prop_property_type%3D%27O%27&geometry=%7B%22points%22%3A%5B%5B141.65486%2C-36.33622%5D%5D%7D&geometryType=esriGeometryMultipoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=*&returnGeometry=true)
 
 #### Complete Reference
 

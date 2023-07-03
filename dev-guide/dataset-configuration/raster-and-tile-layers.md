@@ -403,6 +403,21 @@ Set `"visible": true` for the default basemap.
 }
 ```
 
+==- Google
+
+```json
+{
+  "title": "Google Maps",
+  "group": "Basemap",
+  "type": "GoogleMaps",
+  "config": {
+    "google": {
+      "key": "insert client's Google Maps API key here"
+    }
+  }
+}
+```
+
 ==- Stamen Watercolor
 
 ```json

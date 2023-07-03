@@ -24,12 +24,36 @@ order: 90
 * Next > accept defaults > "Install these packages..." > Next > "I agree..." > Next
 * upon completion, close the installer, then move the `osgeo4w-setup.exe` file to `C:\OSGeo4W\` for convenient access for running again to perform future upgrades
 
+## Plugins
+
+### WFS Output Extension
+
+1. download https://github.com/3liz/qgis-wfsOutputExtension/releases/download/1.7.1/wfsOutputExtension.1.7.1.zip
+2. extract the `wfsOutputExtension` folder from zip file and put into `C:\OSGeo4W\apps\qgis-ltr\plugins\` (ie, you'll end up with this folder: `C:\OSGeo4W\apps\qgis-ltr\plugins\wfsOutputExtension\`)
+3. backup the existing `definitions.py` file
+4. append the following text to the `definitions.py` file and save it
+    ```python
+        Fgb = Format(
+            content_type='application/x-fgb',
+            filename_ext='fgb',
+            force_crs=None,
+            ogr_provider='FlatGeobuf',
+            ogr_datasource_options=(),
+            zip=False,
+            ext_to_zip=(),
+        )
+    ```
+5. confirm that there is an environment variable set in IIS FastCGI `DEBUG_WFSOUTPUTEXTENSION=1` - see [here](iis.md#configure-environment-variables) - if not, add it
+5. in IIS, recycle the `PoziQgisServer` application pool
+
 ## Graphics
+
+### Font Awesome
 
 1. contact Pozi Support to request download link for `qgis-fontawesome-pro-6.4.0.zip`
 2. download zip file from link
 3. unzip file to `C:\Pozi\QGIS Assets\Pozi SVGs\`
-4. confirm that the correct folder structure exists - the majority of the SVG files should be in `C:\Pozi\QGIS Assets\Pozi SVGs\fontawesome-pro-6\regular\`
+4. confirm that the correct folder structure exists - you should see SVG files in this exact location: `C:\Pozi\QGIS Assets\Pozi SVGs\fontawesome-pro-6\regular\`
 5. QGIS > Settings > Options > System > SVG Paths
   - remove `C:\Users\username\AppData\Roaming\QGIS\QGIS3\profiles\default\svg\`
   - remove `C:\OSGeo4W\apps\qgis-ltr\svg\`

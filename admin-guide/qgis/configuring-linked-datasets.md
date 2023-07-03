@@ -90,6 +90,12 @@ Use the layer's Query Builder to construct and test your expression.
 
 If the test query returns one or more rows, your expression is valid, and it can be used in the child parameter. Clear the Query Result dialog box, select your expression text, and copy it to your clipboard.
 
+!!! Note
+
+If your child data source is a MySQL table, and your test returns 0 records, try removing any double quotes from around the target field and try again.
+
+!!!
+
 Exit the Query Builder by clicking Cancel. **DO NOT click OK**. (If you accidentally click OK, re-open the Query Builder and clear the expression before saving.)
 
 Construct the `parameter` text as follows:
@@ -121,7 +127,7 @@ In the child dataset's Layer Properties, go to QGIS Server. Fill in the 'Keyword
 
 Example: `parent=Property, parameter=EXP_FILTER=Assess_NumberX in ('[Property Number]'), downloadable=true`
 
-*Note: `EXP_FILTER` doesn't support spaces in the child dataset's lookup field name. If this field contains a space, use a field alias to replace any spaces with underscores.*
+*Note: `EXP_FILTER` doesn't support spaces in the child dataset's lookup field name. If this field contains any spaces, update the dataset's Attributes Form settings to use a alias name for the lookup field that doesn't contain spaces.*
 
 Click OK, then save the project.
 
@@ -154,7 +160,7 @@ This can happen when querying a large selection because IIS has a default limit 
 
 Include this `<security>` section in the IIS QGIS Server `web.config` file to allow longer requests:
 
-```xml !#2-6 C:\Program Files (x86)\Pozi\server\iis\Pozi\QgisServer\web.config
+```xml !#2-6 C:\Pozi\IIS\QgisServer\web.config
     <system.webServer>
         <security>
             <requestFiltering>
