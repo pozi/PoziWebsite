@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.741338519686">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.741670621714">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.0.3">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.0.3.741338519686" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=3.0.3.741670621714" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.741338519686" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.741670621714" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=3.0.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.741338519686" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=3.0.3.741338519686" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.741670621714" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=3.0.3.741670621714" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -644,6 +644,7 @@
 </doc-anchor-target>
 <p><code v-pre>&amp;outSR=4283</code></p>
 <p>Override the default output projection to solve any alignment issues.</p>
+<p>Note that some projections such as 4283 are supported only in ArcGIS Enterprise 10.9.1 and later, and not in 10.8.1.</p>
 <doc-anchor-target id="spatial-intersection">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#spatial-intersection">#</doc-anchor-trigger>
@@ -651,7 +652,7 @@
     </h4>
 </doc-anchor-target>
 <p><code v-pre>/query?f=geojson&amp;outFields=*&amp;returnGeometry=true&amp;inSR=4326&amp;spatialRel=esriSpatialRelIntersects&amp;geometryType=[$esriGeometryType]&amp;geometry=[$esriGeometry]</code></p>
-<p><a href="https://services3.arcgis.com/TJxZpUnYIJOvcYwE/arcgis/rest/services/CILZones/FeatureServer/0/query?f=geojson&amp;outFields=*&amp;returnGeometry=true&amp;inSR=4326&amp;spatialRel=esriSpatialRelIntersects&amp;geometryType=%5B$esriGeometryType%5D&amp;geometry=%5B$esriGeometry%5D">[Example]</a></p>
+<p><a href="https://enterprise.mapshare.vic.gov.au/server/rest/services/Hosted/Vicmap_Property_Address/FeatureServer/0/query?where=prop_property_type%3D%27O%27&amp;geometry=%7B%22points%22%3A%5B%5B141.65486%2C-36.33622%5D%5D%7D&amp;geometryType=esriGeometryMultipoint&amp;inSR=4326&amp;spatialRel=esriSpatialRelIntersects&amp;outFields=*&amp;returnGeometry=true">[Example]</a></p>
 <doc-anchor-target id="complete-reference">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#complete-reference">#</doc-anchor-trigger>
