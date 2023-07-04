@@ -135,6 +135,6 @@ This is the alternative distribution which, for clients who have this installed,
 * update content
   * insert logo
   * paste HTML from blog post
-  * update footer with web link, Twitter link, and remove Facebook
+  * update footer with web link, remove Twitter and Facebook links
 * send test email, and check inbox
 * send final email

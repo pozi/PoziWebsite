@@ -32,7 +32,6 @@ Australia
 
 #### Social
 
-[Twitter](https://twitter.com/PoziApp)<br/>
 [LinkedIn](https://www.linkedin.com/company/poziapp)
 
 ---
