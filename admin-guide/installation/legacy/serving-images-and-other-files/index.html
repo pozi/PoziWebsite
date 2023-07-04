@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.741772548699">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.741774519539">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.0.3">
@@ -35,12 +35,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=3.0.3.741772548699" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=3.0.3.741774519539" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=3.0.3.741772548699" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=3.0.3.741774519539" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=3.0.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=3.0.3.741772548699" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../../resources/js/prism.js?v=3.0.3.741772548699" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=3.0.3.741774519539" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../../resources/js/prism.js?v=3.0.3.741774519539" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -316,15 +316,15 @@
 <p>In this example, Pozi Server is configured to access any file within the organisation&#x27;s image library, which is located at <code v-pre>\\HRCCSVRFILE01\shared\Images</code>.</p>
 <p>In a command prompt (administrator mode), enter the following:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">mklink /D &quot;C:\Program Files (x86)\Pozi\userdata\local\images&quot; &quot;\\HRCCSVRFILE01\shared\Images&quot;</code></pre>
+<pre class="language-none"><code v-pre class="language-none">mklink /D &quot;C:\Program Files (x86)\Pozi\userdata\&lt;servername&gt;\images&quot; &quot;\\HRCCSVRFILE01\shared\Images&quot;</code></pre>
 </doc-codeblock></div>
 <p><img src="../img/symlink-example.png" style="width:600px" alt="Symlink example" /></p>
 <p>This creates a virtual file path within the Pozi userdata folder to enable Pozi Server to access the network folder.</p>
-<p>Now, any files that are located relative to the source folder can now be served by Pozi using <code v-pre>https://local.pozi.com/images/</code> as the prefix.</p>
+<p>Now, any files that are located relative to the source folder can now be served by Pozi using <code v-pre>https://&lt;servername&gt;.pozi.com/images/</code> as the prefix.</p>
 <p>For example:</p>
 <ul>
 <li>source file path: <code v-pre>\\HRCCSVRFILE01\shared\Images\Bridges\img_1001.jpg</code></li>
-<li>new URL:  <code v-pre>https://local.pozi.com/images/Bridges/img_1001.jpg</code></li>
+<li>new URL: <code v-pre>https://&lt;servername&gt;.pozi.com/images/Bridges/img_1001.jpg</code></li>
 </ul>
 <p>Update the image paths in the source data accordingly by prepending the URL prefix to any reference to the file name. This can be done within the data itself, or as a string expression if using a database view, VRT file or QGIS virtual field.</p>
 <doc-panel id="vrt-example" collapsed>
@@ -339,7 +339,7 @@
         &lt;SrcSQL dialect=&quot;sqlite&quot;&gt;
             select
                 *,
-                'https://local.pozi.com/images/Bridges/' || image_file_name as photo
+                'https://&lt;servername&gt;.pozi.com/images/Bridges/' || image_file_name as photo
             from bridges
         &lt;/SrcSQL&gt;
     &lt;/OGRVRTLayer&gt;
