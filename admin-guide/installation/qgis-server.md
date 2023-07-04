@@ -31,7 +31,7 @@ order: 90
 1. download https://github.com/3liz/qgis-wfsOutputExtension/releases/download/1.7.1/wfsOutputExtension.1.7.1.zip
 2. extract the `wfsOutputExtension` folder from zip file and put into `C:\OSGeo4W\apps\qgis-ltr\plugins\` (ie, you'll end up with this folder: `C:\OSGeo4W\apps\qgis-ltr\plugins\wfsOutputExtension\`)
 3. backup the existing `definitions.py` file
-4. append the following text to the `definitions.py` file and save it
+4. open the `definitions.py` file in a text editor and append the following text to the bottom:
     ```python
         Fgb = Format(
             content_type='application/x-fgb',
@@ -42,9 +42,19 @@ order: 90
             zip=False,
             ext_to_zip=(),
         )
+        GeoJSON = Format(
+            content_type='application/x-geojson',
+            filename_ext='geojson',
+            force_crs=None,
+            ogr_provider='GeoJSON',
+            ogr_datasource_options=(),
+            zip=False,
+            ext_to_zip=(),
+        )
     ```
-5. confirm that there is an environment variable set in IIS FastCGI `DEBUG_WFSOUTPUTEXTENSION=1` - see [here](iis.md#configure-environment-variables) - if not, add it
-5. in IIS, recycle the `PoziQgisServer` application pool
+5. check that the text starting with `Fgb` aligns horizontally with the closing bracket above it - then save the file
+6. open IIS > select server > Fast CGISettings > qgis_mapserv.fcgi.exe > Edit > Environment variables, and confirm that there is an environment variable for `DEBUG_WFSOUTPUTEXTENSION=1` (see [here](iis.md#configure-environment-variables) for more information) - if not, add it
+7. in IIS, recycle the `PoziQgisServer` application pool
 
 ## Graphics
 

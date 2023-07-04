@@ -111,8 +111,6 @@ A quick way to set the variables above is the following:
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\Program Files (x86)\Pozi\server\vendor\gdal\bin\ms\apps\mapserv.exe'].environmentVariables.[name='PROJ_LIB',value='C:\Program Files (x86)\Pozi\server\Vendor\GDAL\bin\proj\share']" /commit:apphost
 ```
 
-![FastCGI Settings](./img/pozi-qgis-server-iis.png)
-
 ### Application Pool
 
 - Create PoziMapServer application pool
@@ -135,8 +133,6 @@ Set the user for the PoziMapServer application pool:
 Set permissions for ```IIS AppPool\PoziMapServer``` :
 
 - IIS > select server > Application Pools > PoziQgisServer > Advanced settings > Identity > Application Pool Identity > Custom account > enter details of the domain user that runs Pozi "service" account
-
-![Grant read permission for Pozi Server data folder to IIS AppPool\PoziQgisServer](img/pozi-server-iis-apppool-poziqgisserver-permissions.png)
 
 ## Reference for Pozi Developers
 
