@@ -11,19 +11,19 @@ In this example, Pozi Server is configured to access any file within the organis
 In a command prompt (administrator mode), enter the following:
 
 ```
-mklink /D "C:\Program Files (x86)\Pozi\userdata\local\images" "\\HRCCSVRFILE01\shared\Images"
+mklink /D "C:\Program Files (x86)\Pozi\userdata\<servername>\images" "\\HRCCSVRFILE01\shared\Images"
 ```
 
 ![Symlink example](./img/symlink-example.png){style="width:600px"}
 
 This creates a virtual file path within the Pozi userdata folder to enable Pozi Server to access the network folder.
 
-Now, any files that are located relative to the source folder can now be served by Pozi using `https://local.pozi.com/images/` as the prefix.
+Now, any files that are located relative to the source folder can now be served by Pozi using `https://<servername>.pozi.com/images/` as the prefix.
 
 For example:
 
 * source file path: `\\HRCCSVRFILE01\shared\Images\Bridges\img_1001.jpg`
-* new URL:  `https://local.pozi.com/images/Bridges/img_1001.jpg`
+* new URL: `https://<servername>.pozi.com/images/Bridges/img_1001.jpg`
 
 Update the image paths in the source data accordingly by prepending the URL prefix to any reference to the file name. This can be done within the data itself, or as a string expression if using a database view, VRT file or QGIS virtual field.
 
@@ -39,7 +39,7 @@ In this example, the `bridges` dataset contains a field name called `image_file_
         <SrcSQL dialect="sqlite">
             select
                 *,
-                'https://local.pozi.com/images/Bridges/' || image_file_name as photo
+                'https://<servername>.pozi.com/images/Bridges/' || image_file_name as photo
             from bridges
         </SrcSQL>
     </OGRVRTLayer>
