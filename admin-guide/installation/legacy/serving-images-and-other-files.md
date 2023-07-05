@@ -11,8 +11,10 @@ In this example, Pozi Server is configured to access any file within the organis
 In a command prompt (administrator mode), enter the following:
 
 ```
-mklink /D "C:\Program Files (x86)\Pozi\userdata\<servername>\images" "\\HRCCSVRFILE01\shared\Images"
+mklink /D "C:\Program Files (x86)\Pozi\userdata\local\images" "\\HRCCSVRFILE01\shared\Images"
 ```
+
+(Note that the `local` folder is used for all static content such as photos, even if other user data such as VRT files is stored in a folder based on the server name.)
 
 ![Symlink example](./img/symlink-example.png){style="width:600px"}
 
