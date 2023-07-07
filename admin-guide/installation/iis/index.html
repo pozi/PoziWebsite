@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.741915013153">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.742018882534">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.0.3">
@@ -35,12 +35,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.0.3.741915013153" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=3.0.3.742018882534" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.741915013153" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.742018882534" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=3.0.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.741915013153" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=3.0.3.741915013153" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.742018882534" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=3.0.3.742018882534" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -666,6 +666,14 @@ QGIS_WIN_APP_NAME=OSGeo4W\QGIS Desktop 3.22.8</code></pre>
 <li>Process Model &gt; Idle Time-out (minutes) &gt; <code v-pre>0</code></li>
 <li>Recycling &gt; Regular Time Interval (minutes) &gt; <code v-pre>0</code></li>
 </ul>
+   </doc-panel>
+   <doc-panel id="layers-that-are-visible-in-qgis-appear-as-blank-empty-layers-in-pozi" collapsed>
+       <template #title>Layers that are visible in QGIS appear as blank/empty layers in Pozi</template>
+<p>Check that the domain account that is running the IIS application pool (eg PoziService) has the necessary permissions to access the layer source.</p>
+<p>Check whether the service account has the right permissions by running QGIS as the service account user. Hold Shift and right-click on the QGIS desktop shortcut, choose &#x27;Run as a different user&#x27;, then enter the credentials of the service account. Open the QGIS project to which the affected layer(s) belong and check whether you can view the layer.</p>
+<p>If the layer(s) are visible in QGIS but still not in Pozi, try updating the following IIS setting:</p>
+<p>IIS &gt; Your Server &gt; Application Pools &gt; PoziQgisServer &gt; Advanced Settings &gt; Load User Profile &gt; set to <code v-pre>True</code>.</p>
+<p>Recycle the PoziQgisServer application pool and reload Pozi.</p>
    </doc-panel>
 </doc-panels>
 
