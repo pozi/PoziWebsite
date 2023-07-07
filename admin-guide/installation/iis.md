@@ -251,4 +251,16 @@ IIS > select server > Application Pools > PoziQgisServer > Advanced Settings:
 * Process Model > Idle Time-out (minutes) > `0`
 * Recycling > Regular Time Interval (minutes) > `0`
 
+==- Layers that are visible in QGIS appear as blank/empty layers in Pozi
+
+Check that the domain account that is running the IIS application pool (eg PoziService) has the necessary permissions to access the layer source.
+
+Check whether the service account has the right permissions by running QGIS as the service account user. Hold Shift and right-click on the QGIS desktop shortcut, choose 'Run as a different user', then enter the credentials of the service account. Open the QGIS project to which the affected layer(s) belong and check whether you can view the layer.
+
+If the layer(s) are visible in QGIS but still not in Pozi, try updating the following IIS setting:
+
+IIS > Your Server > Application Pools > PoziQgisServer > Advanced Settings > Load User Profile > set to `True`.
+
+Recycle the PoziQgisServer application pool and reload Pozi.
+
 ==-
