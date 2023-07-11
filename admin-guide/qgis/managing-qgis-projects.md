@@ -51,15 +51,17 @@ This step involves constructing the URL text that will be used in subsequent con
 
 Combine the details below to create your project's Advertised URL:
 
-1. server URL (default server URL is `https://local.pozi.com/`, but check your local setup for any custom endpoint)
+1. server URL (server URL is typically `https://<servername>.pozi.com/`, but check your local setup for any custom endpoint - older implementations may use `https://local.pozi.com/`)
 2. service endpoint (eg `iis/qgisserver?`)
-3. QGIS project file path, with any backslashes replaced with forward slashes (eg `MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs`)
+3. QGIS project file path, with any backslashes replaced with forward slashes (eg `MAP=C:/Pozi/Projects/Assets.qgs`)
 
 Combine these three text strings to create the Advertised URL.
 
 Example Advertised URL:
 
-https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs
+```
+https://<servername>.pozi.com/iis/qgisserver?MAP=<projectfilepath>
+```
 
 Copy the URL to your clipboard for subsequent configuration below.
 
@@ -131,14 +133,16 @@ Follow these steps to register your project:
 
 In a text editor, construct a `GetProjectSettings` URL by combining the following:
 
-1. Advertised URL from above (eg `https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs`)
+1. Advertised URL from above (eg `https://<servername>.pozi.com/iis/qgisserver?MAP=<projectfilepath>`)
 2. GetProjectSettings request: `&service=WMS&REQUEST=GetProjectSettings`
 
 Combine these text strings to create a `GetProjectSettings` URL.
 
 Example `GetProjectSettings` URL:
 
-https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs&service=WMS&request=GetProjectSettings
+```
+https://<servername>.pozi.com/iis/qgisserver?MAP=<projectfilepath>&service=WMS&request=GetProjectSettings
+```
 
 Test this URL by pasting it in your browser and check that you get a valid response that lists the available layers.
 

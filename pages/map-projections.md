@@ -5,9 +5,9 @@ layout: central
 
 # Map Projections
 
-## Commonly Used Projections in Victoria
+## Commonly Used Projections in Australia
 
-In our work, we constantly need to look up the EPSG codes based on a projection description, or vice versa. Here’s a list of the ones we commonly encounter in our work across Victoria.
+In our work, we constantly need to look up the EPSG codes based on a projection description, or vice versa. Here’s a list of the ones we commonly encounter in our work across Australia.
 
 | EPSG | Description |
 | --- | --- |
@@ -16,11 +16,15 @@ In our work, we constantly need to look up the EPSG codes based on a projection 
 | [EPSG:4283](https://epsg.io/4283) | GDA94 / Long/Lat |
 | [EPSG:28354](https://epsg.io/28354) | GDA94 / MGA Zone 54 |
 | [EPSG:28355](https://epsg.io/28355) | GDA94 / MGA Zone 55 |
+| [EPSG:28356](https://epsg.io/28356) | GDA94 / MGA Zone 56 |
 | [EPSG:3111](https://epsg.io/3111) | GDA94 / Vicgrid |
 | [EPSG:32754](https://epsg.io/32754) | WGS84 / UTM Zone 54 |
 | [EPSG:32755](https://epsg.io/32755) | WGS84 / UTM Zone 55 |
+| [EPSG:32756](https://epsg.io/32756) | WGS84 / UTM Zone 56 |
+| [EPSG:7844](https://epsg.io/7844) | GDA2020 / Long/Lat |
 | [EPSG:7854](https://epsg.io/7854) | GDA2020 / MGA Zone 54 |
 | [EPSG:7855](https://epsg.io/7855) | GDA2020 / MGA Zone 55 |
+| [EPSG:7856](https://epsg.io/7856) | GDA2020 / MGA Zone 56 |
 | [EPSG:7899](https://epsg.io/7899) | GDA2020 / Vicgrid |
 
 ## Map Tile Scales

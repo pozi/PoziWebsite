@@ -9,7 +9,7 @@ A linked dataset contains complementary attributes that relate to a features fro
 
 ![Parent and child records](./img/info-panel-parent-and-child-records.png){style="width:400px"}
 
-When a users selects a feature from a standard map layer (the 'parent' dataset), Pozi fetches and displays associated records from any linked table (the 'child' dataset) based on an attribute that's shared between the two.
+When a user selects a feature from a standard map layer (the 'parent' dataset), Pozi fetches and displays associated records from any linked table (the 'child' dataset) based on an attribute that's shared between the two.
 
 Use cases:
 
