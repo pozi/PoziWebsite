@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.742018882534">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.742433591295">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.0.3">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.0.3.742018882534" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=3.0.3.742433591295" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.742018882534" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.742433591295" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=3.0.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.742018882534" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.742433591295" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -380,13 +380,15 @@
 <p>This step involves constructing the URL text that will be used in subsequent configuration below. You can use a temporary blank text document in Notepad to compile the text.</p>
 <p>Combine the details below to create your project&#x27;s Advertised URL:</p>
 <ol>
-<li>server URL (default server URL is <code v-pre>https://local.pozi.com/</code>, but check your local setup for any custom endpoint)</li>
+<li>server URL (server URL is typically <code v-pre>https://&lt;servername&gt;.pozi.com/</code>, but check your local setup for any custom endpoint - older implementations may use <code v-pre>https://local.pozi.com/</code>)</li>
 <li>service endpoint (eg <code v-pre>iis/qgisserver?</code>)</li>
-<li>QGIS project file path, with any backslashes replaced with forward slashes (eg <code v-pre>MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs</code>)</li>
+<li>QGIS project file path, with any backslashes replaced with forward slashes (eg <code v-pre>MAP=C:/Pozi/Projects/Assets.qgs</code>)</li>
 </ol>
 <p>Combine these three text strings to create the Advertised URL.</p>
 <p>Example Advertised URL:</p>
-<p><a href="https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs">https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs</a></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">https://&lt;servername&gt;.pozi.com/iis/qgisserver?MAP=&lt;projectfilepath&gt;</code></pre>
+</doc-codeblock></div>
 <p>Copy the URL to your clipboard for subsequent configuration below.</p>
 <doc-anchor-target id="enable-web-services">
     <h3>
@@ -472,12 +474,14 @@
 </doc-anchor-target>
 <p>In a text editor, construct a <code v-pre>GetProjectSettings</code> URL by combining the following:</p>
 <ol>
-<li>Advertised URL from above (eg <code v-pre>https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs</code>)</li>
+<li>Advertised URL from above (eg <code v-pre>https://&lt;servername&gt;.pozi.com/iis/qgisserver?MAP=&lt;projectfilepath&gt;</code>)</li>
 <li>GetProjectSettings request: <code v-pre>&amp;service=WMS&amp;REQUEST=GetProjectSettings</code></li>
 </ol>
 <p>Combine these text strings to create a <code v-pre>GetProjectSettings</code> URL.</p>
 <p>Example <code v-pre>GetProjectSettings</code> URL:</p>
-<p><a href="https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs&amp;service=WMS&amp;request=GetProjectSettings">https://local.pozi.com/iis/qgisserver?MAP=C:/Program%20Files%20(x86)/Pozi/userdata/local/property.qgs&amp;service=WMS&amp;request=GetProjectSettings</a></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">https://&lt;servername&gt;.pozi.com/iis/qgisserver?MAP=&lt;projectfilepath&gt;&amp;service=WMS&amp;request=GetProjectSettings</code></pre>
+</doc-codeblock></div>
 <p>Test this URL by pasting it in your browser and check that you get a valid response that lists the available layers.</p>
 <doc-anchor-target id="2-submit-helpdesk-ticket">
     <h3>
