@@ -8,7 +8,7 @@ You can configure Pozi Server to access internal files that stored on a network 
 
 In this example, Pozi Server is configured to access any file within the organisation's image library, which is located at `\\HRCCSVRFILE01\shared\Images`.
 
-In a command prompt (administrator mode), enter the following:
+Open a command prompt in [administrator mode](https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-10/), and enter the following:
 
 ```
 mklink /D "C:\Program Files (x86)\Pozi\userdata\local\images" "\\HRCCSVRFILE01\shared\Images"

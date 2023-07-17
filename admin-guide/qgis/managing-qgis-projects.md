@@ -70,7 +70,8 @@ Copy the URL to your clipboard for subsequent configuration below.
 1. Project > Properties > QGIS Server
 2. WMS
    * `Exclude layers` (tick) > add > pick any background layers you don't need to see in Pozi
-   * `Add geometry to feature response`: tick on
+   * `Use layer ids as names`: ensure this is NOT ticked
+   * `Add geometry to feature response`: tick ON
    * `Advertised URL`: enter Advertised URL (from above)
 3. WMTS
    * `Published layers > Project > Published`: tick on
@@ -164,6 +165,8 @@ During this time, and any time afterwards, you may continue to [add and configur
 ==- None of the project's layers are displaying in Pozi
 
 Check that advertised URLs contains the exact path and file name of the .qgs project file.
+
+Ensure that `Use layer ids as names` is NOT ticked. See Project > Properties > QGIS Server > WMS.
 
 Check the Network panel in your browser console as you turn on layers. Look at the `GetFeature` requests and preview the response. If it contains bounding box coordinates but no records, there may be an issue with IIS.
 
