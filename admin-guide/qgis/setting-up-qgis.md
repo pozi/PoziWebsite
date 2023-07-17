@@ -68,3 +68,16 @@ Browser > WMS/WMTS (right-click) > New Connection...
 * Name: Vicmap Basemap
 * URL: https://base.maps.vic.gov.au/service
 * OK
+
+## Font Awesome
+
+Pozi's [Font Awesome](https://fontawesome.com/) integration enables administrators to configure icon symbols for their map layers.
+
+1. contact Pozi Support to request the download link for `qgis-fontawesome-pro-6.4.0.zip`
+2. download zip file from link
+3. unzip file to `C:\Pozi\QGIS Assets\Pozi SVGs\`
+4. confirm that the correct folder structure exists - you should see SVG files in this exact location: `C:\Pozi\QGIS Assets\Pozi SVGs\fontawesome-pro-6\regular\`
+5. QGIS > Settings > Options > System > SVG Paths
+    - remove `C:\Users\username\AppData\Roaming\QGIS\QGIS3\profiles\default\svg\`
+    - remove `C:\OSGeo4W\apps\qgis-ltr\svg\`
+    - add `C:\Pozi\QGIS Assets\Pozi SVGs`

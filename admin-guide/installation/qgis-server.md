@@ -56,18 +56,23 @@ order: 90
 6. open IIS > select server > Fast CGISettings > qgis_mapserv.fcgi.exe > Edit > Environment variables, and confirm that there is an environment variable for `DEBUG_WFSOUTPUTEXTENSION=1` (see [here](iis.md#configure-environment-variables) for more information) - if not, add it
 7. in IIS, recycle the `PoziQgisServer` application pool
 
+Other OGR formats can be similarly added. See https://gdal.org/drivers/vector/index.html for a complete list of available formats.
+
+```
+        <insert output file extension> = Format(
+            content_type='application/x-<insert output file extension>',
+            filename_ext='<insert output file extension>',
+            force_crs=None,
+            ogr_provider='<insert name from "Short name" column from OGR table linked above>',
+            ogr_datasource_options=(),
+            zip=False,
+            ext_to_zip=(),
+        )
+```
+
 ## Graphics
 
-### Font Awesome
-
-1. contact Pozi Support to request download link for `qgis-fontawesome-pro-6.4.0.zip`
-2. download zip file from link
-3. unzip file to `C:\Pozi\QGIS Assets\Pozi SVGs\`
-4. confirm that the correct folder structure exists - you should see SVG files in this exact location: `C:\Pozi\QGIS Assets\Pozi SVGs\fontawesome-pro-6\regular\`
-5. QGIS > Settings > Options > System > SVG Paths
-  - remove `C:\Users\username\AppData\Roaming\QGIS\QGIS3\profiles\default\svg\`
-  - remove `C:\OSGeo4W\apps\qgis-ltr\svg\`
-  - add `C:\Pozi\QGIS Assets\Pozi SVGs`
+For any PC from which QGIS projects will be created and maintained, configure QGIS with [Font Awesome](../qgis/setting-up-qgis.md#font-awesome).
 
 ## Updating
 
