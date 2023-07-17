@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.742433591295">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.742895777931">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.0.3">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.0.3.742433591295" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=3.0.3.742895777931" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.742433591295" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.742895777931" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=3.0.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.742433591295" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.742895777931" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -423,151 +423,21 @@
         <span>Styling Layers</span>
     </h2>
 </doc-anchor-target>
-<p>Using QGIS, you can control many visual aspects of your layer. You may apply a common style for all the features in a layer
-(<a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#single-symbol-renderer">Single Symbol</a>) or apply a thematic style that displays features according to any of its attributes (<a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#categorized-renderer">Categorized</a>).</p>
-<p>When Pozi fetches a layer using WMS (ie, <em>not</em> vector), QGIS Server renders the layer exactly as configured in QGIS. When using WFS (ie, vector), the rendering is done by Pozi in the browser, which can cause the layer to appear differently compared to QGIS for some styling options.</p>
-<doc-anchor-target id="styling-for-vector-layers">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#styling-for-vector-layers">#</doc-anchor-trigger>
-        <span>Styling for Vector Layers</span>
-    </h3>
-</doc-anchor-target>
-<p>When styling <em>vector</em> layers (ie, WFS-enabled), use only the supported styles specified below.</p>
-<p>(If you need Pozi to display layers using a QGIS style that doesn&#x27;t appear in the below lists of supported styles, consider disabling WFS to force Pozi to retrieve the layer via WMS, and thus using the QGIS Server renderer.)</p>
-<doc-panels>
-   <doc-panel id="points" collapsed>
-       <template #title>Points</template>
-<p>Supported marker symbols:</p>
-<ul>
-<li>Simple Marker
-<ul>
-<li><code v-pre>square</code></li>
-<li><code v-pre>circle</code></li>
-<li><code v-pre>triangle</code></li>
-<li><code v-pre>star</code></li>
-<li><code v-pre>cross</code></li>
-<li><code v-pre>x</code></li>
-</ul>
-</li>
-</ul>
-<p>Note that SVG marker symbols are not supported, nor <code v-pre>diamond</code>, <code v-pre>cross2</code>, <code v-pre>cross_fill</code> symbols. Symbol rotation is not supported.</p>
-<p>Suggested sizes:</p>
-<ul>
-<li>set size to <code v-pre>4mm</code> or greater enable to easier interaction for users in the browser</li>
-<li>set stroke to white, <code v-pre>0.5mm</code> or greater to provide separation from the background</li>
-</ul>
-   </doc-panel>
-   <doc-panel id="lines" collapsed>
-       <template #title>Lines</template>
-<p>Supported lines:</p>
-<ul>
-<li>Simple Line
-<ul>
-<li>Solid Line</li>
-<li>No Pen</li>
-<li>Custom Dash Pattern</li>
-</ul>
-</li>
-</ul>
-<p>Set line thicknesses to <code v-pre>2mm</code> or greater to enable users to easily select line features.</p>
-<p>To style a line with dots and/or dashes:</p>
-<ul>
-<li>set the cap style to <code v-pre>flat</code></li>
-<li>tick &quot;Use custom dash pattern&quot;</li>
-<li>specify a dash pattern (eg, <code v-pre>4 2</code>) in millimeters.</li>
-</ul>
-<p><img src="../img/qgis-layer-styling-line-custom-dash-pattern.png" style="width:450px" alt="" /></p>
-   </doc-panel>
-   <doc-panel id="polygons" collapsed>
-       <template #title>Polygons</template>
-<p>Supported fills:</p>
-<ul>
-<li>Simple Fill
-<ul>
-<li>Solid</li>
-<li>No brush (see note below)</li>
-<li>Cross</li>
-<li>Diagonal X</li>
-</ul>
-</li>
-<li>Point Pattern Fill</li>
-</ul>
-<p><img src="../img/qgis-layer-styling-simple-fill.png" style="width:350px" alt="" /></p>
-<p>Note that the &#x27;No brush&#x27; fill will prevent users from being able to select a polygon by clicking within the polygon. To enable users to select a polygon feature by clicking inside it, use the &#x27;Solid&#x27; fill, and set the opacity of the fill colour to a low or zero value.</p>
-   </doc-panel>
-</doc-panels>
-<p>Point, line and polygon features can optionally be configured to display labels.</p>
-<doc-panel id="labels" collapsed>
-    <template #title>Labels</template>
-<p><a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#labels-properties">QGIS Reference</a></p>
-<p>Notes:</p>
-<ul>
-<li>label offsets and label buffer transparency are not supported</li>
-<li>text expressions in labels (eg, combining values from multiple fields, or find-and-replace operations) are possible by configuring <doc-anchor-trigger to="#virtual-fields">virtual fields</doc-anchor-trigger></li>
-</ul>
-<p>Set label text size to <code v-pre>10 points</code> or greater, and a white <code v-pre>1.8mm</code> buffer for better legibility.</p>
-</doc-panel>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-            <h5>MapInfo Styles</h5>
-<p>MapInfo tables sometimes contain embedded styles. QGIS Desktop may recognise and display the map features using these styles, but QGIS Server cannot serve the layer to Pozi without first overriding the style.</p>
-<p>If the layer appears in QGIS Symbology mode &quot;Embedded&quot;, switch it to &quot;Single Symbol&quot; or &quot;Categorized&quot;, and style it according to your preference.</p>
-        </div>
+<p>Instructions for styling your layers have been moved to a new dedicated page.</p>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><symbol id="paintbrush-icon-symbol" viewBox="0 0 16 16"><path d="M11.134 1.535c.7-.509 1.416-.942 2.076-1.155.649-.21 1.463-.267 2.069.34.603.601.568 1.411.368 2.07-.202.668-.624 1.39-1.125 2.096-1.011 1.424-2.496 2.987-3.775 4.249-1.098 1.084-2.132 1.839-3.04 2.3a3.744 3.744 0 0 1-1.055 3.217c-.431.431-1.065.691-1.657.861-.614.177-1.294.287-1.914.357A21.151 21.151 0 0 1 .797 16H.743l.007-.75H.749L.742 16a.75.75 0 0 1-.743-.742l.743-.008-.742.007v-.054a21.25 21.25 0 0 1 .13-2.284c.067-.647.187-1.287.358-1.914.17-.591.43-1.226.86-1.657a3.746 3.746 0 0 1 3.227-1.054c.466-.893 1.225-1.907 2.314-2.982 1.271-1.255 2.833-2.75 4.245-3.777ZM1.62 13.089c-.051.464-.086.929-.104 1.395.466-.018.932-.053 1.396-.104a10.511 10.511 0 0 0 1.668-.309c.526-.151.856-.325 1.011-.48a2.25 2.25 0 1 0-3.182-3.182c-.155.155-.329.485-.48 1.01a10.515 10.515 0 0 0-.309 1.67Zm10.396-10.34c-1.224.89-2.605 2.189-3.822 3.384l1.718 1.718c1.21-1.205 2.51-2.597 3.387-3.833.47-.662.78-1.227.912-1.662.134-.444.032-.551.009-.575h-.001V1.78c-.014-.014-.113-.113-.548.027-.432.14-.995.462-1.655.942Zm-4.832 7.266-.001.001a9.859 9.859 0 0 0 1.63-1.142L7.155 7.216a9.7 9.7 0 0 0-1.161 1.607c.482.302.889.71 1.19 1.192Z"/></symbol><use xlink:href="#paintbrush-icon-symbol" /></svg>
+        </span>
+        <span class="inline-block font-medium ml-2">Styling layers</span>
     </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>../styling-layers/</span>
+    </div>
+    <a href="../styling-layers/" class="absolute block inset-0"></a>
 </div>
-<doc-anchor-target id="categorized-symbology">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#categorized-symbology">#</doc-anchor-trigger>
-        <span>Categorized Symbology</span>
-    </h4>
-</doc-anchor-target>
-<p>Layers can be styled using the <code v-pre>Categorized</code> option. Pick the field to use for the category from the drop-down list, then click the Classify button.</p>
-<p><img src="../img/qgis-layer-styling-categorized.png" style="width:500px" alt="Categorized styling" /></p>
-<doc-anchor-target id="limitations">
-    <h5>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#limitations">#</doc-anchor-trigger>
-        <span>Limitations</span>
-    </h5>
-</doc-anchor-target>
-<p>When publishing the layer as a vector layer, the following limitations apply:</p>
-<ul>
-<li>the symbology must be based on a field (real or virtual), not an expression</li>
-<li>the values must not be merged (ie, only one value per row)</li>
-<li>the field name must not contain any spaces</li>
-</ul>
-<p>You can work around these limitations by creating a suitably named virtual field that contains the required logic.</p>
-<p>For instance, the virtual field can contain a case statement to accept any number of input values (from one or more fields) and generate specific values for use in subsequent styling.</p>
-<p><img src="../img/qgis-layer-virtual-fields-for-styling-categories.png" style="width:800px" alt="" /></p>
-<p>See <doc-anchor-trigger to="#virtual-fields">Virtual Fields</doc-anchor-trigger> below for more information.</p>
-<doc-anchor-target id="fallback-style">
-    <h5>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#fallback-style">#</doc-anchor-trigger>
-        <span>Fallback Style</span>
-    </h5>
-</doc-anchor-target>
-<p>When using the Classify button to generate styles for each unique value, QGIS automatically generates an additional <strong>fallback</strong> style for &quot;<em>all other values</em>&quot;. However this function is not supported in Pozi, and Pozi will display <strong>all</strong> the layer&#x27;s features with the fallback style.</p>
-<p><img src="../img/qgis-layer-styling-categorized-remove-all-other-values.png" style="width:600px" alt="" /></p>
-<p>Delete the &quot;<em>all other values</em>&quot; item from the list before saving.</p>
-<doc-anchor-target id="opacity">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#opacity">#</doc-anchor-trigger>
-        <span>Opacity</span>
-    </h3>
-</doc-anchor-target>
-<p>Layer Styling &gt; Layer Rendering &gt; Opacity</p>
-<p><img src="../img/qgis-layer-styling-opacity.png" style="width:300px" alt="" /></p>
-<p>Layers are initially displayed in Pozi using the opacity value you&#x27;ve set - the user may then adjust the opacity up or down from the initial value.</p>
+</p>
 <br/>
 <doc-anchor-target id="managing-data-fields">
     <h2>
@@ -731,26 +601,10 @@
 <li>If the layer source is a MapInfo table, ensure that the symbology type is <em>not</em> &quot;Embedded Symbols&quot;. Change it to another type such as &quot;Single Symbol&quot; or &quot;Categorized&quot;.</li>
 </ul>
    </doc-panel>
-   <doc-panel id="layers-are-displayed-but-not-with-the-styling-from-qgis" collapsed>
-       <template #title>Layers are displayed, but not with the styling from QGIS</template>
-<p>Pozi will display layers in a generic style (often purple) if it cannot process the style that was configured in QGIS.</p>
-<p>Simplify the style in the QGIS project and try again. For point features, replace custom point symbols with one of the <doc-anchor-trigger to="#points">standard symbols</doc-anchor-trigger> specified above. For polygon features, replace hatch styles with semi-opaque fills or any of the <doc-anchor-trigger to="#polygons">supported fill styles</doc-anchor-trigger> specified above.</p>
-<p>If using a <em>categoized</em> style, remove any style that QGIS generates for <em>all other values</em>. See <doc-anchor-trigger to="#fallback-style">Fallback Style</doc-anchor-trigger> above.</p>
-   </doc-panel>
    <doc-panel id="selected-features-from-wms-layers-are-displayed-with-a-mis-shaped-highlight" collapsed>
        <template #title>Selected features from WMS layers are displayed with a mis-shaped highlight</template>
 <p>It&#x27;s possible that the GetFeatureInfo response coordinates do not have enough precision.</p>
 <p>Open the affected QGIS project(s), go to Project &gt; Properties &gt; QGIS Server &gt; WMS Capabilities &gt; GetFeatureInfo geometry precision, and set it to 8 decimal places.</p>
-   </doc-panel>
-   <doc-panel id="labels-are-not-appearing-as-expected" collapsed>
-       <template #title>Labels are not appearing as expected</template>
-<p>There are some limitations for labels on vector features in Pozi:</p>
-<ul>
-<li>labels are always placed in the centre of the feature, regardless of any placement rules</li>
-<li>complex text expressions may not generate the expected text</li>
-</ul>
-<p>The issue with text expressions can be easily overcome by using a <doc-anchor-trigger to="#virtual-fields">virtual field</doc-anchor-trigger> for the label.</p>
-<p>Otherwise, for complete control of how the layer appears in Pozi, consider switching the layer to WMS by disabling WFS for the layer.</p>
    </doc-panel>
    <doc-panel id="layers-are-slow-to-load" collapsed>
        <template #title>Layers are slow to load</template>
@@ -842,10 +696,10 @@
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../admin-guide/qgis/configuring-whats-here-datasets/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../admin-guide/qgis/styling-layers/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Configuring "What's Here" Datasets</span>
+                                                <span class="block mt-1">Styling Layers</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>

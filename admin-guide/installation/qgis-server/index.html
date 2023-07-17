@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.742433591295">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.742895777931">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.0.3">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.0.3.742433591295" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=3.0.3.742895777931" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.742433591295" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.742895777931" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=3.0.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.742433591295" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=3.0.3.742433591295" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.742895777931" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=3.0.3.742895777931" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -388,30 +388,25 @@
 <li>open IIS &gt; select server &gt; Fast CGISettings &gt; qgis_mapserv.fcgi.exe &gt; Edit &gt; Environment variables, and confirm that there is an environment variable for <code v-pre>DEBUG_WFSOUTPUTEXTENSION=1</code> (see <a href="../iis/#configure-environment-variables">here</a> for more information) - if not, add it</li>
 <li>in IIS, recycle the <code v-pre>PoziQgisServer</code> application pool</li>
 </ol>
+<p>Other OGR formats can be similarly added. See <a href="https://gdal.org/drivers/vector/index.html">https://gdal.org/drivers/vector/index.html</a> for a complete list of available formats.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">        &lt;insert output file extension&gt; = Format(
+            content_type='application/x-&lt;insert output file extension&gt;',
+            filename_ext='&lt;insert output file extension&gt;',
+            force_crs=None,
+            ogr_provider='&lt;insert name from &quot;Short name&quot; column from OGR table linked above&gt;',
+            ogr_datasource_options=(),
+            zip=False,
+            ext_to_zip=(),
+        )</code></pre>
+</doc-codeblock></div>
 <doc-anchor-target id="graphics">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#graphics">#</doc-anchor-trigger>
         <span>Graphics</span>
     </h2>
 </doc-anchor-target>
-<doc-anchor-target id="font-awesome">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#font-awesome">#</doc-anchor-trigger>
-        <span>Font Awesome</span>
-    </h3>
-</doc-anchor-target>
-<ol>
-<li>contact Pozi Support to request download link for <code v-pre>qgis-fontawesome-pro-6.4.0.zip</code></li>
-<li>download zip file from link</li>
-<li>unzip file to <code v-pre>C:\Pozi\QGIS Assets\Pozi SVGs\</code></li>
-<li>confirm that the correct folder structure exists - you should see SVG files in this exact location: <code v-pre>C:\Pozi\QGIS Assets\Pozi SVGs\fontawesome-pro-6\regular\</code></li>
-<li>QGIS &gt; Settings &gt; Options &gt; System &gt; SVG Paths</li>
-</ol>
-<ul>
-<li>remove <code v-pre>C:\Users\username\AppData\Roaming\QGIS\QGIS3\profiles\default\svg\</code></li>
-<li>remove <code v-pre>C:\OSGeo4W\apps\qgis-ltr\svg\</code></li>
-<li>add <code v-pre>C:\Pozi\QGIS Assets\Pozi SVGs</code></li>
-</ul>
+<p>For any PC from which QGIS projects will be created and maintained, configure QGIS with <a href="../../qgis/setting-up-qgis/#font-awesome">Font Awesome</a>.</p>
 <doc-anchor-target id="updating">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#updating">#</doc-anchor-trigger>
