@@ -31,7 +31,7 @@ Layer Properties > Fields > Field Calculator > Create virtual field:
 * Expression:
 
 ```
-'<a href="mydata://action=goto&assetCategory=Buildings&assetID=' || Asset_ID || '" target="_blank" >Open in myData</a>'
+'<a href="mydata://action=goto&assetCategory=Bridges&assetID='||Asset_ID||'" target="_blank" >Open in myData</a>'
 ```
 
 For more information, see the instructions for working with [virtual fields](../qgis/configuring-layers#virtual-fields).

@@ -21,7 +21,7 @@ Use cases:
 
 !!!
 
-Any dataset that is enabled for *What's Here* can be considered as a *child* dataset. Learn more about parent/child dataset interaction [here](./configuring-linked-datasets.md).
+Any dataset that is enabled for *What's Here* is essentially a *child* dataset. Learn more about parent/child dataset interaction [here](./configuring-linked-datasets.md).
 
 Instead of the layer's *parent* being a feature in another layer, the parent is a temporary feature that is automatically created when the user clicks on the map (or uses the line or polygon selection tool).
 
