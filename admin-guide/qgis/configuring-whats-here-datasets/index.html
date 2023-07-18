@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.742895777931">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.742957776890">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.0.3">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.0.3.742895777931" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=3.0.3.742957776890" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.742895777931" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.742957776890" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=3.0.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.742895777931" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.742957776890" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -332,9 +332,8 @@
             </svg>
         </div>
         <div class="pr-5 ml-3 w-full">
-            <h5>Did you know...</h5>
-<p>A <em>What&#x27;s Here</em> dataset is technically a <em>child</em> dataset. Learn more about parent/child dataset interaction <a href="../configuring-linked-datasets/">here</a>.</p>
-<p>Instead of the <em>parent</em> being a feature in another layer, the parent is a temporary feature that is automatically created by the user clicking on the map (or using the line or polygon selection tool).</p>
+<p>Any dataset that is enabled for <em>What&#x27;s Here</em> can be considered as a <em>child</em> dataset. Learn more about parent/child dataset interaction <a href="../configuring-linked-datasets/">here</a>.</p>
+<p>Instead of the layer&#x27;s <em>parent</em> being a feature in another layer, the parent is a temporary feature that is automatically created when the user clicks on the map (or uses the line or polygon selection tool).</p>
         </div>
     </div>
 </div>
@@ -344,8 +343,8 @@
         <span><em>What&#x27;s Here</em> vs Standard Layers</span>
     </h2>
 </doc-anchor-target>
-<p><em>What&#x27;s Here</em> datasets are configured separately from standard layers. When working with core datasets, you&#x27;ll want to configure both a What&#x27;s Here and a standard version of the layer in QGIS to cover a wide range of use cases.</p>
-<p>In this example, we&#x27;ll use a Property layer as the source for both a What&#x27;s Here dataset and a standard layer. Configure the two layers with different names, following the naming convention suggested below.</p>
+<p><em>What&#x27;s Here</em> datasets are configured separately from standard layers. When working with core datasets such as property, consider configuring both a What&#x27;s Here and a standard version of the layer in your QGIS project to cover a range of use cases.</p>
+<p>In this example, we&#x27;ll use a property layer as the source for both a What&#x27;s Here dataset and a standard layer. Configure the two layers with different names, following the naming convention suggested below.</p>
 <doc-anchor-target id="standard-layer">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#standard-layer">#</doc-anchor-trigger>
@@ -358,7 +357,7 @@
 <li>configuration:
 <ul>
 <li>use plural naming convention (ie &#x27;Properties&#x27;)</li>
-<li>don&#x27;t enable for WFS</li>
+<li>don&#x27;t enable for WFS (because it&#x27;s a large dataset)</li>
 <li>make the layer <a href="../configuring-layers/#selectability">NOT queryable</a> because the info results will be taken care of by the new dataset below</li>
 </ul>
 </li>
@@ -387,11 +386,19 @@
 </doc-codeblock></div>
 <p>Note that <code v-pre>Whats Here</code> in the settings does NOT contain an apostrophe.</p>
 <p>The presence of the <code v-pre>parent=Whats Here</code> parameter automatically hides the dataset from appearing in the layer panel.</p>
+<doc-anchor-target id="end-result">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#end-result">#</doc-anchor-trigger>
+        <span>End Result</span>
+    </h2>
+</doc-anchor-target>
+<p>Your users can now click anywhere on the map and get property information for that location, regardless of whether the Properties layer is turned on or not.</p>
+<p>Additionally, users can use the line and polygon selection tool (as well Ctrl-click for adding spot locations) for selecting properties in a specific area, and generate mail merge for the selected properties.</p>
 <doc-anchor-target id="optional-settings">
-    <h3>
+    <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#optional-settings">#</doc-anchor-trigger>
         <span>Optional Settings</span>
-    </h3>
+    </h2>
 </doc-anchor-target>
 <p>These settings provide an override for some of the default layer behaviours in Pozi. Append any of these overrides to the keyword setting, separated by commas.</p>
 <ul>
