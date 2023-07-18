@@ -5,6 +5,8 @@ layout: central
 
 # IntraMaps vs Pozi
 
+<img src="../../static/img/undraw/undraw_split_testing_l1uw.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
+
 Is IntraMaps no longer serving your organisation's interests?
 
 Pozi is the enterprise GIS application with the all features your users need, plus real support.
@@ -25,9 +27,12 @@ On-premise, cloud or hybrid. The choice is yours.
 
 Pozi respects your organisation's autonomy and strategic technology decisions.
 
+<br clear="all" />
 <br/>
 
 ### Direct Integration
+
+<img src="../../static/img/undraw/undraw_server_cluster_jwwq.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
 Connect your users directly with your organisation's spatial data, plus live data from corporate applications, government data services and web APIs.
 
@@ -38,6 +43,8 @@ Pozi delivers live information from trusted sources to your users - not copies o
 ### Ease of Configuration
 
 Pozi enables GIS administrators to quickly and easily distribute spatial information across your organisation.
+
+<img src="../../static/img/undraw/undraw_information_tab_re_f0w3.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
 
 If you know how to use QGIS, you can publish data for your organisation's users in Pozi.
 
@@ -57,6 +64,8 @@ Pozi enables users across your organisation to quickly access critical informati
 
 Pozi's adaptive interface displays only the information needed for the task at hand, whether it's viewing a full screen map, showing details about a selected feature or location, browsing available map layers, or searching for a location.
 
+<img src="../../static/img/undraw/undraw_mobile_user_re_xta4.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
+
 * intuitive workflows
 * touch friendly, mobile ready
 * efficient use of screen space, free of clutter
@@ -69,6 +78,8 @@ Pozi's adaptive interface displays only the information needed for the task at h
 
 Engage your community and external stakeholders with information that's relevant to them, while keeping your organisation's private data available only to authorised users.
 
+<img src="../../static/img/undraw/undraw_tourist_map_re_293e.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
+
 Every Pozi site provides a public-facing map view by default.
 
 Synchronise selected datasets from your network to the cloud for viewing by the public.
@@ -80,6 +91,8 @@ And engage with the public using Pozi's two-way community consultation functiona
 ### Unified Map
 
 Pozi avoids artificial data silos that are caused by managing data in separate modules. Within a single Pozi map, users can discover, use and combine information for their individual needs, without having to switch between separate map modules.
+
+<img src="../../static/img/undraw/undraw_adventure_map_hnin.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
 When users interact with layer groups within the layer panel, Pozi remembers how they left it so that their most relevant layers are ready to access as needed. Layers that aren't useful or haven't been recently accessed remain tucked away, but still discoverable and accessible in the current map.
 
@@ -98,6 +111,8 @@ Users get the answers they need quicker in Pozi. The Pozi web app opens in secon
 ### Real Support
 
 When you ask Pozi for help, we'll acknowledge your request within 24 hours, and begin resolving your issue within 48 hours.
+
+<img src="../../static/img/undraw/undraw_interview_re_e5jn.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
 
 #### Third Party GIS support
 
@@ -120,6 +135,8 @@ Pozi's open platform integrates with major vendor platforms and applications to 
 ### Future Ready
 
 The future of web GIS is driven by live data integrations, web-optimised data formats and in-browser geo-processing.
+
+<img src="../../static/img/undraw/undraw_dev_focus_re_6iwt.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
 Pozi invests for the future by keeping Pozi up-to-date with modern web technologies. We work with open source HTML5 technologies including [React](https://reactjs.org/), [Material UI](https://mui.com/), [OpenLayers 7](https://openlayers.org/), [TurfJS](https://turfjs.org/) and [GeoStyler](https://geostyler.org/) to ensure high performance, compatibility with modern data sources, and a high quality user experience.
 
@@ -144,6 +161,8 @@ And we'll never charge you for fixing a bug.
 ### Anything Missing?
 
 We'll build it for you!
+
+<img src="../../static/img/undraw/undraw_building_websites_i78t.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
 
 If you need any functionality that's not already in Pozi, talk to us about your requirements. We'll work with you on a specification to suit your exact requirements and provide an estimate for its development.
 
@@ -260,6 +279,8 @@ When you fund the development of new features, you have ongoing access to the ne
 ## Unhappy with the lack of support for Intramaps?
 
 You're not alone.
+
+<img src="../../static/img/undraw/undraw_collaborators_re_hont.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
 
 But with Pozi, your organisation's GIS is no longer locked to single software vendor.
 
