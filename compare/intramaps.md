@@ -5,7 +5,7 @@ layout: central
 
 # IntraMaps vs Pozi
 
-<img src="../../static/img/undraw/undraw_split_testing_l1uw.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
+<img src="../../static/img/undraw/undraw_process_re_gws7.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
 
 Is IntraMaps no longer serving your organisation's interests?
 
@@ -279,8 +279,6 @@ When you fund the development of new features, you have ongoing access to the ne
 ## Unhappy with the lack of support for Intramaps?
 
 You're not alone.
-
-<img src="../../static/img/undraw/undraw_collaborators_re_hont.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
 
 But with Pozi, your organisation's GIS is no longer locked to single software vendor.
 
