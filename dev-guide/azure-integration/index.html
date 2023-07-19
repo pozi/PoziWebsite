@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.742984232531">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.743042804454">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.0.3">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.0.3.742984232531" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=3.0.3.743042804454" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=3.0.3.742984232531" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=3.0.3.743042804454" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=3.0.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=3.0.3.742984232531" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=3.0.3.743042804454" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -318,6 +318,131 @@
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
+<doc-anchor-target id="site-url">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#site-url">#</doc-anchor-trigger>
+        <span>Site URL</span>
+    </h2>
+</doc-anchor-target>
+<p>Using <code v-pre>[sitename].enterprise.pozi.com</code> forces the user to authenticate before proceeding to the Pozi site. These users will gain access to their organisation&#x27;s private datasets.</p>
+<p>Public users should continue to use <code v-pre>[sitename].pozi.com</code>. They will not be prompted to authenticate, and they will have access to only public data.</p>
+<doc-anchor-target id="site-configuration">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#site-configuration">#</doc-anchor-trigger>
+        <span>Site Configuration</span>
+    </h2>
+</doc-anchor-target>
+<p>The following settings are configured in the Pozi Config Manager, within the Site settings.</p>
+<doc-anchor-target id="azure-application-proxy-settings">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#azure-application-proxy-settings">#</doc-anchor-trigger>
+        <span>Azure Application Proxy Settings</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="enabled">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#enabled">#</doc-anchor-trigger>
+        <span>Enabled</span>
+    </h4>
+</doc-anchor-target>
+<p>When enabled, Pozi will attempt to authenticate the user when in &#x27;enterprise&#x27; mode.</p>
+<p>Due to a bug in the interface, it&#x27;s not possible to tick this box directly using a mouse. Instead, place the cursor in the text box preceding the tickbox, press Tab to focus the cursor on the tickbox, then press Space to toggle the tickbox.</p>
+<doc-anchor-target id="application-proxy-external-url">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#application-proxy-external-url">#</doc-anchor-trigger>
+        <span>Application Proxy external URL</span>
+    </h4>
+</doc-anchor-target>
+<p>The externally accessible URL to access the Application Proxy.</p>
+<p>This is defined in Enterprise Applications =&gt; Application Proxy =&gt; External Url</p>
+<doc-panel id="examples" collapsed>
+    <template #title>Examples</template>
+<ul>
+<li><code v-pre>https://pozi-cardiniavicgovau.msappproxy.net/</code></li>
+<li><code v-pre>https://poziserver-loddonvicgovau.msappproxy.net/pozi/</code></li>
+<li><code v-pre>https://poziserver-northburnettqldgovau.msappproxy.net/pozi/</code></li>
+<li><code v-pre>https://pozi.ngshire.vic.gov.au/</code></li>
+</ul>
+</doc-panel>
+<doc-anchor-target id="application-proxy-internal-url">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#application-proxy-internal-url">#</doc-anchor-trigger>
+        <span>Application Proxy internal URL</span>
+    </h4>
+</doc-anchor-target>
+<p>The internally only accessible URL to access the Pozi Server from within the client&#x27;s network.</p>
+<p>This is defined in Enterprise Applications =&gt; Application Proxy =&gt; Internal Url.</p>
+<doc-panel id="examples" collapsed>
+    <template #title>Examples</template>
+<ul>
+<li>North Burnett: <code v-pre>http://gis2/pozi/</code></li>
+<li>Cardinia: (none)</li>
+<li>Northern Grampians: <code v-pre>https://local.pozi.com/</code></li>
+<li>Loddon: <code v-pre>https://poziserver.loddon.vic.gov.au/iis/</code></li>
+</ul>
+</doc-panel>
+<doc-anchor-target id="authentication-type">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#authentication-type">#</doc-anchor-trigger>
+        <span>Authentication Type</span>
+    </h4>
+</doc-anchor-target>
+<p>Token based authentication is recommended and the default. Only use cookie based authentication as a fallback.</p>
+<doc-anchor-target id="client-id--application-id">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#client-id--application-id">#</doc-anchor-trigger>
+        <span>Client ID / Application ID</span>
+    </h4>
+</doc-anchor-target>
+<p>This is sometimes also called &#x27;application id&#x27; and has the following structure: <code v-pre>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</code>.</p>
+<p>The client id is defined in Enterprise Applications =&gt; Properties.</p>
+<doc-anchor-target id="authority">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#authority">#</doc-anchor-trigger>
+        <span>Authority</span>
+    </h4>
+</doc-anchor-target>
+<p>This has the following structure: <code v-pre>https://login.microsoftonline.com/&lt;tenant id&gt;</code>, where tenant id looks like <code v-pre>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</code>.</p>
+<p>The tenant id is defined in Azure Active Directory =&gt; Overview.</p>
+<doc-anchor-target id="scopes">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#scopes">#</doc-anchor-trigger>
+        <span>Scopes</span>
+    </h4>
+</doc-anchor-target>
+<p>Scopes provide the possibility to request extra permissions. Make sure that the scopes are valid. Otherwise, the whole authentication process may fail.</p>
+<p>Also, make sure to at least add a scope for user impersonation, which is a requirement for Application Proxy access (e.g. <code v-pre>https://&lt;pozi-server-at-client&gt;.msappproxy.net/pozi/user_impersonation</code>.</p>
+<p>Scopes are defined in App Registrations =&gt; <code v-pre>&lt;the pozi server app&gt;</code> =&gt; Expose an API.</p>
+<doc-panel id="examples" collapsed>
+    <template #title>Examples</template>
+<ul>
+<li><code v-pre>https://poziserver-loddonvicgovau.msappproxy.net/pozi/user_impersonation</code></li>
+<li><code v-pre>https://pozi-cardiniavicgovau.msappproxy.net/user_impersonation</code></li>
+<li><code v-pre>https://pozi.ngshire.vic.gov.au/user_impersonation</code></li>
+<li><code v-pre>https://poziserver-northburnettqldgovau.msappproxy.net/pozi/user_impersonation</code></li>
+</ul>
+</doc-panel>
+<doc-anchor-target id="local-data-source">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#local-data-source">#</doc-anchor-trigger>
+        <span>Local Data Source</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="poziserverurl">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#poziserverurl">#</doc-anchor-trigger>
+        <span>PoziServerURL</span>
+    </h4>
+</doc-anchor-target>
+<doc-panel id="examples" collapsed>
+    <template #title>Examples</template>
+<ul>
+<li><code v-pre>https://poziserver-loddonvicgovau.msappproxy.net/pozi/qgisserver/wfs3.json</code></li>
+<li><code v-pre>https://pozi-cardiniavicgovau.msappproxy.net/resourcecheck/cardinia.json</code></li>
+<li><code v-pre>https://local.pozi.com/resourcecheck/northerngrampians.json</code></li>
+<li><code v-pre>https://poziserver-northburnettqldgovau.msappproxy.net/pozi/qgisserver/wfs3.json</code></li>
+</ul>
+</doc-panel>
 <doc-anchor-target id="setup">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#setup">#</doc-anchor-trigger>
@@ -348,14 +473,6 @@
 </doc-codeblock></div>
 <p>Ensure it doesn&#x27;t return a response to a non-logged-in or anonymous user.</p>
 <p>Configure site with new resource check URL, and test accessing private datasets within Pozi app (ie, by adding as a layer) to check for any issues with CORS.</p>
-<doc-anchor-target id="site-url">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#site-url">#</doc-anchor-trigger>
-        <span>Site URL</span>
-    </h2>
-</doc-anchor-target>
-<p>Using <code v-pre>[sitename].enterprise.pozi.com</code> forces user to authenticate before proceeding to the Pozi site. These users will gain access to the private datasets.</p>
-<p>Public users should continue to use <code v-pre>[sitename].pozi.com</code>. They will not be prompted to authenticate, and they will have access to only public data.</p>
 <doc-anchor-target id="resource-check">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#resource-check">#</doc-anchor-trigger>
