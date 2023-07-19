@@ -101,6 +101,12 @@ Scopes are defined in App Registrations => `<the pozi server app>` => Expose an 
 
 ==-
 
+:::note Note:
+
+Pozi requires that the `PoziServerURL` field points to a valid JSON endpoint that is behind the Azure App Proxy. If there is no URL configured or if it does not go through the Azure App Proxy, Pozi will not attempt to authenticate the user.
+
+:::
+
 ## Setup
 
 Guide client to configure:
