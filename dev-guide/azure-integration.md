@@ -7,6 +7,100 @@ Reference: https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/app
 
 ![](/dev-guide/img/azure-app-proxy-overview.png)
 
+## Site URL
+
+Using `[sitename].enterprise.pozi.com` forces the user to authenticate before proceeding to the Pozi site. These users will gain access to their organisation's private datasets.
+
+Public users should continue to use `[sitename].pozi.com`. They will not be prompted to authenticate, and they will have access to only public data.
+
+## Site Configuration
+
+The following settings are configured in the Pozi Config Manager, within the Site settings.
+
+### Azure Application Proxy Settings
+
+#### Enabled
+
+When enabled, Pozi will attempt to authenticate the user when in 'enterprise' mode.
+
+Due to a bug in the interface, it's not possible to tick this box directly using a mouse. Instead, place the cursor in the text box preceding the tickbox, press Tab to focus the cursor on the tickbox, then press Space to toggle the tickbox.
+
+#### Application Proxy external URL
+
+The externally accessible URL to access the Application Proxy.
+
+This is defined in Enterprise Applications => Application Proxy => External Url
+
+==- Examples
+
+- `https://pozi-cardiniavicgovau.msappproxy.net/`
+- `https://poziserver-loddonvicgovau.msappproxy.net/pozi/`
+- `https://poziserver-northburnettqldgovau.msappproxy.net/pozi/`
+- `https://pozi.ngshire.vic.gov.au/`
+
+==-
+
+#### Application Proxy internal URL
+
+The internally only accessible URL to access the Pozi Server from within the client's network.
+
+This is defined in Enterprise Applications => Application Proxy => Internal Url.
+
+==- Examples
+
+- North Burnett: `http://gis2/pozi/`
+- Cardinia: (none)
+- Northern Grampians: `https://local.pozi.com/`
+- Loddon: `https://poziserver.loddon.vic.gov.au/iis/`
+
+==-
+
+#### Authentication Type
+
+Token based authentication is recommended and the default. Only use cookie based authentication as a fallback.
+
+#### Client ID / Application ID
+
+This is sometimes also called 'application id' and has the following structure: `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`.
+
+The client id is defined in Enterprise Applications => Properties.
+
+#### Authority
+
+This has the following structure: `https://login.microsoftonline.com/<tenant id>`, where tenant id looks like `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`.
+
+The tenant id is defined in Azure Active Directory => Overview.
+
+#### Scopes
+
+Scopes provide the possibility to request extra permissions. Make sure that the scopes are valid. Otherwise, the whole authentication process may fail.
+
+Also, make sure to at least add a scope for user impersonation, which is a requirement for Application Proxy access (e.g. `https://<pozi-server-at-client>.msappproxy.net/pozi/user_impersonation`.
+
+Scopes are defined in App Registrations => `<the pozi server app>` => Expose an API.
+
+==- Examples
+
+- `https://poziserver-loddonvicgovau.msappproxy.net/pozi/user_impersonation`
+- `https://pozi-cardiniavicgovau.msappproxy.net/user_impersonation`
+- `https://pozi.ngshire.vic.gov.au/user_impersonation`
+- `https://poziserver-northburnettqldgovau.msappproxy.net/pozi/user_impersonation`
+
+==-
+
+### Local Data Source
+
+#### PoziServerURL
+
+==- Examples
+
+- `https://poziserver-loddonvicgovau.msappproxy.net/pozi/qgisserver/wfs3.json`
+- `https://pozi-cardiniavicgovau.msappproxy.net/resourcecheck/cardinia.json`
+- `https://local.pozi.com/resourcecheck/northerngrampians.json`
+- `https://poziserver-northburnettqldgovau.msappproxy.net/pozi/qgisserver/wfs3.json`
+
+==-
+
 ## Setup
 
 Guide client to configure:
@@ -39,12 +133,6 @@ https://local.pozi.com/resourcecheck/cardinia.json
 Ensure it doesn't return a response to a non-logged-in or anonymous user.
 
 Configure site with new resource check URL, and test accessing private datasets within Pozi app (ie, by adding as a layer) to check for any issues with CORS.
-
-## Site URL
-
-Using `[sitename].enterprise.pozi.com` forces user to authenticate before proceeding to the Pozi site. These users will gain access to the private datasets.
-
-Public users should continue to use `[sitename].pozi.com`. They will not be prompted to authenticate, and they will have access to only public data.
 
 ## Resource Check
 
