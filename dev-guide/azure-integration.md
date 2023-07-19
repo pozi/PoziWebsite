@@ -31,11 +31,15 @@ The externally accessible URL to access the Application Proxy.
 
 This is defined in Enterprise Applications => Application Proxy => External Url
 
-==- Examples
+==- Examples (preferred)
 
-- `https://pozi-cardiniavicgovau.msappproxy.net/`
 - `https://poziserver-loddonvicgovau.msappproxy.net/pozi/`
 - `https://poziserver-northburnettqldgovau.msappproxy.net/pozi/`
+- `https://poziserver-queenscliffevicgovau.msappproxy.net/pozi/`
+
+==- Examples (other)
+
+- `https://pozi-cardiniavicgovau.msappproxy.net/`
 - `https://pozi.ngshire.vic.gov.au/`
 
 ==-
@@ -79,12 +83,15 @@ Also, make sure to at least add a scope for user impersonation, which is a requi
 
 Scopes are defined in App Registrations => `<the pozi server app>` => Expose an API.
 
-==- Examples
+==- Examples (preferred)
 
 - `https://poziserver-loddonvicgovau.msappproxy.net/pozi/user_impersonation`
+- `https://poziserver-northburnettqldgovau.msappproxy.net/pozi/user_impersonation`
+
+==- Examples (other)
+
 - `https://pozi-cardiniavicgovau.msappproxy.net/user_impersonation`
 - `https://pozi.ngshire.vic.gov.au/user_impersonation`
-- `https://poziserver-northburnettqldgovau.msappproxy.net/pozi/user_impersonation`
 
 ==-
 
@@ -92,12 +99,15 @@ Scopes are defined in App Registrations => `<the pozi server app>` => Expose an 
 
 #### PoziServerURL
 
-==- Examples
+==- Examples (preferred)
 
 - `https://poziserver-loddonvicgovau.msappproxy.net/pozi/qgisserver/wfs3.json`
-- `https://pozi-cardiniavicgovau.msappproxy.net/resourcecheck/cardinia.json`
-- `https://local.pozi.com/resourcecheck/northerngrampians.json`
 - `https://poziserver-northburnettqldgovau.msappproxy.net/pozi/qgisserver/wfs3.json`
+
+==- Examples (other)
+
+- `https://pozi-cardiniavicgovau.msappproxy.net/iis/qgisserver/wfs3.json`
+- `https://pozi.ngshire.vic.gov.au/iis/qgisserver/wfs3.json`
 
 ==-
 

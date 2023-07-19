@@ -88,6 +88,8 @@ Ensure it doesn't return a response to a non-logged-in or anonymous user.
 Add the App Proxy Url to `Redirect URIs` to the `Web` section. E.g.:
   * `https://poziserver-<clientname>.msappproxy.net/pozi/`
 
+This is the same as the External Url configured above.
+
 #### Single Page Application - Redirect URIs
 
 Add the following `Redirect URIs` to the `Single-page application` section:
@@ -110,7 +112,7 @@ Please make sure that the URIs all have a trailing slash ('/') and note that the
 
 ### Authorisation
 
-All going well, it should be possible to visit the App Proxy Url (in our example case: `https://poziserver-<clientname>.msappproxy.net/`). If an error is shown like: `Sorry, but we’re having trouble with signing you in.` with a text similar to below, then we will need to give the relevant users/groups access.
+All going well, it should be possible to visit the App Proxy Url (in our example case: `https://poziserver-<clientname>.msappproxy.net/pozi/`). If an error is shown like: `Sorry, but we’re having trouble with signing you in.` with a text similar to below, then we will need to give the relevant users/groups access.
 
 :::note Example authorisation error:
 

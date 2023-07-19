@@ -237,13 +237,14 @@ When you fund the development of new features, you have ongoing access to the ne
 | Linked data | ✔️ | ✔️ |
 | Mail merge | ✔️ | ✔️ |
 | Share link | ✔️ | ✔️ |
+| Measure | ✔️ | ✔️ |
 | Data entry | ✔️ | (coming soon) |
 | Unified Search |  | ✔️ |
 | <big>**Layer Options**</big> | | |
 | Opacity | ✔️ | ✔️ |
 | Download |  | ✔️ |
 | Filter |  | ✔️ |
-| Table View |  | ✔️ |
+| Interactive table |  | ✔️ |
 | Tooltips |  | ✔️ |
 | <big>**Administration**</big> | | |
 | Configuration tool(s) | MapManager & ConfigManager | QGIS Desktop |
