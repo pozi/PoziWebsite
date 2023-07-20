@@ -6,11 +6,15 @@ tags: [Pozi Enterprise, Cardinia Shire Council]
 
 # Nearmap
 
-Pozi integrates directly with the Nearmap API so your users get fast access to the latest high-resolution imagery. No downloading or double-handing required.
+Pozi integrates directly with the Nearmap API so your users get fast access to the latest high-resolution imagery. No downloading or double-handing of large image files required.
 
-Try an interactive view here:
+Try the interactive view here:
 
-<iframe width="100%" height="500px" frameborder="0" scrolling="no" src="https://cardinia.pozi.com/#/x[145.41726]/y[-37.98234]/z[20]/layers[nearmap]/layers[vicmaplabels]/"></iframe>
+<iframe width="100%" height="500px" frameborder="0" scrolling="no" allow="fullscreen" src="https://cardinia.pozi.com/#/x[145.41726]/y[-37.98234]/z[20]/layers[nearmap]/layers[vicmaplabels]/"></iframe>
+
+<br/>
+
+---
 
 ## API Key
 

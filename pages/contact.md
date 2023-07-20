@@ -25,7 +25,7 @@ Level 19, 15 William Street<br/>
 Melbourne VIC 3000<br/>
 Australia
 
-<iframe width="100%" height="300px" src="https://contact.pozi.com/"></iframe>
+<iframe width="100%" height="300px" allow="fullscreen" src="https://contact.pozi.com/"></iframe>
 
 <br/>
 <br/>

@@ -29,7 +29,7 @@ We have a vision to simplify the way Victorian councils integrate their property
 
 View live property information from Vicmap in this Pozi map
 
-<iframe width="100%" height="500px" src="https://vicmap.pozi.com/"></iframe>
+<iframe width="100%" height="500px" allow="fullscreen" src="https://vicmap.pozi.com/"></iframe>
 
 <br/>
 

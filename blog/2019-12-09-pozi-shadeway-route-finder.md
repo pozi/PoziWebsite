@@ -17,7 +17,7 @@ Guided demo:
 
 Try it for yourself here!
 
-<iframe width="100%" height="500px" frameborder="0" scrolling="no" src="https://go.pozi.com/#/bendigo-shadeways"></iframe>
+<iframe width="100%" height="500px" frameborder="0" scrolling="no" allow="fullscreen" src="https://go.pozi.com/#/bendigo-shadeways"></iframe>
 
 <br/>
 

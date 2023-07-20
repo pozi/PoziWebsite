@@ -7,4 +7,4 @@ layout: central
 
 ## Try it yourself
 
-<iframe width="100%" height="500px" src="https://contact.pozi.com/"></iframe>
+<iframe width="100%" height="500px" allow="fullscreen" src="https://contact.pozi.com/"></iframe>

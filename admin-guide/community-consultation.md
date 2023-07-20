@@ -13,16 +13,16 @@ Read case studies [here](/tags/community-consultation).
 
 ==- Glen Eira - Urban Forest Strategy
 
-<iframe width="100%" height="500px" frameborder="0" scrolling="no" src="https://gleneira.pozi.com/#/layers[urbanforeststrategy]/"></iframe>
+<iframe width="100%" height="500px" frameborder="0" scrolling="no" allow="fullscreen" src="https://gleneira.pozi.com/#/layers[urbanforeststrategy]/"></iframe>
 
 
 ==- Wangaratta - Walking and Cycling Strategy (display only)
 
-<iframe width="100%" height="500px" frameborder="0" scrolling="no" src="https://wangaratta.pozi.com/#/layers[walkingcyclingstrategycommunityinput]/"></iframe>
+<iframe width="100%" height="500px" frameborder="0" scrolling="no" allow="fullscreen" src="https://wangaratta.pozi.com/#/layers[walkingcyclingstrategycommunityinput]/"></iframe>
 
 ==- Horsham - Open Space Strategy (display only)
 
-<iframe width="100%" height="500px" frameborder="0" scrolling="no" src="https://horsham.pozi.com/#/layers[openspacestrategy]/"></iframe>
+<iframe width="100%" height="500px" frameborder="0" scrolling="no" allow="fullscreen" src="https://horsham.pozi.com/#/layers[openspacestrategy]/"></iframe>
 
 ==-
 
