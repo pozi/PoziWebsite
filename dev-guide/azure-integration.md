@@ -36,6 +36,7 @@ This is defined in Enterprise Applications => Application Proxy => External Url
 - `https://poziserver-loddonvicgovau.msappproxy.net/pozi/`
 - `https://poziserver-northburnettqldgovau.msappproxy.net/pozi/`
 - `https://poziserver-queenscliffevicgovau.msappproxy.net/pozi/`
+- `https://gispozi-gleneira.msappproxy.net/pozi/`
 
 ==- Examples (other)
 
@@ -56,6 +57,7 @@ This is defined in Enterprise Applications => Application Proxy => Internal Url.
 - Cardinia: (none)
 - Northern Grampians: `https://local.pozi.com/`
 - Loddon: `https://poziserver.loddon.vic.gov.au/iis/`
+- Glen Eira: `http://th-prod-maps/pozi/`
 
 ==-
 
@@ -87,6 +89,7 @@ Scopes are defined in App Registrations => `<the pozi server app>` => Expose an 
 
 - `https://poziserver-loddonvicgovau.msappproxy.net/pozi/user_impersonation`
 - `https://poziserver-northburnettqldgovau.msappproxy.net/pozi/user_impersonation`
+- `https://gispozi-gleneira.msappproxy.net/pozi/user_impersonation`
 
 ==- Examples (other)
 
@@ -103,6 +106,7 @@ Scopes are defined in App Registrations => `<the pozi server app>` => Expose an 
 
 - `https://poziserver-loddonvicgovau.msappproxy.net/pozi/qgisserver/wfs3.json`
 - `https://poziserver-northburnettqldgovau.msappproxy.net/pozi/qgisserver/wfs3.json`
+- `https://gispozi-gleneira.msappproxy.net/pozi/qgisserver/wfs3.json`
 
 ==- Examples (other)
 

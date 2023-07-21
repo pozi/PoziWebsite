@@ -219,6 +219,7 @@ Layer Properties > QGIS Server > Keyword list
 * `showLegend=false`: don't display layer legend
 * `type=TileWMS`: for WMS layers, render as image tiles (instead of a single image)
 * `visible=true`: display layer by default
+* `downloadable=false`: don't display download options for this layer
 
 When using multiple keyword settings, use commas to separate them.
 

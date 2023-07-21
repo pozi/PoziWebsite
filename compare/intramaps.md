@@ -239,7 +239,8 @@ When you fund the development of new features, you have ongoing access to the ne
 | Share link | ✔️ | ✔️ |
 | Measure | ✔️ | ✔️ |
 | Data entry | ✔️ | (coming soon) |
-| Unified Search |  | ✔️ |
+| Unified search |  | ✔️ |
+| Two-way community consultation |  | ✔️ |
 | <big>**Layer Options**</big> | | |
 | Opacity | ✔️ | ✔️ |
 | Download |  | ✔️ |
@@ -261,6 +262,7 @@ When you fund the development of new features, you have ongoing access to the ne
 | On-premise databases and files |  | ✔️ |
 | Live corporate data integration |  | ✔️ |
 | Live web services |  | ✔️ |
+| Choice of basemaps |  | ✔️ |
 | <big>**Support**</big> | | |
 | Rapid help desk support |  | ✔️ |
 | Community forum |  | ✔️ |
