@@ -16,17 +16,23 @@ The Pozi map will display centred at a specific location and zoom level.
 
 https://frankston.pozi.com/#/x[145.12617]/y[-38.14357]/z[17]/
 
+### Layer Display
+
+Pozi will display the specified layer. Specify the layer name in lower case and with any spaces or underscores removed.
+
+https://shepparton.pozi.com/#/layers[wastecollectionzones]/
+
 ### What's Here
 
-Pozi will display the Info Panel results for the target location or region.
+Pozi will display the Info Panel results for the target point location or region.
 
 #### Point Location
 
-https://gleneira.pozi.com/#/x[145.05178]/y[-37.90975]/z[18]/feature[whatshere,POINT(145.05178%20-37.90975)]/tab[info]/
+https://gleneira.pozi.com/#/x[145.05178]/y[-37.90975]/z[18]/feature[whatshere,POINT(145.05178%20-37.90975)]/
 
 #### Region
 
-https://strathbogie.pozi.com/#/x[145.56842]/y[-36.75206]/z[19]/feature[whatshere,POLYGON((145.56777%20-36.75196%2C145.568832%20-36.75147%2C145.56863%20-36.75224%2C145.56777%20-36.75196))]/tab[info]/
+https://strathbogie.pozi.com/#/x[145.56842]/y[-36.75206]/z[19]/feature[whatshere,POLYGON((145.56777%20-36.75196%2C145.568832%20-36.75147%2C145.56863%20-36.75224%2C145.56777%20-36.75196))]/
 
 ### Feature Selection
 
@@ -37,10 +43,6 @@ https://latrobe.pozi.com/#/layers[skateparks]/feature[skateparks,4]/
 If the feature location is known (for example, if you have coordinates in addition to the feature id), specify the coordinates and a suitable zoom level.
 
 https://latrobe.pozi.com/#/x[146.40171]/y[-38.23845]/z[18]/layers[skateparks]/feature[skateparks,4]/
-
-### Layer Display
-
-https://shepparton.pozi.com/#/layers[wastecollectionzones]/
 
 ### Layer Filter
 
