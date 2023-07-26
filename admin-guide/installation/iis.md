@@ -169,7 +169,7 @@ Set permissions for `IIS AppPool\PoziQgisServer` :
 
 IIS > select server > Application Pools > PoziQgisServer > Advanced settings > Identity > Application Pool Identity > Custom account > enter details of the domain user that runs Pozi "service" account (include the domain prefix and backslash, or use the email address of the domain user)
 
-# Testing
+## Testing
 
 Construct a WMS GetProjectSettings request for any existing QGIS project file as follows:
 
@@ -180,6 +180,63 @@ http://localhost/pozi/qgisserver?service=WMS&map=C:/Projects/SomeProject.qgs&req
 Substitute `C:/Projects/SomeProject.qgs` with the file path of an actual QGIS project file. Any backslashes in the path must be replaced with forward slashes.
 
 Enter the constructed URL into the address bar of your browser, hit Enter, and you should see an XML file that describes the data endpoints for the project's layers.
+
+<br/>
+
+---
+
+## Serving Static Files
+
+Pozi can be configured to deliver content from your network to users, either as links or embedded images (if the link ends with `.jpg` or `.png`).
+
+As a web application, Pozi can interact only through web URLs and not network file paths.
+
+This section describes how to turn network folders into URLs that Pozi can use to access documents and image files.
+
+### Create Parent Virtual Directory
+
+Configure a top-level virtual folder within Pozi's IIS profile as follows:
+
+IIS > select server > Sites > Default Web Site > Pozi > right-click > Add Virtual Directory
+
+- Alias: `static`
+- Physical path: `C:\Pozi\IIS\Static`
+- OK
+
+The path specified is not actually important, except if using it for directly storing content.
+
+The purpose of this virtual directory is it creates a `/static` path within Pozi's IIS endpoint under which one or more virtual subdirectories can be configured for various folders on your network.
+
+### Create Subdirectories for Your Content
+
+Create the virtual subdirectories within the new `/static` directory that can point to network folders containing your content.
+
+IIS > select server > Sites > Default Web Site > Pozi > `static` > right-click > Add Virtual Directory
+
+- Alias: name of resource (eg `ConquestDocs`)
+- Physical path: path of network folder containing your content
+
+Note: the user account under which IIS application pool is running (typically PoziService or similar) must have read access to the physical path.
+
+![Alt text](img/iis-virtual-directory.png){style="width:700px"}
+
+### Links
+
+When configured as above, any content within the specified folders can be accessed via their corresponding virtual directory.
+
+#### Example File 
+
+- Physical file: `\\<networkdrive>\GIS$\Documents\Cavendish\preschool.JPG`
+
+#### Example Links
+
+- Local URL: `http://localhost/pozi/static/ConquestDocs/Cavendish/preschool.JPG`
+- Network URL: `http://<servername>/pozi/static/ConquestDocs/Cavendish/preschool.JPG`
+- Azure App Proxy URL: `https://<appproxyendpoint>/pozi/static/ConquestDocs/Cavendish/preschool.JPG`
+
+The local and network URLs can be used for testing and troubleshooting purposes.
+
+The Azure App Proxy URL is the link format you'll use for referencing content within your layers.
 
 <br/>
 
