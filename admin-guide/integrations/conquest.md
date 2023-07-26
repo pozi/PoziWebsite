@@ -14,6 +14,10 @@ tags: [Pozi Enterprise, Southern Grampians Shire Council]
 
 ### Link-Out from Pozi
 
+To generate these links, see the instructions for working with [virtual fields](../qgis/configuring-layers#virtual-fields).
+
+#### Conquest On-Premise
+
 ``` Asset Example
 http://conquest/Link.aspx?Connection=Conquest&AssetID=13647
 ```
@@ -22,4 +26,12 @@ http://conquest/Link.aspx?Connection=Conquest&AssetID=13647
 http://conquest/Link.aspx?Connection=Conquest&DefectID=39582
 ```
 
-To generate these links, see the instructions for working with [virtual fields](../qgis/configuring-layers#virtual-fields).
+#### Conquest Cloud
+
+``` Asset Example
+https://southerngrampians.conquest.live/Link.aspx?Connection=Conquest+Cloud+Southern+Grampians+Production&AssetID=14196
+```
+
+``` Defect Example 
+https://southerngrampians.conquest.live/Link.aspx?Connection=Conquest+Cloud+Southern+Grampians+Production&DefectID=46164
+```
