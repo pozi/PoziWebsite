@@ -172,6 +172,8 @@ The Font Awesome icon library contains thousands of icons to choose from. While 
 
 [!ref target="blank" icon="location" text="Exploring Font Awesome icons"](https://fontawesome.com/search)
 
+Looking for a barbecue icon? Type 'bbq' into the Font Awesome online search to see the matching icons. Note that they are named 'grill'. Now go to QGIS and type in 'grill' to find the icon.
+
 !!!
 
 <br/>

@@ -94,11 +94,11 @@ This is the same as the External Url configured above.
 
 Add the following `Redirect URIs` to the `Single-page application` section:
   * `https://<sitename>.enterprise.pozi.com/`
-  * If needed, add any extra URIs that the client uses (e.g. `https://<sitename>-azure.enterprise.pozi.com/`)
   * `http://localhost:3000/` (for Pozi development purposes)
   * `https://staging.pozi.com/` (for client testing/debugging)
 
-All the URIs above will be needed for Pozi to be fully functional.
+If upgrading an existing non-Azure Pozi site, also add a URI for a dedicated test site with `-azure` appended to the existing site name:
+  * `https://<sitename>-azure.enterprise.pozi.com/`
 
 Please make sure that the URIs all have a trailing slash ('/') and note that the localhost URI is `http` (and not `https`).
 

@@ -32,7 +32,7 @@ Pozi delivers powerful location-based functionality at a fraction of the cost of
 | | <small>All the features of Pozi Public, plus:</small> | <small>All the features of Pozi Pro, plus:</small> | <small>All the features of Pozi Enterprise, plus:</small> |
 | ✔️ Live, authoritative data | ✔️ Community consultation module | ✔️ [QGIS integration](/qgis/) | 🚀 Azure AD Application Proxy integration |
 | ✔️ Customer support | ✔️ Advanced search | ✔️ Corporate system integrations | 📃 Enterprise Cloud Service Level Agreement |
-| ✔️ Responsive design | ✔️ Nearby places | ✔️ Public data sync |  |
+| ✔️ Responsive design | ✔️ Nearby places | ✔️ Public data sync | 👤 Up to 250 authenticated users (ask us for a quote for additional users) |
 | ✔️ Intelligent address search | ✔️ Multiple imagery layers | ✔️ Table view |  |
 | ✔️ GPS location | ✔️ Map widget |  |  |
 | ✔️ Aerial imagery | ✔️ Data widget |  |  |

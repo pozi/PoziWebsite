@@ -90,21 +90,11 @@ QGIS Server is [certified by the OGC](https://www.opengeospatial.org/resource/pr
 
 QGIS Server is installed on your network (physical or private cloud) as part of the Pozi Server implementation.
 
-Pozi's *hybrid cloud* architecture enables any user to access the Pozi web application and **public** datasets from wherever they are. However internal datasets that you publish with QGIS are available only to those users who are on your organisation's corporate network.
-
-+++ Enterprise
-
-![](/static/draw.io/network-diagram-enterprise.png)
-
-Users who are connected to the corporate network (either physically or via VPN) have access to internal data sources.
-
-+++ Enterprise Cloud
+Pozi's *hybrid cloud* architecture enables any user to access the Pozi web application and **public** datasets from wherever they are. However internal datasets that you publish with QGIS are available only to authenticated users.
 
 ![](/static/draw.io/network-diagram-enterprise-cloud.png)
 
 Users who are signed in to their Microsoft account gain access to corporate data sources that are made available through Microsoft App Proxy.
-
-+++
 
 ### Configuration
 
