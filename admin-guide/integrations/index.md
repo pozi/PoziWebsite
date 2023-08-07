@@ -28,6 +28,7 @@ Pozi's open architecture enables it to integrate seamlessly with a wide range of
 * Ibis Rating Manager
 * Infor Pathway
 * Jotform
+* [MAGIQ](./magiq/)
 * [MapBox](./mapbox/)
 * MapQuest
 * Mapscape

@@ -10,7 +10,7 @@ tags: [Pozi Enterprise, URL protocol handler, Hindmarsh Shire Council, Horsham R
 
 ### Link-Out from Pozi
 
-MAGIQ is a Browser based application that supports linking via passing a URL from Pozi to MAGIQ.
+MAGIQ is a browser based application that supports linking via passing a URL from Pozi to MAGIQ.
 
 For any selected property feature, Pozi users can click a link to launch the MAGIQ application which displays the properties details.
 
@@ -22,7 +22,7 @@ An example link for MAGIQ looks like this:
 
 Update magiq.northburnett.qld.gov.au for your specific MAGIQ URL.
 
-+++ QGIS Configuration
+#### QGIS Configuration
 
 Create a virtual field with the output field type of “Text” on your property boundary layer.
 
