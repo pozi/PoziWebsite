@@ -129,7 +129,7 @@ Pozi Connect generates property and address change reports (M1s) for Victorian m
 
 If your council is already using Pozi Connect, and you've switched to a new property system, we'll reconfigure your Pozi Connect to integrate with your new property system.
 
-<small>AUD</small>$1800
+<small>AUD</small>$3600
 
 <br clear="all" />
 

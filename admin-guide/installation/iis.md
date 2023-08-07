@@ -187,7 +187,7 @@ Enter the constructed URL into the address bar of your browser, hit Enter, and y
 
 ## Serving Static Files
 
-Pozi can be configured to deliver content from your network to users, either as links or embedded images (if the link ends with `.jpg` or `.png`).
+Pozi can be configured to deliver documents and other content from your network to users within Pozi, either as clickable links or, if the link ends with `.jpg` or `.png`, as embedded images.
 
 As a web application, Pozi can interact only through web URLs and not network file paths.
 
@@ -239,6 +239,56 @@ The local and network URLs can be used for testing and troubleshooting purposes.
 The Azure App Proxy URL is the link format you'll use for referencing content within your layers.
 
 <br/>
+
+---
+
+## Proxy ogr2ogr from IIS
+
+It is possible to get IIS to proxy requests to PoziServer. The advantage would be that IIS can be the default entry point for the Azure App Proxy whilst keeping access to PoziServer's ogr2ogr functionality for example.
+
+The drawback is that it's not straightforward: 2 pieces of software need to be installed with admin privileges and IIS needs to be configured manually (currently) to make the proxy functionality work.
+
+### Instructions
+
+* Download & install x64 installer for https://www.iis.net/downloads/microsoft/url-rewrite
+* Then download & install x64 installer for https://www.iis.net/downloads/microsoft/application-request-routing
+* Close and reopen IIS console
+
+### In IIS Home
+
+* Open 'Application Request Routing' icon. 
+* Click on Proxy - Server Proxy Settings
+* Check 'Enable Proxy' and hit 'Apply'
+
+Sites > Default Site > Pozi
+
+* Open feature 'URL rewrite'
+* 'Add rules...' and double-click 'Reverse Proxy'
+* Enter server name without http or https in 'Inbound rules'. E.g., enter `local.pozi.com` if that is where PoziServer is running.
+* OK
+* select newly created item, then Inbound Rules - Edit
+* Make sure that the values in the new rule match the attached image:
+* **Pattern**: `^ogr2ogr(.*)`
+* **Rewrite URL**: `https://local.pozi.com/ogr2ogr{R:1}` (make sure to match the `http` or `https` of the original URL)
+* Apply
+* click Back
+* select ReverseProxyInboundR.. > Rename: Pozi Server ogr2ogr
+
+Test: http://localhost/pozi/ogr2ogr
+
+### Example urls
+
+* https://pozicloudserver-teampozi.msappproxy.net/pozi/ogr2ogr?source=sample/queenscliffe/delwp/vmfeat/foi_point.shp
+
+### IIS Virtual Directory
+
+This allows us to serve content from the file system
+
+* Right click on Pozi (in Sites / Default Site)
+* Click on 'Add Virtual Directory...'
+* Fill in the alias field, eg `static`
+* Physical path: choose the path in the file system eg `C:\Pozi\IIS\Static`
+* Hit OK
 
 ---
 

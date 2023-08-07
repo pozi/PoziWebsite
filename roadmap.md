@@ -44,7 +44,36 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## Completed
 
+### July 2023
+
+#### New
+
+- [x] ⚡ enable users to download vector layers in multiple formats
+- [x] ⚡ display progress bar on loading screen
+- [x] ⚡ add support for default QGIS SVG symbols
+
+#### Improved
+
+- [x] 👍 add support for Authority application protocol
+- [x] 👍 allow administrators to disable download options
+- [x] 👍 allow administrators to disable child datasets without removing entirely
+- [x] 👍 upgrade to latest version of NodeJS
+- [X] 👍 upgrade to latest GeoStyler and remove our workaround for layer opacity bug
+
+#### Fixed
+
+- [x] 🪲 fix potential endless loop when checking for local data source
+- [x] 🪲 don't show tooltips for basemaps and imagery layers
+
 ### June 2023
+
+#### New
+
+- [x] ⚡ support for cloud-synced catalogues from QGIS
+- [x] ⚡ support for Maplibre GL vector tile sources
+- [x] ⚡ support for Google Basemap
+- [x] ⚡ support for dynamically styled SVG symbols from QGIS
+- [x] ⚡ support for FlatGeobuf vector format
 
 #### Improved
 
@@ -52,6 +81,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [x] 👍 don't display tooltips for non-selectable layers
 - [x] 👍 enable override of catalogue layer selectability
 - [X] 👍 enable override for WMS image tile sizes
+- [X] 👍 upgrade to latest versions of OpenLayers and GeoStyler
 
 #### Fixed
 
