@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744446392959">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744698333518">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.1.0">
@@ -35,12 +35,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.1.0.744446392959" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.1.0.744698333518" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.1.0.744446392959" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.1.0.744698333518" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.1.0.744446392959" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.1.0.744446392959" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.1.0.744698333518" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.1.0.744698333518" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -600,7 +600,7 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
         <span>Serving Static Files</span>
     </h2>
 </doc-anchor-target>
-<p>Pozi can be configured to deliver content from your network to users, either as links or embedded images (if the link ends with <code v-pre>.jpg</code> or <code v-pre>.png</code>).</p>
+<p>Pozi can be configured to deliver documents and other content from your network to users within Pozi, either as clickable links or, if the link ends with <code v-pre>.jpg</code> or <code v-pre>.png</code>, as embedded images.</p>
 <p>As a web application, Pozi can interact only through web URLs and not network file paths.</p>
 <p>This section describes how to turn network folders into URLs that Pozi can use to access documents and image files.</p>
 <doc-anchor-target id="create-parent-virtual-directory">
@@ -662,6 +662,75 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
 <p>The local and network URLs can be used for testing and troubleshooting purposes.</p>
 <p>The Azure App Proxy URL is the link format you&#x27;ll use for referencing content within your layers.</p>
 <br/>
+<hr>
+<doc-anchor-target id="proxy-ogr2ogr-from-iis">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#proxy-ogr2ogr-from-iis">#</doc-anchor-trigger>
+        <span>Proxy ogr2ogr from IIS</span>
+    </h2>
+</doc-anchor-target>
+<p>It is possible to get IIS to proxy requests to PoziServer. The advantage would be that IIS can be the default entry point for the Azure App Proxy whilst keeping access to PoziServer&#x27;s ogr2ogr functionality for example.</p>
+<p>The drawback is that it&#x27;s not straightforward: 2 pieces of software need to be installed with admin privileges and IIS needs to be configured manually (currently) to make the proxy functionality work.</p>
+<doc-anchor-target id="instructions">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#instructions">#</doc-anchor-trigger>
+        <span>Instructions</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>Download &amp; install x64 installer for <a href="https://www.iis.net/downloads/microsoft/url-rewrite" class="outbound" target="_blank"><span>https://www.iis.net/downloads/microsoft/url-rewrite</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
+<li>Then download &amp; install x64 installer for <a href="https://www.iis.net/downloads/microsoft/application-request-routing" class="outbound" target="_blank"><span>https://www.iis.net/downloads/microsoft/application-request-routing</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
+<li>Close and reopen IIS console</li>
+</ul>
+<doc-anchor-target id="in-iis-home">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#in-iis-home">#</doc-anchor-trigger>
+        <span>In IIS Home</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>Open &#x27;Application Request Routing&#x27; icon.</li>
+<li>Click on Proxy - Server Proxy Settings</li>
+<li>Check &#x27;Enable Proxy&#x27; and hit &#x27;Apply&#x27;</li>
+</ul>
+<p>Sites &gt; Default Site &gt; Pozi</p>
+<ul>
+<li>Open feature &#x27;URL rewrite&#x27;</li>
+<li>&#x27;Add rules...&#x27; and double-click &#x27;Reverse Proxy&#x27;</li>
+<li>Enter server name without http or https in &#x27;Inbound rules&#x27;. E.g., enter <code v-pre>local.pozi.com</code> if that is where PoziServer is running.</li>
+<li>OK</li>
+<li>select newly created item, then Inbound Rules - Edit</li>
+<li>Make sure that the values in the new rule match the attached image:</li>
+<li><strong>Pattern</strong>: <code v-pre>^ogr2ogr(.*)</code></li>
+<li><strong>Rewrite URL</strong>: <code v-pre>https://local.pozi.com/ogr2ogr{R:1}</code> (make sure to match the <code v-pre>http</code> or <code v-pre>https</code> of the original URL)</li>
+<li>Apply</li>
+<li>click Back</li>
+<li>select ReverseProxyInboundR.. &gt; Rename: Pozi Server ogr2ogr</li>
+</ul>
+<p>Test: http://localhost/pozi/ogr2ogr</p>
+<doc-anchor-target id="example-urls">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#example-urls">#</doc-anchor-trigger>
+        <span>Example urls</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><a href="https://pozicloudserver-teampozi.msappproxy.net/pozi/ogr2ogr?source=sample/queenscliffe/delwp/vmfeat/foi_point.shp" class="outbound" target="_blank"><span>https://pozicloudserver-teampozi.msappproxy.net/pozi/ogr2ogr?source=sample/queenscliffe/delwp/vmfeat/foi_point.shp</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
+</ul>
+<doc-anchor-target id="iis-virtual-directory">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#iis-virtual-directory">#</doc-anchor-trigger>
+        <span>IIS Virtual Directory</span>
+    </h3>
+</doc-anchor-target>
+<p>This allows us to serve content from the file system</p>
+<ul>
+<li>Right click on Pozi (in Sites / Default Site)</li>
+<li>Click on &#x27;Add Virtual Directory...&#x27;</li>
+<li>Fill in the alias field, eg <code v-pre>static</code></li>
+<li>Physical path: choose the path in the file system eg <code v-pre>C:\Pozi\IIS\Static</code></li>
+<li>Hit OK</li>
+</ul>
 <hr>
 <doc-anchor-target id="troubleshooting">
     <h2>
