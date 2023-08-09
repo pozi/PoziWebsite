@@ -1,7 +1,7 @@
 ---
 description: GIS integration for MAGIQ
 icon: dot
-tags: [Pozi Enterprise, URL protocol handler, Hindmarsh Shire Council, Horsham Rural City Council]
+tags: [Pozi Enterprise, URL protocol handler, North Burnett Shire Council]
 ---
 
 # MAGIQ
