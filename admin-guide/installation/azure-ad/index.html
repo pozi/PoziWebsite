@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744698333518">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744855037114">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.1.0">
@@ -33,11 +33,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.1.0.744698333518" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.1.0.744855037114" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.1.0.744698333518" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.1.0.744855037114" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.1.0.744698333518" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.1.0.744855037114" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -324,15 +324,15 @@
 <li><p><strong>Internal Url</strong> : <code v-pre>http://&lt;servername&gt;/pozi/</code>. Replace <code v-pre>&lt;servername&gt;</code> with the actual name of the server.</p>
 <p>To test internal Url on the internal network, opening the following Url in the browser should show a QGIS Server landing page:<code v-pre>http://&lt;servername&gt;/pozi/qgisserver/wfs3</code></p>
 </li>
-<li><p><strong>External Url</strong>: <code v-pre>https://poziserver-&lt;clientname&gt;.msapproxy.net/pozi/</code>.</p>
-<p>The <code v-pre>&lt;clientname&gt;</code> is a name that has been given to the organisation by MS Azure. The Url <code v-pre>https://poziserver-&lt;clientname&gt;.msapproxy.net/pozi/qgisserver/wfs3</code> should show the same landing page as in the Internal Url section above.</p>
+<li><p><strong>External Url</strong>: <code v-pre>https://poziserver-&lt;clientname&gt;.msappproxy.net/pozi/</code>.</p>
+<p>The <code v-pre>&lt;clientname&gt;</code> is a name that has been given to the organisation by MS Azure. The Url <code v-pre>https://poziserver-&lt;clientname&gt;.msappproxy.net/pozi/qgisserver/wfs3</code> should show the same landing page as in the Internal Url section above.</p>
 </li>
 <li><p><strong>Pre Authentication</strong>: <code v-pre>Azure Active Directory</code>.</p>
 </li>
 </ul>
 <p>Do <strong>not</strong> choose <code v-pre>Passthrough</code> as that will give any visitor access to the internal network, potentially creating a security risk.</p>
 <p>When configured correctly, a request from a logged-in user to Url (for example)...</p>
-<p><code v-pre>https://poziserver-&lt;clientname&gt;.msapproxy.net/pozi/qgisserver/wfs3.json</code></p>
+<p><code v-pre>https://poziserver-&lt;clientname&gt;.msappproxy.net/pozi/qgisserver/wfs3.json</code></p>
 <p>...should return the same response as a local request to...</p>
 <p><code v-pre>http://&lt;servername&gt;/pozi/qgisserver/wfs3.json</code></p>
 <p>Ensure it doesn&#x27;t return a response to a non-logged-in or anonymous user.</p>
@@ -348,7 +348,7 @@
 </ul>
 <p>All other settings here (like <strong>External Url</strong> and <strong>Pre Authentication</strong> are the same as above)</p>
 <p>When configured correctly, a request from a logged-in user to Url (for example)...</p>
-<p><code v-pre>https://poziserver-&lt;clientname&gt;.msapproxy.net/resourcecheck/&lt;sitename&gt;.json</code></p>
+<p><code v-pre>https://poziserver-&lt;clientname&gt;.msappproxy.net/resourcecheck/&lt;sitename&gt;.json</code></p>
 <p>...should return the same response as a local request to...</p>
 <p><code v-pre>https://local.pozi.com/resourcecheck/&lt;sitename&gt;.json</code></p>
 <p>Ensure it doesn&#x27;t return a response to a non-logged-in or anonymous user.</p>
@@ -482,7 +482,7 @@
 <li>Admin consent required: <code v-pre>No</code></li>
 </ul>
 <p>This should allow Pozi to determine access based on a user&#x27;s role(s).</p>
-<!-- Important: a user authenticated with the client's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://poziserver-<clientname>.msapproxy.net/`). -->
+<!-- Important: a user authenticated with the client's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://poziserver-<clientname>.msappproxy.net/`). -->
 <doc-anchor-target id="azure-ad-pozi-support-account">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#azure-ad-pozi-support-account">#</doc-anchor-trigger>
