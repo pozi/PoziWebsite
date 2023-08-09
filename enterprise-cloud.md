@@ -38,7 +38,7 @@ Microsoft SSO enables IT administrators to have better control and management ov
 
 #### Ultimate Connectivity
 
-Remote and mobile staff will have access to critical location information in the field and working from home. Field crews can use Pozi on phones and tablets with GPS positioning to guide them to precise locations to carry out inspections and works.
+Remote and mobile staff have access to critical location information in the field and working from home. Field crews can use Pozi on phones and tablets with GPS positioning to guide them to precise locations to carry out inspections and works.
 
 Pozi Enterprise Cloud leverages your organisation's Azure Active Directory to connect your field staff with your organisation's private datasets. No VPN required.
 

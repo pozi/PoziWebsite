@@ -58,7 +58,7 @@ Pozi Enterprise enables staff to carry out critical workflows within its use-to-
 
 ### Mobile
 
-Remote and mobile staff will have access to critical location information in the field and working from home. Field crews can use Pozi on phones and tablets with GPS functionality to guide them to precise locations to carry out inspections and works.
+Remote and mobile staff have access to critical location information in the field and working from home. Field crews can use Pozi on phones and tablets with GPS functionality to guide them to precise locations to carry out inspections and works.
 
 ## Upgrade
 

@@ -93,9 +93,7 @@ Capture geospatial data easily through your mobile device and share it with the 
 
 Pozi provides an Australian-hosted [Mergin](https://merginmaps.com/) server to enable your team to collaborate safely with others on the same geodata. See colleagues' updates in near real time, even from the field. Works offline. Edits are merged automatically. View and edit geodata in the field. Integrate with existing GIS infrastructure using open formats.
 
-Bundled with Pozi site: <small>AUD</small>$3K<small>/year</small>
-<br/>
-Standalone: <small>AUD</small>$5K<small>/year</small>
+Pricing on request.
 
 <br clear="all" />
 <br/>

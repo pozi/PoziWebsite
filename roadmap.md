@@ -44,6 +44,18 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## Completed
 
+### August 2023
+
+#### New
+
+- [x] ⚡ fullscreen button
+- [x] ⚡ enable link-in for search layer
+
+#### Improved
+
+- [x] 👍 send fewer WMS/WMTS requests when zooming with mouse wheel
+- [x] 👍 open Jotform Comments tab by default
+
 ### July 2023
 
 #### New

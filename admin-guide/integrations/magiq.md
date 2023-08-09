@@ -1,7 +1,7 @@
 ---
 description: GIS integration for MAGIQ
 icon: dot
-tags: [Pozi Enterprise, URL protocol handler, North Burnett Shire Council]
+tags: [Pozi Enterprise, Link-Out, North Regional Shire Council]
 ---
 
 # MAGIQ

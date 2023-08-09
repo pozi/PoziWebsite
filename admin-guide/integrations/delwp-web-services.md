@@ -38,11 +38,6 @@ There is a known limitation for *What's Here* queries whereby the service cannot
 - [WMS](https://opendata.maps.vic.gov.au/geoserver/wms?SERVICE=WMS&REQUEST=GetCapabilities)
 - [WFS](https://opendata.maps.vic.gov.au/geoserver/wfs?SERVICE=WFS&REQUEST=GetCapabilities)
 
-### Legacy Catalogues
-
-- [WMS](https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms?SERVICE=WMS&REQUEST=GetCapabilities)
-- [WFS](https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wfs?SERVICE=WFS&REQUEST=GetCapabilities)
-
 ## Vicmap Basemap
 
 ### Catalogue

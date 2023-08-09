@@ -239,34 +239,34 @@ When you fund the development of new features, you have ongoing access to the ne
 | Share link | ✔️ | ✔️ |
 | Measure | ✔️ | ✔️ |
 | Data entry | ✔️ | (coming soon) |
-| Unified search |  | ✔️ |
-| Two-way community consultation |  | ✔️ |
+| Unified search | ❌ | ✔️ |
+| Two-way community consultation | ❌ | ✔️ |
 | <big>**Layer Options**</big> | | |
 | Opacity | ✔️ | ✔️ |
-| Download |  | ✔️ |
-| Filter |  | ✔️ |
-| Interactive table |  | ✔️ |
-| Tooltips |  | ✔️ |
+| Download | ❌ | ✔️ |
+| Filter | ❌ | ✔️ |
+| Interactive table | ❌ | ✔️ |
+| Tooltips | ❌ | ✔️ |
 | <big>**Administration**</big> | | |
 | Configuration tool(s) | MapManager & ConfigManager | QGIS Desktop |
 | SQL queries | ✔️ | ✔️ |
-| Online reference and training material |  | ✔️ |
-| Custom development available |  | ✔️ |
+| Online reference and training material | ❌ | ✔️ |
+| Custom development available | ❌ | ✔️ |
 | <big>**Technology**</big> | | |
 | Supported map servers | MapServer | **QGIS Server**<br/>GeoServer<br/>MapServer<br/>ArcGIS Server |
 | Mapping Javascript library | OpenLayers v2<br/>(2013) | OpenLayers v7<br/>(2023) |
 | OGC standards compliant (WMS/WFS) | ✔️ | ✔️ |
-| Web optimised formats (Mapbox Vector Tiles, COG, FlatGeobuf) |    | ✔️ |
+| Web optimised formats (Mapbox Vector Tiles, COG, FlatGeobuf) |  ❌  | ✔️ |
 | <big>**Data Integrations**</big> | | |
 | Cloud database | ✔️ | ✔️ |
-| On-premise databases and files |  | ✔️ |
-| Live corporate data integration |  | ✔️ |
-| Live web services |  | ✔️ |
-| Choice of basemaps |  | ✔️ |
+| On-premise databases and files | ❌ | ✔️ |
+| Live corporate data integration | ❌ | ✔️ |
+| Live web services | ❌ | ✔️ |
+| Choice of basemaps | ❌ | ✔️ |
 | <big>**Support**</big> | | |
-| Rapid help desk support |  | ✔️ |
-| Community forum |  | ✔️ |
-| Preview upcoming features |  | ✔️ |
+| Rapid help desk support | ❌ | ✔️ |
+| Community forum | ❌ | ✔️ |
+| Preview upcoming features | ❌ | ✔️ |
 | <big>**Security**</big> | | |
 | User access | Active Directory | Azure Active Directory and App Proxy |
 | <big>**Procurement**</big> | | |

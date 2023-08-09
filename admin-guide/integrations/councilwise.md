@@ -1,7 +1,7 @@
 ---
 description: GIS integration for CouncilWise
 icon: dot
-tags: [Pozi Enterprise, Yarriambiack Shire Council, West Wimmera Shire Council, Southern Grampians Shire Council, Northern Grampians Shire Council]
+tags: [Pozi Enterprise, Link-Out, Yarriambiack Shire Council, West Wimmera Shire Council, Southern Grampians Shire Council, Northern Grampians Shire Council]
 ---
 
 # CouncilWise
