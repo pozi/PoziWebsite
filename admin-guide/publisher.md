@@ -139,8 +139,8 @@ Compile index of features and attributes for fast searching.
     * The action should be `Start a program`.
     * In the `Program/script` dialog box type `cmd.exe`.
     * For the `Add arguments (optional)` dialog box, add the location of Pozi Publisher, the `.ini` setting file and a `.log` file, as follows: `/c "powershell.exe "C:\Pozi\Publisher\PoziPublisher.ps1" -iniFiles "C:\Pozi\Publisher\publish-to-public.ini" > "C:\Pozi\Publisher\publish-to-public.log""`
-
-    !!!warning Warning 
-    Be careful with the placement of quotes in the arguments!
-    !!!
 1. Customise any further settings in the scheduled task.
+
+!!!warning Warning 
+Be careful with the placement of quotes in the arguments of the scheduled task action!
+!!!
