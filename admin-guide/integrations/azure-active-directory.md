@@ -15,7 +15,7 @@ Pozi's [Azure AD Application Proxy](https://azure.microsoft.com/en-au/services/a
 ## How it works
 
 1. user visits the dedicated Pozi Enterprise address (eg `<sitename>.enterprise.pozi.com`)
-2. Pozi app sends a request to client's MS App Proxy endpoint (eg `https://poziserver-<clientname>.msapproxy.net/pozi/qgisserver/wfs3.json`)
+2. Pozi app sends a request to client's MS App Proxy endpoint (eg `https://poziserver-<clientname>.msappproxy.net/pozi/qgisserver/wfs3.json`)
 3. if user is signed in to their Microsoft account, Pozi continues to load, and the user will have access to the internal datasets configured for Pozi within the organisation's app proxy
 
 If the user is not already logged in, the browser is redirected to the Microsoft login page.
@@ -28,7 +28,7 @@ Once signed in, users will have access to internal datasets for as long their Mi
 
 Whether a user can access private datasets is based on whether the user is given permission by the organisation to access the MS App Proxy endpoint that is dedicated for Pozi.
 
-As long as the staff member or other authorised user has permission to access the MS App Proxy endpoint ( eg `https://poziserver-<clientname>.msapproxy.net/pozi/`), then they will have access to the internal datasets that have been configured within Pozi.
+As long as the staff member or other authorised user has permission to access the MS App Proxy endpoint ( eg `https://poziserver-<clientname>.msappproxy.net/pozi/`), then they will have access to the internal datasets that have been configured within Pozi.
 
 ### Site Url
 

@@ -22,9 +22,9 @@ The following settings are for a Pozi server setup with only QGIS Server and IIS
 
   To test internal Url on the internal network, opening the following Url in the browser should show a QGIS Server landing page:`http://<servername>/pozi/qgisserver/wfs3`
 
-* **External Url**: `https://poziserver-<clientname>.msapproxy.net/pozi/`.
+* **External Url**: `https://poziserver-<clientname>.msappproxy.net/pozi/`.
 
-  The `<clientname>` is a name that has been given to the organisation by MS Azure. The Url `https://poziserver-<clientname>.msapproxy.net/pozi/qgisserver/wfs3` should show the same landing page as in the Internal Url section above.
+  The `<clientname>` is a name that has been given to the organisation by MS Azure. The Url `https://poziserver-<clientname>.msappproxy.net/pozi/qgisserver/wfs3` should show the same landing page as in the Internal Url section above.
 
 * **Pre Authentication**: `Azure Active Directory`.
 
@@ -32,7 +32,7 @@ Do **not** choose `Passthrough` as that will give any visitor access to the inte
 
 When configured correctly, a request from a logged-in user to Url (for example)...
 
-`https://poziserver-<clientname>.msapproxy.net/pozi/qgisserver/wfs3.json`
+`https://poziserver-<clientname>.msappproxy.net/pozi/qgisserver/wfs3.json`
 
 ...should return the same response as a local request to...
 
@@ -54,7 +54,7 @@ All other settings here (like **External Url** and **Pre Authentication** are th
 
 When configured correctly, a request from a logged-in user to Url (for example)...
 
-`https://poziserver-<clientname>.msapproxy.net/resourcecheck/<sitename>.json`
+`https://poziserver-<clientname>.msappproxy.net/resourcecheck/<sitename>.json`
 
 ...should return the same response as a local request to...
 
@@ -146,7 +146,7 @@ Give Pozi the following permissions:
 
 This should allow Pozi to determine access based on a user's role(s).
 
-<!-- Important: a user authenticated with the client's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://poziserver-<clientname>.msapproxy.net/`). -->
+<!-- Important: a user authenticated with the client's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://poziserver-<clientname>.msappproxy.net/`). -->
 
 ## Azure AD Pozi Support Account
 
