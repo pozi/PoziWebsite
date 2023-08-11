@@ -131,11 +131,16 @@ Compile index of features and attributes for fast searching.
 ### As a scheduled task
 
 1. Open `Task Scheduler` in Windows.
-1. Create a new scheduled task
+1. Create a new scheduled task using `Create Task...`.
+1. Name the new scheduled task something meaningful like `Pozi Publisher Sync`.
 1. In most cases these tasks will need to be `Run whether user is logged in or not`, possibly with an administrator login, to ensure it can be run at any time.
-1. Under `Triggers` set up the frequency the task should be run.
+1. Under `Triggers` set up the frequency the task should be run.  Generally this will be either Daily or Weekly.
 1. In the `Actions` tab, create a new action.
-    1. The action should be `Start a program`.
-    1. In the `Program/script` dialog box type `powershell.exe`.
-    1. For the `Add arguments (optional)` dialog box, add the location of Pozi Publisher and the `.ini` setting file, as follows: `-File "C:\Pozi\Publisher\src\PoziPublisher.ps1" -iniFiles "C:\Pozi\Publisher\deeca-iws-wms-northerngrampians-lga.ini"`
+    * The action should be `Start a program`.
+    * In the `Program/script` dialog box type `cmd.exe`.
+    * For the `Add arguments (optional)` dialog box, add the location of Pozi Publisher, the `.ini` setting file and a `.log` file, as follows: `/c "powershell.exe "C:\Pozi\Publisher\PoziPublisher.ps1" -iniFiles "C:\Pozi\Publisher\publish-to-public.ini" > "C:\Pozi\Publisher\publish-to-public.log""`
 1. Customise any further settings in the scheduled task.
+
+!!!warning Warning 
+Be careful with the placement of quotes in the arguments of the scheduled task action!
+!!!
