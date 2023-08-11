@@ -30,9 +30,9 @@ These links will continue to work as long as the layer names remain the same. If
 
 !!! Tip
 
-Any Pozi links that you copy from the browser address bar will contain the `x`, `y` and `z` values for the current map view. If your intention is to display your entire region (ie, the default map view), remove any `x`, `y` and `z` parameters.
+Any Pozi link that you copy from the browser address bar will contain the `x`, `y` and `z` values for your current map view. If your intention is for the link you're sharing to display your entire region (ie, your site's default map view), remove the `x`, `y` and `z` parameters.
 
-This will ensure that Pozi displays the whole region automatically set the most appropriate zoom level based on the user's screen size.
+This will ensure that Pozi displays the whole region and automatically set the most appropriate zoom level based on the user's screen size.
 
 !!!
 
