@@ -26,4 +26,11 @@ This is the resulting map from the above HTML:
 <iframe width="100%" height="500px" frameborder="0" scrolling="no" allow="fullscreen" src="https://bendigo.pozi.com/"></iframe>
 
 </br>
+
 Insert the HTML in any webpage or CMS that supports iframes.
+
+</br>
+
+## Examples
+
+[!ref icon="/static/img/client-logos/frankston.png" text="Frankston City Council - My Address"](https://www.frankston.vic.gov.au/My-Property/My-Address-property-information-and-whats-in-your-area/)

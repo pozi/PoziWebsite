@@ -47,7 +47,7 @@ It can take up to 10 minutes to process 1-2K images. During this time, QGIS may 
 ### Add VRT to Project
 
 1. open your Aerials project in QGIS
-2. Layer > Add Layer > Add Rater Layer > file picker > select your new VRT file > Open > Add
+2. Layer > Add Layer > Add Raster Layer > file picker > select your new VRT file > Open > Add
 3. Project > Save
 
 It can take several hours for the VRT file to be added to the project. During this time, QGIS will not respond, and the cursor displays as a spinner. This is a [known issue](https://github.com/qgis/QGIS/issues/26231) in QGIS. Let it run overnight or however long is necessary. When you see the layer is added to the layer panel, save your project.

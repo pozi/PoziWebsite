@@ -46,7 +46,7 @@ Pozi enables GIS administrators to quickly and easily distribute spatial informa
 
 <img src="../../static/img/undraw/undraw_information_tab_re_f0w3.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
 
-If you know how to use QGIS, you can publish data for your organisation's users in Pozi.
+If you know how to use QGIS, you can manage and publish data for your organisation's users in Pozi.
 
 There are no multi-day courses required to get you started.
 

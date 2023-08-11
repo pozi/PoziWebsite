@@ -22,6 +22,20 @@ Pozi will display the specified layer. Specify the layer name in lower case and 
 
 https://shepparton.pozi.com/#/layers[wastecollectionzones]/
 
+Pozi also supports multiple layers being turned on.
+
+https://cardinia.pozi.com/#/layers[communityinfrastructurelevy]/layers[localities]/
+
+These links will continue to work as long as the layer names remain the same. If a layer name is changed in the future, that layer will fail to load but the map will still load, and any other layers that haven't changed will still display.
+
+!!! Tip
+
+Any Pozi links that you copy from the browser address bar will contain the `x`, `y` and `z` values for the current map view. If your intention is to display your entire region (ie, the default map view), remove any `x`, `y` and `z` parameters.
+
+This will ensure that Pozi displays the whole region automatically set the most appropriate zoom level based on the user's screen size.
+
+!!!
+
 ### What's Here
 
 Pozi will display the Info Panel results for the target point location or region.

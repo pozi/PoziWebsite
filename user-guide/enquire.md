@@ -18,7 +18,7 @@ When enquiring on a location via clicking on the map or doing a search, Pozi dis
 Simple selections are triggered by any of the following events:
 
 * a single click on the map
-* using the search function
+* using the Search function
 * opening Pozi using a link that specifies a target location or feature id
   * example: `https://westwimmera.pozi.com/?propnum=1018753`
 
@@ -36,7 +36,6 @@ To enquire on a region:
 * double-click to finish
 
 Tip: to enquire on a *path* (for example, to select all the properties along a pipeline or other linear feature), use the region tool to draw a narrow region that approximates the path.
-
 
 ## Feature Selection
 
