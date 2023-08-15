@@ -220,6 +220,7 @@ Layer Properties > QGIS Server > Keyword list
 * `type=TileWMS`: for WMS layers, render as image tiles (instead of a single image)
 * `visible=true`: display layer by default
 * `downloadable=false`: don't display download options for this layer
+* `linkedLayers=[layer name]`: link the current layer's visibility to another layer in the project
 
 When using multiple keyword settings, use commas to separate them.
 
