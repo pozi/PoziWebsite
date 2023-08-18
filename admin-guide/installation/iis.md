@@ -244,9 +244,11 @@ The Azure App Proxy URL is the link format you'll use for referencing content wi
 
 ## Proxy ogr2ogr from IIS
 
-It is possible to get IIS to proxy requests to PoziServer. The advantage would be that IIS can be the default entry point for the Azure App Proxy whilst keeping access to PoziServer's ogr2ogr functionality for example.
+For clients with the legacy Pozi Server installed, but who are about to implement Azure AD integration, IIS can be configured to proxy requests to existing Pozi Server services (such as `ogr2ogr` required for Unified Search).
 
-The drawback is that it's not straightforward: 2 pieces of software need to be installed with admin privileges and IIS needs to be configured manually (currently) to make the proxy functionality work.
+This enables IIS to be the default entry point for the Azure App Proxy whilst keeping access to Pozi Server's `ogr2ogr` functionality.
+
+Two pieces of software need to be installed with admin privileges and IIS needs to be configured manually (currently) to make the proxy functionality work.
 
 ### Instructions
 
@@ -256,7 +258,7 @@ The drawback is that it's not straightforward: 2 pieces of software need to be i
 
 ### In IIS Home
 
-* Open 'Application Request Routing' icon. 
+* Open 'Application Request Routing' icon
 * Click on Proxy - Server Proxy Settings
 * Check 'Enable Proxy' and hit 'Apply'
 
@@ -264,7 +266,7 @@ Sites > Default Site > Pozi
 
 * Open feature 'URL rewrite'
 * 'Add rules...' and double-click 'Reverse Proxy'
-* Enter server name without http or https in 'Inbound rules'. E.g., enter `local.pozi.com` if that is where PoziServer is running.
+* Enter server name without http or https in 'Inbound rules'. E.g., enter `local.pozi.com` if that is where PoziServer is running
 * OK
 * select newly created item, then Inbound Rules - Edit
 * Make sure that the values in the new rule match the attached image:

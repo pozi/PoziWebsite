@@ -90,7 +90,7 @@ And engage with the public using Pozi's two-way community consultation functiona
 
 ### Unified Map
 
-Pozi avoids artificial data silos that are caused by managing data in separate modules. Within a single Pozi map, users can discover, use and combine information for their individual needs, without having to switch between separate map modules.
+Pozi avoids artificial data silos that are caused by managing data in separate "modules". Within a single Pozi map, users can discover, use and combine information for their individual needs, without having to switch between separate map modules.
 
 <img src="../../static/img/undraw/undraw_adventure_map_hnin.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
@@ -186,6 +186,7 @@ When you fund the development of new features, you have ongoing access to the ne
 
 * view layers as interactive tables, narrow down results with filters, and browse to navigate to specific features
 * generate reports based on features within the current map view with dynamically calculated statistics
+* download layers
 * export geo-referenced maps to desktop GIS
 
 ==- For administrators
@@ -248,7 +249,7 @@ When you fund the development of new features, you have ongoing access to the ne
 | Interactive table | ❌ | ✔️ |
 | Tooltips | ❌ | ✔️ |
 | <big>**Administration**</big> | | |
-| Configuration tool(s) | MapManager & ConfigManager | QGIS Desktop |
+| Configuration tool(s) | MapManager & ConfigManager | **QGIS Desktop** |
 | SQL queries | ✔️ | ✔️ |
 | Online reference and training material | ❌ | ✔️ |
 | Custom development available | ❌ | ✔️ |

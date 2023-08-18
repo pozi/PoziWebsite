@@ -12,7 +12,7 @@ Pozi's open architecture enables it to integrate seamlessly with a wide range of
 * ArcGIS Online
 * [Assetic myData](./assetic-mydata/)
 * [Azure AD App Proxy](./azure-active-directory/)
-* [Civica Authority](./authority/)
+* Civica Authority
 * [Civica Reflect](./civica-reflect/)
 * Confirm
 * [Conquest](./conquest/)

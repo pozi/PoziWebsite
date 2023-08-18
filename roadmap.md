@@ -19,26 +19,31 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ### New Features
 
+- [ ] fine-grained user permission control utilising Azure AD
+- [ ] collaborative map annotations
+- [ ] 3D view
+- [ ] dynamic loading of layer catalogues
+  - improve start-up time
+  - enable clients to add custom layers from external sources
+
+### Enhancements
+
+- [ ] prevent Share links from including the panel state (unless specified in advanced options)
+- [ ] zoom/pan to selected feature on Pozi launch if URL contains a selected feature
+- [ ] display What's Here target on Pozi launch if URL contains a target
+
+---
+
+## In Development
+
+### New Features
+
 - [ ] Pozi Publisher - ultimate spatial data catalogue management
   - publish map layers to the public from QGIS projects
   - improve start-up performance by pre-generating map catalogues
   - tap into external data providers with minimal configuration
-- [ ] fine-grained user permission control utilising Azure AD
 - [ ] display tables of only selected features
 - [ ] interactive bulk spatial selection for ad-hoc layers
-- [ ] collaborative map annotations
-- [ ] alternative layer download format options - GeoJSON, SHP, KML, GeoPackage, CSV and other popular formats
-- [ ] support for Google Maps basemap
-- [ ] 3D view
-
-### Enhancements
-
-- [ ] dynamic loading of layer catalogues
-  - improve start-up time
-  - enable clients to add custom layers from external sources
-- [ ] prevent Share links from including the panel state (unless specified in advanced options)
-- [ ] zoom/pan to selected feature on Pozi launch if URL contains a selected feature
-- [ ] display What's Here target on Pozi launch if URL contains a target
 
 ---
 
@@ -60,7 +65,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 #### New
 
-- [x] ⚡ enable users to download vector layers in multiple formats
+- [x] ⚡ enable users to download vector layers in multiple format options - GeoJSON, SHP, KML, GeoPackage, CSV and other popular formats
 - [x] ⚡ display progress bar on loading screen
 - [x] ⚡ add support for default QGIS SVG symbols
 
@@ -113,7 +118,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [x] 👍 support field alias names in table view, filter and report modes
 - [x] 👍 add SSO logout button
 - [x] 👍 smoother load experience - show buttons only after map is loaded and controls are usable
-- [x] 👍 enable Enterprise Cloud customers to preview any dev branch in staging
+- [x] 👍 enable Enterprise Cloud customers to preview any development branch in its own custom test site
 - [x] 👍 add projection support for catalogues and WMS layers
 - [x] 👍 enable catalogues to appear as folders inside of layer groups
 - [x] 👍 enable user to download annotation layer, whether the user created the annotations or not

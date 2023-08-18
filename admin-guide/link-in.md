@@ -10,6 +10,34 @@ This page outlines the URL parameters to launch a Pozi map to dynamically custom
 
 The URL parameters can be manually or programmatically constructed, or you can simply copy the URL of your Pozi session to capture and share its current state.
 
+### Location by Search Parameter
+
+Your Pozi site may be configured with search options for users to type in values for searching.
+
+Any of your site's search options can be triggered via a URL parameter.
+
+`https://sitename.pozi.com/#/search[searchname,searchvalue]/`
+
+Use the name of the search, convert to lower case, and remove any spaces or special characters. For example, if your search is called `Property Number`, use `propertynumber` as the search parameter name.
+
+==+ Property Number Example
+
+`https://mansfield.pozi.com/#/search[propertynumber,A7706]/`
+
+==- Property PFI Example
+
+`https://mansfield.pozi.com/#/search[propertypfi,45386823]/`
+
+==- Parcel PFI Example
+
+`https://mansfield.pozi.com/#/search[parcelpfi,5409508]/`
+
+==- Parcel SPI Example
+
+`https://mansfield.pozi.com/#/search[parcelspi,1\TP225210]/`
+
+==-
+
 ### Location by Coordinates
 
 The Pozi map will display centred at a specific location and zoom level.

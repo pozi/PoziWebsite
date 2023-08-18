@@ -82,7 +82,7 @@ The tenant id is defined in Azure Active Directory => Overview.
 
 Scopes provide the possibility to request extra permissions. Make sure that the scopes are valid. Otherwise, the whole authentication process may fail.
 
-Also, make sure to at least add a scope for user impersonation, which is a requirement for Application Proxy access (e.g. `https://<pozi-server-at-client>.msappproxy.net/pozi/user_impersonation`.
+Also, make sure to at least add a scope for user impersonation, which is a requirement for Application Proxy access (e.g. `https://<pozi-server-at-client>.msappproxy.net/pozi/user_impersonation`).
 
 Scopes are defined in App Registrations => `<the pozi server app>` => Expose an API.
 
