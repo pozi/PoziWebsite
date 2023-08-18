@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.745381194688">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.745649807971">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.1.0">
@@ -33,11 +33,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.1.0.745381194688" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.1.0.745649807971" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.1.0.745381194688" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.1.0.745649807971" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.1.0.745381194688" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.1.0.745649807971" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -327,20 +327,15 @@
     </h3>
 </doc-anchor-target>
 <ul class="contains-task-list">
-<li class="task-list-item"><input disabled="disabled" type="checkbox" /> Pozi Publisher - ultimate spatial data catalogue management
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> fine-grained user permission control utilising Azure AD</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> collaborative map annotations</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> 3D view</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> dynamic loading of layer catalogues
 <ul>
-<li>publish map layers to the public from QGIS projects</li>
-<li>improve start-up performance by pre-generating map catalogues</li>
-<li>tap into external data providers with minimal configuration</li>
+<li>improve start-up time</li>
+<li>enable clients to add custom layers from external sources</li>
 </ul>
 </li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" /> fine-grained user permission control utilising Azure AD</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" /> display tables of only selected features</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" /> interactive bulk spatial selection for ad-hoc layers</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" /> collaborative map annotations</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" /> alternative layer download format options - GeoJSON, SHP, KML, GeoPackage, CSV and other popular formats</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" /> support for Google Maps basemap</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" /> 3D view</li>
 </ul>
 <doc-anchor-target id="enhancements">
     <h3>
@@ -349,15 +344,33 @@
     </h3>
 </doc-anchor-target>
 <ul class="contains-task-list">
-<li class="task-list-item"><input disabled="disabled" type="checkbox" /> dynamic loading of layer catalogues
-<ul>
-<li>improve start-up time</li>
-<li>enable clients to add custom layers from external sources</li>
-</ul>
-</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" /> prevent Share links from including the panel state (unless specified in advanced options)</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" /> zoom/pan to selected feature on Pozi launch if URL contains a selected feature</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" /> display What&#x27;s Here target on Pozi launch if URL contains a target</li>
+</ul>
+<hr>
+<doc-anchor-target id="in-development">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#in-development">#</doc-anchor-trigger>
+        <span>In Development</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="new-features-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#new-features-1">#</doc-anchor-trigger>
+        <span>New Features</span>
+    </h3>
+</doc-anchor-target>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> Pozi Publisher - ultimate spatial data catalogue management
+<ul>
+<li>publish map layers to the public from QGIS projects</li>
+<li>improve start-up performance by pre-generating map catalogues</li>
+<li>tap into external data providers with minimal configuration</li>
+</ul>
+</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> display tables of only selected features</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> interactive bulk spatial selection for ad-hoc layers</li>
 </ul>
 <hr>
 <doc-anchor-target id="completed">
@@ -405,7 +418,7 @@
     </h4>
 </doc-anchor-target>
 <ul class="contains-task-list">
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> <span class="docs-emoji">&#x26A1;</span> enable users to download vector layers in multiple formats</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> <span class="docs-emoji">&#x26A1;</span> enable users to download vector layers in multiple format options - GeoJSON, SHP, KML, GeoPackage, CSV and other popular formats</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> <span class="docs-emoji">&#x26A1;</span> display progress bar on loading screen</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> <span class="docs-emoji">&#x26A1;</span> add support for default QGIS SVG symbols</li>
 </ul>
@@ -501,7 +514,7 @@
 <li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> <span class="docs-emoji">&#x1F44D;</span> support field alias names in table view, filter and report modes</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> <span class="docs-emoji">&#x1F44D;</span> add SSO logout button</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> <span class="docs-emoji">&#x1F44D;</span> smoother load experience - show buttons only after map is loaded and controls are usable</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> <span class="docs-emoji">&#x1F44D;</span> enable Enterprise Cloud customers to preview any dev branch in staging</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> <span class="docs-emoji">&#x1F44D;</span> enable Enterprise Cloud customers to preview any development branch in its own custom test site</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> <span class="docs-emoji">&#x1F44D;</span> add projection support for catalogues and WMS layers</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> <span class="docs-emoji">&#x1F44D;</span> enable catalogues to appear as folders inside of layer groups</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> <span class="docs-emoji">&#x1F44D;</span> enable user to download annotation layer, whether the user created the annotations or not</li>
