@@ -14,9 +14,11 @@ The URL parameters can be manually or programmatically constructed, or you can s
 
 ### Location by Search Parameter
 
+![Alt text](img/search-options.png){style="float:right;width:250px;margin:0px 40px;"}
+
 Your Pozi site may be configured with search options for users to type in values for searching.
 
-Any of your site's search options can be triggered via a URL parameter.
+These search options can be accessed via a URL parameter.
 
 `https://sitename.pozi.com/#/search[searchname,searchvalue]/`
 
