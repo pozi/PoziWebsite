@@ -150,7 +150,7 @@ This should allow Pozi to determine access based on a user's role(s).
 
 ## Azure AD Pozi Support Account
 
-In order for us to be able to provide support and troubleshoot any potential issues, we ask our clients to configure the Pozi Support domain user ([previously](/admin-guide/installation/prerequisites.md#support-account)) with the same permissions/groups/roles as the users of Pozi through Azure AD Application Proxy.
+In order for the Pozi team to be able to provide support and troubleshoot any potential issues, we ask our clients to configure the Pozi Support domain user ([previously](/admin-guide/installation/prerequisites.md#support-account)) with the same permissions/groups/roles as the users of Pozi through Azure AD Application Proxy.
 
 If it's not possible or practical for the Pozi Support domain user to be given Azure AD permissions, you may choose to create a separate user account with the Azure AD permissions. In this case, no administrator privileges are required.
 

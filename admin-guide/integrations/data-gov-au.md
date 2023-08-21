@@ -70,3 +70,5 @@ Pozi Enterprise enables organisations to synchronise local datasets directly to 
 Data.gov.au is now supported by the Australian Bureau of Statistics.
 
 Contact support@data.gov.au and allow for up to 5 business days turn around.
+
+Follow updates about any known issues and developments at https://data.gov.au/page/recent-developments.

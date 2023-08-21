@@ -10,6 +10,8 @@ This page outlines the URL parameters to launch a Pozi map to dynamically custom
 
 The URL parameters can be manually or programmatically constructed, or you can simply copy the URL of your Pozi session to capture and share its current state.
 
+## Parameters
+
 ### Location by Search Parameter
 
 Your Pozi site may be configured with search options for users to type in values for searching.
@@ -94,7 +96,13 @@ https://northerngrampians.pozi.com/#/filter[assets]/tab[layers]/
 
 https://bendigo.pozi.com/#/tab[layers]/
 
-### Location by Property Identifier
+### Location by Property Identifier (Legacy)
+
+!!! Note
+
+There is now a more robust method of linking to properties using a property number or PFI value. See [above](#location-by-search-parameter)
+
+!!!
 
 Pozi will zoom to a specific property and display info results for the location based on a property number.
 
@@ -104,3 +112,11 @@ Note:
 
 * available for Victorian property numbers maintained in `prop_propnum` field in Vicmap Property
 * available for Pozi Pro, Enterprise and Enterprise Cloud plans
+
+## Re-Use Pozi Tab
+
+When you're using a web application that links to Pozi, you may end up with multiple tabs of Pozi - one for each time you click on a link from the other application.
+
+When configuring the links in your application, instead of using `target="_blank"` to open Pozi in a new tab, use `target="pozi"`. This will open a new tab on the first time you use it. As long as that tab stays open, any subsequent link-ins to Pozi will reuse the same tab.
+
+[Reference](https://superuser.com/questions/304285/i-want-a-hyperlink-to-open-a-browser-tab-then-all-subsequent-link-clicks-go-to)
