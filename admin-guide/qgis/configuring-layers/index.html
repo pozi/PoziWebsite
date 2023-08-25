@@ -6,10 +6,10 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.745917031492">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746263762851">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.1.0">
+    <meta name="generator" content="Retype 3.2.0">
 
     <!-- Primary Meta Tags -->
     <title>Configuring Layers | Pozi Web GIS | Online Map</title>
@@ -35,11 +35,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.1.0.745917031492" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.2.0.746263762851" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.1.0.745917031492" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.1.0.745917031492" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.2.0.746263762851" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.2.0.746263762851" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -413,7 +413,11 @@
 <li>OK</li>
 <li>Project &gt; Save (<code v-pre>Ctrl</code> + <code v-pre>S</code>)</li>
 </ol>
-<p><img src="../img/qgis-project-properties-wfs-configuration.png" style="width:700px" alt="QGIS Project Properties WFS Configuration" /></p>
+<p><figure class="content-center">
+    <img src="../img/qgis-project-properties-wfs-configuration.png" alt="QGIS Project Properties WFS Configuration" style="width:700px">
+    <figcaption class="caption">QGIS Project Properties WFS Configuration</figcaption>
+</figure>
+</p>
 <br/>
 <doc-anchor-target id="styling-layers">
     <h2>
@@ -456,7 +460,11 @@
 <li>tick &#x27;Do not expose via WMS&#x27;</li>
 <li>tick &#x27;Do not expose via WFS&#x27;</li>
 </ul>
-<p><img src="../img/qgis-hide-fields.png" style="width:600px" alt="" /></p>
+<p><figure class="content-center">
+    <img src="../img/qgis-hide-fields.png" alt="" style="width:600px">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <doc-anchor-target id="rename-fields">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#rename-fields">#</doc-anchor-trigger>
@@ -465,7 +473,11 @@
 </doc-anchor-target>
 <p>You can make field names more user-friendly by giving your field names an <em>alias</em>.</p>
 <p>Layer Properties &gt; Attributes Form &gt; select field &gt; Alias</p>
-<p><img src="../img/qgis-field-alias.png" style="width:700px" alt="" /></p>
+<p><figure class="content-center">
+    <img src="../img/qgis-field-alias.png" alt="" style="width:700px">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <doc-anchor-target id="virtual-fields">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#virtual-fields">#</doc-anchor-trigger>
@@ -504,11 +516,23 @@
 <li>use <code v-pre>||</code> to combine strings</li>
 <li>enclose static text with single quotes</li>
 </ul>
-<p><img src="../img/qgis-field-calculator.png" style="width:700px" alt="" /></p>
+<p><figure class="content-center">
+    <img src="../img/qgis-field-calculator.png" alt="" style="width:700px">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <p>The resulting virtual field appears in QGIS and Pozi as if it were standard field.</p>
-<p><img src="../img/qgis-table-with-virtual-field.png" style="width:700px" alt="" /></p>
+<p><figure class="content-center">
+    <img src="../img/qgis-table-with-virtual-field.png" alt="" style="width:700px">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <p>If the value in the field is a URL (as in this example), Pozi will display it as a clickable link, using the field name as the link text.</p>
-<p><img src="../img/pozi-info-panel-showing-link-from-virtual-field.png" style="width:300px" alt="" /></p>
+<p><figure class="content-center">
+    <img src="../img/pozi-info-panel-showing-link-from-virtual-field.png" alt="" style="width:300px">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <p>If the value is a string ending in <code v-pre>.png</code> or <code v-pre>.jpg</code>, Pozi will attempt to display a thumbnail of the target image. If you want Pozi to display the image, ensure that the string is a valid URL.</p>
 <br/>
 <doc-anchor-target id="feature-title">
@@ -518,11 +542,19 @@
     </h2>
 </doc-anchor-target>
 <p>When users select a feature from the map, Pozi prominently displays one of the feature&#x27;s attributes at the top of the Info Panel as the feature&#x27;s title.</p>
-<p><img src="../img/info-panel-title.png" style="width:800px" alt="" /></p>
+<p><figure class="content-center">
+    <img src="../img/info-panel-title.png" alt="" style="width:800px">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <p>The title should be the name of the feature or some other useful information to distinguish the feature from others in the same layer.</p>
 <p>You can control which field is used for the layer&#x27;s title in QGIS.</p>
 <p>Layer Properties &gt; Display &gt; Display Name</p>
-<p><img src="../img/qgis-layer-display-field.png" style="width:600px" alt="" /></p>
+<p><figure class="content-center">
+    <img src="../img/qgis-layer-display-field.png" alt="" style="width:600px">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <p>Please note that Pozi cannot use the display field if the field name has been given an <doc-anchor-trigger to="#rename-fields">alias</doc-anchor-trigger>. Consider creating a virtual field with the desired name and use that as the display field.</p>
 <br/>
 <doc-anchor-target id="selectability">
@@ -534,7 +566,11 @@
 <p><small>#selectable #queryable #identifiable</small></p>
 <p>To prevent the Info Panel from displaying results from specific layers (say, for aerial photos), update the <code v-pre>Data Sources</code> settings in the QGIS project.</p>
 <p>Project &gt; Properties &gt; Data Sources &gt; Identifiable &gt; untick to disable layer selectability</p>
-<p><img src="../img/qgis-layer-identifiable.png" style="width:450px" alt="" /></p>
+<p><figure class="content-center">
+    <img src="../img/qgis-layer-identifiable.png" alt="" style="width:450px">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <br/>
 <doc-anchor-target id="exclude-layers">
     <h2>
@@ -545,7 +581,11 @@
 <p>Your QGIS project may contain layers that are not needed for viewing in Pozi. For instance, your project may contain basemap layers that provide context for viewing map layers in QGIS, but you don&#x27;t want these to appear in the project&#x27;s layer group in Pozi.</p>
 <p>To exclude any layers from appearing in Pozi:</p>
 <p>Project &gt; Properties &gt; QGIS Server &gt; WMS &gt; <code v-pre>Exclude layers</code> (tick) &gt; add &gt; pick layers to exclude &gt; OK</p>
-<p><img src="../img/qgis-project-wms-exclude-layers.png" style="width:500px" alt="QGIS project WMS exclude layers" /></p>
+<p><figure class="content-center">
+    <img src="../img/qgis-project-wms-exclude-layers.png" alt="QGIS project WMS exclude layers" style="width:500px">
+    <figcaption class="caption">QGIS project WMS exclude layers</figcaption>
+</figure>
+</p>
 <doc-anchor-target id="optional-settings">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#optional-settings">#</doc-anchor-trigger>
@@ -596,7 +636,7 @@
 <li>Pozi is only able to display features that have at least one valid/non-null attribute. If any records in your data contain no attributes, populate some values into one of the fields.</li>
 <li>Ensure the layer has a coordinate reference system set. Go to Layer Properties &gt; Source &gt; Assigned CRS, and pick a projection</li>
 <li>For file-based layers, ensure that the file path is one that is recognised by the server. See <doc-anchor-trigger to="#about-layer-file-paths">About layer file paths</doc-anchor-trigger> above.</li>
-<li>Ensure that any categorised styling is based on a single field with a single value per row. See <doc-anchor-trigger to="#categorized-symbology">Categorized Symbology</doc-anchor-trigger> above.</li>
+<li>Ensure that any categorised styling is based on a single field with a single value per row. See <a href="../styling-layers/#categorized-symbology">Categorized Symbology</a>.</li>
 <li>Ensure that any categorised styling is based on a field that is exposed as WFS (ie, ensure the field option &#x27;Do not expose via WFS&#x27; is <em>unticked</em>).</li>
 <li>If the layer source is a MapInfo table, ensure that the symbology type is <em>not</em> &quot;Embedded Symbols&quot;. Change it to another type such as &quot;Single Symbol&quot; or &quot;Categorized&quot;.</li>
 </ul>
@@ -668,7 +708,11 @@
        <template #title>Can&#x27;t see the latest changes from QGIS in Pozi</template>
 <p>Some changes may not be available immediately in Pozi. If you encounter an issue such as a recently added or renamed layer not loading, restart the IIS application pool on the server.</p>
 <p>Windows &gt; IIS &gt; (select server) &gt; Application Pools &gt; PoziQgisServer &gt; Recycle</p>
-<p><img src="../img/iis-application-pool-recycle.png" style="width:500px" alt="" /></p>
+<p><figure class="content-center">
+    <img src="../img/iis-application-pool-recycle.png" alt="" style="width:500px">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
    </doc-panel>
 </doc-panels>
 

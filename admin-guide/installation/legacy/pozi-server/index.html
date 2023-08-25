@@ -6,10 +6,10 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.745917031492">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746263762851">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.1.0">
+    <meta name="generator" content="Retype 3.2.0">
 
     <!-- Primary Meta Tags -->
     <title>Pozi Server | Pozi Web GIS | Online Map</title>
@@ -35,12 +35,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=3.1.0.745917031492" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.2.0.746263762851" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.1.0.745917031492" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.1.0.745917031492" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.1.0.745917031492" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.2.0.746263762851" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.2.0.746263762851" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.2.0.746263762851" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -477,7 +477,11 @@
 <p>Sample data is included in the Pozi Server installation. To enable the Pozi Server service to access this data, create a Windows symlink in within the <code v-pre>Pozi\userdata\[yourservername]</code> folder.</p>
 <p>Open the command prompt in administrator mode:</p>
 <p>Press Windows button &gt; type <code v-pre>cmd</code> &gt; right-click &#x27;Command Prompt&#x27; &gt; click &#x27;Run as administrator&#x27; &gt; click &#x27;Yes&#x27;</p>
-<p><img src="./img/run-command-prompt-as-administrator.png" style="width:350px" alt="" /></p>
+<p><figure class="content-center">
+    <img src="./img/run-command-prompt-as-administrator.png" alt="" style="width:350px">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <p>Then run the following command (after making the substitution for <code v-pre>[yourservername]</code>):</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">mklink /D &quot;C:\Program Files (x86)\Pozi\userdata\[yourservername]\sample&quot; &quot;C:\Program Files (x86)\Pozi\server\data\local\sample&quot;</code></pre>
@@ -545,7 +549,11 @@
   &quot;[$(Get-Date)] [ERROR] $($_)&quot; | Add-Content RestartPoziConnectServer.log
 }</code></pre>
 </doc-codeblock></div>
-<p><img src="../../../../static/img/windows-scheduled-task-for-restarting-pozi-server.png" style="width:600px" alt="" /></p>
+<p><figure class="content-center">
+    <img src="../../../../static/img/windows-scheduled-task-for-restarting-pozi-server.png" alt="" style="width:600px">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <doc-anchor-target id="testing-new-versions">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#testing-new-versions">#</doc-anchor-trigger>

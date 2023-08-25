@@ -6,10 +6,10 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.745917031492">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746263762851">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.1.0">
+    <meta name="generator" content="Retype 3.2.0">
 
     <!-- Primary Meta Tags -->
     <title>Styling Layers | Pozi Web GIS | Online Map</title>
@@ -35,11 +35,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.1.0.745917031492" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.2.0.746263762851" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.1.0.745917031492" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.1.0.745917031492" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.2.0.746263762851" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.2.0.746263762851" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -374,7 +374,11 @@
 <li>tick &quot;Use custom dash pattern&quot;</li>
 <li>specify a dash pattern (eg, <code v-pre>4 2</code>) in millimeters.</li>
 </ul>
-<p><img src="../img/qgis-layer-styling-line-custom-dash-pattern.png" style="width:450px" alt="" /></p>
+<p><figure class="content-center">
+    <img src="../img/qgis-layer-styling-line-custom-dash-pattern.png" alt="" style="width:450px">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <doc-anchor-target id="polygons">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#polygons">#</doc-anchor-trigger>
@@ -393,7 +397,11 @@
 </li>
 <li>Point Pattern Fill</li>
 </ul>
-<p><img src="../img/qgis-layer-styling-simple-fill.png" style="width:350px" alt="" /></p>
+<p><figure class="content-center">
+    <img src="../img/qgis-layer-styling-simple-fill.png" alt="" style="width:350px">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <p>Note that the &#x27;No brush&#x27; fill will prevent users from being able to select a polygon by clicking within the polygon. To enable users to select a polygon feature by clicking inside it, use the &#x27;Solid&#x27; fill, and set the opacity of the fill colour to a low or zero value.</p>
 <doc-anchor-target id="labels">
     <h3>
@@ -448,7 +456,11 @@
     </h2>
 </doc-anchor-target>
 <p>Layers can be styled using the <code v-pre>Categorized</code> option. Pick the field to use for the category from the drop-down list, then click the Classify button.</p>
-<p><img src="../img/qgis-layer-styling-categorized.png" style="width:500px" alt="Categorized styling" /></p>
+<p><figure class="content-center">
+    <img src="../img/qgis-layer-styling-categorized.png" alt="Categorized styling" style="width:500px">
+    <figcaption class="caption">Categorized styling</figcaption>
+</figure>
+</p>
 <doc-anchor-target id="limitations">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#limitations">#</doc-anchor-trigger>
@@ -463,7 +475,11 @@
 </ul>
 <p>You can work around these limitations by creating a suitably named virtual field that contains the required logic.</p>
 <p>For instance, the virtual field can contain a case statement to accept any number of input values (from one or more fields) and generate specific values for use in subsequent styling.</p>
-<p><img src="../img/qgis-layer-virtual-fields-for-styling-categories.png" style="width:800px" alt="" /></p>
+<p><figure class="content-center">
+    <img src="../img/qgis-layer-virtual-fields-for-styling-categories.png" alt="" style="width:800px">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <p>See <a href="../configuring-layers/#virtual-fields">Virtual Fields</a> for more information.</p>
 <doc-anchor-target id="fallback-style">
     <h3>
@@ -472,7 +488,11 @@
     </h3>
 </doc-anchor-target>
 <p>When using the Classify button to generate styles for each unique value, QGIS automatically generates an additional <strong>fallback</strong> style for &quot;<em>all other values</em>&quot;. However this function is not supported in Pozi, and Pozi will display <strong>all</strong> the layer&#x27;s features with the fallback style.</p>
-<p><img src="../img/qgis-layer-styling-categorized-remove-all-other-values.png" style="width:600px" alt="" /></p>
+<p><figure class="content-center">
+    <img src="../img/qgis-layer-styling-categorized-remove-all-other-values.png" alt="" style="width:600px">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <p>Delete the &quot;<em>all other values</em>&quot; item from the list before saving.</p>
 <doc-anchor-target id="opacity">
     <h2>
@@ -481,7 +501,11 @@
     </h2>
 </doc-anchor-target>
 <p>Layer Styling &gt; Layer Rendering &gt; Opacity</p>
-<p><img src="../img/qgis-layer-styling-opacity.png" style="width:300px" alt="" /></p>
+<p><figure class="content-center">
+    <img src="../img/qgis-layer-styling-opacity.png" alt="" style="width:300px">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <p>Layers are initially displayed in Pozi using the opacity value you&#x27;ve set - the user may then adjust the opacity up or down from the initial value.</p>
 <br/>
 <doc-anchor-target id="bubble-symbols">
@@ -491,7 +515,11 @@
     </h2>
 </doc-anchor-target>
 <p>Pozi <em>Enterprise Cloud</em> customers can display their vector point layers using Pozi&#x27;s popular <em>bubble</em> symbols.</p>
-<p><img src="../img/pozi-bubble-symbols-example.png" style="width:600px" alt="" /></p>
+<p><figure class="content-center">
+    <img src="../img/pozi-bubble-symbols-example.png" alt="" style="width:600px">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <p>Ensure the PC on which the QGIS project is being maintained has the Font Awesome icon library installed and configured in QGIS.</p>
 <p>
 <div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">

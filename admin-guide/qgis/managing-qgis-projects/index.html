@@ -6,10 +6,10 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.745917031492">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746263762851">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.1.0">
+    <meta name="generator" content="Retype 3.2.0">
 
     <!-- Primary Meta Tags -->
     <title>Managing QGIS Projects | Pozi Web GIS | Online Map</title>
@@ -35,11 +35,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.1.0.745917031492" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.2.0.746263762851" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.1.0.745917031492" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.1.0.745917031492" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.2.0.746263762851" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.2.0.746263762851" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -309,7 +309,11 @@
     </h1>
 </doc-anchor-target>
 <p>A QGIS project is a collection of layers and settings that make up a QGIS map. Pozi uses these projects as layer catalogues, each of which is displayed in Pozi as a layer group.</p>
-<p><img src="../img/qgis-projects-and-pozi-layer-groups.png" style="width:400px" alt="QGIS projects and their corresponding Pozi layer groups" /></p>
+<p><figure class="content-center">
+    <img src="../img/qgis-projects-and-pozi-layer-groups.png" alt="QGIS projects and their corresponding Pozi layer groups" style="width:400px">
+    <figcaption class="caption">QGIS projects and their corresponding Pozi layer groups</figcaption>
+</figure>
+</p>
 <p>The workflow for getting a project into Pozi are as follows:</p>
 <ol>
 <li><doc-anchor-trigger to="#create-project">create project</doc-anchor-trigger></li>
@@ -449,7 +453,11 @@
 <p>View &gt; Panels &gt; Debugging/Development Tools &gt; Profiler (clock button)</p>
 <p>As soon as you load your QGIS project, a new category called <code v-pre>Project Load</code> will be available. Select it from the category list.</p>
 <p>Expand the entry called <code v-pre>Reading map layers</code> in the profiler tree to see all of the QGIS project layers and their corresponding loading time.</p>
-<p><img src="../img/qgis-debug-layer-load-times.png" style="width:350px" alt="QGIS Debug Tool" /></p>
+<p><figure class="content-center">
+    <img src="../img/qgis-debug-layer-load-times.png" alt="QGIS Debug Tool" style="width:350px">
+    <figcaption class="caption">QGIS Debug Tool</figcaption>
+</figure>
+</p>
 <p>If the results show any layer that takes more than a fraction of a second to load, there may be an issue with the network or database that is worth investigating.</p>
 <p>Some file formats can be less efficient than others for a project to load. Large GeoJSON files can be significantly slower to load than a their equivalent SHP, GeoPackage or TAB version, so consider using one of these faster formats.</p>
 <p><a href="https://gis.stackexchange.com/a/414884" class="outbound" target="_blank"><span>(via GIS StackExchange)</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
@@ -510,7 +518,11 @@
 <p>Ensure that <code v-pre>Use layer ids as names</code> is NOT ticked. See Project &gt; Properties &gt; QGIS Server &gt; WMS.</p>
 <p>Check the Network panel in your browser console as you turn on layers. Look at the <code v-pre>GetFeature</code> requests and preview the response. If it contains bounding box coordinates but no records, there may be an issue with IIS.</p>
 <p>Open the IIS Manager, and recycle the PoziQgisServer application pool.</p>
-<p><img src="../img/iis-application-pool-recycle.png" style="width:600px" alt="IIS recycle" /></p>
+<p><figure class="content-center">
+    <img src="../img/iis-application-pool-recycle.png" alt="IIS recycle" style="width:600px">
+    <figcaption class="caption">IIS recycle</figcaption>
+</figure>
+</p>
 </doc-panel>
 <p>For further assistance, contact <a href="mailto:support@pozi.com">support@pozi.com</a>.</p>
 

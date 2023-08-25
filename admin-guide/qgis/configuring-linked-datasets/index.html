@@ -6,10 +6,10 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.745917031492">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746263762851">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.1.0">
+    <meta name="generator" content="Retype 3.2.0">
 
     <!-- Primary Meta Tags -->
     <title>Configuring Linked Datasets | Pozi Web GIS | Online Map</title>
@@ -35,12 +35,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.1.0.745917031492" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.2.0.746263762851" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.1.0.745917031492" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.1.0.745917031492" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.1.0.745917031492" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.2.0.746263762851" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.2.0.746263762851" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.2.0.746263762851" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -310,7 +310,11 @@
     </h1>
 </doc-anchor-target>
 <p>A linked dataset contains complementary attributes that relate to a features from a map layer.</p>
-<p><img src="../img/info-panel-parent-and-child-records.png" style="width:400px" alt="Parent and child records" /></p>
+<p><figure class="content-center">
+    <img src="../img/info-panel-parent-and-child-records.png" alt="Parent and child records" style="width:400px">
+    <figcaption class="caption">Parent and child records</figcaption>
+</figure>
+</p>
 <p>When a user selects a feature from a standard map layer (the &#x27;parent&#x27; dataset), Pozi fetches and displays associated records from any linked table (the &#x27;child&#x27; dataset) based on an attribute that&#x27;s shared between the two.</p>
 <p>Use cases:</p>
 <ul>
@@ -371,7 +375,11 @@
     </h2>
 </doc-anchor-target>
 <p>The parent/child settings are maintained in the child layer&#x27;s QGIS Server keyword list. Pozi obtains these settings, along with any other keywords, when it loads and imports and project&#x27;s catalogue.</p>
-<p><img src="../img/qgis-server-keywords.png" style="width:600px" alt="" /></p>
+<p><figure class="content-center">
+    <img src="../img/qgis-server-keywords.png" alt="" style="width:600px">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <p>Only the child dataset needs to be configured. There is no configuration required for the parent dataset for it to used by a child dataset.</p>
 <p>Below are details of how to derive and combine the components of this setting.</p>
 <doc-anchor-target id="parent">
@@ -401,7 +409,11 @@
 <li>close any open bracket (if using <code v-pre>IN</code>)</li>
 <li>click Test</li>
 </ol>
-<p><img src="../img/qgis-query-builder.png" style="width:500px" alt="" /></p>
+<p><figure class="content-center">
+    <img src="../img/qgis-query-builder.png" alt="" style="width:500px">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <p>If the test query returns one or more rows, your expression is valid, and it can be used in the child parameter. Clear the Query Result dialog box, select your expression text, and copy it to your clipboard.</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
@@ -451,7 +463,11 @@
     </h3>
 </doc-anchor-target>
 <p>In the child dataset&#x27;s Layer Properties, go to QGIS Server. Fill in the &#x27;Keyword list&#x27; with the <code v-pre>parent</code>, <code v-pre>parameter</code> and optional settings derived above, each separated by commas.</p>
-<p><img src="../img/qgis-server-keywords.png" style="width:600px" alt="" /></p>
+<p><figure class="content-center">
+    <img src="../img/qgis-server-keywords.png" alt="" style="width:600px">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <p>Example: <code v-pre>parent=Property, parameter=EXP_FILTER=Assess_NumberX in ('[Property Number]'), downloadable=true</code></p>
 <p><em>Note: <code v-pre>EXP_FILTER</code> doesn&#x27;t support spaces in the child dataset&#x27;s lookup field name. If this field contains any spaces, update the dataset&#x27;s Attributes Form settings to use a alias name for the lookup field that doesn&#x27;t contain spaces.</em></p>
 <p>Click OK, then save the project.</p>
