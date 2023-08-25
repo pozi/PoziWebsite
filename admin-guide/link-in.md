@@ -115,10 +115,10 @@ Note:
 * available for Victorian property numbers maintained in `prop_propnum` field in Vicmap Property
 * available for Pozi Pro, Enterprise and Enterprise Cloud plans
 
-## Re-Use Pozi Tab
+## Re-Use Pozi Browser Tab
 
 When you're using a web application that links to Pozi, you may end up with multiple tabs of Pozi - one for each time you click on a link from the other application.
 
-When configuring the links in your application, instead of using `target="_blank"` to open Pozi in a new tab, use `target="pozi"`. This will open a new tab on the first time you use it. As long as that tab stays open, any subsequent link-ins to Pozi will reuse the same tab.
+When configuring the links in your application, instead of using `target="_blank"` to open Pozi in a new tab, use `target="pozi"`. This will open a new tab on the first time you use it. As long as that tab stays open, any subsequent link-ins to Pozi will reuse the same browser tab.
 
 [Reference](https://superuser.com/questions/304285/i-want-a-hyperlink-to-open-a-browser-tab-then-all-subsequent-link-clicks-go-to)

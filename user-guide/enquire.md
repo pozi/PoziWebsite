@@ -20,7 +20,7 @@ Simple selections are triggered by any of the following events:
 * a single click on the map
 * using the Search function
 * opening Pozi using a link that specifies a target location or feature id
-  * example: `https://westwimmera.pozi.com/?propnum=1018753`
+  * example: https://westwimmera.pozi.com/#/search[propertynumber,1018753]/
 
 ### Multi Selection
 

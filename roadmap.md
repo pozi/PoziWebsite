@@ -54,12 +54,17 @@ We also offer clients the opportunity to sponsor development of new features, gi
 #### New
 
 - [x] ⚡ fullscreen button
-- [x] ⚡ enable link-in for search layer
+- [x] ⚡ enable URL link-ins based on existing user search options
 
 #### Improved
 
 - [x] 👍 send fewer WMS/WMTS requests when zooming with mouse wheel
 - [x] 👍 open Jotform Comments tab by default
+- [x] 👍 add support for styling polygon objects with point symbols
+- [x] 👍 enable highlighting of selected features from WMS non-WGS84 layers
+- [x] 👍 remove outdated information from About panel
+- [x] 👍 don't change cursor to hand icon when hovering over non-queryable feature
+- [x] 👍 fit large legend images in layer panel
 
 ### July 2023
 

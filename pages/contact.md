@@ -43,6 +43,27 @@ ABN: 22 633 153 385
 
 ---
 
+#### Banking
+
+Bank details are included on all our invoices.
+
+!!! Change in bank details
+
+As of September 2023, Pozi's bank details have changed due to Bankwest discontinuing its business banking services.
+
+Our new bank account details are as follows:
+
+Account Name: Pozi Pty Ltd<br/>
+Bank: Commonwealth Bank<br/>
+BSB: 062-692<br/>
+Account Number: xxxx1400
+
+*See invoice for complete details.*
+
+!!!
+
+---
+
 <br/>
 
 <!-- Begin Mailchimp Signup Form -->
