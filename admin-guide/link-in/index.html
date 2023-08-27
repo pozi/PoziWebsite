@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746430441430">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746432448741">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.2.0">
@@ -35,11 +35,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.2.0.746430441430" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.2.0.746432448741" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.2.0.746430441430" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.2.0.746432448741" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.2.0.746430441430" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.2.0.746432448741" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -473,7 +473,14 @@
 <p>When you&#x27;re using a web application that links to Pozi, you may end up with multiple tabs of Pozi - one for each time you click on a link from the other application.</p>
 <p>When configuring the links in your application, instead of using <code v-pre>target=&quot;_blank&quot;</code> to open Pozi in a new tab, use <code v-pre>target=&quot;pozi&quot;</code>. This will open a new tab on the first time you use it. As long as that tab stays open, any subsequent link-ins to Pozi will reuse the same browser tab.</p>
 <p><a href="https://superuser.com/questions/304285/i-want-a-hyperlink-to-open-a-browser-tab-then-all-subsequent-link-clicks-go-to" class="outbound" target="_blank"><span>Reference</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
-<p><a href="https://westwimmera.pozi.com/#/search[propertynumber,1018753]/" target="pozi">Test link</a></p>
+<doc-anchor-target id="test">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#test">#</doc-anchor-trigger>
+        <span>Test</span>
+    </h3>
+</doc-anchor-target>
+<p><a href="https://westwimmera.pozi.com/#/search[propertynumber,1018753]/" target="pozi">Test link 1</a></p>
+<p><a href="https://westwimmera.pozi.com/#/search[propertynumber,1018530]/" target="pozi">Test link 2</a></p>
 
                                 
                                 <!-- Required only on API pages -->
