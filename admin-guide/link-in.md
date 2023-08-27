@@ -122,3 +122,5 @@ When you're using a web application that links to Pozi, you may end up with mult
 When configuring the links in your application, instead of using `target="_blank"` to open Pozi in a new tab, use `target="pozi"`. This will open a new tab on the first time you use it. As long as that tab stays open, any subsequent link-ins to Pozi will reuse the same browser tab.
 
 [Reference](https://superuser.com/questions/304285/i-want-a-hyperlink-to-open-a-browser-tab-then-all-subsequent-link-clicks-go-to)
+
+<a href="https://westwimmera.pozi.com/#/search[propertynumber,1018753]/" target="pozi">Test link</a>
