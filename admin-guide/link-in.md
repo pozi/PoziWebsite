@@ -123,4 +123,8 @@ When configuring the links in your application, instead of using `target="_blank
 
 [Reference](https://superuser.com/questions/304285/i-want-a-hyperlink-to-open-a-browser-tab-then-all-subsequent-link-clicks-go-to)
 
-<a href="https://westwimmera.pozi.com/#/search[propertynumber,1018753]/" target="pozi">Test link</a>
+### Test
+
+<a href="https://westwimmera.pozi.com/#/search[propertynumber,1018753]/" target="pozi">Test link 1</a>
+
+<a href="https://westwimmera.pozi.com/#/search[propertynumber,1018530]/" target="pozi">Test link 2</a>
