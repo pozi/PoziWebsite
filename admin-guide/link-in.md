@@ -115,6 +115,13 @@ Note:
 * available for Victorian property numbers maintained in `prop_propnum` field in Vicmap Property
 * available for Pozi Pro, Enterprise and Enterprise Cloud plans
 
+Supported property identifiers:
+
+- `propnum`
+- `propertypfi`
+- `parcelpfi`
+- `parcelspi`
+
 ## Re-Use Pozi Browser Tab
 
 When you're using a web application that links to Pozi, you may end up with multiple tabs of Pozi - one for each time you click on a link from the other application.
@@ -123,7 +130,7 @@ When configuring the links in your application, instead of using `target="_blank
 
 [Reference](https://superuser.com/questions/304285/i-want-a-hyperlink-to-open-a-browser-tab-then-all-subsequent-link-clicks-go-to)
 
-Note that only the `?propnum=xxx` format URL link-in is currently supported. Other link-in formats are currently unable to update the re-used browser tabs.
+Note that only the [Property Identifier](#location-by-property-identifier-legacy) format (above) link-in is currently supported (example `?propnum=xxx`). Other link-in formats are currently unable to update the re-used browser tabs.
 
 ### Test
 
