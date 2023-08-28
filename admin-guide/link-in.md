@@ -123,8 +123,10 @@ When configuring the links in your application, instead of using `target="_blank
 
 [Reference](https://superuser.com/questions/304285/i-want-a-hyperlink-to-open-a-browser-tab-then-all-subsequent-link-clicks-go-to)
 
+Note that only the `?propnum=xxx` format URL link-in is currently supported. Other link-in formats are currently unable to update the re-used browser tabs.
+
 ### Test
 
-<a href="https://westwimmera.pozi.com/#/search[propertynumber,1018753]/" target="pozi">Test link 1</a>
+<a href="https://westwimmera.pozi.com/?propnum=1018753" target="pozi">Test link 1</a>
 
-<a href="https://westwimmera.pozi.com/#/search[propertynumber,1018530]/" target="pozi">Test link 2</a>
+<a href="https://westwimmera.pozi.com/?propnum=1018530" target="pozi">Test link 2</a>
