@@ -72,19 +72,6 @@ Discounts are available for multi-year commitments.
 
 </br>
 
-### 3D Viewer
-
-<img src="/static/img/tweet-gallery/3d-poc.jpg" alt="" style="float:right;width:400px;margin:0px 40px;">
-
-Use Pozi to visualise your 3D imagery. Toggle between 2D and 3D viewing modes. Compatible with [Cesium 3D tile format](https://cesium.com/why-cesium/3d-tiles/).
-
-<small>AUD</small>$3K<small>/year</small>
-
-<br clear="all" />
-<br/>
-
----
-
 ### Mobile Data Capture
 
 Capture geospatial data easily through your mobile device and share it with the team for seamless collaboration.
