@@ -149,39 +149,6 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ---
 
-### Source Code Access
-
-For *Enterprise* and *Enterprise Cloud* subscribers, we offer access to our source code.
-
-==- Terms of Use
-
-</br>
-
-##### Authorised Usage
-
-</br>
-
-* create backup copies of the source code
-* review code to check for security vulnerabilities
-* contribute to code by submitting pull requests for new features, bugfixes and documentation updates
-* use the code to recreate Pozi on your organisation's internal infrastructure for the exclusive use of the organisation ONLY IF Pozi is no longer offered as a service
-
-##### Prohibited Usage
-
-</br>
-
-* share the code outside of the organisation
-* share the code with anyone who has not agreed to these terms of use
-* use the code to create a competing service
-
-==-
-
-<small>AUD</small>$1800<small>/year</small>
-
-</br>
-
----
-
 ### Tender Response
 
 If your organisation uses Expression of Interest (EOI), Request For Tender (RFT), or Request For Quote (RFQ) for software procurement, a premium will apply to the package cost and ongoing subscription. A minimum three-year commitment will also apply. Talk to us about what additional costs will apply for your procurement method.
