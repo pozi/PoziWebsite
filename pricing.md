@@ -78,7 +78,7 @@ Discounts are available for multi-year commitments.
 
 Use Pozi to visualise your 3D imagery. Toggle between 2D and 3D viewing modes. Compatible with [Cesium 3D tile format](https://cesium.com/why-cesium/3d-tiles/).
 
-<small>AUD</small>$3K<small>/year</small>
+Pricing on request.
 
 <br clear="all" />
 <br/>

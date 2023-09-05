@@ -86,13 +86,15 @@ Notes:
 
 Set label text size to `10 points` or greater, and a white `1.8mm` buffer for better legibility.
 
-!!! MapInfo Styles
+## Embedded Symbology
 
-MapInfo tables sometimes contain embedded styles. QGIS Desktop may recognise and display the map features using these styles, but QGIS Server cannot serve the layer to Pozi without first overriding the style.
+MapInfo tables sometimes contain *embedded* styles. QGIS Desktop may recognise and display the map features using these styles, but QGIS Server is unable to pass on the styling information to Pozi for styling vector layers.
 
-If the layer appears in QGIS Symbology mode "Embedded", switch it to "Single Symbol" or "Categorized", and style it according to your preference.
+If the layer appears in QGIS Symbology mode "Embedded Symbols", switch it to "Single Symbol" or "Categorized", and style it according to your preference.
 
-!!!
+![](img/qgis-layer-styling-embedded.png){style="width:400px"}
+
+<br/>
 
 ## Categorized Symbology
 
@@ -172,7 +174,7 @@ The Font Awesome icon library contains thousands of icons to choose from. While 
 
 [!ref target="blank" icon="location" text="Exploring Font Awesome icons"](https://fontawesome.com/search)
 
-Looking for a barbecue icon? Type 'bbq' into the Font Awesome online search to see the matching icons. Note that they are named 'grill'. Now go to QGIS and type in 'grill' to find the icon.
+Looking for a barbecue icon? Type 'bbq' into the Font Awesome online search to see the matching icons. Note that they are named 'grill'. Now go to the QGIS SVG browser and type in 'grill' to find the icon.
 
 !!!
 

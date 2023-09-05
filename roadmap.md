@@ -42,12 +42,18 @@ We also offer clients the opportunity to sponsor development of new features, gi
   - publish map layers to the public from QGIS projects
   - improve start-up performance by pre-generating map catalogues
   - tap into external data providers with minimal configuration
-- [ ] display tables of only selected features
-- [ ] interactive bulk spatial selection for ad-hoc layers
+  - build search indexes from QGIS project settings
 
 ---
 
 ## Completed
+
+### September 2023
+
+#### New
+
+- [x] ⚡ new option to display tables of only selected features and related features
+- [x] ⚡ interactive bulk spatial selection for ad-hoc layers - return features from all layers when doing map selections
 
 ### August 2023
 

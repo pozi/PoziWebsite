@@ -61,9 +61,14 @@ When specifying the URL for QGIS project files, any backslashes must be converte
   "showLegend": false,
   "config": {
     "spatial": {
-      "url": "https://bs-gis.pozi.com/iis/qgisserver?service=WMS&REQUEST=GetCapabilities&MAP=//bs-intra/GIS/System/POZI/QGIS Projects/Aerials.qgs"
+      "url": "https://poziserver-queenscliffevicgovau.msappproxy.net/pozi/qgisserver/?service=WMS&REQUEST=GetProjectSettings&MAP=//boq-serv-2/GIS/QGIS/Pozi/Aerial.qgs",
+      "params": {
+        "format": "image/jpeg"
+      },
+      "tiled": true
     }
   },
+  "flatten": true,
   "linkedLayers": [
     "Vicmap Labels"
   ]

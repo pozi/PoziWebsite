@@ -134,6 +134,16 @@ Note that only the [Property Identifier](#location-by-property-identifier-legacy
 
 ### Test
 
+#### Initial Link
+
+```
+<a href="https://westwimmera.pozi.com/?propnum=1018753" target="pozi">Test link 1</a>
+```
 <a href="https://westwimmera.pozi.com/?propnum=1018753" target="pozi">Test link 1</a>
 
+#### Re-Use
+
+```
+<a href="https://westwimmera.pozi.com/?propnum=1018530" target="pozi">Test link 2</a>
+```
 <a href="https://westwimmera.pozi.com/?propnum=1018530" target="pozi">Test link 2</a>
