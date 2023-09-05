@@ -6,10 +6,10 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746773652558">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.3.0.747208850519">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.2.0">
+    <meta name="generator" content="Retype 3.3.0">
 
     <!-- Primary Meta Tags -->
     <title>Roadmap | Pozi Web GIS | Online Map</title>
@@ -33,11 +33,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.2.0.746773652558" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.3.0.747208850519" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.2.0.746773652558" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.2.0.746773652558" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.3.0.747208850519" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/retype.js?v=3.3.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.3.0.747208850519" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -298,6 +298,23 @@
                             <div class="docs-markdown" id="docs-content">
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
+                                <nav class="breadcrumb" aria-label="Breadcrumb">
+                                    <ol role="list">
+                                        <li class="pr-4">
+                                            <a href="../" class="pr-4">
+                                                Pozi
+                                            </a>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                                            </svg>
+                                        </li>
+                                        <li class="pr-4">
+                                            <a href="../roadmap/" class="pr-4">
+                                                Roadmap
+                                            </a>
+                                        </li>
+                                    </ol>
+                                </nav>
                 
                                 <!-- Page content  -->
 <doc-anchor-target id="roadmap" class="break-words">
@@ -367,10 +384,9 @@
 <li>publish map layers to the public from QGIS projects</li>
 <li>improve start-up performance by pre-generating map catalogues</li>
 <li>tap into external data providers with minimal configuration</li>
+<li>build search indexes from QGIS project settings</li>
 </ul>
 </li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" /> display tables of only selected features</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" /> interactive bulk spatial selection for ad-hoc layers</li>
 </ul>
 <hr>
 <doc-anchor-target id="completed">
@@ -379,15 +395,31 @@
         <span>Completed</span>
     </h2>
 </doc-anchor-target>
+<doc-anchor-target id="september-2023">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#september-2023">#</doc-anchor-trigger>
+        <span>September 2023</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="new">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#new">#</doc-anchor-trigger>
+        <span>New</span>
+    </h4>
+</doc-anchor-target>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> <span class="docs-emoji">&#x26A1;</span> new option to display tables of only selected features and related features</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> <span class="docs-emoji">&#x26A1;</span> interactive bulk spatial selection for ad-hoc layers - return features from all layers when doing map selections</li>
+</ul>
 <doc-anchor-target id="august-2023">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#august-2023">#</doc-anchor-trigger>
         <span>August 2023</span>
     </h3>
 </doc-anchor-target>
-<doc-anchor-target id="new">
+<doc-anchor-target id="new-1">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#new">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#new-1">#</doc-anchor-trigger>
         <span>New</span>
     </h4>
 </doc-anchor-target>
@@ -416,9 +448,9 @@
         <span>July 2023</span>
     </h3>
 </doc-anchor-target>
-<doc-anchor-target id="new-1">
+<doc-anchor-target id="new-2">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#new-1">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#new-2">#</doc-anchor-trigger>
         <span>New</span>
     </h4>
 </doc-anchor-target>
@@ -456,9 +488,9 @@
         <span>June 2023</span>
     </h3>
 </doc-anchor-target>
-<doc-anchor-target id="new-2">
+<doc-anchor-target id="new-3">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#new-2">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#new-3">#</doc-anchor-trigger>
         <span>New</span>
     </h4>
 </doc-anchor-target>
@@ -498,9 +530,9 @@
         <span>May 2023</span>
     </h3>
 </doc-anchor-target>
-<doc-anchor-target id="new-3">
+<doc-anchor-target id="new-4">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#new-3">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#new-4">#</doc-anchor-trigger>
         <span>New</span>
     </h4>
 </doc-anchor-target>
@@ -603,9 +635,9 @@
         <span>February 2023</span>
     </h3>
 </doc-anchor-target>
-<doc-anchor-target id="new-4">
+<doc-anchor-target id="new-5">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#new-4">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#new-5">#</doc-anchor-trigger>
         <span>New</span>
     </h4>
 </doc-anchor-target>
@@ -656,9 +688,9 @@
         <span>December 2022</span>
     </h3>
 </doc-anchor-target>
-<doc-anchor-target id="new-5">
+<doc-anchor-target id="new-6">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#new-5">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#new-6">#</doc-anchor-trigger>
         <span>New</span>
     </h4>
 </doc-anchor-target>
@@ -690,9 +722,9 @@
         <span>November 2022</span>
     </h3>
 </doc-anchor-target>
-<doc-anchor-target id="new-6">
+<doc-anchor-target id="new-7">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#new-6">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#new-7">#</doc-anchor-trigger>
         <span>New</span>
     </h4>
 </doc-anchor-target>
@@ -731,9 +763,9 @@
         <span>October 2022</span>
     </h3>
 </doc-anchor-target>
-<doc-anchor-target id="new-7">
+<doc-anchor-target id="new-8">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#new-7">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#new-8">#</doc-anchor-trigger>
         <span>New</span>
     </h4>
 </doc-anchor-target>
@@ -776,9 +808,9 @@
         <span>September 2022</span>
     </h3>
 </doc-anchor-target>
-<doc-anchor-target id="new-8">
+<doc-anchor-target id="new-9">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#new-8">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#new-9">#</doc-anchor-trigger>
         <span>New</span>
     </h4>
 </doc-anchor-target>
@@ -811,9 +843,9 @@
         <span>August 2022</span>
     </h3>
 </doc-anchor-target>
-<doc-anchor-target id="new-9">
+<doc-anchor-target id="new-10">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#new-9">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#new-10">#</doc-anchor-trigger>
         <span>New</span>
     </h4>
 </doc-anchor-target>
@@ -859,9 +891,9 @@
         <span>July 2022</span>
     </h3>
 </doc-anchor-target>
-<doc-anchor-target id="new-10">
+<doc-anchor-target id="new-11">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#new-10">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#new-11">#</doc-anchor-trigger>
         <span>New</span>
     </h4>
 </doc-anchor-target>
@@ -903,9 +935,9 @@
     </h3>
 </doc-anchor-target>
 <p>Our biggest release in over two years!</p>
-<doc-anchor-target id="new-11">
+<doc-anchor-target id="new-12">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#new-11">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#new-12">#</doc-anchor-trigger>
         <span>New</span>
     </h4>
 </doc-anchor-target>

@@ -6,10 +6,10 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746773652558">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.3.0.747208850519">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.2.0">
+    <meta name="generator" content="Retype 3.3.0">
 
     <!-- Primary Meta Tags -->
     <title>Styling Layers | Pozi Web GIS | Online Map</title>
@@ -35,11 +35,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.2.0.746773652558" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.3.0.747208850519" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.2.0.746773652558" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.2.0.746773652558" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.3.0.747208850519" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.3.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.3.0.747208850519" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -300,6 +300,39 @@
                             <div class="docs-markdown" id="docs-content">
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
+                                <nav class="breadcrumb" aria-label="Breadcrumb">
+                                    <ol role="list">
+                                        <li class="pr-4">
+                                            <a href="../../../" class="pr-4">
+                                                Pozi
+                                            </a>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                                            </svg>
+                                        </li>
+                                        <li class="pr-4">
+                                            <a href="../../../admin-guide/" class="pr-4">
+                                                Administrator Guide
+                                            </a>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                                            </svg>
+                                        </li>
+                                        <li class="pr-4">
+                                            <a href="../../../admin-guide/qgis/" class="pr-4">
+                                                Publishing With QGIS
+                                            </a>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                                            </svg>
+                                        </li>
+                                        <li class="pr-4">
+                                            <a href="../../../admin-guide/qgis/styling-layers/" class="pr-4">
+                                                Styling Layers
+                                            </a>
+                                        </li>
+                                    </ol>
+                                </nav>
                 
                                 <!-- Page content  -->
 <doc-anchor-target id="styling-layers" class="break-words">
@@ -430,25 +463,20 @@
 <li>text expressions in labels (eg, combining values from multiple fields, or find-and-replace operations) are possible by configuring <a href="../configuring-layers/#virtual-fields">virtual fields</a></li>
 </ul>
 <p>Set label text size to <code v-pre>10 points</code> or greater, and a white <code v-pre>1.8mm</code> buffer for better legibility.</p>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-            <h5>MapInfo Styles</h5>
-<p>MapInfo tables sometimes contain embedded styles. QGIS Desktop may recognise and display the map features using these styles, but QGIS Server cannot serve the layer to Pozi without first overriding the style.</p>
-<p>If the layer appears in QGIS Symbology mode &quot;Embedded&quot;, switch it to &quot;Single Symbol&quot; or &quot;Categorized&quot;, and style it according to your preference.</p>
-        </div>
-    </div>
-</div>
+<doc-anchor-target id="embedded-symbology">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#embedded-symbology">#</doc-anchor-trigger>
+        <span>Embedded Symbology</span>
+    </h2>
+</doc-anchor-target>
+<p>MapInfo tables sometimes contain <em>embedded</em> styles. QGIS Desktop may recognise and display the map features using these styles, but QGIS Server is unable to pass on the styling information to Pozi for styling vector layers.</p>
+<p>If the layer appears in QGIS Symbology mode &quot;Embedded Symbols&quot;, switch it to &quot;Single Symbol&quot; or &quot;Categorized&quot;, and style it according to your preference.</p>
+<p><figure class="content-center">
+    <img src="../img/qgis-layer-styling-embedded.png" alt="" style="width:400px">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<br/>
 <doc-anchor-target id="categorized-symbology">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#categorized-symbology">#</doc-anchor-trigger>
@@ -606,7 +634,7 @@
     <a href="https://fontawesome.com/search" target="_blank" class="absolute block inset-0"></a>
 </div>
 </p>
-<p>Looking for a barbecue icon? Type &#x27;bbq&#x27; into the Font Awesome online search to see the matching icons. Note that they are named &#x27;grill&#x27;. Now go to QGIS and type in &#x27;grill&#x27; to find the icon.</p>
+<p>Looking for a barbecue icon? Type &#x27;bbq&#x27; into the Font Awesome online search to see the matching icons. Note that they are named &#x27;grill&#x27;. Now go to the QGIS SVG browser and type in &#x27;grill&#x27; to find the icon.</p>
         </div>
     </div>
 </div>
