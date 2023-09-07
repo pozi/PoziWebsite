@@ -34,7 +34,9 @@ With a standard sign in to their Microsoft account, staff and other authorised u
 
 #### Better User Management
 
-Microsoft SSO enables IT administrators to have better control and management over access to private datasets in Pozi. With Microsoft's centralised identity management, administrators can more easily control who has access to what datasets, and can quickly revoke access when needed.
+Microsoft SSO enables IT administrators to have better control and management over access to private datasets in Pozi. With Microsoft's centralised identity management, administrators can more easily control who has access, and can quickly revoke access when needed.
+
+Pozi integrates with Azure using OAuth 2.0 through Microsoft's MSAL.js v2.0 JavaScript library.
 
 #### Ultimate Connectivity
 

@@ -52,8 +52,8 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 #### New
 
-- [x] ⚡ new option to display tables of only selected features and related features
-- [x] ⚡ interactive bulk spatial selection for ad-hoc layers - return features from all layers when doing map selections
+- [x] ⚡ display tables of selected features and any linked datasets
+- [x] ⚡ interactive bulk selection - return intersecting features from all open layers based on user defined area
 
 ### August 2023
 
