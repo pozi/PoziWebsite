@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.4.1.747723725728">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.4.1.747724026965">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.4.1">
@@ -35,12 +35,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.4.1.747723725728" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.4.1.747724026965" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.4.1.747723725728" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.4.1.747724026965" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.4.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.4.1.747723725728" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.4.1.747723725728" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.4.1.747724026965" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.4.1.747724026965" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -436,10 +436,10 @@
 <ol>
 <li>Layer Properties &gt; Source &gt; Query Builder</li>
 <li>double-click the name of the field to be used as the link - this will be added to the expression</li>
-<li>click <code v-pre>=</code> (or if you&#x27;re expecting multiple input values, use <code v-pre>IN</code> followed by an open bracket)</li>
+<li>click <code v-pre>IN</code>, and add an open bracket (<code v-pre>(</code>)</li>
 <li>click the Sample button to obtain a list of existing values from the target field</li>
 <li>double click one of the sample values to add it to the expression</li>
-<li>close any open bracket (if using <code v-pre>IN</code>)</li>
+<li>add a close bracket (<code v-pre>)</code>)</li>
 <li>click Test</li>
 </ol>
 <p><figure class="content-center">
@@ -483,7 +483,7 @@
 </doc-anchor-target>
 <p>These settings provide an override for some of the default layer behaviours in Pozi.</p>
 <ul>
-<li><code v-pre>downloadable=true</code>: allow Pozi to display a download option when multiple parent features are selected (eg, for a mail merge)</li>
+<li><code v-pre>downloadable=false</code>: prevent Pozi from showing a table view of the selected features</li>
 <li><code v-pre>enabled=false</code>: temporarily disable a dataset in Pozi (without having to remove it from QGIS)</li>
 <li><code v-pre>infoPanelCollapse=true</code>: collapse info results panel for this dataset</li>
 <li><code v-pre>promoteDetails=true</code>: display all child attributes instead of a preview</li>
@@ -501,7 +501,7 @@
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
-<p>Example: <code v-pre>parent=Property, parameter=EXP_FILTER=Assess_NumberX in ('[Property Number]'), downloadable=true</code></p>
+<p>Example: <code v-pre>parent=Property, parameter=EXP_FILTER=Assess_NumberX in ('[Property Number]')</code></p>
 <p><em>Note: <code v-pre>EXP_FILTER</code> doesn&#x27;t support spaces in the child dataset&#x27;s lookup field name. If this field contains any spaces, update the dataset&#x27;s Attributes Form settings to use a alias name for the lookup field that doesn&#x27;t contain spaces.</em></p>
 <p>Click OK, then save the project.</p>
 <p>Open your Pozi site in your browser, refresh the page, click on the map, select a parent record, and confirm that you can see the related child record(s) in the info panel.</p>
