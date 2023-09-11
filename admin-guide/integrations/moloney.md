@@ -8,11 +8,9 @@ tags: [Pozi Enterprise, Loddon Shire Council, Borough of Queenscliffe]
 
 Pozi integrates with the [Moloney Assset Management System](http://moloneys.com.au/).
 
-Asset data is stored in advanced format spreadsheets. Pozi dynamically extracts asset attributes directly from the spreadsheets for any selected features in compatible map layers. The map layer needs only an asset id field (eg, road segment id) to be populated.
+Moloney stores its asset data in advanced spreadsheets. Pozi dynamically extracts asset attributes directly from the spreadsheets for any selected features in compatible map layers. The map layer needs only an asset id field (eg, road segment id) to be populated.
 
 ![Pozi displays the attributes of a selected road segment directly from the Moloney spreadsheet](img/moloney-feature-attributes.png){style="width:800px"}
-
-*Pozi displays the attributes of a selected road segment directly from the Moloney spreadsheet*
 
 ---
 

@@ -55,12 +55,16 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [x] ⚡ display tables of selected features and any linked datasets
 - [x] ⚡ interactive bulk selection - return intersecting features from all open layers based on user defined area
 
+#### Improved
+
+- [x] 👍 simplify URLs that contain a single click *What's Here* target
+
 ### August 2023
 
 #### New
 
 - [x] ⚡ fullscreen button
-- [x] ⚡ enable URL link-ins based on existing user search options
+- [x] ⚡ enable URL link-ins based on any available search options
 
 #### Improved
 

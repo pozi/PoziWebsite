@@ -100,7 +100,7 @@ It is designed to:
 
 2. the platform automatically processes and compiles the data into a single uniform property dataset
 
-3. DEECA and other approved authorities can pull data from the combined resource on demand in the format of their choosing (complete extract, diffs, M1s, PIQAs, filtered extracts, audits, discrepancy reports, etc)
+3. DEECA and other approved authorities can access data from the combined resource on demand in the format of their choosing (complete extract, diffs, M1s, PIQAs, filtered extracts, audits, discrepancy reports, etc)
 
 With DEECA having complete access to the combined authoritative property information from every council, they have all the information they need to update Vicmap.
 

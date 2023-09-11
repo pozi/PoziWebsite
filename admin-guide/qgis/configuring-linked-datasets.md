@@ -80,10 +80,10 @@ Use the layer's Query Builder to construct and test your expression.
 
 1. Layer Properties > Source > Query Builder
 2. double-click the name of the field to be used as the link - this will be added to the expression
-3. click `=` (or if you're expecting multiple input values, use `IN` followed by an open bracket)
+3. click `IN`, and add an open bracket (`(`)
 4. click the Sample button to obtain a list of existing values from the target field
 5. double click one of the sample values to add it to the expression
-6. close any open bracket (if using `IN`)
+6. add a close bracket (`)`)
 7. click Test
 
 ![](./img/qgis-query-builder.png){style="width:500px"}
@@ -112,7 +112,7 @@ Pozi will substitute any field names within square brackets with values from tho
 
 These settings provide an override for some of the default layer behaviours in Pozi.
 
-* `downloadable=true`: allow Pozi to display a download option when multiple parent features are selected (eg, for a mail merge)
+* `downloadable=false`: prevent Pozi from showing a table view of the selected features
 * `enabled=false`: temporarily disable a dataset in Pozi (without having to remove it from QGIS)
 * `infoPanelCollapse=true`: collapse info results panel for this dataset
 * `promoteDetails=true`: display all child attributes instead of a preview
@@ -125,7 +125,7 @@ In the child dataset's Layer Properties, go to QGIS Server. Fill in the 'Keyword
 
 ![](./img/qgis-server-keywords.png){style="width:600px"}
 
-Example: `parent=Property, parameter=EXP_FILTER=Assess_NumberX in ('[Property Number]'), downloadable=true`
+Example: `parent=Property, parameter=EXP_FILTER=Assess_NumberX in ('[Property Number]')`
 
 *Note: `EXP_FILTER` doesn't support spaces in the child dataset's lookup field name. If this field contains any spaces, update the dataset's Attributes Form settings to use a alias name for the lookup field that doesn't contain spaces.*
 

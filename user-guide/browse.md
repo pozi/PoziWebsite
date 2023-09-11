@@ -17,7 +17,7 @@ With the table open:
 2. start typing text
 3. select desired record
 
-![](./img/table-view-search.png){style="width:400px"}
+![](./img/table-view-search.png){style="width:600px"}
 
 The map will zoom to the selected record's location, highlight the feature, and hide all other features.
 

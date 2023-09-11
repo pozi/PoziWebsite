@@ -30,12 +30,19 @@ In addition to enquiring on single locations, Pozi enables you to enquire on reg
 
 To enquire on a region:
 
-* click Tools > Select > Select by region
-* click on the map to start drawing
-* click on map locations to define the boundary of the enquiry region
-* double-click to finish
+1. click Tools > Select > Select by region
+2. click on the map to start drawing
+3. click on map locations to define the boundary of the enquiry region
+4. double-click to finish
 
-Tip: to enquire on a *path* (for example, to select all the properties along a pipeline or other linear feature), use the region tool to draw a narrow region that approximates the path.
+#### Paths
+
+To enquire on a path (for example, to select all the properties along a pipeline or other linear feature), use the line selection tool.
+
+1. click Tools > Select > Select by line
+2. click on the map to start drawing
+3. click on map locations to define the enquiry path
+4. double-click to finish
 
 ## Feature Selection
 
@@ -50,11 +57,3 @@ Pozi displays information not only about features selected from the map, but als
 Pozi uses parent-child relationships between datasets to provide unlimited querying capabilities.
 
 ![](./img/info-panel-parent-and-child-records.png){style="width:400px"}
-
-### Download Related Information
-
-When related datasets have been configured for downloading, Pozi enables you to retrieve and download related information.
-
-If your target selection includes more than one feature (typically by doing a [multi selection](#multi-selection)), Pozi will display download options for permitted datasets that are related to the selected features. A common use case for internal users is retrieving property owner details for selected properties.
-
-Click the link to download a CSV file of the related features.
