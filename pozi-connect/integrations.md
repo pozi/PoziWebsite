@@ -57,7 +57,6 @@ title: Integrations
 
 ## Open Office Property.Gov
 
-* Bass Coast Shire Council
 * Cardinia Shire Council
 * Central Goldfields Shire Council
 * Hobsons Bay City Council
@@ -90,6 +89,7 @@ title: Integrations
 * Hepburn Shire Council
 * Mitchell Shire Council
 * City of Port Phillip
+* Bass Coast Shire Council
 
 Pozi Connect is configured to extract the information it needs from CSV files, extracted nightly from the TechOne cloud database.
 

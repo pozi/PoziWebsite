@@ -31,8 +31,11 @@ Supported marker symbols:
   * `star`
   * `cross`
   * `x`
+* SVG Marker
+  * QGIS default SVG icons
+  * [FontAwesome Pro 6 icons](setting-up-qgis.md#font-awesome)
 
-Note that SVG marker symbols are not supported, nor `diamond`, `cross2`, `cross_fill` symbols. Symbol rotation is not supported.
+Note that `diamond`, `cross2`, `cross_fill` symbols are not currently supported. Symbol rotation is also not supported.
 
 Suggested sizes:
 
