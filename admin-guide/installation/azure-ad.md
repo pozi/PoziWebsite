@@ -28,7 +28,7 @@ The following settings are for a Pozi server setup with only QGIS Server and IIS
 
 * **Pre Authentication**: `Azure Active Directory`.
 
-Do **not** choose `Passthrough` as that will give any visitor access to the internal network, potentially creating a security risk.
+Do **not** choose `Passthrough` as that will allow any user (logged in or not) to access private resources from the server.
 
 When configured correctly, a request from a logged-in user to Url (for example)...
 
@@ -156,7 +156,7 @@ If it's not possible or practical for the Pozi Support domain user to be given A
 
 ## Information to send back to Pozi
 
-After completion of the configuration, Pozi would like to receive the following from the client:
+After completion of the configuration, email us with the following information:
 
 - [ ] The **internal** app proxy URl (something like `http://<servername>/pozi/`)
 - [ ] The **external** app proxy URl (something like `https://poziserver-<clientname>.msappproxy.net/pozi/`)
@@ -164,8 +164,6 @@ After completion of the configuration, Pozi would like to receive the following 
 - [ ] The **`tenant id`**, which looks like xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The tenant id is defined in Azure Active Directory => Overview."
 - [ ] The **credentials** (email address + password) of the Pozi Support user account that will have access to the Pozi Azure AD Application Proxy. Please get in touch with us on how to securely provide us with these details.
 - [ ] A copy/paste and/or screenshot of all the relevant settings
-
-
 
 <!-- ### Token-based Authentication/Authorisation
 
@@ -216,4 +214,3 @@ The instructions below follow the [Microsoft guide on adding app roles](https://
 #### App Roles in Tokens
 
 * The roles defined above will automatically become available in the authentication tokens in the browser, allowing Pozi to change its behaviour depending on the roles that the user (or the group they are in) have. -->
-

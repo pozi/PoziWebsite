@@ -65,7 +65,7 @@ By default, QGIS Server does NOT expose layers as vectors. Evaluate the pros and
 
 * layers are fully interactive using Pozi's filter, report and table view functionality
 * after the layer is loaded in the browser, the browser doesn't need to send further requests for the layer to the server every time the map moves
-* the cursor changes when hovering over object to indicate the feature is clickable
+* the cursor changes when hovering over object to indicate the feature is clickable, and a tooltip is displayed with the feature's title
 * users can select an individual feature and display its details in Info Panel (without displaying results of features on other layers at the same location)
 
 #### Disadvantages
@@ -192,6 +192,8 @@ To prevent the Info Panel from displaying results from specific layers (say, for
 Project > Properties > Data Sources > Identifiable > untick to disable layer selectability
 
 ![](img/qgis-layer-identifiable.png){style="width:450px"}
+
+It can be useful to make a layer not selectable if it has a corresponding *What's Here* dataset to avoid the Info Panel returning duplicate results.
 
 <br/>
 

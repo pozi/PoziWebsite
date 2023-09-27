@@ -36,12 +36,14 @@ This is defined in Enterprise Applications => Application Proxy => External Url
 - `https://poziserver-loddonvicgovau.msappproxy.net/pozi/`
 - `https://poziserver-northburnettqldgovau.msappproxy.net/pozi/`
 - `https://poziserver-queenscliffevicgovau.msappproxy.net/pozi/`
+- `https://poziserver-mansfieldshirecouncil.msappproxy.net/pozi`
 
 ==- Examples (other)
 
 - `https://gispozi-gleneira.msappproxy.net/pozi/`
 - `https://pozi-cardiniavicgovau.msappproxy.net/`
 - `https://pozi.ngshire.vic.gov.au/`
+- `https://qgis-swanhillvicgovau.msappproxy.net/pozi/`
 
 ==-
 
@@ -59,6 +61,7 @@ This is defined in Enterprise Applications => Application Proxy => Internal Url.
 - Loddon: `https://poziserver.loddon.vic.gov.au/iis/`
 - Queenscliffe: `http://boq-serv-4/pozi/`
 - Glen Eira: `http://th-prod-maps/pozi/`
+- Southern Grampians: `https://bs-gis.pozi.com/iis/`
 
 ==-
 

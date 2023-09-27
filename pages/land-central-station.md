@@ -35,7 +35,7 @@ Victoria's 79 councils maintain the source of truth for much of the state's prop
 
 <img src="/static/img/undraw/undraw_small_town_re_7mcn.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
 
-The Victorian [Department of Energy, Environment and Climate Action](https://deeca.vic.gov.au) (DEECA) relies on this information for its Vicmap Address and Property datasets. However, the current data exchange process puts responsibility on under-resourced councils to frequently prepare and submit lists of property data updates via complex spreadsheets (M1s).
+The Victorian [Department of Energy, Environment and Climate Action](https://deeca.vic.gov.au) (DEECA) relies on this information for its Vicmap Address and Property datasets. However, the current data exchange process puts responsibility on under-resourced councils to frequently prepare and submit lists of property data updates via complex spreadsheets ([M1s](https://www.land.vic.gov.au/maps-and-spatial/data-services/vicmap-helpdesk/m1-process)).
 
 <br clear="all" />
 <br/>

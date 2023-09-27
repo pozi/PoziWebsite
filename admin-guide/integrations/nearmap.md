@@ -1,7 +1,7 @@
 ---
 description: GIS integration for Nearmap
 icon: dot
-tags: [Pozi Enterprise, Cardinia Shire Council]
+tags: [Pozi Enterprise, Cardinia Shire Council, Kingston City Council, Queenscliffe Borough Council]
 ---
 
 # Nearmap
