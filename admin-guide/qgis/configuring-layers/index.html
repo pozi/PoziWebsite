@@ -6,10 +6,10 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.4.1.747984823305">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.749112050564">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.4.1">
+    <meta name="generator" content="Retype 3.5.0">
 
     <!-- Primary Meta Tags -->
     <title>Configuring Layers | Pozi Web GIS | Online Map</title>
@@ -35,11 +35,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.4.1.747984823305" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.749112050564" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.4.1.747984823305" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.4.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.4.1.747984823305" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.749112050564" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.749112050564" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -418,7 +418,7 @@
 <ul>
 <li>layers are fully interactive using Pozi&#x27;s filter, report and table view functionality</li>
 <li>after the layer is loaded in the browser, the browser doesn&#x27;t need to send further requests for the layer to the server every time the map moves</li>
-<li>the cursor changes when hovering over object to indicate the feature is clickable</li>
+<li>the cursor changes when hovering over object to indicate the feature is clickable, and a tooltip is displayed with the feature&#x27;s title</li>
 <li>users can select an individual feature and display its details in Info Panel (without displaying results of features on other layers at the same location)</li>
 </ul>
 <doc-anchor-target id="disadvantages">
@@ -604,6 +604,7 @@
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
+<p>It can be useful to make a layer not selectable if it has a corresponding <em>What&#x27;s Here</em> dataset to avoid the Info Panel returning duplicate results.</p>
 <br/>
 <doc-anchor-target id="exclude-layers">
     <h2>

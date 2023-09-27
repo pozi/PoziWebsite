@@ -6,10 +6,10 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.4.1.747984823305">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.749112050564">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.4.1">
+    <meta name="generator" content="Retype 3.5.0">
 
     <!-- Primary Meta Tags -->
     <title>Azure AD | Pozi Web GIS | Online Map</title>
@@ -33,11 +33,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.4.1.747984823305" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.749112050564" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.4.1.747984823305" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.4.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.4.1.747984823305" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.749112050564" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.749112050564" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -363,7 +363,7 @@
 <li><p><strong>Pre Authentication</strong>: <code v-pre>Azure Active Directory</code>.</p>
 </li>
 </ul>
-<p>Do <strong>not</strong> choose <code v-pre>Passthrough</code> as that will give any visitor access to the internal network, potentially creating a security risk.</p>
+<p>Do <strong>not</strong> choose <code v-pre>Passthrough</code> as that will allow any user (logged in or not) to access private resources from the server.</p>
 <p>When configured correctly, a request from a logged-in user to Url (for example)...</p>
 <p><code v-pre>https://poziserver-&lt;clientname&gt;.msappproxy.net/pozi/qgisserver/wfs3.json</code></p>
 <p>...should return the same response as a local request to...</p>
@@ -530,7 +530,7 @@
         <span>Information to send back to Pozi</span>
     </h2>
 </doc-anchor-target>
-<p>After completion of the configuration, Pozi would like to receive the following from the client:</p>
+<p>After completion of the configuration, email us with the following information:</p>
 <ul class="contains-task-list">
 <li class="task-list-item"><input disabled="disabled" type="checkbox" /> The <strong>internal</strong> app proxy URl (something like <code v-pre>http://&lt;servername&gt;/pozi/</code>)</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" /> The <strong>external</strong> app proxy URl (something like <code v-pre>https://poziserver-&lt;clientname&gt;.msappproxy.net/pozi/</code>)</li>
