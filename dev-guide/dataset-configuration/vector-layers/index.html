@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.749112050564">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.749193177349">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -33,12 +33,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.749112050564" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.749193177349" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.749112050564" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.749193177349" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.749112050564" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.749112050564" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.749193177349" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.749193177349" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -340,11 +340,17 @@
         <span>Vector Layers</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="static-geojson">
+<doc-anchor-target id="sources">
     <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#sources">#</doc-anchor-trigger>
+        <span>Sources</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="static-geojson">
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#static-geojson">#</doc-anchor-trigger>
         <span>Static GeoJSON</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <doc-panel id="example-configuration" collapsed>
     <template #title>Example Configuration</template>
@@ -375,22 +381,22 @@
 </doc-codeblock></div>
 </doc-panel>
 <doc-anchor-target id="wfs-web-feature-service">
-    <h2>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#wfs-web-feature-service">#</doc-anchor-trigger>
         <span>WFS (Web Feature Service)</span>
-    </h2>
-</doc-anchor-target>
-<doc-anchor-target id="sources">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#sources">#</doc-anchor-trigger>
-        <span>Sources</span>
     </h3>
 </doc-anchor-target>
-<doc-anchor-target id="deeca-open-data-platform">
+<doc-anchor-target id="public-sources">
     <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#public-sources">#</doc-anchor-trigger>
+        <span>Public Sources</span>
+    </h4>
+</doc-anchor-target>
+<doc-anchor-target id="deeca-open-data-platform">
+    <h5>
         <doc-anchor-trigger class="header-anchor-trigger" to="#deeca-open-data-platform">#</doc-anchor-trigger>
         <span>DEECA Open Data Platform</span>
-    </h4>
+    </h5>
 </doc-anchor-target>
 <ul>
 <li><a href="https://opendata.maps.vic.gov.au/geoserver/ows?SERVICE=WFS&amp;VERSION=1.1.0&amp;REQUEST=GetCapabilities" class="outbound" target="_blank"><span>GetCapabilities</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
@@ -552,10 +558,10 @@
 </doc-codeblock></div>
 </doc-panel>
 <doc-anchor-target id="datagovau">
-    <h4>
+    <h5>
         <doc-anchor-trigger class="header-anchor-trigger" to="#datagovau">#</doc-anchor-trigger>
         <span>data.gov.au</span>
-    </h4>
+    </h5>
 </doc-anchor-target>
 <ul>
 <li><a href="https://data.gov.au/geoserver/web/wicket/bookmarkable/org.geoserver.web.demo.MapPreviewPage?0" class="outbound" target="_blank"><span>GeoServer Layer Preview</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
@@ -564,59 +570,59 @@
 <li><a href="https://data.gov.au/geoserver/roadside-conservation-zones-greater-shepparton/wfs?request=GetFeature&amp;typeName=ckan_486a2abd_9144_49bd_bc19_56bf6bf5c8b0&amp;outputFormat=json" class="outbound" target="_blank"><span>Example GetFeature Request</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
 </ul>
 <doc-anchor-target id="australian-electoral-commission-aec">
-    <h4>
+    <h5>
         <doc-anchor-trigger class="header-anchor-trigger" to="#australian-electoral-commission-aec">#</doc-anchor-trigger>
         <span>Australian Electoral Commission (AEC)</span>
-    </h4>
+    </h5>
 </doc-anchor-target>
 <ul>
 <li><a href="https://data.gov.au/geoserver/commonwealth-electoral-divisions-as-at-2-august-2021/wfs?request=GetCapabilities" class="outbound" target="_blank"><span>Commonwealth Electoral Divisions</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
 </ul>
 <doc-anchor-target id="pozi-cloud-server">
-    <h4>
+    <h5>
         <doc-anchor-trigger class="header-anchor-trigger" to="#pozi-cloud-server">#</doc-anchor-trigger>
         <span>Pozi Cloud Server</span>
-    </h4>
+    </h5>
 </doc-anchor-target>
 <ul>
 <li><a href="https://d2nozjvesbm579.cloudfront.net/iis/qgisserver?service=WFS&amp;request=GetCapabilities&amp;MAP=C:/Program%20Files%20(x86)/Pozi/server/data/local/sample/queenscliffe/vicmap.qgs" class="outbound" target="_blank"><span>Example GetCapabilities</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
 </ul>
 <doc-anchor-target id="configuration">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#configuration">#</doc-anchor-trigger>
         <span>Configuration</span>
-    </h3>
-</doc-anchor-target>
-<doc-anchor-target id="parameters">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#parameters">#</doc-anchor-trigger>
-        <span>Parameters</span>
     </h4>
 </doc-anchor-target>
-<doc-anchor-target id="request-geojson">
+<doc-anchor-target id="parameters">
     <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#parameters">#</doc-anchor-trigger>
+        <span>Parameters</span>
+    </h5>
+</doc-anchor-target>
+<doc-anchor-target id="request-geojson">
+    <h6>
         <doc-anchor-trigger class="header-anchor-trigger" to="#request-geojson">#</doc-anchor-trigger>
         <span>Request GeoJSON</span>
-    </h5>
+    </h6>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-json"><code v-pre class="language-json">&amp;outputFormat=json</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="force-output-to-wgs84">
-    <h5>
+    <h6>
         <doc-anchor-trigger class="header-anchor-trigger" to="#force-output-to-wgs84">#</doc-anchor-trigger>
         <span>Force output to WGS84</span>
-    </h5>
+    </h6>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-json"><code v-pre class="language-json">&amp;srsName=epsg:4326</code></pre>
 </doc-codeblock></div>
 <p><a href="https://data.gov.au/geoserver/mitchell-shire-managed-crown-land/wfs?request=GetFeature&amp;typeName=ckan_52af0fe9_9cc5_4770_842a_63f809be1f83&amp;srsName=epsg:4326&amp;outputFormat=json" class="outbound" target="_blank"><span>Example</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
 <doc-anchor-target id="arcgis-featureserver">
-    <h2>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#arcgis-featureserver">#</doc-anchor-trigger>
         <span>ArcGIS FeatureServer</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <p>Obtaining GeoJSON endpoint:</p>
 <ol>
@@ -626,10 +632,10 @@
 <li>append parameters (see reference below) <a href="https://services3.arcgis.com/TJxZpUnYIJOvcYwE/arcgis/rest/services/CILZones/FeatureServer/0/query?f=geojson&amp;outFields=*&amp;where=1=1" class="outbound" target="_blank"><span>[example]</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
 </ol>
 <doc-anchor-target id="example-services">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#example-services">#</doc-anchor-trigger>
         <span>Example Services</span>
-    </h3>
+    </h4>
 </doc-anchor-target>
 <ul>
 <li><a href="https://enterprise.mapshare.vic.gov.au/server/rest/services/Hosted" class="outbound" target="_blank"><span>https://enterprise.mapshare.vic.gov.au/server/rest/services/Hosted</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
@@ -637,65 +643,65 @@
 <li><a href="https://services6.arcgis.com/GB33F62SbDxJjwEL/arcgis/rest/services" class="outbound" target="_blank"><span>https://services6.arcgis.com/GB33F62SbDxJjwEL/arcgis/rest/services</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
 </ul>
 <doc-anchor-target id="parameters-1">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#parameters-1">#</doc-anchor-trigger>
         <span>Parameters</span>
-    </h3>
+    </h4>
 </doc-anchor-target>
 <p><a href="https://services3.arcgis.com/TJxZpUnYIJOvcYwE/arcgis/rest/services/CILZones/FeatureServer/0/query?f=html&amp;outFields=*&amp;where=1=1" class="outbound" target="_blank"><span>[Example REST Services API]</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
 <doc-anchor-target id="for-entire-dataset">
-    <h4>
+    <h5>
         <doc-anchor-trigger class="header-anchor-trigger" to="#for-entire-dataset">#</doc-anchor-trigger>
         <span>For Entire Dataset</span>
-    </h4>
+    </h5>
 </doc-anchor-target>
 <p><code v-pre>/query?f=geojson&amp;outFields=*&amp;where=1=1</code></p>
 <p><a href="https://services3.arcgis.com/TJxZpUnYIJOvcYwE/arcgis/rest/services/CILZones/FeatureServer/0/query?f=geojson&amp;outFields=*&amp;where=1=1" class="outbound" target="_blank"><span>[Example]</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
 <doc-anchor-target id="set-maximum-features">
-    <h4>
+    <h5>
         <doc-anchor-trigger class="header-anchor-trigger" to="#set-maximum-features">#</doc-anchor-trigger>
         <span>Set Maximum Features</span>
-    </h4>
+    </h5>
 </doc-anchor-target>
 <p><code v-pre>&amp;resultRecordCount=1</code></p>
 <p><a href="https://services3.arcgis.com/TJxZpUnYIJOvcYwE/arcgis/rest/services/CILZones/FeatureServer/0/query?f=geojson&amp;outFields=*&amp;resultRecordCount=1&amp;where=1=1" class="outbound" target="_blank"><span>[Example]</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
 <doc-anchor-target id="specify-fields">
-    <h4>
+    <h5>
         <doc-anchor-trigger class="header-anchor-trigger" to="#specify-fields">#</doc-anchor-trigger>
         <span>Specify Fields</span>
-    </h4>
+    </h5>
 </doc-anchor-target>
 <p><code v-pre>&amp;outFields=*</code></p>
 <p>Specify <code v-pre>*</code> or individual field names separated by commas.</p>
 <doc-anchor-target id="change-projection">
-    <h4>
+    <h5>
         <doc-anchor-trigger class="header-anchor-trigger" to="#change-projection">#</doc-anchor-trigger>
         <span>Change Projection</span>
-    </h4>
+    </h5>
 </doc-anchor-target>
 <p><code v-pre>&amp;outSR=4283</code></p>
 <p>Override the default output projection to solve any alignment issues.</p>
 <p>Note that some projections such as 4283 are supported only in ArcGIS Enterprise 10.9.1 and later, and not in 10.8.1.</p>
 <doc-anchor-target id="spatial-intersection">
-    <h4>
+    <h5>
         <doc-anchor-trigger class="header-anchor-trigger" to="#spatial-intersection">#</doc-anchor-trigger>
         <span>Spatial Intersection</span>
-    </h4>
+    </h5>
 </doc-anchor-target>
 <p><code v-pre>/query?f=geojson&amp;outFields=*&amp;returnGeometry=true&amp;inSR=4326&amp;spatialRel=esriSpatialRelIntersects&amp;geometryType=[$esriGeometryType]&amp;geometry=[$esriGeometry]</code></p>
 <p><a href="https://enterprise.mapshare.vic.gov.au/server/rest/services/Hosted/Vicmap_Property_Address/FeatureServer/0/query?where=prop_property_type%3D%27O%27&amp;geometry=%7B%22points%22%3A%5B%5B141.65486%2C-36.33622%5D%5D%7D&amp;geometryType=esriGeometryMultipoint&amp;inSR=4326&amp;spatialRel=esriSpatialRelIntersects&amp;outFields=*&amp;returnGeometry=true" class="outbound" target="_blank"><span>[Example]</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
 <doc-anchor-target id="complete-reference">
-    <h4>
+    <h5>
         <doc-anchor-trigger class="header-anchor-trigger" to="#complete-reference">#</doc-anchor-trigger>
         <span>Complete Reference</span>
-    </h4>
+    </h5>
 </doc-anchor-target>
 <p><a href="https://developers.arcgis.com/rest/services-reference/enterprise/query-feature-service-layer-.htm" class="outbound" target="_blank"><span>Esri ArcGIS REST APIs Documentation</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
 <doc-anchor-target id="examples">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#examples">#</doc-anchor-trigger>
         <span>Examples</span>
-    </h3>
+    </h4>
 </doc-anchor-target>
 <doc-panels>
    <doc-panel id="layer" collapsed>
@@ -737,10 +743,10 @@
    </doc-panel>
 </doc-panels>
 <doc-anchor-target id="on-premise-integration">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#on-premise-integration">#</doc-anchor-trigger>
         <span>On Premise Integration</span>
-    </h3>
+    </h4>
 </doc-anchor-target>
 <p>ArcGIS Online datasets can also be configured for internal use by using VRT configuration.</p>
 <p>Examples:</p>
@@ -749,10 +755,10 @@
 <li><a href="https://github.com/pozi/PoziConnectConfig/blob/master/Central%20Goldfields/SQL/Central%20Goldfields%20PC%20Council%20Rural%20Address.vrt" class="outbound" target="_blank"><span>https://github.com/pozi/PoziConnectConfig/blob/master/Central%20Goldfields/SQL/Central%20Goldfields%20PC%20Council%20Rural%20Address.vrt</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
 </ul>
 <doc-anchor-target id="ckan-api">
-    <h2>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#ckan-api">#</doc-anchor-trigger>
         <span>CKAN API</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <p>Any CSV data published to data.gov.au is automatically exposed through its CKAN API. The API accepts SQL requests and returns data in a JSON format (not GeoJSON).</p>
 <p>When configuring in Pozi, use <code v-pre>&quot;loader&quot;: &quot;ckanapi&quot;</code> to instruct Pozi to convert the results to GeoJSON. If the data contains fields named <code v-pre>x</code>, <code v-pre>y</code>, <code v-pre>longitude</code>, <code v-pre>lng</code>, <code v-pre>lon</code>, <code v-pre>long</code>, <code v-pre>latitude</code> or <code v-pre>lat</code>, these are used to generate point geometries in the GeoJSON. Otherwise the geometry is null.</p>
@@ -762,10 +768,10 @@
 <li><a href="https://data.gov.au/api/action/datastore_search_sql?sql=SELECT%20*%20from%20%22306f9e0d-581a-4506-8de9-20283f4334a1%22" class="outbound" target="_blank"><span>https://data.gov.au/api/action/datastore_search_sql?sql=SELECT%20*%20from%20%22306f9e0d-581a-4506-8de9-20283f4334a1%22</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
 </ul>
 <doc-anchor-target id="allowed-functions">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#allowed-functions">#</doc-anchor-trigger>
         <span>Allowed Functions</span>
-    </h3>
+    </h4>
 </doc-anchor-target>
 <p><a href="https://github.com/ckan/ckan/blob/master/ckanext/datastore/allowed_functions.txt" class="outbound" target="_blank"><span>https://github.com/ckan/ckan/blob/master/ckanext/datastore/allowed_functions.txt</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
 <p>As of February 2022, data.gov.au removed support for <code v-pre>CAST()</code>. Instead, use the <code v-pre>::</code> syntax for doing type conversions.</p>
@@ -773,10 +779,10 @@
 <pre class="language-none"><code v-pre class="language-none">https://data.gov.au/api/action/datastore_search_sql?sql=select * from &quot;34076296-6692-4e30-b627-67b7c4eb1027&quot; where &quot;Latitude&quot; :: float &gt; -37.07 and &quot;Latitude&quot; :: float &lt; -36.39 and &quot;Longitude&quot; :: float &gt; 144.03 and &quot;Longitude&quot; :: float &lt; 144.86</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="examples-1">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#examples-1">#</doc-anchor-trigger>
         <span>Examples</span>
-    </h3>
+    </h4>
 </doc-anchor-target>
 <doc-panels>
    <doc-panel id="layer" collapsed>
@@ -832,10 +838,10 @@
    </doc-panel>
 </doc-panels>
 <doc-anchor-target id="submitting-csv-files-to-datagovau">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#submitting-csv-files-to-datagovau">#</doc-anchor-trigger>
         <span>Submitting CSV files to data.gov.au</span>
-    </h3>
+    </h4>
 </doc-anchor-target>
 <p>Take care when publishing CSV files in data.gov.au to ensure the output from the Data API is current with the uploaded file.</p>
 <p>The support team at data.gov.au has provided this information:</p>
@@ -843,10 +849,10 @@
 <p>We have found that data in the format csv_geo_au format doesn&#x27;t trigger the datastore load automatically. It doesn&#x27;t automatically recognise it as a csv. If you find it doesn&#x27;t load and if you have access to manage the resource, go to the Datastore tab. Clicking &#x27;Upload to datastore&#x27; should update the table.</p>
 </blockquote>
 <doc-anchor-target id="pozi-server">
-    <h2>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#pozi-server">#</doc-anchor-trigger>
         <span>Pozi Server</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <p>Pozi Server provides an on-premise API for organisations&#x27; spatial and non-spatial data.</p>
 <p>Running as a Windows service, it responds to http requests generated by Pozi app from users on the client network. It uses <code v-pre>ogr2ogr</code> to tap into local datasets and return a GeoJSON response.</p>
@@ -857,10 +863,10 @@
 <li><a href="https://courses.spatialthoughts.com/gdal-tools.html#ogr-tools" class="outbound" target="_blank"><span>https://courses.spatialthoughts.com/gdal-tools.html#ogr-tools</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
 </ul>
 <doc-anchor-target id="examples-2">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#examples-2">#</doc-anchor-trigger>
         <span>Examples</span>
-    </h3>
+    </h4>
 </doc-anchor-target>
 <ul>
 <li>Local install: <a href="https://local.pozi.com/ogr2ogr?source=sample/queenscliffe/delwp/vmfeat/foi_point.shp" class="outbound" target="_blank"><span>https://local.pozi.com/ogr2ogr?source=sample/queenscliffe/delwp/vmfeat/foi_point.shp</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
@@ -868,10 +874,10 @@
 <li>More: <a href="https://local.pozi.com/tests" class="outbound" target="_blank"><span>https://local.pozi.com/tests</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>?</li>
 </ul>
 <doc-anchor-target id="parameters-2">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#parameters-2">#</doc-anchor-trigger>
         <span>Parameters</span>
-    </h3>
+    </h4>
 </doc-anchor-target>
 <p>Any ogr2ogr options can be included as part of any request. A complete list of options is available at <a href="https://gdal.org/programs/ogr2ogr.html" class="outbound" target="_blank"><span>https://gdal.org/programs/ogr2ogr.html</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
 <p>Notes:</p>
@@ -895,10 +901,10 @@
 <pre class="language-none"><code v-pre class="language-none">.../ogr2ogr?source=frankston/council-facilities.vrt&amp;options=-where|type='Maternal and Child Health'</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="examples-3">
-    <h4>
+    <h5>
         <doc-anchor-trigger class="header-anchor-trigger" to="#examples-3">#</doc-anchor-trigger>
         <span>Examples</span>
-    </h4>
+    </h5>
 </doc-anchor-target>
 <ul>
 <li><code v-pre>https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=data.gov.au/bendigo/cogb-recreation-drinking-fountains.shz</code></li>
@@ -906,10 +912,10 @@
 <li><code v-pre>https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=swanhill/shrccdogwastebags.vrt</code></li>
 </ul>
 <doc-anchor-target id="advanced-example">
-    <h5>
+    <h6>
         <doc-anchor-trigger class="header-anchor-trigger" to="#advanced-example">#</doc-anchor-trigger>
         <span>Advanced Example</span>
-    </h5>
+    </h6>
 </doc-anchor-target>
 <ul>
 <li><code v-pre>https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=data.gov.au/bendigo/cogb-capital-works.shz&amp;options=-sql|select * from &quot;CoGB Capital Works&quot; where BudgetYear='2022-2023' order by Category desc</code></li>
@@ -926,10 +932,10 @@
       &quot;url&quot;: &quot;https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=data.gov.au/bendigo/cogb-capital-works.shz&amp;options=-sql|select * from \&quot;CoGB Capital Works\&quot; where BudgetYear='2022-2023' order by Category desc&quot;</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="default-parameters">
-    <h4>
+    <h5>
         <doc-anchor-trigger class="header-anchor-trigger" to="#default-parameters">#</doc-anchor-trigger>
         <span>Default Parameters</span>
-    </h4>
+    </h5>
 </doc-anchor-target>
 <p>Pozi Server applies the following parameters by default to all requests:</p>
 <ul>
@@ -937,44 +943,44 @@
 <li><code v-pre>-lco RFC7946=YES</code> (<a href="https://gdal.org/drivers/vector/geojson.html#rfc-7946-write-support" class="outbound" target="_blank"><span>more info</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>)</li>
 </ul>
 <doc-anchor-target id="simplify">
-    <h4>
+    <h5>
         <doc-anchor-trigger class="header-anchor-trigger" to="#simplify">#</doc-anchor-trigger>
         <span>Simplify</span>
-    </h4>
+    </h5>
 </doc-anchor-target>
 <p>Apply geometry generalisation on polyline and polygon features to eliminate unneeded vertices. Note that the simplification unit is based on the <em>source</em> data. For sources in degrees, a simplification value of 0.00001 is approximately 1m.</p>
 <p><code v-pre>-simplify 0.00001</code></p>
 <doc-anchor-target id="explode-collections">
-    <h4>
+    <h5>
         <doc-anchor-trigger class="header-anchor-trigger" to="#explode-collections">#</doc-anchor-trigger>
         <span>Explode Collections</span>
-    </h4>
+    </h5>
 </doc-anchor-target>
 <p>Produce one feature for each geometry in any kind of geometry collection in the source file.</p>
 <p><code v-pre>-explodecollections</code></p>
 <doc-anchor-target id="spatial-intersection-1">
-    <h4>
+    <h5>
         <doc-anchor-trigger class="header-anchor-trigger" to="#spatial-intersection-1">#</doc-anchor-trigger>
         <span>Spatial Intersection</span>
-    </h4>
+    </h5>
 </doc-anchor-target>
 <doc-anchor-target id="unified-search">
-    <h4>
+    <h5>
         <doc-anchor-trigger class="header-anchor-trigger" to="#unified-search">#</doc-anchor-trigger>
         <span>Unified Search</span>
-    </h4>
+    </h5>
 </doc-anchor-target>
 <doc-anchor-target id="case-studies">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#case-studies">#</doc-anchor-trigger>
         <span>Case Studies</span>
-    </h3>
+    </h4>
 </doc-anchor-target>
 <doc-anchor-target id="filtering-static-geojson">
-    <h4>
+    <h5>
         <doc-anchor-trigger class="header-anchor-trigger" to="#filtering-static-geojson">#</doc-anchor-trigger>
         <span>Filtering Static GeoJSON</span>
-    </h4>
+    </h5>
 </doc-anchor-target>
 <p>A client has uploaded a GeoJSON to data.gov.au that they want displayed in Pozi as separate layers:</p>
 <p><a href="https://data.gov.au/data/dataset/1546593a-44b0-4f5b-a58b-5481e4e4e4c5/resource/478046d4-e8c1-45ad-b31a-f0bea780b054/download/frankston-city-council-facilities.json" class="outbound" target="_blank"><span>https://data.gov.au/data/dataset/1546593a-44b0-4f5b-a58b-5481e4e4e4c5/resource/478046d4-e8c1-45ad-b31a-f0bea780b054/download/frankston-city-council-facilities.json</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
@@ -997,10 +1003,10 @@
 <p>Here is an example of a request that returns all features with a &quot;type&quot; value of &quot;Maternal and Child Health&quot;:</p>
 <p><a href="https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=frankston/council-facilities.vrt&amp;options=-where%7Ctype=%27Maternal%20and%20Child%20Health%27" class="outbound" target="_blank"><span>https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=frankston/council-facilities.vrt&amp;options=-where|type=&#x27;Maternal%20and%20Child%20Health&#x27;</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
 <doc-anchor-target id="converting-csv-to-geojson">
-    <h4>
+    <h5>
         <doc-anchor-trigger class="header-anchor-trigger" to="#converting-csv-to-geojson">#</doc-anchor-trigger>
         <span>Converting CSV to GeoJSON</span>
-    </h4>
+    </h5>
 </doc-anchor-target>
 <p>A client has uploaded a dataset in CSV format to data.gov.au or other online location.</p>
 <p>CSV datasets containing coordinate columns can be dynamically converted to GeoJSON using Pozi Server so that the data can be directly consumed within Pozi.</p>
@@ -1043,6 +1049,18 @@
 </doc-panel>
 <p>If the VRT is configured on the Pozi Cloud Server, the target URL will look like this:</p>
 <p><a href="https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=swanhill/shrccdogwastebags.vrt" class="outbound" target="_blank"><span>https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=swanhill/shrccdogwastebags.vrt</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
+<hr>
+<doc-anchor-target id="options">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#options">#</doc-anchor-trigger>
+        <span>Options</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li><code v-pre>&quot;visible&quot;: true</code> - turn on layer by default</li>
+<li><code v-pre>&quot;preventClick&quot;: false</code> - prevent users from interacting with any other layers covered by features in this layer (eg municipal boundary)</li>
+<li><code v-pre>&quot;queryable&quot;: false</code> - don&#x27;t display info results for this layer</li>
+</ul>
 <hr>
 <doc-anchor-target id="troubleshooting">
     <h2>
