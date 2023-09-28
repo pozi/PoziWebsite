@@ -35,7 +35,7 @@ In this example, we'll use a property layer as the source for both a What's Here
 
 ### Standard Layer
 
-- primary purpose is for layer visualisation
+- primary purpose is for visualisation
 - appears in the layer panel, and the user can turn it on or off
 - configuration:
   - use plural naming convention (ie 'Properties')
@@ -45,7 +45,6 @@ In this example, we'll use a property layer as the source for both a What's Here
 ### What's Here
 
 - always returns a result when the user clicks on the map, regardless of whether the 'Properties' layer (above) is turned on or not
-- can support complex selections such as lines, polygons and multi-points
 - is not listed in the layer panel
 - configuration:
   - use singular naming convention (ie 'Property')

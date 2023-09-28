@@ -1,7 +1,7 @@
 ---
 description: GIS integration for MAGIQ
 icon: dot
-tags: [Pozi Enterprise, Link-Out, North Regional Shire Council]
+tags: [Pozi Enterprise, Link-Out, North Burnett Regional Shire Council]
 ---
 
 # MAGIQ
@@ -20,11 +20,11 @@ An example link for MAGIQ looks like this:
 
 [https://magiq.northburnett.qld.gov.au/MagiQ/?app/rg11menu/loadRecord/13049](https://magiq.northburnett.qld.gov.au/MagiQ/?app/rg11menu/loadRecord/13049)
 
-Update magiq.northburnett.qld.gov.au for your specific MAGIQ URL.
+Update `magiq.northburnett.qld.gov.au` for your specific MAGIQ URL.
 
 #### QGIS Configuration
 
-Create a virtual field with the output field type of “Text” on your property boundary layer.
+Create a virtual field with the output field type of "Text" on your property boundary layer.
 
 Layer Properties > Fields > Field Calculator > Create virtual field:
 

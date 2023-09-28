@@ -4,7 +4,9 @@ order: 90
 
 # Vector Layers
 
-## Static GeoJSON
+## Sources
+
+### Static GeoJSON
 
 ==- Example Configuration
 
@@ -36,11 +38,11 @@ order: 90
 
 ==-
 
-## WFS (Web Feature Service)
+### WFS (Web Feature Service)
 
-### Sources
+#### Public Sources
 
-#### DEECA Open Data Platform
+##### DEECA Open Data Platform
 
 * [GetCapabilities](https://opendata.maps.vic.gov.au/geoserver/ows?SERVICE=WFS&VERSION=1.1.0&REQUEST=GetCapabilities)
 * [Example GetFeature request](https://opendata.maps.vic.gov.au/geoserver/ows?SERVICE=WFS&VERSION=1.1.0&REQUEST=GetFeature&srsName=EPSG%3A4326&typeNames=v_property_mp_address&maxFeatures=500&outputFormat=application%2Fjson&cql_filter=propv_graphic_type%3D%27P%27+and+intersects(geom,point(-37.63735%20142.54282)))
@@ -202,32 +204,32 @@ order: 90
 
 ==-
 
-#### data.gov.au
+##### data.gov.au
 
 * [GeoServer Layer Preview](https://data.gov.au/geoserver/web/wicket/bookmarkable/org.geoserver.web.demo.MapPreviewPage?0)
 * [GetCapabilities](https://data.gov.au/geoserver/wfs?SERVICE=WFS&REQUEST=GetCapabilities)
 * [Example GetCapabilities for single dataset](https://data.gov.au/geoserver/roadside-conservation-zones-greater-shepparton/wfs?request=GetCapabilities)
 * [Example GetFeature Request](https://data.gov.au/geoserver/roadside-conservation-zones-greater-shepparton/wfs?request=GetFeature&typeName=ckan_486a2abd_9144_49bd_bc19_56bf6bf5c8b0&outputFormat=json)
 
-#### Australian Electoral Commission (AEC)
+##### Australian Electoral Commission (AEC)
 
 * [Commonwealth Electoral Divisions](https://data.gov.au/geoserver/commonwealth-electoral-divisions-as-at-2-august-2021/wfs?request=GetCapabilities)
 
-#### Pozi Cloud Server
+##### Pozi Cloud Server
 
 * [Example GetCapabilities](https://d2nozjvesbm579.cloudfront.net/iis/qgisserver?service=WFS&request=GetCapabilities&MAP=C:/Program%20Files%20(x86)/Pozi/server/data/local/sample/queenscliffe/vicmap.qgs)
 
-### Configuration
+#### Configuration
 
-#### Parameters
+##### Parameters
 
-##### Request GeoJSON
+###### Request GeoJSON
 
 ```json
 &outputFormat=json
 ```
 
-##### Force output to WGS84
+###### Force output to WGS84
 
 ```json
 &srsName=epsg:4326
@@ -235,7 +237,7 @@ order: 90
 
 [Example](https://data.gov.au/geoserver/mitchell-shire-managed-crown-land/wfs?request=GetFeature&typeName=ckan_52af0fe9_9cc5_4770_842a_63f809be1f83&srsName=epsg:4326&outputFormat=json)
 
-## ArcGIS FeatureServer
+### ArcGIS FeatureServer
 
 Obtaining GeoJSON endpoint:
 
@@ -244,35 +246,35 @@ Obtaining GeoJSON endpoint:
 3. go to URL, click desired layer from Layer list, and copy URL [[example]](https://services3.arcgis.com/TJxZpUnYIJOvcYwE/ArcGIS/rest/services/CILZones/FeatureServer/0)
 4. append parameters (see reference below) [[example]](https://services3.arcgis.com/TJxZpUnYIJOvcYwE/arcgis/rest/services/CILZones/FeatureServer/0/query?f=geojson&outFields=*&where=1=1)
 
-### Example Services
+#### Example Services
 
 - https://enterprise.mapshare.vic.gov.au/server/rest/services/Hosted
 - https://corp-gis.mapshare.vic.gov.au/arcgis/rest/services/Mapshare
 - https://services6.arcgis.com/GB33F62SbDxJjwEL/arcgis/rest/services
 
-### Parameters
+#### Parameters
 
 [[Example REST Services API]](https://services3.arcgis.com/TJxZpUnYIJOvcYwE/arcgis/rest/services/CILZones/FeatureServer/0/query?f=html&outFields=*&where=1=1)
 
-#### For Entire Dataset
+##### For Entire Dataset
 
 `/query?f=geojson&outFields=*&where=1=1`
 
 [[Example]](https://services3.arcgis.com/TJxZpUnYIJOvcYwE/arcgis/rest/services/CILZones/FeatureServer/0/query?f=geojson&outFields=*&where=1=1)
 
-#### Set Maximum Features
+##### Set Maximum Features
 
 `&resultRecordCount=1`
 
 [[Example]](https://services3.arcgis.com/TJxZpUnYIJOvcYwE/arcgis/rest/services/CILZones/FeatureServer/0/query?f=geojson&outFields=*&resultRecordCount=1&where=1=1)
 
-#### Specify Fields
+##### Specify Fields
 
 `&outFields=*`
 
 Specify `*` or individual field names separated by commas.
 
-#### Change Projection
+##### Change Projection
 
 `&outSR=4283`
 
@@ -280,17 +282,17 @@ Override the default output projection to solve any alignment issues.
 
 Note that some projections such as 4283 are supported only in ArcGIS Enterprise 10.9.1 and later, and not in 10.8.1.
 
-#### Spatial Intersection
+##### Spatial Intersection
 
 `/query?f=geojson&outFields=*&returnGeometry=true&inSR=4326&spatialRel=esriSpatialRelIntersects&geometryType=[$esriGeometryType]&geometry=[$esriGeometry]`
 
 [[Example]](https://enterprise.mapshare.vic.gov.au/server/rest/services/Hosted/Vicmap_Property_Address/FeatureServer/0/query?where=prop_property_type%3D%27O%27&geometry=%7B%22points%22%3A%5B%5B141.65486%2C-36.33622%5D%5D%7D&geometryType=esriGeometryMultipoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=*&returnGeometry=true)
 
-#### Complete Reference
+##### Complete Reference
 
 [Esri ArcGIS REST APIs Documentation](https://developers.arcgis.com/rest/services-reference/enterprise/query-feature-service-layer-.htm)
 
-### Examples
+#### Examples
 
 ==- Layer
 ```json
@@ -330,7 +332,7 @@ Note that some projections such as 4283 are supported only in ArcGIS Enterprise 
 
 ==-
 
-### On Premise Integration
+#### On Premise Integration
 
 ArcGIS Online datasets can also be configured for internal use by using VRT configuration.
 
@@ -339,7 +341,7 @@ Examples:
 * https://github.com/pozi/PoziConnectConfig/blob/master/Moorabool/SQL/Moorabool%20PC%20Council%20Rural%20Address.vrt
 * https://github.com/pozi/PoziConnectConfig/blob/master/Central%20Goldfields/SQL/Central%20Goldfields%20PC%20Council%20Rural%20Address.vrt
 
-## CKAN API
+### CKAN API
 
 Any CSV data published to data.gov.au is automatically exposed through its CKAN API. The API accepts SQL requests and returns data in a JSON format (not GeoJSON).
 
@@ -350,7 +352,7 @@ Example requests
 * https://data.gov.au/data/api/3/action/datastore_search?resource_id=306f9e0d-581a-4506-8de9-20283f4334a1
 * https://data.gov.au/api/action/datastore_search_sql?sql=SELECT%20*%20from%20%22306f9e0d-581a-4506-8de9-20283f4334a1%22
 
-### Allowed Functions
+#### Allowed Functions
 
 https://github.com/ckan/ckan/blob/master/ckanext/datastore/allowed_functions.txt
 
@@ -360,7 +362,7 @@ As of February 2022, data.gov.au removed support for `CAST()`. Instead, use the 
 https://data.gov.au/api/action/datastore_search_sql?sql=select * from "34076296-6692-4e30-b627-67b7c4eb1027" where "Latitude" :: float > -37.07 and "Latitude" :: float < -36.39 and "Longitude" :: float > 144.03 and "Longitude" :: float < 144.86
 ```
 
-### Examples
+#### Examples
 
 ==- Layer
 
@@ -416,7 +418,7 @@ Uses `WARD_NUM` from parent record to do a lookup.
 
 ==-
 
-### Submitting CSV files to data.gov.au
+#### Submitting CSV files to data.gov.au
 
 Take care when publishing CSV files in data.gov.au to ensure the output from the Data API is current with the uploaded file.
 
@@ -424,7 +426,7 @@ The support team at data.gov.au has provided this information:
 
 > We have found that data in the format csv_geo_au format doesn't trigger the datastore load automatically. It doesn't automatically recognise it as a csv. If you find it doesn't load and if you have access to manage the resource, go to the Datastore tab. Clicking 'Upload to datastore' should update the table.
 
-## Pozi Server
+### Pozi Server
 
 Pozi Server provides an on-premise API for organisations' spatial and non-spatial data.
 
@@ -437,13 +439,13 @@ Requests to Pozi Server can be configured to return whole datastes (eg, to displ
 * https://gdal.org/programs/ogr2ogr.html
 * https://courses.spatialthoughts.com/gdal-tools.html#ogr-tools
 
-### Examples
+#### Examples
 
 * Local install: https://local.pozi.com/ogr2ogr?source=sample/queenscliffe/delwp/vmfeat/foi_point.shp
 * Pozi Cloud: https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=data.gov.au/bendigo/cogb-community-mach-zones.shz
 * More: https://local.pozi.com/tests?
 
-### Parameters
+#### Parameters
 
 Any ogr2ogr options can be included as part of any request. A complete list of options is available at [https://gdal.org/programs/ogr2ogr.html](https://gdal.org/programs/ogr2ogr.html).
 
@@ -468,13 +470,13 @@ Equivalent Pozi Server request example:
 .../ogr2ogr?source=frankston/council-facilities.vrt&options=-where|type='Maternal and Child Health'
 ```
 
-#### Examples
+##### Examples
 
 * `https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=data.gov.au/bendigo/cogb-recreation-drinking-fountains.shz`
 * `https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=frankston/property-valuation-information.vrt&options=-where|propertynumber='214855'`
 * `https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=swanhill/shrccdogwastebags.vrt`
 
-##### Advanced Example
+###### Advanced Example
 
 * `https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=data.gov.au/bendigo/cogb-capital-works.shz&options=-sql|select * from "CoGB Capital Works" where BudgetYear='2022-2023' order by Category desc`
 
@@ -493,32 +495,32 @@ In the Pozi config, the double quotes must be escaped with backslashes
       "url": "https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=data.gov.au/bendigo/cogb-capital-works.shz&options=-sql|select * from \"CoGB Capital Works\" where BudgetYear='2022-2023' order by Category desc"
 ```
 
-#### Default Parameters
+##### Default Parameters
 
 Pozi Server applies the following parameters by default to all requests:
 
 * `-f GeoJSON`
 * `-lco RFC7946=YES` ([more info](https://gdal.org/drivers/vector/geojson.html#rfc-7946-write-support))
 
-#### Simplify
+##### Simplify
 
 Apply geometry generalisation on polyline and polygon features to eliminate unneeded vertices. Note that the simplification unit is based on the *source* data. For sources in degrees, a simplification value of 0.00001 is approximately 1m.
 
 `-simplify 0.00001`
 
-#### Explode Collections
+##### Explode Collections
 
 Produce one feature for each geometry in any kind of geometry collection in the source file.
 
 `-explodecollections`
 
-#### Spatial Intersection
+##### Spatial Intersection
 
-#### Unified Search
+##### Unified Search
 
-### Case Studies
+#### Case Studies
 
-#### Filtering Static GeoJSON
+##### Filtering Static GeoJSON
 
 A client has uploaded a GeoJSON to data.gov.au that they want displayed in Pozi as separate layers:
 
@@ -547,7 +549,7 @@ Here is an example of a request that returns all features with a "type" value of
 
 [https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=frankston/council-facilities.vrt&options=-where|type='Maternal%20and%20Child%20Health'](https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=frankston/council-facilities.vrt&options=-where|type='Maternal%20and%20Child%20Health')
 
-#### Converting CSV to GeoJSON
+##### Converting CSV to GeoJSON
 
 A client has uploaded a dataset in CSV format to data.gov.au or other online location.
 
@@ -596,6 +598,14 @@ Place the resulting VRT file in a suitable location within the `userdata` folder
 If the VRT is configured on the Pozi Cloud Server, the target URL will look like this:
 
 https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=swanhill/shrccdogwastebags.vrt
+
+---
+
+## Options
+
+- `"visible": true` - turn on layer by default
+- `"preventClick": false` - prevent users from interacting with any other layers covered by features in this layer (eg municipal boundary)
+- `"queryable": false` - don't display info results for this layer
 
 ---
 
