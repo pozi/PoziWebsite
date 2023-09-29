@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.749193177349">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.749282549217">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,11 +35,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.749193177349" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.749282549217" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.749193177349" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.749282549217" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.749193177349" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.749282549217" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -373,7 +373,7 @@
 <doc-anchor-target id="application-proxy-external-url">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#application-proxy-external-url">#</doc-anchor-trigger>
-        <span>Application Proxy external URL</span>
+        <span>Application Proxy External URL</span>
     </h4>
 </doc-anchor-target>
 <p>The externally accessible URL to access the Application Proxy.</p>
@@ -385,7 +385,7 @@
 <li><code v-pre>https://poziserver-loddonvicgovau.msappproxy.net/pozi/</code></li>
 <li><code v-pre>https://poziserver-northburnettqldgovau.msappproxy.net/pozi/</code></li>
 <li><code v-pre>https://poziserver-queenscliffevicgovau.msappproxy.net/pozi/</code></li>
-<li><code v-pre>https://poziserver-mansfieldshirecouncil.msappproxy.net/pozi</code></li>
+<li><code v-pre>https://poziserver-mansfieldshirecouncil.msappproxy.net/pozi/</code></li>
 </ul>
    </doc-panel>
    <doc-panel id="examples-other" collapsed>
@@ -401,23 +401,32 @@
 <doc-anchor-target id="application-proxy-internal-url">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#application-proxy-internal-url">#</doc-anchor-trigger>
-        <span>Application Proxy internal URL</span>
+        <span>Application Proxy Internal URL</span>
     </h4>
 </doc-anchor-target>
 <p>The internally only accessible URL to access the Pozi Server from within the client&#x27;s network.</p>
 <p>This is defined in Enterprise Applications =&gt; Application Proxy =&gt; Internal Url.</p>
-<doc-panel id="examples" collapsed>
-    <template #title>Examples</template>
+<doc-panels>
+   <doc-panel id="examples-preferred" collapsed>
+       <template #title>Examples (preferred)</template>
 <ul>
 <li>North Burnett: <code v-pre>http://gis2/pozi/</code></li>
+<li>Queenscliffe: <code v-pre>http://boq-serv-4/pozi/</code></li>
+<li>Glen Eira: <code v-pre>http://th-prod-maps/pozi/</code></li>
+<li>Swan Hill: <code v-pre>http://qgis.swanhill.vic.gov.au/pozi/</code></li>
+</ul>
+   </doc-panel>
+   <doc-panel id="examples-other" collapsed>
+       <template #title>Examples (other)</template>
+<ul>
+<li>Southern Grampians: <code v-pre>https://bs-gis.pozi.com/iis/</code></li>
+<li>Horsham: <code v-pre>https://hrccsvrgis01.pozi.com/iis/</code></li>
 <li>Cardinia: (none)</li>
 <li>Northern Grampians: <code v-pre>https://local.pozi.com/</code></li>
 <li>Loddon: <code v-pre>https://poziserver.loddon.vic.gov.au/iis/</code></li>
-<li>Queenscliffe: <code v-pre>http://boq-serv-4/pozi/</code></li>
-<li>Glen Eira: <code v-pre>http://th-prod-maps/pozi/</code></li>
-<li>Southern Grampians: <code v-pre>https://bs-gis.pozi.com/iis/</code></li>
 </ul>
-</doc-panel>
+   </doc-panel>
+</doc-panels>
 <doc-anchor-target id="authentication-type">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#authentication-type">#</doc-anchor-trigger>

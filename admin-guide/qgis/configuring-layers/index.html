@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.749193177349">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.749282549217">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,11 +35,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.749193177349" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.749282549217" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.749193177349" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.749282549217" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.749193177349" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.749282549217" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -629,16 +629,50 @@
 <p>Other settings can be configured using QGIS Server keyword list. Pozi obtains these settings when it loads and imports each project&#x27;s catalogue.</p>
 <p>These settings provide an override for some of the default behaviours in Pozi.</p>
 <p>Layer Properties &gt; QGIS Server &gt; Keyword list</p>
-<ul>
-<li><code v-pre>enabled=false</code>: temporarily disable a dataset in Pozi (without having to remove it from QGIS)</li>
-<li><code v-pre>group=[group name]</code>: override which layer group the layer is listed under</li>
-<li><code v-pre>showInLayerControl=false</code>: don&#x27;t display layer in layer panel</li>
-<li><code v-pre>showLegend=false</code>: don&#x27;t display layer legend</li>
-<li><code v-pre>type=TileWMS</code>: for WMS layers, render as image tiles (instead of a single image)</li>
-<li><code v-pre>visible=true</code>: display layer by default</li>
-<li><code v-pre>downloadable=false</code>: don&#x27;t display download options for this layer</li>
-<li><code v-pre>linkedLayers=[layer name]</code>: link the current layer&#x27;s visibility to another layer in the project</li>
-</ul>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code v-pre>enabled=false</code></td>
+<td>temporarily disable a dataset in Pozi (without having to remove it from QGIS)</td>
+</tr>
+<tr>
+<td><code v-pre>group=[group name]</code></td>
+<td>override which layer group the layer is listed under</td>
+</tr>
+<tr>
+<td><code v-pre>showInLayerControl=false</code></td>
+<td>don&#x27;t display layer in layer panel</td>
+</tr>
+<tr>
+<td><code v-pre>showLegend=false</code></td>
+<td>don&#x27;t display layer legend</td>
+</tr>
+<tr>
+<td><code v-pre>type=TileWMS</code></td>
+<td>for WMS layers, render as image tiles (instead of a single image)</td>
+</tr>
+<tr>
+<td><code v-pre>visible=true</code></td>
+<td>display layer by default</td>
+</tr>
+<tr>
+<td><code v-pre>downloadable=false</code></td>
+<td>don&#x27;t display download options for this layer</td>
+</tr>
+<tr>
+<td><code v-pre>linkedLayers=[layer name]</code></td>
+<td>link the current layer&#x27;s visibility to another layer</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>When using multiple keyword settings, use commas to separate them.</p>
 <p>Example: <code v-pre>showLegend=false, visible=true</code></p>
 <p><a href="https://github.com/pozi/PoziApp/blob/master/app/src/config/catalog/KeywordsParser.ts" class="outbound" target="_blank"><span>Developer reference</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
