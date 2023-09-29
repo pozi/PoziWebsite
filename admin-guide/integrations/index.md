@@ -22,7 +22,7 @@ Pozi's open architecture enables it to integrate seamlessly with a wide range of
 * Geocode Earth
 * GeoSciences Australia
 * Google Sheets
-* Google Street View
+* [Google Maps Platform](./google-maps-platform/)
 * Greenlight
 * HERE
 * Ibis Rating Manager
