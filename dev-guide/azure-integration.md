@@ -25,7 +25,7 @@ When enabled, Pozi will attempt to authenticate the user when in 'enterprise' mo
 
 Due to a bug in the interface, it's not possible to tick this box directly using a mouse. Instead, place the cursor in the text box preceding the tickbox, press Tab to focus the cursor on the tickbox, then press Space to toggle the tickbox.
 
-#### Application Proxy external URL
+#### Application Proxy External URL
 
 The externally accessible URL to access the Application Proxy.
 
@@ -36,7 +36,7 @@ This is defined in Enterprise Applications => Application Proxy => External Url
 - `https://poziserver-loddonvicgovau.msappproxy.net/pozi/`
 - `https://poziserver-northburnettqldgovau.msappproxy.net/pozi/`
 - `https://poziserver-queenscliffevicgovau.msappproxy.net/pozi/`
-- `https://poziserver-mansfieldshirecouncil.msappproxy.net/pozi`
+- `https://poziserver-mansfieldshirecouncil.msappproxy.net/pozi/`
 
 ==- Examples (other)
 
@@ -47,21 +47,26 @@ This is defined in Enterprise Applications => Application Proxy => External Url
 
 ==-
 
-#### Application Proxy internal URL
+#### Application Proxy Internal URL
 
 The internally only accessible URL to access the Pozi Server from within the client's network.
 
 This is defined in Enterprise Applications => Application Proxy => Internal Url.
 
-==- Examples
+==- Examples (preferred)
 
 - North Burnett: `http://gis2/pozi/`
+- Queenscliffe: `http://boq-serv-4/pozi/`
+- Glen Eira: `http://th-prod-maps/pozi/`
+- Swan Hill: `http://qgis.swanhill.vic.gov.au/pozi/`
+
+==- Examples (other)
+
+- Southern Grampians: `https://bs-gis.pozi.com/iis/`
+- Horsham: `https://hrccsvrgis01.pozi.com/iis/`
 - Cardinia: (none)
 - Northern Grampians: `https://local.pozi.com/`
 - Loddon: `https://poziserver.loddon.vic.gov.au/iis/`
-- Queenscliffe: `http://boq-serv-4/pozi/`
-- Glen Eira: `http://th-prod-maps/pozi/`
-- Southern Grampians: `https://bs-gis.pozi.com/iis/`
 
 ==-
 

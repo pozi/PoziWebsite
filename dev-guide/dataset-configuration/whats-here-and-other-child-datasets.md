@@ -9,7 +9,7 @@
 * `"showInLayerControl":` set to `false` to prevent dataset from being listed in the layer panel.
 * `"group":` leave blank or undefined
 
-### Lookups
+### Non-Spatial Lookups
 
 A child dataset can be used to fetch data about a selected feature from a separate source such as a database or web service. This enables Pozi to return one or more (or none) records that are associated with the selected feature.
 
@@ -27,11 +27,13 @@ There is no special configuration required for the parent dataset in order for i
 
 #### Filters
 
-* WFS from QGIS Server: `EXP_FILTER=property_number in ([PROP_PROPNUM])`
-* WFS OGC: `FILTER=<Filter><PropertyIsEqualTo><PropertyName>` ChildDatasetIDField `</PropertyName><Literal>[` ParentDatasetIDField `]</Literal></PropertyIsEqualTo></Filter>`
+Append a filter parameter to the request URL to return only records that match the filter.
+
+* WFS from QGIS Server: `&EXP_FILTER=` ChildDatasetIDField ` in ([` ParentDatasetIDField `])`
+* WFS OGC: `&FILTER=<Filter><PropertyIsEqualTo><PropertyName>` ChildDatasetIDField `</PropertyName><Literal>[` ParentDatasetIDField `]</Literal></PropertyIsEqualTo></Filter>`
 * VRT: `&options=-where|` ChildDatasetIDField ` in ('[` ParentDatasetIDField `]')`
-* WFS CQL
-* CKAN Data API: `sql=SELECT * from \"e84991bd-93f8-4cb7-af39-72b933682f08\" WHERE \"WORK_ZONE\" IN ('[work_zone]')"`
+* WFS CQL: `&cql_filter=` ChildDatasetIDField ` in ('[` ParentDatasetIDField `]')`
+* CKAN Data API: `sql=SELECT * from \"` Child CKAN Table ID `\" WHERE \"` ChildDatasetIDField `\" IN ('[` ParentDatasetIDField `]')"`
 
 ==- WFS OGC Example
 
@@ -133,11 +135,11 @@ If the source of a *What's Here* dataset is an API such as WFS, CKAN or Street V
 
 * `$cqlgeometry` or `$cqlgeometrysimplified`
 * `$wkt`
+* `$gml`
 * `$esriGeometry` & `$esriGeometryType`
 * `$longitude` & `$latitude`
 
-A complete list of geometry parameters is available [here](https://github.com/pozi/PoziApp/blob/feature-config-manager-improvements/app/src/map/GetGeometryProperties.js#L66-L80).
-
+A complete list of geometry parameters is available [here](https://github.com/pozi/PoziApp/blob/master/app/src/map/GetGeometryProperties.js#L76).
 
 ==- Example: Street View
 

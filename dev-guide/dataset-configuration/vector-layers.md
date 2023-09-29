@@ -603,9 +603,30 @@ https://d2nozjvesbm579.cloudfront.net/ogr2ogr?source=swanhill/shrccdogwastebags.
 
 ## Options
 
-- `"visible": true` - turn on layer by default
-- `"preventClick": false` - prevent users from interacting with any other layers covered by features in this layer (eg municipal boundary)
-- `"queryable": false` - don't display info results for this layer
+### General
+
+These are some of the overrides that can be applied for a dataset. They are set at the top level of the dataset's configuration.
+
+| Setting | Description |
+| --- | --- |
+| `"visible": true` | turn on layer by default upon Pozi launch |
+| `"preventClick": true` | prevent users from interacting with any other layers covered by features in this layer (eg geomasked municipal boundary)
+| `"queryable": false` | don't display info results for this layer when the user clicks on the map
+
+### Transformers
+
+These are some of the transformers that can be applied for a dataset. They are set within the `config` section of the dataset's configuration.
+#### Geomask
+
+Invert the polygon geometry so that the polygon fill is on the outside of the polygon. This is typically used on municipal boundaries.
+
+```json
+      "config": {
+        "transformer": {
+          "geomask": true
+        }
+      },
+```
 
 ---
 
