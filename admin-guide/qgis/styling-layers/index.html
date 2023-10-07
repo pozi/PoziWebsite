@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.749786792540">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.749958646438">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,11 +35,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.749786792540" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.749958646438" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.749786792540" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.749958646438" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.749786792540" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.749958646438" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -463,12 +463,21 @@
     <a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#labels-properties" target="_blank" class="absolute block inset-0"></a>
 </div>
 </p>
-<p>Notes:</p>
+<p>Not yet supported in Pozi:</p>
 <ul>
-<li>label offsets and label buffer transparency are not supported</li>
-<li>text expressions in labels (eg, combining values from multiple fields, or find-and-replace operations) are possible by configuring <a href="../configuring-layers/#virtual-fields">virtual fields</a></li>
+<li>label offsets</li>
+<li>buffer transparency</li>
+<li>text expressions
+<ul>
+<li>combining values from multiple fields</li>
+<li>find-and-replace operations</li>
+<li>converting to upper or lower case</li>
+<li>etc</li>
 </ul>
-<p>Set label text size to <code v-pre>10 points</code> or greater, and a white <code v-pre>1.8mm</code> buffer for better legibility.</p>
+</li>
+</ul>
+<p>Instead of using text expressions to manipulate text, use <a href="../configuring-layers/#virtual-fields">virtual fields</a> to achieve the same effect.</p>
+<p>To improve legibility, set label text size to <code v-pre>10 points</code> or greater and a white <code v-pre>1.8mm</code> buffer.</p>
 <doc-anchor-target id="embedded-symbology">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#embedded-symbology">#</doc-anchor-trigger>

@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.749786792540">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.749958646438">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,12 +35,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.749786792540" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.749958646438" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.749786792540" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.749958646438" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.749786792540" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.749786792540" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.749958646438" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.749958646438" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -396,8 +396,8 @@
     </div>
 </div>
 </doc-tab>
-<doc-tab v-cloak id="vrt-configuration">
-<template #title>VRT Configuration</template>
+<doc-tab v-cloak id="vrt-configuration-legacy">
+<template #title>VRT Configuration (Legacy)</template>
 <p>An example configuration in the VRT file is as follows:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-markup"><code v-pre class="language-markup">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
@@ -460,12 +460,37 @@
         <span>Data Link</span>
     </h2>
 </doc-anchor-target>
-<p>When a user selects an asset feature in the Pozi map, the feature&#x27;s <code v-pre>Asset_ID</code> value can be used to look up inspection details for that feature.</p>
-<doc-anchor-target id="pozi-app-configuration">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#pozi-app-configuration">#</doc-anchor-trigger>
-        <span>Pozi App Configuration</span>
-    </h3>
+<p>When a user selects an asset feature in the Pozi map, the feature&#x27;s <code v-pre>Asset_ID</code> value can be used to look up details for that feature from a <em>child</em> dataset, such as a non-spatial table of asset, maintenance or inspection details.</p>
+<p><figure class="content-center">
+    <img src="../img/mydata-linked-data.png" alt="Alt text">
+    <figcaption class="caption">Alt text</figcaption>
+</figure>
+</p>
+<doc-tabs>
+<doc-tab v-cloak id="qgis-configuration">
+<template #title>QGIS Configuration</template>
+<p>Add the non-spatial myData table to your QGIS project, enable it for WFS, and add the following keyword metadata:</p>
+<p>Layer Properties &gt; QGIS Server &gt; Keyword list:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">parent=Roads, parameter=EXP_FILTER=assetID in ('[Asset_ID]'), promoteDetails=true</code></pre>
+</doc-codeblock></div>
+<p>Assumptions in this example:</p>
+<ul>
+<li>the parent spatial table is named <code v-pre>Roads</code></li>
+<li>the id field in the parent spatial table is named <code v-pre>Asset_ID</code></li>
+<li>the id field in the non-spatial myData table is named <code v-pre>assetID</code></li>
+<li>if there is only one record per asset in the non-spatial table, it is useful to use <code v-pre>promoteDetails=true</code> to display the details automatically when the parent feature is selected</li>
+</ul>
+<p>Adjust accordingly if your data differs.</p>
+</doc-tab>
+<doc-tab v-cloak id="vrt-configuration-legacy">
+<template #title>VRT Configuration (Legacy)</template>
+<p>For integrations that don&#x27;t use QGIS Server, the parent-child data lookup can be added by Pozi Support within the site&#x27;s configuration.</p>
+<doc-anchor-target id="site-configuration">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#site-configuration">#</doc-anchor-trigger>
+        <span>Site Configuration</span>
+    </h4>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">Footpath Inspections</div>
@@ -487,10 +512,10 @@
 }</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="vrt-configuration">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#vrt-configuration">#</doc-anchor-trigger>
         <span>VRT Configuration</span>
-    </h3>
+    </h4>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">hsc_assets_inspections.vrt</div>
@@ -509,6 +534,7 @@
 	&lt;/OGRVRTLayer&gt;
 &lt;/OGRVRTDataSource&gt;</code></pre>
 </doc-codeblock></div>
+</doc-tab>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
                                     <span>
