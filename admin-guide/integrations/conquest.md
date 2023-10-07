@@ -1,7 +1,7 @@
 ---
 description: GIS integration for Conquest Asset Management
 icon: dot
-tags: [Pozi Enterprise, Link-Out, Southern Grampians Shire Council]
+tags: [Pozi Enterprise, Link-Out, Southern Grampians Shire Council, Cardinia Shire Council]
 ---
 
 # Conquest

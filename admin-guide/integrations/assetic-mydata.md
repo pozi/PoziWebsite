@@ -42,7 +42,7 @@ Because the `mydata` URL prefix is a non-standard link, it is whitelisted within
 
 !!!
 
-+++ VRT Configuration
++++ VRT Configuration (Legacy)
 
 An example configuration in the VRT file is as follows:
 
@@ -92,9 +92,34 @@ Some of the HTML link text characters (eg "`<`") require replacement codes (eg "
 
 ## Data Link
 
-When a user selects an asset feature in the Pozi map, the feature's `Asset_ID` value can be used to look up inspection details for that feature.
+When a user selects an asset feature in the Pozi map, the feature's `Asset_ID` value can be used to look up details for that feature from a *child* dataset, such as a non-spatial table of asset, maintenance or inspection details.
 
-### Pozi App Configuration
+![Alt text](img/mydata-linked-data.png)
+
++++ QGIS Configuration
+
+Add the non-spatial myData table to your QGIS project, enable it for WFS, and add the following keyword metadata:
+
+Layer Properties > QGIS Server > Keyword list:
+
+```
+parent=Roads, parameter=EXP_FILTER=assetID in ('[Asset_ID]'), promoteDetails=true
+```
+
+Assumptions in this example:
+
+- the parent spatial table is named `Roads`
+- the id field in the parent spatial table is named `Asset_ID`
+- the id field in the non-spatial myData table is named `assetID`
+- if there is only one record per asset in the non-spatial table, it is useful to use `promoteDetails=true` to display the details automatically when the parent feature is selected
+
+Adjust accordingly if your data differs.
+
++++ VRT Configuration (Legacy)
+
+For integrations that don't use QGIS Server, the parent-child data lookup can be added by Pozi Support within the site's configuration.
+
+#### Site Configuration
 
 ```json Footpath Inspections
 {
@@ -115,7 +140,7 @@ When a user selects an asset feature in the Pozi map, the feature's `Asset_ID` v
 }
 ```
 
-### VRT Configuration
+#### VRT Configuration
 
 ```xml hsc_assets_inspections.vrt
 <?xml version="1.0" encoding="UTF-8"?>

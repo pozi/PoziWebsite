@@ -82,12 +82,19 @@ Point, line and polygon features can optionally be configured to display labels.
 
 [!ref target="blank" icon="tag" text="Labelling in QGIS"](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#labels-properties)
 
-Notes:
+Not yet supported in Pozi:
 
-* label offsets and label buffer transparency are not supported
-* text expressions in labels (eg, combining values from multiple fields, or find-and-replace operations) are possible by configuring [virtual fields](configuring-layers.md#virtual-fields)
+- label offsets
+- buffer transparency
+- text expressions
+  - combining values from multiple fields
+  - find-and-replace operations
+  - converting to upper or lower case
+  - etc
 
-Set label text size to `10 points` or greater, and a white `1.8mm` buffer for better legibility.
+Instead of using text expressions to manipulate text, use [virtual fields](configuring-layers.md#virtual-fields) to achieve the same effect.
+
+To improve legibility, set label text size to `10 points` or greater and a white `1.8mm` buffer.
 
 ## Embedded Symbology
 
