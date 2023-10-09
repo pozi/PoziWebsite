@@ -18,19 +18,19 @@ https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-pr
 
 The following settings are for a Pozi server setup with only QGIS Server and IIS.
 
-* **Internal Url** : `http://<servername>/pozi/`. Replace `<servername>` with the actual name of the server.
+* **Internal URL** : `http://<servername>/pozi/`. Replace `<servername>` with the actual name of the server.
 
-  To test internal Url on the internal network, opening the following Url in the browser should show a QGIS Server landing page:`http://<servername>/pozi/qgisserver/wfs3`
+  To test internal URL on the internal network, opening the following URL in the browser should show a QGIS Server landing page:`http://<servername>/pozi/qgisserver/wfs3`
 
-* **External Url**: `https://poziserver-<clientname>.msappproxy.net/pozi/`.
+* **External URL**: `https://poziserver-<clientname>.msappproxy.net/pozi/`.
 
-  The `<clientname>` is a name that has been given to the organisation by MS Azure. The Url `https://poziserver-<clientname>.msappproxy.net/pozi/qgisserver/wfs3` should show the same landing page as in the Internal Url section above.
+  The `<clientname>` is a name that has been given to the organisation by MS Azure. The URL `https://poziserver-<clientname>.msappproxy.net/pozi/qgisserver/wfs3` should show the same landing page as in the Internal URL section above.
 
 * **Pre Authentication**: `Azure Active Directory`.
 
 Do **not** choose `Passthrough` as that will allow any user (logged in or not) to access private resources from the server.
 
-When configured correctly, a request from a logged-in user to Url (for example)...
+When configured correctly, a request from a logged-in user to URL (for example)...
 
 `https://poziserver-<clientname>.msappproxy.net/pozi/qgisserver/wfs3.json`
 
@@ -46,13 +46,13 @@ Ensure it doesn't return a response to a non-logged-in or anonymous user.
 
 The following settings are for a Pozi server setup with a Pozi Server installation that proxies all QGIS Server and IIS requests.
 
-* **Internal Url** : `https://local.pozi.com` (or any other Url that uses a local DNS with a locally signed SSL certificate pointing to the server that runs PoziServer)
+* **Internal URL** : `https://local.pozi.com` (or any other URL that uses a local DNS with a locally signed SSL certificate pointing to the server that runs PoziServer)
 
-  When visiting the above Url on the internal network, it should show a Pozi Connect Server welcome page.
+  When visiting the above URL on the internal network, it should show a Pozi Connect Server welcome page.
 
-All other settings here (like **External Url** and **Pre Authentication** are the same as above)
+All other settings here (like **External URL** and **Pre Authentication** are the same as above)
 
-When configured correctly, a request from a logged-in user to Url (for example)...
+When configured correctly, a request from a logged-in user to URL (for example)...
 
 `https://poziserver-<clientname>.msappproxy.net/resourcecheck/<sitename>.json`
 
@@ -70,8 +70,8 @@ Ensure it doesn't return a response to a non-logged-in or anonymous user.
 
 **Advanced**:
 
-* **Translate Urls in headers**: ☑
-* **Translate Urls in application body**: ☑
+* **Translate URLs in headers**: ☑
+* **Translate URLs in application body**: ☑
 * **Validate Backend SSL certificate**: ☑
 
 ## App Registration
@@ -85,10 +85,12 @@ Ensure it doesn't return a response to a non-logged-in or anonymous user.
 
 #### Web - Redirect URIs
 
-Add the App Proxy Url to `Redirect URIs` to the `Web` section. E.g.:
+Add the App Proxy URL to `Redirect URIs` to the `Web` section. E.g.:
   * `https://poziserver-<clientname>.msappproxy.net/pozi/`
 
-This is the same as the External Url configured above.
+This is the same as the External URL configured above.
+
+![](../integrations/img/azure-auth-web-redirect-uris.png)
 
 #### Single Page Application - Redirect URIs
 
@@ -100,19 +102,25 @@ Add the following `Redirect URIs` to the `Single-page application` section:
 If upgrading an existing non-Azure Pozi site, also add a URI for a dedicated test site with `-azure` appended to the existing site name:
   * `https://<sitename>-azure.enterprise.pozi.com/`
 
+![](../integrations/img/azure-auth-spa-redirect-uris.png)
+
 Please make sure that the URIs all have a trailing slash ('/') and note that the localhost URI is `http` (and not `https`).
 
 ### Implicit grant and hybrid flows
 
 * `Access tokens` and `ID tokens` should remain unchecked
 
+![](../integrations/img/azure-auth-implicit-grant-and-hybrid-flows.png)
+
 ### Advanced settings
 
- * Set `Allow public client flows` to `No`
+* Set `Allow public client flows` to `No`
+
+![](../integrations/img/azure-auth-advanced-settings.png)
 
 ### Authorisation
 
-All going well, it should be possible to visit the App Proxy Url (in our example case: `https://poziserver-<clientname>.msappproxy.net/pozi/`). If an error is shown like: `Sorry, but we’re having trouble with signing you in.` with a text similar to below, then we will need to give the relevant users/groups access.
+All going well, it should be possible to visit the App Proxy URL (in our example case: `https://poziserver-<clientname>.msappproxy.net/pozi/`). If an error is shown like: `Sorry, but we’re having trouble with signing you in.` with a text similar to below, then we will need to give the relevant users/groups access.
 
 :::note Example authorisation error:
 
@@ -134,7 +142,7 @@ AADSTS50105: Your administrator has configured the application Pozi Server ('xxx
 * Under `Select a role`, the role `User` is preselected and cannot be changed. That is OK.
 * Click on `Assign` in the bottom of the page.
 
-Access should now be granted to the application proxy and the Url should be accessible.
+Access should now be granted to the application proxy and the URL should be accessible.
 
 ### API Permissions
 
