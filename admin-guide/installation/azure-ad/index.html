@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.749958646438">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.750143074402">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -24,20 +24,22 @@
     <meta property="og:url" content="https://pozi.com/admin-guide/installation/azure-ad/">
     <meta property="og:title" content="Azure AD | Pozi Web GIS | Online Map">
     <meta property="og:description" content="Azure: Enterprise Applications⇒ Server⇒ Application Proxy">
+    <meta property="og:image" content="https://pozi.com/admin-guide/integrations/img/azure-auth-web-redirect-uris.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pozi.com/admin-guide/installation/azure-ad/">
     <meta property="twitter:title" content="Azure AD | Pozi Web GIS | Online Map">
     <meta property="twitter:description" content="Azure: Enterprise Applications⇒ Server⇒ Application Proxy">
+    <meta property="twitter:image" content="https://pozi.com/admin-guide/integrations/img/azure-auth-web-redirect-uris.png">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.749958646438" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.750143074402" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.749958646438" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.750143074402" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.749958646438" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.750143074402" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -354,17 +356,17 @@
 <p><em>IIS + QGIS Server only (i.e. without Pozi Connect Server)</em></p>
 <p>The following settings are for a Pozi server setup with only QGIS Server and IIS.</p>
 <ul>
-<li><p><strong>Internal Url</strong> : <code v-pre>http://&lt;servername&gt;/pozi/</code>. Replace <code v-pre>&lt;servername&gt;</code> with the actual name of the server.</p>
-<p>To test internal Url on the internal network, opening the following Url in the browser should show a QGIS Server landing page:<code v-pre>http://&lt;servername&gt;/pozi/qgisserver/wfs3</code></p>
+<li><p><strong>Internal URL</strong> : <code v-pre>http://&lt;servername&gt;/pozi/</code>. Replace <code v-pre>&lt;servername&gt;</code> with the actual name of the server.</p>
+<p>To test internal URL on the internal network, opening the following URL in the browser should show a QGIS Server landing page:<code v-pre>http://&lt;servername&gt;/pozi/qgisserver/wfs3</code></p>
 </li>
-<li><p><strong>External Url</strong>: <code v-pre>https://poziserver-&lt;clientname&gt;.msappproxy.net/pozi/</code>.</p>
-<p>The <code v-pre>&lt;clientname&gt;</code> is a name that has been given to the organisation by MS Azure. The Url <code v-pre>https://poziserver-&lt;clientname&gt;.msappproxy.net/pozi/qgisserver/wfs3</code> should show the same landing page as in the Internal Url section above.</p>
+<li><p><strong>External URL</strong>: <code v-pre>https://poziserver-&lt;clientname&gt;.msappproxy.net/pozi/</code>.</p>
+<p>The <code v-pre>&lt;clientname&gt;</code> is a name that has been given to the organisation by MS Azure. The URL <code v-pre>https://poziserver-&lt;clientname&gt;.msappproxy.net/pozi/qgisserver/wfs3</code> should show the same landing page as in the Internal URL section above.</p>
 </li>
 <li><p><strong>Pre Authentication</strong>: <code v-pre>Azure Active Directory</code>.</p>
 </li>
 </ul>
 <p>Do <strong>not</strong> choose <code v-pre>Passthrough</code> as that will allow any user (logged in or not) to access private resources from the server.</p>
-<p>When configured correctly, a request from a logged-in user to Url (for example)...</p>
+<p>When configured correctly, a request from a logged-in user to URL (for example)...</p>
 <p><code v-pre>https://poziserver-&lt;clientname&gt;.msappproxy.net/pozi/qgisserver/wfs3.json</code></p>
 <p>...should return the same response as a local request to...</p>
 <p><code v-pre>http://&lt;servername&gt;/pozi/qgisserver/wfs3.json</code></p>
@@ -375,12 +377,12 @@
 <p><em>Pozi Connect Server + local DNS</em></p>
 <p>The following settings are for a Pozi server setup with a Pozi Server installation that proxies all QGIS Server and IIS requests.</p>
 <ul>
-<li><p><strong>Internal Url</strong> : <code v-pre>https://local.pozi.com</code> (or any other Url that uses a local DNS with a locally signed SSL certificate pointing to the server that runs PoziServer)</p>
-<p>When visiting the above Url on the internal network, it should show a Pozi Connect Server welcome page.</p>
+<li><p><strong>Internal URL</strong> : <code v-pre>https://local.pozi.com</code> (or any other URL that uses a local DNS with a locally signed SSL certificate pointing to the server that runs PoziServer)</p>
+<p>When visiting the above URL on the internal network, it should show a Pozi Connect Server welcome page.</p>
 </li>
 </ul>
-<p>All other settings here (like <strong>External Url</strong> and <strong>Pre Authentication</strong> are the same as above)</p>
-<p>When configured correctly, a request from a logged-in user to Url (for example)...</p>
+<p>All other settings here (like <strong>External URL</strong> and <strong>Pre Authentication</strong> are the same as above)</p>
+<p>When configured correctly, a request from a logged-in user to URL (for example)...</p>
 <p><code v-pre>https://poziserver-&lt;clientname&gt;.msappproxy.net/resourcecheck/&lt;sitename&gt;.json</code></p>
 <p>...should return the same response as a local request to...</p>
 <p><code v-pre>https://local.pozi.com/resourcecheck/&lt;sitename&gt;.json</code></p>
@@ -396,8 +398,8 @@
 <!-- ![](/dev-guide/img/azure-settings.png){style="width:600px"} -->
 <p><strong>Advanced</strong>:</p>
 <ul>
-<li><strong>Translate Urls in headers</strong>: ☑</li>
-<li><strong>Translate Urls in application body</strong>: ☑</li>
+<li><strong>Translate URLs in headers</strong>: ☑</li>
+<li><strong>Translate URLs in application body</strong>: ☑</li>
 <li><strong>Validate Backend SSL certificate</strong>: ☑</li>
 </ul>
 <doc-anchor-target id="app-registration">
@@ -423,11 +425,16 @@
         <span>Web - Redirect URIs</span>
     </h4>
 </doc-anchor-target>
-<p>Add the App Proxy Url to <code v-pre>Redirect URIs</code> to the <code v-pre>Web</code> section. E.g.:</p>
+<p>Add the App Proxy URL to <code v-pre>Redirect URIs</code> to the <code v-pre>Web</code> section. E.g.:</p>
 <ul>
 <li><code v-pre>https://poziserver-&lt;clientname&gt;.msappproxy.net/pozi/</code></li>
 </ul>
-<p>This is the same as the External Url configured above.</p>
+<p>This is the same as the External URL configured above.</p>
+<p><figure class="content-center">
+    <img src="../../integrations/img/azure-auth-web-redirect-uris.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <doc-anchor-target id="single-page-application---redirect-uris">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#single-page-application---redirect-uris">#</doc-anchor-trigger>
@@ -444,6 +451,11 @@
 <ul>
 <li><code v-pre>https://&lt;sitename&gt;-azure.enterprise.pozi.com/</code></li>
 </ul>
+<p><figure class="content-center">
+    <img src="../../integrations/img/azure-auth-spa-redirect-uris.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <p>Please make sure that the URIs all have a trailing slash (&#x27;/&#x27;) and note that the localhost URI is <code v-pre>http</code> (and not <code v-pre>https</code>).</p>
 <doc-anchor-target id="implicit-grant-and-hybrid-flows">
     <h3>
@@ -454,6 +466,11 @@
 <ul>
 <li><code v-pre>Access tokens</code> and <code v-pre>ID tokens</code> should remain unchecked</li>
 </ul>
+<p><figure class="content-center">
+    <img src="../../integrations/img/azure-auth-implicit-grant-and-hybrid-flows.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <doc-anchor-target id="advanced-settings">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#advanced-settings">#</doc-anchor-trigger>
@@ -463,13 +480,18 @@
 <ul>
 <li>Set <code v-pre>Allow public client flows</code> to <code v-pre>No</code></li>
 </ul>
+<p><figure class="content-center">
+    <img src="../../integrations/img/azure-auth-advanced-settings.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <doc-anchor-target id="authorisation">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#authorisation">#</doc-anchor-trigger>
         <span>Authorisation</span>
     </h3>
 </doc-anchor-target>
-<p>All going well, it should be possible to visit the App Proxy Url (in our example case: <code v-pre>https://poziserver-&lt;clientname&gt;.msappproxy.net/pozi/</code>). If an error is shown like: <code v-pre>Sorry, but we’re having trouble with signing you in.</code> with a text similar to below, then we will need to give the relevant users/groups access.</p>
+<p>All going well, it should be possible to visit the App Proxy URL (in our example case: <code v-pre>https://poziserver-&lt;clientname&gt;.msappproxy.net/pozi/</code>). If an error is shown like: <code v-pre>Sorry, but we’re having trouble with signing you in.</code> with a text similar to below, then we will need to give the relevant users/groups access.</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-500 dark:bg-dark-400"></div>
     <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
@@ -501,7 +523,7 @@
 <li>Under <code v-pre>Select a role</code>, the role <code v-pre>User</code> is preselected and cannot be changed. That is OK.</li>
 <li>Click on <code v-pre>Assign</code> in the bottom of the page.</li>
 </ul>
-<p>Access should now be granted to the application proxy and the Url should be accessible.</p>
+<p>Access should now be granted to the application proxy and the URL should be accessible.</p>
 <doc-anchor-target id="api-permissions">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#api-permissions">#</doc-anchor-trigger>
