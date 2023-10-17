@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.750143074402">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.750834400487">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,11 +35,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.750143074402" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.750834400487" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.750143074402" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.750834400487" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.750143074402" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.750834400487" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -700,7 +700,8 @@
        <template #title>Layer features are not displayed when the layer is turned on</template>
 <p>Check the following:</p>
 <ul>
-<li>Open the source project in QGIS and see if the layers can be visualised. If not, check whether the source database connection or file path has changed or been removed.</li>
+<li>Open the source project in QGIS and see if the layers can be viewed. If not, check whether the source database connection or file path has changed or been removed.</li>
+<li>Open the source project in QGIS <em>as the PoziService user</em> (Shift-right-click on QGIS desktop shortcut &gt; Run as different user) and see if the layers can be viewed. It&#x27;s possible that the PoziService account doesn&#x27;t have the same permissions for this layer as the project author.</li>
 <li>Pozi is only able to display features that have at least one valid/non-null attribute. If any records in your data contain no attributes, populate some values into one of the fields.</li>
 <li>Ensure the layer has a coordinate reference system set. Go to Layer Properties &gt; Source &gt; Assigned CRS, and pick a projection</li>
 <li>For file-based layers, ensure that the file path is one that is recognised by the server. See <doc-anchor-trigger to="#about-layer-file-paths">About layer file paths</doc-anchor-trigger> above.</li>
