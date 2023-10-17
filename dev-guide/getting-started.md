@@ -33,6 +33,6 @@ order: 100
 * [VS Code](https://code.visualstudio.com/)
 * [GitHub Desktop](https://desktop.github.com/)
 * [SnagIt](https://www.techsmith.com/screen-capture.html)/[LICEcap](https://www.cockos.com/licecap/)
-* [S3 Browser](https://s3browser.com/) (configured to apply [custom http headers](https://s3browser.com/features-content-mime-types-editor.aspx) for json files)
+* [S3 Browser](https://s3browser.com/) (configured to apply [custom http headers](https://github.com/pozi/PoziAppConfig/blob/main/readme.md#configuring-s3-browser) for json files)
 * [JSON Viewer Chrome extension](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh)
 * Remote Desktop for Pozi Cloud Server

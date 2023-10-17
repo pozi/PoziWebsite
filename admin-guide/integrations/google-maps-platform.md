@@ -14,7 +14,11 @@ Google Maps offers high-quality basemap with a crisp design and comprehensive co
 
 </br>
 
-Coming soon: support for custom [map ids](https://developers.google.com/maps/documentation/get-map-id).
+### Custom Map ID
+
+You can configure a custom Google Map with only the features you want to see on the map. You can find your custom map ID [here](https://developers.google.com/maps/documentation/get-map-id).
+
+![](img/google-maps-map-id.png)
 
 </br>
 

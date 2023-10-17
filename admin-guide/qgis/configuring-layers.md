@@ -254,7 +254,8 @@ Restart the service(s) after you make your changes.
 
 Check the following:
 
-* Open the source project in QGIS and see if the layers can be visualised. If not, check whether the source database connection or file path has changed or been removed.
+* Open the source project in QGIS and see if the layers can be viewed. If not, check whether the source database connection or file path has changed or been removed.
+* Open the source project in QGIS *as the PoziService user* (Shift-right-click on QGIS desktop shortcut > Run as different user) and see if the layers can be viewed. It's possible that the PoziService account doesn't have the same permissions for this layer as the project author.
 * Pozi is only able to display features that have at least one valid/non-null attribute. If any records in your data contain no attributes, populate some values into one of the fields.
 * Ensure the layer has a coordinate reference system set. Go to Layer Properties > Source > Assigned CRS, and pick a projection
 * For file-based layers, ensure that the file path is one that is recognised by the server. See [About layer file paths](#about-layer-file-paths) above.
