@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.750834400487">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.751249958288">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,11 +35,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.750834400487" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.751249958288" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.750834400487" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.751249958288" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.750834400487" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.751249958288" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -447,7 +447,7 @@
 <li><code v-pre>http://localhost:3000/</code> (for Pozi development purposes)</li>
 <li><code v-pre>https://staging.pozi.com/</code> (for client testing/debugging)</li>
 </ul>
-<p>If upgrading an existing non-Azure Pozi site, also add a URI for a dedicated test site with <code v-pre>-azure</code> appended to the existing site name:</p>
+<p>If upgrading an existing non-Azure Pozi Enterprise site, also add a URI for a dedicated test site with <code v-pre>-azure</code> appended to the existing site name:</p>
 <ul>
 <li><code v-pre>https://&lt;sitename&gt;-azure.enterprise.pozi.com/</code></li>
 </ul>
@@ -544,12 +544,12 @@
         <span>Azure AD Pozi Support Account</span>
     </h2>
 </doc-anchor-target>
-<p>In order for the Pozi team to be able to provide support and troubleshoot any potential issues, we ask our clients to configure the Pozi Support domain user (<a href="../prerequisites/#support-account">previously</a>) with the same permissions/groups/roles as the users of Pozi through Azure AD Application Proxy.</p>
+<p>In order for the Pozi team to be able to provide support and troubleshoot any potential issues, we ask our clients to configure the <a href="../prerequisites/#support-account">Pozi Support</a> domain user with the same permissions/groups/roles as the users of Pozi through Azure AD Application Proxy.</p>
 <p>If it&#x27;s not possible or practical for the Pozi Support domain user to be given Azure AD permissions, you may choose to create a separate user account with the Azure AD permissions. In this case, no administrator privileges are required.</p>
-<doc-anchor-target id="information-to-send-back-to-pozi">
+<doc-anchor-target id="information-to-send-to-pozi">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#information-to-send-back-to-pozi">#</doc-anchor-trigger>
-        <span>Information to send back to Pozi</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#information-to-send-to-pozi">#</doc-anchor-trigger>
+        <span>Information to send to Pozi</span>
     </h2>
 </doc-anchor-target>
 <p>After completion of the configuration, email us with the following information:</p>
@@ -558,9 +558,10 @@
 <li class="task-list-item"><input disabled="disabled" type="checkbox" /> The <strong>external</strong> app proxy URl (something like <code v-pre>https://poziserver-&lt;clientname&gt;.msappproxy.net/pozi/</code>)</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" /> The <strong><code v-pre>client id</code></strong> (sometimes called &#x27;application id&#x27;) and has the following structure: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The client id is defined in Enterprise Applications =&gt; Properties.</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" /> The <strong><code v-pre>tenant id</code></strong>, which looks like xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The tenant id is defined in Azure Active Directory =&gt; Overview.&quot;</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" /> The <strong>credentials</strong> (email address + password) of the Pozi Support user account that will have access to the Pozi Azure AD Application Proxy. Please get in touch with us on how to securely provide us with these details.</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" /> A copy/paste and/or screenshot of all the relevant settings</li>
 </ul>
+<p>This information is <a href="https://stackoverflow.com/questions/57306964/are-azure-active-directorys-tenantid-and-clientid-considered-secrets" class="outbound" target="_blank"><span>not sensitive</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> and can be emailed directly to the Pozi support team at <a href="mailto:support@pozi.com">support@pozi.com</a>.</p>
+<p>In addition to the information above, if you have not done so already, provide the Azure AD credentials (email address and password) of the <a href="../prerequisites/#support-account">Pozi Support</a> user account. Please get in touch with us on how to securely provide us with these details.</p>
 <!-- ### Token-based Authentication/Authorisation
 
 :::note Under Construction
