@@ -99,7 +99,7 @@ Add the following `Redirect URIs` to the `Single-page application` section:
   * `http://localhost:3000/` (for Pozi development purposes)
   * `https://staging.pozi.com/` (for client testing/debugging)
 
-If upgrading an existing non-Azure Pozi site, also add a URI for a dedicated test site with `-azure` appended to the existing site name:
+If upgrading an existing non-Azure Pozi Enterprise site, also add a URI for a dedicated test site with `-azure` appended to the existing site name:
   * `https://<sitename>-azure.enterprise.pozi.com/`
 
 ![](../integrations/img/azure-auth-spa-redirect-uris.png)
@@ -158,11 +158,11 @@ This should allow Pozi to determine access based on a user's role(s).
 
 ## Azure AD Pozi Support Account
 
-In order for the Pozi team to be able to provide support and troubleshoot any potential issues, we ask our clients to configure the Pozi Support domain user ([previously](/admin-guide/installation/prerequisites.md#support-account)) with the same permissions/groups/roles as the users of Pozi through Azure AD Application Proxy.
+In order for the Pozi team to be able to provide support and troubleshoot any potential issues, we ask our clients to configure the [Pozi Support](prerequisites.md#support-account) domain user with the same permissions/groups/roles as the users of Pozi through Azure AD Application Proxy.
 
 If it's not possible or practical for the Pozi Support domain user to be given Azure AD permissions, you may choose to create a separate user account with the Azure AD permissions. In this case, no administrator privileges are required.
 
-## Information to send back to Pozi
+## Information to send to Pozi
 
 After completion of the configuration, email us with the following information:
 
@@ -170,8 +170,11 @@ After completion of the configuration, email us with the following information:
 - [ ] The **external** app proxy URl (something like `https://poziserver-<clientname>.msappproxy.net/pozi/`)
 - [ ] The **`client id`** (sometimes called 'application id') and has the following structure: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The client id is defined in Enterprise Applications => Properties.
 - [ ] The **`tenant id`**, which looks like xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The tenant id is defined in Azure Active Directory => Overview."
-- [ ] The **credentials** (email address + password) of the Pozi Support user account that will have access to the Pozi Azure AD Application Proxy. Please get in touch with us on how to securely provide us with these details.
 - [ ] A copy/paste and/or screenshot of all the relevant settings
+
+This information is [not sensitive](https://stackoverflow.com/questions/57306964/are-azure-active-directorys-tenantid-and-clientid-considered-secrets) and can be emailed directly to the Pozi support team at support@pozi.com.
+
+In addition to the information above, if you have not done so already, provide the Azure AD credentials (email address and password) of the [Pozi Support](prerequisites.md#support-account) user account. Please get in touch with us on how to securely provide us with these details.
 
 <!-- ### Token-based Authentication/Authorisation
 
