@@ -132,3 +132,40 @@
 .dark .docs-markdown ul.contains-task-list input:checked:before {
   background-color: #616161;
 }
+
+
+/**************************************/
+/* Custom style block: 'updated'      */
+/**************************************/
+.updated {
+  color: rgb(171 182 201); /* .text-gray-500 */
+  font-size: .8125rem;
+  display: inline-flex;
+  column-gap: 4px;
+}
+
+.updated::before {
+  content: "Last updated: ";
+}
+
+
+/**************************************/
+/* Icons before special links         */
+/**************************************/
+a[href^="/contact/"]::before {
+  content: "@ ";
+}
+
+/* MS Entra ID */
+a[href*="learn.microsoft.com/en-au/entra/"]::before,
+a[href*="entra.microsoft.com"]::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url('/static/img/icon-ms-entra-id-colour.svg');
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-flex;
+  flex-basis: unset;
+  top: 8px;
+}
