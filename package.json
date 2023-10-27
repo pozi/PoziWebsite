@@ -1,15 +1,16 @@
 {
   "dependencies": {
-    "retypeapp": "3.0.3"
+    "retypeapp": "3.5.0"
   },
   "devDependencies": {
     "browser-sync": "2.27.9",
     "concurrently": "7.1.0"
   },
   "scripts": {
-    "retype-watch-no-browser": "DISPLAY=:none retype watch",
+    "retype-watch-no-browser": "retype start --no-open",
     "browser-sync": "browser-sync start --no-open --files \".\" --ignore \"node_modules\" \".git\" --port 3010 --proxy http://localhost:5000/ --reload-delay 1500",
     "build": "retype build",
-    "start": "concurrently \"npm:retype-watch-no-browser\" \"npm:browser-sync\""
+    "start": "retype start --no-open",
+    "start-browser-sync": "concurrently \"npm:retype-watch-no-browser\" \"npm:browser-sync\""
   }
 }
