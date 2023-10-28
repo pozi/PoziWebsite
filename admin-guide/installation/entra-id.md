@@ -45,7 +45,7 @@ Visit the Microsoft Entra ID portal using https://entra.microsoft.com/
 
 ## 1. Install connector on on-premises server
 
-The connector is an a required piece of software that manages the outbound connection from the on-premises application servers to Application Proxy in Microsoft Entra ID. It will run as a service.
+The connector is a required piece of software that manages the outbound connection from the on-premises application servers to Application Proxy in Microsoft Entra ID. It runs as a service.
 
 **Tutorial**: [Install and register a connector](https://learn.microsoft.com/en-au/entra/identity/app-proxy/application-proxy-add-on-premises-application#install-and-register-a-connector)
 
@@ -70,44 +70,54 @@ The connector is an a required piece of software that manages the outbound conne
 
 **Tutorial**: [Add an on-premises app to Microsoft Entra ID](https://learn.microsoft.com/en-au/entra/identity/app-proxy/application-proxy-add-on-premises-application#add-an-on-premises-app-to-microsoft-entra-id)
 
-![](img/entra-id/entra-id-new-enterprise-application-step-1.png)
 
-==- :icon-file-media: Screenshots of adding on-premises app
+In the Add your own on-premises application section, provide the following information about your application:
 
-![](img/entra-id/entra-id-new-enterprise-application-step-2.png)
-
-<hr />
+### Basic
 
 ![](img/entra-id/entra-id-new-enterprise-application-step-3.png)
 
-<hr />
+* **Name** : `Pozi Server` (recommended). The administrator is free to choose an other name if that better suits the organisation's policies.
+
+* **Internal URL** : `http://<internal_servername>/pozi/`. Replace `<internal_servername>` with the actual name of the on-premises server on the internal network. This can be `localhost` but the actual server name is preferred.
+
+  _Example: `http://gis-server.local/pozi/`_
+
+  To test internal URL on the internal network, opening the following URL in the browser should show a QGIS Server landing page:`http://<internal_servername>/pozi/qgisserver/wfs3.json`
+
+  _Example: `http://gis-server.local/pozi/qgisserver/wfs3.json`_
+
+
+* **External URL**: `https://` `poziserver` `-<entra_id_client_name>.msappproxy.net`.
+
+  The `-<entra_id_client_name>.msappproxy.net` part is a name that has been given to the organisation by MS Azure. The dropdown may reveal other domains like `.<entra_id_client_name>.onmicrosoft.com`. Please select the domain that your organisation prefers.
+
+  The interface will show a fully qualified URL to access Pozi Server in grey text below the form fields.
+
+  _Example: `https://poziserver-councilnamevicgovau.msappproxy.net/pozi/`_
+
+
+* **Pre Authentication**: `Microsoft Entra ID`. This will get Entra ID to handle the authentication process.
+
+  Do **not** choose `Passthrough` as that will allow any user (logged in or not) to access private resources from the server.
+
+### Advanced
 
 ![](img/entra-id/entra-id-new-enterprise-application-step-4.png)
 
+
+==- :icon-file-media: Screenshots of adding on-premises app
+![](img/entra-id/entra-id-new-enterprise-application-step-1.png)
+
+
+![](img/entra-id/entra-id-new-enterprise-application-step-2.png)
+
 ===
 
-## 3. Application Proxy (Enterprise Application)
+## 3. Test the application
 
-`Entra ID`: **Enterprise Applications** ⇒ **Server** ⇒ **Application Proxy**
+The URL `https://poziserver-<clientname>.msappproxy.net/pozi/qgisserver/wfs3.json` should show the same content as in the Internal URL section above. Ple.
 
-
-+++ Preferred
-
-*IIS + QGIS Server only (i.e. without Pozi Connect Server)*
-
-The following settings are for a Pozi server setup with only QGIS Server and IIS.
-
-* **Internal URL** : `http://<servername>/pozi/`. Replace `<servername>` with the actual name of the server.
-
-  To test internal URL on the internal network, opening the following URL in the browser should show a QGIS Server landing page:`http://<servername>/pozi/qgisserver/wfs3`
-
-* **External URL**: `https://poziserver-<clientname>.msappproxy.net/pozi/`.
-
-  The `<clientname>` is a name that has been given to the organisation by MS Azure. The URL `https://poziserver-<clientname>.msappproxy.net/pozi/qgisserver/wfs3` should show the same landing page as in the Internal URL section above.
-
-* **Pre Authentication**: `Azure Active Directory`.
-
-Do **not** choose `Passthrough` as that will allow any user (logged in or not) to access private resources from the server.
 
 When configured correctly, a request from a logged-in user to URL (for example)...
 
@@ -118,6 +128,20 @@ When configured correctly, a request from a logged-in user to URL (for example).
 `http://<servername>/pozi/qgisserver/wfs3.json`
 
 Ensure it doesn't return a response to a non-logged-in or anonymous user.
+
+
+## 99. Application Proxy (Enterprise Application)
+
+`Entra ID`: **Enterprise Applications** ⇒ **Server** ⇒ **Application Proxy**
+
+
++++ Preferred
+
+*IIS + QGIS Server only (i.e. without Pozi Connect Server)*
+
+The following settings are for a Pozi server setup with only QGIS Server and IIS.
+
+
 
 +++ Legacy
 

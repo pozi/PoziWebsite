@@ -169,3 +169,7 @@ a[href*="entra.microsoft.com"]::before {
   flex-basis: unset;
   top: 8px;
 }
+
+img[src*="/entra-id/"] {
+  filter: drop-shadow(#777 0.5rem 0.5rem 1rem);
+}
