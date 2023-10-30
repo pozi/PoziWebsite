@@ -8,15 +8,40 @@ order: -20
 30 Oct 2023
 :::
 
+Please make sure to have completed the steps in the [previous section](./application-proxy).
 
-This guide is based on (and refers to) steps outlined in the following Microsoft document:
+## 1. Configure Pozi Server Application registration
 
-[Create a Microsoft Entra application and service principal that can access resources](https://learn.microsoft.com/en-au/entra/identity-platform/howto-create-service-principal-portal)
+The creation of the Pozi Server Enterprise Application has also implicitly created an app registration with the same name.
+Search for this app in the 'App registrations' section in Entra ID.
+
+![](img/entra-id-app-registration-step-1.png)
 
 
-## 1. Register Pozi Web Application with Microsoft Entra ID
 
-[Register an application with Microsoft Entra ID and create a service principal](https://learn.microsoft.com/en-au/entra/identity-platform/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal)
+## 2. Authentication
+
+In this section we will make sure that an authenticated user will be granted access through the Pozi Web App.
+
+First, confirm that one Redirect URI has been configured that points to the Application Proxy URL that we have configured in the previous section. If it's not there, please add now.
+
+![](img/entra-id-app-registration-step-2.png)
+
+Now, add a platform and choose 'Single-page application'. It will ask to fill in a Redirect URI. Fill in `http://localhost/`. We will add a few more in the next step.
+
+![](img/entra-id-app-registration-step-3.png)
+
+Add the missing Redirect URIs from the list below in the Single-page application section:
+
+* `http://localhost/` (for Pozi development purposes)
+* `https://staging.pozi.com/` (for client testing/debugging)
+* `https://<pozi-site-name>.enterprise.pozi.com/` (replace `<pozi-site-name>` with the actual site name)
+* `https://<pozi-site-name>-entra-id.enterprise.pozi.com/` (optional: only for clients that transition their existing site to Entra ID)
+
+![](img/entra-id-app-registration-step-4.png)
+
+## 2. Scope
+
 
 
 ## 99. App registration
@@ -132,7 +157,8 @@ Error message | Solution
 --- | ---
 MSAL Error: Invalid Client errorMessage AADSTS65005: The application 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' asked for scope 'user_impersonation' that doesn't exist. | Add the 'user_impersonation' scope
 AADSTS9002326: Cross-origin token redemption is permitted only for the 'Single-Page Application' client-type. Request origin: 'https://poziserver-councilnamevicgovau.msappproxy.net'. | TODO: VERIFY - App registration -> Authentication-> platform type should be SPA
-
+AADSTS50011: The redirect URI 'http://localhost:3000/' specified in the request does not match the redirect URIs configured for the application 'c295d58a-82f2-417d-b2db-595be2259e9e'. Make sure the redirect URI sent in the request matches one added to your application in the Azure portal. Navigate to https://aka.ms/redirectUriMismatchError to learn more about how to fix this. | It could be that the 'http://localhost' redirect URI was not configured as a SPA, or, it could be that the application ID of the Pozi Server Enterprise Application was accidentally
+invalid_resource: AADSTS500011 -  The resource principal named api://c295d58a-82f2-417d-b2db-595be2259e9e was not found in the tenant named d1ea9051-cc51-4556-8729-e42a26edf37e. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You might have sent your authentication request to the wrong tenant. |
 
 <!-- ### Token-based Authentication/Authorisation
 

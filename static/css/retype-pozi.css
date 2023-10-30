@@ -180,7 +180,7 @@ a[href*="entra.microsoft.com"]::before {
 }
 
 /* Show drop shadows around the Entra ID images */
-img[src*="/entra-id/"] {
+img[src*="img/entra-id-"] {
   /* border-radius: 5px; */
   filter: drop-shadow(#a4a4a4 0.5rem 0.5rem 0.5rem);
 }

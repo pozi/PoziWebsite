@@ -63,8 +63,9 @@ The connector is a required piece of software that manages the outbound connecti
 
 ===
 
-## 2. Add Pozi QGIS as an on-premises app to Entra ID
+## 2. Add Pozi Server to Entra ID
 
+This section describes how to add Pozi Server (on-premises app) to Entra ID platform as an Enterprise application.
 
 **Tutorial**: [Add an on-premises app to Microsoft Entra ID](https://learn.microsoft.com/en-au/entra/identity/app-proxy/application-proxy-add-on-premises-application#add-an-on-premises-app-to-microsoft-entra-id)
 
@@ -85,9 +86,9 @@ In the Add your own on-premises application section, provide the following infor
 
   _Example: `http://gis-server.local/pozi/`_
 
-  To test internal URL on the internal network, opening the following URL in the browser should show a QGIS Server landing page:`http://<internal-server-name>/pozi/qgisserver/wfs3`
+  To test internal URL on the internal network, opening the following URL in the browser should show a QGIS Server landing page:`http://<internal-server-name>/pozi/qgisserver/wfs3.html`
 
-  _Example: `http://gis-server.local/pozi/qgisserver/wfs3`_
+  _Example: `http://gis-server.local/pozi/qgisserver/wfs3.html`_
 
 
 * **External URL**: `https://` `poziserver` `-<entra-application-client-id>.msappproxy.net`.
@@ -126,11 +127,11 @@ When configured correctly, a request from a logged-in user to Pozi Server throug
 
  Visiting followin the Entra ID Application Proxy URL:
 
-`https://poziserver-<entra-application-client-id>.msappproxy.net/pozi/qgisserver/wfs3`
+`https://poziserver-<entra-application-client-id>.msappproxy.net/pozi/qgisserver/wfs3.html`
 
 ...should return the same response as a local request to...
 
-`http://<internal-server-name>/pozi/qgisserver/wfs3`
+`http://<internal-server-name>/pozi/qgisserver/wfs3.html`
 
 ![](img/entra-id-qgis-server-landing-page.png)
 
