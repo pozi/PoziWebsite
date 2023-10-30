@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.751863106866">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.751974891822">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -24,20 +24,22 @@
     <meta property="og:url" content="https://pozi.com/admin-guide/installation/entra-id/app-registration/">
     <meta property="og:title" content="App Registration | Pozi Web GIS | Online Map">
     <meta property="og:description" content="30 Oct 2023">
+    <meta property="og:image" content="https://pozi.com/admin-guide/installation/entra-id/img/entra-id-app-registration-step-1.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pozi.com/admin-guide/installation/entra-id/app-registration/">
     <meta property="twitter:title" content="App Registration | Pozi Web GIS | Online Map">
     <meta property="twitter:description" content="30 Oct 2023">
+    <meta property="twitter:image" content="https://pozi.com/admin-guide/installation/entra-id/img/entra-id-app-registration-step-1.png">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=3.5.0.751863106866" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.5.0.751974891822" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.5.0.751863106866" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.5.0.751974891822" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.5.0.751863106866" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.5.0.751974891822" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -341,15 +343,57 @@
 </doc-anchor-target>
 <div class="updated"><p>30 Oct 2023</p>
 </div>
-<p>This guide is based on (and refers to) steps outlined in the following Microsoft document:</p>
-<p><a href="https://learn.microsoft.com/en-au/entra/identity-platform/howto-create-service-principal-portal" class="outbound" target="_blank"><span>Create a Microsoft Entra application and service principal that can access resources</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
-<doc-anchor-target id="1-register-pozi-web-application-with-microsoft-entra-id">
+<p>Please make sure to have completed the steps in the <a href="../application-proxy/">previous section</a>.</p>
+<doc-anchor-target id="1-configure-pozi-server-application-registration">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#1-register-pozi-web-application-with-microsoft-entra-id">#</doc-anchor-trigger>
-        <span>1. Register Pozi Web Application with Microsoft Entra ID</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-configure-pozi-server-application-registration">#</doc-anchor-trigger>
+        <span>1. Configure Pozi Server Application registration</span>
     </h2>
 </doc-anchor-target>
-<p><a href="https://learn.microsoft.com/en-au/entra/identity-platform/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal" class="outbound" target="_blank"><span>Register an application with Microsoft Entra ID and create a service principal</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
+<p>The creation of the Pozi Server Enterprise Application has also implicitly created an app registration with the same name.
+Search for this app in the &#x27;App registrations&#x27; section in Entra ID.</p>
+<p><figure class="content-center">
+    <img src="../img/entra-id-app-registration-step-1.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<doc-anchor-target id="2-authentication">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-authentication">#</doc-anchor-trigger>
+        <span>2. Authentication</span>
+    </h2>
+</doc-anchor-target>
+<p>In this section we will make sure that an authenticated user will be granted access through the Pozi Web App.</p>
+<p>First, confirm that one Redirect URI has been configured that points to the Application Proxy URL that we have configured in the previous section. If it&#x27;s not there, please add now.</p>
+<p><figure class="content-center">
+    <img src="../img/entra-id-app-registration-step-2.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>Now, add a platform and choose &#x27;Single-page application&#x27;. It will ask to fill in a Redirect URI. Fill in <code v-pre>http://localhost/</code>. We will add a few more in the next step.</p>
+<p><figure class="content-center">
+    <img src="../img/entra-id-app-registration-step-3.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>Add the missing Redirect URIs from the list below in the Single-page application section:</p>
+<ul>
+<li><code v-pre>http://localhost/</code> (for Pozi development purposes)</li>
+<li><code v-pre>https://staging.pozi.com/</code> (for client testing/debugging)</li>
+<li><code v-pre>https://&lt;pozi-site-name&gt;.enterprise.pozi.com/</code> (replace <code v-pre>&lt;pozi-site-name&gt;</code> with the actual site name)</li>
+<li><code v-pre>https://&lt;pozi-site-name&gt;-entra-id.enterprise.pozi.com/</code> (optional: only for clients that transition their existing site to Entra ID)</li>
+</ul>
+<p><figure class="content-center">
+    <img src="../img/entra-id-app-registration-step-4.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<doc-anchor-target id="2-scope">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-scope">#</doc-anchor-trigger>
+        <span>2. Scope</span>
+    </h2>
+</doc-anchor-target>
 <doc-anchor-target id="99-app-registration">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#99-app-registration">#</doc-anchor-trigger>
@@ -532,6 +576,14 @@
 <tr>
 <td>AADSTS9002326: Cross-origin token redemption is permitted only for the &#x27;Single-Page Application&#x27; client-type. Request origin: &#x27;https://poziserver-councilnamevicgovau.msappproxy.net&#x27;.</td>
 <td>TODO: VERIFY - App registration -&gt; Authentication-&gt; platform type should be SPA</td>
+</tr>
+<tr>
+<td>AADSTS50011: The redirect URI &#x27;http://localhost:3000/&#x27; specified in the request does not match the redirect URIs configured for the application &#x27;c295d58a-82f2-417d-b2db-595be2259e9e&#x27;. Make sure the redirect URI sent in the request matches one added to your application in the Azure portal. Navigate to <a href="https://aka.ms/redirectUriMismatchError" class="outbound" target="_blank"><span>https://aka.ms/redirectUriMismatchError</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> to learn more about how to fix this.</td>
+<td>It could be that the &#x27;http://localhost&#x27; redirect URI was not configured as a SPA, or, it could be that the application ID of the Pozi Server Enterprise Application was accidentally</td>
+</tr>
+<tr>
+<td>invalid_resource: AADSTS500011 -  The resource principal named api://c295d58a-82f2-417d-b2db-595be2259e9e was not found in the tenant named d1ea9051-cc51-4556-8729-e42a26edf37e. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You might have sent your authentication request to the wrong tenant.</td>
+<td></td>
 </tr>
 </tbody>
 </table>
