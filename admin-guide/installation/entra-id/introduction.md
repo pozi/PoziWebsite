@@ -16,7 +16,7 @@ order: 0
 
 This section contains the relevant information to expose Pozi Server (QGIS) securely to the outside world through Microsoft Entra ID (formerly Azure AD).
 
-Follow the instructions in the following sections:
+Follow the instructions in the following sections and return here:
 
 1. [Application Proxy](./application-proxy.md)
 1. [App Registration](./app-registration)
