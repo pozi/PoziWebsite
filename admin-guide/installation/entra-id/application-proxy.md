@@ -138,6 +138,6 @@ It is recommended to try out the Application Proxy URL in an incognito browser w
 
 Error message | Solution
 --- | ---
-Sorry, but we’re having trouble with signing you in. <br/><br/> AADSTS50105: Your administrator has configured the application Pozi Server ('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx') to block users unless they are specifically granted ('assigned') access to the application. The signed in user 'xxxxxxxx' is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application. | Grant access to the user(s) by following Step 3 'Assign Users'
+Sorry, but we’re having trouble with signing you in. <br/><br/> AADSTS50105: Your administrator has configured the application Pozi Server ('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx') to block users unless they are specifically granted ('assigned') access to the application. The signed in user 'xxxxxxxx' is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application. | Grant access to the user(s) by following [Step 3. Assign Users](#3-assign-users)
 BadGateway: This corporate app can't be accessed. <br/><br/> Connection to the server failed. For more details, check the Application Proxy Connector Event Log for reported errors. | This could happen if the application proxy internal URL is accidentally configured with `https` instead of `http`
 
