@@ -36,3 +36,6 @@ Click on any of our client sites below to discover how Pozi serves these organis
 [!ref icon="/static/img/client-logos/loddon.png" text="Loddon Shire Council"](https://loddon.pozi.com/)
 [!ref icon="/static/img/client-logos/yarriambiack.png" text="Yarriambiack Shire Council"](https://yarriambiack.pozi.com/)
 [!ref icon="/static/img/client-logos/hindmarsh.png" text="Hindmarsh Shire Council"](https://hindmarsh.pozi.com/)
+[!ref icon="/static/img/client-logos/queenscliffe.png" text="Borough of Queenscliffe"](https://queenscliffe.pozi.com/)
+[!ref icon="/static/img/client-logos/northburnett.png" text="North Burnett Regional Council"](https://northburnett.pozi.com/)
+[!ref icon="/static/img/client-logos/mountisa.png" text="Mount Isa City Council"](https://mountisa.pozi.com/)
