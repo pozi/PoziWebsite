@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.752036487801">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.752041870049">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -14,7 +14,7 @@
     <!-- Primary Meta Tags -->
     <title>App Registration | Pozi Web GIS | Online Map</title>
     <meta name="title" content="App Registration | Pozi Web GIS | Online Map">
-    <meta name="description" content="30 Oct 2023">
+    <meta name="description" content="31 Oct 2023">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://pozi.com/admin-guide/installation/entra-id/app-registration/">
@@ -23,23 +23,23 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pozi.com/admin-guide/installation/entra-id/app-registration/">
     <meta property="og:title" content="App Registration | Pozi Web GIS | Online Map">
-    <meta property="og:description" content="30 Oct 2023">
+    <meta property="og:description" content="31 Oct 2023">
     <meta property="og:image" content="https://pozi.com/admin-guide/installation/entra-id/img/entra-id-app-registration-step-1.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pozi.com/admin-guide/installation/entra-id/app-registration/">
     <meta property="twitter:title" content="App Registration | Pozi Web GIS | Online Map">
-    <meta property="twitter:description" content="30 Oct 2023">
+    <meta property="twitter:description" content="31 Oct 2023">
     <meta property="twitter:image" content="https://pozi.com/admin-guide/installation/entra-id/img/entra-id-app-registration-step-1.png">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=3.5.0.752036487801" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.5.0.752041870049" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.5.0.752036487801" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.5.0.752041870049" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.5.0.752036487801" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.5.0.752041870049" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -327,6 +327,14 @@
                                             </svg>
                                         </li>
                                         <li class="pr-4">
+                                            <a href="../../../../admin-guide/installation/entra-id/" class="pr-4">
+                                                Entra ID
+                                            </a>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                                            </svg>
+                                        </li>
+                                        <li class="pr-4">
                                             <a href="../../../../admin-guide/installation/entra-id/app-registration/" class="pr-4">
                                                 App Registration
                                             </a>
@@ -341,7 +349,7 @@
         <span>App Registration</span>
     </h1>
 </doc-anchor-target>
-<div class="updated"><p>30 Oct 2023</p>
+<div class="updated"><p>31 Oct 2023</p>
 </div>
 <p>Please make sure to have completed the steps in the <a href="../application-proxy/">previous section</a>.</p>
 <doc-anchor-target id="1-configure-pozi-server-application-registration">
@@ -388,172 +396,85 @@ Search for this app in the &#x27;App registrations&#x27; section in Entra ID.</p
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
-<doc-anchor-target id="2-scope">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#2-scope">#</doc-anchor-trigger>
-        <span>2. Scope</span>
-    </h2>
-</doc-anchor-target>
-<doc-anchor-target id="99-app-registration">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#99-app-registration">#</doc-anchor-trigger>
-        <span>99. App registration</span>
-    </h2>
-</doc-anchor-target>
-<p><code v-pre>Entra ID</code>: <strong>App Registrations</strong> ⇒ <strong>Server</strong></p>
+<p>There are some more settings in this section. Most can be ignored. Confirm that the following have the values below.</p>
 <ul>
-<li>Set Pozi Server up in Entra ID as a registered app (admin privileges required): <a href="https://docs.microsoft.com/en-au/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal" class="outbound" target="_blank"><span>https://docs.microsoft.com/en-au/azure/active-directory/develop/howto-create-service-principal-portal</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
-<li>Record the Application id (also known as as client id) as well as tenant id</li>
+<li><strong>Access tokens</strong>: Unchecked</li>
+<li><strong>ID tokens</strong>: Unchecked</li>
+<li><strong>Enable the following mobile and desktop flows</strong>: <code v-pre>No</code></li>
 </ul>
-<doc-anchor-target id="authentication">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#authentication">#</doc-anchor-trigger>
-        <span>Authentication</span>
-    </h3>
-</doc-anchor-target>
-<doc-anchor-target id="web---redirect-uris">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#web---redirect-uris">#</doc-anchor-trigger>
-        <span>Web - Redirect URIs</span>
-    </h4>
-</doc-anchor-target>
-<p>Add the App Proxy URL to <code v-pre>Redirect URIs</code> to the <code v-pre>Web</code> section. E.g.:</p>
-<ul>
-<li><code v-pre>https://poziserver-&lt;entra-application-client-id&gt;.msappproxy.net/pozi/</code></li>
-</ul>
-<p>This is the same as the External URL configured above.</p>
 <p><figure class="content-center">
-    <img src="../integrations/img/azure-auth-web-redirect-uris.png" alt="">
+    <img src="../img/entra-id-app-registration-step-5.png" alt="">
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
-<doc-anchor-target id="single-page-application---redirect-uris">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#single-page-application---redirect-uris">#</doc-anchor-trigger>
-        <span>Single Page Application - Redirect URIs</span>
-    </h4>
-</doc-anchor-target>
-<p>Add the following <code v-pre>Redirect URIs</code> to the <code v-pre>Single-page application</code> section:</p>
-<ul>
-<li><code v-pre>https://&lt;sitename&gt;.enterprise.pozi.com/</code></li>
-<li><code v-pre>http://localhost:3000/</code> (for Pozi development purposes)</li>
-<li><code v-pre>https://staging.pozi.com/</code> (for client testing/debugging)</li>
-</ul>
-<p>If upgrading an existing non-Azure Pozi Enterprise site, also add a URI for a dedicated test site with <code v-pre>-azure</code> appended to the existing site name:</p>
-<ul>
-<li><code v-pre>https://&lt;sitename&gt;-azure.enterprise.pozi.com/</code></li>
-</ul>
-<p><figure class="content-center">
-    <img src="../integrations/img/azure-auth-spa-redirect-uris.png" alt="">
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<p>Please make sure that the URIs all have a trailing slash (&#x27;/&#x27;) and note that the localhost URI is <code v-pre>http</code> (and not <code v-pre>https</code>).</p>
-<doc-anchor-target id="implicit-grant-and-hybrid-flows">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#implicit-grant-and-hybrid-flows">#</doc-anchor-trigger>
-        <span>Implicit grant and hybrid flows</span>
-    </h3>
-</doc-anchor-target>
-<ul>
-<li><code v-pre>Access tokens</code> and <code v-pre>ID tokens</code> should remain unchecked</li>
-</ul>
-<p><figure class="content-center">
-    <img src="../integrations/img/azure-auth-implicit-grant-and-hybrid-flows.png" alt="">
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<doc-anchor-target id="advanced-settings">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#advanced-settings">#</doc-anchor-trigger>
-        <span>Advanced settings</span>
-    </h3>
-</doc-anchor-target>
-<ul>
-<li>Set <code v-pre>Allow public client flows</code> to <code v-pre>No</code></li>
-</ul>
-<p><figure class="content-center">
-    <img src="../integrations/img/azure-auth-advanced-settings.png" alt="">
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<doc-anchor-target id="authorisation">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#authorisation">#</doc-anchor-trigger>
-        <span>Authorisation</span>
-    </h3>
-</doc-anchor-target>
-<p>All going well, it should be possible to visit the App Proxy URL (in our example case: <code v-pre>https://poziserver-&lt;entra-application-client-id&gt;.msappproxy.net/pozi/</code>). If an error is shown like: <code v-pre>Sorry, but we’re having trouble with signing you in.</code> with a text similar to below, then we will need to give the relevant users/groups access.</p>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-500 dark:bg-dark-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-500 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-            <h5>Example authorisation error:</h5>
-<p>AADSTS50105: Your administrator has configured the application Pozi Server (&#x27;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&#x27;) to block users unless they are specifically granted (&#x27;assigned&#x27;) access to the application. The signed in user <a href="mailto:%27xxxxxxxxx.xxxxxxx@xxxxxxxxxxx.xxx.xxx.xx">&#x27;xxxxxxxxx.xxxxxxx@xxxxxxxxxxx.xxx.xxx.xx</a>&#x27;) is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application.</p>
-        </div>
-    </div>
-</div>
-<p><strong>Steps to authorise users/groups</strong></p>
-<p><code v-pre>Entra ID</code>: <strong>Enterprise Applications</strong> ⇒ <strong>Server</strong></p>
-<ul>
-<li>In the Azure Portal, go to Enterprise Applications, select the enterprise application for the Pozi Application Proxy</li>
-<li>Under <code v-pre>Manage</code>, select <code v-pre>Users and groups</code></li>
-<li>If no users/groups have been defined, it will say something like <code v-pre>No application assignments found</code></li>
-<li>Click on <code v-pre>+ Add user/group</code></li>
-<li>In the next page, click on the text <code v-pre>None selected</code> under&#x60;Users and groups</li>
-<li>On the right a panel should pop up with all available users/groups. Assuming that we want all users to have access, click on the group <code v-pre>All users</code> and click on <code v-pre>Select</code> in the bottom.</li>
-<li>It is worth taking note of the the info text <code v-pre>When you assign a group to an application, only users directly in the group will have access. The assignment does not cascade to nested groups.</code>, especially when one chooses a group that contains other groups. In the case of <code v-pre>All users</code>, this is not an issue.</li>
-<li>Under <code v-pre>Select a role</code>, the role <code v-pre>User</code> is preselected and cannot be changed. That is OK.</li>
-<li>Click on <code v-pre>Assign</code> in the bottom of the page.</li>
-</ul>
-<p>Access should now be granted to the application proxy and the URL should be accessible.</p>
-<doc-anchor-target id="api-permissions">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#api-permissions">#</doc-anchor-trigger>
-        <span>API Permissions</span>
-    </h3>
-</doc-anchor-target>
-<p>Give Pozi the following permissions:</p>
-<ul>
-<li>API/Permissions Name: <code v-pre>User.Read</code></li>
-<li>Type: <code v-pre>Delegated</code></li>
-<li>Admin consent required: <code v-pre>No</code></li>
-</ul>
-<p>This should allow Pozi to determine access based on a user&#x27;s role(s).</p>
-<!-- Important: a user authenticated with the client's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://poziserver-<entra-application-client-id>.msappproxy.net/`). -->
-<doc-anchor-target id="azure-ad-pozi-support-account">
+<doc-anchor-target id="2-expose-an-api-user_impersonation">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#azure-ad-pozi-support-account">#</doc-anchor-trigger>
-        <span>Azure AD Pozi Support Account</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-expose-an-api-user_impersonation">#</doc-anchor-trigger>
+        <span>2. Expose an API (user_impersonation)</span>
     </h2>
 </doc-anchor-target>
-<p>In order for the Pozi team to be able to provide support and troubleshoot any potential issues, we ask our clients to configure the <a href="prerequisites.md#support-account">Pozi Support</a> domain user with the same permissions/groups/roles as the users of Pozi through Azure AD Application Proxy.</p>
-<p>If it&#x27;s not possible or practical for the Pozi Support domain user to be given Azure AD permissions, you may choose to create a separate user account with the Azure AD permissions. In this case, no administrator privileges are required.</p>
-<doc-anchor-target id="information-to-send-to-pozi">
+<p>This section covers a <strong>crucial</strong> setting for the application to access Pozi Server on behalf of the user: the <code v-pre>user_impersonation</code> scope.</p>
+<p>Go to the &#x27;Expose an API&#x27; section of Pozi Server.</p>
+<p>Firstly, confirm that the <code v-pre>Application ID URI</code> looks something like <code v-pre>https://poziserver-&lt;entra-application-client-name&gt;.msappproxy.net/pozi</code>. This should not be changed.</p>
+<p><figure class="content-center">
+    <img src="../img/entra-id-scope-add-step-1.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>Make sure that in the &#x27;Expose an API&#x27; section there is one scope defined, called <code v-pre>user_impersonation</code> (prefixed by the Application ID URI above).</p>
+<p>Often, this scope gets created by Entra ID automatically but not in every organisation. If this scope is missing, add it as following.</p>
+<p><figure class="content-center">
+    <img src="../img/entra-id-scope-add-step-2.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<ul>
+<li><strong>Scope name</strong>: <code v-pre>user_impersonation</code> (correct spelling is crucial!)</li>
+<li><strong>Who can consent?</strong>: <code v-pre>Admins only</code></li>
+<li><strong>Admin consent display name</strong>: <code v-pre>Access Pozi Server</code></li>
+<li><strong>Admin consent description</strong>: <code v-pre>Allow the application to access Pozi Server on behalf of the signed-in user.</code></li>
+<li><strong>User consent display name</strong>: <code v-pre>Access Pozi Server</code> (optional)</li>
+<li><strong>User consent description</strong>: <code v-pre>Allow the application to access Pozi Server on your behalf.</code></li>
+<li><strong>State</strong>: <code v-pre>Enabled</code></li>
+</ul>
+<p><figure class="content-center">
+    <img src="../img/entra-id-scope-add-step-3.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>The scope above will be used in the Site Configuration in Pozi in the &#x27;Scopes&#x27; section. It should look something like:
+<code v-pre>https://poziserver-&lt;entra-application-client-name&gt;.msappproxy.net/pozi/user_impersonation</code></p>
+<doc-anchor-target id="3-access-control">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#information-to-send-to-pozi">#</doc-anchor-trigger>
-        <span>Information to send to Pozi</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-access-control">#</doc-anchor-trigger>
+        <span>3. Access control</span>
     </h2>
 </doc-anchor-target>
-<p>After completion of the configuration, email us with the following information:</p>
-<ul class="contains-task-list">
-<li class="task-list-item"><input disabled="disabled" type="checkbox" /> The <strong>internal</strong> app proxy URl (something like <code v-pre>http://&lt;internal-server-name&gt;/pozi/</code>)</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" /> The <strong>external</strong> app proxy URl (something like <code v-pre>https://poziserver-&lt;entra-application-client-id&gt;.msappproxy.net/pozi/</code>)</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" /> The <strong><code v-pre>client id</code></strong> (sometimes called &#x27;application id&#x27;) and has the following structure: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The client id is defined in Enterprise Applications =&gt; Properties.</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" /> The <strong><code v-pre>tenant id</code></strong>, which looks like xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The tenant id is defined in Azure Active Directory =&gt; Overview.&quot;</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" /> A copy/paste and/or screenshot of all the relevant settings</li>
-</ul>
-<p>This information is <a href="https://stackoverflow.com/questions/57306964/are-azure-active-directorys-tenantid-and-clientid-considered-secrets" class="outbound" target="_blank"><span>not sensitive</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> and can be emailed directly to the Pozi support team at <a href="mailto:support@pozi.com">support@pozi.com</a>.</p>
-<p>In addition to the information above, if you have not done so already, provide the Azure AD credentials (email address and password) of the <a href="prerequisites.md#support-account">Pozi Support</a> user account. Please get in touch with us on how to securely provide us with these details.</p>
+<p>It is possible to further control access to QGIS catalogues. In order for Pozi enforce this access control, access to what groups a user is a member of in the Entra ID environment is required.</p>
+<p>This section describes how to provide Pozi Web App with the relevant group information.</p>
+<p><figure class="content-center">
+    <img src="../img/entra-id-groups-claim-step-1.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>Go to the &#x27;Token configuration&#x27; section and click on &#x27;Add groups claim&#x27;. Then, select desired group types (just &#x27;Security groups&#x60; is generally sufficient) and keep default settings</p>
+<p><figure class="content-center">
+    <img src="../img/entra-id-groups-claim-step-2.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>That is all that is needed in Entra ID. Pozi Web App will receive the group information as a list of group ids, like this:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">&quot;groups&quot;: [
+    &quot;81ddec0b-6a1a-426a-9826-e869eef6473f&quot;,
+    &quot;17b3a8a0-bc11-4ec3-810e-94c74201b41e&quot;,
+    &quot;5ee9c710-26aa-40be-90be-36afa6fc2003&quot;,
+    &quot;3adf8e2e-7628-41ee-b902-b105f231758e&quot;,
+    &quot;c034a6cd-2b7d-4336-9f9e-9bb896ad1110&quot;
+]</code></pre>
+</doc-codeblock></div>
+<p>This will make it possible to limit what group(s) can view a certain QGIS project. This can be done by providing the group ids to Pozi Support who will configure the relevant catalogues.</p>
+<p>Note: it is currently not possible to use the group display name.</p>
 <doc-anchor-target id="troubleshooting">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#troubleshooting">#</doc-anchor-trigger>
@@ -578,16 +499,102 @@ Search for this app in the &#x27;App registrations&#x27; section in Entra ID.</p
 <td>TODO: VERIFY - App registration -&gt; Authentication-&gt; platform type should be SPA</td>
 </tr>
 <tr>
-<td>AADSTS50011: The redirect URI &#x27;http://localhost:3000/&#x27; specified in the request does not match the redirect URIs configured for the application &#x27;c295d58a-82f2-417d-b2db-595be2259e9e&#x27;. Make sure the redirect URI sent in the request matches one added to your application in the Azure portal. Navigate to <a href="https://aka.ms/redirectUriMismatchError" class="outbound" target="_blank"><span>https://aka.ms/redirectUriMismatchError</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> to learn more about how to fix this.</td>
-<td>It could be that the &#x27;http://localhost&#x27; redirect URI was not configured as a SPA, or, it could be that the application ID of the Pozi Server Enterprise Application was accidentally</td>
+<td>AADSTS50011: The redirect URI &#x27;https://xxxxxxxxxxxxxxxxxxx/&#x27; specified in the request does not match the redirect URIs configured for the application &#x27;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&#x27;. Make sure the redirect URI sent in the request matches one added to your application in the Azure portal. Navigate to <a href="https://aka.ms/redirectUriMismatchError" class="outbound" target="_blank"><span>https://aka.ms/redirectUriMismatchError</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> to learn more about how to fix this.</td>
+<td>It could be that the &#x27;https://xxxxxxxxxxxxxxxxxxx/&#x27; redirect URI was not configured as a SPA, or, it could be that the application ID of the Pozi Server Enterprise Application was accidentally</td>
 </tr>
 <tr>
-<td>invalid_resource: AADSTS500011 -  The resource principal named api://c295d58a-82f2-417d-b2db-595be2259e9e was not found in the tenant named d1ea9051-cc51-4556-8729-e42a26edf37e. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You might have sent your authentication request to the wrong tenant.</td>
-<td></td>
+<td>invalid_resource: AADSTS500011 -  The resource principal named xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx was not found in the tenant named xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You might have sent your authentication request to the wrong tenant.</td>
+<td>Make sure you have provided the correct tenant id and that you are logged in the correct account</td>
+</tr>
+<tr>
+<td>AADSTS50105: Your administrator has configured the application Pozi Server (&#x27;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&#x27;) to block users unless they are specifically granted (&#x27;assigned&#x27;) access to the application. The signed in user <a href="mailto:%27xxxxxxxxx.xxxxxxx@xxxxxxxxxxx.xxx.xxx.xx">&#x27;xxxxxxxxx.xxxxxxx@xxxxxxxxxxx.xxx.xxx.xx</a>&#x27;) is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application.</td>
+<td>Give the relevant users/groups access via Enterprise Applications. See the <a href="../application-proxy/#3-assign-users">Assign users</a> section.</td>
 </tr>
 </tbody>
 </table>
 </div>
+<!-- ## 99. App registration
+
+
+
+`Entra ID`: **App Registrations** ⇒ **Server**
+
+* Set Pozi Server up in Entra ID as a registered app (admin privileges required): [https://docs.microsoft.com/en-au/azure/active-directory/develop/howto-create-service-principal-portal](https://docs.microsoft.com/en-au/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal)
+* Record the Application id (also known as as client id) as well as tenant id
+
+### Authentication
+
+#### Web - Redirect URIs
+
+Add the App Proxy URL to `Redirect URIs` to the `Web` section. E.g.:
+  * `https://poziserver-<entra-application-client-name>.msappproxy.net/pozi/`
+
+This is the same as the External URL configured above.
+
+![](../integrations/img/azure-auth-web-redirect-uris.png)
+
+#### Single Page Application - Redirect URIs
+
+Add the following `Redirect URIs` to the `Single-page application` section:
+  * `https://<sitename>.enterprise.pozi.com/`
+  * `http://localhost:3000/` (for Pozi development purposes)
+  * `https://staging.pozi.com/` (for client testing/debugging)
+
+If upgrading an existing non-Azure Pozi Enterprise site, also add a URI for a dedicated test site with `-azure` appended to the existing site name:
+  * `https://<sitename>-azure.enterprise.pozi.com/`
+
+![](../integrations/img/azure-auth-spa-redirect-uris.png)
+
+Please make sure that the URIs all have a trailing slash ('/') and note that the localhost URI is `http` (and not `https`).
+
+### Implicit grant and hybrid flows
+
+* `Access tokens` and `ID tokens` should remain unchecked
+
+![](../integrations/img/azure-auth-implicit-grant-and-hybrid-flows.png)
+
+### Advanced settings
+
+* Set `Allow public client flows` to `No`
+
+![](../integrations/img/azure-auth-advanced-settings.png)
+
+### Authorisation
+
+All going well, it should be possible to visit the App Proxy URL (in our example case: `https://poziserver-<entra-application-client-name>.msappproxy.net/pozi/`). If an error is shown like: `Sorry, but we’re having trouble with signing you in.` with a text similar to below, then we will need to give the relevant users/groups access.
+
+:::note Example authorisation error:
+
+AADSTS50105: Your administrator has configured the application Pozi Server ('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx') to block users unless they are specifically granted ('assigned') access to the application. The signed in user 'xxxxxxxxx.xxxxxxx@xxxxxxxxxxx.xxx.xxx.xx') is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application.
+
+:::
+
+**Steps to authorise users/groups**
+
+`Entra ID`: **Enterprise Applications** ⇒ **Server**
+
+* In the Azure Portal, go to Enterprise Applications, select the enterprise application for the Pozi Application Proxy
+* Under `Manage`, select `Users and groups`
+* If no users/groups have been defined, it will say something like `No application assignments found`
+* Click on `+ Add user/group`
+* In the next page, click on the text `None selected` under`Users and groups
+* On the right a panel should pop up with all available users/groups. Assuming that we want all users to have access, click on the group `All users` and click on `Select` in the bottom.
+* It is worth taking note of the the info text `When you assign a group to an application, only users directly in the group will have access. The assignment does not cascade to nested groups.`, especially when one chooses a group that contains other groups. In the case of `All users`, this is not an issue.
+* Under `Select a role`, the role `User` is preselected and cannot be changed. That is OK.
+* Click on `Assign` in the bottom of the page.
+
+Access should now be granted to the application proxy and the URL should be accessible.
+
+### API Permissions
+
+Give Pozi the following permissions:
+
+- API/Permissions Name: `User.Read`
+- Type: `Delegated`
+- Admin consent required: `No`
+
+This should allow Pozi to determine access based on a user's role(s). -->
+<!-- Important: a user authenticated with the client's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://poziserver-<entra-application-client-name>.msappproxy.net/`). -->
 <!-- ### Token-based Authentication/Authorisation
 
 :::note Under Construction
@@ -649,6 +656,27 @@ The instructions below follow the [Microsoft guide on adding app roles](https://
                                     </a>
                                 </div>
                             
+                                <nav class="flex mt-14">
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../../admin-guide/installation/entra-id/application-proxy/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                                                <span class="block mt-1">Application Proxy</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                            
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../../admin-guide/installation/legacy/pozi-server/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                                                <span class="block mt-1">Pozi Server</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
+                                    </div>
+                                </nav>
                             </footer>
                         </main>
                 
