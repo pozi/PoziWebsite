@@ -12,35 +12,32 @@
     <meta name="generator" content="Retype 3.5.0">
 
     <!-- Primary Meta Tags -->
-    <title>Installation | Pozi Web GIS | Online Map</title>
-    <meta name="title" content="Installation | Pozi Web GIS | Online Map">
-    <meta name="description" content="This is a brief overview of the steps involved. For step-by-step instructions, including details of the prompts you'll encounter, go to the...">
+    <title>Azure AD | Pozi Web GIS | Online Map</title>
+    <meta name="title" content="Azure AD | Pozi Web GIS | Online Map">
+    <meta name="description" content="Go to our Entra ID documentation instead.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://pozi.com/pozi-connect/installation/">
+    <link rel="canonical" href="https://pozi.com/admin-guide/installation/legacy/azure-ad/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pozi.com/pozi-connect/installation/">
-    <meta property="og:title" content="Installation | Pozi Web GIS | Online Map">
-    <meta property="og:description" content="This is a brief overview of the steps involved. For step-by-step instructions, including details of the prompts you'll encounter, go to the...">
-    <meta property="og:image" content="https://pozi.com/pozi-connect/img/download.png">
+    <meta property="og:url" content="https://pozi.com/admin-guide/installation/legacy/azure-ad/">
+    <meta property="og:title" content="Azure AD | Pozi Web GIS | Online Map">
+    <meta property="og:description" content="Go to our Entra ID documentation instead.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://pozi.com/pozi-connect/installation/">
-    <meta property="twitter:title" content="Installation | Pozi Web GIS | Online Map">
-    <meta property="twitter:description" content="This is a brief overview of the steps involved. For step-by-step instructions, including details of the prompts you'll encounter, go to the...">
-    <meta property="twitter:image" content="https://pozi.com/pozi-connect/img/download.png">
+    <meta property="twitter:url" content="https://pozi.com/admin-guide/installation/legacy/azure-ad/">
+    <meta property="twitter:title" content="Azure AD | Pozi Web GIS | Online Map">
+    <meta property="twitter:description" content="Go to our Entra ID documentation instead.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.752047479234" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.5.0.752047479234" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.752047479234" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.752047479234" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.752047479234" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.5.0.752047479234" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.5.0.752047479234" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -61,10 +58,10 @@
                 <!-- Logo -->
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
-                        <a id="docs-site-logo" href="../../" class="flex items-center leading-snug text-2xl">
+                        <a id="docs-site-logo" href="../../../../" class="flex items-center leading-snug text-2xl">
                             <span class="w-10 mr-2 grow-0 shrink-0 overflow-hidden">
-                                <img class="max-h-10 dark:hidden md:inline-block" src="../../static/img/logo.svg">
-                                <img class="max-h-10 hidden dark:inline-block" src="../../static/img/logo.svg">
+                                <img class="max-h-10 dark:hidden md:inline-block" src="../../../../static/img/logo.svg">
+                                <img class="max-h-10 hidden dark:inline-block" src="../../../../static/img/logo.svg">
                             </span>
                             <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">Pozi</span>
                         </a>
@@ -78,7 +75,7 @@
                     <nav class="hidden md:flex">
                         <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
                             <li class="mr-6">
-                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../../../">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
                                         <g fill="currentColor">
                                             <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
@@ -88,7 +85,7 @@
                                 </a>
                             </li>
                             <li class="mr-6">
-                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../product/">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../../../product/">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
                                         <g fill="currentColor">
                                             <path d="M11.063 1.456a1.749 1.749 0 0 1 1.874 0l8.383 5.316a1.751 1.751 0 0 1 0 2.956l-8.383 5.316a1.749 1.749 0 0 1-1.874 0L2.68 9.728a1.751 1.751 0 0 1 0-2.956Zm1.071 1.267a.25.25 0 0 0-.268 0L3.483 8.039a.25.25 0 0 0 0 .422l8.383 5.316a.25.25 0 0 0 .268 0l8.383-5.316a.25.25 0 0 0 0-.422Z"/><path d="M1.867 12.324a.75.75 0 0 1 1.035-.232l8.964 5.685a.25.25 0 0 0 .268 0l8.964-5.685a.75.75 0 0 1 .804 1.267l-8.965 5.685a1.749 1.749 0 0 1-1.874 0l-8.965-5.685a.75.75 0 0 1-.231-1.035Z"/><path d="M1.867 16.324a.75.75 0 0 1 1.035-.232l8.964 5.685a.25.25 0 0 0 .268 0l8.964-5.685a.75.75 0 0 1 .804 1.267l-8.965 5.685a1.749 1.749 0 0 1-1.874 0l-8.965-5.685a.75.75 0 0 1-.231-1.035Z"/>
@@ -98,7 +95,7 @@
                                 </a>
                             </li>
                             <li class="mr-6">
-                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../pricing/">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../../../pricing/">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
                                         <g fill="currentColor">
                                             <path d="M7.5 1.75C7.5.784 8.284 0 9.25 0h5.5c.966 0 1.75.784 1.75 1.75V4h4.75c.966 0 1.75.784 1.75 1.75v14.5A1.75 1.75 0 0 1 21.25 22H2.75A1.75 1.75 0 0 1 1 20.25V5.75C1 4.784 1.784 4 2.75 4H7.5Zm-5 10.24v8.26c0 .138.112.25.25.25h18.5a.25.25 0 0 0 .25-.25v-8.26A4.235 4.235 0 0 1 18.75 13H5.25a4.235 4.235 0 0 1-2.75-1.01Zm19-3.24v-3a.25.25 0 0 0-.25-.25H2.75a.25.25 0 0 0-.25.25v3a2.75 2.75 0 0 0 2.75 2.75h13.5a2.75 2.75 0 0 0 2.75-2.75Zm-6.5-7a.25.25 0 0 0-.25-.25h-5.5a.25.25 0 0 0-.25.25V4h6Z"/>
@@ -108,7 +105,7 @@
                                 </a>
                             </li>
                             <li class="mr-6">
-                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../help/">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../../../help/">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
                                         <g fill="currentColor">
                                             <path d="M1.75 1h12.5c.966 0 1.75.784 1.75 1.75v9.5A1.75 1.75 0 0 1 14.25 14H8.061l-2.574 2.573A1.458 1.458 0 0 1 3 15.543V14H1.75A1.75 1.75 0 0 1 0 12.25v-9.5C0 1.784.784 1 1.75 1ZM1.5 2.75v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25Z"/><path d="M22.5 8.75a.25.25 0 0 0-.25-.25h-3.5a.75.75 0 0 1 0-1.5h3.5c.966 0 1.75.784 1.75 1.75v9.5A1.75 1.75 0 0 1 22.25 20H21v1.543a1.457 1.457 0 0 1-2.487 1.03L15.939 20H10.75A1.75 1.75 0 0 1 9 18.25v-1.465a.75.75 0 0 1 1.5 0v1.465c0 .138.112.25.25.25h5.5a.75.75 0 0 1 .53.22l2.72 2.72v-2.19a.75.75 0 0 1 .75-.75h2a.25.25 0 0 0 .25-.25v-9.5Z"/>
@@ -118,7 +115,7 @@
                                 </a>
                             </li>
                             <li class="mr-6">
-                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../blog/">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../../../blog/">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
                                         <g fill="currentColor">
                                             <path d="M20.485 2.515a.75.75 0 0 0-1.06 1.06A10.465 10.465 0 0 1 22.5 11c0 2.9-1.174 5.523-3.075 7.424a.75.75 0 0 0 1.06 1.061A11.965 11.965 0 0 0 24 11c0-3.314-1.344-6.315-3.515-8.485Zm-15.91 1.06a.75.75 0 0 0-1.06-1.06A11.965 11.965 0 0 0 0 11c0 3.313 1.344 6.314 3.515 8.485a.75.75 0 0 0 1.06-1.06A10.465 10.465 0 0 1 1.5 11c0-2.9 1.174-5.524 3.075-7.425ZM8.11 7.11a.75.75 0 0 0-1.06-1.06A6.98 6.98 0 0 0 5 11a6.98 6.98 0 0 0 2.05 4.95.75.75 0 0 0 1.06-1.061 5.48 5.48 0 0 1-1.61-3.89 5.48 5.48 0 0 1 1.61-3.888Zm8.84-1.06a.75.75 0 1 0-1.06 1.06A5.48 5.48 0 0 1 17.5 11a5.48 5.48 0 0 1-1.61 3.889.75.75 0 1 0 1.06 1.06A6.98 6.98 0 0 0 19 11a6.98 6.98 0 0 0-2.05-4.949ZM14 11a2 2 0 0 1-1.25 1.855v8.395a.75.75 0 0 1-1.5 0v-8.395A2 2 0 1 1 14 11Z"/>
@@ -128,7 +125,7 @@
                                 </a>
                             </li>
                             <li class="mr-6">
-                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../about/">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../../../about/">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
                                         <g fill="currentColor">
                                             <path d="M6.25 12a.75.75 0 0 0 0 1.5h.5a.75.75 0 0 0 0-1.5h-.5ZM5.5 9.25a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1-.75-.75ZM6.25 5a.75.75 0 0 0 0 1.5h.5a.75.75 0 0 0 0-1.5h-.5ZM9 12.75a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1-.75-.75Zm.75-4.25a.75.75 0 0 0 0 1.5h.5a.75.75 0 0 0 0-1.5h-.5ZM9 5.75A.75.75 0 0 1 9.75 5h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 9 5.75ZM13.25 12a.75.75 0 0 0 0 1.5h.5a.75.75 0 0 0 0-1.5h-.5Zm-.75-2.75a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1-.75-.75ZM13.25 5a.75.75 0 0 0 0 1.5h.5a.75.75 0 0 0 0-1.5h-.5Z"/><path d="M2 20V3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v17c0 .173-.022.34-.063.5H20a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.2-.4l-.5-.375a.75.75 0 0 1 .9-1.2l.5.375c.504.378.8.97.8 1.6v8a2 2 0 0 1-2 2h-3.562a.767.767 0 0 1-.166-.018c-.089.012-.18.018-.272.018h-3.75a.75.75 0 0 1-.75-.75V19h-3v2.25a.75.75 0 0 1-.75.75H4a2 2 0 0 1-2-2Zm2 .5h3v-2.25a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 .75.75v2.25h3a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5H4a.5.5 0 0 0-.5.5v17a.5.5 0 0 0 .5.5Z"/>
@@ -138,7 +135,7 @@
                                 </a>
                             </li>
                             <li class="mr-6">
-                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../contact/">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../../../contact/">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
                                         <g fill="currentColor">
                                             <path d="M20.226 7.25c-2.623-4.542-8.432-6.098-12.974-3.475-4.543 2.622-6.099 8.431-3.477 12.974 2.623 4.542 8.431 6.099 12.974 3.477a.75.75 0 0 1 .75 1.299c-5.26 3.037-11.987 1.235-15.024-4.026C-.562 12.24 1.24 5.512 6.501 2.475 11.76-.562 18.488 1.24 21.525 6.501a10.959 10.959 0 0 1 1.455 4.826c.013.056.02.113.02.173v2.25a3.5 3.5 0 0 1-6.623 1.581 5.5 5.5 0 1 1 1.112-3.682.802.802 0 0 1 .011.129v1.972a2 2 0 1 0 4 0v-1.766a9.456 9.456 0 0 0-1.274-4.733ZM16 12a4 4 0 1 0-8 0 4 4 0 0 0 8 0Z"/>
@@ -216,7 +213,7 @@
                             <nav>
                                 <ul class="flex flex-wrap justify-center items-center">
                                     <li class="mr-6">
-                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../../../">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
                                                 <g fill="currentColor">
                                                     <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
@@ -226,7 +223,7 @@
                                         </a>
                                     </li>
                                     <li class="mr-6">
-                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../product/">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../../../product/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
                                                 <g fill="currentColor">
                                                     <path d="M11.063 1.456a1.749 1.749 0 0 1 1.874 0l8.383 5.316a1.751 1.751 0 0 1 0 2.956l-8.383 5.316a1.749 1.749 0 0 1-1.874 0L2.68 9.728a1.751 1.751 0 0 1 0-2.956Zm1.071 1.267a.25.25 0 0 0-.268 0L3.483 8.039a.25.25 0 0 0 0 .422l8.383 5.316a.25.25 0 0 0 .268 0l8.383-5.316a.25.25 0 0 0 0-.422Z"/><path d="M1.867 12.324a.75.75 0 0 1 1.035-.232l8.964 5.685a.25.25 0 0 0 .268 0l8.964-5.685a.75.75 0 0 1 .804 1.267l-8.965 5.685a1.749 1.749 0 0 1-1.874 0l-8.965-5.685a.75.75 0 0 1-.231-1.035Z"/><path d="M1.867 16.324a.75.75 0 0 1 1.035-.232l8.964 5.685a.25.25 0 0 0 .268 0l8.964-5.685a.75.75 0 0 1 .804 1.267l-8.965 5.685a1.749 1.749 0 0 1-1.874 0l-8.965-5.685a.75.75 0 0 1-.231-1.035Z"/>
@@ -236,7 +233,7 @@
                                         </a>
                                     </li>
                                     <li class="mr-6">
-                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../pricing/">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../../../pricing/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
                                                 <g fill="currentColor">
                                                     <path d="M7.5 1.75C7.5.784 8.284 0 9.25 0h5.5c.966 0 1.75.784 1.75 1.75V4h4.75c.966 0 1.75.784 1.75 1.75v14.5A1.75 1.75 0 0 1 21.25 22H2.75A1.75 1.75 0 0 1 1 20.25V5.75C1 4.784 1.784 4 2.75 4H7.5Zm-5 10.24v8.26c0 .138.112.25.25.25h18.5a.25.25 0 0 0 .25-.25v-8.26A4.235 4.235 0 0 1 18.75 13H5.25a4.235 4.235 0 0 1-2.75-1.01Zm19-3.24v-3a.25.25 0 0 0-.25-.25H2.75a.25.25 0 0 0-.25.25v3a2.75 2.75 0 0 0 2.75 2.75h13.5a2.75 2.75 0 0 0 2.75-2.75Zm-6.5-7a.25.25 0 0 0-.25-.25h-5.5a.25.25 0 0 0-.25.25V4h6Z"/>
@@ -246,7 +243,7 @@
                                         </a>
                                     </li>
                                     <li class="mr-6">
-                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../help/">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../../../help/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
                                                 <g fill="currentColor">
                                                     <path d="M1.75 1h12.5c.966 0 1.75.784 1.75 1.75v9.5A1.75 1.75 0 0 1 14.25 14H8.061l-2.574 2.573A1.458 1.458 0 0 1 3 15.543V14H1.75A1.75 1.75 0 0 1 0 12.25v-9.5C0 1.784.784 1 1.75 1ZM1.5 2.75v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25Z"/><path d="M22.5 8.75a.25.25 0 0 0-.25-.25h-3.5a.75.75 0 0 1 0-1.5h3.5c.966 0 1.75.784 1.75 1.75v9.5A1.75 1.75 0 0 1 22.25 20H21v1.543a1.457 1.457 0 0 1-2.487 1.03L15.939 20H10.75A1.75 1.75 0 0 1 9 18.25v-1.465a.75.75 0 0 1 1.5 0v1.465c0 .138.112.25.25.25h5.5a.75.75 0 0 1 .53.22l2.72 2.72v-2.19a.75.75 0 0 1 .75-.75h2a.25.25 0 0 0 .25-.25v-9.5Z"/>
@@ -256,7 +253,7 @@
                                         </a>
                                     </li>
                                     <li class="mr-6">
-                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../blog/">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../../../blog/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
                                                 <g fill="currentColor">
                                                     <path d="M20.485 2.515a.75.75 0 0 0-1.06 1.06A10.465 10.465 0 0 1 22.5 11c0 2.9-1.174 5.523-3.075 7.424a.75.75 0 0 0 1.06 1.061A11.965 11.965 0 0 0 24 11c0-3.314-1.344-6.315-3.515-8.485Zm-15.91 1.06a.75.75 0 0 0-1.06-1.06A11.965 11.965 0 0 0 0 11c0 3.313 1.344 6.314 3.515 8.485a.75.75 0 0 0 1.06-1.06A10.465 10.465 0 0 1 1.5 11c0-2.9 1.174-5.524 3.075-7.425ZM8.11 7.11a.75.75 0 0 0-1.06-1.06A6.98 6.98 0 0 0 5 11a6.98 6.98 0 0 0 2.05 4.95.75.75 0 0 0 1.06-1.061 5.48 5.48 0 0 1-1.61-3.89 5.48 5.48 0 0 1 1.61-3.888Zm8.84-1.06a.75.75 0 1 0-1.06 1.06A5.48 5.48 0 0 1 17.5 11a5.48 5.48 0 0 1-1.61 3.889.75.75 0 1 0 1.06 1.06A6.98 6.98 0 0 0 19 11a6.98 6.98 0 0 0-2.05-4.949ZM14 11a2 2 0 0 1-1.25 1.855v8.395a.75.75 0 0 1-1.5 0v-8.395A2 2 0 1 1 14 11Z"/>
@@ -266,7 +263,7 @@
                                         </a>
                                     </li>
                                     <li class="mr-6">
-                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../about/">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../../../about/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
                                                 <g fill="currentColor">
                                                     <path d="M6.25 12a.75.75 0 0 0 0 1.5h.5a.75.75 0 0 0 0-1.5h-.5ZM5.5 9.25a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1-.75-.75ZM6.25 5a.75.75 0 0 0 0 1.5h.5a.75.75 0 0 0 0-1.5h-.5ZM9 12.75a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1-.75-.75Zm.75-4.25a.75.75 0 0 0 0 1.5h.5a.75.75 0 0 0 0-1.5h-.5ZM9 5.75A.75.75 0 0 1 9.75 5h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 9 5.75ZM13.25 12a.75.75 0 0 0 0 1.5h.5a.75.75 0 0 0 0-1.5h-.5Zm-.75-2.75a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1-.75-.75ZM13.25 5a.75.75 0 0 0 0 1.5h.5a.75.75 0 0 0 0-1.5h-.5Z"/><path d="M2 20V3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v17c0 .173-.022.34-.063.5H20a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.2-.4l-.5-.375a.75.75 0 0 1 .9-1.2l.5.375c.504.378.8.97.8 1.6v8a2 2 0 0 1-2 2h-3.562a.767.767 0 0 1-.166-.018c-.089.012-.18.018-.272.018h-3.75a.75.75 0 0 1-.75-.75V19h-3v2.25a.75.75 0 0 1-.75.75H4a2 2 0 0 1-2-2Zm2 .5h3v-2.25a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 .75.75v2.25h3a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5H4a.5.5 0 0 0-.5.5v17a.5.5 0 0 0 .5.5Z"/>
@@ -276,7 +273,7 @@
                                         </a>
                                     </li>
                                     <li class="mr-6">
-                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../contact/">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../../../contact/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
                                                 <g fill="currentColor">
                                                     <path d="M20.226 7.25c-2.623-4.542-8.432-6.098-12.974-3.475-4.543 2.622-6.099 8.431-3.477 12.974 2.623 4.542 8.431 6.099 12.974 3.477a.75.75 0 0 1 .75 1.299c-5.26 3.037-11.987 1.235-15.024-4.026C-.562 12.24 1.24 5.512 6.501 2.475 11.76-.562 18.488 1.24 21.525 6.501a10.959 10.959 0 0 1 1.455 4.826c.013.056.02.113.02.173v2.25a3.5 3.5 0 0 1-6.623 1.581 5.5 5.5 0 1 1 1.112-3.682.802.802 0 0 1 .011.129v1.972a2 2 0 1 0 4 0v-1.766a9.456 9.456 0 0 0-1.274-4.733ZM16 12a4 4 0 1 0-8 0 4 4 0 0 0 8 0Z"/>
@@ -304,7 +301,7 @@
                                 <nav class="breadcrumb" aria-label="Breadcrumb">
                                     <ol role="list">
                                         <li class="pr-4">
-                                            <a href="../../" class="pr-4">
+                                            <a href="../../../../" class="pr-4">
                                                 Pozi
                                             </a>
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
@@ -312,297 +309,331 @@
                                             </svg>
                                         </li>
                                         <li class="pr-4">
-                                            <a href="../../pozi-connect/" class="pr-4">
-                                                Pozi Connect
+                                            <a href="../../../../admin-guide/" class="pr-4">
+                                                Administrator Guide
                                             </a>
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
                                                 <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
                                             </svg>
                                         </li>
                                         <li class="pr-4">
-                                            <a href="../../pozi-connect/installation/" class="pr-4">
+                                            <span class="pr-4">
                                                 Installation
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                                            </svg>
+                                        </li>
+                                        <li class="pr-4">
+                                            <span class="pr-4">
+                                                Legacy
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                                            </svg>
+                                        </li>
+                                        <li class="pr-4">
+                                            <a href="../../../../admin-guide/installation/legacy/azure-ad/" class="pr-4">
+                                                Azure AD
                                             </a>
                                         </li>
                                     </ol>
                                 </nav>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="pozi-connect-installation" class="break-words">
+<doc-anchor-target id="azure-ad" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#pozi-connect-installation">#</doc-anchor-trigger>
-        <span>Pozi Connect Installation</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#azure-ad">#</doc-anchor-trigger>
+        <span>Azure AD</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="express-instructions">
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5><span class="docs-emoji">&#x26A1;</span> Deprecated! <span class="docs-emoji">&#x26A1;</span></h5>
+<p>Go to our <a href="../../entra-id/introduction/">Entra ID</a> documentation instead.</p>
+        </div>
+    </div>
+</div>
+<doc-anchor-target id="application-proxy-enterprise-application">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#express-instructions">#</doc-anchor-trigger>
-        <span>Express Instructions</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#application-proxy-enterprise-application">#</doc-anchor-trigger>
+        <span>Application Proxy (Enterprise Application)</span>
     </h2>
 </doc-anchor-target>
-<p><em>This is a brief overview of the steps involved. For step-by-step instructions, including details of the prompts you&#x27;ll encounter, go to the <strong>Step-by-Step Instructions</strong> below.</em></p>
-<ol>
-<li>go to the <a href="https://github.com/pozi/PoziConnect/releases/latest" target="_blank">Pozi Connect download page</a></li>
-<li>click on the link to the <code v-pre>PoziConnect-*.*.*.msi</code> file to download the installer</li>
-<li>run the installer</li>
-<li>change the default path to the desired PoziConnect location on your network (pick the location of the existing installation if you have previously installed it)</li>
-<li>follow the prompts to complete the installation</li>
-</ol>
-<doc-anchor-target id="step-by-step-instructions">
+<p><code v-pre>Azure</code>: <strong>Enterprise Applications</strong> ⇒ <strong>Server</strong> ⇒ <strong>Application Proxy</strong></p>
+<p>Follow the Microsoft documentation for set up:</p>
+<p><a href="https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-add-on-premises-application#add-an-on-premises-app-to-azure-ad" class="outbound" target="_blank"><span>https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-add-on-premises-application#add-an-on-premises-app-to-azure-ad</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
+<doc-tabs>
+<doc-tab v-cloak id="preferred">
+<template #title>Preferred</template>
+<p><em>IIS + QGIS Server only (i.e. without Pozi Connect Server)</em></p>
+<p>The following settings are for a Pozi server setup with only QGIS Server and IIS.</p>
+<ul>
+<li><p><strong>Internal URL</strong> : <code v-pre>http://&lt;servername&gt;/pozi/</code>. Replace <code v-pre>&lt;servername&gt;</code> with the actual name of the server.</p>
+<p>To test internal URL on the internal network, opening the following URL in the browser should show a QGIS Server landing page:<code v-pre>http://&lt;servername&gt;/pozi/qgisserver/wfs3</code></p>
+</li>
+<li><p><strong>External URL</strong>: <code v-pre>https://poziserver-&lt;clientname&gt;.msappproxy.net/pozi/</code>.</p>
+<p>The <code v-pre>&lt;clientname&gt;</code> is a name that has been given to the organisation by MS Azure. The URL <code v-pre>https://poziserver-&lt;clientname&gt;.msappproxy.net/pozi/qgisserver/wfs3</code> should show the same landing page as in the Internal URL section above.</p>
+</li>
+<li><p><strong>Pre Authentication</strong>: <code v-pre>Azure Active Directory</code>.</p>
+</li>
+</ul>
+<p>Do <strong>not</strong> choose <code v-pre>Passthrough</code> as that will allow any user (logged in or not) to access private resources from the server.</p>
+<p>When configured correctly, a request from a logged-in user to URL (for example)...</p>
+<p><code v-pre>https://poziserver-&lt;clientname&gt;.msappproxy.net/pozi/qgisserver/wfs3.json</code></p>
+<p>...should return the same response as a local request to...</p>
+<p><code v-pre>http://&lt;servername&gt;/pozi/qgisserver/wfs3.json</code></p>
+<p>Ensure it doesn&#x27;t return a response to a non-logged-in or anonymous user.</p>
+</doc-tab>
+<doc-tab v-cloak id="legacy">
+<template #title>Legacy</template>
+<p><em>Pozi Connect Server + local DNS</em></p>
+<p>The following settings are for a Pozi server setup with a Pozi Server installation that proxies all QGIS Server and IIS requests.</p>
+<ul>
+<li><p><strong>Internal URL</strong> : <code v-pre>https://local.pozi.com</code> (or any other URL that uses a local DNS with a locally signed SSL certificate pointing to the server that runs PoziServer)</p>
+<p>When visiting the above URL on the internal network, it should show a Pozi Connect Server welcome page.</p>
+</li>
+</ul>
+<p>All other settings here (like <strong>External URL</strong> and <strong>Pre Authentication</strong> are the same as above)</p>
+<p>When configured correctly, a request from a logged-in user to URL (for example)...</p>
+<p><code v-pre>https://poziserver-&lt;clientname&gt;.msappproxy.net/resourcecheck/&lt;sitename&gt;.json</code></p>
+<p>...should return the same response as a local request to...</p>
+<p><code v-pre>https://local.pozi.com/resourcecheck/&lt;sitename&gt;.json</code></p>
+<p>Ensure it doesn&#x27;t return a response to a non-logged-in or anonymous user.</p>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="other-settings">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#other-settings">#</doc-anchor-trigger>
+        <span>Other settings</span>
+    </h3>
+</doc-anchor-target>
+<!-- ![](/dev-guide/img/azure-settings.png){style="width:600px"} -->
+<p><strong>Advanced</strong>:</p>
+<ul>
+<li><strong>Translate URLs in headers</strong>: ☑</li>
+<li><strong>Translate URLs in application body</strong>: ☑</li>
+<li><strong>Validate Backend SSL certificate</strong>: ☑</li>
+</ul>
+<doc-anchor-target id="app-registration">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#step-by-step-instructions">#</doc-anchor-trigger>
-        <span>Step-by-Step Instructions</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#app-registration">#</doc-anchor-trigger>
+        <span>App Registration</span>
     </h2>
 </doc-anchor-target>
-<p>The steps below show the many dialogs that the PC/server may display during the installation. The installation process requires that you accept all prompts.</p>
-<p>You may see fewer prompts depending on the operating system and/or your user permissions.</p>
-<doc-anchor-target id="backup-existing-installation">
+<p><code v-pre>Azure</code>: <strong>App Registrations</strong> ⇒ <strong>Server</strong></p>
+<ul>
+<li>Set Pozi up in Azure as a registered app (admin privileges required): <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal" class="outbound" target="_blank"><span>https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
+<li>Record the Application id (also known as as client id) as well as tenant id</li>
+</ul>
+<doc-anchor-target id="authentication">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#backup-existing-installation">#</doc-anchor-trigger>
-        <span>Backup Existing Installation</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#authentication">#</doc-anchor-trigger>
+        <span>Authentication</span>
     </h3>
 </doc-anchor-target>
-<p>For peace of mind when performing an upgrade on an existing Pozi Connect installation, you may choose to backup your existing installation by copying the entire <code v-pre>PoziConnect</code> folder to another location (eg, <code v-pre>C:\Temp\PoziConnect\</code>). In the event that the new installation causes any issues, you can restore files or folders from the backup.</p>
-<doc-anchor-target id="download-pozi-connect-installer">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#download-pozi-connect-installer">#</doc-anchor-trigger>
-        <span>Download Pozi Connect Installer</span>
-    </h3>
+<doc-anchor-target id="web---redirect-uris">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#web---redirect-uris">#</doc-anchor-trigger>
+        <span>Web - Redirect URIs</span>
+    </h4>
 </doc-anchor-target>
-<p>Go to the <a href="https://github.com/pozi/PoziConnect/releases/latest" target="_blank">Pozi Connect download page</a>.</p>
+<p>Add the App Proxy URL to <code v-pre>Redirect URIs</code> to the <code v-pre>Web</code> section. E.g.:</p>
+<ul>
+<li><code v-pre>https://poziserver-&lt;clientname&gt;.msappproxy.net/pozi/</code></li>
+</ul>
+<p>This is the same as the External URL configured above.</p>
 <p><figure class="content-center">
-    <img src="../img/download.png" alt="" style="width:500px">
+    <img src="../integrations/img/azure-auth-web-redirect-uris.png" alt="">
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
-<p>Click on the link to the <code v-pre>PoziConnect-*.*.*.msi</code> file to download the installer.</p>
-<doc-anchor-target id="launch-installer">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#launch-installer">#</doc-anchor-trigger>
-        <span>Launch Installer</span>
-    </h3>
+<doc-anchor-target id="single-page-application---redirect-uris">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#single-page-application---redirect-uris">#</doc-anchor-trigger>
+        <span>Single Page Application - Redirect URIs</span>
+    </h4>
 </doc-anchor-target>
-<p>Double-click the downloaded Pozi Connect <code v-pre>.msi</code> file to launch the installer.</p>
-<doc-anchor-target id="accept-security-prompts">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#accept-security-prompts">#</doc-anchor-trigger>
-        <span>Accept Security Prompts</span>
-    </h3>
-</doc-anchor-target>
-<p>If you see a prompt saying &quot;Windows protected your PC&quot;... click the <em>More info</em> link.</p>
-<p>You&#x27;ll then see a message about &quot;Unknown Publisher&quot;. Click on <em>Run anyway</em>.</p>
-<doc-anchor-target id="start-setup-wizard">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#start-setup-wizard">#</doc-anchor-trigger>
-        <span>Start Setup Wizard</span>
-    </h3>
-</doc-anchor-target>
+<p>Add the following <code v-pre>Redirect URIs</code> to the <code v-pre>Single-page application</code> section:</p>
+<ul>
+<li><code v-pre>https://&lt;sitename&gt;.enterprise.pozi.com/</code></li>
+<li><code v-pre>http://localhost:3000/</code> (for Pozi development purposes)</li>
+<li><code v-pre>https://staging.pozi.com/</code> (for client testing/debugging)</li>
+</ul>
+<p>If upgrading an existing non-Azure Pozi Enterprise site, also add a URI for a dedicated test site with <code v-pre>-azure</code> appended to the existing site name:</p>
+<ul>
+<li><code v-pre>https://&lt;sitename&gt;-azure.enterprise.pozi.com/</code></li>
+</ul>
 <p><figure class="content-center">
-    <img src="../img/installation_01.png" alt="" style="width:400px">
+    <img src="../integrations/img/azure-auth-spa-redirect-uris.png" alt="">
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
-<p>Click <code v-pre>Next &gt;</code></p>
-<doc-anchor-target id="specify-installation-location">
+<p>Please make sure that the URIs all have a trailing slash (&#x27;/&#x27;) and note that the localhost URI is <code v-pre>http</code> (and not <code v-pre>https</code>).</p>
+<doc-anchor-target id="implicit-grant-and-hybrid-flows">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#specify-installation-location">#</doc-anchor-trigger>
-        <span>Specify Installation Location</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#implicit-grant-and-hybrid-flows">#</doc-anchor-trigger>
+        <span>Implicit grant and hybrid flows</span>
     </h3>
 </doc-anchor-target>
+<ul>
+<li><code v-pre>Access tokens</code> and <code v-pre>ID tokens</code> should remain unchecked</li>
+</ul>
 <p><figure class="content-center">
-    <img src="../img/installation_02.png" alt="" style="width:400px">
+    <img src="../integrations/img/azure-auth-implicit-grant-and-hybrid-flows.png" alt="">
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
-<p>Pozi Connect is typically installed in a shared location on your organisation&#x27;s network.</p>
-<p><strong>Important: When upgrading an existing installation, set the <code v-pre>Folder</code> to the location at which Pozi Connect is already installed</strong></p>
-<p>If the installer doesn&#x27;t remember the location at which Pozi Connect was previously installed, click the <code v-pre>Browse</code> buttton and navigate to the Pozi Connect folder on your network (note: the file path ends with the folder name <code v-pre>...\PoziConnect\</code>)</p>
-<doc-anchor-target id="begin-installation">
+<doc-anchor-target id="advanced-settings">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#begin-installation">#</doc-anchor-trigger>
-        <span>Begin Installation</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#advanced-settings">#</doc-anchor-trigger>
+        <span>Advanced settings</span>
     </h3>
 </doc-anchor-target>
+<ul>
+<li>Set <code v-pre>Allow public client flows</code> to <code v-pre>No</code></li>
+</ul>
 <p><figure class="content-center">
-    <img src="../img/installation_03.png" alt="" style="width:400px">
+    <img src="../integrations/img/azure-auth-advanced-settings.png" alt="">
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
-<p>Click <code v-pre>Install</code></p>
-<doc-anchor-target id="accept-installer-information">
+<doc-anchor-target id="authorisation">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#accept-installer-information">#</doc-anchor-trigger>
-        <span>Accept Installer Information</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#authorisation">#</doc-anchor-trigger>
+        <span>Authorisation</span>
     </h3>
 </doc-anchor-target>
-<p>You may encounter various prompts and warnings. Click OK/Yes on all of them.</p>
-<p><figure class="content-center">
-    <img src="../img/installation_04.png" alt="" style="width:300px">
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<p>Click <code v-pre>OK</code></p>
-<doc-anchor-target id="confirm-installation">
+<p>All going well, it should be possible to visit the App Proxy URL (in our example case: <code v-pre>https://poziserver-&lt;clientname&gt;.msappproxy.net/pozi/</code>). If an error is shown like: <code v-pre>Sorry, but we’re having trouble with signing you in.</code> with a text similar to below, then we will need to give the relevant users/groups access.</p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-500 dark:bg-dark-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-500 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>Example authorisation error:</h5>
+<p>AADSTS50105: Your administrator has configured the application Pozi Server (&#x27;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&#x27;) to block users unless they are specifically granted (&#x27;assigned&#x27;) access to the application. The signed in user <a href="mailto:%27xxxxxxxxx.xxxxxxx@xxxxxxxxxxx.xxx.xxx.xx">&#x27;xxxxxxxxx.xxxxxxx@xxxxxxxxxxx.xxx.xxx.xx</a>&#x27;) is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application.</p>
+        </div>
+    </div>
+</div>
+<p><strong>Steps to authorise users/groups</strong></p>
+<p><code v-pre>Azure</code>: <strong>Enterprise Applications</strong> ⇒ <strong>Server</strong></p>
+<ul>
+<li>In the Azure Portal, go to Enterprise Applications, select the enterprise application for the Pozi Application Proxy</li>
+<li>Under <code v-pre>Manage</code>, select <code v-pre>Users and groups</code></li>
+<li>If no users/groups have been defined, it will say something like <code v-pre>No application assignments found</code></li>
+<li>Click on <code v-pre>+ Add user/group</code></li>
+<li>In the next page, click on the text <code v-pre>None selected</code> under&#x60;Users and groups</li>
+<li>On the right a panel should pop up with all available users/groups. Assuming that we want all users to have access, click on the group <code v-pre>All users</code> and click on <code v-pre>Select</code> in the bottom.</li>
+<li>It is worth taking note of the the info text <code v-pre>When you assign a group to an application, only users directly in the group will have access. The assignment does not cascade to nested groups.</code>, especially when one chooses a group that contains other groups. In the case of <code v-pre>All users</code>, this is not an issue.</li>
+<li>Under <code v-pre>Select a role</code>, the role <code v-pre>User</code> is preselected and cannot be changed. That is OK.</li>
+<li>Click on <code v-pre>Assign</code> in the bottom of the page.</li>
+</ul>
+<p>Access should now be granted to the application proxy and the URL should be accessible.</p>
+<doc-anchor-target id="api-permissions">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#confirm-installation">#</doc-anchor-trigger>
-        <span>Confirm Installation</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#api-permissions">#</doc-anchor-trigger>
+        <span>API Permissions</span>
     </h3>
 </doc-anchor-target>
-<p><figure class="content-center">
-    <img src="../img/installation_05.png" alt="" style="width:300px">
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<p>Click <code v-pre>Yes</code></p>
-<doc-anchor-target id="accept-user-account-control-prompt">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#accept-user-account-control-prompt">#</doc-anchor-trigger>
-        <span>Accept User Account Control Prompt</span>
-    </h3>
-</doc-anchor-target>
-<p><figure class="content-center">
-    <img src="../img/installation_06.png" alt="" style="width:300px">
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<p>Click <code v-pre>Yes</code></p>
-<doc-anchor-target id="confirm-continue">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#confirm-continue">#</doc-anchor-trigger>
-        <span>Confirm Continue</span>
-    </h3>
-</doc-anchor-target>
-<p><figure class="content-center">
-    <img src="../img/installation_07.png" alt="" style="width:300px">
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<p>Click <code v-pre>Yes</code></p>
-<doc-anchor-target id="finish-installation">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#finish-installation">#</doc-anchor-trigger>
-        <span>Finish Installation</span>
-    </h3>
-</doc-anchor-target>
-<p><figure class="content-center">
-    <img src="../img/installation_08.png" alt="" style="width:400px">
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<p>Click <code v-pre>Finish</code></p>
-<p><strong>Success!</strong> You&#x27;ve now installed/upgraded Pozi Connect.</p>
-<p>Launch Pozi Connect to resume your regular data maintenance processes.</p>
-<hr>
-<doc-anchor-target id="customise-configuration">
+<p>Give Pozi the following permissions:</p>
+<ul>
+<li>API/Permissions Name: <code v-pre>User.Read</code></li>
+<li>Type: <code v-pre>Delegated</code></li>
+<li>Admin consent required: <code v-pre>No</code></li>
+</ul>
+<p>This should allow Pozi to determine access based on a user&#x27;s role(s).</p>
+<!-- Important: a user authenticated with the client's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://poziserver-<clientname>.msappproxy.net/`). -->
+<doc-anchor-target id="azure-ad-pozi-support-account">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#customise-configuration">#</doc-anchor-trigger>
-        <span>Customise Configuration</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#azure-ad-pozi-support-account">#</doc-anchor-trigger>
+        <span>Azure AD Pozi Support Account</span>
     </h2>
 </doc-anchor-target>
-<p>You can customise the Pozi Connect drop-down task list to display only the tasks that you&#x27;re interested in.</p>
-<p>The <code v-pre>PoziConnect\PoziConnect.site.ini</code> file contains filters to specifically include or exclude tasks. Open the file in a text editor, and specify the filter. For example, if you only want to display tasks that relate to &#x27;Glen Eira&#x27;, update the file as follows:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<div class="codeblock-title">PoziConnect\PoziConnect.site.ini</div>
-<pre class="language-ini"><code v-pre class="language-ini">[Settings]
-Include: Glen Eira
-Exclude:</code></pre>
-</doc-codeblock></div>
-<p>You can enter multiple filter terms, separated by commas. Save the file and exit.</p>
-<p>This file should persist in your Pozi Connect application folder, so you need only do this step once, not every time you update the application or configuration.</p>
-<doc-anchor-target id="moving-pozi-connect">
+<p>In order for the Pozi team to be able to provide support and troubleshoot any potential issues, we ask our clients to configure the <a href="prerequisites.md#support-account">Pozi Support</a> domain user with the same permissions/groups/roles as the users of Pozi through Azure AD Application Proxy.</p>
+<p>If it&#x27;s not possible or practical for the Pozi Support domain user to be given Azure AD permissions, you may choose to create a separate user account with the Azure AD permissions. In this case, no administrator privileges are required.</p>
+<doc-anchor-target id="information-to-send-to-pozi">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#moving-pozi-connect">#</doc-anchor-trigger>
-        <span>Moving Pozi Connect</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#information-to-send-to-pozi">#</doc-anchor-trigger>
+        <span>Information to send to Pozi</span>
     </h2>
 </doc-anchor-target>
-<p>Pozi Connect can be easily moved to a new location at any time to suit your changing needs. The <code v-pre>PoziConnect</code> folder is self-contained, meaning the application will continue to work as long as all the files within the folder are moved together. Any PC that can access the <code v-pre>PoziConnect.exe</code> file can run it.</p>
-<p>Moving Pozi Connect can be done with or without upgrading at the same time. See the following options.</p>
-<doc-anchor-target id="move-without-upgrading">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#move-without-upgrading">#</doc-anchor-trigger>
-        <span>Move Without Upgrading</span>
-    </h3>
-</doc-anchor-target>
-<ol>
-<li>move the entire <code v-pre>PoziConnect</code> folder to desired location</li>
-<li>update any user&#x27;s desktop shortcuts to point the the new location</li>
-</ol>
-<doc-anchor-target id="upgrade-and-move">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#upgrade-and-move">#</doc-anchor-trigger>
-        <span>Upgrade and Move</span>
-    </h3>
-</doc-anchor-target>
-<ol>
-<li>run the installer to install Pozi Connect at the new location</li>
-<li>copy the <code v-pre>PoziConnect\output</code> folder from the old location to the new one</li>
-<li>copy the <code v-pre>PoziConnect\PoziConnect.site.ini</code> file from the old location to the new one</li>
-<li>update any user&#x27;s existing desktop shortcuts to point the the new location</li>
-</ol>
-<doc-anchor-target id="other-changes">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#other-changes">#</doc-anchor-trigger>
-        <span>Other Changes</span>
-    </h3>
-</doc-anchor-target>
-<p>The reason for your needing to change Pozi Connect location may coincide with other changes on your network, such as the location of source data. If your source data (eg Vicmap datasets) has moved, your Pozi Connect configuration will also need to be updated. Email <a href="mailto:support@pozi.com">support@pozi.com</a> with details of any changes to your source data so that your Pozi Connect task files can be updated accordingly.</p>
-<doc-anchor-target id="faq">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#faq">#</doc-anchor-trigger>
-        <span>FAQ</span>
-    </h2>
-</doc-anchor-target>
-<doc-panel id="how-does-pozi-connect-connect-to-my-corporate-database" collapsed>
-    <template #title>How does Pozi Connect connect to my corporate database?</template>
-<p>Pozi Connect uses your PC&#x27;s existing ODBC connection settings. It does not require any additional network or firewall configuration. It requires only that the user&#x27;s PC has the appropriate DSN configured to access (read-only) the council&#x27;s property database. Authentication can be based on a username/password or trusted connection (using Windows login name).</p>
-</doc-panel>
-<doc-anchor-target id="troubleshooting">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#troubleshooting">#</doc-anchor-trigger>
-        <span>Troubleshooting</span>
-    </h2>
-</doc-anchor-target>
-<doc-panels>
-   <doc-panel id="pozi-connect-fails-to-start" collapsed>
-       <template #title>Pozi Connect fails to start</template>
-<p>Download and install the <a href="https://www.microsoft.com/en-au/download/details.aspx?id=11895" class="outbound" target="_blank"><span>Microsoft Visual C++ 2008 Redistributable Package (x86)</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>, and try running Pozi Connect again.</p>
-   </doc-panel>
-   <doc-panel id="pozi-connect-returns-an-incorrect-padding-error" collapsed>
-       <template #title>Pozi Connect returns an &#x27;Incorrect padding&#x27; error</template>
-<p>If you encounter an error saying &#x27;Incorrect padding&#x27;, it may be because your database password contains a special character (such as &#x27;&amp;&#x27;) that interferes with the database connection string.</p>
-<p>Reset your password so that it doesn&#x27;t contain any special characters. (If your password needs to use at least one special character, use &#x27;#&#x27;.)</p>
-   </doc-panel>
-   <doc-panel id="pozi-connect-returns-a-no-column-definitions-found-for-table-error" collapsed>
-       <template #title>Pozi Connect returns a &#x27;No column definitions found for table&#x27; error</template>
-<p>Check that you have the appropriate permissions to connect to the database. Also check that the table prefix specified in Pozi Connect is the one still used in the database.</p>
-<p>To see a list of tables (and table prefix) that your user account has access to, launch the GDAL shell by launching this batch file:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">...\PoziConnect\vendor\release-xxxx-gdal-x-x-x-mapserver-x-x-x\SDKShell.bat</code></pre>
-</doc-codeblock></div>
-<p>Then type in:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">ogrinfo ODBC:DSN=yourDSNname;UID=yourDBusername;PWD=yourDBpassword -ro -so</code></pre>
-</doc-codeblock></div>
-<p>(If you&#x27;re running as a trusted user of the database, you can leave out the <code v-pre>UID</code> and <code v-pre>PWD</code> settings.)</p>
-<p>Then hit enter. It might take a few minutes, but it should list all the tables you have access to. Check if the table specified in the initial error message appears in the list.</p>
-   </doc-panel>
-   <doc-panel id="cannot-connect-to-data-source" collapsed>
-       <template #title>Cannot connect to data source</template>
-<p><em>In this example, we&#x27;ll assume that we&#x27;re trying to connect to a DSN called &#x27;pthprod&#x27;.</em></p>
-<p>Run the 32 bit ODBC setup wizard (instead of the standard DSN wizard in the Control Panel). At the Windows Start menu, type in cmd, then at the command-line prompt, type or paste in the following, then hit &#x27;Enter&#x27;:</p>
-<p><code v-pre>C:\Windows\SysWOW64\odbcad32.exe</code></p>
-<p>In the System DSN tab, check if there is a data source for &#x27;pthprod&#x27;. If not, add a new DSN, using the same settings as your existing 64 bit one. It is recommended to use a different name for the new 32 bit DSN. For example, name it &#x27;pthprod32&#x27; or similar so it can be distinguished from the existing DSN.</p>
-<p>Open the relevant Pozi Connect config file (eg <code v-pre>PoziConnect\tasks\~Shared\M1 Shared - Import Pathway.ini</code> or equivalent client-specific task) in a text editor and update the DSN name:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">Data_Source: ODBC:DSN=pthprod32</code></pre>
-</doc-codeblock></div>
-   </doc-panel>
-   <doc-panel id="pozi-connect-returns-an-error-number-1073741512" collapsed>
-       <template #title>Pozi Connect returns an error number 1073741512</template>
-<p>Go into your <code v-pre>C:\Windows\System32</code> folder and see if there is a file called <code v-pre>libeay32.dll</code>. If so, rename it to <code v-pre>libeay32.bak</code>. Then try running Pozi Connect again.</p>
-<p>(Rename the file back again when you&#x27;ve finished so that any other programs that may rely on it can use it.)</p>
-   </doc-panel>
-</doc-panels>
+<p>After completion of the configuration, email us with the following information:</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> The <strong>internal</strong> app proxy URl (something like <code v-pre>http://&lt;servername&gt;/pozi/</code>)</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> The <strong>external</strong> app proxy URl (something like <code v-pre>https://poziserver-&lt;clientname&gt;.msappproxy.net/pozi/</code>)</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> The <strong><code v-pre>client id</code></strong> (sometimes called &#x27;application id&#x27;) and has the following structure: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The client id is defined in Enterprise Applications =&gt; Properties.</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> The <strong><code v-pre>tenant id</code></strong>, which looks like xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The tenant id is defined in Azure Active Directory =&gt; Overview.&quot;</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> A copy/paste and/or screenshot of all the relevant settings</li>
+</ul>
+<p>This information is <a href="https://stackoverflow.com/questions/57306964/are-azure-active-directorys-tenantid-and-clientid-considered-secrets" class="outbound" target="_blank"><span>not sensitive</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> and can be emailed directly to the Pozi support team at <a href="mailto:support@pozi.com">support@pozi.com</a>.</p>
+<p>In addition to the information above, if you have not done so already, provide the Azure AD credentials (email address and password) of the <a href="prerequisites.md#support-account">Pozi Support</a> user account. Please get in touch with us on how to securely provide us with these details.</p>
+<!-- ### Token-based Authentication/Authorisation
+
+:::note Under Construction
+
+*This section is a work in progress. Please get in touch with us before following any of the steps below*
+
+:::
+
+* TO BE WRITTEN -->
+<!-- ### App Roles
+
+:::note Under Construction
+
+*This section is a work in progress. Please get in touch with us before following any of the steps below*
+
+:::
+
+It is possible to assign app roles to users and groups and make those roles available through our token-based authentication/authorisation (which is currently still experimental).
+
+The instructions below follow the [Microsoft guide on adding app roles](https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-add-app-roles-in-azure-ad-apps).
+
+#### Create App Roles
+
+* Go to the App Proxy application in the `App registrations` sections and select `App roles`
+* Create the following app role for read access to Pozi Server:
+  - Display name: `Pozi Server Read Access`
+  - Allowed member types: `Users/Groups`
+  - Value: `PoziServer.Read`
+  - Description: `Read access to Pozi Server`
+  - Do you want to enable this app role?: `✔`
+* Create the following app role for write access to Pozi Server:
+  - Display name: `Pozi Server Write Access`
+  - Allowed member types: `Users/Groups`
+  - Value: `PoziServer.Write`
+  - Description: `Write access to Pozi Server`
+  - Do you want to enable this app role?: `✔`
+
+#### Assign App Roles to Users/Groups
+
+* Go to the App Proxy application in the `Enterprise applications` section and in the `Manage` category, select `Users and groups`
+* Select all users/groups that should get read access to Pozi Server and click on `Edit` in the top of the page
+* Click on `Select a role` and select the role `Pozi Server Read Access` and click on `Select` in the bottom of the page
+* For enabling write access follow the same steps again but now select the role `Pozi Server Write Access`
+* Currently, the Azure UI shows one row per role per user/group. That is expected behaviour.
+
+#### App Roles in Tokens
+
+* The roles defined above will automatically become available in the authentication tokens in the browser, allowing Pozi to change its behaviour depending on the roles that the user (or the group they are in) have. -->
 
                                 
                                 <!-- Required only on API pages -->
@@ -610,7 +641,7 @@ Exclude:</code></pre>
                             </div>
                             <footer class="clear-both">
                                 <div class="flex flex-wrap items-center justify-between mt-14">
-                                    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/pozi/PoziWebsite/blob/main/pozi-connect/installation.md" target="_blank" rel="noopener">
+                                    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/pozi/PoziWebsite/blob/main/admin-guide/installation/legacy/azure-ad.md" target="_blank" rel="noopener">
                                         <svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M20 12c-.55 0-1 .45-1 1v7c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h7c.55 0 1-.45 1-1s-.45-1-1-1H4C2.35 3 1 4.35 1 6v14c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-7c0-.55-.45-1-1-1z" /><path d="M22.21 1.79c-1.18-1.18-3.24-1.18-4.41 0l-9.5 9.5c-.13.13-.22.29-.26.46l-1 4c-.08.34.01.7.26.95.18.2.44.3.7.3.08 0 .16-.01.24-.03l4-1c.18-.04.34-.13.46-.26l9.5-9.5c1.22-1.22 1.22-3.2.01-4.42zm-1.42 3l-9.3 9.3-2.11.53.53-2.11 9.3-9.3c.42-.42 1.16-.42 1.59 0 .43.43.43 1.15-.01 1.58z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         <span>Edit this page</span>
                                     </a>
@@ -618,20 +649,20 @@ Exclude:</code></pre>
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../pozi-connect/m1s/advanced-configuration/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../../admin-guide/installation/entra-id/app-registration/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Advanced Configuration</span>
+                                                <span class="block mt-1">App Registration</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../pozi-connect/configuration/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../../admin-guide/installation/legacy/pozi-server/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Configuration</span>
+                                                <span class="block mt-1">Pozi Server</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -695,6 +726,6 @@ Exclude:</code></pre>
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Installation", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Azure AD", level: 4, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
