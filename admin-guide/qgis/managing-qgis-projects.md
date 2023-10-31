@@ -43,9 +43,10 @@ If you've [set up](/admin-guide/qgis/setting-up-qgis/#basemap) 'Vicmap Basemap' 
 Browser > WMS/WMTS > Vicmap Basemap > Vicmap Basemap - VicGrid2020 - Cartographic
 
 ## Configure Web Services
+
 ### Construct Advertised URL
 
-*Note: this may no longer be a requirement for newer Azure-only implementations if the site is configured with the correct [Application Proxy internal URL](/dev-guide/azure-integration#application-proxy-internal-url).*
+*Note: this is no longer a requirement for newer Azure-only implementations if the site is configured with the correct [Application Proxy internal URL](/dev-guide/azure-integration#application-proxy-internal-url).*
 
 The project's *Advertised URL* is a URL at which WMS and WFS requests can interact with the layers in the project file. Essentially, the project file needs a reference to itself in a URL format.
 

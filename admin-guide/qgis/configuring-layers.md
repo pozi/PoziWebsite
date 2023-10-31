@@ -57,7 +57,7 @@ Some common layer configuration tasks you can do in QGIS include:
 
 ## Publish as Vector Layer
 
-Publishing a layer as a *vector layer* enables users to directly interact with map features. When a vector layer is turned on in Pozi, every feature from the source dataset is loaded in the browser, including all geometries and attributes. Users can make use of advanced functionality such as filtering and table view.
+Publishing a layer as a *vector layer* enables users to directly interact with map features. When a vector layer is turned on in Pozi, every feature from the source dataset is loaded in the browser, including all geometries and attributes. Users can make use of advanced functionality such as filtering, downloading, table view and tooltips.
 
 By default, QGIS Server does NOT expose layers as vectors. Evaluate the pros and cons of using vectors for your layer, and if appropriate, follow the directions below to enable it.
 
@@ -67,6 +67,7 @@ By default, QGIS Server does NOT expose layers as vectors. Evaluate the pros and
 * after the layer is loaded in the browser, the browser doesn't need to send further requests for the layer to the server every time the map moves
 * the cursor changes when hovering over object to indicate the feature is clickable, and a tooltip is displayed with the feature's title
 * users can select an individual feature and display its details in Info Panel (without displaying results of features on other layers at the same location)
+* layers can be downloaded
 
 #### Disadvantages
 

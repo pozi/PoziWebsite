@@ -17,6 +17,7 @@ Click on any of our client sites below to discover how Pozi serves these organis
 
 [!ref icon="/static/img/client-logos/gleneira.png" text="Glen Eira City Council"](https://gleneira.pozi.com/)
 [!ref icon="/static/img/client-logos/frankston.png" text="Frankston City Council"](https://frankston.pozi.com/)
+[!ref icon="/static/img/client-logos/kingston.png" text="Kingston City Council"](https://kingston.pozi.com/)
 [!ref icon="/static/img/client-logos/cardinia.png" text="Cardinia Shire Council"](https://cardinia.pozi.com/)
 [!ref icon="/static/img/client-logos/bendigo.png" text="City of Greater Bendigo"](https://bendigo.pozi.com/)
 [!ref icon="/static/img/client-logos/horsham.png" text="Horsham Rural City Council"](https://horsham.pozi.com/)
