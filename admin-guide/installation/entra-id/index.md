@@ -1,5 +1,6 @@
 ---
-hidden: true
+# hidden: true
+icon: /static/img/icon-ms-entra-id-colour.svg
 ---
 
 # Entra ID

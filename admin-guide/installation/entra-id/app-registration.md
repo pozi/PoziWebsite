@@ -5,7 +5,7 @@ order: -20
 # App Registration
 
 :::updated
-30 Oct 2023
+31 Oct 2023
 :::
 
 Please make sure to have completed the steps in the [previous section](./application-proxy).
@@ -40,11 +40,83 @@ Add the missing Redirect URIs from the list below in the Single-page application
 
 ![](img/entra-id-app-registration-step-4.png)
 
-## 2. Scope
+There are some more settings in this section. Most can be ignored. Confirm that the following have the values below.
+
+* **Access tokens**: Unchecked
+* **ID tokens**: Unchecked
+* **Enable the following mobile and desktop flows**: `No`
+
+![](img/entra-id-app-registration-step-5.png)
+
+## 2. Expose an API (user_impersonation)
+
+This section covers a **crucial** setting for the application to access Pozi Server on behalf of the user: the `user_impersonation` scope.
+
+Go to the 'Expose an API' section of Pozi Server.
+
+Firstly, confirm that the `Application ID URI` looks something like `https://poziserver-<entra-application-client-name>.msappproxy.net/pozi`. This should not be changed.
+
+![](img/entra-id-scope-add-step-1.png)
+
+Make sure that in the 'Expose an API' section there is one scope defined, called `user_impersonation` (prefixed by the Application ID URI above).
+
+Often, this scope gets created by Entra ID automatically but not in every organisation. If this scope is missing, add it as following.
+
+![](img/entra-id-scope-add-step-2.png)
+
+* **Scope name**: `user_impersonation` (correct spelling is crucial!)
+* **Who can consent?**: `Admins only`
+* **Admin consent display name**: `Access Pozi Server`
+* **Admin consent description**: `Allow the application to access Pozi Server on behalf of the signed-in user.`
+* **User consent display name**: `Access Pozi Server` (optional)
+* **User consent description**: `Allow the application to access Pozi Server on your behalf.`
+* **State**: `Enabled`
+
+![](img/entra-id-scope-add-step-3.png)
+
+The scope above will be used in the Site Configuration in Pozi in the 'Scopes' section. It should look something like:
+`https://poziserver-<entra-application-client-name>.msappproxy.net/pozi/user_impersonation`
+
+## 3. Access control
+
+It is possible to further control access to QGIS catalogues. In order for Pozi enforce this access control, access to what groups a user is a member of in the Entra ID environment is required.
+
+This section describes how to provide Pozi Web App with the relevant group information.
+
+![](img/entra-id-groups-claim-step-1.png)
+
+Go to the 'Token configuration' section and click on 'Add groups claim'. Then, select desired group types (just 'Security groups` is generally sufficient) and keep default settings
+
+![](img/entra-id-groups-claim-step-2.png)
+
+That is all that is needed in Entra ID. Pozi Web App will receive the group information as a list of group ids, like this:
+
+```
+"groups": [
+    "81ddec0b-6a1a-426a-9826-e869eef6473f",
+    "17b3a8a0-bc11-4ec3-810e-94c74201b41e",
+    "5ee9c710-26aa-40be-90be-36afa6fc2003",
+    "3adf8e2e-7628-41ee-b902-b105f231758e",
+    "c034a6cd-2b7d-4336-9f9e-9bb896ad1110"
+]
+```
+
+This will make it possible to limit what group(s) can view a certain QGIS project. This can be done by providing the group ids to Pozi Support who will configure the relevant catalogues.
+
+Note: it is currently not possible to use the group display name.
 
 
+## Troubleshooting
 
-## 99. App registration
+Error message | Solution
+--- | ---
+MSAL Error: Invalid Client errorMessage AADSTS65005: The application 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' asked for scope 'user_impersonation' that doesn't exist. | Add the 'user_impersonation' scope
+AADSTS9002326: Cross-origin token redemption is permitted only for the 'Single-Page Application' client-type. Request origin: 'https://poziserver-councilnamevicgovau.msappproxy.net'. | TODO: VERIFY - App registration -> Authentication-> platform type should be SPA
+AADSTS50011: The redirect URI 'https://xxxxxxxxxxxxxxxxxxx/' specified in the request does not match the redirect URIs configured for the application 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'. Make sure the redirect URI sent in the request matches one added to your application in the Azure portal. Navigate to https://aka.ms/redirectUriMismatchError to learn more about how to fix this. | It could be that the 'https://xxxxxxxxxxxxxxxxxxx/' redirect URI was not configured as a SPA, or, it could be that the application ID of the Pozi Server Enterprise Application was accidentally
+invalid_resource: AADSTS500011 -  The resource principal named xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx was not found in the tenant named xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You might have sent your authentication request to the wrong tenant. | Make sure you have provided the correct tenant id and that you are logged in the correct account
+AADSTS50105: Your administrator has configured the application Pozi Server ('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx') to block users unless they are specifically granted ('assigned') access to the application. The signed in user 'xxxxxxxxx.xxxxxxx@xxxxxxxxxxx.xxx.xxx.xx') is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application. | Give the relevant users/groups access via Enterprise Applications. See the [Assign users](./application-proxy/#3-assign-users) section.
+
+<!-- ## 99. App registration
 
 
 
@@ -58,7 +130,7 @@ Add the missing Redirect URIs from the list below in the Single-page application
 #### Web - Redirect URIs
 
 Add the App Proxy URL to `Redirect URIs` to the `Web` section. E.g.:
-  * `https://poziserver-<entra-application-client-id>.msappproxy.net/pozi/`
+  * `https://poziserver-<entra-application-client-name>.msappproxy.net/pozi/`
 
 This is the same as the External URL configured above.
 
@@ -92,7 +164,7 @@ Please make sure that the URIs all have a trailing slash ('/') and note that the
 
 ### Authorisation
 
-All going well, it should be possible to visit the App Proxy URL (in our example case: `https://poziserver-<entra-application-client-id>.msappproxy.net/pozi/`). If an error is shown like: `Sorry, but we’re having trouble with signing you in.` with a text similar to below, then we will need to give the relevant users/groups access.
+All going well, it should be possible to visit the App Proxy URL (in our example case: `https://poziserver-<entra-application-client-name>.msappproxy.net/pozi/`). If an error is shown like: `Sorry, but we’re having trouble with signing you in.` with a text similar to below, then we will need to give the relevant users/groups access.
 
 :::note Example authorisation error:
 
@@ -124,41 +196,12 @@ Give Pozi the following permissions:
 - Type: `Delegated`
 - Admin consent required: `No`
 
-This should allow Pozi to determine access based on a user's role(s).
+This should allow Pozi to determine access based on a user's role(s). -->
 
-<!-- Important: a user authenticated with the client's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://poziserver-<entra-application-client-id>.msappproxy.net/`). -->
-
-## Azure AD Pozi Support Account
-
-In order for the Pozi team to be able to provide support and troubleshoot any potential issues, we ask our clients to configure the [Pozi Support](prerequisites.md#support-account) domain user with the same permissions/groups/roles as the users of Pozi through Azure AD Application Proxy.
-
-If it's not possible or practical for the Pozi Support domain user to be given Azure AD permissions, you may choose to create a separate user account with the Azure AD permissions. In this case, no administrator privileges are required.
-
-## Information to send to Pozi
-
-After completion of the configuration, email us with the following information:
-
-- [ ] The **internal** app proxy URl (something like `http://<internal-server-name>/pozi/`)
-- [ ] The **external** app proxy URl (something like `https://poziserver-<entra-application-client-id>.msappproxy.net/pozi/`)
-- [ ] The **`client id`** (sometimes called 'application id') and has the following structure: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The client id is defined in Enterprise Applications => Properties.
-- [ ] The **`tenant id`**, which looks like xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The tenant id is defined in Azure Active Directory => Overview."
-- [ ] A copy/paste and/or screenshot of all the relevant settings
-
-This information is [not sensitive](https://stackoverflow.com/questions/57306964/are-azure-active-directorys-tenantid-and-clientid-considered-secrets) and can be emailed directly to the Pozi support team at support@pozi.com.
-
-In addition to the information above, if you have not done so already, provide the Azure AD credentials (email address and password) of the [Pozi Support](prerequisites.md#support-account) user account. Please get in touch with us on how to securely provide us with these details.
+<!-- Important: a user authenticated with the client's Azure AD through Pozi will need to their tokens to have been provided with permission to access all of the App Proxy (i.e. `https://poziserver-<entra-application-client-name>.msappproxy.net/`). -->
 
 
 
-
-## Troubleshooting
-
-Error message | Solution
---- | ---
-MSAL Error: Invalid Client errorMessage AADSTS65005: The application 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' asked for scope 'user_impersonation' that doesn't exist. | Add the 'user_impersonation' scope
-AADSTS9002326: Cross-origin token redemption is permitted only for the 'Single-Page Application' client-type. Request origin: 'https://poziserver-councilnamevicgovau.msappproxy.net'. | TODO: VERIFY - App registration -> Authentication-> platform type should be SPA
-AADSTS50011: The redirect URI 'http://localhost:3000/' specified in the request does not match the redirect URIs configured for the application 'c295d58a-82f2-417d-b2db-595be2259e9e'. Make sure the redirect URI sent in the request matches one added to your application in the Azure portal. Navigate to https://aka.ms/redirectUriMismatchError to learn more about how to fix this. | It could be that the 'http://localhost' redirect URI was not configured as a SPA, or, it could be that the application ID of the Pozi Server Enterprise Application was accidentally
-invalid_resource: AADSTS500011 -  The resource principal named api://c295d58a-82f2-417d-b2db-595be2259e9e was not found in the tenant named d1ea9051-cc51-4556-8729-e42a26edf37e. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You might have sent your authentication request to the wrong tenant. |
 
 <!-- ### Token-based Authentication/Authorisation
 

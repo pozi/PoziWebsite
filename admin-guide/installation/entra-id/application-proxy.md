@@ -5,7 +5,7 @@ order: -10
 # Application Proxy
 
 :::updated
-30 Oct 2023
+31 Oct 2023
 :::
 
 Microsoft Entra ID (formerly Azure AD) provides an Application Proxy service that enables users to securely access on-premises applications from outside the organisations' internal network without the need for a VPN.
@@ -91,9 +91,9 @@ In the Add your own on-premises application section, provide the following infor
   _Example: `http://gis-server.local/pozi/qgisserver/wfs3.html`_
 
 
-* **External URL**: `https://` `poziserver` `-<entra-application-client-id>.msappproxy.net`.
+* **External URL**: `https://` `poziserver` `-<entra-application-client-name>.msappproxy.net`.
 
-  The `-<entra-application-client-id>.msappproxy.net` part is a name that has been given to the organisation MS Entra ID. The dropdown may reveal other domains like `.<entra-application-client-id>.onmicrosoft.com`. Please select the domain that your organisation prefers.
+  The `-<entra-application-client-name>.msappproxy.net` part is a name that has been given to the organisation MS Entra ID. The dropdown may reveal other domains like `.<entra-application-client-name>.onmicrosoft.com`. Please select the domain that your organisation prefers.
 
   The interface will show a fully qualified URL to access Pozi Server in grey text below the form fields.
 
@@ -127,7 +127,7 @@ When configured correctly, a request from a logged-in user to Pozi Server throug
 
  Visiting followin the Entra ID Application Proxy URL:
 
-`https://poziserver-<entra-application-client-id>.msappproxy.net/pozi/qgisserver/wfs3.html`
+`https://poziserver-<entra-application-client-name>.msappproxy.net/pozi/qgisserver/wfs3.html`
 
 ...should return the same response as a local request to...
 
