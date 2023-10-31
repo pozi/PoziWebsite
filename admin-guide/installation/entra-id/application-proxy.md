@@ -33,14 +33,6 @@ Please [contact us](/contact/) if you experience any inconstencies so we can upd
 
 Visit the Microsoft Entra ID portal using https://entra.microsoft.com/
 
-
-<!-- The relevant sections can be found in the following menu structure:
-
-![](/static/img/icon-ms-entra-id-colour.svg) **Identity** ⇒ **Applications** ⇒
-  - Enterprise Applications
-  - App Registrations -->
-
-
 ## 1. Install connector on on-premises server
 
 The connector is a required piece of software that manages the outbound connection from the on-premises application servers to Application Proxy in Microsoft Entra ID. It runs as a service.

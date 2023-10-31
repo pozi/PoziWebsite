@@ -14,35 +14,51 @@ order: 0
 
 :::
 
-## Azure AD Pozi Support Account
+This section contains the relevant information to expose Pozi Server (QGIS) securely to the outside world through Microsoft Entra ID (formerly Azure AD).
 
-In order for the Pozi team to be able to provide support and troubleshoot any potential issues, we ask our clients to configure the [Pozi Support](prerequisites.md#support-account) domain user with the same permissions/groups/roles as the users of Pozi through Azure AD Application Proxy.
+Follow the instructions in the following sections:
 
-If it's not possible or practical for the Pozi Support domain user to be given Azure AD permissions, you may choose to create a separate user account with the Azure AD permissions. In this case, no administrator privileges are required.
+1. [Application Proxy](./application-proxy.md)
+1. [App Registration](./app-registration)
 
-## Information to send to Pozi
+Once all work has been completed, please provide Pozi Support with the requested information below.
 
-After completion of the configuration, email us with the following information:
+## Information to send to Pozi Support
 
-- [ ] The **internal** app proxy URl (something like `http://<internal-server-name>/pozi/`)
-- [ ] The **external** app proxy URl (something like `https://poziserver-<entra-application-client-name>.msappproxy.net/pozi/`)
-- [ ] The **`client id`** (sometimes called 'application id') and has the following structure: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The client id is defined in Enterprise Applications => Properties.
-- [ ] The **`tenant id`**, which looks like xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The tenant id is defined in Azure Active Directory => Overview."
-- [ ] A copy/paste and/or screenshot of all the relevant settings
+After completion of the configuration, [email](mailto:support@pozi.com) us with the following information:
+
+- :icon-checkbox: The **internal** on-premises URL (something like `http://<internal-server-name>/pozi/`)
+- :icon-checkbox: The **external** application proxy URL (something like `https://poziserver-<entra-application-client-name>.msappproxy.net/pozi/`)
+
+![](img/entra-id-required-information-step-1.png)
+
+
+- :icon-checkbox: The **`application (client) id`**
+- :icon-checkbox: The **`directory (tenant) id`**
+
+![](img/entra-id-required-information-step-2.png)
+
+- :icon-checkbox: (optional) A list of group ids and the QGIS catalogues that have access to them.
+
+![](img/entra-id-groups-claim-step-3.png)
 
 This information is [not sensitive](https://stackoverflow.com/questions/57306964/are-azure-active-directorys-tenantid-and-clientid-considered-secrets) and can be emailed directly to the Pozi support team at support@pozi.com.
 
 In addition to the information above, if you have not done so already, provide the Azure AD credentials (email address and password) of the [Pozi Support](prerequisites.md#support-account) user account. Please get in touch with us on how to securely provide us with these details.
 
 
+## Azure AD Pozi Support Account
+
+In order for the Pozi team to be able to provide support and troubleshoot any potential issues, we ask our clients to configure the [Pozi Support](prerequisites.md#support-account) domain user with the same permissions/groups/roles as the users of Pozi through Azure AD Application Proxy.
+
+If it's not possible or practical for the Pozi Support domain user to be given Entra ID permissions, you may choose to create a separate user account with the Entra ID permissions. In this case, no administrator privileges are required.
 
 
-## Authentication mechanism
+## Helpful Information:
+
+### Authentication mechanism
 
 The authentication that Pozi Web App uses to communicate with Pozi Server through Entra ID is OAuth 2.0 through Microsoft's MSAL.js v2.0 JavaScript library
-
-
-## Helpful Resources:
 
 * [Microsoft identity platform and OAuth 2.0 authorization code flow](https://learn.microsoft.com/en-au/entra/identity-platform/v2-oauth2-auth-code-flow)
 

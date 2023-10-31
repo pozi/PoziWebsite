@@ -18,7 +18,6 @@ Search for this app in the 'App registrations' section in Entra ID.
 ![](img/entra-id-app-registration-step-1.png)
 
 
-
 ## 2. Authentication
 
 In this section we will make sure that an authenticated user will be granted access through the Pozi Web App.
@@ -69,7 +68,7 @@ Often, this scope gets created by Entra ID automatically but not in every organi
 * **Admin consent display name**: `Access Pozi Server`
 * **Admin consent description**: `Allow the application to access Pozi Server on behalf of the signed-in user.`
 * **User consent display name**: `Access Pozi Server` (optional)
-* **User consent description**: `Allow the application to access Pozi Server on your behalf.`
+* **User consent description**: `Allow the application to access Pozi Server on your behalf.` (optional)
 * **State**: `Enabled`
 
 ![](img/entra-id-scope-add-step-3.png)
@@ -79,7 +78,7 @@ The scope above will be used in the Site Configuration in Pozi in the 'Scopes' s
 
 ## 3. Access control
 
-It is possible to further control access to QGIS catalogues. In order for Pozi enforce this access control, access to what groups a user is a member of in the Entra ID environment is required.
+It is possible to further control user access to QGIS catalogues in Pozi Web App. In order to enforce this access control, Pozi Web App needs to know what groups a user is a member of in the Entra ID environment is required.
 
 This section describes how to provide Pozi Web App with the relevant group information.
 
@@ -103,7 +102,11 @@ That is all that is needed in Entra ID. Pozi Web App will receive the group info
 
 This will make it possible to limit what group(s) can view a certain QGIS project. This can be done by providing the group ids to Pozi Support who will configure the relevant catalogues.
 
-Note: it is currently not possible to use the group display name.
+The group name/object id mapping can be found under **Identity** ⇒ **Groups** ⇒ **All groups**.
+
+![](img/entra-id-groups-claim-step-3.png)
+
+Note: it is currently not possible to use the group name within Pozi, only its object id.
 
 
 ## Troubleshooting
