@@ -74,7 +74,7 @@ Supported fills:
 
 ![](./img/qgis-layer-styling-simple-fill.png){style="width:350px"}
 
-Note that the 'No brush' fill will prevent users from being able to select a polygon by clicking within the polygon. To enable users to select a polygon feature by clicking inside it, use the 'Solid' fill, and set the opacity of the fill colour to a low or zero value.
+Note that the 'No brush' fill will prevent users from being able to select a polygon by clicking within the polygon. If you want to display a polygon with an empty fill while still enabling users to select the polygon, use the 'Solid' fill, and set the opacity of the fill colour to a low or zero value.
 
 ### Labels
 

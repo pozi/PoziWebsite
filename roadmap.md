@@ -48,6 +48,13 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## Completed
 
+### October 2023
+
+#### Improved
+
+- [x] 👍 add support for map ids in Google Maps
+- [x] 👍 make annotation layer not selectable to prevent display issues
+
 ### September 2023
 
 #### New
