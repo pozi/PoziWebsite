@@ -162,7 +162,7 @@ This should allow Pozi to determine access based on a user's role(s).
 
 ## Azure AD Pozi Support Account
 
-In order for the Pozi team to be able to provide support and troubleshoot any potential issues, we ask our clients to configure the [Pozi Support](prerequisites.md#support-account) domain user with the same permissions/groups/roles as the users of Pozi through Azure AD Application Proxy.
+In order for the Pozi team to be able to provide support and troubleshoot any potential issues, we ask our clients to configure the [Pozi Support](/admin-guide/installation/prerequisites.md#support-account) domain user with the same permissions/groups/roles as the users of Pozi through Azure AD Application Proxy.
 
 If it's not possible or practical for the Pozi Support domain user to be given Azure AD permissions, you may choose to create a separate user account with the Azure AD permissions. In this case, no administrator privileges are required.
 
@@ -178,7 +178,7 @@ After completion of the configuration, email us with the following information:
 
 This information is [not sensitive](https://stackoverflow.com/questions/57306964/are-azure-active-directorys-tenantid-and-clientid-considered-secrets) and can be emailed directly to the Pozi support team at support@pozi.com.
 
-In addition to the information above, if you have not done so already, provide the Azure AD credentials (email address and password) of the [Pozi Support](prerequisites.md#support-account) user account. Please get in touch with us on how to securely provide us with these details.
+In addition to the information above, if you have not done so already, provide the Azure AD credentials (email address and password) of the [Pozi Support](/admin-guide/installation/prerequisites.md#support-account) user account. Please get in touch with us on how to securely provide us with these details.
 
 <!-- ### Token-based Authentication/Authorisation
 
