@@ -26,5 +26,5 @@ Connectors available:
 
 Pozi Connect Pipeline uses the powerful open-source GDAL/OGR toolkit for maximum compatibility with all your data sources.
 
-[!button variant="info" icon="mention" size="2xl" text="Get in touch"](/contact/)
+[!button variant="info" size="2xl" text="&nbsp;Get in touch"](/contact/)
 

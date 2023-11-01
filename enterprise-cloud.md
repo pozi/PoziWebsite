@@ -85,6 +85,6 @@ If you're already using Pozi Enterprise, your upgrade to Pozi *Enterprise Cloud*
 
 :::section
 
-[!button variant="light" icon="mention" size="2xl" corners="pill" text="Contact us today!"](/contact/)
+[!button variant="light" size="2xl" corners="pill" text="&nbsp;Contact us today!"](/contact/)
 
 :::

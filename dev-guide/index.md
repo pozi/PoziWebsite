@@ -15,4 +15,4 @@ The **Developer Guide** is intended as a reference for our internal developers, 
 
 Want to learn more? Interested in partnering with us? Do you want to work with us?
 
-[!button icon="mention" size="xl" text="Contact us"](/contact/)
+[!button size="xl" text="&nbsp;Contact us"](/contact/)

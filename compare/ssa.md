@@ -33,7 +33,7 @@ Pozi breaks down data silos by allowing users to access any map layer they want 
 
 If you're stuck in another contract, talk to us. Not only can we get you up and running with Pozi straight away, we'll provide credit for your use of Pozi during the remainder of your existing contract!
 
-[!button variant="info" icon="mention" size="xl" corners="pill" text="Make the switch"](/contact/)
+[!button variant="info" size="xl" corners="pill" text="&nbsp;Make the switch"](/contact/)
 
 ---
 

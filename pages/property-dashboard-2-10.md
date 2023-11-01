@@ -35,4 +35,4 @@ View live property information from Vicmap in this Pozi map
 
 Get a Pozi map customised for your organisation.
 
-[!button variant="info" icon="mention" size="2xl" corners="pill" text="Contact us >"](/contact/)
+[!button variant="info" size="2xl" corners="pill" text="&nbsp;Contact us >"](/contact/)

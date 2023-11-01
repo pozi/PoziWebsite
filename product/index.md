@@ -64,4 +64,4 @@ Unlike traditional GIS software, Pozi is built from the ground up to integrate d
 
 <big>Contact us for a personalised guided tour</big>
 
-[!button variant="info" icon="mention" size="2xl" corners="pill" text="Contact us >"](/contact/)
+[!button variant="info" size="2xl" corners="pill" text="&nbsp;Contact us >"](/contact/)

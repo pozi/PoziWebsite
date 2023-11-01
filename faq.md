@@ -84,4 +84,4 @@ Enterprise and Enterprise Cloud packages both integrate with your on-premise dat
 
 ---
 
-[!ref icon="mention" text="Got more questions? Get in touch!"](/contact/)
+[!ref text="Got more questions? Get in touch!"](/contact/)

@@ -135,4 +135,4 @@ https://www.cardinia.vic.gov.au/binday
 
 ## Get your own private guided tour
 
-[!ref icon="mention" text="Book a tour"](/contact/)
+[!ref text="Book a tour"](/contact/)

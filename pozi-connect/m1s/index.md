@@ -151,4 +151,4 @@ Z, R, P, S, E, C, A
 
 Pozi offers consulting services to improve councils' property data maintenance processes.
 
-[!button variant="info" icon="mention" size="2xl" corners="pill" text="Contact us >"](/contact/)
+[!button variant="info" size="2xl" corners="pill" text="&nbsp;Contact us >"](/contact/)

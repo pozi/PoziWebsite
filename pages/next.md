@@ -40,4 +40,4 @@ Beyond empowering clients, Next Pozi brings new possibilities for sharing resour
 
 Interested in Next Pozi? Contact us to discover how your organisation can take advantage of this exciting new generation hybrid cloud GIS.
 
-[!ref icon="mention" text="Contact us >"](/contact/)
+[!ref text="Contact us >"](/contact/)

@@ -87,4 +87,4 @@ Pozi's lightweight footprint, modern API and library of [data connectors](/admin
 <br/>
 
 
-[!button icon="mention" size="xl" corners="pill" text="Contact us today!"](/contact/)
+[!button size="xl" corners="pill" text="&nbsp;Contact us today!"](/contact/)

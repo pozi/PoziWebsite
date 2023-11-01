@@ -163,4 +163,4 @@ Alternatively, you can avoid RFTs and RFQs altogether with a pay-as-you-go Pozi 
 
 Contact us to discuss your organisation's requirements. 60-day free trials are available.
 
-[!button variant="info" icon="mention" size="2xl" corners="pill" text="Contact us >"](/contact/)
+[!button variant="info" size="2xl" corners="pill" text="&nbsp;Contact us >"](/contact/)
