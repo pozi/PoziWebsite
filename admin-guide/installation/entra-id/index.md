@@ -1,20 +1,14 @@
 ---
-order: 0
+icon: /static/img/icon-ms-entra-id-colour.svg
 ---
 
-# Introduction
+# Entra ID
 
 :::updated
-31 Oct 2023
+03 Nov 2023
 :::
 
-:::note Under Construction
-
-*This page is a work in progress.*
-
-:::
-
-This section contains the relevant information to expose Pozi Server (QGIS) securely to the outside world through Microsoft Entra ID (formerly Azure AD).
+This section contains the relevant information to enable authorised users to securely access Pozi Server (QGIS) through Microsoft Entra ID (formerly Azure AD).
 
 Follow the instructions in the following sections and return here:
 
