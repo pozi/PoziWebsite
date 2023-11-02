@@ -47,7 +47,7 @@ There are some more settings in this section. Most can be ignored. Confirm that 
 
 ![](img/entra-id-app-registration-step-5.png)
 
-## 2. Expose an API (user_impersonation)
+## 3. Expose an API (user_impersonation)
 
 This section covers a **crucial** setting for the application to access Pozi Server on behalf of the user: the `user_impersonation` scope.
 
@@ -76,7 +76,7 @@ Often, this scope gets created by Entra ID automatically but not in every organi
 The scope above will be used in the Site Configuration in Pozi in the 'Scopes' section. It should look something like:
 `https://poziserver-<entra-application-client-name>.msappproxy.net/pozi/user_impersonation`
 
-## 3. Access control
+## 4. Access control
 
 It is possible to further control user access to QGIS catalogues in Pozi Web App. In order to enforce this access control, Pozi Web App needs to know what groups a user is a member of in the Entra ID environment is required.
 
