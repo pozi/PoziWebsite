@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.752193944955">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.752217919967">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,11 +35,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=3.5.0.752193944955" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.5.0.752217919967" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.5.0.752193944955" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.5.0.752217919967" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.5.0.752193944955" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.5.0.752217919967" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -407,10 +407,10 @@ Search for this app in the &#x27;App registrations&#x27; section in Entra ID.</p
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
-<doc-anchor-target id="2-expose-an-api-user_impersonation">
+<doc-anchor-target id="3-expose-an-api-user_impersonation">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#2-expose-an-api-user_impersonation">#</doc-anchor-trigger>
-        <span>2. Expose an API (user_impersonation)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-expose-an-api-user_impersonation">#</doc-anchor-trigger>
+        <span>3. Expose an API (user_impersonation)</span>
     </h2>
 </doc-anchor-target>
 <p>This section covers a <strong>crucial</strong> setting for the application to access Pozi Server on behalf of the user: the <code v-pre>user_impersonation</code> scope.</p>
@@ -444,10 +444,10 @@ Search for this app in the &#x27;App registrations&#x27; section in Entra ID.</p
 </p>
 <p>The scope above will be used in the Site Configuration in Pozi in the &#x27;Scopes&#x27; section. It should look something like:
 <code v-pre>https://poziserver-&lt;entra-application-client-name&gt;.msappproxy.net/pozi/user_impersonation</code></p>
-<doc-anchor-target id="3-access-control">
+<doc-anchor-target id="4-access-control">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#3-access-control">#</doc-anchor-trigger>
-        <span>3. Access control</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4-access-control">#</doc-anchor-trigger>
+        <span>4. Access control</span>
     </h2>
 </doc-anchor-target>
 <p>It is possible to further control user access to QGIS catalogues in Pozi Web App. In order to enforce this access control, Pozi Web App needs to know what groups a user is a member of in the Entra ID environment is required.</p>
