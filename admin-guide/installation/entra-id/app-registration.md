@@ -5,7 +5,7 @@ order: -20
 # App Registration
 
 :::updated
-31 Oct 2023
+02 Nov 2023
 :::
 
 Please make sure to have completed the steps in the [previous section](./application-proxy).
