@@ -8,9 +8,15 @@ The Pozi link-in enables other applications to launch Pozi and zoom to specific 
 
 This page outlines the URL parameters to launch a Pozi map to dynamically customise the map's location and display.
 
-The URL parameters can be manually or programmatically constructed, or you can simply copy the URL of your Pozi session to capture and share its current state.
+The URL parameters can be manually or programmatically constructed, or you can simply copy the URL of a Pozi session from your browser's address bar to capture and share its current state.
 
 ## Parameters
+
+### Location by Coordinates
+
+Centre and zoom the map on a specific location by adding `x`, `y` and `z` parameters to the URL.
+
+https://frankston.pozi.com/#/x[145.12617]/y[-38.14357]/z[17]/
 
 ### Location by Search Parameter
 
@@ -41,12 +47,6 @@ Use the name of the search, convert to lower case, and remove any spaces or spec
 `https://mansfield.pozi.com/#/search[parcelspi,1\TP225210]/`
 
 ==-
-
-### Location by Coordinates
-
-The Pozi map will display centred at a specific location and zoom level.
-
-https://frankston.pozi.com/#/x[145.12617]/y[-38.14357]/z[17]/
 
 ### Layer Display
 
@@ -96,7 +96,15 @@ https://northerngrampians.pozi.com/#/filter[assets]/tab[layers]/
 
 ### Panel Focus
 
-https://bendigo.pozi.com/#/tab[layers]/
+Launch Pozi with one of the five available panels displayed to the left of the map.
+
+- `search`
+- `info`
+- `layers`
+- `tools`
+- `about`
+
+Example: `https://bendigo.pozi.com/#/tab[layers]/`
 
 ### Location by Property Identifier (Legacy)
 
@@ -130,7 +138,7 @@ When configuring the links in your application, instead of using `target="_blank
 
 [Reference](https://superuser.com/questions/304285/i-want-a-hyperlink-to-open-a-browser-tab-then-all-subsequent-link-clicks-go-to)
 
-Note that only the [Property Identifier](#location-by-property-identifier-legacy) format (above) link-in is currently supported (example `?propnum=xxx`). Other link-in formats are currently unable to update the re-used browser tabs.
+Note that only the [Property Identifier (Legacy)](#location-by-property-identifier-legacy) format link-in is currently supported (eg `?propnum=xxx`). Other link-in formats are currently unable to update the re-used browser tabs.
 
 ### Test
 

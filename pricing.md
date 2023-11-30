@@ -91,7 +91,7 @@ Capture geospatial data easily through your mobile device and share it with the 
 
 <img src="/static/img/mergin-maps-logo.svg" alt="" style="float:right;width:300px;margin:20px 40px;">
 
-Pozi provides an Australian-hosted [Mergin](https://merginmaps.com/) server to enable your team to collaborate safely with others on the same geodata. See colleagues' updates in near real time, even from the field. Works offline. Edits are merged automatically. View and edit geodata in the field. Integrate with existing GIS infrastructure using open formats.
+Pozi integrates seamlessly with [Mergin](https://merginmaps.com/) to enable your team to collaborate safely with others on the same geodata. See colleagues' updates in near real time, even from the field. Works offline. Edits are merged automatically. View and edit geodata in the field. Integrate with existing GIS infrastructure using open formats.
 
 Pricing on request.
 

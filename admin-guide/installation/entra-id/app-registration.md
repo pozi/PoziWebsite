@@ -78,7 +78,7 @@ The scope above will be used in the Site Configuration in Pozi in the 'Scopes' s
 
 ## 4. Access control
 
-It is possible to further control user access to QGIS catalogues in Pozi Web App. In order to enforce this access control, Pozi Web App needs to know what groups a user is a member of in the Entra ID environment is required.
+It is possible to further control user access to map catalogues (ie QGIS projects) in Pozi Web App. In order to enforce this access control, Pozi Web App needs to know what groups a user is a member of in the Entra ID environment is required.
 
 This section describes how to provide Pozi Web App with the relevant group information.
 
@@ -100,14 +100,11 @@ That is all that is needed in Entra ID. Pozi Web App will receive the group info
 ]
 ```
 
-This will make it possible to limit what group(s) can view a certain QGIS project. This can be done by providing the group ids to Pozi Support who will configure the relevant catalogues.
+Email support@pozi.com with your list of group ids and what catalogues (ie QGIS projects) each group should have access to.
 
-The group name/object id mapping can be found under **Identity** ⇒ **Groups** ⇒ **All groups**.
+The group ids can be found under **Identity** ⇒ **Groups** ⇒ **All groups**.
 
 ![](img/entra-id-groups-claim-step-3.png)
-
-Note: it is currently not possible to use the group name within Pozi, only its object id.
-
 
 ## Troubleshooting
 
