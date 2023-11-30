@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.752282984794">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.754703462819">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,11 +35,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=3.5.0.752282984794" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.5.0.754703462819" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.5.0.752282984794" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.5.0.754703462819" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.5.0.752282984794" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.5.0.754703462819" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -450,7 +450,7 @@ Search for this app in the &#x27;App registrations&#x27; section in Entra ID.</p
         <span>4. Access control</span>
     </h2>
 </doc-anchor-target>
-<p>It is possible to further control user access to QGIS catalogues in Pozi Web App. In order to enforce this access control, Pozi Web App needs to know what groups a user is a member of in the Entra ID environment is required.</p>
+<p>It is possible to further control user access to map catalogues (ie QGIS projects) in Pozi Web App. In order to enforce this access control, Pozi Web App needs to know what groups a user is a member of in the Entra ID environment is required.</p>
 <p>This section describes how to provide Pozi Web App with the relevant group information.</p>
 <p><figure class="content-center">
     <img src="../img/entra-id-groups-claim-step-1.png" alt="">
@@ -473,14 +473,13 @@ Search for this app in the &#x27;App registrations&#x27; section in Entra ID.</p
     &quot;c034a6cd-2b7d-4336-9f9e-9bb896ad1110&quot;
 ]</code></pre>
 </doc-codeblock></div>
-<p>This will make it possible to limit what group(s) can view a certain QGIS project. This can be done by providing the group ids to Pozi Support who will configure the relevant catalogues.</p>
-<p>The group name/object id mapping can be found under <strong>Identity</strong> ⇒ <strong>Groups</strong> ⇒ <strong>All groups</strong>.</p>
+<p>Email <a href="mailto:support@pozi.com">support@pozi.com</a> with your list of group ids and what catalogues (ie QGIS projects) each group should have access to.</p>
+<p>The group ids can be found under <strong>Identity</strong> ⇒ <strong>Groups</strong> ⇒ <strong>All groups</strong>.</p>
 <p><figure class="content-center">
     <img src="../img/entra-id-groups-claim-step-3.png" alt="">
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
-<p>Note: it is currently not possible to use the group name within Pozi, only its object id.</p>
 <doc-anchor-target id="troubleshooting">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#troubleshooting">#</doc-anchor-trigger>
