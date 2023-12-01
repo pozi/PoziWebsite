@@ -148,10 +148,6 @@ IntraMaps is built on an outdated version of OpenLayers, which ceased developmen
 
 No long-term, lock-in contracts. No hidden costs.
 
-Our pricing is on our website.
-
-[!ref icon="briefcase"](/pricing/)
-
 Hosting and basic support is included in your subscription. Initial setup and advanced support is available on-demand at our standard rate. You don't need a support contract to ask us for help.
 
 And we'll never charge you for fixing a bug.

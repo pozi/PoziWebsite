@@ -62,7 +62,7 @@ Remote and mobile staff have access to critical location information in the fiel
 
 ## Upgrade
 
-If you're already using Pozi Pro, an upgrade to Pozi Enterprise costs an additional $3K per year.
+If you're already using Pozi *Pro*, ask us for a quote to upgrade to Pozi *Enterprise Cloud*.
 
 Some implementation costs will also apply to set up the internal data integrations.
 

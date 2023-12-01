@@ -79,7 +79,7 @@ Now, Pozi Enterprise Cloud enables you to easily control your users' search expe
 
 ## Upgrade
 
-If you're already using Pozi Enterprise, your upgrade to Pozi *Enterprise Cloud* costs an additional $3K per year.
+If you're already using Pozi Enterprise, ask us for a quote to upgrade to Pozi *Enterprise Cloud*.
 
 [Get in touch](/contact/) to discuss your organisation's requirements.
 
