@@ -138,7 +138,7 @@ The future of web GIS is driven by live data integrations, web-optimised data fo
 
 <img src="../../static/img/undraw/undraw_dev_focus_re_6iwt.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
-Pozi invests for the future by keeping Pozi up-to-date with modern web technologies. We work with open source HTML5 technologies including [React](https://reactjs.org/), [Material UI](https://mui.com/), [OpenLayers 7](https://openlayers.org/), [TurfJS](https://turfjs.org/) and [GeoStyler](https://geostyler.org/) to ensure high performance, compatibility with modern data sources, and a high quality user experience.
+Pozi invests for the future by keeping Pozi up-to-date with modern web technologies. We work with open source HTML5 technologies including [React](https://reactjs.org/), [Material UI](https://mui.com/), [OpenLayers 8](https://openlayers.org/), [TurfJS](https://turfjs.org/) and [GeoStyler](https://geostyler.org/) to ensure high performance, compatibility with modern data sources, and a high quality user experience.
 
 IntraMaps is built on an outdated version of OpenLayers, which ceased development in 2013. IntraMaps' performance and functionality remain tied to an ageing, unsupported code base, limiting its ability to innovate any further.
 
@@ -251,7 +251,7 @@ When you fund the development of new features, you have ongoing access to the ne
 | Custom development available | ❌ | ✔️ |
 | <big>**Technology**</big> | | |
 | Supported map servers | MapServer | **QGIS Server**<br/>GeoServer<br/>MapServer<br/>ArcGIS Server |
-| Mapping Javascript library | OpenLayers v2<br/>(2013) | OpenLayers v7<br/>(2023) |
+| Mapping Javascript library | OpenLayers v2<br/>(2013) | OpenLayers v8<br/>(2023) |
 | OGC standards compliant (WMS/WFS) | ✔️ | ✔️ |
 | Web optimised formats (Mapbox Vector Tiles, COG, FlatGeobuf) |  ❌  | ✔️ |
 | <big>**Data Integrations**</big> | | |
