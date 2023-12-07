@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.755064861339">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.755301899654">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,11 +35,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=3.5.0.755064861339" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.5.0.755301899654" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.5.0.755064861339" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.5.0.755301899654" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.5.0.755064861339" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.5.0.755301899654" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -551,6 +551,10 @@ Please <a href="/contact/">contact us</a> if you experience any inconstencies so
 <tr>
 <td>BadGateway: This corporate app can&#x27;t be accessed. <br/><br/> Connection to the server failed. For more details, check the Application Proxy Connector Event Log for reported errors.</td>
 <td>This could happen if the application proxy internal URL is accidentally configured with <code v-pre>https</code> instead of <code v-pre>http</code></td>
+</tr>
+<tr>
+<td>GatewayTimeout: The corporate app cannot be accessed / the service is unable to reach the connector <br/><br/>Error message: NoActiveConnector</td>
+<td><li>Make sure that the Application Proxy connector is properly installed and registered with your Entra ID tenant</li><li>Check the Application Proxy connector Event Log for reported errors</li><li> Check the network settings to make sure any inactive connectors can reach the service and become active again</li></td>
 </tr>
 </tbody>
 </table>
