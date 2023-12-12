@@ -57,26 +57,33 @@ Some common layer configuration tasks you can do in QGIS include:
 
 ## Publish as Vector Layer
 
-Publishing a layer as a *vector layer* enables users to directly interact with map features. When a vector layer is turned on in Pozi, every feature from the source dataset is loaded in the browser, including all geometries and attributes. Users can make use of advanced functionality such as filtering, downloading, table view and tooltips.
+Publishing a layer as a *vector layer* enables users to directly interact with map features. When a vector layer is turned on in Pozi, every feature from the source dataset is loaded in the browser, including all geometries and attributes. Users can make use of advanced functionality such as searching, filtering, downloading, table view and tooltips.
 
-By default, QGIS Server does NOT expose layers as vectors. Evaluate the pros and cons of using vectors for your layer, and if appropriate, follow the directions below to enable it.
+By default, QGIS Server does NOT expose layers as vectors.
 
-#### Advantages
+Evaluate the pros and cons of using vectors for your layer, and if appropriate, follow the directions below to enable it.
 
-* layers are fully interactive using Pozi's filter, report and table view functionality
-* after the layer is loaded in the browser, the browser doesn't need to send further requests for the layer to the server every time the map moves
-* the cursor changes when hovering over object to indicate the feature is clickable, and a tooltip is displayed with the feature's title
-* users can select an individual feature and display its details in Info Panel (without displaying results of features on other layers at the same location)
-* layers can be downloaded
+#### Advantages of vector layers
 
-#### Disadvantages
+* layers are fully interactive, enabling users to use the following functionality:
+  * search
+  * filter
+  * report
+  * table view
+  * download
+* when a vector layer is turned on, Pozi loads the entire layer in the browser, including all geometries and attributes. The browser doesn't need to send further requests for the layer to the server every time the map moves
+* when hovering over a vector feature the cursor changes to indicate the feature is clickable, and a tooltip is displayed with the feature's title
+* more focussed info results - when a vector feature is selected, only the selected feature's details are displayed. The info panel does not show the details of other features at the same location
+
+#### Disadvantages of vector layers
 
 * the browser can be easily overwhelmed when dealing with thousands of features or complex features with many vertices, resulting in slow map rendering
 * not all QGIS styles are supported in Pozi for vector features
-* only one vector feature can be selected at a time - info results are not displayed for any features that have been overlapped by another feature
+* only one vector feature can be selected at a time - info results are not displayed for any features (whether in the same or different layer) that have been overlapped by another feature
+* *What's Here* results are not displayed when a vector feature is selected - this can be problematic for polygon layers because users cannot interrogate what's underneath any vector polygon features
 * cannot directly use text expressions for labels (but you can still make use of virtual fields for creating generating custom label values)
 
-As a guideline, use vectors only for layers with fewer than 5-10K features, or even fewer for layers with complex polylines or polygons.
+As a guideline, use vectors only for layers with fewer than 5-10K features, or even fewer for layers with complex polylines or polygons. Also for polygon layers, consider that features can prevent users from interrogating any features underneath.
 
 ### Enabling Vector Layer
 

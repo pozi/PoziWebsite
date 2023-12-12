@@ -11,7 +11,7 @@ We're constantly working to improve the Pozi experience for our users based on t
 
 We also offer clients the opportunity to sponsor development of new features, giving them direct input into the specification to ensure it meets their exact requirements.
 
-[!button icon="comment" corners="pill" text="Tell us what you want to see in Pozi!"](/contact/)
+[!button corners="pill" text="&nbsp;Tell us what you want to see in Pozi!"](/contact/)
 
 ---
 
@@ -64,7 +64,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 #### Improved
 
-- [x] 👍 simplify URLs that contain a single click *What's Here* target
+- [x] 👍 simplify URLs that contain a single-click *What's Here* target
 
 ### August 2023
 
