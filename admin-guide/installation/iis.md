@@ -372,7 +372,9 @@ IIS > Your Server > Application Pools > PoziQgisServer > Advanced Settings > Loa
 
 Recycle the PoziQgisServer application pool and reload Pozi.
 
-==- Error message "Something went wrong: layer may be misconfigured. Layer: '[Your QGIS project layer]', type: 'QGISProjectSettings'"
+==- QGIS project layer group is visible but can't be expanded
+
+On loading the error message "Something went wrong: layer may be misconfigured. Layer: '[Your QGIS project layer]', type: 'QGISProjectSettings'" appears.
 
 If the layer group for the QGIS project is visible, but cannot be expanded to show the layers within the project, this may be due to a CORS (cross-origin resource sharing) issue.  This is a security precaution that stops a website from drawing content across from another domain name.  In this case the QGIS Server needs to allow the organisation's Pozi site as a trusted content source.
 
