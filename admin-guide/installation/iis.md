@@ -262,7 +262,7 @@ Two pieces of software need to be installed with admin privileges and IIS needs 
 * Click on Proxy - Server Proxy Settings
 * Check 'Enable Proxy' and hit 'Apply'
 
-Sites > Default Site > Pozi
+Sites > Default Web Site > Pozi
 
 * Open feature 'URL rewrite'
 * 'Add rules...' and double-click 'Reverse Proxy'
@@ -286,7 +286,7 @@ Test: http://localhost/pozi/ogr2ogr
 
 This allows us to serve content from the file system
 
-* Right click on Pozi (in Sites / Default Site)
+* Right click on Pozi (in Sites / Default Web Site)
 * Click on 'Add Virtual Directory...'
 * Fill in the alias field, eg `static`
 * Physical path: choose the path in the file system eg `C:\Pozi\IIS\Static`
@@ -371,5 +371,16 @@ If the layer(s) are visible in QGIS but still not in Pozi, try updating the foll
 IIS > Your Server > Application Pools > PoziQgisServer > Advanced Settings > Load User Profile > set to `True`.
 
 Recycle the PoziQgisServer application pool and reload Pozi.
+
+==- Error message "Something went wrong: layer may be misconfigured. Layer: '[Your QGIS project layer]', type: 'QGISProjectSettings'"
+
+If the layer group for the QGIS project is visible, but cannot be expanded to show the layers within the project, this may be due to a CORS (cross-origin resource sharing) issue.  This is a security precaution that stops a website from drawing content across from another domain name.  In this case the QGIS Server needs to allow the organisation's Pozi site as a trusted content source.
+
+IIS > select server > Site > Default Web Site:
+
+* Open feature 'HTTP Response Headers'
+* Action 'Add...'
+* **Name**: `Access-Control-Allow-Origin`
+* **Value**: `https://[sitename].pozi.com`
 
 ==-
