@@ -378,7 +378,7 @@ On loading the error message "Something went wrong: layer may be misconfigured. 
 
 If the layer group for the QGIS project is visible, but cannot be expanded to show the layers within the project, this may be due to a CORS (cross-origin resource sharing) issue.  This is a security precaution that stops a website from drawing content across from another domain name.  In this case the QGIS Server needs to allow the organisation's Pozi site as a trusted content source.
 
-IIS > select server > Site > Default Web Site:
+IIS > select server > Site > Default Web Site > Pozi > QgisServer:
 
 * Open feature 'HTTP Response Headers'
 * Action 'Add...'
