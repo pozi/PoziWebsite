@@ -221,7 +221,7 @@ These custom catalogue files can be hosted as static files.
   ```
 
   Note the style URL has two critical differences from the data URL:
-  
+
   * `service=WMS` (not WFS)
   * `request=GetStyles` (not GetCapabilities)
 
@@ -360,15 +360,22 @@ In this example, the catalogue layers will appear within a folder called 'Vicmap
 
 The `layerFilter` setting allows for managing what layers to show/hide. Only the layers that match the filter will be shown.
 
-The matching is case-insensitive and allows for the use of wildcards for inclusion/exclusion.
+The matching is case-insensitive and allows for the use of wildcards for inclusion/exclusion and is based on a software library, called [minimatch](https://github.com/isaacs/minimatch).
+
+It is possible to configure multiple filter rules, separated by a semi-colon (`;`). In that case, **every** filter rule must be satisfied for a layer to be shown! This allows for situations where some exclusions need to apply.
 
 **Example filter settings**:
 
-* `"kindergartens; schools"`: only show the layers that are called `kindergartens` or `schools`
-* `"kinder*; *zones; *bus*"`: show all layers that start with `kinder`, end with `zones` or have the word `bus` anywhere in the layer name
-* `"!(child care centres | schools)"`: hide layers that are called `child care centres` or `schools`
-* `"!(kinder* | *zones | *bus*)"`: hide all layers that start with `kinder`, end with `zones` or have the word `bus` anywhere in the layer name
-* `"(*urban* | *commercial*); !(*boundary | *dem*)"`: show all layers that either have `urban` or `commercial` in their name but exclude any of these matching layers that end with `boundary` or have `dem` anywhere in the name
+* `*`: show all layers. This is effectively the same as having no layer filter.
+* `vicmap aerial`: only show the layer with this exact name
+* `{ vicmap aerial, vicmap cartographic }`: only show the layers called `vicmap aerial` or `vicmap cartographic`
+* `vicmap *`: show all the layers that start with `vicmap `
+* `vicmap * ; ! *overlay`: show all the layers that start with `vicmap ` excluding any that end with ` overlay`
+* `! *overlay`: show all layers excluding any that end with `overlay`
+* `! { *aerial, *overlay }`: show all layers excluding any that end with `aerial` or `overlay`
+* `{ kinder*, *zones, *bus* }`: show all layers that start with `kinder`, end with `zones` or have the word `bus` anywhere in the layer name
+* `! { kinder*, *zones, *bus* }`: hide all layers that start with `kinder`, end with `zones` or have the word `bus` anywhere in the layer name
+* `{ *urban*, *commercial*) ; ! { *boundary, *dem* }"`: show all layers that either have `urban` or `commercial` anywhere in their name but exclude any of these matching layers that end with `boundary` or have `dem` anywhere in the name
 
 ==- Example
 
