@@ -20,11 +20,11 @@ https://frankston.pozi.com/#/x[145.12617]/y[-38.14357]/z[17]/
 
 ### Location by Search Parameter
 
-![Alt text](img/search-options.png){style="float:right;width:250px;margin:0px 40px;"}
+![Alt text](img/search-options.png){style="width:250px;margin:0px 40px;"}
 
-Your Pozi site may be configured with search options for users to type in values for searching.
+Your Pozi site may be configured with standard search options for users to type in values for searching. (A 'standard' search is one that appears in the top section of the search drop-down menu.)
 
-These search options can be accessed via a URL parameter.
+These standard search options can be accessed via a URL parameter.
 
 `https://sitename.pozi.com/#/search[searchname,searchvalue]/`
 
