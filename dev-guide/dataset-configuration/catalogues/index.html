@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.756339147457">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.756348441182">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -33,12 +33,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.756339147457" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.756348441182" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.756339147457" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.756348441182" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.756339147457" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.756339147457" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.756348441182" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.756348441182" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -781,14 +781,20 @@
     </h3>
 </doc-anchor-target>
 <p>The <code v-pre>layerFilter</code> setting allows for managing what layers to show/hide. Only the layers that match the filter will be shown.</p>
-<p>The matching is case-insensitive and allows for the use of wildcards for inclusion/exclusion.</p>
+<p>The matching is case-insensitive and allows for the use of wildcards for inclusion/exclusion and is based on a software library, called <a href="https://github.com/isaacs/minimatch" class="outbound" target="_blank"><span>minimatch</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
+<p>It is possible to configure multiple filter rules, separated by a semi-colon (<code v-pre>;</code>). In that case, <strong>every</strong> filter rule must be satisfied for a layer to be shown! This allows for situations where some exclusions need to apply.</p>
 <p><strong>Example filter settings</strong>:</p>
 <ul>
-<li><code v-pre>&quot;kindergartens; schools&quot;</code>: only show the layers that are called <code v-pre>kindergartens</code> or <code v-pre>schools</code></li>
-<li><code v-pre>&quot;kinder*; *zones; *bus*&quot;</code>: show all layers that start with <code v-pre>kinder</code>, end with <code v-pre>zones</code> or have the word <code v-pre>bus</code> anywhere in the layer name</li>
-<li><code v-pre>&quot;!(child care centres | schools)&quot;</code>: hide layers that are called <code v-pre>child care centres</code> or <code v-pre>schools</code></li>
-<li><code v-pre>&quot;!(kinder* | *zones | *bus*)&quot;</code>: hide all layers that start with <code v-pre>kinder</code>, end with <code v-pre>zones</code> or have the word <code v-pre>bus</code> anywhere in the layer name</li>
-<li><code v-pre>&quot;(*urban* | *commercial*); !(*boundary | *dem*)&quot;</code>: show all layers that either have <code v-pre>urban</code> or <code v-pre>commercial</code> in their name but exclude any of these matching layers that end with <code v-pre>boundary</code> or have <code v-pre>dem</code> anywhere in the name</li>
+<li><code v-pre>*</code>: show all layers. This is effectively the same as having no layer filter.</li>
+<li><code v-pre>vicmap aerial</code>: only show the layer with this exact name</li>
+<li><code v-pre>{ vicmap aerial, vicmap cartographic }</code>: only show the layers called <code v-pre>vicmap aerial</code> or <code v-pre>vicmap cartographic</code></li>
+<li><code v-pre>vicmap *</code>: show all the layers that start with <code v-pre>vicmap </code></li>
+<li><code v-pre>vicmap * ; ! *overlay</code>: show all the layers that start with <code v-pre>vicmap </code> excluding any that end with <code v-pre> overlay</code></li>
+<li><code v-pre>! *overlay</code>: show all layers excluding any that end with <code v-pre>overlay</code></li>
+<li><code v-pre>! { *aerial, *overlay }</code>: show all layers excluding any that end with <code v-pre>aerial</code> or <code v-pre>overlay</code></li>
+<li><code v-pre>{ kinder*, *zones, *bus* }</code>: show all layers that start with <code v-pre>kinder</code>, end with <code v-pre>zones</code> or have the word <code v-pre>bus</code> anywhere in the layer name</li>
+<li><code v-pre>! { kinder*, *zones, *bus* }</code>: hide all layers that start with <code v-pre>kinder</code>, end with <code v-pre>zones</code> or have the word <code v-pre>bus</code> anywhere in the layer name</li>
+<li><code v-pre>{ *urban*, *commercial*) ; ! { *boundary, *dem* }&quot;</code>: show all layers that either have <code v-pre>urban</code> or <code v-pre>commercial</code> anywhere in their name but exclude any of these matching layers that end with <code v-pre>boundary</code> or have <code v-pre>dem</code> anywhere in the name</li>
 </ul>
 <doc-panel id="example" collapsed>
     <template #title>Example</template>
