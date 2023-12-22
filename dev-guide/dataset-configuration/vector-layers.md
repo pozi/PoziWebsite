@@ -514,10 +514,6 @@ Produce one feature for each geometry in any kind of geometry collection in the 
 
 `-explodecollections`
 
-##### Spatial Intersection
-
-##### Unified Search
-
 #### Case Studies
 
 ##### Filtering Static GeoJSON

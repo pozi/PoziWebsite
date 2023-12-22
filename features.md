@@ -176,7 +176,7 @@ Ultimate integration with your organisation's cloud infrastructure, with Azure A
 
 ## Feature Round-Up
 
-* Unified Search: search across multiple datasets in a single autocomplete search box
+* Search: search across your datasets in a simple autocomplete search box
 * Table View: view, filter and search layer features in an interactive table view that's synchronised to the map
 * Layer Search: easily find map layers by typing in the layer search box to reveal layers that match the layer name, group name or associated metadata
 * Print: generate print-ready PDFs with organisation logo in various page sizes and orientations; optionally add a report with statistics of features within the current map view

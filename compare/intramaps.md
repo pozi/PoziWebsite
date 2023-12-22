@@ -235,8 +235,7 @@ When you fund the development of new features, you have ongoing access to the ne
 | Mail merge | ✔️ | ✔️ |
 | Share link | ✔️ | ✔️ |
 | Measure | ✔️ | ✔️ |
-| Data entry | ✔️ | (coming soon) |
-| Unified search | ❌ | ✔️ |
+| Search in any layer | ❌ | ✔️ |
 | Two-way community consultation | ❌ | ✔️ |
 | <big>**Layer Options**</big> | | |
 | Opacity | ✔️ | ✔️ |

@@ -39,14 +39,6 @@ Enable internal users to view and interact with corporate GIS layers on your org
 - integration with any web-based corporate applications with open APIs
 - launch Pozi from any application with map pre-zoomed to specific feature
 
-### Unified Search
-
-Upgrading to Pozi Enterprise delivers more targeted information to staff via its Unified Search:
-
-- search within datasets (eg, address, property owner name, asset id)
-- filter layers by name, tag
-- filter features within layers based on attributes
-
 ### Advanced Workflows
 
 Pozi Enterprise enables staff to carry out critical workflows within its use-to-use interface:

@@ -20,8 +20,6 @@ The tour starts with the user experience, and then well look at the back-end.
 
 ### Searching
 
-* unified search
-
 ### What's Here
 
 https://frankston.pozi.com/

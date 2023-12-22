@@ -13,7 +13,6 @@ Administrators control the following aspects of the Pozi experience:
 
 * add and configure layers and linked datasets for viewing within your network
 * sync layers to Pozi cloud for external viewing
-* add layer to Unified Search index
 * embed custom maps and widgets in your website
 
 [!ref icon="stack" text="Working with layers"](/admin-guide/qgis/configuring-layers/)

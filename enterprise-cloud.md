@@ -12,7 +12,6 @@ Pozi's *Enterprise Cloud* upgrade unlocks powerful new capabilities.
 
 - single sign-on using Microsoft Azure AD
 - direct publishing map layers to public from QGIS
-- simplified configuration of Pozi's Unified Search
 
 ## What's in Pozi Enterprise Cloud?
 
@@ -64,18 +63,6 @@ In QGIS, you can:
 - and more
 
 Set up your layers for publishing using QGIS, and let Pozi Publisher take care of the rest. The datasets and styles you've configured in QGIS are synchronised to POzi's public cloud for easy access by the public within the Pozi web application.
-
-#### Unified Search Index Builder
-
-Pozi's Unified Search provides users with a single search tool in which they can type any text to start searching across multiple datasets.
-
-Until now, controlling the search experience has required specialised knowledge and careful editing of special XML configuration files.
-
-Now, Pozi Enterprise Cloud enables you to easily control your users' search experience using QGIS.
-
-- enable any dataset from your library to be included in the Unified Search
-- deliver more targetted search results
-- dynamically build and test your search index
 
 ## Upgrade
 
