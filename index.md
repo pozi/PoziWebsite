@@ -1,6 +1,6 @@
 ---
 title: Pozi
-description: Pozi is a high performance hosted web map that enables organisations to easily share their GIS data to drive business efficiencies and community engagement. Developed in Melbourne Australia, with no long term lock in contracts.
+description: Pozi is a high performance hosted web map that enables organisations to easily share their GIS data to drive business efficiencies and community engagement.
 layout: central
 ---
 
@@ -178,7 +178,7 @@ Our team works with you to customise and maintain your map application - you're 
 
 ## Why Pozi?
 
-Pozi is your new geospatial software solution; a hosted web map solution tailored for organisations who need to:
+Pozi is your new geospatial enquiry solution for organisations who need to:
 
 ||| ![](/static/img/person-exclamation.png)
 Make timely and informed decisions about infrastructure, properties and workforce
@@ -230,7 +230,7 @@ Deliver data to staff and public – easily and affordably. Users can access the
 
 ### Let's get technical...
 
-Pozi runs from our secure Australian-based web server. This means you get all the benefits of cloud computing (security, backups, disaster recovery and continuous upgrades) and ongoing support.
+Pozi is served from a secure Australian-based web host. This means you get all the benefits of cloud computing (security, backups, disaster recovery and continuous upgrades) and ongoing support.
 
 ✔️ Responsive design for desktop, tablet and mobile devices<br/>
 ✔️ Bookmarking of locations, layers and features for sending links and embedding custom maps in your website<br/>

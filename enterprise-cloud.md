@@ -49,7 +49,7 @@ Pozi Enterprise Cloud leverages your organisation's Azure Active Directory to co
 
 #### Publish to Public
 
-Keep the public informed with information from your organisation's geospatial knowledge. Pozi Publisher enables you to effortlessly publish any of your organisation's internally-maintained datasets out to the public.
+Keep the public informed with information from your organisation's geospatial knowledge. Pozi Publisher enables you to effortlessly publish any of your organisation's internally-maintained datasets to the public.
 
 Pozi Publisher leverages your QGIS projects to control the datasets you publish to the cloud.
 
@@ -62,7 +62,7 @@ In QGIS, you can:
 - join spatial and non-spatial data
 - and more
 
-Set up your layers for publishing using QGIS, and let Pozi Publisher take care of the rest. The datasets and styles you've configured in QGIS are synchronised to POzi's public cloud for easy access by the public within the Pozi web application.
+Set up your layers for publishing using QGIS, and let Pozi Publisher take care of the rest. The datasets and styles you've configured in QGIS are synchronised to Pozi's public cloud for easy access by the public within the Pozi web application.
 
 ## Upgrade
 

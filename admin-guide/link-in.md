@@ -104,7 +104,7 @@ Launch Pozi with one of the five available panels displayed to the left of the m
 - `tools`
 - `about`
 
-Example: `https://bendigo.pozi.com/#/tab[layers]/`
+Example: https://bendigo.pozi.com/#/tab[layers]/
 
 ### Location by Property Identifier (Legacy)
 

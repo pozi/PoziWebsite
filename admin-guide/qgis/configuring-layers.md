@@ -73,17 +73,17 @@ Evaluate the pros and cons of using vectors for your layer, and if appropriate, 
   * download
 * when a vector layer is turned on, Pozi loads the entire layer in the browser, including all geometries and attributes. The browser doesn't need to send further requests for the layer to the server every time the map moves
 * when hovering over a vector feature the cursor changes to indicate the feature is clickable, and a tooltip is displayed with the feature's title
-* more focussed info results - when a vector feature is selected, only the selected feature's details are displayed. The info panel does not show the details of other features at the same location
+* when a vector feature is selected, only the selected feature's details are displayed - the info panel does *not* show the details of other features at the same location
 
 #### Disadvantages of vector layers
 
 * the browser can be easily overwhelmed when dealing with thousands of features or complex features with many vertices, resulting in slow map rendering
 * not all QGIS styles are supported in Pozi for vector features
-* only one vector feature can be selected at a time - info results are not displayed for any features (whether in the same or different layer) that have been overlapped by another feature
-* *What's Here* results are not displayed when a vector feature is selected - this can be problematic for polygon layers because users cannot interrogate what's underneath any vector polygon features
-* cannot directly use text expressions for labels (but you can still make use of virtual fields for creating generating custom label values)
+* only one vector feature can be selected at a time - info results are not displayed for any features (whether in the same or different layer) that have been overlapped by the selected feature
+* *What's Here* results are not displayed when a vector feature is selected - this can be problematic for some polygon layers because users cannot interrogate what's underneath any vector polygon features
+* cannot directly use text expressions for labels (but you can still make use of [virtual fields](#virtual-fields) for creating generating custom label values)
 
-As a guideline, use vectors only for layers with fewer than 5-10K features, or even fewer for layers with complex polylines or polygons. Also for polygon layers, consider that features can prevent users from interrogating any features underneath.
+As a guideline, use vectors only for layers with fewer than 5-10K features, or even fewer for layers with complex polylines or polygons. Also for polygon layers, consider that vector polygons will prevent users from interrogating any features underneath.
 
 ### Enabling Vector Layer
 

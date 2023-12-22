@@ -19,7 +19,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ### New Features
 
-- [ ] fine-grained user permission control utilising Azure AD
+- [ ] right-click option for selecting features
 - [ ] collaborative map annotations
 - [ ] 3D view
 - [ ] dynamic loading of layer catalogues
@@ -47,6 +47,10 @@ We also offer clients the opportunity to sponsor development of new features, gi
 ---
 
 ## Completed
+
+### December 2023
+
+- [x] ⚡ search any vector layer!
 
 ### October 2023
 
