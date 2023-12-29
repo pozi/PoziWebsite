@@ -1,18 +1,8 @@
 ---
 title: Widgets
 order: 20
-tags: [Pozi Pro]
+tags: [Pozi Pro, Pozi Enterprise, Pozi Enterprise Cloud]
 icon: rows
----
-
-:::note Under Construction
-
-*This page is a work in progress. Please refer to our existing Help Guide for information about this topic.*
-
-[Existing Help Guide](https://help.pozi.com/search?query=widgets)
-
-:::
-
 ---
 
 *Available for Pozi Pro, Enterprise and Enterprise Cloud customers*

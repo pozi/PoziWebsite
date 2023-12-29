@@ -20,11 +20,10 @@ We also offer clients the opportunity to sponsor development of new features, gi
 ### New Features
 
 - [ ] right-click option for selecting features
+- [ ] option to display legend in print output
+- [ ] profiles - create custom layer collections for different users or workflows - like "modules", but better!
 - [ ] collaborative map annotations
 - [ ] 3D view
-- [ ] dynamic loading of layer catalogues
-  - improve start-up time
-  - enable clients to add custom layers from external sources
 
 ### Enhancements
 
@@ -50,7 +49,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ### December 2023
 
-- [x] ⚡ search any vector layer!
+- [x] ⚡ search for features in any vector layer!
 
 ### October 2023
 

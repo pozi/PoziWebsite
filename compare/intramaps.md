@@ -118,7 +118,7 @@ When you ask Pozi for help, we'll acknowledge your request within 24 hours, and 
 
 Do you already have your own GIS support provider? No worries. We'll work with them and provide access to the resources they need to deliver the support you deserve.
 
-Pozi's open architecture enables any GIS support provider to customise and maintain Pozi to your organisation's requirements.
+Pozi's open architecture enables you or any GIS support provider you engage to customise and maintain Pozi to your organisation's requirements.
 
 <br/>
 

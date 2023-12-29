@@ -59,11 +59,11 @@ This is defined in Enterprise Applications => Application Proxy => Internal Url.
 - Queenscliffe: `http://boq-serv-4/pozi/`
 - Glen Eira: `http://th-prod-maps/pozi/`
 - Swan Hill: `http://qgis.swanhill.vic.gov.au/pozi/`
+- Horsham: `http://hrccsvrgis01/pozi/`
 
 ==- Examples (other)
 
 - Southern Grampians: `https://bs-gis.pozi.com/iis/`
-- Horsham: `https://hrccsvrgis01.pozi.com/iis/`
 - Cardinia: (none)
 - Northern Grampians: `https://local.pozi.com/`
 - Loddon: `https://poziserver.loddon.vic.gov.au/iis/`
