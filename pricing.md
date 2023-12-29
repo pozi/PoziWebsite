@@ -32,27 +32,36 @@ Pozi delivers powerful location-based functionality at a fraction of the cost of
     .pricingTable th {
         background: #E9E9E9;
     }
-    .pricingTable tr:nth-child(2) { background: #F9F9F9; }
+    .pricingTable tr:nth-child(1) { background: #F9F9F9; }
 </style>
 
 <div class="pricingTable">
 
-| :icon-megaphone: <h3>Public</h3> | :icon-tools: <h3>Pro</h3> | :icon-organization: <h3>Enterprise</h3> | :icon-rocket: <h3>Enterprise Cloud</h3> | { class="compact" }
----    | ---
-| *Perfect for publishing your organisation's data to the public* | *When your users demand a higher level of interaction* | *Highly functional corporate geospatial solution* | *Ultimate integration with your organisation's cloud infrastructure* |
-| | <small>All the features of Pozi Public, plus:</small> | <small>All the features of Pozi Pro, plus:</small> | <small>All the features of Pozi Enterprise, plus:</small> |
-| ✔️ Live, authoritative data | ✔️ Community consultation module | ✔️ [QGIS integration](/qgis/) | 🚀 Azure AD Application Proxy integration |
-| ✔️ Customer support | ✔️ Advanced search | ✔️ Corporate system integrations | 📃 Enterprise Cloud Service Level Agreement |
-| ✔️ Responsive design | ✔️ Nearby places | ✔️ Public data sync | 👤 Up to 250 authenticated users (ask us for a quote for additional users) |
-| ✔️ Intelligent address search | ✔️ Multiple imagery layers | ✔️ Table view |  |
-| ✔️ GPS location | ✔️ Map widget |  |  |
-| ✔️ Aerial imagery | ✔️ Data widget |  |  |
-| ✔️ Unlimited users | ✔️ Layer filtering |  |  |
-| ✔️ Zero installation | ✔️ Multi-select |  |  |
-| ✔️ Custom maps | ✔️ Custom bookmarking |  |  |
-| | ✔️ GPS tracking |  |  |
-| [More info](/features/#pozi-public) | [More info](/features/#pozi-pro) | [More info](/features/#pozi-enterprise) | [More info](/features/#pozi-enterprise-cloud) |
-
+| &nbsp; | <h3>Public</h3> | <h3>Pro</h3> | <h3>Enterprise</h3> | <h3>Enterprise Cloud</h3> |
+|:--- |: --- :|: --- :|: --- :|: --- :|
+| | | | <small>*to be discontinued*</small> | |
+| Live, authoritative data | **✓** | **✓** | **✓**| **✓** |
+| Customer support | **✓** | **✓** | **✓** | **✓** |
+| Responsive design | **✓** | **✓** | **✓** | **✓** |
+| Intelligent address search | **✓** | **✓** | **✓** | **✓** |
+| GPS location | **✓** | **✓** | **✓** | **✓** |
+| Aerial imagery | **✓** | **✓** | **✓** | **✓** |
+| Unlimited users | **✓** | **✓** | **✓** | **✓** |
+| GPS tracking | | **✓** | **✓** | **✓** |
+| [Community consultation module](admin-guide/community-consultation/) | | **✓** | **✓** | **✓** |
+| Advanced search | | **✓** | **✓** | **✓** |
+| Nearby places | | **✓** | **✓** | **✓** |
+| Multiple imagery layers | | **✓** | **✓** | **✓** |
+| [Widgets](/admin-guide/widgets/) | | **✓** | **✓** | **✓** |
+| Layer filtering | | **✓** | **✓** | **✓** |
+| Multi-select | | **✓** | **✓** |**✓**  |
+| [QGIS integration](/qgis/) | | | **✓** | **✓** |
+| [Corporate system integrations](/admin-guide/integrations/) | | | **✓** | **✓** |
+| Table view | | | **✓** | **✓** |
+| 🚀 Azure AD Application Proxy integration| | | | **✓** |
+| 📃 Enterprise Cloud Service Level Agreement | | | | **✓** |
+| 👤 Up to 250 authenticated users (ask us for a quote for additional users) | | | | **✓** |
+| &nbsp; | [Learn more](/features/#pozi-public) | [Learn more](/features/#pozi-pro) | [Learn more](/features/#pozi-enterprise) | [Learn more](/features/#pozi-enterprise-cloud) |
 </div>
 
 <br/>
@@ -128,7 +137,7 @@ Pozi Connect generates property and address change reports (M1s) for Victorian m
 
 #### Reconfiguration
 
-If your council is already using Pozi Connect, and you've switched to a new property system, we'll reconfigure your Pozi Connect to integrate with your new property system.
+If your council is already using Pozi Connect, and you've switched to a new property system, we'll reconfigure your Pozi Connect to integrate with your new property system. Ask us for a quote.
 
 <br clear="all" />
 
