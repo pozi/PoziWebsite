@@ -38,7 +38,36 @@ In the above example:
 
 Administrators can use QGIS to configure child datasets for viewing by internal users. The parent dataset can be an internal or external dataset.
 
-## Add Dataset
+## Joined Datasets vs Linked Datasets
+
+Before configuring a *linked* dataset, you may consider using a *joined* dataset.
+
+### Joined Datasets
+
+Joined datasets take advantage of QGIS's built-in table join function.
+
+Configuring *joined* tables in QGIS may be suitable when:
+
+- there is a one-to-one relationship between records in parent and child tables
+- the table has fewer than 10,000 records (larger tables are still supported, however you may observe that they are slow to load)
+- users expect to search on joined attributes or view them in a table
+
+Attributes from *joined* tables appear in the Pozi info panel in the same information tab as the parent dataset.
+
+If you decide a *joined* dataset is right for you, see [here](https://docs.qgis.org/3.34/en/docs/user_manual/working_with_vector/joins_relations.html#joining-features-between-two-layers) for information on how to configure it in QGIS. The remainder of the instructions on this page are not relevant to joined datasets.
+
+### Linked Datasets
+
+Alternatively, adding *linked* datasets (as covered in this page) is recommended when:
+
+- there is a one-to-many relationship between records in the tables, or
+- for tables with more than 10,000 records
+
+Attributes from *linked* tables appear in the Pozi info panel in separate tabs below the parent's information tab.
+
+If you decide a *linked* dataset is right for you, continue to the instructions below.
+
+## Add Linked Dataset
 
 Add the source table for the child dataset to a [QGIS project](managing-qgis-projects). The project can be an existing project that contains map layers or it can be a dedicated project that contains no layers and only child datasets.
 
