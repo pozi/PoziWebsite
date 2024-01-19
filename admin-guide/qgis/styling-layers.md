@@ -130,11 +130,9 @@ See [Virtual Fields](configuring-layers.md#virtual-fields) for more information.
 
 ### Fallback Style
 
-When using the Classify button to generate styles for each unique value, QGIS automatically generates an additional **fallback** style for "*all other values*". However this function is not supported in Pozi, and Pozi will display **all** the layer's features with the fallback style.
+When using the Classify button to generate styles for each unique value, QGIS automatically generates an additional **fallback** style for "*all other values*". However this function is not supported in Pozi - this style category will be ignored by Pozi.
 
 ![](img/qgis-layer-styling-categorized-remove-all-other-values.png){style="width:600px"}
-
-Delete the "*all other values*" item from the list before saving.
 
 ## Opacity
 
