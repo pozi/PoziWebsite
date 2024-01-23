@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.758953122857">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.759366736395">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -33,12 +33,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.758953122857" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.759366736395" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.758953122857" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.759366736395" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.758953122857" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.758953122857" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.759366736395" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.759366736395" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -458,6 +458,12 @@
 </tr>
 <tr>
 <td></td>
+<td><code v-pre>projection</code></td>
+<td>When data is extracted from a WFS service, the default projection of WGS84 Latitude/Longitude (EPSG:4326) can be overwritten by specifying the EPSG code.</td>
+<td><code v-pre>projection=7855</code></td>
+</tr>
+<tr>
+<td></td>
 <td><code v-pre>backupFolder</code></td>
 <td>Destination folder for creating time-stamped backup QGIS files, to enable version control.</td>
 <td><code v-pre>backupFolder=C:\Pozi\Backup</code></td>
@@ -515,6 +521,12 @@
 <td><code v-pre>secret</code></td>
 <td>Secret</td>
 <td><code v-pre>secret={Add Secret}</code></td>
+</tr>
+<tr>
+<td><strong><code v-pre>[WFS]</code></strong></td>
+<td><code v-pre>parameters</code></td>
+<td>Specify extra parameters when calling a WFS service. This is particularly important when calling large datasets that have a limit on records that will be returned on a single call, as it can enable pagination.  Firstly, the full data name (defined by the <code v-pre>&lt;Name&gt;</code> element in the GetCapabilities call) needs to be specified.  This is followed by a pipe (|) character, then the extra parameters that are to be concatenated to the end of the WFS service call.  The <code v-pre>cql_filter</code> parameter is particularly useful for returning subsets of a large dataset - the example limits the records returned to active properties within a specific LGA.  When requesting a dataset that requires pagination, it is critical that a <code v-pre>sortBy</code> criteria is added with a unique field to sort by.  Without this the call will fail.</td>
+<td><code v-pre>parameters=open-data-platform:v_property_mp\|cql_filter=prop_lga_code IN (330) AND prop_status='A'&amp;sortBy=prop_pfi</code></td>
 </tr>
 </tbody>
 </table>
