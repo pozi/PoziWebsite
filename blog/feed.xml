@@ -5,7 +5,7 @@
     <link>https://pozi.com/blog/</link>
     <description>Blog</description>
     <copyright>© Copyright 2024 - Pozi Pty Ltd</copyright>
-    <lastBuildDate>Tue, 14 Mar 2023 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jan 2024 00:00:00 GMT</lastBuildDate>
     <generator>https://retype.com</generator>
     <atom:link rel="self" type="application/rss+xml" href="https://pozi.com/blog/feed.xml" />
     <image>
@@ -13,6 +13,14 @@
       <link>https://pozi.com/blog/</link>
       <url>https://pozi.com/favicon.ico</url>
     </image>
+    <item>
+      <title>Introducing Advanced Selection</title>
+      <guid isPermaLink="true">https://pozi.com/introducing-advanced-selection/</guid>
+      <description>A new way to interact with your map layers</description>
+      <author>Simon O'Keefe</author>
+      <pubDate>Mon, 29 Jan 2024 00:00:00 GMT</pubDate>
+      <category domain="https://pozi.com/categories/whats-new/">What's New</category>
+    </item>
     <item>
       <title>Upgrade to Pozi Connect 2.10.0</title>
       <guid isPermaLink="true">https://pozi.com/upgrade-to-pozi-connect-2-10-0/</guid>

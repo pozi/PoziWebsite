@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.759366736395">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.759800728297">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -24,22 +24,22 @@
     <meta property="og:url" content="https://pozi.com/user-guide/enquire/">
     <meta property="og:title" content="Enquire | Pozi Web GIS | Online Map">
     <meta property="og:description" content="To discover information about any location on the map, click on the map or use the search tool to find your location.">
-    <meta property="og:image" content="https://pozi.com/user-guide/img/info-panel-parent-and-child-records.png">
+    <meta property="og:image" content="https://pozi.com/user-guide/img/bulk-selection-table-view.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pozi.com/user-guide/enquire/">
     <meta property="twitter:title" content="Enquire | Pozi Web GIS | Online Map">
     <meta property="twitter:description" content="To discover information about any location on the map, click on the map or use the search tool to find your location.">
-    <meta property="twitter:image" content="https://pozi.com/user-guide/img/info-panel-parent-and-child-records.png">
+    <meta property="twitter:image" content="https://pozi.com/user-guide/img/bulk-selection-table-view.png">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.759366736395" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.759800728297" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.759366736395" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.759800728297" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.759366736395" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.759800728297" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -391,6 +391,37 @@
 <li>click on map locations to define the enquiry path</li>
 <li>double-click to finish</li>
 </ol>
+<doc-anchor-target id="additional-point-locations">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#additional-point-locations">#</doc-anchor-trigger>
+        <span>Additional Point Locations</span>
+    </h4>
+</doc-anchor-target>
+<p>You can add point locations to any current <em>What&#x27;s Here</em> selection by holding down the <code v-pre>Ctrl</code> key and clicking on the map.</p>
+<doc-anchor-target id="viewing-and-exporting-results">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#viewing-and-exporting-results">#</doc-anchor-trigger>
+        <span>Viewing and Exporting Results</span>
+    </h4>
+</doc-anchor-target>
+<p>The results of a multi-selection can be viewed as a table and optionally downloaded. An options button (three stacked dots) is shown at the top of each result set. Click the dots to view the selected features in a table view.</p>
+<p><figure class="content-center">
+    <img src="../img/bulk-selection-table-view.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>Then use the table&#x27;s download button to optionally download the results in CSV format.</p>
+<p><figure class="content-center">
+    <img src="../img/table-download.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>If a layer has any linked/child datasets, you&#x27;ll also see menu options to view those results as a table too. This enables you to bulk select properties on the map to view/download any linked information such as property owner details, animal registrations, planning permits, etc. Similarly, you can bulk select asset features on the map to view all related inspection or maintenance events for those assets. Any child dataset that has been configured for the active layer will be available to view and download in this menu.</p>
+<p><figure class="content-center">
+    <img src="../img/bulk-selection-options-with-child-datasets.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <doc-anchor-target id="feature-selection">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#feature-selection">#</doc-anchor-trigger>
