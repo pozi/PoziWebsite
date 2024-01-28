@@ -44,6 +44,24 @@ To enquire on a path (for example, to select all the properties along a pipeline
 3. click on map locations to define the enquiry path
 4. double-click to finish
 
+#### Additional Point Locations
+
+You can add point locations to any current *What's Here* selection by holding down the `Ctrl` key and clicking on the map.
+
+#### Viewing and Exporting Results
+
+The results of a multi-selection can be viewed as a table and optionally downloaded. An options button (three stacked dots) is shown at the top of each result set. Click the dots to view the selected features in a table view.
+
+![](img/bulk-selection-table-view.png)
+
+Then use the table's download button to optionally download the results in CSV format.
+
+![](img/table-download.png)
+
+If a layer has any linked/child datasets, you'll also see menu options to view those results as a table too. This enables you to bulk select properties on the map to view/download any linked information such as property owner details, animal registrations, planning permits, etc. Similarly, you can bulk select asset features on the map to view all related inspection or maintenance events for those assets. Any child dataset that has been configured for the active layer will be available to view and download in this menu.
+
+![](img/bulk-selection-options-with-child-datasets.png)
+
 ## Feature Selection
 
 Any map layers that are configured from a *vector* data source are directly interactive, allowing you to select individual features on the map to view its details.
