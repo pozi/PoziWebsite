@@ -61,7 +61,7 @@ Pozi delivers powerful location-based functionality at a fraction of the cost of
 | 🚀 Azure AD Application Proxy integration| | | | **✓** |
 | 📃 Enterprise Cloud Service Level Agreement | | | | **✓** |
 | 👤 Up to 250 authenticated users (ask us for a quote for additional users) | | | | **✓** |
-| &nbsp; | [Learn more](/features/#pozi-public) | [Learn more](/features/#pozi-pro) | [Learn more](/features/#pozi-enterprise) | [Learn more](/features/#pozi-enterprise-cloud) |
+| &nbsp; | [Learn more](/features/#pozi-public) | [Learn more](/features/#pozi-pro) | | [Learn more](/features/#pozi-enterprise-cloud) |
 </div>
 
 <br/>

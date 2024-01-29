@@ -177,6 +177,10 @@ Open the IIS Manager, and recycle the PoziQgisServer application pool.
 
 ![IIS recycle](./img/iis-application-pool-recycle.png){style="width:600px"}
 
+==- Features in WMS layers are not highlighted when clicked on
+
+Go to Project > Properties > QGIS Server > WMS > `Add geometry to feature response` > tick ON
+
 ==-
 
 For further assistance, contact support@pozi.com.
