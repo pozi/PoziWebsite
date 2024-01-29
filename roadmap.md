@@ -20,7 +20,6 @@ We also offer clients the opportunity to sponsor development of new features, gi
 ### New Features
 
 - [ ] right-click option for selecting features
-- [ ] option to display legend in print output
 - [ ] profiles - create custom layer collections for different users or workflows - like "modules", but better!
 - [ ] collaborative map annotations
 - [ ] 3D view
@@ -33,30 +32,63 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ---
 
-## In Development
-
-### New Features
-
-- [ ] Pozi Publisher - ultimate spatial data catalogue management
-  - publish map layers to the public from QGIS projects
-  - improve start-up performance by pre-generating map catalogues
-  - tap into external data providers with minimal configuration
-  - build search indexes from QGIS project settings
-
----
-
 ## Completed
+
+### January 2024
+
+#### New
+
+- [x] ⚡ new option to display map legend in print output
+
+#### Improved
+
+- [x] 👍 add support for MultiPoint features in WMS GetFeatureInfo requests
+- [x] 👍 add support for alternative proxy servers
+- [x] 👍 make info panel cleaner by removing redundant layer icon
+- [x] 👍 notify user if link-in feature is not found
+
+#### Fixed
+
+- [x] 🪲 exclude irrelevant results when a search contains an apostrophe
+- [x] 🪲 safely ignore *"all other values"* style category that QGIS automatically generates to preserve styling for other categories
 
 ### December 2023
 
+#### New
+
 - [x] ⚡ search for features in any vector layer!
+
+### November 2023
+
+#### Improved
+
+- [x] 👍 automatically fetch and display legends for any active WMS layer
+- [x] 👍 reduce Google Analytics traffic by eliminating triggering on hover events
 
 ### October 2023
 
 #### Improved
 
-- [x] 👍 add support for map ids in Google Maps
-- [x] 👍 make annotation layer not selectable to prevent display issues
+- [x] 👍 cleaner look and feel for layer panel
+- [x] 👍 add support for Vicmap vector tile basemap
+- [x] 👍 add support for map ids in Google Maps for accessing non-default basemaps
+- [x] 👍 allow label layer to switched off without switching off any linked layer
+- [x] 👍 better handle images through Azure App Proxy so user doesn't need to re-authenticate
+- [x] 👍 use three-dots icon for info results options (replacing table icon)
+- [x] 👍 allow Azure proxy endpoint to be set for each site
+- [x] 👍 hide WMS legend label for single symbol layers
+- [x] 👍 improve ordering of search results
+display alternative title for GetFeatureInfo features when specified title field is empty
+add support for various geometry types for GetFeatureInfo requests
+
+
+
+
+#### Fixed
+
+- [x] 🪲 fix Google Spreadsheet layer integration
+- [x] 🪲 prevent app sending Google basemap requests when layer is disabled
+- [x] 🪲 make annotation layer not selectable to prevent display issues
 
 ### September 2023
 
@@ -68,6 +100,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 #### Improved
 
 - [x] 👍 simplify URLs that contain a single-click *What's Here* target
+- [x] 👍 remove feature limits on DEECA WFS datasets in *What's Here* results
 
 ### August 2023
 
@@ -85,6 +118,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [x] 👍 remove outdated information from About panel
 - [x] 👍 don't change cursor to hand icon when hovering over non-queryable feature
 - [x] 👍 fit large legend images in layer panel
+- [x] 👍 use only outdoor Google Street View images
 
 ### July 2023
 
