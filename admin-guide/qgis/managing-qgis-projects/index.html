@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.759800728297">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.759813569345">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,11 +35,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.759800728297" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.759813569345" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.759800728297" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.759813569345" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.759800728297" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.759813569345" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -545,8 +545,9 @@
         <span>Troubleshooting</span>
     </h2>
 </doc-anchor-target>
-<doc-panel id="none-of-the-project-s-layers-are-displaying-in-pozi" collapsed>
-    <template #title>None of the project&#x27;s layers are displaying in Pozi</template>
+<doc-panels>
+   <doc-panel id="none-of-the-project-s-layers-are-displaying-in-pozi" collapsed>
+       <template #title>None of the project&#x27;s layers are displaying in Pozi</template>
 <p>Check that advertised URLs contains the exact path and file name of the .qgs project file.</p>
 <p>Ensure that <code v-pre>Use layer ids as names</code> is NOT ticked. See Project &gt; Properties &gt; QGIS Server &gt; WMS.</p>
 <p>Check the Network panel in your browser console as you turn on layers. Look at the <code v-pre>GetFeature</code> requests and preview the response. If it contains bounding box coordinates but no records, there may be an issue with IIS.</p>
@@ -556,7 +557,12 @@
     <figcaption class="caption">IIS recycle</figcaption>
 </figure>
 </p>
-</doc-panel>
+   </doc-panel>
+   <doc-panel id="features-in-wms-layers-are-not-highlighted-when-clicked-on" collapsed>
+       <template #title>Features in WMS layers are not highlighted when clicked on</template>
+<p>Go to Project &gt; Properties &gt; QGIS Server &gt; WMS &gt; <code v-pre>Add geometry to feature response</code> &gt; tick ON</p>
+   </doc-panel>
+</doc-panels>
 <p>For further assistance, contact <a href="mailto:support@pozi.com">support@pozi.com</a>.</p>
 
                                 
