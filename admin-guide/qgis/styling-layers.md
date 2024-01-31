@@ -196,8 +196,6 @@ Pozi will display layers in a generic style (often purple) if it cannot process 
 
 Simplify the style in the QGIS project and try again. For point features, replace custom point symbols with one of the [standard symbols](#points) specified above. For polygon features, replace hatch styles with semi-opaque fills or any of the [supported fill styles](#polygons) specified above.
 
-If using a *categoized* style, remove any style that QGIS generates for *all other values*. See [Fallback Style](#fallback-style) above.
-
 ==- Selected features from WMS layers are displayed with a mis-shaped highlight
 
 It's possible that the GetFeatureInfo response coordinates do not have enough precision.
