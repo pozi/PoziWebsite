@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.760051675386">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.760341143589">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,12 +35,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.760051675386" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.760341143589" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.760051675386" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.760341143589" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.760051675386" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.760051675386" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.760341143589" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.760341143589" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -376,6 +376,22 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
 </code></pre>
 </doc-codeblock></div>
 <p>If IIS has not previously been set up on the server, the command prompt may return <code v-pre>Restart Windows to complete this operation</code>.  Restarting may be necessary for the subsequent configuration.</p>
+<doc-anchor-target id="create-backup">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#create-backup">#</doc-anchor-trigger>
+        <span>Create backup</span>
+    </h2>
+</doc-anchor-target>
+<p>Before continuing or making any changes in the future, it may be a good idea to create a backup.</p>
+<p>Execute the following command for creating a backup:</p>
+<p>&#x27;&#x27;&#x27;
+&quot;%systemroot%\system32\inetsrv\appcmd&quot; add backup
+&#x27;&#x27;&#x27;</p>
+<p>The most relevant files are:</p>
+<p><code v-pre>%windir%\System32\inetsrv\config\applicationHost.config</code></p>
+<p>and</p>
+<p><code v-pre>C:\Pozi\IIS\QgisServer\web.config</code></p>
+<p>It may be worth creating a manual backup of these files too, in order to see what changes have been made to these files.</p>
 <doc-anchor-target id="prepare-folders">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#prepare-folders">#</doc-anchor-trigger>
@@ -627,6 +643,220 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
 <p>Enter the constructed URL into the address bar of your browser, hit Enter, and you should see an XML file that describes the data endpoints for the project&#x27;s layers.</p>
 <br/>
 <hr>
+<doc-anchor-target id="dynamic-compression">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dynamic-compression">#</doc-anchor-trigger>
+        <span>Dynamic Compression</span>
+    </h2>
+</doc-anchor-target>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-500 dark:bg-dark-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-500 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>Under Construction</h5>
+<p><em>This section is a work in progress. Please get in touch with us before following any of the steps below</em></p>
+        </div>
+    </div>
+</div>
+<p>Enable the Dynamic Compression IIS module:</p>
+<p><code v-pre>dism /online /Enable-Feature /FeatureName:IIS-HttpCompressionDynamic</code></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">:: Configure httpCompression settings
+:: &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /directory:&quot;%SystemDrive%\inetpub\temp\IIS Temporary Compressed Files&quot; /commit:apphost
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /doDiskSpaceLimiting:true /commit:apphost
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /maxDiskSpaceUsage:2000 /commit:apphost &amp; :: In megabytes
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /noCompressionForProxies:false  /commit:apphost &amp;:: VERY IMPORTANT, otherwise compression will be disable for Cloudfront/App Proxy
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /staticCompressionIgnoreHitFrequency:true  /commit:apphost
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /dynamicCompressionDisableCpuUsage:100 /commit:apphost
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /dynamicCompressionEnableCpuUsage:100 /commit:apphost
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /dynamicCompressionBufferLimit:4255360000 /commit:apphost &amp;:: VERY IMPORTANT for caching/compressing large results
+
+:: Add Brotli scheme (should not need to be added)
+:: &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;[name='br',dll='%ProgramFiles%\IIS\IIS Compression\iisbrotli.dll']&quot; /commit:apphost
+
+:: Add Gzip scheme (should not need to be added)
+:: &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;[name='gzip',dll='%ProgramFiles%\IIS\IIS Compression\iiszlib.dll']&quot; /commit:apphost
+
+:: Configure staticTypes
+:: &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression/staticTypes.clear
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;staticTypes.[mimeType='*/*spreadsheet*',enabled='false']&quot; /commit:apphost
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;staticTypes.[mimeType='*/*xml*',enabled='true']&quot; /commit:apphost
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;staticTypes.[mimeType='*/*svg*',enabled='true']&quot; /commit:apphost
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;staticTypes.[mimeType='image/*',enabled='false']&quot; /commit:apphost
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;staticTypes.[mimeType='*/*zip*',enabled='false']&quot; /commit:apphost
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;staticTypes.[mimeType='*/*',enabled='true']&quot; /commit:apphost
+
+:: Configure dynamicTypes
+:: &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /dynamicTypes.clear
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;dynamicTypes.[mimeType='*/*spreadsheet*',enabled='false']&quot; /commit:apphost
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;dynamicTypes.[mimeType='*/*xml*',enabled='true']&quot; /commit:apphost
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;dynamicTypes.[mimeType='*/*svg*',enabled='true']&quot; /commit:apphost
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;dynamicTypes.[mimeType='image/*',enabled='false']&quot; /commit:apphost
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;dynamicTypes.[mimeType='*/*zip*',enabled='false']&quot; /commit:apphost
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;dynamicTypes.[mimeType='*/*',enabled='true']&quot; /commit:apphost
+
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;dynamicTypes.[mimeType='application/msword',enabled='True']&quot; /commit:apphost
+
+:: Enable urlCompression
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:urlCompression /doStaticCompression:true /commit:apphost
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:urlCompression /doDynamicCompression:true /commit:apphost
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:urlCompression /dynamicCompressionBeforeCache:true /commit:apphost
+</code></pre>
+</doc-codeblock></div>
+<p>Note the following:</p>
+<ul>
+<li><code v-pre>noCompressionForProxies:false</code>: If this value is not set to <code v-pre>false</code>, IIS will not compress if it detects that the request has come through a proxy. Cloudfront and Azure/Entra Id App Proxy
+fall in that category, so it&#x27;s important to set this value to <code v-pre>false</code>.</li>
+<li><code v-pre>dynamicCompressionBufferLimit</code>: this value (in bytes) determines the maximum uncompressed response size before deciding not to compress the result. It has been observed in some IIS
+instances that when the size gets above 30MB, the response throughput becomes progressively slower as the size increases.</li>
+<li><code v-pre>dynamicCompressionBeforeCache:true</code> has a limit of about 15MB uncompressed or 5MB compressed (on a server with 1GB memory). Any response that is bigger than that will disable compression.
+If the value is set to <code v-pre>false</code>, the response will always be compressed but not cached (if caching is enabled below). The optimal setting of this depends on
+the capabilities of the server that IIS resides on or the speed of the network connection and may need to be assessed on a case by case basis.</li>
+</ul>
+<doc-anchor-target id="caching">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#caching">#</doc-anchor-trigger>
+        <span>Caching</span>
+    </h2>
+</doc-anchor-target>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-500 dark:bg-dark-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-500 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>Under Construction</h5>
+<p><em>This section is a work in progress. Please get in touch with us before following any of the steps below</em></p>
+        </div>
+    </div>
+</div>
+<p>Enable caching from the first request</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/serverRuntime /frequentHitThreshold:1 /commit:apphost
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/serverRuntime /frequentHitTimePeriod:&quot;00:10:00&quot; /commit:apphost</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/caching /enabled:true /commit:apphost
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/caching /enableKernelCache:false /commit:apphost &amp; :: set to false to prevent frequent clearing of cache
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/caching /maxResponseSize:512000000 /commit:apphost</code></pre>
+</doc-codeblock></div>
+<p>TODO: the following to configure web.config does not work yet</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">:: &quot;%systemroot%\system32\inetsrv\appcmd&quot; set config &quot;Default Web Site/Pozi/QgisServer&quot; -section:system.webServer /enabled:true</code></pre>
+</doc-codeblock></div>
+<p>Add to the web.config:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">&lt;configuration&gt;
+    &lt;system.webServer&gt;
+        &lt;!-- ... --&gt;
+		&lt;caching enabled=&quot;true&quot; enableKernelCache=&quot;false&quot;&gt;
+            &lt;profiles&gt;
+                &lt;add extension=&quot;*&quot; policy=&quot;CacheForTimePeriod&quot; kernelCachePolicy=&quot;CacheForTimePeriod&quot; duration=&quot;00:10:00&quot; varyByQueryString=&quot;*&quot; /&gt;
+            &lt;/profiles&gt;
+        &lt;/caching&gt;
+    &lt;/system.webServer&gt;
+&lt;/configuration&gt;</code></pre>
+</doc-codeblock></div>
+<p>This will cache content for 10 minutes. If a longer duration is desired, it is recommended to run the following command every time a QGIS project file
+or any of the layers have changed:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">%windir%\system32\inetsrv\appcmd recycle apppool /apppool.name:PoziQgisServer</code></pre>
+</doc-codeblock></div>
+<p>If that does not clear the cache, then execute the following instead:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">iisreset</code></pre>
+</doc-codeblock></div>
+<p>These command can be added to a batch (.bat) file that the user can run. If administrator privileges are required, then, as administrator, create a shortcut
+to this file and change its properties to get it to run as administrator.</p>
+<doc-anchor-target id="automatci-cache-invalidation">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#automatci-cache-invalidation">#</doc-anchor-trigger>
+        <span>Automatci cache invalidation</span>
+    </h3>
+</doc-anchor-target>
+<p>IIS can choose to not cache or periodically clear the cache. This can happen in the space of minutes and it&#x27;s as of yet unclear how to prevent this from
+happening.</p>
+<doc-anchor-target id="enable-debugging-tracing">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#enable-debugging-tracing">#</doc-anchor-trigger>
+        <span>Enable debugging (tracing)</span>
+    </h2>
+</doc-anchor-target>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-500 dark:bg-dark-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-500 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>Under Construction</h5>
+<p><em>This section is a work in progress. Please get in touch with us before following any of the steps below</em></p>
+        </div>
+    </div>
+</div>
+<p>When requests fail or caching/compression do not work, it is recommended to use IIS&#x27;s tracing functionality to determine the cause if these issues.</p>
+<p>First enable tracing for IIS:</p>
+<p><code v-pre>dism /online /Enable-Feature /FeatureName:IIS-HttpCompressionDynamic</code></p>
+<p>Then add the following to web.config to enable tracing for all requests:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">        &lt;tracing&gt;
+            &lt;traceFailedRequests&gt;
+                &lt;add path=&quot;*&quot;&gt;
+                    &lt;traceAreas&gt;
+                        &lt;add provider=&quot;WWW Server&quot; areas=&quot;Authentication,Security,Filter,StaticFile,CGI,Compression,Cache,RequestNotifications,Module,FastCGI,WebSocket&quot; verbosity=&quot;Verbose&quot; /&gt;
+                    &lt;/traceAreas&gt;
+                    &lt;failureDefinitions statusCodes=&quot;200-999&quot; /&gt;
+                &lt;/add&gt;
+            &lt;/traceFailedRequests&gt;
+        &lt;/tracing&gt;</code></pre>
+</doc-codeblock></div>
+<p>The tracing output files can generally be found in:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">%SystemDrive%\inetpub\logs\FailedReqLogFiles</code></pre>
+</doc-codeblock></div>
+<p>When opening the .xml file in Internet Explorer (!), the user gets presented with an interactive web page. The &#x27;Compact View&#x27; tab can provide useful information.</p>
+<p>It is recommended to turn the feature off by commenting out the code block below when not needed any more.</p>
+<p>Relevant events and their values are:</p>
+<ul>
+<li><code v-pre>OUTPUT_CACHE_LOOKUP_END Result</code>: <code v-pre>FOUND</code>, <code v-pre>NOT_FOUND</code></li>
+</ul>
+<p>More information about tracing failed requests can be found on <a href="https://learn.microsoft.com/en-us/iis/configuration/system.applicationhost/sites/site/tracefailedrequestslogging" class="outbound" target="_blank"><span>Microsoft&#x27;s website</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
+<doc-anchor-target id="restart-iis--application-pool">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#restart-iis--application-pool">#</doc-anchor-trigger>
+        <span>Restart IIS / Application Pool</span>
+    </h2>
+</doc-anchor-target>
+<p>Restart IIS:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">iisreset /restart</code></pre>
+</doc-codeblock></div>
+<p>Restart Application pool:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">%windir%\system32\inetsrv\appcmd recycle apppool /apppool.name:PoziQgisServer</code></pre>
+</doc-codeblock></div>
 <doc-anchor-target id="serving-static-files">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#serving-static-files">#</doc-anchor-trigger>
