@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.760341478077">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.760355541845">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,12 +35,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.760341478077" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.760355541845" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.760341478077" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.760355541845" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.760341478077" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.760341478077" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.760355541845" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.760355541845" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -669,16 +669,60 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
 </div>
 <p>Enable the Dynamic Compression IIS module:</p>
 <p><code v-pre>dism /online /Enable-Feature /FeatureName:IIS-HttpCompressionDynamic</code></p>
+<p>Configure <code v-pre>applicationHost.config</code>, section <code v-pre>configuration.system.webServer</code> the following way by replacing <code v-pre>&lt;httpCompression /&gt;</code> with:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">	    &lt;httpCompression
+            doDiskSpaceLimiting=&quot;true&quot;
+            maxDiskSpaceUsage=&quot;2000&quot; &lt;!-- in MB --&gt;
+            noCompressionForProxies=&quot;false&quot;
+            staticCompressionIgnoreHitFrequency=&quot;true&quot;
+            dynamicCompressionDisableCpuUsage=&quot;100&quot;
+            dynamicCompressionEnableCpuUsage=&quot;100&quot;
+            dynamicCompressionBufferLimit=&quot;4255360000&quot; &lt;!-- in bytes --&gt;
+        &gt;
+
+            &lt;!--
+            &lt;scheme name=&quot;br&quot; dll=&quot;%ProgramFiles%\IIS\IIS Compression\iisbrotli.dll&quot; /&gt;
+            &lt;scheme name=&quot;gzip&quot; dll=&quot;%ProgramFiles%\IIS\IIS Compression\iiszlib.dll&quot; /&gt;
+            --&gt;
+
+            &lt;staticTypes&gt;
+				&lt;add mimeType=&quot;*/*spreadsheet*&quot; enabled=&quot;false&quot; /&gt;
+
+				&lt;add mimeType=&quot;*/*xml*&quot; enabled=&quot;true&quot; /&gt;
+				&lt;add mimeType=&quot;*/*svg*&quot; enabled=&quot;true&quot; /&gt;
+
+				&lt;add mimeType=&quot;image/*&quot; enabled=&quot;false&quot; /&gt;
+				&lt;add mimeType=&quot;*/*zip*&quot; enabled=&quot;false&quot; /&gt;
+
+				&lt;add mimeType=&quot;*/*&quot; enabled=&quot;true&quot; /&gt;
+            &lt;/staticTypes&gt;
+
+            &lt;dynamicTypes&gt;
+				&lt;add mimeType=&quot;*/*spreadsheet*&quot; enabled=&quot;false&quot; /&gt;
+
+				&lt;add mimeType=&quot;*/*xml*&quot; enabled=&quot;true&quot; /&gt;
+				&lt;add mimeType=&quot;*/*svg*&quot; enabled=&quot;true&quot; /&gt;
+
+				&lt;add mimeType=&quot;image/*&quot; enabled=&quot;false&quot; /&gt;
+				&lt;add mimeType=&quot;*/*zip*&quot; enabled=&quot;false&quot; /&gt;
+
+				&lt;add mimeType=&quot;*/*&quot; enabled=&quot;true&quot; /&gt;
+                &lt;add mimeType=&quot;application/msword&quot; enabled=&quot;true&quot; /&gt;
+            &lt;/dynamicTypes&gt;
+        &lt;/httpCompression&gt;</code></pre>
+</doc-codeblock></div>
+<p>The above can be achieved by executing the following commands:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">:: Configure httpCompression settings
 :: &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /directory:&quot;%SystemDrive%\inetpub\temp\IIS Temporary Compressed Files&quot; /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /doDiskSpaceLimiting:true /commit:apphost
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /maxDiskSpaceUsage:2000 /commit:apphost &amp; :: In megabytes
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /maxDiskSpaceUsage:2000 /commit:apphost &amp; :: in megabytes
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /noCompressionForProxies:false  /commit:apphost &amp;:: VERY IMPORTANT, otherwise compression will be disable for Cloudfront/App Proxy
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /staticCompressionIgnoreHitFrequency:true  /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /dynamicCompressionDisableCpuUsage:100 /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /dynamicCompressionEnableCpuUsage:100 /commit:apphost
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /dynamicCompressionBufferLimit:4255360000 /commit:apphost &amp;:: VERY IMPORTANT for caching/compressing large results
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /dynamicCompressionBufferLimit:4255360000 /commit:apphost &amp;:: VERY IMPORTANT for caching/compressing large results. In bytes.
 
 :: Add Brotli scheme (should not need to be added)
 :: &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;[name='br',dll='%ProgramFiles%\IIS\IIS Compression\iisbrotli.dll']&quot; /commit:apphost
@@ -687,7 +731,6 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
 :: &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;[name='gzip',dll='%ProgramFiles%\IIS\IIS Compression\iiszlib.dll']&quot; /commit:apphost
 
 :: Configure staticTypes
-:: &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression/staticTypes.clear
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;staticTypes.[mimeType='*/*spreadsheet*',enabled='false']&quot; /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;staticTypes.[mimeType='*/*xml*',enabled='true']&quot; /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;staticTypes.[mimeType='*/*svg*',enabled='true']&quot; /commit:apphost
@@ -696,14 +739,12 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;staticTypes.[mimeType='*/*',enabled='true']&quot; /commit:apphost
 
 :: Configure dynamicTypes
-:: &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /dynamicTypes.clear
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;dynamicTypes.[mimeType='*/*spreadsheet*',enabled='false']&quot; /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;dynamicTypes.[mimeType='*/*xml*',enabled='true']&quot; /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;dynamicTypes.[mimeType='*/*svg*',enabled='true']&quot; /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;dynamicTypes.[mimeType='image/*',enabled='false']&quot; /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;dynamicTypes.[mimeType='*/*zip*',enabled='false']&quot; /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;dynamicTypes.[mimeType='*/*',enabled='true']&quot; /commit:apphost
-
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;dynamicTypes.[mimeType='application/msword',enabled='True']&quot; /commit:apphost
 
 :: Enable urlCompression
@@ -712,9 +753,9 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:urlCompression /dynamicCompressionBeforeCache:true /commit:apphost
 </code></pre>
 </doc-codeblock></div>
-<p>Note the following:</p>
+<p>Note:</p>
 <ul>
-<li><code v-pre>noCompressionForProxies:false</code>: If this value is not set to <code v-pre>false</code>, IIS will not compress if it detects that the request has come through a proxy. Cloudfront and Azure/Entra Id App Proxy
+<li><code v-pre>noCompressionForProxies:false</code>: If this value is set to <code v-pre>true</code>, IIS will not compress if it detects that the request has come through a proxy. Cloudfront and Azure/Entra Id App Proxy
 fall in that category, so it&#x27;s important to set this value to <code v-pre>false</code>.</li>
 <li><code v-pre>dynamicCompressionBufferLimit</code>: this value (in bytes) determines the maximum uncompressed response size before deciding not to compress the result. It has been observed in some IIS
 instances that when the size gets above 30MB, the response throughput becomes progressively slower as the size increases.</li>
@@ -746,7 +787,11 @@ the capabilities of the server that IIS resides on or the speed of the network c
         </div>
     </div>
 </div>
-<p>Enable caching from the first time a document is being requested:</p>
+<p>Enable caching from the first time a document is being requested in section <code v-pre>configuration.system.webServer</code>:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">        &lt;serverRuntime frequentHitThreshold=&quot;1&quot; frequentHitTimePeriod=&quot;00:10:00&quot; /&gt;
+        &lt;caching enabled=&quot;true&quot; enableKernelCache=&quot;true&quot; maxCacheSize=&quot;2000&quot; maxResponseSize=&quot;4120000000&quot; /&gt;</code></pre>
+</doc-codeblock></div>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/serverRuntime /frequentHitThreshold:1 /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/serverRuntime /frequentHitTimePeriod:&quot;00:10:00&quot; /commit:apphost</code></pre>
@@ -754,31 +799,27 @@ the capabilities of the server that IIS resides on or the speed of the network c
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/caching /enabled:true /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/caching /enableKernelCache:false /commit:apphost &amp; :: set to false to prevent frequent clearing of cache
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/caching /maxResponseSize:512000000 /commit:apphost</code></pre>
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/caching /maxCacheSize:2000 /commit:apphost &amp; :: in megabytes
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/caching /maxResponseSize:4120000000 /commit:apphost &amp; :: in bytes</code></pre>
 </doc-codeblock></div>
 <p>TODO: the following to configure web.config does not work yet</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">:: &quot;%systemroot%\system32\inetsrv\appcmd&quot; set config &quot;Default Web Site/Pozi/QgisServer&quot; -section:system.webServer /enabled:true</code></pre>
 </doc-codeblock></div>
-<p>Add to the web.config:</p>
+<p>Add to the <code v-pre>%ProgramFiles%/Pozi/server/iis/Pozi/QgisServer/web.config</code> in section <code v-pre>configuration.system.webServer</code>:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">&lt;configuration&gt;
-    &lt;system.webServer&gt;
-        &lt;!-- ... --&gt;
-		&lt;caching enabled=&quot;true&quot; enableKernelCache=&quot;false&quot;&gt;
+<pre class="language-none"><code v-pre class="language-none">		&lt;caching enabled=&quot;true&quot; enableKernelCache=&quot;false&quot;&gt;
             &lt;profiles&gt;
                 &lt;add extension=&quot;*&quot; policy=&quot;CacheForTimePeriod&quot; kernelCachePolicy=&quot;CacheForTimePeriod&quot; duration=&quot;00:10:00&quot; varyByQueryString=&quot;*&quot; /&gt;
             &lt;/profiles&gt;
-        &lt;/caching&gt;
-    &lt;/system.webServer&gt;
-&lt;/configuration&gt;</code></pre>
+        &lt;/caching&gt;</code></pre>
 </doc-codeblock></div>
 <p>This will cache content for 10 minutes. If a longer duration is desired, it is recommended to run the following command every time a QGIS project file
 or any of the layers have changed:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">%windir%\system32\inetsrv\appcmd recycle apppool /apppool.name:PoziQgisServer</code></pre>
 </doc-codeblock></div>
-<p>If that does not clear the cache, then execute the following instead:</p>
+<p>If that does not clear the cache, then execute the following command instead (which will restart IIS):</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">iisreset</code></pre>
 </doc-codeblock></div>
@@ -819,12 +860,9 @@ happening.</p>
 <p>When requests fail or caching/compression does not work, it is recommended to use IIS&#x27;s tracing functionality to determine the cause if these issues.</p>
 <p>First enable tracing for IIS:</p>
 <p><code v-pre>dism /online /Enable-Feature /FeatureName:IIS-HttpCompressionDynamic</code></p>
-<p>Then add the following to web.config to enable tracing for all requests:</p>
+<p>Then add the following to <code v-pre>%ProgramFiles%/Pozi/server/iis/Pozi/QgisServer/web.config`` to enable tracing for all requests in section </code>configuration.system.webServer&#x60;:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">&lt;configuration&gt;
-    &lt;system.webServer&gt;
-        &lt;!-- ... --&gt;
-        &lt;tracing&gt;
+<pre class="language-none"><code v-pre class="language-none">        &lt;tracing&gt;
             &lt;traceFailedRequests&gt;
                 &lt;add path=&quot;*&quot;&gt;
                     &lt;traceAreas&gt;
@@ -833,9 +871,7 @@ happening.</p>
                     &lt;failureDefinitions statusCodes=&quot;200-999&quot; /&gt;
                 &lt;/add&gt;
             &lt;/traceFailedRequests&gt;
-        &lt;/tracing&gt;
-    &lt;/system.webServer&gt;
-&lt;/configuration&gt;</code></pre>
+        &lt;/tracing&gt;</code></pre>
 </doc-codeblock></div>
 <p>The tracing output files can generally be found in:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
