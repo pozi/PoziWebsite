@@ -25,6 +25,26 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
 
 If IIS has not previously been set up on the server, the command prompt may return `Restart Windows to complete this operation`.  Restarting may be necessary for the subsequent configuration.
 
+## Create backup
+
+Before continuing or making any changes in the future, it may be a good idea to create a backup.
+
+Execute the following command for creating a backup:
+
+'''
+"%systemroot%\system32\inetsrv\appcmd" add backup
+'''
+
+The most relevant files are:
+
+```%windir%\System32\inetsrv\config\applicationHost.config```
+
+and
+
+```C:\Pozi\IIS\QgisServer\web.config```
+
+It may be worth creating a manual backup of these files too, in order to see what changes have been made to these files.
+
 ## Prepare Folders
 
 - create folder path: `C:\Pozi\IIS\QgisServer`
@@ -185,6 +205,194 @@ Enter the constructed URL into the address bar of your browser, hit Enter, and y
 
 ---
 
+## Dynamic Compression
+
+:::note Under Construction
+
+*This section is a work in progress. Please get in touch with us before following any of the steps below*
+
+:::
+
+Enable the Dynamic Compression IIS module:
+
+```dism /online /Enable-Feature /FeatureName:IIS-HttpCompressionDynamic```
+
+```
+:: Configure httpCompression settings
+:: "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /directory:"%SystemDrive%\inetpub\temp\IIS Temporary Compressed Files" /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /doDiskSpaceLimiting:true /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /maxDiskSpaceUsage:2000 /commit:apphost & :: In megabytes
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /noCompressionForProxies:false  /commit:apphost &:: VERY IMPORTANT, otherwise compression will be disable for Cloudfront/App Proxy
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /staticCompressionIgnoreHitFrequency:true  /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /dynamicCompressionDisableCpuUsage:100 /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /dynamicCompressionEnableCpuUsage:100 /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /dynamicCompressionBufferLimit:4255360000 /commit:apphost &:: VERY IMPORTANT for caching/compressing large results
+
+:: Add Brotli scheme (should not need to be added)
+:: "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"[name='br',dll='%ProgramFiles%\IIS\IIS Compression\iisbrotli.dll']" /commit:apphost
+
+:: Add Gzip scheme (should not need to be added)
+:: "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"[name='gzip',dll='%ProgramFiles%\IIS\IIS Compression\iiszlib.dll']" /commit:apphost
+
+:: Configure staticTypes
+:: "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression/staticTypes.clear
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"staticTypes.[mimeType='*/*spreadsheet*',enabled='false']" /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"staticTypes.[mimeType='*/*xml*',enabled='true']" /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"staticTypes.[mimeType='*/*svg*',enabled='true']" /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"staticTypes.[mimeType='image/*',enabled='false']" /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"staticTypes.[mimeType='*/*zip*',enabled='false']" /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"staticTypes.[mimeType='*/*',enabled='true']" /commit:apphost
+
+:: Configure dynamicTypes
+:: "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /dynamicTypes.clear
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"dynamicTypes.[mimeType='*/*spreadsheet*',enabled='false']" /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"dynamicTypes.[mimeType='*/*xml*',enabled='true']" /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"dynamicTypes.[mimeType='*/*svg*',enabled='true']" /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"dynamicTypes.[mimeType='image/*',enabled='false']" /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"dynamicTypes.[mimeType='*/*zip*',enabled='false']" /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"dynamicTypes.[mimeType='*/*',enabled='true']" /commit:apphost
+
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"dynamicTypes.[mimeType='application/msword',enabled='True']" /commit:apphost
+
+:: Enable urlCompression
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:urlCompression /doStaticCompression:true /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:urlCompression /doDynamicCompression:true /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:urlCompression /dynamicCompressionBeforeCache:true /commit:apphost
+
+```
+
+Note the following:
+
+* `noCompressionForProxies:false`: If this value is not set to `false`, IIS will not compress if it detects that the request has come through a proxy. Cloudfront and Azure/Entra Id App Proxy
+  fall in that category, so it's important to set this value to `false`.
+* `dynamicCompressionBufferLimit`: this value (in bytes) determines the maximum uncompressed response size before deciding not to compress the result. It has been observed in some IIS
+  instances that when the size gets above 30MB, the response throughput becomes progressively slower as the size increases.
+* `dynamicCompressionBeforeCache:true` has a limit of about 15MB uncompressed or 5MB compressed (on a server with 1GB memory). Any response that is bigger than that will disable compression.
+  If the value is set to `false`, the response will always be compressed but not cached (if caching is enabled below). The optimal setting of this depends on
+  the capabilities of the server that IIS resides on or the speed of the network connection and may need to be assessed on a case by case basis.
+
+
+## Caching
+
+:::note Under Construction
+
+*This section is a work in progress. Please get in touch with us before following any of the steps below*
+
+:::
+
+Enable caching from the first request
+
+```
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/serverRuntime /frequentHitThreshold:1 /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/serverRuntime /frequentHitTimePeriod:"00:10:00" /commit:apphost
+```
+
+```
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/caching /enabled:true /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/caching /enableKernelCache:false /commit:apphost & :: set to false to prevent frequent clearing of cache
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/caching /maxResponseSize:512000000 /commit:apphost
+```
+
+TODO: the following to configure web.config does not work yet
+```
+:: "%systemroot%\system32\inetsrv\appcmd" set config "Default Web Site/Pozi/QgisServer" -section:system.webServer /enabled:true
+```
+
+Add to the web.config:
+
+```
+<configuration>
+    <system.webServer>
+        <!-- ... -->
+		<caching enabled="true" enableKernelCache="false">
+            <profiles>
+                <add extension="*" policy="CacheForTimePeriod" kernelCachePolicy="CacheForTimePeriod" duration="00:10:00" varyByQueryString="*" />
+            </profiles>
+        </caching>
+    </system.webServer>
+</configuration>
+```
+
+This will cache content for 10 minutes. If a longer duration is desired, it is recommended to run the following command every time a QGIS project file
+or any of the layers have changed:
+
+```
+%windir%\system32\inetsrv\appcmd recycle apppool /apppool.name:PoziQgisServer
+```
+
+If that does not clear the cache, then execute the following instead:
+
+```
+iisreset
+```
+
+These command can be added to a batch (.bat) file that the user can run. If administrator privileges are required, then, as administrator, create a shortcut
+to this file and change its properties to get it to run as administrator.
+
+### Automatci cache invalidation
+
+IIS can choose to not cache or periodically clear the cache. This can happen in the space of minutes and it's as of yet unclear how to prevent this from
+happening.
+
+## Enable debugging (tracing)
+
+:::note Under Construction
+
+*This section is a work in progress. Please get in touch with us before following any of the steps below*
+
+:::
+
+When requests fail or caching/compression do not work, it is recommended to use IIS's tracing functionality to determine the cause if these issues.
+
+First enable tracing for IIS:
+
+```dism /online /Enable-Feature /FeatureName:IIS-HttpCompressionDynamic```
+
+Then add the following to web.config to enable tracing for all requests:
+
+```
+        <tracing>
+            <traceFailedRequests>
+                <add path="*">
+                    <traceAreas>
+                        <add provider="WWW Server" areas="Authentication,Security,Filter,StaticFile,CGI,Compression,Cache,RequestNotifications,Module,FastCGI,WebSocket" verbosity="Verbose" />
+                    </traceAreas>
+                    <failureDefinitions statusCodes="200-999" />
+                </add>
+            </traceFailedRequests>
+        </tracing>
+```
+
+The tracing output files can generally be found in:
+
+```
+%SystemDrive%\inetpub\logs\FailedReqLogFiles
+```
+
+When opening the .xml file in Internet Explorer (!), the user gets presented with an interactive web page. The 'Compact View' tab can provide useful information.
+
+It is recommended to turn the feature off by commenting out the code block below when not needed any more.
+
+Relevant events and their values are:
+
+* `OUTPUT_CACHE_LOOKUP_END Result`: `FOUND`, `NOT_FOUND`
+
+More information about tracing failed requests can be found on [Microsoft's website](https://learn.microsoft.com/en-us/iis/configuration/system.applicationhost/sites/site/tracefailedrequestslogging).
+
+## Restart IIS / Application Pool
+
+Restart IIS:
+
+```
+iisreset /restart
+```
+
+Restart Application pool:
+
+```
+%windir%\system32\inetsrv\appcmd recycle apppool /apppool.name:PoziQgisServer
+```
+
 ## Serving Static Files
 
 Pozi can be configured to deliver documents and other content from your network to users within Pozi, either as clickable links or, if the link ends with `.jpg` or `.png`, as embedded images.
@@ -224,7 +432,7 @@ Note: the user account under which IIS application pool is running (typically Po
 
 When configured as above, any content within the specified folders can be accessed via their corresponding virtual directory.
 
-#### Example File 
+#### Example File
 
 - Physical file: `\\<networkdrive>\GIS$\Documents\Cavendish\preschool.JPG`
 
@@ -348,7 +556,7 @@ QGIS_WIN_APP_NAME=OSGeo4W\QGIS Desktop 3.22.8
 
 Check that the `GDAL_DATA` and `GDAL_DRIVER_PATH` paths exist for your installation. If not, update the file accordingly.
 
-If you are denied permission to create or edit the file in the destination location, create the file elsewhere and move it to `C:\OSGeo4W\bin\` using Windows Explorer. 
+If you are denied permission to create or edit the file in the destination location, create the file elsewhere and move it to `C:\OSGeo4W\bin\` using Windows Explorer.
 
 [Further details about this issue](https://github.com/qgis/QGIS/issues/49148#issuecomment-1174459434)
 
