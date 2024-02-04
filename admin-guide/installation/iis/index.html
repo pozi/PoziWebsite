@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.760341143589">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.760341478077">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,12 +35,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.760341143589" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.760341478077" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.760341143589" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.760341478077" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.760341143589" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.760341143589" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.760341478077" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.760341478077" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -746,7 +746,7 @@ the capabilities of the server that IIS resides on or the speed of the network c
         </div>
     </div>
 </div>
-<p>Enable caching from the first request</p>
+<p>Enable caching from the first time a document is being requested:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/serverRuntime /frequentHitThreshold:1 /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/serverRuntime /frequentHitTimePeriod:&quot;00:10:00&quot; /commit:apphost</code></pre>
@@ -784,10 +784,10 @@ or any of the layers have changed:</p>
 </doc-codeblock></div>
 <p>These command can be added to a batch (.bat) file that the user can run. If administrator privileges are required, then, as administrator, create a shortcut
 to this file and change its properties to get it to run as administrator.</p>
-<doc-anchor-target id="automatci-cache-invalidation">
+<doc-anchor-target id="automatic-cache-invalidation">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#automatci-cache-invalidation">#</doc-anchor-trigger>
-        <span>Automatci cache invalidation</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#automatic-cache-invalidation">#</doc-anchor-trigger>
+        <span>Automatic cache invalidation</span>
     </h3>
 </doc-anchor-target>
 <p>IIS can choose to not cache or periodically clear the cache. This can happen in the space of minutes and it&#x27;s as of yet unclear how to prevent this from
@@ -816,12 +816,15 @@ happening.</p>
         </div>
     </div>
 </div>
-<p>When requests fail or caching/compression do not work, it is recommended to use IIS&#x27;s tracing functionality to determine the cause if these issues.</p>
+<p>When requests fail or caching/compression does not work, it is recommended to use IIS&#x27;s tracing functionality to determine the cause if these issues.</p>
 <p>First enable tracing for IIS:</p>
 <p><code v-pre>dism /online /Enable-Feature /FeatureName:IIS-HttpCompressionDynamic</code></p>
 <p>Then add the following to web.config to enable tracing for all requests:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">        &lt;tracing&gt;
+<pre class="language-none"><code v-pre class="language-none">&lt;configuration&gt;
+    &lt;system.webServer&gt;
+        &lt;!-- ... --&gt;
+        &lt;tracing&gt;
             &lt;traceFailedRequests&gt;
                 &lt;add path=&quot;*&quot;&gt;
                     &lt;traceAreas&gt;
@@ -830,7 +833,9 @@ happening.</p>
                     &lt;failureDefinitions statusCodes=&quot;200-999&quot; /&gt;
                 &lt;/add&gt;
             &lt;/traceFailedRequests&gt;
-        &lt;/tracing&gt;</code></pre>
+        &lt;/tracing&gt;
+    &lt;/system.webServer&gt;
+&lt;/configuration&gt;</code></pre>
 </doc-codeblock></div>
 <p>The tracing output files can generally be found in:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
