@@ -217,16 +217,63 @@ Enable the Dynamic Compression IIS module:
 
 ```dism /online /Enable-Feature /FeatureName:IIS-HttpCompressionDynamic```
 
+Configure `applicationHost.config`, section `configuration.system.webServer` the following way by replacing `<httpCompression />` with:
+
+```
+	    <httpCompression
+            doDiskSpaceLimiting="true"
+            maxDiskSpaceUsage="2000" <!-- in MB -->
+            noCompressionForProxies="false"
+            staticCompressionIgnoreHitFrequency="true"
+            dynamicCompressionDisableCpuUsage="100"
+            dynamicCompressionEnableCpuUsage="100"
+            dynamicCompressionBufferLimit="4255360000" <!-- in bytes -->
+        >
+
+            <!--
+            <scheme name="br" dll="%ProgramFiles%\IIS\IIS Compression\iisbrotli.dll" />
+            <scheme name="gzip" dll="%ProgramFiles%\IIS\IIS Compression\iiszlib.dll" />
+            -->
+
+            <staticTypes>
+				<add mimeType="*/*spreadsheet*" enabled="false" />
+
+				<add mimeType="*/*xml*" enabled="true" />
+				<add mimeType="*/*svg*" enabled="true" />
+
+				<add mimeType="image/*" enabled="false" />
+				<add mimeType="*/*zip*" enabled="false" />
+
+				<add mimeType="*/*" enabled="true" />
+            </staticTypes>
+
+            <dynamicTypes>
+				<add mimeType="*/*spreadsheet*" enabled="false" />
+
+				<add mimeType="*/*xml*" enabled="true" />
+				<add mimeType="*/*svg*" enabled="true" />
+
+				<add mimeType="image/*" enabled="false" />
+				<add mimeType="*/*zip*" enabled="false" />
+
+				<add mimeType="*/*" enabled="true" />
+                <add mimeType="application/msword" enabled="true" />
+            </dynamicTypes>
+        </httpCompression>
+```
+
+The above can be achieved by executing the following commands:
+
 ```
 :: Configure httpCompression settings
 :: "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /directory:"%SystemDrive%\inetpub\temp\IIS Temporary Compressed Files" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /doDiskSpaceLimiting:true /commit:apphost
-"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /maxDiskSpaceUsage:2000 /commit:apphost & :: In megabytes
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /maxDiskSpaceUsage:2000 /commit:apphost & :: in megabytes
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /noCompressionForProxies:false  /commit:apphost &:: VERY IMPORTANT, otherwise compression will be disable for Cloudfront/App Proxy
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /staticCompressionIgnoreHitFrequency:true  /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /dynamicCompressionDisableCpuUsage:100 /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /dynamicCompressionEnableCpuUsage:100 /commit:apphost
-"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /dynamicCompressionBufferLimit:4255360000 /commit:apphost &:: VERY IMPORTANT for caching/compressing large results
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /dynamicCompressionBufferLimit:4255360000 /commit:apphost &:: VERY IMPORTANT for caching/compressing large results. In bytes.
 
 :: Add Brotli scheme (should not need to be added)
 :: "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"[name='br',dll='%ProgramFiles%\IIS\IIS Compression\iisbrotli.dll']" /commit:apphost
@@ -235,7 +282,6 @@ Enable the Dynamic Compression IIS module:
 :: "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"[name='gzip',dll='%ProgramFiles%\IIS\IIS Compression\iiszlib.dll']" /commit:apphost
 
 :: Configure staticTypes
-:: "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression/staticTypes.clear
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"staticTypes.[mimeType='*/*spreadsheet*',enabled='false']" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"staticTypes.[mimeType='*/*xml*',enabled='true']" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"staticTypes.[mimeType='*/*svg*',enabled='true']" /commit:apphost
@@ -244,14 +290,12 @@ Enable the Dynamic Compression IIS module:
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"staticTypes.[mimeType='*/*',enabled='true']" /commit:apphost
 
 :: Configure dynamicTypes
-:: "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /dynamicTypes.clear
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"dynamicTypes.[mimeType='*/*spreadsheet*',enabled='false']" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"dynamicTypes.[mimeType='*/*xml*',enabled='true']" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"dynamicTypes.[mimeType='*/*svg*',enabled='true']" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"dynamicTypes.[mimeType='image/*',enabled='false']" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"dynamicTypes.[mimeType='*/*zip*',enabled='false']" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"dynamicTypes.[mimeType='*/*',enabled='true']" /commit:apphost
-
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"dynamicTypes.[mimeType='application/msword',enabled='True']" /commit:apphost
 
 :: Enable urlCompression
@@ -261,9 +305,9 @@ Enable the Dynamic Compression IIS module:
 
 ```
 
-Note the following:
+Note:
 
-* `noCompressionForProxies:false`: If this value is not set to `false`, IIS will not compress if it detects that the request has come through a proxy. Cloudfront and Azure/Entra Id App Proxy
+* `noCompressionForProxies:false`: If this value is set to `true`, IIS will not compress if it detects that the request has come through a proxy. Cloudfront and Azure/Entra Id App Proxy
   fall in that category, so it's important to set this value to `false`.
 * `dynamicCompressionBufferLimit`: this value (in bytes) determines the maximum uncompressed response size before deciding not to compress the result. It has been observed in some IIS
   instances that when the size gets above 30MB, the response throughput becomes progressively slower as the size increases.
@@ -280,7 +324,12 @@ Note the following:
 
 :::
 
-Enable caching from the first time a document is being requested:
+Enable caching from the first time a document is being requested in section `configuration.system.webServer`:
+
+```
+        <serverRuntime frequentHitThreshold="1" frequentHitTimePeriod="00:10:00" />
+        <caching enabled="true" enableKernelCache="true" maxCacheSize="2000" maxResponseSize="4120000000" />
+```
 
 ```
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/serverRuntime /frequentHitThreshold:1 /commit:apphost
@@ -290,7 +339,8 @@ Enable caching from the first time a document is being requested:
 ```
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/caching /enabled:true /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/caching /enableKernelCache:false /commit:apphost & :: set to false to prevent frequent clearing of cache
-"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/caching /maxResponseSize:512000000 /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/caching /maxCacheSize:2000 /commit:apphost & :: in megabytes
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/caching /maxResponseSize:4120000000 /commit:apphost & :: in bytes
 ```
 
 TODO: the following to configure web.config does not work yet
@@ -298,19 +348,14 @@ TODO: the following to configure web.config does not work yet
 :: "%systemroot%\system32\inetsrv\appcmd" set config "Default Web Site/Pozi/QgisServer" -section:system.webServer /enabled:true
 ```
 
-Add to the web.config:
+Add to the `%ProgramFiles%/Pozi/server/iis/Pozi/QgisServer/web.config` in section `configuration.system.webServer`:
 
 ```
-<configuration>
-    <system.webServer>
-        <!-- ... -->
 		<caching enabled="true" enableKernelCache="false">
             <profiles>
                 <add extension="*" policy="CacheForTimePeriod" kernelCachePolicy="CacheForTimePeriod" duration="00:10:00" varyByQueryString="*" />
             </profiles>
         </caching>
-    </system.webServer>
-</configuration>
 ```
 
 This will cache content for 10 minutes. If a longer duration is desired, it is recommended to run the following command every time a QGIS project file
@@ -320,7 +365,7 @@ or any of the layers have changed:
 %windir%\system32\inetsrv\appcmd recycle apppool /apppool.name:PoziQgisServer
 ```
 
-If that does not clear the cache, then execute the following instead:
+If that does not clear the cache, then execute the following command instead (which will restart IIS):
 
 ```
 iisreset
@@ -348,12 +393,9 @@ First enable tracing for IIS:
 
 ```dism /online /Enable-Feature /FeatureName:IIS-HttpCompressionDynamic```
 
-Then add the following to web.config to enable tracing for all requests:
+Then add the following to `%ProgramFiles%/Pozi/server/iis/Pozi/QgisServer/web.config`` to enable tracing for all requests in section `configuration.system.webServer`:
 
 ```
-<configuration>
-    <system.webServer>
-        <!-- ... -->
         <tracing>
             <traceFailedRequests>
                 <add path="*">
@@ -364,8 +406,6 @@ Then add the following to web.config to enable tracing for all requests:
                 </add>
             </traceFailedRequests>
         </tracing>
-    </system.webServer>
-</configuration>
 ```
 
 The tracing output files can generally be found in:
