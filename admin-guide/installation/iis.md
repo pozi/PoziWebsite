@@ -280,7 +280,7 @@ Note the following:
 
 :::
 
-Enable caching from the first request
+Enable caching from the first time a document is being requested:
 
 ```
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/serverRuntime /frequentHitThreshold:1 /commit:apphost
@@ -329,7 +329,7 @@ iisreset
 These command can be added to a batch (.bat) file that the user can run. If administrator privileges are required, then, as administrator, create a shortcut
 to this file and change its properties to get it to run as administrator.
 
-### Automatci cache invalidation
+### Automatic cache invalidation
 
 IIS can choose to not cache or periodically clear the cache. This can happen in the space of minutes and it's as of yet unclear how to prevent this from
 happening.
@@ -342,7 +342,7 @@ happening.
 
 :::
 
-When requests fail or caching/compression do not work, it is recommended to use IIS's tracing functionality to determine the cause if these issues.
+When requests fail or caching/compression does not work, it is recommended to use IIS's tracing functionality to determine the cause if these issues.
 
 First enable tracing for IIS:
 
@@ -351,6 +351,9 @@ First enable tracing for IIS:
 Then add the following to web.config to enable tracing for all requests:
 
 ```
+<configuration>
+    <system.webServer>
+        <!-- ... -->
         <tracing>
             <traceFailedRequests>
                 <add path="*">
@@ -361,6 +364,8 @@ Then add the following to web.config to enable tracing for all requests:
                 </add>
             </traceFailedRequests>
         </tracing>
+    </system.webServer>
+</configuration>
 ```
 
 The tracing output files can generally be found in:
