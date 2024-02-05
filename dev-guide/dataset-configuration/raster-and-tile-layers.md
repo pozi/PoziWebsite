@@ -242,47 +242,15 @@ The topmost imagery layer can be toggled by the Aerial button at the top right o
 ### DEECA Image Web Server
 
 * [About](https://www.land.vic.gov.au/maps-and-spatial/imagery/about-image-web-server)
-* [Login](http://images.land.vic.gov.au/iwsadmin/)
-* [Viewer](http://images.land.vic.gov.au/iws/SimpleExampleNative.htm)
 * Report outages: gis.helpdesk@delwp.vic.gov.au
 * Other support requests: coordinated.imagery@delwp.vic.gov.au
 
 #### GetCapabilities
 
-http://images.land.vic.gov.au/ecwp/ecw_wms.dll?service=WMS&request=getcapabilities
+https://iws.maps.vic.gov.au/erdas-iws/ogc/wms/RDP?SERVICE=WMS&REQUEST=GetCapabilities
 
-The current GetCapabilities is over 13MB in one long line. Save it to a text file and use https://stackoverflow.com/questions/3961217/how-do-i-format-xml-in-notepad to format the text into a readable form.
+The current GetCapabilities is over 10MB in one long line. Save it to a text file and use https://stackoverflow.com/questions/3961217/how-do-i-format-xml-in-notepad to format the text into a readable form.
 
-#### Configuration
-
-##### Layer Name
-
-The layer name from the permissions list needs to modified to reflect the actual layer name in the IWS server.
-
-###### Example 1
-
-* before: `\land\aerial\nth-grampians_2017feb03_air_vis_20cm_mga54.ecw`
-* after: `aerial_nth-grampians_2017feb03_air_vis_20cm_mga54`
-
-###### Example 2
-
-* before: `\land\aerial\mallee_2020dec23_air_vis_20cm_mga54\mallee_2020dec23_air_vis_20cm_mga54.ecw`
-* after: `aerial_mallee_2020dec23_air_vis_20cm_mga54`
-
-###### Example 3
-
-* before: `\land\aerial\towns\navarre_2016dec23_air_cir_10cm_mga54.ecw`
-* after: `towns_navarre_2016dec23_air_cir_10cm_mga54`
-
-#### Credentials
-
-Include an authkey configuration item to instruct the Pozi Image Proxy to attach client-supplied credentials to each request.
-
-Example: `"authkey": "iws-bendigo"`
-
-For any troubleshooting purposes, there is one layer on IWS which doesn't require any credentials: `satellite_victoria_2000jan01_sat_etm543_30m_vg94`
-
-[Example image](http://images.land.vic.gov.au/erdas-iws/erdas/imagex/?request=image&cache=true&transparent=true&type=jpg&l=3&tx=1&ty=7&ts=256&fill=FFFFFF&quality=60&layers=%2Fimages%2Fland%2Fsatellite%2Fvictoria_2000jan01_sat_etm543_30m_vg94.ecw&style=default&srs=EPSG:3111)
 
 #### Example Configuration
 
@@ -290,25 +258,26 @@ For any troubleshooting purposes, there is one layer on IWS which doesn't requir
 
 ```json
 {
-  "title": "Aerial 2008 Dec (Urban)",
+  "title": "Aerial 2019",
   "group": "Imagery",
   "type": "TileWMSAuth",
   "about": {
     "source": "Victorian Coordinated Imagery Program",
     "organisation": "DELWP",
+    "date": "Feb 2019",
     "url": "https://www2.delwp.vic.gov.au/maps/maps-and-services/coordinated-imagery-program"
   },
   "linkedLayers": [
     "Vicmap Labels"
   ],
   "config": {
-    "url": "https://imageproxy.pozi.com/http://images.land.vic.gov.au/ecwp/ecw_wms.dll",
+    "url": "https://proxy.pozi.com/https://iws.maps.vic.gov.au/erdas-iws/ogc/wms/RDP",
     "params": {
-      "LAYERS": "aerial_bendigo_2008jan06_air_vis_15cm_mga55",
+      "LAYERS": "VMIMAGERY_loddon_2019feb20_air_vis_10cm_mga54.ecw",
       "STYLES": "",
       "TILED": true,
-      "FORMAT": "image/jpeg",
-      "authkey": "iws-bendigo"
+      "FORMAT": "image/webp",
+      "authkey": "datashare-loddon"
     }
   }
 }
