@@ -56,7 +56,7 @@ It may be worth creating a manual backup of these files too, in order to see wha
     <system.webServer>
         <handlers>
             <add name="PoziQgisServerFastCgi" path="*" verb="*" type="" modules="FastCgiModule" scriptProcessor="C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe"
-            resourceType="Unspecified" requireAccess="Script" allowPathInfo="false" preCondition=""  />
+            resourceType="Unspecified" requireAccess="Script" allowPathInfo="false" preCondition="" responseBufferLimit="4000000000" />
         </handlers>
         <security>
             <requestFiltering>
@@ -70,6 +70,10 @@ It may be worth creating a manual backup of these files too, in order to see wha
 
 NOTE: If you have installed QGIS Server to a location other than the default `C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe` then you will need to update that path in the `web.config` file. You'll also need to make the necessary substitutions in many of the commands below.
 
+### Background information:
+
+* [FastCGI](https://learn.microsoft.com/en-us/iis/configuration/system.webserver/fastcgi/)
+
 ## Configure IIS
 
 ```cmd
@@ -82,10 +86,13 @@ If the command prompt returns `"C:\Windows\system32\inetsrv\appcmd" is not recog
 
 ```cmd
 %windir%\system32\inetsrv\appcmd.exe unlock config -section:system.webServer/handlers
-"%systemroot%\system32\inetsrv\appcmd" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe',idleTimeout='604800']" /commit:apphost
-"%systemroot%\system32\inetsrv\appcmd" set config /section:isapiCgiRestriction /+"[path='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe',description='PoziQgisServer',allowed='True']"
 
+"%systemroot%\system32\inetsrv\appcmd" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe',idleTimeout='604800',maxInstances='5',activityTimeout='70',requestTimeout='120']" /commit:apphost
+
+"%systemroot%\system32\inetsrv\appcmd" set config /section:isapiCgiRestriction /+"[path='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe',description='PoziQgisServer',allowed='True']"
 ```
+
+**Tip**: if a fastCGI request frequently times out due to a slow database connection or very large datasets, change the `requestTimeout` value to a greater number (in seconds).
 
 ## Configure Environment Variables
 
@@ -215,19 +222,23 @@ Enter the constructed URL into the address bar of your browser, hit Enter, and y
 
 Enable the Dynamic Compression IIS module:
 
-```dism /online /Enable-Feature /FeatureName:IIS-HttpCompressionDynamic```
+```bat
+dism /online /Enable-Feature /FeatureName:IIS-HttpCompressionDynamic
+```
 
 Configure `applicationHost.config`, section `configuration.system.webServer` the following way by replacing `<httpCompression />` with:
 
-```
+```xml %windir%\System32\inetsrv\config\applicationHost.config
 	    <httpCompression
             doDiskSpaceLimiting="true"
-            maxDiskSpaceUsage="2000" <!-- in MB -->
+            maxDiskSpaceUsage="2000"
             noCompressionForProxies="false"
             staticCompressionIgnoreHitFrequency="true"
             dynamicCompressionDisableCpuUsage="100"
             dynamicCompressionEnableCpuUsage="100"
-            dynamicCompressionBufferLimit="4255360000" <!-- in bytes -->
+            dynamicCompressionBufferLimit="4255360000"
+            cacheControlHeader="max-age=10"
+            sendCacheHeaders="false"
         >
 
             <!--
@@ -264,7 +275,7 @@ Configure `applicationHost.config`, section `configuration.system.webServer` the
 
 The above can be achieved by executing the following commands:
 
-```
+```bat
 :: Configure httpCompression settings
 :: "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /directory:"%SystemDrive%\inetpub\temp\IIS Temporary Compressed Files" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /doDiskSpaceLimiting:true /commit:apphost
@@ -274,6 +285,8 @@ The above can be achieved by executing the following commands:
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /dynamicCompressionDisableCpuUsage:100 /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /dynamicCompressionEnableCpuUsage:100 /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /dynamicCompressionBufferLimit:4255360000 /commit:apphost &:: VERY IMPORTANT for caching/compressing large results. In bytes.
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /cacheControlHeader:"max-age=60" & :: in seconds
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /sendCacheHeaders:false & :: if true, this will allow for browser side disk caching
 
 :: Add Brotli scheme (should not need to be added)
 :: "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/httpCompression /+"[name='br',dll='%ProgramFiles%\IIS\IIS Compression\iisbrotli.dll']" /commit:apphost
@@ -307,14 +320,28 @@ The above can be achieved by executing the following commands:
 
 Note:
 
+* `maxDiskSpaceUsage`: size is in MB
 * `noCompressionForProxies:false`: If this value is set to `true`, IIS will not compress if it detects that the request has come through a proxy. Cloudfront and Azure/Entra Id App Proxy
   fall in that category, so it's important to set this value to `false`.
-* `dynamicCompressionBufferLimit`: this value (in bytes) determines the maximum uncompressed response size before deciding not to compress the result. It has been observed in some IIS
+* `dynamicCompressionBufferLimit`: this value (size in bytes) determines the maximum uncompressed response size before deciding not to compress the result. It has been observed in some IIS
   instances that when the size gets above 30MB, the response throughput becomes progressively slower as the size increases.
 * `dynamicCompressionBeforeCache:true` has a limit of about 15MB uncompressed or 5MB compressed (on a server with 1GB memory). Any response that is bigger than that will disable compression.
   If the value is set to `false`, the response will always be compressed but not cached (if caching is enabled below). The optimal setting of this depends on
   the capabilities of the server that IIS resides on or the speed of the network connection and may need to be assessed on a case by case basis.
+* `cacheControlHeader`: `max-age` value is in seconds
+* `sendCacheHeaders`: if set to true, the browser will cache the contents for up to the value of `max-age` in the `cacheControlHeader` attribute
 
+**Also note**: the settings above affect all sites running on IIS. If this is problematic, move the settings to the `C:\Pozi\IIS\QgisServer\web.config` file.
+It may be necessary to change some settings in `applicationHost.config` to allow for this to happen.
+
+**TODO: determine if the following is needed:**
+
+In `web.config`, make sure that the following `responseBufferLimit="4000000000"` is set in the `PoziQgisServerFastCgi` handler:
+
+```xml C:\Pozi\IIS\QgisServer\web.config
+        <handlers>
+            <add name="PoziQgisServerFastCgi" .... responseBufferLimit="4000000000" />
+```
 
 ## Caching
 
@@ -326,58 +353,89 @@ Note:
 
 Enable caching from the first time a document is being requested in section `configuration.system.webServer`:
 
-```
+```xml C:\Pozi\IIS\QgisServer\web.config
         <serverRuntime frequentHitThreshold="1" frequentHitTimePeriod="00:10:00" />
+
         <caching enabled="true" enableKernelCache="true" maxCacheSize="2000" maxResponseSize="4120000000" />
 ```
 
-```
+**Command-line**:
+
+```bat
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/serverRuntime /frequentHitThreshold:1 /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/serverRuntime /frequentHitTimePeriod:"00:10:00" /commit:apphost
 ```
 
-```
+```bat
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/caching /enabled:true /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/caching /enableKernelCache:false /commit:apphost & :: set to false to prevent frequent clearing of cache
-"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/caching /maxCacheSize:2000 /commit:apphost & :: in megabytes
-"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/caching /maxResponseSize:4120000000 /commit:apphost & :: in bytes
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/caching /maxCacheSize:2000 /commit:apphost & :: can only be set here (size in megabytes)
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/caching /maxResponseSize:4120000000 /commit:apphost & :: can only be set here (size in bytes)
 ```
 
-TODO: the following to configure web.config does not work yet
-```
-:: "%systemroot%\system32\inetsrv\appcmd" set config "Default Web Site/Pozi/QgisServer" -section:system.webServer /enabled:true
-```
 
-Add to the `%ProgramFiles%/Pozi/server/iis/Pozi/QgisServer/web.config` in section `configuration.system.webServer`:
+Add to the `C:\Pozi\IIS\QgisServer\web.config` in section `configuration.system.webServer`:
 
-```
+```xml C:\Pozi\IIS\QgisServer\web.config
 		<caching enabled="true" enableKernelCache="false">
             <profiles>
-                <add extension="*" policy="CacheForTimePeriod" kernelCachePolicy="CacheForTimePeriod" duration="00:10:00" varyByQueryString="*" />
+                <add extension="*" policy="CacheForTimePeriod" kernelCachePolicy="CacheForTimePeriod" duration="00:10:00" location="Any" varyByQueryString="*" varyByHeaders="Accept-Encoding" />
             </profiles>
         </caching>
 ```
 
-This will cache content for 10 minutes. If a longer duration is desired, it is recommended to run the following command every time a QGIS project file
-or any of the layers have changed:
+**Command-line**:
 
+```bat
+"%systemroot%\system32\inetsrv\appcmd" set config "Default Web Site/Pozi/QgisServer" -section:system.webServer/caching /enabled:true
+"%systemroot%\system32\inetsrv\appcmd" set config "Default Web Site/Pozi/QgisServer" -section:system.webServer/caching /enableKernelCache:false
+"%systemroot%\system32\inetsrv\appcmd" set config "Default Web Site/Pozi/QgisServer" -section:system.webServer/caching /+profiles.[extension='*',duration='00:10:00',location='Any',policy='CacheForTimePeriod',kernelCachePolicy='CacheForTimePeriod',varyByQueryString='*',varyByHeaders='Accept-Encoding']
 ```
+
+
+This will cache content for up to the time set in the `duration` field. If a longer cache duration is desired, it is recommended to invalidate the cache (see below) every time a QGIS project file
+or any of the layers or their contents have changed.
+
+
+### Kernel mode vs User mode caching
+
+Kernel mode can only be for static files.
+
+If kernel mode caching is desirable, change the `enableKernelCache` setting to be `true` in `C:\Pozi\IIS\QgisServer\web.config` above and restart IIS.
+
+
+**TODO: complete or remove this section**
+
+** Advanced kernel mode cache settings**:
+
+* [Registry settings for kernel mode](https://learn.microsoft.com/en-GB/troubleshoot/developer/webapps/iis/iisadmin-service-inetinfo/httpsys-registry-windows)
+
+
+### Cache invalidation
+
+If kernel mode caching is not used, run the following command to invalidate the cache:
+
+```bat
 %windir%\system32\inetsrv\appcmd recycle apppool /apppool.name:PoziQgisServer
 ```
 
-If that does not clear the cache, then execute the following command instead (which will restart IIS):
+If the above does not clear the cache (e.g. when running kernel mode), then execute the following command instead (which will restart IIS):
 
-```
+```bat
 iisreset
 ```
 
 These command can be added to a batch (.bat) file that the user can run. If administrator privileges are required, then, as administrator, create a shortcut
 to this file and change its properties to get it to run as administrator.
 
-### Automatic cache invalidation
+**Note:**
 
-IIS can choose to not cache or periodically clear the cache. This can happen in the space of minutes and it's as of yet unclear how to prevent this from
+IIS can choose to periodically clear the cache. This can happen within the space of minutes and it's as of yet unclear how to prevent this from
 happening.
+
+### Background information
+
+* [Configure IIS Output Caching](https://learn.microsoft.com/en-us/iis/manage/managing-performance-settings/configure-iis-7-output-caching#select-a-cache-policies)
 
 ## Enable debugging (tracing)
 
@@ -387,22 +445,25 @@ happening.
 
 :::
 
+### Tracing
 When requests fail or caching/compression does not work, it is recommended to use IIS's tracing functionality to determine the cause if these issues.
 
 First enable tracing for IIS:
 
-```dism /online /Enable-Feature /FeatureName:IIS-HttpCompressionDynamic```
-
-Then add the following to `%ProgramFiles%/Pozi/server/iis/Pozi/QgisServer/web.config`` to enable tracing for all requests in section `configuration.system.webServer`:
-
+```bat
+dism /online /Enable-Feature /FeatureName:IIS-HttpCompressionDynamic
 ```
+
+Then add the following to `C:\Pozi\IIS\QgisServer\web.config` to enable tracing for all requests in section `configuration.system.webServer`:
+
+```xml C:\Pozi\IIS\QgisServer\web.config
         <tracing>
             <traceFailedRequests>
                 <add path="*">
                     <traceAreas>
                         <add provider="WWW Server" areas="Authentication,Security,Filter,StaticFile,CGI,Compression,Cache,RequestNotifications,Module,FastCGI,WebSocket" verbosity="Verbose" />
                     </traceAreas>
-                    <failureDefinitions statusCodes="200-999" />
+                    <failureDefinitions statusCodes="3-999" />
                 </add>
             </traceFailedRequests>
         </tracing>
@@ -410,7 +471,7 @@ Then add the following to `%ProgramFiles%/Pozi/server/iis/Pozi/QgisServer/web.co
 
 The tracing output files can generally be found in:
 
-```
+```bat
 %SystemDrive%\inetpub\logs\FailedReqLogFiles
 ```
 
@@ -418,23 +479,31 @@ When opening the .xml file in Internet Explorer (!), the user gets presented wit
 
 It is recommended to turn the feature off by commenting out the code block below when not needed any more.
 
-Relevant events and their values are:
+Relevant events and some of their potential values are:
 
-* `OUTPUT_CACHE_LOOKUP_END Result`: `FOUND`, `NOT_FOUND`
+* `OUTPUT_CACHE_LOOKUP_END`: `Result="FOUND"`, `Result="NOT_FOUND"`, `Result="CACHING_DISABLED"`
 
 More information about tracing failed requests can be found on [Microsoft's website](https://learn.microsoft.com/en-us/iis/configuration/system.applicationhost/sites/site/tracefailedrequestslogging).
+
+### Useful commands
+
+The following PowerShell command provides a list of system events related to Pozi QGIS Server:
+
+```powershell
+Get-WinEvent -LogName System | Where-Object {$_.Message -like "*PoziQgisServer*"} | out-host -paging
+```
 
 ## Restart IIS / Application Pool
 
 Restart IIS:
 
-```
+```bat
 iisreset /restart
 ```
 
 Restart Application pool:
 
-```
+```bat
 %windir%\system32\inetsrv\appcmd recycle apppool /apppool.name:PoziQgisServer
 ```
 
