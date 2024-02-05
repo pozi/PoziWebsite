@@ -237,6 +237,25 @@ The topmost imagery layer can be toggled by the Aerial button at the top right o
 }
 ```
 
+==- Nearmap
+
+Nearmap imagery configuration makes use of the `maxZoom` parameter to limit the maximum zoom level when it is necessary to comply with the Nearmap terms of service for public use.
+
+```json
+{
+  "title": "Nearmap - Oct 2023",
+  "group": "Imagery",
+  "type": "XYZ",
+  "linkedLayers": [
+    "Vicmap Labels"
+  ],
+  "config": {
+    "maxZoom": 20,
+    "url": "https://geoproxy.pozi.com/https://au{0-3}.nearmap.com/maps?x={x}&y={y}&z={z}&nml=v&version=2&httpauth=false&authkey=nearmap-bendigo-2023-10-20"
+  }
+}
+```
+
 ==-
 
 ### DEECA Image Web Server
@@ -271,7 +290,7 @@ The current GetCapabilities is over 10MB in one long line. Save it to a text fil
     "Vicmap Labels"
   ],
   "config": {
-    "url": "https://proxy.pozi.com/https://iws.maps.vic.gov.au/erdas-iws/ogc/wms/RDP",
+    "url": "https://imageproxy.pozi.com/https://iws.maps.vic.gov.au/erdas-iws/ogc/wms/RDP",
     "params": {
       "LAYERS": "VMIMAGERY_loddon_2019feb20_air_vis_10cm_mga54.ecw",
       "STYLES": "",
@@ -289,7 +308,7 @@ The current GetCapabilities is over 10MB in one long line. Save it to a text fil
 
 ```json
 {
-  "title": "Aerial Photo (Latest)",
+  "title": "Aerial Photo Mosaic 2015-2020",
   "group": "Imagery",
   "type": "TileWMSAuth",
   "about": {
@@ -301,13 +320,13 @@ The current GetCapabilities is over 10MB in one long line. Save it to a text fil
     "Vicmap Labels"
   ],
   "config": {
-    "url": "https://imageproxy.pozi.com/http://images.land.vic.gov.au/ecwp/ecw_wms.dll",
+    "url": "https://imageproxy.pozi.com/https://images.land.vic.gov.au/ecwp/ecw_wms.dll",
     "params": {
-      "LAYERS": "aerial_bendigo_2021jan17_air_vis_10cm_mga55,towns_bendigo_2021sep02_air_vis_10cm_mga55,towns_axedale_2021jan18_air_vis_10cm_mga55,towns_elmore_2021jan18_air_vis_10cm_mga55,towns_goornong_2021jan18_air_vis_10cm_mga55,towns_heathcote_2020feb22_air_vis_10cm_mga55,towns_lockwood-south_2021jan17_air_vis_10cm_mga55,towns_marong_2020feb22_air_vis_10cm_mga55,towns_neilborough_2021jan17_air_vis_10cm_mga55,towns_ravenswood_2021jan17_air_vis_10cm_mga55,towns_raywood_2021jan17_air_vis_10cm_mga55,towns_redesdale_2020feb22_air_vis_10cm_mga55,towns_sebastian_2021jan17_air_vis_10cm_mga55,towns_mia-mia_2020feb22_air_vis_10cm_mga55",
-      "STYLES": ",,,,,,,,,,,,,",
+      "LAYERS": "VMIMAGERY_mallee_2015jan02_air_vis_20cm_mga54,VMIMAGERY_wimmera-grampians_2020dec20_air_vis_15cm_mga54.ecw",
+      "STYLES": ",",
       "TILED": true,
-      "FORMAT": "image/jpeg",
-      "authkey": "iws-bendigo"
+      "authkey": "datashare-yarriambiack",
+      "format": "image/webp"
     }
   }
 }

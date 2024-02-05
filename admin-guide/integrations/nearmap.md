@@ -10,7 +10,7 @@ Pozi integrates directly with the Nearmap API so your users get fast access to t
 
 Try the interactive view here:
 
-<iframe width="100%" height="500px" frameborder="0" scrolling="no" allow="fullscreen" src="https://cardinia.pozi.com/#/x[145.41726]/y[-37.98234]/z[20]/layers[nearmap]/layers[vicmaplabels]/"></iframe>
+<iframe width="100%" height="500px" frameborder="0" scrolling="no" allow="fullscreen" src="https://cardinia.pozi.com/#/x[145.41726]/y[-37.98234]/z[20]/layers[nearmapcurrent]/layers[vicmaplabels]/"></iframe>
 
 <br/>
 
