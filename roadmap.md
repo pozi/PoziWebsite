@@ -38,7 +38,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 #### New
 
-- [x] ⚡ new option to display map legend in print output
+- [x] ⚡ display map legend in print output
 
 #### Improved
 
