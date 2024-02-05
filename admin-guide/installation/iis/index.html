@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.760432334954">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.760432906412">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,12 +35,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.760432334954" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.760432906412" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.760432334954" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.760432906412" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.760432334954" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.760432334954" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.760432906412" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.760432906412" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -852,30 +852,17 @@ It may be necessary to change some settings in <code v-pre>applicationHost.confi
 </doc-codeblock></div>
 <p>This will cache content for up to the time set in the <code v-pre>duration</code> field. If a longer cache duration is desired, it is recommended to invalidate the cache (see below) every time a QGIS project file
 or any of the layers or their contents have changed.</p>
-<doc-anchor-target id="kernel-mode-vs-user-mode-caching">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#kernel-mode-vs-user-mode-caching">#</doc-anchor-trigger>
-        <span>Kernel mode vs User mode caching</span>
-    </h3>
-</doc-anchor-target>
-<p>Kernel mode can only be for static files.</p>
-<p>If kernel mode caching is desirable, change the <code v-pre>enableKernelCache</code> setting to be <code v-pre>true</code> in <code v-pre>C:\Pozi\IIS\QgisServer\web.config</code> above and restart IIS.</p>
-<p><strong>TODO: complete or remove this section</strong></p>
-<p>** Advanced kernel mode cache settings**:</p>
-<ul>
-<li><a href="https://learn.microsoft.com/en-GB/troubleshoot/developer/webapps/iis/iisadmin-service-inetinfo/httpsys-registry-windows" class="outbound" target="_blank"><span>Registry settings for kernel mode</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
-</ul>
 <doc-anchor-target id="cache-invalidation">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#cache-invalidation">#</doc-anchor-trigger>
         <span>Cache invalidation</span>
     </h3>
 </doc-anchor-target>
-<p>If kernel mode caching is not used, run the following command to invalidate the cache:</p>
+<p>Run the following command to invalidate the cache:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-batch"><code v-pre class="language-batch">%windir%\system32\inetsrv\appcmd recycle apppool /apppool.name:PoziQgisServer</code></pre>
 </doc-codeblock></div>
-<p>If the above does not clear the cache (e.g. when running kernel mode), then execute the following command instead (which will restart IIS):</p>
+<p>If the above does not clear the cache for any reason, then execute the following command instead (which will restart IIS):</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-batch"><code v-pre class="language-batch">iisreset</code></pre>
 </doc-codeblock></div>
