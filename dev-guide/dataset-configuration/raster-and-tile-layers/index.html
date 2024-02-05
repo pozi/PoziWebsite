@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.760432906412">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.760492576653">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,12 +35,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.760432906412" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.760492576653" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.760432906412" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.760492576653" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.760432906412" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.760432906412" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.760492576653" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.760492576653" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -615,6 +615,24 @@
 }</code></pre>
 </doc-codeblock></div>
    </doc-panel>
+   <doc-panel id="nearmap" collapsed>
+       <template #title>Nearmap</template>
+<p>Nearmap imagery configuration makes use of the <code v-pre>maxZoom</code> parameter to limit the maximum zoom level when it is necessary to comply with the Nearmap terms of service for public use.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;title&quot;: &quot;Nearmap - Oct 2023&quot;,
+  &quot;group&quot;: &quot;Imagery&quot;,
+  &quot;type&quot;: &quot;XYZ&quot;,
+  &quot;linkedLayers&quot;: [
+    &quot;Vicmap Labels&quot;
+  ],
+  &quot;config&quot;: {
+    &quot;maxZoom&quot;: 20,
+    &quot;url&quot;: &quot;https://geoproxy.pozi.com/https://au{0-3}.nearmap.com/maps?x={x}&amp;y={y}&amp;z={z}&amp;nml=v&amp;version=2&amp;httpauth=false&amp;authkey=nearmap-bendigo-2023-10-20&quot;
+  }
+}</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
 </doc-panels>
 <doc-anchor-target id="deeca-image-web-server">
     <h3>
@@ -659,7 +677,7 @@
     &quot;Vicmap Labels&quot;
   ],
   &quot;config&quot;: {
-    &quot;url&quot;: &quot;https://proxy.pozi.com/https://iws.maps.vic.gov.au/erdas-iws/ogc/wms/RDP&quot;,
+    &quot;url&quot;: &quot;https://imageproxy.pozi.com/https://iws.maps.vic.gov.au/erdas-iws/ogc/wms/RDP&quot;,
     &quot;params&quot;: {
       &quot;LAYERS&quot;: &quot;VMIMAGERY_loddon_2019feb20_air_vis_10cm_mga54.ecw&quot;,
       &quot;STYLES&quot;: &quot;&quot;,
@@ -676,7 +694,7 @@
 <p><em>Note: each layer name in the <code v-pre>LAYERS</code> parameter is separated by a comma, and the <code v-pre>STYLES</code> parameter must contain the same number of commas.</em></p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-json"><code v-pre class="language-json">{
-  &quot;title&quot;: &quot;Aerial Photo (Latest)&quot;,
+  &quot;title&quot;: &quot;Aerial Photo Mosaic 2015-2020&quot;,
   &quot;group&quot;: &quot;Imagery&quot;,
   &quot;type&quot;: &quot;TileWMSAuth&quot;,
   &quot;about&quot;: {
@@ -688,13 +706,13 @@
     &quot;Vicmap Labels&quot;
   ],
   &quot;config&quot;: {
-    &quot;url&quot;: &quot;https://imageproxy.pozi.com/http://images.land.vic.gov.au/ecwp/ecw_wms.dll&quot;,
+    &quot;url&quot;: &quot;https://imageproxy.pozi.com/https://images.land.vic.gov.au/ecwp/ecw_wms.dll&quot;,
     &quot;params&quot;: {
-      &quot;LAYERS&quot;: &quot;aerial_bendigo_2021jan17_air_vis_10cm_mga55,towns_bendigo_2021sep02_air_vis_10cm_mga55,towns_axedale_2021jan18_air_vis_10cm_mga55,towns_elmore_2021jan18_air_vis_10cm_mga55,towns_goornong_2021jan18_air_vis_10cm_mga55,towns_heathcote_2020feb22_air_vis_10cm_mga55,towns_lockwood-south_2021jan17_air_vis_10cm_mga55,towns_marong_2020feb22_air_vis_10cm_mga55,towns_neilborough_2021jan17_air_vis_10cm_mga55,towns_ravenswood_2021jan17_air_vis_10cm_mga55,towns_raywood_2021jan17_air_vis_10cm_mga55,towns_redesdale_2020feb22_air_vis_10cm_mga55,towns_sebastian_2021jan17_air_vis_10cm_mga55,towns_mia-mia_2020feb22_air_vis_10cm_mga55&quot;,
-      &quot;STYLES&quot;: &quot;,,,,,,,,,,,,,&quot;,
+      &quot;LAYERS&quot;: &quot;VMIMAGERY_mallee_2015jan02_air_vis_20cm_mga54,VMIMAGERY_wimmera-grampians_2020dec20_air_vis_15cm_mga54.ecw&quot;,
+      &quot;STYLES&quot;: &quot;,&quot;,
       &quot;TILED&quot;: true,
-      &quot;FORMAT&quot;: &quot;image/jpeg&quot;,
-      &quot;authkey&quot;: &quot;iws-bendigo&quot;
+      &quot;authkey&quot;: &quot;datashare-yarriambiack&quot;,
+      &quot;format&quot;: &quot;image/webp&quot;
     }
   }
 }</code></pre>
