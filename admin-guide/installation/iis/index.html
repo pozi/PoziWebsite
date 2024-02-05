@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.760424604141">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.760432334954">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,12 +35,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.760424604141" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.760432334954" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.760424604141" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.760432334954" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.760424604141" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.760424604141" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.760432334954" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.760432334954" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -409,7 +409,7 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
     &lt;system.webServer&gt;
         &lt;handlers&gt;
             &lt;add name=&quot;PoziQgisServerFastCgi&quot; path=&quot;*&quot; verb=&quot;*&quot; type=&quot;&quot; modules=&quot;FastCgiModule&quot; scriptProcessor=&quot;C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe&quot;
-            resourceType=&quot;Unspecified&quot; requireAccess=&quot;Script&quot; allowPathInfo=&quot;false&quot; preCondition=&quot;&quot;  /&gt;
+            resourceType=&quot;Unspecified&quot; requireAccess=&quot;Script&quot; allowPathInfo=&quot;false&quot; preCondition=&quot;&quot; responseBufferLimit=&quot;4000000000&quot; /&gt;
         &lt;/handlers&gt;
         &lt;security&gt;
             &lt;requestFiltering&gt;
@@ -421,6 +421,15 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
 &lt;/configuration&gt;</code></pre>
 </doc-codeblock></div>
 <p>NOTE: If you have installed QGIS Server to a location other than the default <code v-pre>C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe</code> then you will need to update that path in the <code v-pre>web.config</code> file. You&#x27;ll also need to make the necessary substitutions in many of the commands below.</p>
+<doc-anchor-target id="background-information">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#background-information">#</doc-anchor-trigger>
+        <span>Background information:</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/iis/configuration/system.webserver/fastcgi/" class="outbound" target="_blank"><span>FastCGI</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
+</ul>
 <doc-anchor-target id="configure-iis">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#configure-iis">#</doc-anchor-trigger>
@@ -435,10 +444,12 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
 <p>If the command prompt returns <code v-pre>&quot;C:\Windows\system32\inetsrv\appcmd&quot; is not recognised as an internal or external command</code>, then a restart may be required before re-attempting this configuration step.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-batch"><code v-pre class="language-batch">%windir%\system32\inetsrv\appcmd.exe unlock config -section:system.webServer/handlers
-&quot;%systemroot%\system32\inetsrv\appcmd&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe',idleTimeout='604800']&quot; /commit:apphost
-&quot;%systemroot%\system32\inetsrv\appcmd&quot; set config /section:isapiCgiRestriction /+&quot;[path='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe',description='PoziQgisServer',allowed='True']&quot;
-</code></pre>
+
+&quot;%systemroot%\system32\inetsrv\appcmd&quot; set config -section:system.webServer/fastCgi /+&quot;[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe',idleTimeout='604800',maxInstances='5',activityTimeout='70',requestTimeout='120']&quot; /commit:apphost
+
+&quot;%systemroot%\system32\inetsrv\appcmd&quot; set config /section:isapiCgiRestriction /+&quot;[path='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe',description='PoziQgisServer',allowed='True']&quot;</code></pre>
 </doc-codeblock></div>
+<p><strong>Tip</strong>: if a fastCGI request frequently times out due to a slow database connection or very large datasets, change the <code v-pre>requestTimeout</code> value to a greater number (in seconds).</p>
 <doc-anchor-target id="configure-environment-variables">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#configure-environment-variables">#</doc-anchor-trigger>
@@ -668,17 +679,22 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
     </div>
 </div>
 <p>Enable the Dynamic Compression IIS module:</p>
-<p><code v-pre>dism /online /Enable-Feature /FeatureName:IIS-HttpCompressionDynamic</code></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-batch"><code v-pre class="language-batch">dism /online /Enable-Feature /FeatureName:IIS-HttpCompressionDynamic</code></pre>
+</doc-codeblock></div>
 <p>Configure <code v-pre>applicationHost.config</code>, section <code v-pre>configuration.system.webServer</code> the following way by replacing <code v-pre>&lt;httpCompression /&gt;</code> with:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">	    &lt;httpCompression
+<div class="codeblock-title">%windir%\System32\inetsrv\config\applicationHost.config</div>
+<pre class="language-markup"><code v-pre class="language-markup">	    &lt;httpCompression
             doDiskSpaceLimiting=&quot;true&quot;
-            maxDiskSpaceUsage=&quot;2000&quot; &lt;!-- in MB --&gt;
+            maxDiskSpaceUsage=&quot;2000&quot;
             noCompressionForProxies=&quot;false&quot;
             staticCompressionIgnoreHitFrequency=&quot;true&quot;
             dynamicCompressionDisableCpuUsage=&quot;100&quot;
             dynamicCompressionEnableCpuUsage=&quot;100&quot;
-            dynamicCompressionBufferLimit=&quot;4255360000&quot; &lt;!-- in bytes --&gt;
+            dynamicCompressionBufferLimit=&quot;4255360000&quot;
+            cacheControlHeader=&quot;max-age=10&quot;
+            sendCacheHeaders=&quot;false&quot;
         &gt;
 
             &lt;!--
@@ -714,7 +730,7 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
 </doc-codeblock></div>
 <p>The above can be achieved by executing the following commands:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">:: Configure httpCompression settings
+<pre class="language-batch"><code v-pre class="language-batch">:: Configure httpCompression settings
 :: &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /directory:&quot;%SystemDrive%\inetpub\temp\IIS Temporary Compressed Files&quot; /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /doDiskSpaceLimiting:true /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /maxDiskSpaceUsage:2000 /commit:apphost &amp; :: in megabytes
@@ -723,6 +739,8 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /dynamicCompressionDisableCpuUsage:100 /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /dynamicCompressionEnableCpuUsage:100 /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /dynamicCompressionBufferLimit:4255360000 /commit:apphost &amp;:: VERY IMPORTANT for caching/compressing large results. In bytes.
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /cacheControlHeader:&quot;max-age=60&quot; &amp; :: in seconds
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /sendCacheHeaders:false &amp; :: if true, this will allow for browser side disk caching
 
 :: Add Brotli scheme (should not need to be added)
 :: &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/httpCompression /+&quot;[name='br',dll='%ProgramFiles%\IIS\IIS Compression\iisbrotli.dll']&quot; /commit:apphost
@@ -755,14 +773,26 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
 </doc-codeblock></div>
 <p>Note:</p>
 <ul>
+<li><code v-pre>maxDiskSpaceUsage</code>: size is in MB</li>
 <li><code v-pre>noCompressionForProxies:false</code>: If this value is set to <code v-pre>true</code>, IIS will not compress if it detects that the request has come through a proxy. Cloudfront and Azure/Entra Id App Proxy
 fall in that category, so it&#x27;s important to set this value to <code v-pre>false</code>.</li>
-<li><code v-pre>dynamicCompressionBufferLimit</code>: this value (in bytes) determines the maximum uncompressed response size before deciding not to compress the result. It has been observed in some IIS
+<li><code v-pre>dynamicCompressionBufferLimit</code>: this value (size in bytes) determines the maximum uncompressed response size before deciding not to compress the result. It has been observed in some IIS
 instances that when the size gets above 30MB, the response throughput becomes progressively slower as the size increases.</li>
 <li><code v-pre>dynamicCompressionBeforeCache:true</code> has a limit of about 15MB uncompressed or 5MB compressed (on a server with 1GB memory). Any response that is bigger than that will disable compression.
 If the value is set to <code v-pre>false</code>, the response will always be compressed but not cached (if caching is enabled below). The optimal setting of this depends on
 the capabilities of the server that IIS resides on or the speed of the network connection and may need to be assessed on a case by case basis.</li>
+<li><code v-pre>cacheControlHeader</code>: <code v-pre>max-age</code> value is in seconds</li>
+<li><code v-pre>sendCacheHeaders</code>: if set to true, the browser will cache the contents for up to the value of <code v-pre>max-age</code> in the <code v-pre>cacheControlHeader</code> attribute</li>
 </ul>
+<p><strong>Also note</strong>: the settings above affect all sites running on IIS. If this is problematic, move the settings to the <code v-pre>C:\Pozi\IIS\QgisServer\web.config</code> file.
+It may be necessary to change some settings in <code v-pre>applicationHost.config</code> to allow for this to happen.</p>
+<p><strong>TODO: determine if the following is needed:</strong></p>
+<p>In <code v-pre>web.config</code>, make sure that the following <code v-pre>responseBufferLimit=&quot;4000000000&quot;</code> is set in the <code v-pre>PoziQgisServerFastCgi</code> handler:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">C:\Pozi\IIS\QgisServer\web.config</div>
+<pre class="language-markup"><code v-pre class="language-markup">        &lt;handlers&gt;
+            &lt;add name=&quot;PoziQgisServerFastCgi&quot; .... responseBufferLimit=&quot;4000000000&quot; /&gt;</code></pre>
+</doc-codeblock></div>
 <doc-anchor-target id="caching">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#caching">#</doc-anchor-trigger>
@@ -789,50 +819,80 @@ the capabilities of the server that IIS resides on or the speed of the network c
 </div>
 <p>Enable caching from the first time a document is being requested in section <code v-pre>configuration.system.webServer</code>:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">        &lt;serverRuntime frequentHitThreshold=&quot;1&quot; frequentHitTimePeriod=&quot;00:10:00&quot; /&gt;
+<div class="codeblock-title">C:\Pozi\IIS\QgisServer\web.config</div>
+<pre class="language-markup"><code v-pre class="language-markup">        &lt;serverRuntime frequentHitThreshold=&quot;1&quot; frequentHitTimePeriod=&quot;00:10:00&quot; /&gt;
+
         &lt;caching enabled=&quot;true&quot; enableKernelCache=&quot;true&quot; maxCacheSize=&quot;2000&quot; maxResponseSize=&quot;4120000000&quot; /&gt;</code></pre>
 </doc-codeblock></div>
+<p><strong>Command-line</strong>:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/serverRuntime /frequentHitThreshold:1 /commit:apphost
+<pre class="language-batch"><code v-pre class="language-batch">&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/serverRuntime /frequentHitThreshold:1 /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/serverRuntime /frequentHitTimePeriod:&quot;00:10:00&quot; /commit:apphost</code></pre>
 </doc-codeblock></div>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/caching /enabled:true /commit:apphost
+<pre class="language-batch"><code v-pre class="language-batch">&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/caching /enabled:true /commit:apphost
 &quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/caching /enableKernelCache:false /commit:apphost &amp; :: set to false to prevent frequent clearing of cache
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/caching /maxCacheSize:2000 /commit:apphost &amp; :: in megabytes
-&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/caching /maxResponseSize:4120000000 /commit:apphost &amp; :: in bytes</code></pre>
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/caching /maxCacheSize:2000 /commit:apphost &amp; :: can only be set here (size in megabytes)
+&quot;%systemroot%\system32\inetsrv\appcmd.exe&quot; set config -section:system.webServer/caching /maxResponseSize:4120000000 /commit:apphost &amp; :: can only be set here (size in bytes)</code></pre>
 </doc-codeblock></div>
-<p>TODO: the following to configure web.config does not work yet</p>
+<p>Add to the <code v-pre>C:\Pozi\IIS\QgisServer\web.config</code> in section <code v-pre>configuration.system.webServer</code>:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">:: &quot;%systemroot%\system32\inetsrv\appcmd&quot; set config &quot;Default Web Site/Pozi/QgisServer&quot; -section:system.webServer /enabled:true</code></pre>
-</doc-codeblock></div>
-<p>Add to the <code v-pre>%ProgramFiles%/Pozi/server/iis/Pozi/QgisServer/web.config</code> in section <code v-pre>configuration.system.webServer</code>:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">		&lt;caching enabled=&quot;true&quot; enableKernelCache=&quot;false&quot;&gt;
+<div class="codeblock-title">C:\Pozi\IIS\QgisServer\web.config</div>
+<pre class="language-markup"><code v-pre class="language-markup">		&lt;caching enabled=&quot;true&quot; enableKernelCache=&quot;false&quot;&gt;
             &lt;profiles&gt;
-                &lt;add extension=&quot;*&quot; policy=&quot;CacheForTimePeriod&quot; kernelCachePolicy=&quot;CacheForTimePeriod&quot; duration=&quot;00:10:00&quot; varyByQueryString=&quot;*&quot; /&gt;
+                &lt;add extension=&quot;*&quot; policy=&quot;CacheForTimePeriod&quot; kernelCachePolicy=&quot;CacheForTimePeriod&quot; duration=&quot;00:10:00&quot; location=&quot;Any&quot; varyByQueryString=&quot;*&quot; varyByHeaders=&quot;Accept-Encoding&quot; /&gt;
             &lt;/profiles&gt;
         &lt;/caching&gt;</code></pre>
 </doc-codeblock></div>
-<p>This will cache content for 10 minutes. If a longer duration is desired, it is recommended to run the following command every time a QGIS project file
-or any of the layers have changed:</p>
+<p><strong>Command-line</strong>:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">%windir%\system32\inetsrv\appcmd recycle apppool /apppool.name:PoziQgisServer</code></pre>
+<pre class="language-batch"><code v-pre class="language-batch">&quot;%systemroot%\system32\inetsrv\appcmd&quot; set config &quot;Default Web Site/Pozi/QgisServer&quot; -section:system.webServer/caching /enabled:true
+&quot;%systemroot%\system32\inetsrv\appcmd&quot; set config &quot;Default Web Site/Pozi/QgisServer&quot; -section:system.webServer/caching /enableKernelCache:false
+&quot;%systemroot%\system32\inetsrv\appcmd&quot; set config &quot;Default Web Site/Pozi/QgisServer&quot; -section:system.webServer/caching /+profiles.[extension='*',duration='00:10:00',location='Any',policy='CacheForTimePeriod',kernelCachePolicy='CacheForTimePeriod',varyByQueryString='*',varyByHeaders='Accept-Encoding']</code></pre>
 </doc-codeblock></div>
-<p>If that does not clear the cache, then execute the following command instead (which will restart IIS):</p>
+<p>This will cache content for up to the time set in the <code v-pre>duration</code> field. If a longer cache duration is desired, it is recommended to invalidate the cache (see below) every time a QGIS project file
+or any of the layers or their contents have changed.</p>
+<doc-anchor-target id="kernel-mode-vs-user-mode-caching">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#kernel-mode-vs-user-mode-caching">#</doc-anchor-trigger>
+        <span>Kernel mode vs User mode caching</span>
+    </h3>
+</doc-anchor-target>
+<p>Kernel mode can only be for static files.</p>
+<p>If kernel mode caching is desirable, change the <code v-pre>enableKernelCache</code> setting to be <code v-pre>true</code> in <code v-pre>C:\Pozi\IIS\QgisServer\web.config</code> above and restart IIS.</p>
+<p><strong>TODO: complete or remove this section</strong></p>
+<p>** Advanced kernel mode cache settings**:</p>
+<ul>
+<li><a href="https://learn.microsoft.com/en-GB/troubleshoot/developer/webapps/iis/iisadmin-service-inetinfo/httpsys-registry-windows" class="outbound" target="_blank"><span>Registry settings for kernel mode</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
+</ul>
+<doc-anchor-target id="cache-invalidation">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#cache-invalidation">#</doc-anchor-trigger>
+        <span>Cache invalidation</span>
+    </h3>
+</doc-anchor-target>
+<p>If kernel mode caching is not used, run the following command to invalidate the cache:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">iisreset</code></pre>
+<pre class="language-batch"><code v-pre class="language-batch">%windir%\system32\inetsrv\appcmd recycle apppool /apppool.name:PoziQgisServer</code></pre>
+</doc-codeblock></div>
+<p>If the above does not clear the cache (e.g. when running kernel mode), then execute the following command instead (which will restart IIS):</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-batch"><code v-pre class="language-batch">iisreset</code></pre>
 </doc-codeblock></div>
 <p>These command can be added to a batch (.bat) file that the user can run. If administrator privileges are required, then, as administrator, create a shortcut
 to this file and change its properties to get it to run as administrator.</p>
-<doc-anchor-target id="automatic-cache-invalidation">
+<p><strong>Note:</strong></p>
+<p>IIS can choose to periodically clear the cache. This can happen within the space of minutes and it&#x27;s as of yet unclear how to prevent this from
+happening.</p>
+<doc-anchor-target id="background-information-1">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#automatic-cache-invalidation">#</doc-anchor-trigger>
-        <span>Automatic cache invalidation</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#background-information-1">#</doc-anchor-trigger>
+        <span>Background information</span>
     </h3>
 </doc-anchor-target>
-<p>IIS can choose to not cache or periodically clear the cache. This can happen in the space of minutes and it&#x27;s as of yet unclear how to prevent this from
-happening.</p>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/iis/manage/managing-performance-settings/configure-iis-7-output-caching#select-a-cache-policies" class="outbound" target="_blank"><span>Configure IIS Output Caching</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
+</ul>
 <doc-anchor-target id="enable-debugging-tracing">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#enable-debugging-tracing">#</doc-anchor-trigger>
@@ -857,33 +917,52 @@ happening.</p>
         </div>
     </div>
 </div>
+<doc-anchor-target id="tracing">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#tracing">#</doc-anchor-trigger>
+        <span>Tracing</span>
+    </h3>
+</doc-anchor-target>
 <p>When requests fail or caching/compression does not work, it is recommended to use IIS&#x27;s tracing functionality to determine the cause if these issues.</p>
 <p>First enable tracing for IIS:</p>
-<p><code v-pre>dism /online /Enable-Feature /FeatureName:IIS-HttpCompressionDynamic</code></p>
-<p>Then add the following to <code v-pre>%ProgramFiles%/Pozi/server/iis/Pozi/QgisServer/web.config`` to enable tracing for all requests in section </code>configuration.system.webServer&#x60;:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">        &lt;tracing&gt;
+<pre class="language-batch"><code v-pre class="language-batch">dism /online /Enable-Feature /FeatureName:IIS-HttpCompressionDynamic</code></pre>
+</doc-codeblock></div>
+<p>Then add the following to <code v-pre>C:\Pozi\IIS\QgisServer\web.config</code> to enable tracing for all requests in section <code v-pre>configuration.system.webServer</code>:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">C:\Pozi\IIS\QgisServer\web.config</div>
+<pre class="language-markup"><code v-pre class="language-markup">        &lt;tracing&gt;
             &lt;traceFailedRequests&gt;
                 &lt;add path=&quot;*&quot;&gt;
                     &lt;traceAreas&gt;
                         &lt;add provider=&quot;WWW Server&quot; areas=&quot;Authentication,Security,Filter,StaticFile,CGI,Compression,Cache,RequestNotifications,Module,FastCGI,WebSocket&quot; verbosity=&quot;Verbose&quot; /&gt;
                     &lt;/traceAreas&gt;
-                    &lt;failureDefinitions statusCodes=&quot;200-999&quot; /&gt;
+                    &lt;failureDefinitions statusCodes=&quot;3-999&quot; /&gt;
                 &lt;/add&gt;
             &lt;/traceFailedRequests&gt;
         &lt;/tracing&gt;</code></pre>
 </doc-codeblock></div>
 <p>The tracing output files can generally be found in:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">%SystemDrive%\inetpub\logs\FailedReqLogFiles</code></pre>
+<pre class="language-batch"><code v-pre class="language-batch">%SystemDrive%\inetpub\logs\FailedReqLogFiles</code></pre>
 </doc-codeblock></div>
 <p>When opening the .xml file in Internet Explorer (!), the user gets presented with an interactive web page. The &#x27;Compact View&#x27; tab can provide useful information.</p>
 <p>It is recommended to turn the feature off by commenting out the code block below when not needed any more.</p>
-<p>Relevant events and their values are:</p>
+<p>Relevant events and some of their potential values are:</p>
 <ul>
-<li><code v-pre>OUTPUT_CACHE_LOOKUP_END Result</code>: <code v-pre>FOUND</code>, <code v-pre>NOT_FOUND</code></li>
+<li><code v-pre>OUTPUT_CACHE_LOOKUP_END</code>: <code v-pre>Result=&quot;FOUND&quot;</code>, <code v-pre>Result=&quot;NOT_FOUND&quot;</code>, <code v-pre>Result=&quot;CACHING_DISABLED&quot;</code></li>
 </ul>
 <p>More information about tracing failed requests can be found on <a href="https://learn.microsoft.com/en-us/iis/configuration/system.applicationhost/sites/site/tracefailedrequestslogging" class="outbound" target="_blank"><span>Microsoft&#x27;s website</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
+<doc-anchor-target id="useful-commands">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#useful-commands">#</doc-anchor-trigger>
+        <span>Useful commands</span>
+    </h3>
+</doc-anchor-target>
+<p>The following PowerShell command provides a list of system events related to Pozi QGIS Server:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-powershell"><code v-pre class="language-powershell">Get-WinEvent -LogName System | Where-Object {$_.Message -like &quot;*PoziQgisServer*&quot;} | out-host -paging</code></pre>
+</doc-codeblock></div>
 <doc-anchor-target id="restart-iis--application-pool">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#restart-iis--application-pool">#</doc-anchor-trigger>
@@ -892,11 +971,11 @@ happening.</p>
 </doc-anchor-target>
 <p>Restart IIS:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">iisreset /restart</code></pre>
+<pre class="language-batch"><code v-pre class="language-batch">iisreset /restart</code></pre>
 </doc-codeblock></div>
 <p>Restart Application pool:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">%windir%\system32\inetsrv\appcmd recycle apppool /apppool.name:PoziQgisServer</code></pre>
+<pre class="language-batch"><code v-pre class="language-batch">%windir%\system32\inetsrv\appcmd recycle apppool /apppool.name:PoziQgisServer</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="serving-static-files">
     <h2>
