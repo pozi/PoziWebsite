@@ -396,30 +396,15 @@ Add to the `C:\Pozi\IIS\QgisServer\web.config` in section `configuration.system.
 This will cache content for up to the time set in the `duration` field. If a longer cache duration is desired, it is recommended to invalidate the cache (see below) every time a QGIS project file
 or any of the layers or their contents have changed.
 
-
-### Kernel mode vs User mode caching
-
-Kernel mode can only be for static files.
-
-If kernel mode caching is desirable, change the `enableKernelCache` setting to be `true` in `C:\Pozi\IIS\QgisServer\web.config` above and restart IIS.
-
-
-**TODO: complete or remove this section**
-
-** Advanced kernel mode cache settings**:
-
-* [Registry settings for kernel mode](https://learn.microsoft.com/en-GB/troubleshoot/developer/webapps/iis/iisadmin-service-inetinfo/httpsys-registry-windows)
-
-
 ### Cache invalidation
 
-If kernel mode caching is not used, run the following command to invalidate the cache:
+Run the following command to invalidate the cache:
 
 ```bat
 %windir%\system32\inetsrv\appcmd recycle apppool /apppool.name:PoziQgisServer
 ```
 
-If the above does not clear the cache (e.g. when running kernel mode), then execute the following command instead (which will restart IIS):
+If the above does not clear the cache for any reason, then execute the following command instead (which will restart IIS):
 
 ```bat
 iisreset
