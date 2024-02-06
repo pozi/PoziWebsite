@@ -239,7 +239,7 @@ The topmost imagery layer can be toggled by the Aerial button at the top right o
 
 ==- Nearmap
 
-Nearmap imagery configuration makes use of the `maxZoom` parameter to limit the maximum zoom level when it is necessary to comply with the Nearmap terms of service for public use.
+Nearmap imagery configuration makes use of the `maxZoom` and `extent` parameters to limit the imagery that Pozi requests when it is necessary to comply with the Nearmap terms of service for public use.
 
 ```json
 {
@@ -252,7 +252,13 @@ Nearmap imagery configuration makes use of the `maxZoom` parameter to limit the 
   "config": {
     "maxZoom": 20,
     "url": "https://geoproxy.pozi.com/https://au{0-3}.nearmap.com/maps?x={x}&y={y}&z={z}&nml=v&version=2&httpauth=false&authkey=nearmap-bendigo-2023-10-20"
-  }
+  },
+  "extent": [
+    144,
+    -37.07,
+    144.86,
+    -36.37
+  ]
 }
 ```
 
