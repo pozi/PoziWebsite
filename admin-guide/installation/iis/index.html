@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.760494177164">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.760507257357">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,12 +35,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.760494177164" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.760507257357" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.760494177164" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.760507257357" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.760494177164" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.760494177164" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.760507257357" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.760507257357" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -913,8 +913,9 @@ happening.</p>
 <p>When requests fail or caching/compression does not work, it is recommended to use IIS&#x27;s tracing functionality to determine the cause if these issues.</p>
 <p>First enable tracing for IIS:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-batch"><code v-pre class="language-batch">dism /online /Enable-Feature /FeatureName:IIS-HttpCompressionDynamic</code></pre>
+<pre class="language-batch"><code v-pre class="language-batch">dism /online /Enable-Feature /FeatureName:IIS-HttpTracing</code></pre>
 </doc-codeblock></div>
+<p>Then, in the IIS manager, click on <code v-pre>Default Web Site</code> and in the <code v-pre>Actions</code> pane on the right hand side, click on <code v-pre>Failed Request Tracing...</code> under the <code v-pre>Configure</code> heading and then check <code v-pre>Enable</code> and close the window.</p>
 <p>Then add the following to <code v-pre>C:\Pozi\IIS\QgisServer\web.config</code> to enable tracing for all requests in section <code v-pre>configuration.system.webServer</code>:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">C:\Pozi\IIS\QgisServer\web.config</div>
