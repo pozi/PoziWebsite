@@ -436,8 +436,10 @@ When requests fail or caching/compression does not work, it is recommended to us
 First enable tracing for IIS:
 
 ```bat
-dism /online /Enable-Feature /FeatureName:IIS-HttpCompressionDynamic
+dism /online /Enable-Feature /FeatureName:IIS-HttpTracing
 ```
+
+Then, in the IIS manager, click on `Default Web Site` and in the `Actions` pane on the right hand side, click on `Failed Request Tracing...` under the `Configure` heading and then check `Enable` and close the window.
 
 Then add the following to `C:\Pozi\IIS\QgisServer\web.config` to enable tracing for all requests in section `configuration.system.webServer`:
 
