@@ -43,4 +43,4 @@ Public users should continue to use `<sitename>.pozi.com`. They will not be prom
 
 ## Configuration
 
-See the [Azure AD section](/admin-guide/installation/azure-ad) in the Installation Guide.
+See the [Azure AD section](/admin-guide/installation/entra-id) in the Installation Guide.
