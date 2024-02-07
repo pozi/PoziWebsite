@@ -219,6 +219,7 @@ The topmost imagery layer can be toggled by the Aerial button at the top right o
     "url": "https://developer.here.com/documentation/map-tile/topics/what-is.html"
   },
   "config": {
+    "maxZoom": 20,
     "url": "https://{1-4}.aerial.maps.api.here.com/maptile/2.1/maptile/newest/hybrid.day/{z}/{x}/{y}/256/png8?lg=ENG&app_id=ourappid&token=ourtoken"
   }
 }
@@ -232,6 +233,7 @@ The topmost imagery layer can be toggled by the Aerial button at the top right o
   "group": "Imagery",
   "type": "XYZ",
   "config": {
+    "maxZoom": 18,
     "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
   }
 }
@@ -355,7 +357,7 @@ https://images.maps.vic.gov.au/erdas-iws/ogc/wms)...will be decommissioned by 30
 
 Any layer configured with `"group": "Basemap"` will appear in the 'Basemap' layer group (as expected). Layers within this special group are displayed with a radio button to toggle between layers instead of the standard tick boxes.
 
-Set `"visible": true` for the default basemap.
+The topmost layer in the 'Basemap' group will be the default basemap displayed in Pozi.
 
 ### Sources
 
@@ -373,6 +375,7 @@ Set `"visible": true` for the default basemap.
     "url": "https://www.openstreetmap.org/about"
   },
   "config": {
+    "maxZoom": 20,
     "url": "https://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png"
   }
 }
@@ -392,6 +395,7 @@ Set `"visible": true` for the default basemap.
     "url": "https://developer.here.com/documentation/map-tile/topics/what-is.html"
   },
   "config": {
+    "maxZoom": 20,
     "url": "https://{1-4}.base.maps.api.here.com/maptile/2.1/maptile/newest/normal.day/{z}/{x}/{y}/256/png8?lg=ENG&app_id=ourappid&token=ourtoken"
   }
 }
@@ -408,40 +412,6 @@ Set `"visible": true` for the default basemap.
     "google": {
       "key": "insert client's Google Maps API key here"
     }
-  }
-}
-```
-
-==- Stamen Watercolor
-
-```json
-{
-  "title": "Stamen Watercolor",
-  "group": "Basemap",
-  "type": "XYZ",
-  "about": {
-    "organisation": "Stamen",
-    "url": "http://maps.stamen.com"
-  },
-  "config": {
-    "url": "https://stamen-tiles-{a-d}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg"
-  }
-}
-```
-
-==- Stamen Terrain
-
-```json
-{
-  "title": "Stamen Terrain",
-  "group": "Basemap",
-  "type": "XYZ",
-  "about": {
-    "organisation": "Stamen",
-    "url": "http://maps.stamen.com"
-  },
-  "config": {
-    "url": "https://stamen-tiles-{a-d}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png"
   }
 }
 ```
@@ -481,6 +451,7 @@ Pozi is not currently licensed for Mapscape. This configuration is for evaluatio
     "url": "https://spatialvision.com.au/mapscape/"
   },
   "config": {
+    "maxZoom": 18,
     "url": "https://proxy.pozi.com/https://mapscape.maps.em.vic.gov.au/color/{z}/{x}/{y}.png"
   }
 }
@@ -494,6 +465,7 @@ Pozi is not currently licensed for Mapscape. This configuration is for evaluatio
   "group": "Basemap",
   "type": "XYZ",
   "config": {
+    "maxZoom": 19,
     "url": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Basemaps/QldMap_Lite/MapServer/tile/{z}/{y}/{x}?blankTile=false&browserCache=Map"
   }
 }
