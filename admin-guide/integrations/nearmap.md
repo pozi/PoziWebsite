@@ -1,12 +1,12 @@
 ---
 description: GIS integration for Nearmap
 icon: dot
-tags: [Pozi Enterprise, Cardinia Shire Council, Kingston City Council, Queenscliffe Borough Council]
+tags: [Pozi Enterprise, Cardinia Shire Council, Kingston City Council, Queenscliffe Borough Council, City of Greater Bendigo]
 ---
 
 # Nearmap
 
-Pozi integrates directly with the Nearmap API so your users get fast access to the latest high-resolution imagery. No downloading or double-handing of large image files required.
+Pozi integrates directly with the Nearmap API so your users get fast access to high-resolution imagery. No downloading or double-handing of large image files required.
 
 Try the interactive view here:
 

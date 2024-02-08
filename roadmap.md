@@ -51,6 +51,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 - [x] 🪲 exclude irrelevant results when a search contains an apostrophe
 - [x] 🪲 safely ignore *"all other values"* style category that QGIS automatically generates to preserve styling for other categories
+- [x] 🪲 render a layer in a default style if QGIS Server is unable to export the layer's style to SLD
 
 ### December 2023
 
@@ -64,6 +65,8 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 - [x] 👍 automatically fetch and display legends for any active WMS layer
 - [x] 👍 reduce Google Analytics traffic by eliminating triggering on hover events
+- [x] 👍 improve support for WA SLIP services
+- [x] 👍 notify user when there is an issue with connecting to a local data source
 
 ### October 2023
 
