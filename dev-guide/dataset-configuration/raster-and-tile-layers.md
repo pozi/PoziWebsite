@@ -77,6 +77,29 @@ For WMS datasets, the dataset type can be either `TileWMS` or `ImageWMS`.
 
 ==-
 
+#### Projection
+
+Layers can be requested in any projection supported by the server by specifying the projection within the `config` element.
+
+==- Layer with override projection
+
+```json
+{
+  "title": "Queensland Globe Imagery",
+  "group": "Imagery",
+  "type": "TileWMS",
+  "showLegend": false,
+  "config": {
+    "url": "https://spatial-img.information.qld.gov.au/arcgis/services/Basemaps/LatestStateProgram_AllUsers/ImageServer/WMSServer",
+    "projection": "EPSG:7856",
+    "params": {
+      "layers": "LatestStateProgram_AllUsers"
+    }
+  }
+}
+```
+==-
+
 #### External SLD
 
 WMS GetMap requests can be made with an `sld` parameter that contains the URL of an SLD file.
