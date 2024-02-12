@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.760769178826">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.761032732281">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,12 +35,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.760769178826" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.761032732281" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.760769178826" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.761032732281" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.760769178826" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.760769178826" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.761032732281" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.761032732281" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -445,6 +445,31 @@
 </doc-codeblock></div>
    </doc-panel>
 </doc-panels>
+<doc-anchor-target id="projection">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#projection">#</doc-anchor-trigger>
+        <span>Projection</span>
+    </h4>
+</doc-anchor-target>
+<p>Layers can be requested in any projection supported by the server by specifying the projection within the <code v-pre>config</code> element.</p>
+<doc-panel id="layer-with-override-projection" collapsed>
+    <template #title>Layer with override projection</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;title&quot;: &quot;Queensland Globe Imagery&quot;,
+  &quot;group&quot;: &quot;Imagery&quot;,
+  &quot;type&quot;: &quot;TileWMS&quot;,
+  &quot;showLegend&quot;: false,
+  &quot;config&quot;: {
+    &quot;url&quot;: &quot;https://spatial-img.information.qld.gov.au/arcgis/services/Basemaps/LatestStateProgram_AllUsers/ImageServer/WMSServer&quot;,
+    &quot;projection&quot;: &quot;EPSG:7856&quot;,
+    &quot;params&quot;: {
+      &quot;layers&quot;: &quot;LatestStateProgram_AllUsers&quot;
+    }
+  }
+}</code></pre>
+</doc-codeblock></div>
+</doc-panel>
 <doc-anchor-target id="external-sld">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#external-sld">#</doc-anchor-trigger>
