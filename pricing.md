@@ -24,7 +24,7 @@ layout: central
 <br/>
 <br/>
 
-Pozi delivers powerful location-based functionality at a fraction of the cost of traditional Geographic Information System software.
+Pozi delivers powerful location-based functionality at a fraction of the cost of traditional Geographic Information System software. Pricing start from AUD$6K/year plus setup cost.
 
 ***No long-term, lock-in contracts***
 
@@ -45,7 +45,6 @@ Pozi delivers powerful location-based functionality at a fraction of the cost of
 | Responsive design | **✓** | **✓** | **✓** | **✓** |
 | Intelligent address search | **✓** | **✓** | **✓** | **✓** |
 | GPS location | **✓** | **✓** | **✓** | **✓** |
-| Aerial imagery | **✓** | **✓** | **✓** | **✓** |
 | Unlimited users | **✓** | **✓** | **✓** | **✓** |
 | GPS tracking | | **✓** | **✓** | **✓** |
 | [Community consultation module](admin-guide/community-consultation/) | | **✓** | **✓** | **✓** |

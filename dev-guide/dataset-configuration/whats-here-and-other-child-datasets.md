@@ -139,7 +139,7 @@ If the source of a *What's Here* dataset is an API such as WFS, CKAN or Street V
 * `$esriGeometry` & `$esriGeometryType`
 * `$longitude` & `$latitude`
 
-A complete list of geometry parameters is available [here](https://github.com/pozi/PoziApp/blob/master/app/src/map/GetGeometryProperties.js#L76).
+A complete list of geometry parameters is available [here](https://github.com/pozi/PoziApp/blob/master/app/src/map/GetGeometryProperties.js#L76) (developer login required).
 
 ==- Example: Street View
 
@@ -175,3 +175,5 @@ A complete list of geometry parameters is available [here](https://github.com/po
   }
 }
 ```
+
+==-

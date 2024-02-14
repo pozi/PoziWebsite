@@ -43,4 +43,8 @@ The third-party form must enable hidden fields within the form to be populated u
 * Jotform
 * Google Form
 
-Do you use another form service? Let us know, and we'll see if it's compatiable.
+Do you use another form service? Let us know, and we'll see if it's compatible.
+
+## Content Moderation
+
+Every user submission is automatically emailed to an email address of your choosing. If you receive any off-topic or unwanted submissions, you'll be able to log in to the forms API and delete any submissions.

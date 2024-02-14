@@ -22,7 +22,7 @@ In addition, Pozi *Enterprise* and *Enterprise Cloud* sites have Pozi Server ins
 
 Public users can easily access publicly available data.
 
-+++ Enterprise
++++ Enterprise (discontinued)
 
 ![](/static/draw.io/network-diagram-enterprise.png)
 
