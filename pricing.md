@@ -24,7 +24,7 @@ layout: central
 <br/>
 <br/>
 
-Pozi delivers powerful location-based functionality at a fraction of the cost of traditional Geographic Information System software. Pricing start from AUD$6K/year plus setup cost.
+Pozi delivers powerful location-based functionality at a fraction of the cost of traditional Geographic Information System software. Packages start from AUD$6K/year plus setup cost.
 
 ***No long-term, lock-in contracts***
 
