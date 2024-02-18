@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.761278167021">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.761546529766">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,11 +35,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.761278167021" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.761546529766" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.761278167021" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.761546529766" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.761278167021" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.761546529766" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -616,6 +616,18 @@
 </p>
 <p>It can be useful to make a layer not selectable if it has a corresponding <em>What&#x27;s Here</em> dataset to avoid the Info Panel returning duplicate results.</p>
 <br/>
+<doc-anchor-target id="imagery-layers">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#imagery-layers">#</doc-anchor-trigger>
+        <span>Imagery Layers</span>
+    </h2>
+</doc-anchor-target>
+<p>You can add imagery layers such as aerial photos and satellite imagery from local TIF, ECW files, <a href="../../data-preparation/#image-mosaics">mosaics</a> and other sources to your QGIS project.</p>
+<p>It&#x27;s also possible to add layers from an external WMS/WMTS. However keep in mind the following:</p>
+<ul>
+<li>the performance of these layers may be slower than normal due to all image requests being <em>cascaded</em> through the QGIS Server</li>
+<li>if the external WMS/WMTS service is password protected, the credentials must be stored in the QGIS project file - QGIS will prompt to warn that the credentials are stored in plain text, and you must accept that warning in order for QGIS Server to be able to access the service</li>
+</ul>
 <doc-anchor-target id="exclude-layers">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#exclude-layers">#</doc-anchor-trigger>
