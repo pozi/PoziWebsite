@@ -205,6 +205,15 @@ It can be useful to make a layer not selectable if it has a corresponding *What'
 
 <br/>
 
+## Imagery Layers
+
+You can add imagery layers such as aerial photos and satellite imagery from local TIF, ECW files, [mosaics](/admin-guide/data-preparation.md#image-mosaics) and other sources to your QGIS project.
+
+It's also possible to add layers from an external WMS/WMTS. However keep in mind the following:
+
+- the performance of these layers may be slower than normal due to all image requests being *cascaded* through the QGIS Server
+- if the external WMS/WMTS service is password protected, the credentials must be stored in the QGIS project file - QGIS will prompt to warn that the credentials are stored in plain text, and you must accept that warning in order for QGIS Server to be able to access the service
+
 ## Exclude Layers
 
 Your QGIS project may contain layers that are not needed for viewing in Pozi. For instance, your project may contain basemap layers that provide context for viewing map layers in QGIS, but you don't want these to appear in the project's layer group in Pozi.
