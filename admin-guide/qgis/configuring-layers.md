@@ -216,6 +216,14 @@ It's also possible to add layers from an external WMS/WMTS. However keep in mind
 
 ![](/admin-guide/qgis/img/qgis-configure-secure-remote-imagery-layers.png)
 
+!!! Warning
+
+If QGIS Server has any problem with the permissions on any of the layers in a QGIS project, it can prevent all the other layers in the project from loading.
+
+Immediately after adding any password-protected layers, check Pozi to confirm that new and existing layers are working. If there are any issues, remove any problem layers from the QGIS project and save it.
+
+!!!
+
 ## Exclude Layers
 
 Your QGIS project may contain layers that are not needed for viewing in Pozi. For instance, your project may contain basemap layers that provide context for viewing map layers in QGIS, but you don't want these to appear in the project's layer group in Pozi.
