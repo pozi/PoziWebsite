@@ -98,6 +98,25 @@ Layers can be requested in any projection supported by the server by specifying 
   }
 }
 ```
+
+==-
+
+#### Gutter
+
+Sometimes a layer configured as a TileWMS layer can appear in Pozi with narrow white gaps between the tiles. Use the `gutter` parameter to specify an amount of padding to prevent gaps from showing.
+
+==- TileWMS with gutter
+
+```json
+{
+  "title": "Nearmap - Dec 2023",
+  "group": "Imagery",
+  "type": "TileWMS",
+  "config": {
+    "gutter": 10,
+    "params": {...
+```
+
 ==-
 
 #### External SLD
@@ -192,7 +211,7 @@ Example configurations:
 
 #### Selectability
 
-WMS layers are not selectable/queryable by default. (However there is [a plan](https://trello.com/c/NuPIDgSL/18-enable-wms-layers-getfeatureinfo-results-to-be-displayed-in-info-panel-by-default) to change Pozi's default behaviour for WMS layers.)
+Individually configured WMS layers (ie, *not* configured in a QGIS project) are not selectable/queryable by default. (However there is [a plan](https://trello.com/c/NuPIDgSL/18-enable-wms-layers-getfeatureinfo-results-to-be-displayed-in-info-panel-by-default) to change Pozi's default behaviour for WMS layers.)
 
 To make WMS layers selectable, add `"parent": "Whats Here"` to the layer's configuration.
 
@@ -358,6 +377,48 @@ The current GetCapabilities is over 10MB in one long line. Save it to a text fil
       "TILED": true,
       "authkey": "datashare-yarriambiack",
       "format": "image/webp"
+    }
+  }
+}
+```
+
+==-
+
+### Queensland Globe Imagery
+
+==- Queensland Globe Imagery Tile Service (open)
+
+```json
+{
+  "title": "Queensland Globe Imagery",
+  "group": "Imagery",
+  "type": "XYZ",
+  "about": {
+    "organisation": "Queensland Globe",
+    "url": "https://qldglobe.information.qld.gov.au/"
+  },
+  "config": {
+    "maxZoom": 20,
+    "url": "https://spatial-img.information.qld.gov.au/arcgis/rest/services/Basemaps/LatestStateProgram_AllUsers/ImageServer/tile/{z}/{y}/{x}?blankTile=false&browserCache=Map"
+  }
+}
+```
+
+==- Queensland Globe WMS (reprojected, and with SISP authkey)
+
+```json
+{
+  "title": "Queensland Globe Imagery",
+  "group": "Imagery",
+  "type": "TileWMS",
+  "showLegend": false,
+  "config": {
+    "url": "https://imageproxy.pozi.com/https://auth-spatial-img.information.qld.gov.au/arcgis/services/Basemaps/LatestStateProgram_QGovSISPUsers/ImageServer/WMSServer",
+    "projection": "EPSG:7856",
+    "params": {
+      "LAYERS": "LatestStateProgram_QGovSISPUsers",
+      "format": "image/jpeg",
+      "authkey": "xxxx"
     }
   }
 }
