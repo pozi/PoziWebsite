@@ -119,6 +119,10 @@ Sometimes a layer configured as a TileWMS layer can appear in Pozi with narrow w
 
 ==-
 
+#### Other Parameters
+
+Other parameters can be specified in the `config` element. See https://openlayers.org/en/latest/apidoc/module-ol_source_TileWMS.html for a list of available parameters.
+
 #### External SLD
 
 WMS GetMap requests can be made with an `sld` parameter that contains the URL of an SLD file.

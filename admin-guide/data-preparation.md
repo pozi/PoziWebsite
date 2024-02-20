@@ -4,6 +4,7 @@ icon: database
 ---
 
 # Data Preparation
+
 ## Attribute Formatting
 
 ### Hyperlinks

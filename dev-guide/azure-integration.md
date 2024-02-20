@@ -37,6 +37,8 @@ This is defined in Enterprise Applications => Application Proxy => External Url
 - `https://poziserver-northburnettqldgovau.msappproxy.net/pozi/`
 - `https://poziserver-queenscliffevicgovau.msappproxy.net/pozi/`
 - `https://poziserver-mansfieldshirecouncil.msappproxy.net/pozi/`
+- `https://poziserver-westwimmera.msappproxy.net/pozi/`
+- `https://poziserver-yarriambiackshirecouncil.msappproxy.net/pozi/`
 
 ==- Examples (other)
 
@@ -67,6 +69,8 @@ This is defined in Enterprise Applications => Application Proxy => Internal Url.
 - Cardinia: (none)
 - Northern Grampians: `https://local.pozi.com/`
 - Loddon: `https://poziserver.loddon.vic.gov.au/iis/`
+- Yarriambiack: `https://ysc-ap01.pozi.com/iis/`
+- West Wimmera: `https://local.pozi.com/iis/`
 
 ==-
 

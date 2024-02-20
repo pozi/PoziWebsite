@@ -26,6 +26,8 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ### Enhancements
 
+- [ ] fix print option 'Current view' to match the map view extent exactly
+- [ ] move measure functionality into annotation tools
 - [ ] prevent Share links from including the panel state (unless specified in advanced options)
 - [ ] zoom/pan to selected feature on Pozi launch if URL contains a selected feature
 - [ ] display What's Here target on Pozi launch if URL contains a target
@@ -44,7 +46,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 - [x] 👍 add support for MultiPoint features in WMS GetFeatureInfo requests
 - [x] 👍 add support for alternative proxy servers
-- [x] 👍 make info panel cleaner by removing redundant layer icon
+- [x] 👍 clean up info panel by removing redundant layer icon
 - [x] 👍 notify user if link-in feature is not found
 
 #### Fixed
