@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.761617892530">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.761711700409">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,12 +35,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.761617892530" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.761711700409" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.761617892530" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.761711700409" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.761617892530" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.761617892530" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.761711700409" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.761711700409" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -470,6 +470,25 @@
 }</code></pre>
 </doc-codeblock></div>
 </doc-panel>
+<doc-anchor-target id="gutter">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#gutter">#</doc-anchor-trigger>
+        <span>Gutter</span>
+    </h4>
+</doc-anchor-target>
+<p>Sometimes a layer configured as a TileWMS layer can appear in Pozi with narrow white gaps between the tiles. Use the <code v-pre>gutter</code> parameter to specify an amount of padding to prevent gaps from showing.</p>
+<doc-panel id="tilewms-with-gutter" collapsed>
+    <template #title>TileWMS with gutter</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;title&quot;: &quot;Nearmap - Dec 2023&quot;,
+  &quot;group&quot;: &quot;Imagery&quot;,
+  &quot;type&quot;: &quot;TileWMS&quot;,
+  &quot;config&quot;: {
+    &quot;gutter&quot;: 10,
+    &quot;params&quot;: {...</code></pre>
+</doc-codeblock></div>
+</doc-panel>
 <doc-anchor-target id="external-sld">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#external-sld">#</doc-anchor-trigger>
@@ -571,7 +590,7 @@
         <span>Selectability</span>
     </h4>
 </doc-anchor-target>
-<p>WMS layers are not selectable/queryable by default. (However there is <a href="https://trello.com/c/NuPIDgSL/18-enable-wms-layers-getfeatureinfo-results-to-be-displayed-in-info-panel-by-default" class="outbound" target="_blank"><span>a plan</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> to change Pozi&#x27;s default behaviour for WMS layers.)</p>
+<p>Individually configured WMS layers (ie, <em>not</em> configured in a QGIS project) are not selectable/queryable by default. (However there is <a href="https://trello.com/c/NuPIDgSL/18-enable-wms-layers-getfeatureinfo-results-to-be-displayed-in-info-panel-by-default" class="outbound" target="_blank"><span>a plan</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> to change Pozi&#x27;s default behaviour for WMS layers.)</p>
 <p>To make WMS layers selectable, add <code v-pre>&quot;parent&quot;: &quot;Whats Here&quot;</code> to the layer&#x27;s configuration.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-json"><code v-pre class="language-json">  &quot;parent&quot;: &quot;Whats Here&quot;,</code></pre>
@@ -746,6 +765,52 @@
       &quot;TILED&quot;: true,
       &quot;authkey&quot;: &quot;datashare-yarriambiack&quot;,
       &quot;format&quot;: &quot;image/webp&quot;
+    }
+  }
+}</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
+<doc-anchor-target id="queensland-globe-imagery">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#queensland-globe-imagery">#</doc-anchor-trigger>
+        <span>Queensland Globe Imagery</span>
+    </h3>
+</doc-anchor-target>
+<doc-panels>
+   <doc-panel id="queensland-globe-imagery-tile-service-open" collapsed>
+       <template #title>Queensland Globe Imagery Tile Service (open)</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;title&quot;: &quot;Queensland Globe Imagery&quot;,
+  &quot;group&quot;: &quot;Imagery&quot;,
+  &quot;type&quot;: &quot;XYZ&quot;,
+  &quot;about&quot;: {
+    &quot;organisation&quot;: &quot;Queensland Globe&quot;,
+    &quot;url&quot;: &quot;https://qldglobe.information.qld.gov.au/&quot;
+  },
+  &quot;config&quot;: {
+    &quot;maxZoom&quot;: 20,
+    &quot;url&quot;: &quot;https://spatial-img.information.qld.gov.au/arcgis/rest/services/Basemaps/LatestStateProgram_AllUsers/ImageServer/tile/{z}/{y}/{x}?blankTile=false&amp;browserCache=Map&quot;
+  }
+}</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="queensland-globe-wms-reprojected-and-with-sisp-authkey" collapsed>
+       <template #title>Queensland Globe WMS (reprojected, and with SISP authkey)</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;title&quot;: &quot;Queensland Globe Imagery&quot;,
+  &quot;group&quot;: &quot;Imagery&quot;,
+  &quot;type&quot;: &quot;TileWMS&quot;,
+  &quot;showLegend&quot;: false,
+  &quot;config&quot;: {
+    &quot;url&quot;: &quot;https://imageproxy.pozi.com/https://auth-spatial-img.information.qld.gov.au/arcgis/services/Basemaps/LatestStateProgram_QGovSISPUsers/ImageServer/WMSServer&quot;,
+    &quot;projection&quot;: &quot;EPSG:7856&quot;,
+    &quot;params&quot;: {
+      &quot;LAYERS&quot;: &quot;LatestStateProgram_QGovSISPUsers&quot;,
+      &quot;format&quot;: &quot;image/jpeg&quot;,
+      &quot;authkey&quot;: &quot;xxxx&quot;
     }
   }
 }</code></pre>
