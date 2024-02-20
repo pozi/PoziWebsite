@@ -1,5 +1,4 @@
 ---
-title: Search
 order: 100
 icon: search
 ---
@@ -8,7 +7,7 @@ icon: search
 
 Open the search interface by clicking on the search button :icon-search: at the top left of the map or in the left panel.
 
-The drop-down list displays any standard search options such as address search, as well as all searchable layers.
+The drop-down list displays any standard search options such as address, as well as all searchable layers.
 
 ## Address Search
 

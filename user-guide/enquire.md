@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+order: 90
 icon: location
 ---
 
@@ -75,3 +75,5 @@ Pozi displays information not only about features selected from the map, but als
 Pozi uses parent-child relationships between datasets to provide unlimited querying capabilities.
 
 ![](./img/info-panel-parent-and-child-records.png){style="width:400px"}
+
+Click on any child record to view its full details.

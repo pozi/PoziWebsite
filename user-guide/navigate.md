@@ -1,8 +1,9 @@
 ---
-title: Navigate
-sidebar_position: 1
+order: 80
 icon: milestone
 ---
+
+# Navigate
 
 It's easy to navigate around Pozi using gestures and controls that are common to popular web map applications.
 

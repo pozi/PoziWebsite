@@ -23,7 +23,7 @@ Pozi's ease-of-use makes it an easy choice for rapid map mark-up and sharing.
 
 Use drawing tools to mark up the map:
 
-`Toolbar` > `Tools` > `Draw`
+`Menu` > `Tools` > `Draw`
 
 Select from any of the following drawing tools:
 
