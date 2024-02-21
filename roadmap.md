@@ -19,7 +19,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ### New Features
 
-- [ ] right-click option for selecting features
+- [ ] right-click options for selecting features and intersecting features
 - [ ] profiles - create custom layer collections for different users or workflows - like "modules", but better!
 - [ ] collaborative map annotations
 - [ ] 3D view
@@ -31,6 +31,8 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [ ] prevent Share links from including the panel state (unless specified in advanced options)
 - [ ] zoom/pan to selected feature on Pozi launch if URL contains a selected feature
 - [ ] display What's Here target on Pozi launch if URL contains a target
+- [ ] simplify child dataset configuration by automatically generating a spatial filter
+- [ ] allow QGIS layer folders to contain only hidden layers (eg, for better organising child datasets)
 
 ---
 
