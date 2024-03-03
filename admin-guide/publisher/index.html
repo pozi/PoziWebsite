@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.761806313040">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.762818566443">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -33,12 +33,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.761806313040" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.762818566443" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.761806313040" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.762818566443" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.761806313040" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.761806313040" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.762818566443" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.762818566443" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -666,6 +666,25 @@ url=http://localhost/pozi/qgisserver
         </div>
     </div>
 </div>
+<doc-anchor-target id="troubleshooting">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#troubleshooting">#</doc-anchor-trigger>
+        <span>Troubleshooting</span>
+    </h2>
+</doc-anchor-target>
+<doc-panels>
+   <doc-panel id="layers-are-not-exported" collapsed>
+       <template #title>Layers are not exported</template>
+<ul>
+<li>ensure that the WFS Output Extension is installed. See <a href="../installation/qgis-server/#wfs-output-extension">WFS Output Extension</a></li>
+<li>add <code v-pre>export=true</code> as a keyword in the project&#x27;s QGIS Server &#x27;Service Capabilities&#x27;</li>
+</ul>
+   </doc-panel>
+   <doc-panel id="log-file-reports-set-awscredential-is-not-recognized-as-the-name-of-a-cmdlet" collapsed>
+       <template #title>Log file reports &quot;&#x27;Set-AWSCredential&#x27; is not recognized as the name of a cmdlet&quot;</template>
+<p>Ensure that AWS Tools for Powershell is installed. See <doc-anchor-trigger to="#installing-aws-tools-for-powershell">AWS Tools for Powershell</doc-anchor-trigger></p>
+   </doc-panel>
+</doc-panels>
 
                                 
                                 <!-- Required only on API pages -->

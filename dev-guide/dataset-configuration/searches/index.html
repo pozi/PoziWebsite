@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.761806313040">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.762818566443">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -14,7 +14,7 @@
     <!-- Primary Meta Tags -->
     <title>Searches | Pozi Web GIS | Online Map</title>
     <meta name="title" content="Searches | Pozi Web GIS | Online Map">
-    <meta name="description" content="Geocode Earth offers a filter can restrict the address results to a specific municipality.">
+    <meta name="description" content="By default, Pozi enables users to select from any available vector layer and search across all fields for matching records.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://pozi.com/dev-guide/dataset-configuration/searches/">
@@ -23,22 +23,22 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pozi.com/dev-guide/dataset-configuration/searches/">
     <meta property="og:title" content="Searches | Pozi Web GIS | Online Map">
-    <meta property="og:description" content="Geocode Earth offers a filter can restrict the address results to a specific municipality.">
+    <meta property="og:description" content="By default, Pozi enables users to select from any available vector layer and search across all fields for matching records.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pozi.com/dev-guide/dataset-configuration/searches/">
     <meta property="twitter:title" content="Searches | Pozi Web GIS | Online Map">
-    <meta property="twitter:description" content="Geocode Earth offers a filter can restrict the address results to a specific municipality.">
+    <meta property="twitter:description" content="By default, Pozi enables users to select from any available vector layer and search across all fields for matching records.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.761806313040" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.762818566443" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.761806313040" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.762818566443" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.761806313040" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.761806313040" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.762818566443" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.762818566443" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -342,35 +342,117 @@
         <span>Searches</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="geocode-earth">
+<p>By default, Pozi enables users to select from any available vector layer and search across all fields for matching records. However, for larger datasets such as properties and addresses, it is often not practical to load an entire dataset into the browser to search in this way.</p>
+<p>Instead, custom search options can be configured to query a server to fetch results that match the user&#x27;s search criteria.</p>
+<p>Custom searches appear <em>above</em> the default vector layer search options.</p>
+<doc-anchor-target id="wfs-servers">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#geocode-earth">#</doc-anchor-trigger>
-        <span>Geocode Earth</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#wfs-servers">#</doc-anchor-trigger>
+        <span>WFS Servers</span>
     </h2>
 </doc-anchor-target>
-<doc-anchor-target id="filter-by-municipality">
+<p>Any server that supports WFS and returns GeoJSON can be configured as a search endpoint.</p>
+<doc-panels>
+   <doc-panel id="qgis-server-example-ogc-filter" collapsed>
+       <template #title>QGIS Server Example (OGC Filter)</template>
+<p>Note: QGIS Server (as at v3.28) seems to <em>not</em> properly support wildcard searches. Regardless, the configuration in this example includes wildcard settings to provide forward compatibility for future versions when wildcard searches are supported.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;title&quot;: &quot;DCDB Assessment Number&quot;,
+  &quot;type&quot;: &quot;Search&quot;,
+  &quot;showInLayerControl&quot;: false,
+  &quot;localDataSource&quot;: true,
+  &quot;search&quot;: {
+    &quot;id&quot;: &quot;assessment&quot;,
+    &quot;enabled&quot;: true
+  },
+  &quot;config&quot;: {
+    &quot;spatial&quot;: {
+      &quot;url&quot;: &quot;https://poziserver-grcqldgovau.msappproxy.net/pozi/qgisserver?MAP=E:/application/pozi/projects/general.qgz&amp;TYPENAME=DCDB&amp;LAYERS=DCDB&amp;STYLES=default&amp;SERVICE=WFS&amp;REQUEST=GetFeature&amp;VERSION=1.1.0&amp;SRSNAME=EPSG:4326&amp;OUTPUTFORMAT=application/json&amp;FILTER=&lt;Filter&gt;&lt;PropertyIsLike wildCard=\&quot;*\&quot; singleChar=\&quot;.\&quot; escape=\&quot;!\&quot;&gt;&lt;PropertyName&gt;assessment&lt;/PropertyName&gt;&lt;Literal&gt;(searchquery)&lt;/Literal&gt;&lt;/PropertyIsLike&gt;&lt;/Filter&gt;&quot;,
+      &quot;label&quot;: &quot;assessment&quot;
+    }
+  }
+}</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="victoria-open-data-platform-example-geoserver" collapsed>
+       <template #title>Victoria Open Data Platform Example (GeoServer)</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;title&quot;: &quot;Property Number&quot;,
+  &quot;type&quot;: &quot;Search&quot;,
+  &quot;showInLayerControl&quot;: false,
+  &quot;search&quot;: {
+    &quot;id&quot;: &quot;propnum&quot;,
+    &quot;enabled&quot;: true
+  },
+  &quot;config&quot;: {
+    &quot;spatial&quot;: {
+      &quot;url&quot;: &quot;https://opendata.maps.vic.gov.au/geoserver/ows?SERVICE=WFS&amp;VERSION=1.1.0&amp;REQUEST=GetFeature&amp;srsName=EPSG%3A4326&amp;typeNames=v_property_mp&amp;maxFeatures=1&amp;outputFormat=application%2Fjson&amp;cql_filter=propv_graphic_type='P' and prop_lga_code='325' and prop_propnum='(searchquery)'&quot;,
+      &quot;label&quot;: &quot;prop_propnum&quot;,
+      &quot;id&quot;: &quot;$id&quot;
+    }
+  }
+}</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="queensland-globe-example-arcgis" collapsed>
+       <template #title>Queensland Globe Example (ArcGIS)</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;title&quot;: &quot;Lot/Plan&quot;,
+  &quot;type&quot;: &quot;Search&quot;,
+  &quot;showInLayerControl&quot;: false,
+  &quot;search&quot;: {
+    &quot;id&quot;: &quot;lotplan&quot;,
+    &quot;enabled&quot;: true
+  },
+  &quot;config&quot;: {
+    &quot;spatial&quot;: {
+      &quot;url&quot;: &quot;https://spatial-gis.information.qld.gov.au/arcgis/rest/services/PlanningCadastre/LandParcelPropertyFramework/MapServer/4/query?f=geojson&amp;outFields=*&amp;returnGeometry=true&amp;inSR=4326&amp;where=lotplan=upper('(searchquery)')&quot;,
+      &quot;label&quot;: &quot;lotplan&quot;,
+      &quot;id&quot;: &quot;$id&quot;
+    }
+  }
+}</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
+<doc-anchor-target id="geocoding-services">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#geocoding-services">#</doc-anchor-trigger>
+        <span>Geocoding Services</span>
+    </h2>
+</doc-anchor-target>
+<p>Address searches can be more challenging than standard searches. Commercial geocoding services can be a good choice for providing address searches because of the options they offer including fuzzy search, filter by administrative boundary, updates from OpenStreetMap, and more.</p>
+<doc-anchor-target id="geocode-earth">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#filter-by-municipality">#</doc-anchor-trigger>
-        <span>Filter by Municipality</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#geocode-earth">#</doc-anchor-trigger>
+        <span>Geocode Earth</span>
     </h3>
 </doc-anchor-target>
-<p>Geocode Earth offers a filter can restrict the address results to a specific municipality.</p>
+<doc-anchor-target id="filter-by-municipality">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#filter-by-municipality">#</doc-anchor-trigger>
+        <span>Filter by Municipality</span>
+    </h4>
+</doc-anchor-target>
+<p>Geocode Earth offers a filter that can restrict the address results to a specific municipality.</p>
 <p><a href="https://geocode.earth/docs/forward/customization/#restrict-results-by-parent-id" class="outbound" target="_blank"><span>https://geocode.earth/docs/forward/customization/#restrict-results-by-parent-id</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
 <p>Loddon search:</p>
 <ul>
 <li><a href="https://api.geocode.earth/v1/autocomplete?text=3%20albert&amp;layers=address,street&amp;boundary.rect.min_lat=-36.91&amp;boundary.rect.min_lon=143.31&amp;boundary.rect.max_lat=-35.91&amp;boundary.rect.max_lon=144.35&amp;api_key=xxxx" class="outbound" target="_blank"><span>Before - using bounding box</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> - 5 results, including 3 from neighbouring council</li>
 <li><a href="https://api.geocode.earth/v1/autocomplete?text=3%20albert&amp;layers=address,street&amp;boundary.gid=whosonfirst:county:102049477&amp;api_key=xxxx" class="outbound" target="_blank"><span>After - using &quot;county&quot; filter</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> - 2 results</li>
 </ul>
-<p>In the Geocode Earth results, the municipality is called <code v-pre>county</code>.</p>
+<p>In the Geocode Earth configuration, the municipality is called <code v-pre>county</code>.</p>
 <p>For municipal client site:</p>
 <ul>
 <li>do a search for an address within the municipality and obtain <code v-pre>county_gid</code> value from the console (eg, whosonfirst:county:102049477)</li>
 <li>update Geocode Earth search config to replace bounding box parameters with <code v-pre>boundary.gid=</code> parameter</li>
 <li>check results</li>
 </ul>
-<doc-panels>
-   <doc-panel id="example" collapsed>
-       <template #title>Example</template>
+<doc-panel id="example" collapsed>
+    <template #title>Example</template>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-json"><code v-pre class="language-json">{
   &quot;title&quot;: &quot;Address Search&quot;,
@@ -386,19 +468,18 @@
     &quot;spatial&quot;: {
       &quot;url&quot;: &quot;https://api.geocode.earth/v1/autocomplete?text=(searchquery)&amp;layers=address,street&amp;boundary.gid=whosonfirst:county:102049053&amp;api_key=xxxx&quot;
     }
-  },
-  &quot;showInLayerControlRawConfig&quot;: false
+  }
 }</code></pre>
 </doc-codeblock></div>
+</doc-panel>
 <doc-anchor-target id="filter-by-bounding-coordinates">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#filter-by-bounding-coordinates">#</doc-anchor-trigger>
         <span>Filter by Bounding Coordinates</span>
-    </h3>
+    </h4>
 </doc-anchor-target>
-   </doc-panel>
-   <doc-panel id="example" collapsed>
-       <template #title>Example</template>
+<doc-panel id="example" collapsed>
+    <template #title>Example</template>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-json"><code v-pre class="language-json">{
   &quot;title&quot;: &quot;Address&quot;,
@@ -428,19 +509,18 @@
   }
 }</code></pre>
 </doc-codeblock></div>
-   </doc-panel>
-</doc-panels>
+</doc-panel>
 <doc-anchor-target id="here">
-    <h2>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#here">#</doc-anchor-trigger>
         <span>HERE</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <doc-anchor-target id="search-by-address">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#search-by-address">#</doc-anchor-trigger>
         <span>Search by Address</span>
-    </h3>
+    </h4>
 </doc-anchor-target>
 <doc-panel id="example" collapsed>
     <template #title>Example</template>
@@ -476,10 +556,10 @@
 </doc-codeblock></div>
 </doc-panel>
 <doc-anchor-target id="search-by-coordinates">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#search-by-coordinates">#</doc-anchor-trigger>
         <span>Search by Coordinates</span>
-    </h3>
+    </h4>
 </doc-anchor-target>
 <p><a href="https://southerngrampians.pozi.com/#/tab%5Bsearch%5D/" class="outbound" target="_blank"><span>https://southerngrampians.pozi.com/#/tab[search]/</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
 <p>The HERE geocoder can be used to return results based on coordinates. For instance, a user can type <code v-pre>142.026 -37.541</code> into the standard HERE geocoder box to navigate to the desired location.</p>
@@ -519,11 +599,45 @@
 </doc-codeblock></div>
 </doc-panel>
 <doc-anchor-target id="mapshare">
-    <h2>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#mapshare">#</doc-anchor-trigger>
         <span>Mapshare</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
+<doc-panel id="example" collapsed>
+    <template #title>Example</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;title&quot;: &quot;Address&quot;,
+  &quot;type&quot;: &quot;Search&quot;,
+  &quot;showInLayerControl&quot;: false,
+  &quot;search&quot;: {
+    &quot;enabled&quot;: true,
+    &quot;autocomplete&quot;: true,
+    &quot;fullText&quot;: true,
+    &quot;bbox&quot;: [
+      [
+        145.034,
+        -37.924
+      ],
+      [
+        145.156,
+        -38.085
+      ]
+    ],
+    &quot;id&quot;: &quot;address&quot;,
+    &quot;type&quot;: &quot;mapshare&quot;
+  },
+  &quot;config&quot;: {
+    &quot;spatial&quot;: {
+      &quot;url&quot;: &quot;https://corp-geo.mapshare.vic.gov.au/arcgis/rest/services/Geocoder/VMAddressEZIAdd/GeocodeServer/suggest?searchExtent=[min_lon],[max_lat],[max_lon],[min_lat]&amp;location=[mapX],[mapY]&amp;text=(searchquery)&amp;f=json&amp;maxSuggestions=15&quot;,
+      &quot;forwardSearchUrl&quot;: &quot;https://corp-geo.mapshare.vic.gov.au/arcgis/rest/services/Geocoder/VMAddressEZIAdd/GeocodeServer/findAddressCandidates?&amp;magicKey=[magicKey]&amp;SingleLine=[text]&amp;f=json&quot;,
+      &quot;id&quot;: &quot;$id&quot;
+    }
+  }
+}</code></pre>
+</doc-codeblock></div>
+</doc-panel>
 
                                 
                                 <!-- Required only on API pages -->

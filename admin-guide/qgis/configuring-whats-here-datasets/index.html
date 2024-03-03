@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.761806313040">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.762818566443">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -33,11 +33,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.761806313040" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.762818566443" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.761806313040" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.762818566443" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.761806313040" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.762818566443" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -341,7 +341,8 @@
 </doc-anchor-target>
 <p>Pozi&#x27;s Info Panel displays a set of results called <em>&quot;What&#x27;s Here&quot;</em> whenever the user clicks anywhere on the map (but not directly on any vector feature).</p>
 <p>Any datasets that you configure as <em>What&#x27;s Here</em> datasets will always appear in the Info Panel so that users will see information about a location without having to turn on specific layers.</p>
-<p>When a user clicks on the map or draws a line or polygon selection, Pozi creates a spatial <em>target</em> against which all What&#x27;s Here datasets will be queried. Pozi fetches any intersecting features from the What&#x27;s Here datasets and displays them in the Info Panel.</p>
+<p>When a user clicks on the map or draws a line or polygon selection, Pozi creates a spatial <em>target</em> against which all What&#x27;s Here datasets will be queried. If the user does a single click on the map, the target appears as a special icon. If the user uses the region or line selection tool, the target appears as a dashed line.</p>
+<p>Pozi fetches any intersecting features from the available What&#x27;s Here datasets and displays them in the Info Panel.</p>
 <p>Use cases:</p>
 <ul>
 <li>properties</li>
@@ -364,7 +365,7 @@
         </div>
         <div class="pr-5 ml-3 w-full">
 <p>Any dataset that is enabled for <em>What&#x27;s Here</em> is essentially a <em>child</em> dataset. Learn more about parent/child dataset interaction <a href="../configuring-linked-datasets/">here</a>.</p>
-<p>Instead of the layer&#x27;s <em>parent</em> being a feature in another layer, the parent is a temporary feature that is automatically created when the user clicks on the map (or uses the line or polygon selection tool), often referred to as the <em>target</em>.</p>
+<p>Instead of the layer&#x27;s <em>parent</em> being a feature in another layer, the parent is a temporary feature called the <em>target</em> that is automatically created when the user clicks on the map (or uses the region or line selection tool).</p>
         </div>
     </div>
 </div>
