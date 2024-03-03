@@ -3,11 +3,92 @@
 
 # Searches
 
-## Geocode Earth
+By default, Pozi enables users to select from any available vector layer and search across all fields for matching records. However, for larger datasets such as properties and addresses, it is often not practical to load an entire dataset into the browser to search in this way.
 
-### Filter by Municipality
+Instead, custom search options can be configured to query a server to fetch results that match the user's search criteria.
 
-Geocode Earth offers a filter can restrict the address results to a specific municipality.
+Custom searches appear *above* the default vector layer search options.
+
+## WFS Servers
+
+Any server that supports WFS and returns GeoJSON can be configured as a search endpoint.
+
+==- QGIS Server Example (OGC Filter)
+
+Note: QGIS Server (as at v3.28) seems to *not* properly support wildcard searches. Regardless, the configuration in this example includes wildcard settings to provide forward compatibility for future versions when wildcard searches are supported.
+
+```json
+{
+  "title": "DCDB Assessment Number",
+  "type": "Search",
+  "showInLayerControl": false,
+  "localDataSource": true,
+  "search": {
+    "id": "assessment",
+    "enabled": true
+  },
+  "config": {
+    "spatial": {
+      "url": "https://poziserver-grcqldgovau.msappproxy.net/pozi/qgisserver?MAP=E:/application/pozi/projects/general.qgz&TYPENAME=DCDB&LAYERS=DCDB&STYLES=default&SERVICE=WFS&REQUEST=GetFeature&VERSION=1.1.0&SRSNAME=EPSG:4326&OUTPUTFORMAT=application/json&FILTER=<Filter><PropertyIsLike wildCard=\"*\" singleChar=\".\" escape=\"!\"><PropertyName>assessment</PropertyName><Literal>(searchquery)</Literal></PropertyIsLike></Filter>",
+      "label": "assessment"
+    }
+  }
+}
+```
+
+==- Victoria Open Data Platform Example (GeoServer)
+
+```json
+{
+  "title": "Property Number",
+  "type": "Search",
+  "showInLayerControl": false,
+  "search": {
+    "id": "propnum",
+    "enabled": true
+  },
+  "config": {
+    "spatial": {
+      "url": "https://opendata.maps.vic.gov.au/geoserver/ows?SERVICE=WFS&VERSION=1.1.0&REQUEST=GetFeature&srsName=EPSG%3A4326&typeNames=v_property_mp&maxFeatures=1&outputFormat=application%2Fjson&cql_filter=propv_graphic_type='P' and prop_lga_code='325' and prop_propnum='(searchquery)'",
+      "label": "prop_propnum",
+      "id": "$id"
+    }
+  }
+}
+```
+
+==- Queensland Globe Example (ArcGIS)
+
+```json
+{
+  "title": "Lot/Plan",
+  "type": "Search",
+  "showInLayerControl": false,
+  "search": {
+    "id": "lotplan",
+    "enabled": true
+  },
+  "config": {
+    "spatial": {
+      "url": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/PlanningCadastre/LandParcelPropertyFramework/MapServer/4/query?f=geojson&outFields=*&returnGeometry=true&inSR=4326&where=lotplan=upper('(searchquery)')",
+      "label": "lotplan",
+      "id": "$id"
+    }
+  }
+}
+```
+
+==-
+
+## Geocoding Services
+
+Address searches can be more challenging than standard searches. Commercial geocoding services can be a good choice for providing address searches because of the options they offer including fuzzy search, filter by administrative boundary, updates from OpenStreetMap, and more.
+
+### Geocode Earth
+
+#### Filter by Municipality
+
+Geocode Earth offers a filter that can restrict the address results to a specific municipality.
 
 https://geocode.earth/docs/forward/customization/#restrict-results-by-parent-id
 
@@ -16,7 +97,7 @@ Loddon search:
 * [Before - using bounding box](https://api.geocode.earth/v1/autocomplete?text=3%20albert&layers=address,street&boundary.rect.min_lat=-36.91&boundary.rect.min_lon=143.31&boundary.rect.max_lat=-35.91&boundary.rect.max_lon=144.35&api_key=xxxx) - 5 results, including 3 from neighbouring council
 * [After - using "county" filter](https://api.geocode.earth/v1/autocomplete?text=3%20albert&layers=address,street&boundary.gid=whosonfirst:county:102049477&api_key=xxxx) - 2 results
 
-In the Geocode Earth results, the municipality is called `county`.
+In the Geocode Earth configuration, the municipality is called `county`.
 
 For municipal client site:
 
@@ -41,12 +122,13 @@ For municipal client site:
     "spatial": {
       "url": "https://api.geocode.earth/v1/autocomplete?text=(searchquery)&layers=address,street&boundary.gid=whosonfirst:county:102049053&api_key=xxxx"
     }
-  },
-  "showInLayerControlRawConfig": false
+  }
 }
 ```
 
-### Filter by Bounding Coordinates
+==- 
+
+#### Filter by Bounding Coordinates
 
 ==- Example
 
@@ -82,9 +164,9 @@ For municipal client site:
 
 ==-
 
-## HERE
+### HERE
 
-### Search by Address
+#### Search by Address
 
 ==- Example
 
@@ -121,7 +203,7 @@ For municipal client site:
 
 ==-
 
-### Search by Coordinates
+#### Search by Coordinates
 
 https://southerngrampians.pozi.com/#/tab[search]/
 
@@ -165,4 +247,40 @@ A separate search option can be configured in Pozi as its own search option to p
 
 ==-
 
-## Mapshare
+### Mapshare
+
+==- Example
+
+```json
+{
+  "title": "Address",
+  "type": "Search",
+  "showInLayerControl": false,
+  "search": {
+    "enabled": true,
+    "autocomplete": true,
+    "fullText": true,
+    "bbox": [
+      [
+        145.034,
+        -37.924
+      ],
+      [
+        145.156,
+        -38.085
+      ]
+    ],
+    "id": "address",
+    "type": "mapshare"
+  },
+  "config": {
+    "spatial": {
+      "url": "https://corp-geo.mapshare.vic.gov.au/arcgis/rest/services/Geocoder/VMAddressEZIAdd/GeocodeServer/suggest?searchExtent=[min_lon],[max_lat],[max_lon],[min_lat]&location=[mapX],[mapY]&text=(searchquery)&f=json&maxSuggestions=15",
+      "forwardSearchUrl": "https://corp-geo.mapshare.vic.gov.au/arcgis/rest/services/Geocoder/VMAddressEZIAdd/GeocodeServer/findAddressCandidates?&magicKey=[magicKey]&SingleLine=[text]&f=json",
+      "id": "$id"
+    }
+  }
+}
+```
+
+==-

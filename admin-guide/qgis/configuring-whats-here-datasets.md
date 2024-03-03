@@ -9,7 +9,9 @@ Pozi's Info Panel displays a set of results called *"What's Here"* whenever the 
 
 Any datasets that you configure as *What's Here* datasets will always appear in the Info Panel so that users will see information about a location without having to turn on specific layers.
 
-When a user clicks on the map or draws a line or polygon selection, Pozi creates a spatial *target* against which all What's Here datasets will be queried. Pozi fetches any intersecting features from the What's Here datasets and displays them in the Info Panel.
+When a user clicks on the map or draws a line or polygon selection, Pozi creates a spatial *target* against which all What's Here datasets will be queried. If the user does a single click on the map, the target appears as a special icon. If the user uses the region or line selection tool, the target appears as a dashed line.
+
+Pozi fetches any intersecting features from the available What's Here datasets and displays them in the Info Panel.
 
 Use cases:
 
@@ -23,7 +25,7 @@ Use cases:
 
 Any dataset that is enabled for *What's Here* is essentially a *child* dataset. Learn more about parent/child dataset interaction [here](./configuring-linked-datasets.md).
 
-Instead of the layer's *parent* being a feature in another layer, the parent is a temporary feature that is automatically created when the user clicks on the map (or uses the line or polygon selection tool), often referred to as the *target*.
+Instead of the layer's *parent* being a feature in another layer, the parent is a temporary feature called the *target* that is automatically created when the user clicks on the map (or uses the region or line selection tool).
 
 !!!
 

@@ -12,7 +12,7 @@ Civica [Reflect](https://www.civica.com/en-au/product-pages/reflect/) (formerly 
 
 ## Configure Source in QGIS
 
-1. QGIS > Layer > Add Layer > Add Vector Layer
+1. Layer > Add Layer > Add Vector Layer
 2. Source Type: Protocol: HTTP(S), cloud, etc
 3. Protocol Type: GeoJSON
 4. URI: your dataset URL
@@ -24,3 +24,5 @@ Note: if the URL supplied to you contains `Kml3=`, replace it with `GeoJson=`.
 Preview your new layer, and give it a user-friendly layer name.
 
 ![](img/civica-reflect-preview-and-rename-layer.png){style="width:400px"}
+
+Don't forget to enable the layer for WFS to allow users to interact with the layer via the table view and search box.

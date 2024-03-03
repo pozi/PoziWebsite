@@ -32,6 +32,12 @@ Create new project from scratch:
 2. Project > Save > specify name and path of new project file (`.qgs`)
 3. note the exact file path of project file (needed for subsequent configuration below)
 
+### Set Default Styles
+
+By default, the opacity of any new layers you add to your QGIS project may be set to 100%. This can prevent users from seeing important details that covered by polygon features. To avoid new layers being set to 100% opacity, set the project's default opacity to 50%.
+
+![](./img/qgis-project-opacity.png){style="width:500px"}
+
 ### Add Basemap
 
 It's useful to include a basemap in the project to provide visual context for the layers you will add on top.

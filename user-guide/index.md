@@ -5,14 +5,19 @@ icon: person
 
 # User Guide
 
-:::note Under Construction
+Welcome to Pozi!
 
-*This page is a work in progress. Please refer to our existing Help Guide for information about this topic.*
+Pozi is a geospatial enquiry and analysis web application that allows you to...
 
-[Existing Help Guide](https://help.pozi.com/)
+[!ref icon="search" text="Search"](./search/)
+[!ref icon="location" text="Enquire"](./enquire/)
 
-:::
+...and much more!
 
----
+!!!
 
-This guide helps users get the most from Pozi.
+The Pozi User Guide is *a work in progress*. We'll soon be adding more content including detailed instructions, screenshots and examples.
+
+!!!
+
+Feel free to explore the options on the left to get started.

@@ -26,7 +26,7 @@ Pozi's open architecture enables it to integrate seamlessly with a wide range of
 * Greenlight
 * HERE
 * Ibis Rating Manager
-* Infor Pathway
+* [Infor Pathway](./infor-pathway/)
 * Jotform
 * [MAGIQ](./magiq/)
 * [MapBox](./mapbox/)

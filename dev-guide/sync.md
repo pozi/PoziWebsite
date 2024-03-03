@@ -52,7 +52,7 @@ Pozi's sync functionality is enabled by PoziConnect Server, utilising the Pozi A
   - `Next: Tags` > `Next: Review` > `Name`: enter 'PoziPublisher-[site]' (eg, 'PoziPublisher-GlenEira')
   - `Create Policy`
 - Click on `Users` (left menu)
-  - Click `Add users`
+  - Click `Create user`
   - Set name to 'PoziPublisher-[site]' (eg, 'PoziPublisher-GlenEira')
   - Click `Next`
   - Click `Attach existing policies directly`, search for "PoziPublisher", then tick the box nect to the policy just created above

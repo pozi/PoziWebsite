@@ -146,3 +146,16 @@ Compile index of features and attributes for fast searching.
 !!!warning Warning 
 Be careful with the placement of quotes in the arguments of the scheduled task action!
 !!!
+
+## Troubleshooting
+
+==- Layers are not exported
+
+- ensure that the WFS Output Extension is installed. See [WFS Output Extension](../admin-guide/installation/qgis-server.md#wfs-output-extension)
+- add `export=true` as a keyword in the project's QGIS Server 'Service Capabilities'
+
+==- Log file reports "'Set-AWSCredential' is not recognized as the name of a cmdlet"
+
+Ensure that AWS Tools for Powershell is installed. See [AWS Tools for Powershell](#installing-aws-tools-for-powershell)
+
+==-
