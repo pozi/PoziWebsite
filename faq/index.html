@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.762818566443">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.763181910809">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -33,11 +33,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.5.0.762818566443" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.5.0.763181910809" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.762818566443" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.763181910809" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.762818566443" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.763181910809" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -369,6 +369,18 @@
 <p>We like to allow 3-4 weeks from receipt of a purchase order to a go-live date.</p>
 <p>Talk to us about your requirements and priorities, and we can give you a more precise timeline.</p>
 </doc-panel>
+<doc-anchor-target id="support">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#support">#</doc-anchor-trigger>
+        <span>Support</span>
+    </h2>
+</doc-anchor-target>
+<doc-panel id="how-is-pozi-supported" collapsed>
+    <template #title>How is Pozi supported?</template>
+<p>We provide technical support via our helpdesk service to enable you to get the most out of Pozi and solve any technical issues. Email and phone support is included in the subscription.</p>
+<p>Email <a href="mailto:support@pozi.com">support@pozi.com</a> or call 03 9017 6850.</p>
+<p>We also partner with specialist GIS support providers who can offer a full range of GIS support services, including Pozi customisation, QGIS training, technical consulting and more.</p>
+</doc-panel>
 <hr>
 <doc-anchor-target id="platform">
     <h2>
@@ -381,14 +393,38 @@
        <template #title>How does the Pozi platform deal with scalability and security?</template>
 <p>Pozi&#x27;s cloud architecture ensures fast performance, maximum stability, and unlimited scalability.</p>
 <p>Pozi is fully hosted and managed on Amazon Web Services (AWS), served from an Australian-based data centre. The application is deployed to AWS Simple Storage Service (S3) and served by AWS CloudFront.</p>
-<p>Pozi is fully compliant with https to ensure user privacy and compatibility with all major browsers.
-Pozi App is encrypted and authenticated using TLS 1.2/1.3, X25519, and AES_128_GCM.</p>
+<p>Pozi is fully compliant with https to ensure user privacy and compatibility with all major browsers. Pozi App is encrypted and authenticated using TLS 1.2/1.3, X25519, and AES_128_GCM.</p>
 <p>As a serverless web application, Pozi is not vulnerable to server exploits. AWS Cloudfront provides protection from DDOS attacks.</p>
 <p>We monitor the uptime of the Pozi application using Pingdom. Pozi maintained a 99.999% uptime over the last three years.</p>
+   </doc-panel>
+   <doc-panel id="where-is-pozi-hosted" collapsed>
+       <template #title>Where is Pozi hosted?</template>
+<p>The Pozi web application is hosted on our cloud infrastructure on Amazon Web Services.</p>
+<p>When the Pozi application loads in a user&#x27;s browser, it fetches data directly from various public and private data sources to display it in the map.</p>
+<p>For any layers you choose to publish to the public, the on-premise Pozi Publisher application synchronises the layers to the Pozi cloud infrastructure where it is accessible by the public.</p>
+<p>In the Enterprise Cloud implementation, authenticated users are able to interact directly with the council&#x27;s on-premise data via Microsoft App Proxy. Your layers and QGIS projects remain onsite.</p>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path d="M11.063 1.456a1.749 1.749 0 0 1 1.874 0l8.383 5.316a1.751 1.751 0 0 1 0 2.956l-8.383 5.316a1.749 1.749 0 0 1-1.874 0L2.68 9.728a1.751 1.751 0 0 1 0-2.956Zm1.071 1.267a.25.25 0 0 0-.268 0L3.483 8.039a.25.25 0 0 0 0 .422l8.383 5.316a.25.25 0 0 0 .268 0l8.383-5.316a.25.25 0 0 0 0-.422Z"/><path d="M1.867 12.324a.75.75 0 0 1 1.035-.232l8.964 5.685a.25.25 0 0 0 .268 0l8.964-5.685a.75.75 0 0 1 .804 1.267l-8.965 5.685a1.749 1.749 0 0 1-1.874 0l-8.965-5.685a.75.75 0 0 1-.231-1.035Z"/><path d="M1.867 16.324a.75.75 0 0 1 1.035-.232l8.964 5.685a.25.25 0 0 0 .268 0l8.964-5.685a.75.75 0 0 1 .804 1.267l-8.965 5.685a1.749 1.749 0 0 1-1.874 0l-8.965-5.685a.75.75 0 0 1-.231-1.035Z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2">Learn more</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>../how-it-works/</span>
+    </div>
+    <a href="../how-it-works/" class="absolute block inset-0"></a>
+</div>
+</p>
    </doc-panel>
    <doc-panel id="how-does-pozi-deal-with-updates-and-bug-fixes" collapsed>
        <template #title>How does Pozi deal with updates and bug fixes?</template>
 <p>We embrace continuous development and deployment processes to ensure our clients have access to the latest version. Updated releases which include bug fixes, enhancements and new features are deployed several times per month. Any critical fixes can be deployed in a matter of hours.</p>
+   </doc-panel>
+   <doc-panel id="what-applications-can-be-integrated-with-pozi" collapsed>
+       <template #title>What applications can be integrated with Pozi?</template>
+<p>See our list of some of the applications that Pozi integrates with <a href="../admin-guide/integrations/">here</a>.</p>
    </doc-panel>
 </doc-panels>
 <hr>
