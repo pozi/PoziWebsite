@@ -20,23 +20,38 @@ We also offer clients the opportunity to sponsor development of new features, gi
 ### New Features
 
 - [ ] right-click options for selecting features and intersecting features
-- [ ] profiles - create custom layer collections for different users or workflows - like "modules", but better!
+- [ ] "profiles" - present user with optional simplified interface containing only the layers and layer groups associated with a selected role or workflow - like "modules", but better!
 - [ ] collaborative map annotations
 - [ ] 3D view
 
 ### Enhancements
 
-- [ ] fix print option 'Current view' to match the map view extent exactly
+- [ ] simplify child dataset configuration by automatically generating a spatial filter
 - [ ] move measure functionality into annotation tools
 - [ ] prevent Share links from including the panel state (unless specified in advanced options)
 - [ ] zoom/pan to selected feature on Pozi launch if URL contains a selected feature
 - [ ] display What's Here target on Pozi launch if URL contains a target
-- [ ] simplify child dataset configuration by automatically generating a spatial filter
 - [ ] allow QGIS layer folders to contain only hidden layers (eg, for better organising child datasets)
+- [ ] fix print option 'Current view' to match the map view extent exactly
 
 ---
 
 ## Completed
+
+### February 2024
+
+#### New
+
+- [x] ⚡ 
+
+#### Improved
+
+- [x] 👍 make MapShare address searches compatible with widgets
+
+#### Fixed
+
+- [x] 🪲
+
 
 ### January 2024
 
@@ -46,6 +61,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 #### Improved
 
+- [x] 👍 improve support for Esri vector tiles
 - [x] 👍 add support for MultiPoint features in WMS GetFeatureInfo requests
 - [x] 👍 add support for alternative proxy servers
 - [x] 👍 clean up info panel by removing redundant layer icon
@@ -56,7 +72,9 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [x] 🪲 exclude irrelevant results when a search contains an apostrophe
 - [x] 🪲 safely ignore *"all other values"* style category that QGIS automatically generates to preserve styling for other categories
 - [x] 🪲 render a layer in a default style if QGIS Server is unable to export the layer's style to SLD
-
+- [x] 🪲 ensure top What's Here result is highlighted when doing a complex selection while there is an active vector layer
+- [x] 🪲 enable table view to cope with layers without an id field
+error message appears when expanding Table tab in layer options
 ### December 2023
 
 #### New
@@ -70,6 +88,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [x] 👍 automatically fetch and display legends for any active WMS layer
 - [x] 👍 reduce Google Analytics traffic by eliminating triggering on hover events
 - [x] 👍 improve support for WA SLIP services
+- [x] 👍 add support for GeoJSON sources without properties
 - [x] 👍 notify user when there is an issue with connecting to a local data source
 
 ### October 2023

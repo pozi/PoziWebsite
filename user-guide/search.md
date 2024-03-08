@@ -17,6 +17,8 @@ The drop-down list displays any standard search options such as address, as well
 
 The search drop-down list shows all searchable layers. Pick from the list what you're searching for and start typing to view matching records from any field in the layer - ids, names, description or any other attribute.
 
+![Layer search](/user-guide/img/layer-search.png){style="width: 350px;"}
+
 If the layer is not already active, Pozi turns it on for you. When you select a result, the map zooms to the feature.
 
-At any time, you can revert back to the default search by clicking ‘X’ next to the current search option.
+At any time, you can revert back to the default search by clicking 'X' next to the current search option.

@@ -47,6 +47,18 @@ Talk to us about your requirements and priorities, and we can give you a more pr
 
 ==-
 
+## Support
+
+==- How is Pozi supported?
+
+We provide technical support via our helpdesk service to enable you to get the most out of Pozi and solve any technical issues. Email and phone support is included in the subscription.
+
+Email [support@pozi.com](mailto:support@pozi.com) or call 03 9017 6850.
+
+We also partner with specialist GIS support providers who can offer a full range of GIS support services, including Pozi customisation, QGIS training, technical consulting and more.
+
+==-
+
 ---
 
 ## Platform
@@ -57,16 +69,31 @@ Pozi's cloud architecture ensures fast performance, maximum stability, and unlim
 
 Pozi is fully hosted and managed on Amazon Web Services (AWS), served from an Australian-based data centre. The application is deployed to AWS Simple Storage Service (S3) and served by AWS CloudFront.
 
-Pozi is fully compliant with https to ensure user privacy and compatibility with all major browsers.
-Pozi App is encrypted and authenticated using TLS 1.2/1.3, X25519, and AES_128_GCM.
+Pozi is fully compliant with https to ensure user privacy and compatibility with all major browsers. Pozi App is encrypted and authenticated using TLS 1.2/1.3, X25519, and AES_128_GCM.
 
 As a serverless web application, Pozi is not vulnerable to server exploits. AWS Cloudfront provides protection from DDOS attacks.
 
 We monitor the uptime of the Pozi application using Pingdom. Pozi maintained a 99.999% uptime over the last three years.
 
+==- Where is Pozi hosted?
+
+The Pozi web application is hosted on our cloud infrastructure on Amazon Web Services.
+
+When the Pozi application loads in a user's browser, it fetches data directly from various public and private data sources to display it in the map.
+
+For any layers you choose to publish to the public, the on-premise Pozi Publisher application synchronises the layers to the Pozi cloud infrastructure where it is accessible by the public.
+
+In the Enterprise Cloud implementation, authenticated users are able to interact directly with the council's on-premise data via Microsoft App Proxy. Your layers and QGIS projects remain onsite.
+
+[!ref icon="stack" text="Learn more"](../how-it-works/)
+
 ==- How does Pozi deal with updates and bug fixes?
 
 We embrace continuous development and deployment processes to ensure our clients have access to the latest version. Updated releases which include bug fixes, enhancements and new features are deployed several times per month. Any critical fixes can be deployed in a matter of hours.
+
+==- What applications can be integrated with Pozi?
+
+See our list of some of the applications that Pozi integrates with [here](../admin-guide/integrations/).
 
 ==-
 
