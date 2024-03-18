@@ -88,7 +88,7 @@ When specifying the URL for QGIS project files, any backslashes must be converte
 }
 ```
 
-==- DataVic Example
+==- DataVic
 
 ```json
 {
@@ -97,7 +97,7 @@ When specifying the URL for QGIS project files, any backslashes must be converte
   "type": "WMSGetCapabilities",
   "config": {
     "spatial": {
-      "url": "https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms?request=getCapabilities"
+      "url": "https://opendata.maps.vic.gov.au/geoserver/wms?request=GetCapabilities"
     }
   }
 }
@@ -123,7 +123,7 @@ Override Pozi's default `GetFeatureInfo` behaviour as follows:
       }
 ```
 
-==- Example
+==- QLD Globe Example
 
 ```json
 {
@@ -141,7 +141,28 @@ Override Pozi's default `GetFeatureInfo` behaviour as follows:
 }
 ```
 
+==- NSW Example
+
+```json
+{
+  "title": "EPI Primary Planning Catalogue",
+  "group": "EPI Primary Planning",
+  "type": "WMSGetCapabilities",
+  "config": {
+      "url": "https://mapprod1.environment.nsw.gov.au/arcgis/services/Planning/EPI_Primary_Planning_Layers/MapServer/WMSServer?REQUEST=GetCapabilities&SERVICE=WMS"
+    },
+    "spatial": {
+      "params": {
+        "format": "image/png8",
+        "info_format": "application/geojson"
+      }
+  },
+  "opacity": 0.4
+}
+```
+
 ==-
+
 
 #### Single-Layer Catalogue
 
@@ -156,7 +177,7 @@ Examples:
 
 ##### DataVic
 
-The [DataVic WMS GetCapabilities](https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms?request=getCapabilities) is a 1MB file containing over 600 layers. While it's possible for Pozi to consume this entire catalogue, it will slow down the app load, and the user would see all 600 layers in a single layer group.
+The [DataVic WMS GetCapabilities](https://opendata.maps.vic.gov.au/geoserver/wms?request=GetCapabilities) is a 1MB file containing over 600 layers. While it's possible for Pozi to consume this entire catalogue, it will slow down the app load, and the user would see all 600 layers in a single layer group.
 
 To provide a faster and more useful user experience, the catalogue is customised to remove unwanted layers and split it into separate catalogues to be shown in separate layer groups.
 
@@ -398,4 +419,3 @@ It is possible to configure multiple filter rules, separated by a semi-colon (`;
 ### `flatten`
 
 When `"flatten": true` is specified, Pozi will ignore any layer folders specified WMS response, and arrange all layers at the top level of the layer group.
-

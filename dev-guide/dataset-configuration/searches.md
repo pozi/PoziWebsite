@@ -13,9 +13,29 @@ Custom searches appear *above* the default vector layer search options.
 
 Any server that supports WFS and returns GeoJSON can be configured as a search endpoint.
 
+==- QGIS Server Example (EXP_FILTER)
+
+```json
+{
+  "title": "DCDB Assessment Number",
+  "type": "Search",
+  "showInLayerControl": false,
+  "localDataSource": true,
+  "search": {
+    "id": "assessment",
+    "enabled": true
+  },
+  "config": {
+    "spatial": {
+      "url": "https://poziserver-grcqldgovau.msappproxy.net/pozi/qgisserver?MAP=E:/application/pozi/projects/general.qgz&TYPENAME=DCDB&LAYERS=DCDB&STYLES=default&SERVICE=WFS&REQUEST=GetFeature&VERSION=1.1.0&SRSNAME=EPSG:4326&OUTPUTFORMAT=application/json&EXP_FILTER=assessment ilike '(searchquery)%25'&maxfeatures=100"
+    }
+  }
+}
+```
+
 ==- QGIS Server Example (OGC Filter)
 
-Note: QGIS Server (as at v3.28) seems to *not* properly support wildcard searches. Regardless, the configuration in this example includes wildcard settings to provide forward compatibility for future versions when wildcard searches are supported.
+Note: QGIS Server (as at v3.28) seems to *not* properly support wildcard searches in the OGC filter. Regardless, the configuration in this example includes wildcard settings to provide forward compatibility for future versions when wildcard searches are supported.
 
 ```json
 {

@@ -127,9 +127,11 @@ Layer Properties > Attributes Form > select field > Alias
 
 ![](./img/qgis-field-alias.png){style="width:700px"}
 
+Please note that Pozi cannot use aliased fields for a feature's title or tooltip. If you intend to use a renamed field for the feature's title or tooltip, consider using a virtual field instead of an alias.
+
 ### Virtual Fields
 
-You can control how your data appears to users without having to modify your source data by using the Field Calculator function in QGIS to create virtual fields.
+You can control how your data appears to users without modifying your source data by using the Field Calculator function in QGIS to create virtual fields.
 
 Some use cases for virtual fields include:
 
@@ -186,6 +188,8 @@ You can control which field is used for the layer's title in QGIS.
 Layer Properties > Display > Display Name
 
 ![](img/qgis-layer-display-field.png){style="width:600px"}
+
+This Display Name field is also used fow showing tooltips for vector layers.
 
 Please note that Pozi cannot use the display field if the field name has been given an [alias](#rename-fields). Consider creating a virtual field with the desired name and use that as the display field.
 
