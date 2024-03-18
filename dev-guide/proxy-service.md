@@ -26,3 +26,20 @@ Some third party data services require that credentials or a key be appended to 
 * Pingdom status check
 
 Credentials can be added/updated [here](https://github.com/pozi/PoziProxy/blob/master/lib/pozi-auth.js).
+
+## Entra ID
+
+Due to limitations with the Entra ID service, all requests to a client's MS App Proxy must have custom headers set. Pozi Proxy is responsible for adding these headers to all requests to the Entra ID service.
+
+There are currently two independent proxy services available for this purpose:
+
+- geoproxy.pozi.com
+- pozi-proxy.azurewebsites.net
+
+The default proxy endpoint is set in a JSON config file located at https://config.pozi.com/public/defaults.json.
+
+In the event that the active proxy service becomes unstable, the proxy endpoint can be changed in the config file. Download the existing file, edit the file in a text editor to change the proxy endpoint, and upload the updated file.
+
+![Entra ID config](img/s3browser-proxy-endpoint-config.png){style="width:500px"}
+
+Ensure that the updated file has public read permissions.
