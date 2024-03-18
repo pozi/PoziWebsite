@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.763181910809">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.764055716411">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -33,12 +33,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.763181910809" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.764055716411" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.763181910809" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.764055716411" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.763181910809" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.763181910809" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.764055716411" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.764055716411" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -353,9 +353,29 @@
 </doc-anchor-target>
 <p>Any server that supports WFS and returns GeoJSON can be configured as a search endpoint.</p>
 <doc-panels>
+   <doc-panel id="qgis-server-example-exp-filter" collapsed>
+       <template #title>QGIS Server Example (EXP_FILTER)</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;title&quot;: &quot;DCDB Assessment Number&quot;,
+  &quot;type&quot;: &quot;Search&quot;,
+  &quot;showInLayerControl&quot;: false,
+  &quot;localDataSource&quot;: true,
+  &quot;search&quot;: {
+    &quot;id&quot;: &quot;assessment&quot;,
+    &quot;enabled&quot;: true
+  },
+  &quot;config&quot;: {
+    &quot;spatial&quot;: {
+      &quot;url&quot;: &quot;https://poziserver-grcqldgovau.msappproxy.net/pozi/qgisserver?MAP=E:/application/pozi/projects/general.qgz&amp;TYPENAME=DCDB&amp;LAYERS=DCDB&amp;STYLES=default&amp;SERVICE=WFS&amp;REQUEST=GetFeature&amp;VERSION=1.1.0&amp;SRSNAME=EPSG:4326&amp;OUTPUTFORMAT=application/json&amp;EXP_FILTER=assessment ilike '(searchquery)%25'&amp;maxfeatures=100&quot;
+    }
+  }
+}</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
    <doc-panel id="qgis-server-example-ogc-filter" collapsed>
        <template #title>QGIS Server Example (OGC Filter)</template>
-<p>Note: QGIS Server (as at v3.28) seems to <em>not</em> properly support wildcard searches. Regardless, the configuration in this example includes wildcard settings to provide forward compatibility for future versions when wildcard searches are supported.</p>
+<p>Note: QGIS Server (as at v3.28) seems to <em>not</em> properly support wildcard searches in the OGC filter. Regardless, the configuration in this example includes wildcard settings to provide forward compatibility for future versions when wildcard searches are supported.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-json"><code v-pre class="language-json">{
   &quot;title&quot;: &quot;DCDB Assessment Number&quot;,

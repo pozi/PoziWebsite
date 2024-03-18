@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.763181910809">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.764055716411">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -33,12 +33,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.763181910809" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.764055716411" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.763181910809" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.764055716411" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.763181910809" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.763181910809" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.764055716411" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.764055716411" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -456,8 +456,8 @@
 }</code></pre>
 </doc-codeblock></div>
    </doc-panel>
-   <doc-panel id="datavic-example" collapsed>
-       <template #title>DataVic Example</template>
+   <doc-panel id="datavic" collapsed>
+       <template #title>DataVic</template>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-json"><code v-pre class="language-json">{
   &quot;title&quot;: &quot;DataVic&quot;,
@@ -465,7 +465,7 @@
   &quot;type&quot;: &quot;WMSGetCapabilities&quot;,
   &quot;config&quot;: {
     &quot;spatial&quot;: {
-      &quot;url&quot;: &quot;https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms?request=getCapabilities&quot;
+      &quot;url&quot;: &quot;https://opendata.maps.vic.gov.au/geoserver/wms?request=GetCapabilities&quot;
     }
   }
 }</code></pre>
@@ -494,8 +494,9 @@
         &quot;info_format&quot;: &quot;application/geojson&quot;
       }</code></pre>
 </doc-codeblock></div>
-<doc-panel id="example" collapsed>
-    <template #title>Example</template>
+<doc-panels>
+   <doc-panel id="qld-globe-example" collapsed>
+       <template #title>QLD Globe Example</template>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-json"><code v-pre class="language-json">{
   &quot;title&quot;: &quot;Society - Schools And School Catchments&quot;,
@@ -511,7 +512,28 @@
   }
 }</code></pre>
 </doc-codeblock></div>
-</doc-panel>
+   </doc-panel>
+   <doc-panel id="nsw-example" collapsed>
+       <template #title>NSW Example</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;title&quot;: &quot;EPI Primary Planning Catalogue&quot;,
+  &quot;group&quot;: &quot;EPI Primary Planning&quot;,
+  &quot;type&quot;: &quot;WMSGetCapabilities&quot;,
+  &quot;config&quot;: {
+      &quot;url&quot;: &quot;https://mapprod1.environment.nsw.gov.au/arcgis/services/Planning/EPI_Primary_Planning_Layers/MapServer/WMSServer?REQUEST=GetCapabilities&amp;SERVICE=WMS&quot;
+    },
+    &quot;spatial&quot;: {
+      &quot;params&quot;: {
+        &quot;format&quot;: &quot;image/png8&quot;,
+        &quot;info_format&quot;: &quot;application/geojson&quot;
+      }
+  },
+  &quot;opacity&quot;: 0.4
+}</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 <doc-anchor-target id="single-layer-catalogue">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#single-layer-catalogue">#</doc-anchor-trigger>
@@ -536,7 +558,7 @@
         <span>DataVic</span>
     </h5>
 </doc-anchor-target>
-<p>The <a href="https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms?request=getCapabilities" class="outbound" target="_blank"><span>DataVic WMS GetCapabilities</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> is a 1MB file containing over 600 layers. While it&#x27;s possible for Pozi to consume this entire catalogue, it will slow down the app load, and the user would see all 600 layers in a single layer group.</p>
+<p>The <a href="https://opendata.maps.vic.gov.au/geoserver/wms?request=GetCapabilities" class="outbound" target="_blank"><span>DataVic WMS GetCapabilities</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> is a 1MB file containing over 600 layers. While it&#x27;s possible for Pozi to consume this entire catalogue, it will slow down the app load, and the user would see all 600 layers in a single layer group.</p>
 <p>To provide a faster and more useful user experience, the catalogue is customised to remove unwanted layers and split it into separate catalogues to be shown in separate layer groups.</p>
 <p>These custom catalogue files can be hosted as static files.</p>
 <doc-anchor-target id="vicmap-admin">
