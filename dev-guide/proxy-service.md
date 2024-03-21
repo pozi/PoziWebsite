@@ -40,6 +40,8 @@ The default proxy endpoint is set in a JSON config file located at https://confi
 
 In the event that the active proxy service becomes unstable, the proxy endpoint can be changed in the config file. Download the existing file, edit the file in a text editor to change the proxy endpoint, and upload the updated file.
 
+Test the updated proxy endpoint immediately to ensure that it works as expected!
+
 ![](img/s3browser-proxy-endpoint-config.png){style="width:500px"}
 
 Ensure that the updated file has public read permissions.
