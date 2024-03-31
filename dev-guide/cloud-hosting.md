@@ -17,7 +17,15 @@ If a CloudFront cache needs to be partially or fully cleared, either use the web
 * Select the relevant distribution (e.g. `imageproxy.pozi.com`)
 * Click on the 'Invalidations' tab
 * Click on the 'Create invalidation' button
-* Add one or more 'object paths' (e.g. `/https://config.pozi.com/*`)
+* Add one or more 'object paths', e.g.:
+
+   `/https://config.pozi.com/public/files/catalogues/*`
+
+   `/https://config.pozi.com/public/files/catalogues/deeca-iws-wms-northerngrampians-lga.*`
+
+   `/https://iws.maps.vic.gov.au/erdas-iws/ogc/wms/RDP?REQUEST=GetMap&SERVICE=WMS&VERSION=1.3.0&FORMAT=image%2Fwebp&STYLES=default&TRANSPARENT=true&LAYERS=VMIMAGERY_LZ_northerngrampians_2023nov09_air_vis_20cm_epsg7854.ecw*`
+
+Note: The file name and path is case-sensitive.  Also, giving the exact path does not seem to always correctly invalidate.  Please check to make sure the required file has been refreshed.
 
 ### Command-line
 
