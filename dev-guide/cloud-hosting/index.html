@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.764297702391">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.765170904262">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -33,11 +33,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.764297702391" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.765170904262" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.764297702391" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.765170904262" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.764297702391" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.765170904262" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -352,12 +352,21 @@
     </h3>
 </doc-anchor-target>
 <ul>
-<li>Visit <a href="https://us-east-1.console.aws.amazon.com/cloudfront/v4/home?region=us-east-1#/distributions/" class="outbound" target="_blank"><span>https://us-east-1.console.aws.amazon.com/cloudfront/v4/home?region=us-east-1#/distributions/</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
-<li>Select the relevant distribution (e.g. <code v-pre>imageproxy.pozi.com</code>)</li>
-<li>Click on the &#x27;Invalidations&#x27; tab</li>
-<li>Click on the &#x27;Create invalidation&#x27; button</li>
-<li>Add one or more &#x27;object paths&#x27; (e.g. <code v-pre>/https://config.pozi.com/*</code>)</li>
+<li><p>Visit <a href="https://us-east-1.console.aws.amazon.com/cloudfront/v4/home?region=us-east-1#/distributions/" class="outbound" target="_blank"><span>https://us-east-1.console.aws.amazon.com/cloudfront/v4/home?region=us-east-1#/distributions/</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
+</li>
+<li><p>Select the relevant distribution (e.g. <code v-pre>imageproxy.pozi.com</code>)</p>
+</li>
+<li><p>Click on the &#x27;Invalidations&#x27; tab</p>
+</li>
+<li><p>Click on the &#x27;Create invalidation&#x27; button</p>
+</li>
+<li><p>Add one or more &#x27;object paths&#x27;, e.g.:</p>
+<p><code v-pre>/https://config.pozi.com/public/files/catalogues/*</code></p>
+<p><code v-pre>/https://config.pozi.com/public/files/catalogues/deeca-iws-wms-northerngrampians-lga.*</code></p>
+<p><code v-pre>/https://iws.maps.vic.gov.au/erdas-iws/ogc/wms/RDP?REQUEST=GetMap&amp;SERVICE=WMS&amp;VERSION=1.3.0&amp;FORMAT=image%2Fwebp&amp;STYLES=default&amp;TRANSPARENT=true&amp;LAYERS=VMIMAGERY_LZ_northerngrampians_2023nov09_air_vis_20cm_epsg7854.ecw*</code></p>
+</li>
 </ul>
+<p>Note: The file name and path is case-sensitive.  Also, giving the exact path does not seem to always correctly invalidate.  Please check to make sure the required file has been refreshed.</p>
 <doc-anchor-target id="command-line">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#command-line">#</doc-anchor-trigger>
