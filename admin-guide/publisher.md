@@ -39,6 +39,8 @@ The catalogue is the unit around which the Pozi Publisher workflow is based, eit
 - Extra modules are required for authentication and using S3 buckets.
 - Type `Install-AWSToolsModule AWS.Tools.EC2,AWS.Tools.S3 -CleanUp`
 
+Note: This step will need to be repeated for each user that runs Pozi Publisher and needs to sync files to AWS. Alternately, an administrator account can be used to run `Install-AWSToolsModule AWS.Tools.EC2,AWS.Tools.S3 -CleanUp -Scope AllUsers`, which will install the tools for all users.
+
 ---
 
 ## Configuration
