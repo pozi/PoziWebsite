@@ -127,8 +127,20 @@ Compile index of features and attributes for fast searching.
 ### In Powershell
 
 1. Open Powershell
-2. Navigate to the Pozi Publisher folder `cd C:\Pozi\Publisher`
-3. Run Pozi Publisher adding the `ini` settings file as a parameter. `.\src\PoziPublisher.ps1 "C:\Pozi\Publisher\deeca-iws-wms-northerngrampians-lga.ini"`
+1. Navigate to the Pozi Publisher folder `cd C:\Pozi\Publisher`
+1. Run Pozi Publisher adding the `ini` settings file as a parameter. `.\PoziPublisher.ps1 "C:\Pozi\Publisher\deeca-iws-wms-northerngrampians-lga.ini"`
+
+### As a batch file
+
+1. Create a new empty batch file.  This file can be located in whatever folder suits, even a user's desktop if that works best. e.g. `C:\Pozi\Publisher\PoziPublisherRun.bat`
+1. Edit this file, by adding a line similar to the following. 
+    ```batch
+    powershell.exe "C:\Pozi\Publisher\PoziPublisher.ps1" -iniFiles "C:\Pozi\Publisher\deeca-iws-wms-northerngrampians-lga.ini" > "C:\Pozi\Publisher\deeca-iws-wms-northerngrampians-lga.log" 2>&1
+    ````
+1. Replace the ini file (`C:\Pozi\Publisher\deeca-iws-wms-northerngrampians-lga.ini`) and generated log file (`C:\Pozi\Publisher\deeca-iws-wms-northerngrampians-lga.log`) entries in this line to reflect the desired file locations.
+1. Save this file.
+1. To run, simply double-click the file.
+1. Multiple ini files can be run from the one batch file by duplicating the line, and updating the ini and log file locations.
 
 ### As a scheduled task
 
@@ -139,13 +151,8 @@ Compile index of features and attributes for fast searching.
 1. Under `Triggers` set up the frequency the task should be run.  Generally this will be either Daily or Weekly.
 1. In the `Actions` tab, create a new action.
     * The action should be `Start a program`.
-    * In the `Program/script` dialog box type `cmd.exe`.
-    * For the `Add arguments (optional)` dialog box, add the location of Pozi Publisher, the `.ini` setting file and a `.log` file, as follows: `/c "powershell.exe "C:\Pozi\Publisher\PoziPublisher.ps1" -iniFiles "C:\Pozi\Publisher\publish-to-public.ini" > "C:\Pozi\Publisher\publish-to-public.log""`
+    * In the `Program/script` dialog box type the full location of your batch file created in the previous section e.g. `C:\Pozi\Publisher\PoziPublisherRun.bat`, or use the ***Browse*** button to locate this file.
 1. Customise any further settings in the scheduled task.
-
-!!!warning Warning 
-Be careful with the placement of quotes in the arguments of the scheduled task action!
-!!!
 
 ## Troubleshooting
 
