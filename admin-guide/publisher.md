@@ -132,7 +132,7 @@ Compile index of features and attributes for fast searching.
 
 ### As a batch file
 
-1. Create a new empty batch file.  This file can be located in whatever folder suits, even a user's desktop if that works best. e.g. `C:\Pozi\Publisher\PoziPublisherRun.bat`
+1. Create a new empty batch file.  This file can be located in whatever folder suits, e.g. `C:\Pozi\Publisher\PoziPublisherRun.bat`.  If it will frequently be run manually, a shortcut to this file can be created on the user's desktop.
 1. Edit this file, by adding a line similar to the following. 
     ```batch
     powershell.exe "C:\Pozi\Publisher\PoziPublisher.ps1" -iniFiles "C:\Pozi\Publisher\deeca-iws-wms-northerngrampians-lga.ini" > "C:\Pozi\Publisher\deeca-iws-wms-northerngrampians-lga.log" 2>&1
