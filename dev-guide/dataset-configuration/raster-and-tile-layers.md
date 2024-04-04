@@ -93,7 +93,7 @@ Layers can be requested in any projection supported by the server by specifying 
     "url": "https://spatial-img.information.qld.gov.au/arcgis/services/Basemaps/LatestStateProgram_AllUsers/ImageServer/WMSServer",
     "projection": "EPSG:7856",
     "params": {
-      "layers": "LatestStateProgram_AllUsers"
+      "LAYERS": "LatestStateProgram_AllUsers"
     }
   }
 }
@@ -123,6 +123,8 @@ Sometimes a layer configured as a TileWMS layer can appear in Pozi with narrow w
 
 Other parameters can be specified in the `config` element. See https://openlayers.org/en/latest/apidoc/module-ol_source_TileWMS.html for a list of available parameters.
 
+Also, the `LEGEND_OPTIONS` can be overridden in parameters. This is particularly useful for the `hideEmptyRules` setting that can be used to suppress legend entries that are non-existent in a filtered dataset. Please see the section on [CQL Filters](#CQL) for an example.
+
 #### External SLD
 
 WMS GetMap requests can be made with an `sld` parameter that contains the URL of an SLD file.
@@ -142,11 +144,16 @@ WMS GetMap requests can be made with an `sld` parameter that contains the URL of
     "url": "https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms",
     "params": {
       "SLD": "http://files.pozi.com/config/sld/datavic-VMADMIN_LOCALITY_POLYGON-BENDIGO.sld",
-      "FORMAT": "image/png8"
+      "FORMAT": "image/png8",
+      "LAYER": "VMADMIN_LOCALITY_POLYGON"
     }
   }
 }
 ```
+
+!!!
+When a SLD file defines the WMS layer using the `NamedLayer` setting, it is important that the `LAYER` parameter is also set in parameters. This has no affect on the GetMap call to the WMS service, however, it is required by Pozi to correctly choose the layer to be displayed in the legend by the GetLegendGraphics call.
+!!!
 
 ==-
 
@@ -164,7 +171,7 @@ WMS GetMap requests can be made with an `sld_body` parameter that contains the S
   "config": {
     "url": "https://data.gov.au/geoserver/wms",
     "params": {
-      "sld_body": "<?xml version='1.0' encoding='UTF-8'?><StyledLayerDescriptor xmlns='http://www.opengis.net/sld' xmlns:ogc='http://www.opengis.net/ogc' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' version='1.1.0' xmlns:xlink='http://www.w3.org/1999/xlink' units='mm' xsi:schemaLocation='http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd' xmlns:se='http://www.opengis.net/se'><NamedLayer><se:Name>ckan_ed15e3ea_48dc_47d2_afa6_518e6f5276e1</se:Name><UserStyle><se:Name>Glen Eira - Trees</se:Name><se:FeatureTypeStyle><se:Rule><se:Name>Single symbol</se:Name><se:PointSymbolizer><se:Graphic><se:Mark><se:WellKnownName>circle</se:WellKnownName><se:Fill><se:SvgParameter name='fill'>#33a02c</se:SvgParameter></se:Fill><se:Stroke><se:SvgParameter name='stroke'>#000000</se:SvgParameter></se:Stroke></se:Mark><se:Size>10</se:Size></se:Graphic></se:PointSymbolizer></se:Rule></se:FeatureTypeStyle></UserStyle></NamedLayer></StyledLayerDescriptor>"
+      "SLD_BODY": "<?xml version='1.0' encoding='UTF-8'?><StyledLayerDescriptor xmlns='http://www.opengis.net/sld' xmlns:ogc='http://www.opengis.net/ogc' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' version='1.1.0' xmlns:xlink='http://www.w3.org/1999/xlink' units='mm' xsi:schemaLocation='http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd' xmlns:se='http://www.opengis.net/se'><NamedLayer><se:Name>ckan_ed15e3ea_48dc_47d2_afa6_518e6f5276e1</se:Name><UserStyle><se:Name>Glen Eira - Trees</se:Name><se:FeatureTypeStyle><se:Rule><se:Name>Single symbol</se:Name><se:PointSymbolizer><se:Graphic><se:Mark><se:WellKnownName>circle</se:WellKnownName><se:Fill><se:SvgParameter name='fill'>#33a02c</se:SvgParameter></se:Fill><se:Stroke><se:SvgParameter name='stroke'>#000000</se:SvgParameter></se:Stroke></se:Mark><se:Size>10</se:Size></se:Graphic></se:PointSymbolizer></se:Rule></se:FeatureTypeStyle></UserStyle></NamedLayer></StyledLayerDescriptor>"
     }
   }
 }
@@ -191,6 +198,7 @@ Example configurations:
 * [Mitchell Contours](https://github.com/pozi/PoziAppConfig/commit/d95812fd4691e86e0fac3de91d0e3ad5fbb7683b#diff-216128510370c47687518818e49f4d63083c96ba0b3686031cea3cc7dc0d98feL3214-R3234)
 * Southern Grampians Waste Water Land Capability Hazard Classification
 
+(CQL)=
 #### CQL Filter
 
 ==- Layer with CQL Filter
@@ -201,15 +209,18 @@ Example configurations:
   "group": "Administrative",
   "type": "TileWMS",
   "config": {
-    "url": "https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms",
+    "url": "https://opendata.maps.vic.gov.au/geoserver/wms",
     "params": {
-      "LAYERS": "CROWNLAND_PLM25",
-      "FORMAT": "image/GIF",
-      "CQL_FILTER": "MNG_GROUP='COM Council'"
+      "LAYERS": "plm25",
+      "CQL_FILTER": "strToUpperCase(mng_group)='COM COUNCIL'",
+      "LEGEND_OPTIONS": "fontAntiAliasing:true;hideEmptyRules:true"
     }
   }
 }
 ```
+!!!
+The `LEGEND_OPTIONS` parameter may need to be overridden in cases like this where the rule will reduce the number of entries in the legend. The `hideEmptyRules` setting can be used to supress legend values that aren't available due to the filter. Note: this setting can make the legend significantly slower to load in a large dataset.
+!!!
 
 ==-
 
