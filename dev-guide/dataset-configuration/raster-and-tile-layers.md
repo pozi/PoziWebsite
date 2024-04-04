@@ -123,7 +123,7 @@ Sometimes a layer configured as a TileWMS layer can appear in Pozi with narrow w
 
 Other parameters can be specified in the `config` element. See https://openlayers.org/en/latest/apidoc/module-ol_source_TileWMS.html for a list of available parameters.
 
-Also, the `LEGEND_OPTIONS` can be overridden in parameters. This is particularly useful for the `hideEmptyRules` setting that can be used to suppress legend entries that are non-existent in a filtered dataset. Please see the section on [CQL Filters](#CQL) for an example.
+Also, the `LEGEND_OPTIONS` can be overridden in parameters. This is particularly useful for the `hideEmptyRules` setting that can be used to suppress legend entries that are non-existent in a filtered dataset. Please see the section on [CQL Filters](#layer-with-cql-filter) for an example.
 
 #### External SLD
 
@@ -198,7 +198,6 @@ Example configurations:
 * [Mitchell Contours](https://github.com/pozi/PoziAppConfig/commit/d95812fd4691e86e0fac3de91d0e3ad5fbb7683b#diff-216128510370c47687518818e49f4d63083c96ba0b3686031cea3cc7dc0d98feL3214-R3234)
 * Southern Grampians Waste Water Land Capability Hazard Classification
 
-(CQL)=
 #### CQL Filter
 
 ==- Layer with CQL Filter
