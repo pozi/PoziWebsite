@@ -19,14 +19,11 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ### New Features
 
-- [ ] right-click options for selecting features and intersecting features
 - [ ] "profiles" - present user with optional simplified interface containing only the layers and layer groups associated with a selected role or workflow - like "modules", but better!
-- [ ] collaborative map annotations
 - [ ] 3D view
 
 ### Enhancements
 
-- [ ] simplify child dataset configuration by automatically generating a spatial filter
 - [ ] move measure functionality into annotation tools
 - [ ] prevent Share links from including the panel state (unless specified in advanced options)
 - [ ] zoom/pan to selected feature on Pozi launch if URL contains a selected feature
@@ -38,21 +35,48 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## Completed
 
-### February 2024
-
-#### New
-
-- [x] ⚡ 
+### April 2024
 
 #### Improved
 
-- [x] 👍 make MapShare address searches compatible with widgets
-- [x] 👍 add Nearmap attribution
+- [x] 👍 improve support for displaying base64 encoded images
+- [x] 👍 enable WMS legend URL parameters to be overridden
 
 #### Fixed
 
-- [x] 🪲
+- [x] 🪲 hide Property PFI selection option when not required
+- [x] 🪲 fix support for GML layers
 
+### March 2024
+
+- [x] ⚡ right-click options for selecting features and intersecting features
+- [x] ⚡ support for buffers (positive and negative) in spatial intersection queries
+
+#### Improved
+
+- [x] 👍 enable custom child datasets to be used as display layers
+- [x] 👍 ignore layer folders that are empty or contain only hidden layers
+- [x] 👍 hide datasets without geometries from layer panel
+
+### February 2024
+
+#### Improved
+
+- [x] 👍 automatically generate spatial queries for child datasets
+- [x] 👍 enable datasets to be used as both a child dataset and a layer
+- [x] 👍 make MapShare address searches compatible with widgets
+- [x] 👍 add Nearmap attribution
+- [x] 👍 prevent users from copying share links that are not yet active
+- [x] 👍 update About tab info with new links and styling
+- [x] 👍 whitelist Infor Pathway application protocol links
+- [x] 👍 add support for ArcGIS Online WMS catalogues
+- [x] 👍 report if invalid Entra ID tenant id is used
+- [x] 👍 enable table view to sort number fields numerically
+
+#### Fixed
+
+- [x] 🪲 fix child dataset request so that any query containing null ids return valid (empty) result
+- [x] 🪲 fix Report option for private layers
 
 ### January 2024
 
