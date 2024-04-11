@@ -48,11 +48,13 @@ If you've [set up](/admin-guide/qgis/setting-up-qgis/#basemap) 'Vicmap Basemap' 
 
 Browser > WMS/WMTS > Vicmap Basemap > Vicmap Basemap - VicGrid2020 - Cartographic
 
+Ensure that you exclude the basemap from WMS to prevent it appearing in Pozi. See [here](/admin-guide/qgis/configuring-layers#exclude-layers) for more information.
+
 ## Configure Web Services
 
-### Construct Advertised URL
+For non-Azure implementations, follow the *Legacy* instructions immediately below to configure the necessary *advertised URL*. For Azure implementations, see the next section.
 
-*Note: this is no longer a requirement for newer Azure-only implementations if the site is configured with the correct [Application Proxy internal URL](/dev-guide/azure-integration#application-proxy-internal-url).*
+==- Legacy
 
 The project's *Advertised URL* is a URL at which WMS and WFS requests can interact with the layers in the project file. Essentially, the project file needs a reference to itself in a URL format.
 
@@ -73,6 +75,8 @@ https://<servername>.pozi.com/iis/qgisserver?MAP=<projectfilepath>
 ```
 
 Copy the URL to your clipboard for subsequent configuration below.
+
+==-
 
 ### Enable Web Services
 
@@ -134,6 +138,10 @@ Some file formats can be less efficient than others for a project to load. Large
 
 Your new project must be registered in Pozi's central web configuration for users to view the map layers in your Pozi site.
 
+For non-Azure implementations, follow the *Legacy* instructions immediately below to obtain the project's `GetProjectSettings` URL. For Azure implementations, see the next section.
+
+==- Legacy
+
 Follow these steps to register your project:
 
 1. obtain the project's `GetProjectSettings` URL
@@ -156,14 +164,16 @@ https://<servername>.pozi.com/iis/qgisserver?MAP=<projectfilepath>&service=WMS&r
 
 Test this URL by pasting it in your browser and check that you get a valid response that lists the available layers.
 
-### 2. Submit Helpdesk Ticket
+==-
+
+### Submit Helpdesk Ticket
 
 Email support@pozi.com with these details:
 
 * subject: New layer catalogue
 * name of new layer group to appear in Pozi layer panel
 * order in which the layer group is to appear in the Pozi Layer Panel (relative to an existing layer group)
-* `GetProjectSettings` URL (from above)
+* `GetProjectSettings` URL (non-Azure legacy implementation only)
 
 Within 24 hours, the new layer group will be configured and available for users to view in Pozi.
 
@@ -173,7 +183,7 @@ During this time, and any time afterwards, you may continue to [add and configur
 
 ==- None of the project's layers are displaying in Pozi
 
-Check that advertised URLs contains the exact path and file name of the .qgs project file.
+For Azure implementations, ensure that QGIS Server WMS and WFS Advertised URLs are blank. For non-Azure implementations, ensure the Advertised URL contains the exact path and file name of the .qgs project file.
 
 Ensure that `Use layer ids as names` is NOT ticked. See Project > Properties > QGIS Server > WMS.
 

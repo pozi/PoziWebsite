@@ -47,6 +47,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 #### Improved
 
 - [x] 👍 make MapShare address searches compatible with widgets
+- [x] 👍 add Nearmap attribution
 
 #### Fixed
 
@@ -74,7 +75,8 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [x] 🪲 render a layer in a default style if QGIS Server is unable to export the layer's style to SLD
 - [x] 🪲 ensure top What's Here result is highlighted when doing a complex selection while there is an active vector layer
 - [x] 🪲 enable table view to cope with layers without an id field
-error message appears when expanding Table tab in layer options
+- [x] 🪲 enables features with all null values to display in map
+
 ### December 2023
 
 #### New
@@ -86,6 +88,7 @@ error message appears when expanding Table tab in layer options
 #### Improved
 
 - [x] 👍 automatically fetch and display legends for any active WMS layer
+- [x] 👍 present search options in drop-down list instead of radio buttons
 - [x] 👍 reduce Google Analytics traffic by eliminating triggering on hover events
 - [x] 👍 improve support for WA SLIP services
 - [x] 👍 add support for GeoJSON sources without properties

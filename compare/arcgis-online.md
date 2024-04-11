@@ -27,6 +27,42 @@ There are no multi-day courses required to get you started.
 
 GIS administrators can take advantage of QGIS's powerful graphical user interface to configure layers in Pozi, including adding spatial and non-spatial data sources, filtering, advanced layer styling, labelling, dynamic data joins, virtual fields, debugging tools, and more.
 
+### Functionality
+
+Here's what our customers have to say about Pozi in comparison with their experience with ArcGIS Experience Builder.
+
+==- About Pozi
+
+> A stable team of technicians based in Australia who could manage updates and customisation
+
+> interface is more lightweight and includes Google Street View and nearby assets/features by default
+
+> allows members of the public to lodge information about community engagement projects, development applications, customer requests
+
+> able to embed search boxes into Council websites and SharePoint sites which searches any dataset and returns results in the webpage (e.g. "What is my Bin Day?")
+
+> Better layer searching
+
+> Better bookmarks and GPS tracking
+
+> Better labelling and drawing on the map with a print preview
+
+==- About ArcGIS Experience Builder
+
+> lack of updates to the Developer Editions of Experience Builder as opposed to the ArcGIS Online
+
+> extra overheads of costs to maintain a separate server for the local host database which could only be accessed within the Council network
+
+> this solution required custom coding and manual updating script files, republishing and transferring bundles of code to a separate server every time an update would come though
+
+> annotation / Drawing tools did not work well
+
+> there was limited print preview and customising layouts
+
+> couldn't do the Community Engagement Solution that we wanted to do.
+
+==-
+
 ### Local Support
 
 *When you ask Pozi for help, we'll acknowledge your request within 24 hours, and begin resolving your issue within 48 hours.*
@@ -36,10 +72,6 @@ Pozi clients benefit from being able to communicate directly with development an
 ### Transparent Pricing
 
 No long-term, lock-in contracts. No hidden costs.
-
-Our pricing is on our website.
-
-[!ref icon="briefcase"](/pricing/)
 
 Hosting and basic support is included in your subscription. Initial setup and advanced support is available on-demand at our standard rate. You don't need a support contract to ask us for help.
 

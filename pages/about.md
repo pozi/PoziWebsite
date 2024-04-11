@@ -21,7 +21,7 @@ Pozi empowers organisations and their stakeholders to easily access, use and dis
 
 ## Our Difference
 
-We believe the future of GIS is about open data and open standards, with simple interfaces and real-time access to trusted data. It's about automated workflows and live integrations, whether that's in the cloud or on-premise.
+We believe the future of GIS is built upon open data and open standards, with simple interfaces and real-time access to trusted data. It uses the power of simple workflows and live integrations, whether that's in the cloud or on-premise.
 
 We work with clients on their terms, in their preferred environment, with their preferred infrastructure and resources. Our open system avoids vendor lock-in by respecting our clients' autonomy and strategic technology decisions.
 
@@ -43,7 +43,7 @@ Over the years, we continued to develop the Pozi products in consultation with m
 
 In 2019 we rebranded the company name to Pozi, with a fresh vision for ***building connected communities through spatial thinking***.
 
-The Pozi team is committed to a future where GIS is synonymous with transparent data, open standards, user-friendly interfaces and real time access to authoritative data.
+The Pozi team is committed to a future where GIS is synonymous with transparent data, open standards, user-friendly interfaces and real time access to trusted data sources.
 
 We are driven to enable more people to easily access and use spatial information to build the shared knowledge of their community.
 

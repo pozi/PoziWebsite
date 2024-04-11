@@ -21,7 +21,7 @@ Unlike traditional GIS software, Pozi is built from the ground up to integrate d
 ==- For casual users
 
 * navigate the map with ease: anyone who has used Google Maps can easily use Pozi
-* search for properties and other features by typing the first few characters of an address or other identifier to see an autocomplete set of results to choose from
+* search for properties and other features using text autocomplete
 * enquire on properties and other features without having to select options from toolbars or complex menus
 * use mobile-friendly features like GPS-location and pinch to zoom
 * bookmark frequently-used layers
@@ -35,14 +35,15 @@ Unlike traditional GIS software, Pozi is built from the ground up to integrate d
 * mark up maps with points, lines, polygons and text, and share your annotated maps with others
 * generate reports based on features within the current map view, along with calculated statistics
 * obtain coordinates and dimensions for any selected feature, or interactively measure using provided measuring tools
+* perform spatial analysis tasks easily - right-click on any feature to select intersecting features from any layer
 * export geo-referenced maps to desktop GIS
 
 ==- For your organisation
 
-* vendor neutral architecture enables your organisation to use its existing spatial data library
+* vendor neutral architecture enables your organisation to leverage its existing spatial data library - no data migration required
 * direct integration with live government and commercial web services
 * mobile friendly design: staff can take Pozi with them to meetings, presentations and out in the field, whether they are using a laptop, tablet or smartphone
-* performance: users don't experience frustration waiting for app to load--Pozi loads in the browser near instantly
+* performance: users don't experience frustration waiting for app to load - Pozi loads in the browser near instantly
 * embed customised maps directly in the organisation's webpages
 
 ==-

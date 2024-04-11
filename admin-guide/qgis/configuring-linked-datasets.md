@@ -52,20 +52,21 @@ Configuring *joined* tables in QGIS may be suitable when:
 - the table has fewer than 10,000 records (larger tables are still supported, however you may observe that they are slow to load)
 - users expect to search on joined attributes or view them in a table
 
-Attributes from *joined* tables appear in the Pozi info panel in the same information tab as the parent dataset.
+Think of joined tables as adding fields from one table to another. Attributes from joined tables appear in the Pozi info panel in the same information tab as the parent dataset.
 
-If you decide a *joined* dataset is right for you, see [here](https://docs.qgis.org/3.34/en/docs/user_manual/working_with_vector/joins_relations.html#joining-features-between-two-layers) for information on how to configure it in QGIS. The remainder of the instructions on this page are not relevant to joined datasets.
+If you decide a joined dataset is right for you, see [here](https://docs.qgis.org/3.34/en/docs/user_manual/working_with_vector/joins_relations.html#joining-features-between-two-layers) for information on how to configure it in QGIS. The remainder of the instructions on this page are not relevant to joined datasets.
 
 ### Linked Datasets
 
 Alternatively, adding *linked* datasets (as covered in this page) is recommended when:
 
 - there is a one-to-many relationship between records in the tables, or
-- for tables with more than 10,000 records
+- for tables with more than 10,000 records, or
+- the child dataset is a spatial table which uses a spatial intersection to link to its parent
 
-Attributes from *linked* tables appear in the Pozi info panel in separate tabs below the parent's information tab.
+Attributes from linked tables appear in the Pozi info panel in separate tabs below the parent's information tab.
 
-If you decide a *linked* dataset is right for you, continue to the instructions below.
+If you decide a linked dataset is right for you, continue to the instructions below.
 
 ## Add Linked Dataset
 
@@ -103,6 +104,12 @@ The parent layer can exist in the same QGIS project, or a different project, or 
 
 ### Parameter
 
+!!! Note
+
+If you are configuring a child dataset as a *spatial intersection* of its parent, you don't need to specify any `parameter` filter. In the absence of any filter, Pozi assumes that the parent/child relationship is a spatial intersection, and it will generate the necessary query to return all child records that intersect with the selection spatial record.
+
+!!!
+
 The `parameter` is an expression that contains instructions for filtering the child dataset to return only records that relate to an individual parent feature.
 
 Use the layer's Query Builder to construct and test your expression.
@@ -137,12 +144,14 @@ Example: `parameter=EXP_FILTER=Assess_NumberX IN ('[Property Number]')`
 
 Pozi will substitute any field names within square brackets with values from those fields from the parent.
 
+*Note: `EXP_FILTER` doesn't support spaces in the child dataset's lookup field name. If this field contains any spaces, update the dataset's Attributes Form settings to use a alias name for the lookup field that doesn't contain spaces.*
+
 ### Optional Settings
 
 These settings provide an override for some of the default layer behaviours in Pozi.
 
 * `downloadable=false`: prevent Pozi from showing a table view of the selected features
-* `enabled=false`: temporarily disable a dataset in Pozi (without having to remove it from QGIS)
+* `enabled=false`: disable a dataset in Pozi (without having to remove it from QGIS)
 * `infoPanelCollapse=true`: collapse info results panel for this dataset
 * `promoteDetails=true`: display all child attributes instead of a preview
 
@@ -154,9 +163,8 @@ In the child dataset's Layer Properties, go to QGIS Server. Fill in the 'Keyword
 
 ![](./img/qgis-server-keywords.png){style="width:600px"}
 
-Example: `parent=Property, parameter=EXP_FILTER=Assess_NumberX in ('[Property Number]')`
-
-*Note: `EXP_FILTER` doesn't support spaces in the child dataset's lookup field name. If this field contains any spaces, update the dataset's Attributes Form settings to use a alias name for the lookup field that doesn't contain spaces.*
+Non-spatial example: `parent=Property, parameter=EXP_FILTER=Assess_NumberX in ('[Property Number]')`
+Spatial example: `parent=Property`
 
 Click OK, then save the project.
 

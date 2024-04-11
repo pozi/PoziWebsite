@@ -236,6 +236,7 @@ When you fund the development of new features, you have ongoing access to the ne
 | Share link | ✔️ | ✔️ |
 | Measure | ✔️ | ✔️ |
 | Search in any layer | ❌ | ✔️ |
+| Dynamic spatial intersections | ❌ | ✔️ |
 | Two-way community consultation | ❌ | ✔️ |
 | <big>**Layer Options**</big> | | |
 | Opacity | ✔️ | ✔️ |
@@ -244,13 +245,13 @@ When you fund the development of new features, you have ongoing access to the ne
 | Interactive table | ❌ | ✔️ |
 | Tooltips | ❌ | ✔️ |
 | <big>**Administration**</big> | | |
-| Configuration tool(s) | MapManager & ConfigManager | **QGIS Desktop** |
+| Configuration tool(s) | MapManager & ConfigManager | **QGIS** |
 | SQL queries | ✔️ | ✔️ |
 | Online reference and training material | ❌ | ✔️ |
 | Custom development available | ❌ | ✔️ |
 | <big>**Technology**</big> | | |
 | Supported map servers | MapServer | **QGIS Server**<br/>GeoServer<br/>MapServer<br/>ArcGIS Server |
-| Mapping Javascript library | OpenLayers v2<br/>(2013) | OpenLayers v8<br/>(2023) |
+| Mapping Javascript library | OpenLayers v2<br/>(2013) | OpenLayers v8<br/>(2024) |
 | OGC standards compliant (WMS/WFS) | ✔️ | ✔️ |
 | Web optimised formats (Mapbox Vector Tiles, COG, FlatGeobuf) |  ❌  | ✔️ |
 | <big>**Data Integrations**</big> | | |
@@ -285,7 +286,7 @@ But with Pozi, your organisation's GIS is no longer locked to single software ve
 
 If you're stuck in another contract, talk to us. Not only can we get you up and running with Pozi straight away, we'll provide credit to cover your use of Pozi during the remainder of your existing contract. Run Pozi and IntraMaps in parallel for as long as you need to make a seamless transition.
 
-[!button variant="info" icon="paper-airplane" size="xl" corners="pill" text="Get started"](/contact/)
+[!button variant="info" size="xl" corners="pill" text="&nbsp;Get started"](/contact/)
 
 <br/>
 

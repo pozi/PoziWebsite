@@ -117,7 +117,7 @@ It is recommended to assign an individual user first for testing before assignin
 
 When configured correctly, a request from a logged-in user to Pozi Server through the Application Proxy URL should return the same result as within the local network.
 
- Visiting followin the Entra ID Application Proxy URL:
+ Visiting following the Entra ID Application Proxy URL:
 
 `https://poziserver-<entra-application-client-name>.msappproxy.net/pozi/qgisserver/wfs3.html`
 

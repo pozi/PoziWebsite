@@ -23,10 +23,6 @@ Administrators control the following aspects of the Pozi experience:
 [!ref icon="tools" text="Issues with individual layers"](/admin-guide/qgis/configuring-layers#troubleshooting)
 [!ref icon="tools" text="Issues with projects/layer groups"](/admin-guide/qgis/managing-qgis-projects#troubleshooting)
 
-==- Issue affecting *ALL* internal layer groups
-
-If you are not able to view any layer groups from your internal sources, remote into the server on which Pozi Server is installed, go to Control Panel > Administrative Tools > Services > PoziConnectServer > right-click > Restart.
-
 ==-
 
 ## Let Us Help You
@@ -34,7 +30,6 @@ If you are not able to view any layer groups from your internal sources, remote 
 For other changes to the Pozi app experience, contact the Pozi Helpdesk:
 
 * register a new layer catalogue (ie, layer group) in Pozi
-* register new layers for viewing by public
 * change the default basemap, search and imagery options
 * update branding
 * solve an issue that's not covered in our Troubleshooting pages

@@ -3,15 +3,15 @@ title: Upgrade
 layout: central
 ---
 
-# Upgrade to Pozi Enterprise
+# Upgrade to Pozi Enterprise Cloud
 
 <img src="/static/img/undraw/undraw_os_upgrade_re_r0qa.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
 
 *<big>Combine geographic information from local data and remote web services to give your users the complete picture*</big>
 
-For organisations who are already using Pozi Public or Pro, upgrading to Pozi Enterprise or Enterprise Cloud enables internal users to **directly access internal corporate datasets** within the Pozi app.
+For organisations who are already using Pozi Public or Pro, upgrading to Pozi Enterprise Cloud enables internal users to **directly access internal corporate datasets** within the Pozi app.
 
-Pozi Enterprise is a powerful GIS enquiry tool that is an ideal replacement for any existing internal GIS viewer.
+Pozi Enterprise Cloud is a powerful GIS enquiry tool that is an ideal replacement for any existing internal GIS viewer.
 
 Advantages:
 
@@ -23,7 +23,7 @@ Advantages:
 
 ## Enterprise Functionality
 
-Pozi Enterprise unlocks a range of advanced functionality and integrations.
+Pozi Enterprise Cloud unlocks a range of advanced functionality and integrations.
 
 ### GIS Integration
 
@@ -41,7 +41,7 @@ Enable internal users to view and interact with corporate GIS layers on your org
 
 ### Advanced Workflows
 
-Pozi Enterprise enables staff to carry out critical workflows within its use-to-use interface:
+Pozi Enterprise Cloud enables staff to carry out critical workflows within its use-to-use interface:
 
 - multi-select and export property details
 - measure distance, area

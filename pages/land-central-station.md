@@ -3,6 +3,7 @@ title: Land Central Station
 route: /land-central-station
 description: Land Central Station is a vision for cloud data hub and single source of truth for Victorian council property information - an alternative to dreaded "M1" process.
 layout: central
+breadcrumb: false
 ---
 
 #
@@ -84,7 +85,7 @@ The current system is difficult to automate and innovate upon.
 
 ## Solution
 
-**Land Central Station** is a centralised data clearinghouse of property information from all Victorian councils.
+**Land Central Station** is our concept of a centralised data clearinghouse of property information from all Victorian councils.
 
 <img src="/static/img/undraw/undraw_start_building_re_xani.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
 
@@ -129,7 +130,7 @@ A secure cloud-hosted platform provides a centralised source of truth for proper
 
 On the council side, a simple data sync tool is installed at each council and configured for their property system to generate and upload a nightly extract of relevant property information.
 
-Alternatively, councils may choose to set up FME or another tool of their choice to push their data to the cloud platform.
+Alternatively, councils may choose to set up FME, PowerShell or any other tool of their choice to push their data to the cloud platform.
 
 ---
 
@@ -186,7 +187,7 @@ To update Vicmap, DEECA will compare what changed between snapshots of the counc
 
 ==- Why hasn't this been considered in the past?
 
-Most discussions about improving the property data maintenance processes for councils have involved minor improvements to the M1, like creating new edit codes or adding more fields to the specification.
+Most discussions about improving the property data maintenance processes for councils have involved minor improvements to the M1 such as creating new edit codes or adding more fields to the specification.
 
 We have a different idea about how to better exchange data that doesn't rely on spreadsheets. It's a new shared-service approach based on modern technologies, and it involves DEECA taking a greater role in the property data maintenance workflow.
 
