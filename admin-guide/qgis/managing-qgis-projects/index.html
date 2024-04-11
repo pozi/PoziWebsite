@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.765518656892">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.766122124143">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,11 +35,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.765518656892" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.766122124143" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.765518656892" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.766122124143" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.765518656892" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.766122124143" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -411,19 +411,16 @@
 </doc-anchor-target>
 <p>If you&#x27;ve <a href="../setting-up-qgis/#basemap">set up</a> &#x27;Vicmap Basemap&#x27; as a WMS/WMTS source, you can easily one of its layers as your basemap.</p>
 <p>Browser &gt; WMS/WMTS &gt; Vicmap Basemap &gt; Vicmap Basemap - VicGrid2020 - Cartographic</p>
+<p>Ensure that you exclude the basemap from WMS to prevent it appearing in Pozi. See <a href="../configuring-layers/#exclude-layers">here</a> for more information.</p>
 <doc-anchor-target id="configure-web-services">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#configure-web-services">#</doc-anchor-trigger>
         <span>Configure Web Services</span>
     </h2>
 </doc-anchor-target>
-<doc-anchor-target id="construct-advertised-url">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#construct-advertised-url">#</doc-anchor-trigger>
-        <span>Construct Advertised URL</span>
-    </h3>
-</doc-anchor-target>
-<p><em>Note: this is no longer a requirement for newer Azure-only implementations if the site is configured with the correct <a href="../../../dev-guide/azure-integration/#application-proxy-internal-url">Application Proxy internal URL</a>.</em></p>
+<p>For non-Azure implementations, follow the <em>Legacy</em> instructions immediately below to configure the necessary <em>advertised URL</em>. For Azure implementations, see the next section.</p>
+<doc-panel id="legacy" collapsed>
+    <template #title>Legacy</template>
 <p>The project&#x27;s <em>Advertised URL</em> is a URL at which WMS and WFS requests can interact with the layers in the project file. Essentially, the project file needs a reference to itself in a URL format.</p>
 <p>This step involves constructing the URL text that will be used in subsequent configuration below. You can use a temporary blank text document in Notepad to compile the text.</p>
 <p>Combine the details below to create your project&#x27;s Advertised URL:</p>
@@ -438,6 +435,7 @@
 <pre class="language-none"><code v-pre class="language-none">https://&lt;servername&gt;.pozi.com/iis/qgisserver?MAP=&lt;projectfilepath&gt;</code></pre>
 </doc-codeblock></div>
 <p>Copy the URL to your clipboard for subsequent configuration below.</p>
+</doc-panel>
 <doc-anchor-target id="enable-web-services">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#enable-web-services">#</doc-anchor-trigger>
@@ -514,6 +512,9 @@
     </h2>
 </doc-anchor-target>
 <p>Your new project must be registered in Pozi&#x27;s central web configuration for users to view the map layers in your Pozi site.</p>
+<p>For non-Azure implementations, follow the <em>Legacy</em> instructions immediately below to obtain the project&#x27;s <code v-pre>GetProjectSettings</code> URL. For Azure implementations, see the next section.</p>
+<doc-panel id="legacy" collapsed>
+    <template #title>Legacy</template>
 <p>Follow these steps to register your project:</p>
 <ol>
 <li>obtain the project&#x27;s <code v-pre>GetProjectSettings</code> URL</li>
@@ -536,10 +537,11 @@
 <pre class="language-none"><code v-pre class="language-none">https://&lt;servername&gt;.pozi.com/iis/qgisserver?MAP=&lt;projectfilepath&gt;&amp;service=WMS&amp;request=GetProjectSettings</code></pre>
 </doc-codeblock></div>
 <p>Test this URL by pasting it in your browser and check that you get a valid response that lists the available layers.</p>
-<doc-anchor-target id="2-submit-helpdesk-ticket">
+</doc-panel>
+<doc-anchor-target id="submit-helpdesk-ticket">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#2-submit-helpdesk-ticket">#</doc-anchor-trigger>
-        <span>2. Submit Helpdesk Ticket</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#submit-helpdesk-ticket">#</doc-anchor-trigger>
+        <span>Submit Helpdesk Ticket</span>
     </h3>
 </doc-anchor-target>
 <p>Email <a href="mailto:support@pozi.com">support@pozi.com</a> with these details:</p>
@@ -547,7 +549,7 @@
 <li>subject: New layer catalogue</li>
 <li>name of new layer group to appear in Pozi layer panel</li>
 <li>order in which the layer group is to appear in the Pozi Layer Panel (relative to an existing layer group)</li>
-<li><code v-pre>GetProjectSettings</code> URL (from above)</li>
+<li><code v-pre>GetProjectSettings</code> URL (non-Azure legacy implementation only)</li>
 </ul>
 <p>Within 24 hours, the new layer group will be configured and available for users to view in Pozi.</p>
 <p>During this time, and any time afterwards, you may continue to <a href="../configuring-layers/">add and configure layers</a> in your new project.</p>
@@ -560,7 +562,7 @@
 <doc-panels>
    <doc-panel id="none-of-the-project-s-layers-are-displaying-in-pozi" collapsed>
        <template #title>None of the project&#x27;s layers are displaying in Pozi</template>
-<p>Check that advertised URLs contains the exact path and file name of the .qgs project file.</p>
+<p>For Azure implementations, ensure that QGIS Server WMS and WFS Advertised URLs are blank. For non-Azure implementations, ensure the Advertised URL contains the exact path and file name of the .qgs project file.</p>
 <p>Ensure that <code v-pre>Use layer ids as names</code> is NOT ticked. See Project &gt; Properties &gt; QGIS Server &gt; WMS.</p>
 <p>Check the Network panel in your browser console as you turn on layers. Look at the <code v-pre>GetFeature</code> requests and preview the response. If it contains bounding box coordinates but no records, there may be an issue with IIS.</p>
 <p>Open the IIS Manager, and recycle the PoziQgisServer application pool.</p>
