@@ -104,15 +104,29 @@ The parent layer can exist in the same QGIS project, or a different project, or 
 
 ### Parameter
 
-!!! Note
+The `parameter` is an expression that contains instructions for filtering the child dataset to return only records that relate to an individual parent feature.
+
+The options below are for spatial and non-spatial filters.
+
+#### Spatial Filter
 
 If you are configuring a child dataset as a *spatial intersection* of its parent, you don't need to specify any `parameter` filter. In the absence of any filter, Pozi assumes that the parent/child relationship is a spatial intersection, and it will generate the necessary query to return all child records that intersect with the selection spatial record.
 
-!!!
+However if you want to explicitly specify a filter, you can do so by using the following:
 
-The `parameter` is an expression that contains instructions for filtering the child dataset to return only records that relate to an individual parent feature.
+```
+parameter=filter=<Filter><Intersects><PropertyName>geometry</PropertyName>[$gml]</Intersects></Filter>
+```
 
-Use the layer's Query Builder to construct and test your expression.
+Alternatively you can also a custom spatial filter. In this example, we are applying a negative buffer to the parent geometry to exclude records that have only a slight (<1m) overlap:
+
+```
+parameter=EXP_FILTER=intersects(@geometry [$comma] buffer(geom_from_wkt('[$wkt]') [$comma] -0.00001 ))
+```
+
+#### Non-Spatial Filter
+
+If you are configuring a child dataset to use an id-based join, use the layer's Query Builder to construct and test a filter expression.
 
 1. Layer Properties > Source > Query Builder
 2. double-click the name of the field to be used as the link - this will be added to the expression
