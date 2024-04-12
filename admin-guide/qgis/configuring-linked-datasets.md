@@ -112,6 +112,8 @@ The options below are for spatial and non-spatial filters.
 
 If you are configuring a child dataset as a *spatial intersection* of its parent, you don't need to specify any `parameter` filter. In the absence of any filter, Pozi assumes that the parent/child relationship is a spatial intersection, and it will generate the necessary query to return all child records that intersect with the selection spatial record.
 
+![Keyword for Spatial Intersection](../img/qgis-server-keyword-for-spatial-intersection.png){style="width:600px"}
+
 However if you want to explicitly specify a filter, you can do so by using the following:
 
 ```
@@ -177,8 +179,8 @@ In the child dataset's Layer Properties, go to QGIS Server. Fill in the 'Keyword
 
 ![](./img/qgis-server-keywords.png){style="width:600px"}
 
-Non-spatial example: `parent=Property, parameter=EXP_FILTER=Assess_NumberX in ('[Property Number]')`
-Spatial example: `parent=Property`
+- Spatial example: `parent=Property`
+- Non-spatial example: `parent=Property, parameter=EXP_FILTER=Assess_NumberX in ('[Property Number]')`
 
 Click OK, then save the project.
 
