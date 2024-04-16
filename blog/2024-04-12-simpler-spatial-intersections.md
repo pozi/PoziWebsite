@@ -9,7 +9,7 @@ visibility:
 
 # Simpler configuration of datasets for spatial intersections
 
-We've recently improved to Pozi to easier for administrators to enable layers to be used in spatial intersection queries. With one single configuration option in QGIS, you can now enable any layer in Pozi to be triggered by any other layer so that users can see related information based on overlapping features between the layers.
+We've recently improved Pozi to make it easier for administrators to enable layers to be used in spatial intersection queries. With one single configuration option in QGIS, you can now enable any layer in Pozi to be triggered by any other layer so that users can see related information based on overlapping features between the layers.
 
 ## Background
 
