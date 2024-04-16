@@ -16,7 +16,7 @@
     <item>
       <title>Simpler configuration of datasets for spatial intersections</title>
       <guid isPermaLink="true">https://pozi.com/simpler-spatial-intersections/</guid>
-      <description>We've recently improved to Pozi to easier for administrators to enable layers to be used in spatial intersection queries.</description>
+      <description>We've recently improved Pozi to make it easier for administrators to enable layers to be used in spatial intersection queries.</description>
       <author>Simon O'Keefe</author>
       <pubDate>Fri, 12 Apr 2024 00:00:00 GMT</pubDate>
     </item>
