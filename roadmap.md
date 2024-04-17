@@ -76,7 +76,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 #### Fixed
 
 - [x] 🪲 fix child dataset request so that any query containing null ids return valid (empty) result
-- [x] 🪲 fix Report option for private layers
+- [x] 🪲 fix Report function for private layers
 
 ### January 2024
 

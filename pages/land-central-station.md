@@ -101,7 +101,7 @@ It is designed to:
 
 2. the platform automatically processes and compiles the data into a single uniform property dataset
 
-3. DEECA and other approved authorities can access data from the combined resource on demand in the format of their choosing (complete extract, diffs, M1s, PIQAs, filtered extracts, audits, discrepancy reports, etc)
+3. DEECA fetches the combined data from the platform on demand in the format of their choosing (complete extract, diffs, M1s, PIQAs, filtered extracts, audits, discrepancy reports, etc)
 
 With DEECA having complete access to the combined authoritative property information from every council, they have all the information they need to update Vicmap.
 
@@ -110,7 +110,7 @@ With DEECA having complete access to the combined authoritative property informa
 The system comprises:
 
 1. a central cloud platform
-2. data sync tool installed at each council
+2. a data sync tool installed at each council
 
 #### Cloud Platform
 
@@ -163,7 +163,7 @@ Alternatively, councils may choose to set up FME, PowerShell or any other tool o
 
 We've worked with every council in Victoria (through M1 and PIQA projects), building custom property data integrations into 79 different property data schemas, across seven different vendor systems, on a range of database and web platforms.
 
-Our Pozi Connect software is already installed at most Victorian councils and integrated into their property systems. The software can be adapted to automatically sync the council's data to the cloud platform.
+Our Pozi Connect software is already installed at most Victorian councils and integrated with their property systems. The software can be adapted to automatically sync the council's data to the cloud platform.
 
 We've established trust and built upon relationships we've had with Victorian councils over 20 years.
 
@@ -236,7 +236,7 @@ Our existing M1 solution, Pozi Connect, has been generating M1s for councils for
 
 ==- How will the system deal with special property attributes such as multi-assessment, access type and distance-based address?
 
-The cloud platform includes an interactive dashboard for councils to manage edits. Validation rules will be configured to flag any updates that would affect (or be affected by) any multi-assessment, access type and distance-based address attributes. Councils will use the dashboard to approve or amend any flagged updates.
+The cloud platform will include an interactive dashboard for councils to manage edits. Validation rules will be configured to flag any updates that would affect (or be affected by) any multi-assessment, access type and distance-based address attributes. Councils will use the dashboard to approve or amend any flagged updates.
 
 ==- How will the system deal with property boundaries that aren't defined by parcel ownership?
 
