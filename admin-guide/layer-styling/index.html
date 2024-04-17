@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.766563797514">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.766630866171">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,11 +35,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.766563797514" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.766630866171" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.766563797514" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.766630866171" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.766563797514" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.766630866171" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -388,7 +388,9 @@
 <li>for polygon features to be selectable, the fill opacity must be greater than <code v-pre>0</code> - it can be as little as 1%</li>
 <li>for rule-based styles, field names are case-sensitive (even though in QGIS they are case-insensitive)</li>
 <li>depending on the thickness of a line, the SLD file may need to be manually altered for dashed and dotted lines otherwise the gaps may disappear - eg. a 4 pixel thick line should be updated from <code v-pre>&lt;se:SvgParameter name=&quot;stroke-dasharray&quot;&gt;1 2&lt;/se:SvgParameter&gt;</code> to <code v-pre>&lt;se:SvgParameter name=&quot;stroke-dasharray&quot;&gt;4 8&lt;/se:SvgParameter&gt;</code></li>
-<li>when styling layers served from a Geoserver instance, it may be necessary to prefix mark well known names with <code v-pre>shape://</code> in the sld. eg. <code v-pre>&lt;se:WellKnownName&gt;shape://horline&lt;/se:WellKnownName&gt;</code> for more details refer to Geoserver&#x27;s documentation. <a href="https://docs.geoserver.org/latest/en/user/styling/sld/extensions/pointsymbols.html#shape-symbols" class="outbound" target="_blank"><span>https://docs.geoserver.org/latest/en/user/styling/sld/extensions/pointsymbols.html#shape-symbols</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
+<li>when styling layers served from a Geoserver instance, it may be necessary to prefix mark well known names with <code v-pre>shape://</code> in the SLD. eg. <code v-pre>&lt;se:WellKnownName&gt;shape://horline&lt;/se:WellKnownName&gt;</code>.  For more details refer to Geoserver&#x27;s documentation. <a href="https://docs.geoserver.org/latest/en/user/styling/sld/extensions/pointsymbols.html#shape-symbols" class="outbound" target="_blank"><span>https://docs.geoserver.org/latest/en/user/styling/sld/extensions/pointsymbols.html#shape-symbols</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</li>
+<li>it isn&#x27;t possible to style WMS layers in QGIS, however if the layer is also served using WFS, the WFS layer can be styled, and the exported SLD can also be used for the WMS layer</li>
+<li>if a layer (or legend) is not being styled correctly, it may be a result of the version of SLD.  Newer versions of QGIS export SLD v1.1.0.  As an example, the DEECA Geoserver WMS instance (<a href="https://opendata.maps.vic.gov.au/geoserver/wms" class="outbound" target="_blank"><span>https://opendata.maps.vic.gov.au/geoserver/wms</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>), doesn&#x27;t correctly portray SLD v1.1.0 legends, but this is fixed if the SLD is converted to v1.0.0.  GeoStyler (<a href="https://geostyler.github.io/geostyler-demo/" class="outbound" target="_blank"><span>https://geostyler.github.io/geostyler-demo/</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>) can be used to convert files between SLD versions.</li>
 </ul>
 <doc-anchor-target id="symbols">
     <h3>
