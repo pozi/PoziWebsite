@@ -29,7 +29,9 @@ Additional tips:
 * for polygon features to be selectable, the fill opacity must be greater than `0` - it can be as little as 1%
 * for rule-based styles, field names are case-sensitive (even though in QGIS they are case-insensitive)
 * depending on the thickness of a line, the SLD file may need to be manually altered for dashed and dotted lines otherwise the gaps may disappear - eg. a 4 pixel thick line should be updated from `<se:SvgParameter name="stroke-dasharray">1 2</se:SvgParameter>` to `<se:SvgParameter name="stroke-dasharray">4 8</se:SvgParameter>`
-* when styling layers served from a Geoserver instance, it may be necessary to prefix mark well known names with `shape://` in the sld. eg. `<se:WellKnownName>shape://horline</se:WellKnownName>` for more details refer to Geoserver's documentation. [https://docs.geoserver.org/latest/en/user/styling/sld/extensions/pointsymbols.html#shape-symbols](https://docs.geoserver.org/latest/en/user/styling/sld/extensions/pointsymbols.html#shape-symbols)
+* when styling layers served from a Geoserver instance, it may be necessary to prefix mark well known names with `shape://` in the SLD. eg. `<se:WellKnownName>shape://horline</se:WellKnownName>`.  For more details refer to Geoserver's documentation. [https://docs.geoserver.org/latest/en/user/styling/sld/extensions/pointsymbols.html#shape-symbols](https://docs.geoserver.org/latest/en/user/styling/sld/extensions/pointsymbols.html#shape-symbols).
+* it isn't possible to style WMS layers in QGIS, however if the layer is also served using WFS, the WFS layer can be styled, and the exported SLD can also be used for the WMS layer
+* if a layer (or legend) is not being styled correctly, it may be a result of the version of SLD.  Newer versions of QGIS export SLD v1.1.0.  As an example, the DEECA Geoserver WMS instance (https://opendata.maps.vic.gov.au/geoserver/wms), doesn't correctly portray SLD v1.1.0 legends, but this is fixed if the SLD is converted to v1.0.0.  GeoStyler (https://geostyler.github.io/geostyler-demo/) can be used to convert files between SLD versions.
 
 ### Symbols
 
