@@ -28,13 +28,15 @@ The catalogue is the unit around which the Pozi Publisher workflow is based, eit
 
 !!!warning Warning
 
-If there is a warning like the following appears:
+If the `Install-Module` command fails with the following:
 
 `WARNING: Unable to download from URI 'https://go.microsoft.com...`
 
-It may be necessary to change the protocol that Powershell is using to access the Internet.  Try entering the following command, and then re-try the `Install-Module` command.
+It may be necessary to change the protocol that Powershell uses to access the Internet.  Entering the following command:
 
 `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+
+Then re-try the `Install-Module` command.
 
 !!!
 
