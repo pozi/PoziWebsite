@@ -26,6 +26,16 @@ The catalogue is the unit around which the Pozi Publisher workflow is based, eit
 1. Type `Install-Module -Name AWS.Tools.Installer`
 2. Answer 'Y' to the various security prompts
 
+!!! Note:
+
+If there is a warning like the following appears:
+
+`WARNING: Unable to download from URI 'https://go.microsoft.com...`
+
+It may be necessary to change the protocol that Powershell is using to access the Internet.  Try entering the following command, and then re-try the `Install-Module` command.
+
+`[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+
 +++ Alternative installation
 
 1. Download [AWS Tools](https://sdk-for-net.amazonwebservices.com/ps/v4/latest/AWS.Tools.zip).
