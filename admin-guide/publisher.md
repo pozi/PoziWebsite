@@ -26,7 +26,7 @@ The catalogue is the unit around which the Pozi Publisher workflow is based, eit
 1. Type `Install-Module -Name AWS.Tools.Installer`
 2. Answer 'Y' to the various security prompts
 
-!!! Note:
+!!!warning Warning
 
 If there is a warning like the following appears:
 
@@ -35,6 +35,8 @@ If there is a warning like the following appears:
 It may be necessary to change the protocol that Powershell is using to access the Internet.  Try entering the following command, and then re-try the `Install-Module` command.
 
 `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+
+!!!
 
 +++ Alternative installation
 
