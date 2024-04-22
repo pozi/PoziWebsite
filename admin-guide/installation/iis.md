@@ -96,6 +96,12 @@ If the command prompt returns `"C:\Windows\system32\inetsrv\appcmd" is not recog
 
 ## Configure Environment Variables
 
+!!!warning
+
+As of April 2023, the OSGeo4W installer installs Python in `C:\OSGeo4W\apps\Python312`. The below scripts have been updated to use this new location. Any Pozi installations prior to April 2023 have the environment variables configured to use `C:\OSGeo4W\apps\Python39`. Beware of any potential conflicts when upgrading an existing installation.
+
+!!!
+
 +++ Command Prompt
 
 Copy and paste the following into the command prompt:
@@ -119,7 +125,7 @@ Copy and paste the following into the command prompt:
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_PREFIX_PATH',value='C:\OSGeo4W\apps\qgis-ltr']" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QT_PLUGIN_PATH',value='C:\OSGeo4W\apps\qt5\plugins']" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='TEMP',value='C:\Windows\Temp']" /commit:apphost
-"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='PYTHONHOME',value='C:\OSGeo4W\apps\Python39']" /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='PYTHONHOME',value='C:\OSGeo4W\apps\Python312']" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_SERVER_IGNORE_BAD_LAYERS',value='1']" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_SERVER_LOG_FILE',value='C:\Pozi\IIS\QgisServer\qgis_server.log']" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QGIS_SERVER_LOG_LEVEL',value='1']" /commit:apphost
@@ -152,7 +158,7 @@ O4W_QT_HEADERS | `C:\OSGeo4W\apps\Qt5\include`
 QGIS_PREFIX_PATH | `C:\OSGeo4W\apps\qgis-ltr`
 QT_PLUGIN_PATH | `C:\OSGeo4W\apps\qt5\plugins`
 TEMP | `C:\Windows\Temp`
-PYTHONHOME | `C:\OSGeo4W\apps\Python39`
+PYTHONHOME | `C:\OSGeo4W\apps\Python312`
 QGIS_SERVER_IGNORE_BAD_LAYERS | `1`
 QGIS_SERVER_LOG_FILE | `C:\Pozi\IIS\QgisServer\qgis_server.log`
 QGIS_SERVER_LOG_LEVEL | `1`
@@ -633,14 +639,14 @@ If you experience an "Error loading QGIS" message, it may specify a file named `
 Use a text editor to recreate the missing file with the following content:
 
 ```bat C:\OSGeo4W\bin\qgis-ltr-bin.env
-PATH=C:\OSGeo4W\apps\qgis-ltr\bin;C:\OSGeo4W\apps\qt5\bin;C:\OSGeo4W\apps\Python39\Scripts;C:\OSGeo4W\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32\WBem
+PATH=C:\OSGeo4W\apps\qgis-ltr\bin;C:\OSGeo4W\apps\qt5\bin;C:\OSGeo4W\apps\Python312\Scripts;C:\OSGeo4W\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32\WBem
 GDAL_DATA=C:\OSGeo4W\apps\gdal\share\gdal
 GDAL_DRIVER_PATH=C:\OSGeo4W\apps\gdal\lib\gdalplugins
 GDAL_FILENAME_IS_UTF8=YES
 JPEGMEM=1000000
 OSGEO4W_ROOT=C:\OSGeo4W
 PROJ_LIB=C:\OSGeo4W\share\proj
-PYTHONHOME=C:\OSGeo4W\apps\Python39
+PYTHONHOME=C:\OSGeo4W\apps\Python312
 PYTHONUTF8=1
 QGIS_PREFIX_PATH=C:/OSGeo4W/apps/qgis-ltr
 QT_PLUGIN_PATH=C:\OSGeo4W\apps\qgis-ltr\qtplugins;C:\OSGeo4W\apps\qt5\plugins
