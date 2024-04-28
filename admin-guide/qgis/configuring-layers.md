@@ -248,7 +248,7 @@ Layer Properties > QGIS Server > Keyword list
 
 | Setting | Description |
 | --- | --- |
-| `enabled=false` | temporarily disable a dataset in Pozi (without having to remove it from QGIS) |
+| `enabled=false` | disable a dataset in Pozi |
 | `group=[group name]` | override which layer group the layer is listed under, eg. `group=Planning` |
 | `showInLayerControl=false` | don't display layer in layer panel |
 | `showLegend=false` | don't display layer legend |
@@ -256,6 +256,8 @@ Layer Properties > QGIS Server > Keyword list
 | `visible=true` | display layer by default |
 | `downloadable=false` | don't display download options for this layer |
 | `linkedLayers=[layer name]` | link the current layer's visibility to another layer, eg. `linkedLayers=Dog Park Areas` |
+| `infoPanelCollapse=true` | collapse info results panel for this dataset |
+| `promoteDetails=true` | display all child attributes instead of a preview |
 
 When using multiple keyword settings, use commas to separate them.
 

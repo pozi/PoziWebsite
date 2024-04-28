@@ -73,9 +73,11 @@ Additionally, users can use the line and polygon selection tool (as well Ctrl-cl
 
 These settings provide an override for some of the default layer behaviours in Pozi. Append any of these overrides to the keyword setting, separated by commas.
 
-* `enabled=false`: temporarily disable a dataset in Pozi (without having to remove it from QGIS)
-* `infoPanelCollapse=true`: collapse info results panel for this dataset
-* `promoteDetails=true`: display all child attributes instead of a preview
+| Setting | Description |
+| --- | --- |
+| `enabled=false` | disable a dataset in Pozi |
+| `infoPanelCollapse=true` | collapse info results panel for this dataset |
+| `promoteDetails=true` | display all child attributes instead of a preview |
 
 [Developer reference](https://github.com/pozi/PoziApp/blob/master/app/src/config/catalog/KeywordsParser.ts)
 
