@@ -59,10 +59,11 @@ General code conventions
 - If more text is required, leave empty line and add description
 
 **Workflow**:
-* Create a branch for each activity
-* Commit changes
-* Push to remote
-* Create PR on github (a version of Pozi will be built automatically on `https://staging.pozi.com/<branch-name/>`)
+* Create a branch for each activity `git checkout -b <branch-name>`
+* Commit changes `git commit -a`
+  * Text editor will open, add the commit message to the top of this file followed by a blank line.  If further detail is required, add more information after the blank line.
+* Push to remote `git push`
+* Create PR on GitHub (a version of Pozi will be built automatically on `https://staging.pozi.com/<branch-name/>`), add a reviewer
 * Add link to PR in relevant Trello card
 
 
