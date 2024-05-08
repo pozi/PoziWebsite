@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.768525086657">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.768525192590">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,11 +35,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.768525086657" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.768525192590" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.768525086657" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.768525192590" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.768525086657" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.768525192590" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -510,7 +510,8 @@
         <span>Limitations</span>
     </h3>
 </doc-anchor-target>
-<p>When publishing the layer as a vector layer, the following limitations apply:</p>
+<p>When publishing the layer as a vector layer, the field used for categorisation must be a field that that is exposed (ie, not hidden).</p>
+<p>An addition, the following limitations apply:</p>
 <ul>
 <li>the symbology must be based on a field (real or virtual), not an expression</li>
 <li>the values must not be merged (ie, only one value per row)</li>
@@ -660,8 +661,12 @@
     </h2>
 </doc-anchor-target>
 <doc-panels>
-   <doc-panel id="layers-are-displayed-but-not-with-the-styling-from-qgis" collapsed>
-       <template #title>Layers are displayed, but not with the styling from QGIS</template>
+   <doc-panel id="layer-with-categorised-style-doesn-t-display-when-enabled-for-wfs" collapsed>
+       <template #title>Layer with categorised style doesn&#x27;t display when enabled for WFS</template>
+<p>Ensure that the field used for categorisation is exposed (ie, not hidden). See <doc-anchor-trigger to="#limitations">above</doc-anchor-trigger>.</p>
+   </doc-panel>
+   <doc-panel id="layer-is-displayed-but-not-with-the-styling-from-qgis" collapsed>
+       <template #title>Layer is displayed, but not with the styling from QGIS</template>
 <p>Pozi will display layers in a generic style (often purple) if it cannot process the style that was configured in QGIS.</p>
 <p>Simplify the style in the QGIS project and try again. For point features, replace custom point symbols with one of the <doc-anchor-trigger to="#points">standard symbols</doc-anchor-trigger> specified above. For polygon features, replace hatch styles with semi-opaque fills or any of the <doc-anchor-trigger to="#polygons">supported fill styles</doc-anchor-trigger> specified above.</p>
    </doc-panel>
