@@ -114,7 +114,9 @@ Layers can be styled using the `Categorized` option. Pick the field to use for t
 
 ### Limitations
 
-When publishing the layer as a vector layer, the following limitations apply:
+When publishing the layer as a vector layer, the field used for categorisation must be a field that that is exposed (ie, not hidden).
+
+An addition, the following limitations apply:
 
 * the symbology must be based on a field (real or virtual), not an expression
 * the values must not be merged (ie, only one value per row)
@@ -190,7 +192,11 @@ Looking for a barbecue icon? Type 'bbq' into the Font Awesome online search to s
 
 ## Troubleshooting
 
-==- Layers are displayed, but not with the styling from QGIS
+==- Layer with categorised style doesn't display when enabled for WFS
+
+Ensure that the field used for categorisation is exposed (ie, not hidden). See [above](#limitations).
+
+==- Layer is displayed, but not with the styling from QGIS
 
 Pozi will display layers in a generic style (often purple) if it cannot process the style that was configured in QGIS.
 
