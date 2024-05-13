@@ -10,10 +10,10 @@ Install the following software
   - sort-imports (required)
   - Highlight Trailing White Spaces (required)
   - Git lens (recommended)
-  - Codeium AI (recommended)
+  - Codeium AI / Gemini(recommended)
 
 * Github for Windows, including Git Bash
-* NodeJS (latest LTS. Currently V20) (https://nodejs.org/en/download)
+* NodeJS (latest LTS. Currently V20) (https://nodejs.org/en/download). If you need to manage multiple versions, you can use the [NVM](https://github.com/nvm-sh/nvm) tool.
 
 
 ## Steps
@@ -39,34 +39,8 @@ Install the following software
 * type `cd app` (this is where the actual project files live)
 * type `npm install` and wait for the command to complete
 
-## Conventions
+## 3. Troubleshooting
 
-### Code
-
-VS Code settings are stored in `.vscode/settings.json` and specific to PoziApp.
-
-General code conventions
-
-### Git
-
-**Branch naming**:
-* `maintenance-<activitity>`: for admin related things like upgrading dependencies, changes to our github actions, etc
-* `feature-<activity>`: for new functionality, like adding a print button for example
-* `bugfix-<activity>`: for bug fixes
-
-**Commit messages**:
-- Use imperative tense. E.g. 'Add new print button'
-- If more text is required, leave empty line and add description
-
-**Workflow**:
-* Create a branch for each activity `git checkout -b <branch-name>`
-* Commit changes `git commit -a`
-  * Text editor will open, add the commit message to the top of this file followed by a blank line.  If further detail is required, add more information after the blank line.
-* Push to remote `git push`
-* Create PR on GitHub (a version of Pozi will be built automatically on `https://staging.pozi.com/<branch-name/>`), add a reviewer
-* Add link to PR in relevant Trello card
-
-
-### Deploy & Create Release
-
-It is possible and recommended to only deploy using GitHub.
+Error message | Solution
+--- | ---
+Error: Cannot find module @rollup/rollup-win32-x64-msvc. npm has a bug related to optional dependencies (https://github.com/npm/cli/issues/4828). Please try `npm i` again after removing both package-lock.json and node_modules directory. | This can happen when the package-lock.json has been created on a Linux environament. Solution: remove both package-lock.json and node_modules directory and run `npm i` again. This will include the optional dependency @rollup/rollup-win32-x64-msvc for windows. Then create a pull request and merge it into the main codebase.
