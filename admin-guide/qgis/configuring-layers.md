@@ -263,7 +263,7 @@ When using multiple keyword settings, use commas to separate them.
 
 Example: `showLegend=false, visible=true`
 
-[Developer reference](https://github.com/pozi/PoziApp/blob/master/app/src/config/catalog/KeywordsParser.ts)
+[Developer reference](https://github.com/pozi/PoziApp/blob/main/src/config/catalog/KeywordsParser.ts)
 
 <br/>
 

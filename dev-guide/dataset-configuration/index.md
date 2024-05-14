@@ -6,7 +6,7 @@ order: 90
 
 ## Schema
 
-See https://github.com/pozi/PoziApp/blob/master/app/src/ConfigManager/schemas/layer-schema.json
+See https://github.com/pozi/PoziApp/blob/main/src/ConfigManager/schemas/layer-schema.json
 
 ## Dataset Types
 
