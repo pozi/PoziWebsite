@@ -30,16 +30,15 @@ Install the following software
 * paste URL above (https://github.com/pozi/PoziApp.git)
 * Select local path (e.g. %USERPROFILE%\git\pozi)
 * Click on `Clone`
-* Right click on newly clone repo
+* Right click on newly cloned repo
 * Select 'Open in Visual Studio Code'
 
-## VS Code
+## 3. VS Code
 * Terminal / New Terminal
 * Select Git bash by clicking on the arrow down next to the (+) button
-* type `cd app` (this is where the actual project files live)
 * type `npm install` and wait for the command to complete
 
-## 3. Troubleshooting
+## Troubleshooting
 
 Error message | Solution
 --- | ---
