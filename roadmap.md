@@ -35,12 +35,19 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## Completed
 
+### May 2024
+
+- [x] ⚡ support for Kapish Easy Link protocol
+
 ### April 2024
 
 #### Improved
 
 - [x] 👍 improve support for displaying base64 encoded images
 - [x] 👍 enable WMS legend URL parameters to be overridden
+- [x] 👍 use unlocked padlock symbol to dataset access status
+- [x] 👍 upgrade to OpenLayers 9
+- [x] 👍 use current map view extent for default print scale
 
 #### Fixed
 

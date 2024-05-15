@@ -81,3 +81,7 @@ Pozi's [Font Awesome](https://fontawesome.com/) integration enables administrato
     - remove `C:\Users\username\AppData\Roaming\QGIS\QGIS3\profiles\default\svg\`
     - remove `C:\OSGeo4W\apps\qgis-ltr\svg\`
     - add `C:\Pozi\QGIS Assets\Pozi SVGs`
+
+Repeat steps 3 to 5 for all users who are responsible for updating QGIS projects. If users intend to update QGIS projects from their local PC (ie, not using Remote Desktop to the server), each user will need to install Font Awesome on their own local C drive and update their own QGIS settings to point to that location.
+
+It is also necessary to update the QGIS settings as per step 5 *while logged in to the server as the *Pozi Service* user*. Failure to update the settings for the Pozi Service user will prevent FontAwesome SVGs from rendering in WMS mode.

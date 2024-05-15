@@ -30,6 +30,6 @@ checks: {
 }
 ```
 
-https://github.com/pozi/PoziApp/blob/master/app/src/utils/pingdom.js#L26-L32
+https://github.com/pozi/PoziApp/blob/main/src/utils/pingdom.js#L26-L32
 
 To prevent an unwanted warning from displaying to users (for instance, if a service is experiencing a long outage), change the check's name in Pingdom.

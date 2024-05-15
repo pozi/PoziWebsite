@@ -174,7 +174,7 @@ These settings provide an override for some of the default layer behaviours in P
 | `infoPanelCollapse=true` | collapse info results panel for this dataset |
 | `promoteDetails=true` | display all child attributes instead of a preview |
 
-[Developer reference](https://github.com/pozi/PoziApp/blob/master/app/src/config/catalog/KeywordsParser.ts)
+[Developer reference](https://github.com/pozi/PoziApp/blob/main/src/config/catalog/KeywordsParser.ts)
 
 ### Combine and Configure
 

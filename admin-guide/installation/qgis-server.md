@@ -101,8 +101,8 @@ Desktop shortcuts:
 
 * Pozi webpage shortcuts
   * live site: `https://[sitename].pozi.com/`
-  * staging/testing site: `https://staging.pozi.com/master/#/site[sitename]/`
-  * config page: `https://staging.pozi.com/master/#/site[sitename]/config[true]/preview[true]/`
+  * staging/testing site: `https://staging.pozi.com/main/#/site[sitename]/`
+  * config page: `https://staging.pozi.com/main/#/site[sitename]/config[true]/preview[true]/`
   * Admin Guide: https://pozi.com/admin-guide/
 * GIS data folder
 * Pozi folder: `C:\Pozi`
