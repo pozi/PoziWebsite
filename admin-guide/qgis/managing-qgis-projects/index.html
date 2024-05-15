@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.769059437250">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.769062950305">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,11 +35,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.769059437250" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.769062950305" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.769059437250" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.769062950305" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.769059437250" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.769062950305" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -515,17 +515,6 @@
 <p>For non-Azure implementations, follow the <em>Legacy</em> instructions immediately below to obtain the project&#x27;s <code v-pre>GetProjectSettings</code> URL. For Azure implementations, see the next section.</p>
 <doc-panel id="legacy" collapsed>
     <template #title>Legacy</template>
-<p>Follow these steps to register your project:</p>
-<ol>
-<li>obtain the project&#x27;s <code v-pre>GetProjectSettings</code> URL</li>
-<li>submit a helpdesk ticket to Pozi</li>
-</ol>
-<doc-anchor-target id="1-obtain-getprojectsettings-url">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#1-obtain-getprojectsettings-url">#</doc-anchor-trigger>
-        <span>1. Obtain GetProjectSettings URL</span>
-    </h3>
-</doc-anchor-target>
 <p>In a text editor, construct a <code v-pre>GetProjectSettings</code> URL by combining the following:</p>
 <ol>
 <li>Advertised URL from above (eg <code v-pre>https://&lt;servername&gt;.pozi.com/iis/qgisserver?MAP=&lt;projectfilepath&gt;</code>)</li>
@@ -549,7 +538,7 @@
 <li>subject: New layer catalogue</li>
 <li>name of new layer group to appear in Pozi layer panel</li>
 <li>order in which the layer group is to appear in the Pozi Layer Panel (relative to an existing layer group)</li>
-<li><code v-pre>GetProjectSettings</code> URL (non-Azure legacy implementation only)</li>
+<li>file path of the QGIS project (or the <code v-pre>GetProjectSettings</code> URL for legacy implementation)</li>
 </ul>
 <p>Within 24 hours, the new layer group will be configured and available for users to view in Pozi.</p>
 <p>During this time, and any time afterwards, you may continue to <a href="../configuring-layers/">add and configure layers</a> in your new project.</p>
