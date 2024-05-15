@@ -35,7 +35,7 @@ Install the following software
 
 ## 3. VS Code
 
-Running the project in PowerShell is not supported. In order to have a unified experience, please use Git Bash.
+Running the project in PowerShell is not supported. In order to have a unified experience, we use Git Bash in Windows. VS Code has already been configured to use Git Bash by default in the `settings.json` file.
 
 * Terminal / New Terminal
 * Select Git bash by clicking on the arrow down next to the (+) button
@@ -46,3 +46,4 @@ Running the project in PowerShell is not supported. In order to have a unified e
 Error message | Solution
 --- | ---
 Error: Cannot find module @rollup/rollup-win32-x64-msvc. npm has a bug related to optional dependencies (https://github.com/npm/cli/issues/4828). Please try `npm i` again after removing both package-lock.json and node_modules directory. | This can happen when the package-lock.json has been created on a Linux environament. Solution: remove both package-lock.json and node_modules directory and run `npm i` again. This will include the optional dependency @rollup/rollup-win32-x64-msvc for windows. Then create a pull request and merge it into the main codebase.
+npm ERR! enoent spawn bash ENOENT | This is likely due to npm running in PowerShell, which is not supported in PoziApp. Please use Git Bash instead.
