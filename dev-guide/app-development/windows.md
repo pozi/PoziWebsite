@@ -34,6 +34,9 @@ Install the following software
 * Select 'Open in Visual Studio Code'
 
 ## 3. VS Code
+
+Running the project in PowerShell is not supported. In order to have a unified experience, please use Git Bash.
+
 * Terminal / New Terminal
 * Select Git bash by clicking on the arrow down next to the (+) button
 * type `npm install` and wait for the command to complete
