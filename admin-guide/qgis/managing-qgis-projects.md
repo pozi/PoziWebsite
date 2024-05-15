@@ -142,13 +142,6 @@ For non-Azure implementations, follow the *Legacy* instructions immediately belo
 
 ==- Legacy
 
-Follow these steps to register your project:
-
-1. obtain the project's `GetProjectSettings` URL
-2. submit a helpdesk ticket to Pozi
-
-### 1. Obtain GetProjectSettings URL
-
 In a text editor, construct a `GetProjectSettings` URL by combining the following:
 
 1. Advertised URL from above (eg `https://<servername>.pozi.com/iis/qgisserver?MAP=<projectfilepath>`)
@@ -173,7 +166,7 @@ Email support@pozi.com with these details:
 * subject: New layer catalogue
 * name of new layer group to appear in Pozi layer panel
 * order in which the layer group is to appear in the Pozi Layer Panel (relative to an existing layer group)
-* `GetProjectSettings` URL (non-Azure legacy implementation only)
+* file path of the QGIS project (or the `GetProjectSettings` URL for legacy implementation)
 
 Within 24 hours, the new layer group will be configured and available for users to view in Pozi.
 
