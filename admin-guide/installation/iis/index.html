@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.769062950305">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.769063467824">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,12 +35,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.769062950305" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.769063467824" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.769062950305" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.769063467824" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.769062950305" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.769062950305" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.769063467824" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.769063467824" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -662,7 +662,16 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
         <span>Testing</span>
     </h2>
 </doc-anchor-target>
-<p>Construct a WMS GetProjectSettings request for any existing QGIS project file as follows:</p>
+<p>The easiest way to test is by pointing the browser to:</p>
+<p><code v-pre>http://localhost/pozi/qgisserver/wfs3.html</code></p>
+<p>This should show a friendly QGIS Server landing page.</p>
+<doc-anchor-target id="getprojectsettings">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#getprojectsettings">#</doc-anchor-trigger>
+        <span>GetProjectSettings</span>
+    </h3>
+</doc-anchor-target>
+<p>To test if QGIS Server can serve up the WMS GetProjectSettings, create request for a QGIS project file as follows:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">http://localhost/pozi/qgisserver?service=WMS&amp;map=C:/Projects/SomeProject.qgs&amp;request=GetProjectSettings</code></pre>
 </doc-codeblock></div>
@@ -1214,6 +1223,18 @@ QGIS_WIN_APP_NAME=OSGeo4W\QGIS Desktop 3.22.8</code></pre>
 <li><strong>Name</strong>: <code v-pre>Access-Control-Allow-Origin</code></li>
 <li><strong>Value</strong>: <code v-pre>https://[sitename].pozi.com</code></li>
 </ul>
+   </doc-panel>
+   <doc-panel id="http-error-403-14-forbidden" collapsed>
+       <template #title>HTTP Error 403.14 Forbidden</template>
+<p>This is likely due to the browser visiting <code v-pre>http://localhost/pozi/</code> instead of <code v-pre>http://localhost/pozi/qgisserver</code>.</p>
+<p>This is expected behaviour when IIS has not been configured to serve static files from <code v-pre>http://localhost/pozi/</code> (which is the default).</p>
+<p>Solution: visit <code v-pre>http://localhost/pozi/qgisserver/wfs3.html</code> for testing instead</p>
+   </doc-panel>
+   <doc-panel id="service-unavailable-http-error-503" collapsed>
+       <template #title>Service Unavailable. HTTP Error 503</template>
+<p>If this happens when visiting <code v-pre>http://localhost/pozi/qgisserver/wfs3.html</code> for example, it could be that the QGIS Server application pool in IIS is not running.</p>
+<p>Solution: in the IIS Manager, check if the <code v-pre>PoziQgisServer</code> application pool is running. If not, start it and refresh the page.</p>
+<p>It may be worth finding what would have caused it not to run.</p>
    </doc-panel>
 </doc-panels>
 
