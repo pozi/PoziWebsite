@@ -204,7 +204,15 @@ IIS > select server > Application Pools > PoziQgisServer > Advanced settings > I
 
 ## Testing
 
-Construct a WMS GetProjectSettings request for any existing QGIS project file as follows:
+The easiest way to test is by pointing the browser to:
+
+`http://localhost/pozi/qgisserver/wfs3.html`
+
+This should show a friendly QGIS Server landing page.
+
+### GetProjectSettings
+
+To test if QGIS Server can serve up the WMS GetProjectSettings, create request for a QGIS project file as follows:
 
 ```
 http://localhost/pozi/qgisserver?service=WMS&map=C:/Projects/SomeProject.qgs&request=GetProjectSettings
@@ -699,5 +707,21 @@ IIS > select server > Site > Default Web Site > Pozi > QgisServer:
 * Action 'Add...'
 * **Name**: `Access-Control-Allow-Origin`
 * **Value**: `https://[sitename].pozi.com`
+
+==- HTTP Error 403.14 Forbidden
+
+This is likely due to the browser visiting `http://localhost/pozi/` instead of `http://localhost/pozi/qgisserver`.
+
+This is expected behaviour when IIS has not been configured to serve static files from `http://localhost/pozi/` (which is the default).
+
+Solution: visit `http://localhost/pozi/qgisserver/wfs3.html` for testing instead
+
+==- Service Unavailable. HTTP Error 503
+
+If this happens when visiting `http://localhost/pozi/qgisserver/wfs3.html` for example, it could be that the QGIS Server application pool in IIS is not running.
+
+Solution: in the IIS Manager, check if the `PoziQgisServer` application pool is running. If not, start it and refresh the page.
+
+It may be worth finding what would have caused it not to run.
 
 ==-
