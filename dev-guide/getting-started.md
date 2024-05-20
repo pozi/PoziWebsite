@@ -27,6 +27,7 @@ order: 100
 * [PoziPublisher](https://github.com/pozi/PoziPublisher/settings/access)
 * [PoziServer](https://github.com/pozi/PoziServer/settings/access)
 * [PoziWebsite](https://github.com/pozi/PoziWebsite/settings/access)
+* [EasyStreets](http://github.com/pozi/EasyStreets/settings/access)
 
 ### Recommended PC Setup
 
