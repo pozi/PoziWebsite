@@ -40,13 +40,13 @@ Any result that appears in the *What's Here* section in the Info Panel of your s
 Example:
 
 * site: `strathbogie.pozi.com`
-* dataset: `rubbishcollection` (derived from the "Rubbish Collection" tab heading in the *What's Here* results, with any spaces or underscores removed)
+* dataset: `wastecollection` (derived from the "Waste Collection" tab heading in the *What's Here* results, with any spaces or underscores removed)
 
 The basic widget URL is constructed as follows:
 
-`https://` + `strathbogie.pozi.com` + `/#card=` + `rubbishcollection` + `&widget=true`
+`https://` + `strathbogie.pozi.com` + `/#card=` + `wastecollection` + `&widget=true`
 
-Widget URL: https://strathbogie.pozi.com/#card=rubbishcollection&widget=true
+Widget URL: https://strathbogie.pozi.com/#card=wastecollection&widget=true
 
 The resulting widget displays a table view of the results for the address specified by the user. See the Options section below for customising the results.
 
