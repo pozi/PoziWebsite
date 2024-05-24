@@ -19,17 +19,15 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ### New Features
 
-- [ ] "profiles" - present user with optional simplified interface containing only the layers and layer groups associated with a selected role or workflow - like "modules", but better!
+- [ ] "Profiles" - present user with optional simplified interface containing only the layers and layer groups associated with a selected role or workflow - like "modules", but better!
 - [ ] 3D view
 
 ### Enhancements
 
-- [ ] move measure functionality into annotation tools
+- [ ] add measure functionality to annotation tools
 - [ ] prevent Share links from including the panel state (unless specified in advanced options)
 - [ ] zoom/pan to selected feature on Pozi launch if URL contains a selected feature
 - [ ] display What's Here target on Pozi launch if URL contains a target
-- [ ] allow QGIS layer folders to contain only hidden layers (eg, for better organising child datasets)
-- [ ] fix print option 'Current view' to match the map view extent exactly
 
 ---
 
@@ -37,7 +35,13 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ### May 2024
 
+- [x] ⚡ new option for selected feature to query for intersecting features
 - [x] ⚡ support for Kapish Easy Link protocol
+
+#### Improved
+
+- [x] 👍 upgrade to OpenLayers 9.2
+- [x] 👍 improve support for curve and multicurve geometry types
 
 ### April 2024
 
@@ -45,7 +49,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 - [x] 👍 improve support for displaying base64 encoded images
 - [x] 👍 enable WMS legend URL parameters to be overridden
-- [x] 👍 use unlocked padlock symbol to dataset access status
+- [x] 👍 use unlocked padlock symbol to show dataset access status
 - [x] 👍 upgrade to OpenLayers 9
 - [x] 👍 use current map view extent for default print scale
 
