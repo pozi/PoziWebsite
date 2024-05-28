@@ -173,7 +173,8 @@ Compile index of features and attributes for fast searching.
 ==- Layers are not exported
 
 - ensure that the WFS Output Extension is installed. See [WFS Output Extension](../admin-guide/installation/qgis-server.md#wfs-output-extension)
-- add `export=true` as a keyword in the project's QGIS Server 'Service Capabilities'
+- add `export=true` as a keyword in the project's QGIS Server 'Service Capabilities' or as a keyword for individual layers that need to be exported
+- make sure any layers to be exported are published as a WFS service in the project settings
 
 ==- Log file reports "'Set-AWSCredential' is not recognized as the name of a cmdlet"
 
