@@ -202,6 +202,30 @@ Set permissions for `IIS AppPool\PoziQgisServer` :
 
 IIS > select server > Application Pools > PoziQgisServer > Advanced settings > Identity > Application Pool Identity > Custom account > enter details of the domain user that runs Pozi "service" account (include the domain prefix and backslash, or use the email address of the domain user)
 
+## CORS
+
+!!! Note
+
+This section is applicable to sites that are *not* utilising MS App Proxy.
+
+!!!
+
+CORS (cross-origin resource sharing) is a security precaution that stops a website from drawing content across from another domain name. In this case, the QGIS Server needs to allow the organisation's Pozi site as a trusted content source.
+
+If your site is not using MS App Proxy, then CORS headers must be set by IIS. 
+
+IIS > select server > Site > Default Web Site > Pozi > QgisServer:
+
+* Open feature 'HTTP Response Headers'
+* Action 'Add...'
+* **Name**: `Access-Control-Allow-Origin`
+* **Value**: `*`
+* Action 'Add...'
+* **Name**: `Access-Control-Allow-Methods`
+* **Value**: `GET,POST,OPTIONS`
+
+If/when Pozi supports data editing, the `Access-Control-Allow-Methods` header can be updated to include `PUT` and `DELETE`.
+
 ## Testing
 
 The easiest way to test is by pointing the browser to:
@@ -699,14 +723,9 @@ Recycle the PoziQgisServer application pool and reload Pozi.
 
 On loading the error message "Something went wrong: layer may be misconfigured. Layer: '[Your QGIS project layer]', type: 'QGISProjectSettings'" appears.
 
-If the layer group for the QGIS project is visible, but cannot be expanded to show the layers within the project, this may be due to a CORS (cross-origin resource sharing) issue.  This is a security precaution that stops a website from drawing content across from another domain name.  In this case the QGIS Server needs to allow the organisation's Pozi site as a trusted content source.
+If the layer group for the QGIS project is visible, but cannot be expanded to show the layers within the project, this may be due to a CORS (cross-origin resource sharing) issue.
 
-IIS > select server > Site > Default Web Site > Pozi > QgisServer:
-
-* Open feature 'HTTP Response Headers'
-* Action 'Add...'
-* **Name**: `Access-Control-Allow-Origin`
-* **Value**: `https://[sitename].pozi.com`
+Visit the [CORS](#cors) section above to set the appropriate CORS settings.
 
 ==- HTTP Error 403.14 Forbidden
 
