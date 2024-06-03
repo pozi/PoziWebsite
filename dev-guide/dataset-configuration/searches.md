@@ -27,7 +27,8 @@ Any server that supports WFS and returns GeoJSON can be configured as a search e
   },
   "config": {
     "spatial": {
-      "url": "https://poziserver-grcqldgovau.msappproxy.net/pozi/qgisserver?MAP=E:/application/pozi/projects/general.qgz&TYPENAME=DCDB&LAYERS=DCDB&STYLES=default&SERVICE=WFS&REQUEST=GetFeature&VERSION=1.1.0&SRSNAME=EPSG:4326&OUTPUTFORMAT=application/json&EXP_FILTER=assessment ilike '(searchquery)%25'&maxfeatures=100"
+      "url": "https://poziserver-grcqldgovau.msappproxy.net/pozi/qgisserver?MAP=E:/application/pozi/projects/general.qgz&TYPENAME=DCDB&LAYERS=DCDB&STYLES=default&SERVICE=WFS&REQUEST=GetFeature&VERSION=1.1.0&SRSNAME=EPSG:4326&OUTPUTFORMAT=application/json&EXP_FILTER=assessment ilike '(searchquery)%25'&maxfeatures=100",
+      "label": "assessment"
     }
   }
 }
