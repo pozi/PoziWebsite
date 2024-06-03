@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.770771771654">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.770773236157">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,12 +35,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.770771771654" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.770773236157" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.770771771654" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.770773236157" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.770771771654" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.770771771654" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.770773236157" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.770773236157" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -656,6 +656,43 @@ dism /Online /Enable-Feature /FeatureName:IIS-CGI
 </doc-anchor-target>
 <p>Set permissions for <code v-pre>IIS AppPool\PoziQgisServer</code> :</p>
 <p>IIS &gt; select server &gt; Application Pools &gt; PoziQgisServer &gt; Advanced settings &gt; Identity &gt; Application Pool Identity &gt; Custom account &gt; enter details of the domain user that runs Pozi &quot;service&quot; account (include the domain prefix and backslash, or use the email address of the domain user)</p>
+<doc-anchor-target id="cors">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#cors">#</doc-anchor-trigger>
+        <span>CORS</span>
+    </h2>
+</doc-anchor-target>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>Note</h5>
+<p>This section is applicable to sites that are <em>not</em> utilising MS App Proxy.</p>
+        </div>
+    </div>
+</div>
+<p>CORS (cross-origin resource sharing) is a security precaution that stops a website from drawing content across from another domain name. In this case, the QGIS Server needs to allow the organisation&#x27;s Pozi site as a trusted content source.</p>
+<p>If your site is not using MS App Proxy, then CORS headers must be set by IIS.</p>
+<p>IIS &gt; select server &gt; Site &gt; Default Web Site &gt; Pozi &gt; QgisServer:</p>
+<ul>
+<li>Open feature &#x27;HTTP Response Headers&#x27;</li>
+<li>Action &#x27;Add...&#x27;</li>
+<li><strong>Name</strong>: <code v-pre>Access-Control-Allow-Origin</code></li>
+<li><strong>Value</strong>: <code v-pre>*</code></li>
+<li>Action &#x27;Add...&#x27;</li>
+<li><strong>Name</strong>: <code v-pre>Access-Control-Allow-Methods</code></li>
+<li><strong>Value</strong>: <code v-pre>GET,POST,OPTIONS</code></li>
+</ul>
+<p>If/when Pozi supports data editing, the <code v-pre>Access-Control-Allow-Methods</code> header can be updated to include <code v-pre>PUT</code> and <code v-pre>DELETE</code>.</p>
 <doc-anchor-target id="testing">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#testing">#</doc-anchor-trigger>
@@ -1215,14 +1252,8 @@ QGIS_WIN_APP_NAME=OSGeo4W\QGIS Desktop 3.22.8</code></pre>
    <doc-panel id="qgis-project-layer-group-is-visible-but-can-t-be-expanded" collapsed>
        <template #title>QGIS project layer group is visible but can&#x27;t be expanded</template>
 <p>On loading the error message &quot;Something went wrong: layer may be misconfigured. Layer: &#x27;[Your QGIS project layer]&#x27;, type: &#x27;QGISProjectSettings&#x27;&quot; appears.</p>
-<p>If the layer group for the QGIS project is visible, but cannot be expanded to show the layers within the project, this may be due to a CORS (cross-origin resource sharing) issue.  This is a security precaution that stops a website from drawing content across from another domain name.  In this case the QGIS Server needs to allow the organisation&#x27;s Pozi site as a trusted content source.</p>
-<p>IIS &gt; select server &gt; Site &gt; Default Web Site &gt; Pozi &gt; QgisServer:</p>
-<ul>
-<li>Open feature &#x27;HTTP Response Headers&#x27;</li>
-<li>Action &#x27;Add...&#x27;</li>
-<li><strong>Name</strong>: <code v-pre>Access-Control-Allow-Origin</code></li>
-<li><strong>Value</strong>: <code v-pre>https://[sitename].pozi.com</code></li>
-</ul>
+<p>If the layer group for the QGIS project is visible, but cannot be expanded to show the layers within the project, this may be due to a CORS (cross-origin resource sharing) issue.</p>
+<p>Visit the <doc-anchor-trigger to="#cors">CORS</doc-anchor-trigger> section above to set the appropriate CORS settings.</p>
    </doc-panel>
    <doc-panel id="http-error-403-14-forbidden" collapsed>
        <template #title>HTTP Error 403.14 Forbidden</template>
