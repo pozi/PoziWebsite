@@ -91,9 +91,9 @@ title: Integrations
 * City of Port Phillip
 * Bass Coast Shire Council
 
-Pozi Connect is configured to extract the information it needs from CSV files, extracted nightly from the TechOne cloud database.
+Pozi Connect is configured to extract the information it needs from CSV or XLSX files, extracted nightly from the TechOne cloud database.
 
-Tables required for downloading to CSV:
+Tables required for downloading:
 
 ```
 nucAssociation
