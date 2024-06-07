@@ -79,8 +79,6 @@ Evaluate the pros and cons of using vectors for your layer, and if appropriate, 
 
 * the browser can be easily overwhelmed when dealing with thousands of features or complex features with many vertices, resulting in slow map rendering
 * not all QGIS styles are supported in Pozi for vector features
-* only one vector feature can be selected at a time - info results are not displayed for any features (whether in the same or different layer) that have been overlapped by the selected feature
-* *What's Here* results are not displayed when a vector feature is selected - this can be problematic for some polygon layers because users cannot interrogate what's underneath any vector polygon features
 * cannot directly use text expressions for labels (but you can still make use of [virtual fields](#virtual-fields) for creating generating custom label values)
 
 As a guideline, use vectors only for layers with fewer than 5-10K features, or even fewer for layers with complex polylines or polygons. Also for polygon layers, consider that vector polygons will prevent users from interrogating any features underneath.
