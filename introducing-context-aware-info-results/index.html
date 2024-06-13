@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.771490811469">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.771562833065">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -38,11 +38,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.5.0.771490811469" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.5.0.771562833065" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.771490811469" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.771562833065" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.771490811469" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.771562833065" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -354,7 +354,7 @@
 
 <p>We&#x27;ve just rolled out a change to Pozi that makes it more intuitive for users to view information about map features and locations.</p>
 <p>Now when you click on any vector polygon feature, the information panel will not only display the topmost feature, but a list of <em>all</em> features at the location you clicked on.</p>
-<p><em>Click the <strong>New</strong> and <strong>Previously</strong> tabs below to compare.</em></p>
+<p><em>Click the <strong>New</strong> and <strong>Previously</strong> tabs below to compare the information displayed in the info panel.</em></p>
 <doc-tabs>
 <doc-tab v-cloak id="new">
 <template #title>New</template>
@@ -389,16 +389,17 @@
 </doc-anchor-target>
 <p>Pozi is now more context-aware, and treats any vector polygon objects under your cursor differently to vector point and line features.</p>
 <p>When you click on a vector polygon layer, or any layer containing overlapping features, Pozi&#x27;s information panel now lists all features at that location.</p>
-<p>We believe that this new functionality makes it easier for users to discover more about the features and locations they care about.</p>
+<p>This new functionality makes it easier for users to discover more about the features and locations they care about.</p>
 <doc-anchor-target id="more-flexible-configuration">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#more-flexible-configuration">#</doc-anchor-trigger>
         <span>More Flexible Configuration</span>
     </h2>
 </doc-anchor-target>
-<p>Previously, it was common for administrators to <em>not</em> enable polygon layers as vector/WFS to avoid the issue of users not being able to click on other features at the same location. This meant that users missed out on the advantages that vector layers provide such as searching, filtering and viewing as a table.</p>
+<p>This change opens up new possibilities for use of vector layers.</p>
+<p>Previously, it was common for administrators to <em>not</em> enable polygon layers as vector/WFS to avoid the issue of users not being able to click on other features at the same location. This meant that users missed out on the advantages that vector layers provide such as searching, filtering and table view.</p>
 <p>Now that vector polygons no longer prevent users from querying other layers, we encourage administrators to consider configuring polygon layers for vector/WFS just like point and line layers. (However vector layers may still be impractical for datasets containing tens of thousands of features.)</p>
-<p>Learn more <a href="../admin-guide/qgis/configuring-layers/#advantages-of-vector-layers">here</a>.</p>
+<p>Learn more about the pros and cons of vector layers <a href="../admin-guide/qgis/configuring-layers/#advantages-of-vector-layers">here</a>.</p>
 <doc-anchor-target id="feature-stacking">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#feature-stacking">#</doc-anchor-trigger>

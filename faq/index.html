@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.771490811469">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.771562833065">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -33,11 +33,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.5.0.771490811469" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.5.0.771562833065" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.771490811469" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.771562833065" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.771490811469" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.771562833065" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -389,6 +389,11 @@
     </h2>
 </doc-anchor-target>
 <doc-panels>
+   <doc-panel id="how-is-the-connection-between-pozi-com-and-our-server-achieved" collapsed>
+       <template #title>How is the connection between pozi.com and our server achieved?</template>
+<p>There is no connection between pozi.com and your server.</p>
+<p>When you open Pozi, your browser fetches the Pozi web application/page from pozi.com. Then depending on what actions you do in the application, your browser may need to fetch map layers and other data from your server, which it does by sending requests (WMS/WFS) through MS App Proxy to your server. There is no Pozi &quot;server&quot; that connects to your server.</p>
+   </doc-panel>
    <doc-panel id="how-does-the-pozi-platform-deal-with-scalability-and-security" collapsed>
        <template #title>How does the Pozi platform deal with scalability and security?</template>
 <p>Pozi&#x27;s cloud architecture ensures fast performance, maximum stability, and unlimited scalability.</p>
