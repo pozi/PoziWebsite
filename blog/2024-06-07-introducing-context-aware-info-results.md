@@ -13,7 +13,7 @@ We've just rolled out a change to Pozi that makes it more intuitive for users to
 
 Now when you click on any vector polygon feature, the information panel will not only display the topmost feature, but a list of *all* features at the location you clicked on.
 
-*Click the **New** and **Previously** tabs below to compare.*
+*Click the **New** and **Previously** tabs below to compare the information displayed in the info panel.*
 
 +++ New
 
@@ -37,15 +37,17 @@ Pozi is now more context-aware, and treats any vector polygon objects under your
 
 When you click on a vector polygon layer, or any layer containing overlapping features, Pozi's information panel now lists all features at that location.
 
-We believe that this new functionality makes it easier for users to discover more about the features and locations they care about.
+This new functionality makes it easier for users to discover more about the features and locations they care about.
 
 ## More Flexible Configuration
 
-Previously, it was common for administrators to *not* enable polygon layers as vector/WFS to avoid the issue of users not being able to click on other features at the same location. This meant that users missed out on the advantages that vector layers provide such as searching, filtering and viewing as a table.
+This change opens up new possibilities for use of vector layers.
+
+Previously, it was common for administrators to *not* enable polygon layers as vector/WFS to avoid the issue of users not being able to click on other features at the same location. This meant that users missed out on the advantages that vector layers provide such as searching, filtering and table view.
 
 Now that vector polygons no longer prevent users from querying other layers, we encourage administrators to consider configuring polygon layers for vector/WFS just like point and line layers. (However vector layers may still be impractical for datasets containing tens of thousands of features.)
 
-Learn more [here](/admin-guide/qgis/configuring-layers.md#advantages-of-vector-layers).
+Learn more about the pros and cons of vector layers [here](/admin-guide/qgis/configuring-layers.md#advantages-of-vector-layers).
 
 ### Feature Stacking
 

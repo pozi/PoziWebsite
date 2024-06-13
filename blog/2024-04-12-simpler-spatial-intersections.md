@@ -49,7 +49,7 @@ With the parent specified and no other filter, Pozi automatically generates a sp
 
 Previously, if you wanted a layer to be available as a standard layer and also as a child result of another layer, you needed to configure the dataset twice in QGIS.
 
-Now, a standard layer can also be used as a child dataset if you specify just the `parent` keyword and no other filter. Pozi will assume that the parent/child relationship is a spatial relationship, and so no filter is needed.
+Now, a standard layer can also be used as a child dataset if you specify just the `parent=...` keyword and no other filter. Pozi will assume that the parent/child relationship is a spatial relationship, and so no filter is needed.
 
 This means you only need to configure the dataset once in QGIS, and it can be used as a child dataset (if you specify a parent) as well as a standard vector layer.
 

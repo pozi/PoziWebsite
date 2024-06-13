@@ -63,6 +63,12 @@ We also partner with specialist GIS support providers who can offer a full range
 
 ## Platform
 
+==- How is the connection between pozi.com and our server achieved?
+
+There is no connection between pozi.com and your server.
+
+When you open Pozi, your browser fetches the Pozi web application/page from pozi.com. Then depending on what actions you do in the application, your browser may need to fetch map layers and other data from your server, which it does by sending requests (WMS/WFS) through MS App Proxy to your server. There is no Pozi "server" that connects to your server.
+
 ==- How does the Pozi platform deal with scalability and security?
 
 Pozi's cloud architecture ensures fast performance, maximum stability, and unlimited scalability.
