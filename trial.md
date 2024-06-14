@@ -16,7 +16,7 @@ icon: paper-airplane
 
 :::section
 
-## Request a free trial to see how Pozi works for your organisation
+## Request a trial to see how Pozi works for your organisation
 
 :::
 
