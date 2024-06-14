@@ -77,8 +77,6 @@ All Pozi subscriptions include:
 * configuration updates
 * helpdesk support
 
-[!ref icon="paper-airplane" text="Request a trial"](/trial/)
-
 [!ref icon="trophy" text="Already use Pozi? ...Upgrade to Pozi Enterprise Cloud"](/enterprise-cloud/)
 
 <br/>

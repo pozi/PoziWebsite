@@ -60,7 +60,7 @@ Some implementation costs will also apply to set up the internal data integratio
 
 We will also collaborate closely with internal staff and/or external support providers to enable them to manage the Pozi configuration.
 
-[Get in touch](/contact/) to discuss your organisation's requirements. [Trials](/trial/) are available.
+[Get in touch](/contact/) to discuss your organisation's requirements.
 
 :::section
 
