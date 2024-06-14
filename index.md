@@ -27,7 +27,7 @@ layout: central
 
   <big>Deploy for a fraction of cost of traditional GIS software, with no lock-in contracts.</big>
 
-  [!button variant="secondary" icon="checklist" size="2xl" corners="pill" text="Discover Pozi's features"](/features/) &nbsp; [!button variant="light" icon="paper-airplane" size="2xl" corners="pill" text="Request trial"](/trial/)
+  [!button variant="secondary" icon="checklist" size="2xl" corners="pill" text="Discover Pozi's features"](/features/)
 
 :::
 
