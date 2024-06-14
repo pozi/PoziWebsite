@@ -27,7 +27,7 @@ layout: central
 
   <big>Deploy for a fraction of cost of traditional GIS software, with no lock-in contracts.</big>
 
-  [!button variant="secondary" icon="checklist" size="2xl" corners="pill" text="Discover Pozi's features"](/features/) &nbsp; [!button variant="light" icon="paper-airplane" size="2xl" corners="pill" text="Request a free trial"](/trial/)
+  [!button variant="secondary" icon="checklist" size="2xl" corners="pill" text="Discover Pozi's features"](/features/) &nbsp; [!button variant="light" icon="paper-airplane" size="2xl" corners="pill" text="Request trial"](/trial/)
 
 :::
 
@@ -277,7 +277,7 @@ Deliver data to staff and public – easily and affordably. Users can access the
 
   ## Get in touch
 
-  <big>Contact us to discuss a free, 60 day Pozi trial or for a friendly chat about how we can work with you to deliver your organisation's needs.</big>
+  <big>Contact us for a friendly chat about how we can work with you to deliver your organisation's needs.</big>
 
   [!button variant="info" size="2xl" corners="pill" text="&nbsp;Contact us >"](/contact/)
 
