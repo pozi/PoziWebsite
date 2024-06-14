@@ -36,11 +36,3 @@ If you're stuck in another contract, talk to us. Not only can we get you up and 
 [!button variant="info" size="xl" corners="pill" text="&nbsp;Make the switch"](/contact/)
 
 ---
-
-## SSA may be right for you if...
-
----
-
-## Try Pozi for free 
-
-[!button variant="light" icon="paper-airplane" size="xl" corners="pill" text="Request a free trial"](/trial/)

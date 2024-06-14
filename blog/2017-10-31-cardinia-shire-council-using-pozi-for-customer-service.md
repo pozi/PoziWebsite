@@ -53,4 +53,4 @@ An unexpected result is staff also find Pozi invaluable as part of their daily o
 
 Visit the [Cardinia Shire Council](https://www.cardinia.vic.gov.au/) website to see Pozi in action. *(In My Council Tool, use 3 Albert Street as property example)*
 
-For further information how Pozi can help your customer service online and start your free, 60 day trial, contact the Pozi team on (03) 9017 6850 or via the contact form.
+For further information how Pozi can help your customer service online, contact the Pozi team on (03) 9017 6850 or via the contact form.

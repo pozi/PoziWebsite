@@ -61,4 +61,4 @@ City of Greater Bendigo uses Google Forms on Pozi as part of their Neighbourhood
 
 ![](/static/img/Bendigo-Pozi-Neighbourhood-Stories.webp){style="width:500px"}
 
-If you’re ready to discover how Pozi can help you communicate your GIS data online, contact us today and get started on a free, no obligation, 60 day trial.
+If you’re ready to discover how Pozi can help you communicate your GIS data online, contact us today.

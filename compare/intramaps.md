@@ -204,7 +204,6 @@ When you fund the development of new features, you have ongoing access to the ne
   * no lock-in contracts
   * procure without tenders/RFQs
   * custom development available
-* risk-free - take advantage of our free trial
 
 ==-
 
@@ -287,11 +286,3 @@ But with Pozi, your organisation's GIS is no longer locked to single software ve
 If you're stuck in another contract, talk to us. Not only can we get you up and running with Pozi straight away, we'll provide credit to cover your use of Pozi during the remainder of your existing contract. Run Pozi and IntraMaps in parallel for as long as you need to make a seamless transition.
 
 [!button variant="info" size="xl" corners="pill" text="&nbsp;Get started"](/contact/)
-
-<br/>
-
----
-
-## Try Pozi for free 
-
-[!button variant="light" icon="stack" size="xl" corners="pill" text="Request a free trial"](/trial/)

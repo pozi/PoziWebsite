@@ -53,4 +53,4 @@ We love getting these, and we’ll always aim to delight you with our support.
 
 ### Sound good? Get in contact!
 
-If you’re looking for an innovative GIS provider with an obligation-free, 60-day trial of Pozi, put our customer service to the test and give us a call in Melbourne on (03) 9017 6850 or [send a message](https://pozi.com/contact/) and we’ll be in touch.
+Put our customer service to the test and give us a call in Melbourne on (03) 9017 6850 or [send a message](https://pozi.com/contact/) and we’ll be in touch.

@@ -101,12 +101,5 @@ When you fund the development of new features, you have ongoing access to the ne
 * engage us to develop new functionality that will benefit your organisation
 * no lock-in contracts
 * procure without tenders/RFQs
-* risk-free - take advantage of our free trial
 
 ==-
-
----
-
-## Try Pozi for free 
-
-[!button variant="light" icon="stack" size="xl" corners="pill" text="Request a free trial"](/trial/)
