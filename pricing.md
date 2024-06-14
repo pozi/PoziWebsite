@@ -77,9 +77,7 @@ All Pozi subscriptions include:
 * configuration updates
 * helpdesk support
 
-Discounts are available for multi-year commitments.
-
-[!ref icon="paper-airplane" text="Request a free 60 day trial"](/trial/)
+[!ref icon="paper-airplane" text="Request a trial"](/trial/)
 
 [!ref icon="trophy" text="Already use Pozi? ...Upgrade to Pozi Enterprise Cloud"](/enterprise-cloud/)
 
@@ -168,6 +166,6 @@ Alternatively, you can avoid RFTs and RFQs altogether with a pay-as-you-go Pozi 
 
 ---
 
-Contact us to discuss your organisation's requirements. 60-day free trials are available.
+Contact us to discuss your organisation's requirements.
 
 [!button variant="info" size="2xl" corners="pill" text="&nbsp;Contact us >"](/contact/)
