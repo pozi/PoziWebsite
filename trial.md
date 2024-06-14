@@ -28,9 +28,7 @@ Check out these sites we've built for our clients:
 
 [!ref icon="star" size="3xl" text="Pozi Showcase"](/showcase/)
 
-[Get in touch](/contact/) with us to discuss your requirements. We'll customise a trial Pozi site to suit your organisation's needs.
-
-After a 60 day trial, we'll discuss with you which of the Pozi plans is suitable for you.
+[Get in touch](/contact/) with us to discuss your requirements.
 
 [!ref icon="briefcase" size="3xl" text="Plans and pricing"](/pricing/)
 
