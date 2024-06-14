@@ -200,7 +200,7 @@ Ultimate integration with your organisation's cloud infrastructure, with Azure A
 
   ## Get in touch
 
-  <big>Contact us to discuss a free, 60 day Pozi trial or for a friendly chat about how we can work with you to deliver your organisation's needs.</big>
+  <big>Contact us for a friendly chat about how we can work with you to deliver your organisation's needs.</big>
 
   [!button variant="info" size="2xl" corners="pill" text="&nbsp;Contact us >"](/contact/)
 
