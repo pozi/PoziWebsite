@@ -46,8 +46,9 @@ In this example, we'll use a property layer as the source for both a What's Here
 
 ### What's Here
 
+- the dataset is considered to be a *child* of the *What's Here* target on the map
 - always returns a result when the user clicks on the map, regardless of whether the 'Properties' layer (above) is turned on or not
-- is not listed in the layer panel
+- can be hidden from the layer panel
 - configuration:
   - use singular naming convention (ie 'Property')
   - enable for WFS
@@ -56,12 +57,12 @@ In this example, we'll use a property layer as the source for both a What's Here
 Layer > Properties > QGIS Server > Keyword list:
 
 ```
-parent=Whats Here, parameter=filter=<Filter><Intersects><PropertyName>geometry</PropertyName>[$gml]</Intersects></Filter>
+parent=Whats Here, showInLayerControl=false
 ```
 
 Note that `Whats Here` in the settings does NOT contain an apostrophe.
 
-The presence of the `parent=Whats Here` parameter automatically hides the dataset from appearing in the layer panel.
+The absence of any `parameter` keyword in this child dataset lets Pozi know that the parent/child relationship is a *spatial intersection* query. To specify a custom spatial query (for instance, to apply a buffer around the *What's Here* target), see [here](./configuring-linked-datasets.md#spatial-filter).
 
 ## End Result
 
