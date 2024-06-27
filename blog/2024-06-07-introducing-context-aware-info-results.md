@@ -11,7 +11,7 @@ visibility:
 
 We've just rolled out a change to Pozi that makes it more intuitive for users to view information about map features and locations.
 
-Now when you click on any vector polygon feature, the information panel will not only display the topmost feature, but a list of *all* features at the location you clicked on.
+Now when you click on any vector polygon feature or any overlapping vector features, the information panel will not only display the topmost feature, but a list of *all* features at the location you clicked on.
 
 *Click the **New** and **Previously** tabs below to compare the information displayed in the info panel.*
 
@@ -31,23 +31,29 @@ Until now, Pozi has only displayed the details of the topmost feature in the inf
 
 Polygons are different though. Because they occupy 2D space over the map, there was no avoiding clicking on them if they are covering the location you're interested in. You couldn't query anything else at the same location because Pozi would only show information about the topmost feature and prevent you from click on features underneath.
 
-## How it Works Now
+## What's Changed
 
 Pozi is now more context-aware, and treats any vector polygon objects under your cursor differently to vector point and line features. 
 
 When you click on a vector polygon layer, or any layer containing overlapping features, Pozi's information panel now lists all features at that location.
 
-This new functionality makes it easier for users to discover more about the features and locations they care about.
+This new functionality makes it easier for users to discover more about features and locations of interest.
 
 ## More Flexible Configuration
 
 This change opens up new possibilities for use of vector layers.
 
-Previously, it was common for administrators to *not* enable polygon layers as vector/WFS to avoid the issue of users not being able to click on other features at the same location. This meant that users missed out on the advantages that vector layers provide such as searching, filtering and table view.
+Previously, it was common for administrators to *not* enable polygon layers as vector (WFS) to avoid the issue of users not being able to click on other features at the same location. This meant that users missed out on the advantages that vector layers provide such as searching, filtering and table view.
 
-Now that vector polygons no longer prevent users from querying other layers, we encourage administrators to consider configuring polygon layers for vector/WFS just like point and line layers. (However vector layers may still be impractical for datasets containing tens of thousands of features.)
+Now that vector polygons no longer prevent users from querying other layers, administrators are free to enable polygon layers for vector just like point and line layers, knowing that users can now interact with other layers in the map.
+
+!!!
+
+It's not always practical to enable datasets that contain tens of thousands of features as a vector layer.
 
 Learn more about the pros and cons of vector layers [here](/admin-guide/qgis/configuring-layers.md#advantages-of-vector-layers).
+
+!!!
 
 ### Feature Stacking
 

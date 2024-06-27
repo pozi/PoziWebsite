@@ -9,6 +9,7 @@ title: Integrations
 * Brimbank City Council
 * Hindmarsh Shire Council
 * Horsham Rural City Council
+* Loddon Shire Council
 * Maribyrnong City Council
 * Surf Coast Shire Council
 * Murrindindi Shire Council
@@ -32,7 +33,6 @@ title: Integrations
 * Indigo Shire Council
 * Towong Shire Council
 * Moorabool Shire Council
-* Loddon Shire Council
 
 ## Infor Pathway
 

@@ -17,9 +17,9 @@ We simplified this configuration in response to helping a client migrate from th
 
 We've now updated Pozi to easily enable standard layers to be used as *child datasets* for spatial intersections.
 
-![Parent and child records](../admin-guide/qgis/img/info-panel-parent-and-child-records.png){style="width:400px"}
-
 ## What are child datasets?
+
+![Parent and child records](../admin-guide/qgis/img/info-panel-parent-and-child-records.png){style="width:400px"}
 
 [Child datasets](../admin-guide/qgis/configuring-linked-datasets/) are an invaluable part of the Pozi experience. They enable users to easily view information that's related to selected map features. Examples include:
 
