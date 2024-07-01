@@ -25,7 +25,7 @@ Now when you click on any vector polygon feature or any overlapping vector featu
 
 +++
 
-## Why Change?
+## Why the Change?
 
 Until now, Pozi has only displayed the details of the topmost feature in the information panel for any vector layers. This works well for point and line features, because if you want to view information about what else is at or around the same location, you could always click *next* to the feature.
 
