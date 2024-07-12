@@ -52,7 +52,7 @@ Ensure that you exclude the basemap from WMS to prevent it appearing in Pozi. Se
 
 ## Configure Web Services
 
-For non-Azure implementations, follow the *Legacy* instructions immediately below to configure the necessary *advertised URL*. For Azure implementations, see the next section.
+For non-Azure implementations, follow the *Legacy* instructions immediately below to configure the necessary *advertised URL*. For Azure implementations, skip to *Settings* underneath.
 
 ==- Legacy
 
@@ -74,25 +74,23 @@ Example Advertised URL:
 https://<servername>.pozi.com/iis/qgisserver?MAP=<projectfilepath>
 ```
 
-Copy the URL to your clipboard for subsequent configuration below.
+Copy the URL to your clipboard and paste into the `Advertised URL` field in the following locations.
+
+Project > Properties > QGIS Server
+
+* WMS `Advertised URL`
+* WMTS `Advertised URL`
+* WFS/OAPIF `Advertised URL`
 
 ==-
 
-### Enable Web Services
+### Settings
 
-1. Project > Properties > QGIS Server
-2. WMS
-   * `Exclude layers` (tick) > add > pick any background layers you don't need to see in Pozi
-   * `Use layer ids as names`: ensure this is NOT ticked
-   * `Add geometry to feature response`: tick ON
-   * `Advertised URL`: enter Advertised URL (from above)
-3. WMTS
-   * `Published layers > Project > Published`: tick on
-   * `Advertised URL`: enter Advertised URL
-4. WFS/OAPIF
-   * `Advertised URL`: enter Advertised URL
-5. OK
-6. Project > Save  (`Ctrl` + `S`)
+Project > Properties > QGIS Server > WMS
+
+* `Exclude layers` (tick) > add > pick any background layers you don't need to see in Pozi
+* `Use layer ids as names`: ensure this is NOT ticked
+* `Add geometry to feature response`: tick ON
 
 ### Further Settings
 
@@ -138,7 +136,7 @@ Some file formats can be less efficient than others for a project to load. Large
 
 Your new project must be registered in Pozi's central web configuration for users to view the map layers in your Pozi site.
 
-For non-Azure implementations, follow the *Legacy* instructions immediately below to obtain the project's `GetProjectSettings` URL. For Azure implementations, see the next section.
+For non-Azure implementations, follow the *Legacy* instructions immediately below to obtain the project's `GetProjectSettings` URL. For Azure implementations, skip ahead to Submit Helpdesk Ticket.
 
 ==- Legacy
 
