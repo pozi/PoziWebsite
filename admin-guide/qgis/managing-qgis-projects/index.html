@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.773122754977">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.774076795542">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,11 +35,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.773122754977" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.774076795542" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.773122754977" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.774076795542" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.773122754977" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.774076795542" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -418,7 +418,7 @@
         <span>Configure Web Services</span>
     </h2>
 </doc-anchor-target>
-<p>For non-Azure implementations, follow the <em>Legacy</em> instructions immediately below to configure the necessary <em>advertised URL</em>. For Azure implementations, see the next section.</p>
+<p>For non-Azure implementations, follow the <em>Legacy</em> instructions immediately below to configure the necessary <em>advertised URL</em>. For Azure implementations, skip to <em>Settings</em> underneath.</p>
 <doc-panel id="legacy" collapsed>
     <template #title>Legacy</template>
 <p>The project&#x27;s <em>Advertised URL</em> is a URL at which WMS and WFS requests can interact with the layers in the project file. Essentially, the project file needs a reference to itself in a URL format.</p>
@@ -434,38 +434,26 @@
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">https://&lt;servername&gt;.pozi.com/iis/qgisserver?MAP=&lt;projectfilepath&gt;</code></pre>
 </doc-codeblock></div>
-<p>Copy the URL to your clipboard for subsequent configuration below.</p>
+<p>Copy the URL to your clipboard and paste into the <code v-pre>Advertised URL</code> field in the following locations.</p>
+<p>Project &gt; Properties &gt; QGIS Server</p>
+<ul>
+<li>WMS <code v-pre>Advertised URL</code></li>
+<li>WMTS <code v-pre>Advertised URL</code></li>
+<li>WFS/OAPIF <code v-pre>Advertised URL</code></li>
+</ul>
 </doc-panel>
-<doc-anchor-target id="enable-web-services">
+<doc-anchor-target id="settings">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#enable-web-services">#</doc-anchor-trigger>
-        <span>Enable Web Services</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#settings">#</doc-anchor-trigger>
+        <span>Settings</span>
     </h3>
 </doc-anchor-target>
-<ol>
-<li>Project &gt; Properties &gt; QGIS Server</li>
-<li>WMS
+<p>Project &gt; Properties &gt; QGIS Server &gt; WMS</p>
 <ul>
 <li><code v-pre>Exclude layers</code> (tick) &gt; add &gt; pick any background layers you don&#x27;t need to see in Pozi</li>
 <li><code v-pre>Use layer ids as names</code>: ensure this is NOT ticked</li>
 <li><code v-pre>Add geometry to feature response</code>: tick ON</li>
-<li><code v-pre>Advertised URL</code>: enter Advertised URL (from above)</li>
 </ul>
-</li>
-<li>WMTS
-<ul>
-<li><code v-pre>Published layers &gt; Project &gt; Published</code>: tick on</li>
-<li><code v-pre>Advertised URL</code>: enter Advertised URL</li>
-</ul>
-</li>
-<li>WFS/OAPIF
-<ul>
-<li><code v-pre>Advertised URL</code>: enter Advertised URL</li>
-</ul>
-</li>
-<li>OK</li>
-<li>Project &gt; Save  (<code v-pre>Ctrl</code> + <code v-pre>S</code>)</li>
-</ol>
 <doc-anchor-target id="further-settings">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#further-settings">#</doc-anchor-trigger>
@@ -485,6 +473,20 @@
 <p>Remember to use only UNC paths for file-based layers.</p>
 <p>When you&#x27;re done, remember to <a href="../configuring-layers/#publish-as-vector-layer">enable any layers for WFS</a> if required.</p>
 <br/>
+<doc-anchor-target id="assign-profiles">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#assign-profiles">#</doc-anchor-trigger>
+        <span>Assign Profiles</span>
+    </h2>
+</doc-anchor-target>
+<p>Pozi &quot;profiles&quot; are a way to present different experiences to different users within your organisation.</p>
+<p>Any given map catalogue can be assigned zero or one or more profile names in the QGIS project using a keyword parameter. If Pozi is launched with a profile parameter in the URL (eg <code v-pre>../#/profile[assets]/</code>), Pozi will display only those catalogues that have been configured with that profile name (as well as any catalogues that haven&#x27;t been configured with any profile names).</p>
+<p>The keyword is defined at the catalogue level (ie, not layer level). When Pozi loads the catalogue, it checks for the presence of any profile keywords. If any profiles are found, Pozi will add a dropdown menu at the top of the layer panel that shows the available profiles.</p>
+<p>Project &gt; Properties &gt; QGIS Server &gt; Services Capabilities &gt; Keyword list</p>
+<p>Example: <code v-pre>profiles=Assets;Infrastructure</code></p>
+<p>(Separate multiple profile names with semicolons.)</p>
+<p>When Pozi is launched with a profile specified in the URL, enable only the catalogues that don&#x27;t have any profiles specified or which contain a matching profile name. Users can still switch profiles using the dropdown menu at the top of the layer panel.</p>
+<p>If there are catalogues that you <em>don&#x27;t</em> want to appear in the Assets profile, assign them with at least one profile, for example <code v-pre>profiles=General</code>.</p>
 <doc-anchor-target id="test-project-load-performance">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#test-project-load-performance">#</doc-anchor-trigger>
@@ -512,7 +514,7 @@
     </h2>
 </doc-anchor-target>
 <p>Your new project must be registered in Pozi&#x27;s central web configuration for users to view the map layers in your Pozi site.</p>
-<p>For non-Azure implementations, follow the <em>Legacy</em> instructions immediately below to obtain the project&#x27;s <code v-pre>GetProjectSettings</code> URL. For Azure implementations, see the next section.</p>
+<p>For non-Azure implementations, follow the <em>Legacy</em> instructions immediately below to obtain the project&#x27;s <code v-pre>GetProjectSettings</code> URL. For Azure implementations, skip ahead to Submit Helpdesk Ticket.</p>
 <doc-panel id="legacy" collapsed>
     <template #title>Legacy</template>
 <p>In a text editor, construct a <code v-pre>GetProjectSettings</code> URL by combining the following:</p>
