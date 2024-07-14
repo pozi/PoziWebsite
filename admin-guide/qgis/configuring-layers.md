@@ -295,7 +295,7 @@ Check the following:
 
 ==- Unable to select or view info results of polygon features from WFS layers
 
-Ensure that the polygon fill style is not 'No brush'. Instead, set the fill style to 'Solid' and set the opacity of the fill color to a low or zero value. See [Polygon Styling](styling-layers.md#polygons).
+Ensure that the polygon fill style is not 'No brush'. Instead, set the fill style to 'Solid' and set the opacity of the fill color to a low or zero value. See [vector polygon styling](styling-layers.md#polygons).
 
 ==- Selected features from WMS layers are displayed with a mis-shaped highlight
 

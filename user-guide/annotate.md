@@ -1,7 +1,7 @@
 ---
 description: Annotation/drawing/mock-up tool for Pozi online GIS. Mark up your web map and share with anyone.
 icon: pencil
-order: -100
+order: 60
 ---
 
 # Annotate

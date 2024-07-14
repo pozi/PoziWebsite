@@ -114,7 +114,7 @@ When you're done, remember to [enable any layers for WFS](/admin-guide/qgis/conf
 
 Pozi "profiles" are a way to present different experiences to different users within your organisation.
 
-Any given map catalogue can be assigned zero or one or more profile names in the QGIS project using a keyword parameter. If Pozi is launched with a profile parameter in the URL (eg `../#/profile[assets]/`), Pozi will display only those catalogues that have been configured with that profile name (as well as any catalogues that haven't been configured with any profile names).
+Any given map catalogue can be assigned zero or one or more profile names in the QGIS project using a keyword parameter. If Pozi is launched with a profile parameter in the URL (eg `../#/profile[assets]/`), Pozi will display only those catalogues that have been configured with that profile name (as well as any catalogues that haven't been configured with *any* profile names).
 
 The keyword is defined at the catalogue level (ie, not layer level). When Pozi loads the catalogue, it checks for the presence of any profile keywords. If any profiles are found, Pozi will add a dropdown menu at the top of the layer panel that shows the available profiles.
 
