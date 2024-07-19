@@ -10,7 +10,7 @@ layout: central
 
 # Help Centre
 
-Welcome to the documentation for Pozi. Here, you can find information about using, administering and developing with Pozi.
+Welcome to the documentation for Pozi. Here, you can find information about using and administering Pozi.
 
 <br/>
 
@@ -18,7 +18,6 @@ Welcome to the documentation for Pozi. Here, you can find information about usin
 
 [!ref icon="person" text="For users"](/user-guide/)
 [!ref icon="tools" text="For administrators"](/admin-guide/)
-[!ref icon="terminal" text="For developers"](/dev-guide/)
 
 ---
 
