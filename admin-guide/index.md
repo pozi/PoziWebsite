@@ -23,8 +23,6 @@ Administrators control the following aspects of the Pozi experience:
 [!ref icon="tools" text="Issues with individual layers"](/admin-guide/qgis/configuring-layers#troubleshooting)
 [!ref icon="tools" text="Issues with projects/layer groups"](/admin-guide/qgis/managing-qgis-projects#troubleshooting)
 
-==-
-
 ## Let Us Help You
 
 For other changes to the Pozi app experience, contact the Pozi Helpdesk:

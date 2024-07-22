@@ -10,7 +10,7 @@ tags: [Pozi Enterprise Cloud]
 
 Pozi's [Azure AD Application Proxy](https://azure.microsoft.com/en-au/services/active-directory/) integration enables your organisation's staff and other authorised users to access internal data sources in Pozi without needing to be connected to your network.
 
-![](/dev-guide/img/azure-app-proxy-overview.png){style="width:500px"}
+![](/admin-guide/integrations/img/azure-app-proxy-overview.png){style="width:500px"}
 
 ## How it works
 

@@ -62,7 +62,7 @@ parent=Whats Here, showInLayerControl=false
 
 Note that `Whats Here` in the settings does NOT contain an apostrophe.
 
-The absence of any `parameter` keyword in this child dataset lets Pozi know that the parent/child relationship is a *spatial intersection* query. To specify a custom spatial query (for instance, to apply a buffer around the *What's Here* target), see [here](./configuring-linked-datasets.md#spatial-filter).
+The absence of any `parameter` keyword in this child dataset lets Pozi know that the parent/child relationship is a *spatial intersection* query. To specify a *custom* spatial query (for instance, to apply a buffer around the *What's Here* target), see [here](./configuring-linked-datasets.md#spatial-filter).
 
 ## End Result
 
