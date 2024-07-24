@@ -124,7 +124,7 @@ Example: `profiles=Assets;Infrastructure`
 
 (Separate multiple profile names with semicolons.)
 
-When Pozi is launched with a profile specified in the URL, enable only the catalogues that don't have any profiles specified or which contain a matching profile name. Users can still switch profiles using the dropdown menu at the top of the layer panel.
+When Pozi is launched with a profile specified in the URL, only the catalogues that contain a matching profile name or that don't have *any* profiles specified are enabled. Users can still switch profiles using the dropdown menu at the top of the layer panel.
 
 If there are catalogues that you *don't* want to appear in the Assets profile, assign them with at least one profile, for example `profiles=General`.
 
