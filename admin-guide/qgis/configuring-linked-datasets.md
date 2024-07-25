@@ -204,6 +204,10 @@ Pozi automatically prevents the child table appearing in the layer panel due to 
 * check that the names of the fields in the child and parent datasets that are used for the link are consistent with the names supplied with the child dataset's registration in Pozi
 * check that there are no double quotes in the `parameter` setting
 
+==- Info Panel displays *every* child feature
+
+If the child dataset relies on a spatial relationship with the parent, the parent feature may be missing the required geometry field. Review [this](/admin-guide/qgis/managing-qgis-projects.md#settings), and note that the project containing the parent dataset (and every other project) needs to have the `Add geometry to feature response` option ticked.
+
 ==- Results are slow to load
 
 Use QGIS to determine whether the layer also causes its project file to load slowly. Observe the progress bar at the bottom to see if any layers are taking more than a fraction of a second to load in QGIS. If it appears that a layer is taking longer, check the source data. Also check how long it takes for QGIS to show the dataset's table view (Layer > Open Attribute Table). Check that any join fields are properly indexed.
