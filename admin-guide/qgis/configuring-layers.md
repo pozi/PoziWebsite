@@ -292,6 +292,7 @@ Check the following:
 * Ensure that any categorised styling is based on a single field with a single value per row. See [Categorized Symbology](styling-layers.md#categorized-symbology).
 * Ensure that any categorised styling is based on a field that is exposed as WFS (ie, ensure the field option 'Do not expose via WFS' is *unticked*).
 * If the layer source is a MapInfo table, ensure that the symbology type is *not* "Embedded Symbols". Change it to another type such as "Single Symbol" or "Categorized".
+* Is the layer sourced from an ArcGIS Rest Server?  Although the layer will display in QGIS Desktop, currently QGIS Server does not correctly display these layers, using either WMS or WFS, so the layer will not be visible in Pozi. 
 
 ==- Unable to select or view info results of polygon features from WFS layers
 
