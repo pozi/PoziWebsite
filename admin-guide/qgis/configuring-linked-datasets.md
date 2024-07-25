@@ -104,9 +104,9 @@ The parent layer can exist in the same QGIS project, or a different project, or 
 
 ### Parameter
 
-The `parameter` is an expression that contains instructions for filtering the child dataset to return only records that relate to an individual parent feature.
+A `parameter` expression can be used to override certain parameters for the WFS GetFeature request. A common use of this feature is to provide instructions for filtering the child dataset to return only records that relate to an individual parent feature.
 
-The options below are for spatial and non-spatial filters.
+The following are some examples of how `parameter` can be used. Multiple parameters can be assigned by using a semi-colon as a delimiter.
 
 #### Spatial Filter
 
@@ -161,6 +161,26 @@ Example: `parameter=EXP_FILTER=Assess_NumberX IN ('[Property Number]')`
 Pozi will substitute any field names within square brackets with values from those fields from the parent.
 
 *Note: `EXP_FILTER` doesn't support spaces in the child dataset's lookup field name. If this field contains any spaces, update the dataset's Attributes Form settings to use a alias name for the lookup field that doesn't contain spaces.*
+
+#### Ordering Child Data
+
+To ensure child data is returned in a logical order, the `SORTBY` parameter can be used. By default, the field specified will be sorted in an ascending order. To reverse the order append `DESC` after the field name.
+
+In the following example, a playground inspection dataset is linked to the parent `Playgrounds` layer using the `asset_id` field in both datasets. The data is sorted so that the most recent inspection is returned first by using the `SORTBY=inspection_date DESC` parameter.
+
+```
+parent=Playgrounds, parameter=EXP_FILTER=asset_id in ('[asset_id]');SORTBY=inspection_date DESC
+```
+
+This example demonstrates the use of a semi-colon to specify multiple parameters.
+
+#### Defining Child Data Geometry
+
+There are instances when returning the actual geometry for a child dataset is not desired. An example of this would be when the child layer includes very complex geometries, which result in excessively large datasets being returned (eg. flooding or bushfire prone layers) which can significantly impact the applications performance.
+
+The `GEOMETRYNAME` parameter can be used to alter the geometry that is returned. The values that can be used with this parameter are: `extent`, `centroid` and `none`.
+
+Example: `parameter=GEOMETRYNAME=none`
 
 ### Optional Settings
 
