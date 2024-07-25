@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.775183737586">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.775223279261">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,12 +35,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.775183737586" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.775223279261" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.775183737586" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.775223279261" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.775183737586" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.775183737586" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.775223279261" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.775223279261" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -467,8 +467,8 @@
         <span>Parameter</span>
     </h3>
 </doc-anchor-target>
-<p>The <code v-pre>parameter</code> is an expression that contains instructions for filtering the child dataset to return only records that relate to an individual parent feature.</p>
-<p>The options below are for spatial and non-spatial filters.</p>
+<p>A <code v-pre>parameter</code> expression can be used to override certain parameters for the WFS GetFeature request. A common use of this feature is to provide instructions for filtering the child dataset to return only records that relate to an individual parent feature.</p>
+<p>The following are some examples of how <code v-pre>parameter</code> can be used. Multiple parameters can be assigned by using a semi-colon as a delimiter.</p>
 <doc-anchor-target id="spatial-filter">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#spatial-filter">#</doc-anchor-trigger>
@@ -539,6 +539,27 @@
 <p>Example: <code v-pre>parameter=EXP_FILTER=Assess_NumberX IN ('[Property Number]')</code></p>
 <p>Pozi will substitute any field names within square brackets with values from those fields from the parent.</p>
 <p><em>Note: <code v-pre>EXP_FILTER</code> doesn&#x27;t support spaces in the child dataset&#x27;s lookup field name. If this field contains any spaces, update the dataset&#x27;s Attributes Form settings to use a alias name for the lookup field that doesn&#x27;t contain spaces.</em></p>
+<doc-anchor-target id="ordering-child-data">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#ordering-child-data">#</doc-anchor-trigger>
+        <span>Ordering Child Data</span>
+    </h4>
+</doc-anchor-target>
+<p>To ensure child data is returned in a logical order, the <code v-pre>SORTBY</code> parameter can be used. By default, the field specified will be sorted in an ascending order. To reverse the order append <code v-pre>DESC</code> after the field name.</p>
+<p>In the following example, a playground inspection dataset is linked to the parent <code v-pre>Playgrounds</code> layer using the <code v-pre>asset_id</code> field in both datasets. The data is sorted so that the most recent inspection is returned first by using the <code v-pre>SORTBY=inspection_date DESC</code> parameter.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">parent=Playgrounds, parameter=EXP_FILTER=asset_id in ('[asset_id]');SORTBY=inspection_date DESC</code></pre>
+</doc-codeblock></div>
+<p>This example demonstrates the use of a semi-colon to specify multiple parameters.</p>
+<doc-anchor-target id="defining-child-data-geometry">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#defining-child-data-geometry">#</doc-anchor-trigger>
+        <span>Defining Child Data Geometry</span>
+    </h4>
+</doc-anchor-target>
+<p>There are instances when returning the actual geometry for a child dataset is not desired. An example of this would be when the child layer includes very complex geometries, which result in excessively large datasets being returned (eg. flooding or bushfire prone layers) which can significantly impact the applications performance.</p>
+<p>The <code v-pre>GEOMETRYNAME</code> parameter can be used to alter the geometry that is returned. The values that can be used with this parameter are: <code v-pre>extent</code>, <code v-pre>centroid</code> and <code v-pre>none</code>.</p>
+<p>Example: <code v-pre>parameter=GEOMETRYNAME=none</code></p>
 <doc-anchor-target id="optional-settings">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#optional-settings">#</doc-anchor-trigger>

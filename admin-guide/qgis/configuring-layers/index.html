@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.775183737586">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.775223279261">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,11 +35,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.775183737586" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.775223279261" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.775183737586" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.775223279261" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.775183737586" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.775223279261" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -759,6 +759,7 @@
 <li>Ensure that any categorised styling is based on a single field with a single value per row. See <a href="../styling-layers/#categorized-symbology">Categorized Symbology</a>.</li>
 <li>Ensure that any categorised styling is based on a field that is exposed as WFS (ie, ensure the field option &#x27;Do not expose via WFS&#x27; is <em>unticked</em>).</li>
 <li>If the layer source is a MapInfo table, ensure that the symbology type is <em>not</em> &quot;Embedded Symbols&quot;. Change it to another type such as &quot;Single Symbol&quot; or &quot;Categorized&quot;.</li>
+<li>Is the layer sourced from an ArcGIS Rest Server?  Although the layer will display in QGIS Desktop, currently QGIS Server does not correctly display these layers, using either WMS or WFS, so the layer will not be visible in Pozi.</li>
 </ul>
    </doc-panel>
    <doc-panel id="unable-to-select-or-view-info-results-of-polygon-features-from-wfs-layers" collapsed>
