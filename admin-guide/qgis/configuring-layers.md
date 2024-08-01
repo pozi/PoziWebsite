@@ -285,6 +285,8 @@ Restart the service(s) after you make your changes.
 Check the following:
 
 * Open the source project in QGIS and see if the layers can be viewed. If not, check whether the source database connection or file path has changed or been removed.
+* Review the layer name for punctuation and other non-standard characters. Commas in particular are known to cause the layer to be misinterpreted by Pozi.  These characters can still be used in layer names, however to achieve this any non-standard characters need to be removed from the name in the Layer Control.  Then go to Layer Properties > QGIS Server > Title, and enter the actual layer name that needs to appear in Pozi.  This Title will override the text in the Layer Control.
+![](img/qgis-layer-name-with-commas.png)
 * Open the source project in QGIS *as the PoziService user* (Shift-right-click on QGIS desktop shortcut > Run as different user) and see if the layers can be viewed. It's possible that the PoziService account doesn't have the same permissions for this layer as the project author.
 * Pozi is only able to display features that have at least one valid/non-null attribute. If any records in your data contain no attributes, populate some values into one of the fields.
 * Ensure the layer has a coordinate reference system set. Go to Layer Properties > Source > Assigned CRS, and pick a projection
