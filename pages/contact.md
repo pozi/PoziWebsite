@@ -21,8 +21,9 @@ Support requests: support@pozi.com
 #### Address
 
 Pozi Pty Ltd<br/>
-Level 19, 15 William Street<br/>
-Melbourne VIC 3000<br/>
+c/o MNG<br/>
+Level 1, 5 Queens Road<br/>
+Melbourne VIC 3004<br/>
 Australia
 
 <iframe width="100%" height="300px" allow="fullscreen" src="https://contact.pozi.com/"></iframe>
