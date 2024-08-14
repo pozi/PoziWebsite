@@ -37,12 +37,12 @@
             <se:Graphic>
               <!--Parametric SVG-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="https://s3.ap-southeast-2.amazonaws.com/config.pozi.com/public/files/pozi-bubble-2.0.svg?fill=%23000000&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0.2" xlink:type="simple"/>
+                <se:OnlineResource xlink:href="https://config.pozi.com/public/files/pozi-bubble-2.0.svg" xlink:type="simple"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Plain SVG fallback, no parameters-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="https://s3.ap-southeast-2.amazonaws.com/config.pozi.com/public/files/pozi-bubble-2.0.svg" xlink:type="simple"/>
+                <se:OnlineResource xlink:href="https://config.pozi.com/public/files/pozi-bubble-2.0.svg" xlink:type="simple"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Well known marker fallback-->
