@@ -250,7 +250,7 @@ When you fund the development of new features, you have ongoing access to the ne
 | Custom development available | ❌ | ✔️ |
 | <big>**Technology**</big> | | |
 | Supported map servers | MapServer | **QGIS Server**<br/>GeoServer<br/>MapServer<br/>ArcGIS Server |
-| Mapping Javascript library | OpenLayers v2<br/>(2013) | OpenLayers v8<br/>(2024) |
+| Mapping Javascript library | OpenLayers v2<br/>(2013) | OpenLayers v9<br/>(2024) |
 | OGC standards compliant (WMS/WFS) | ✔️ | ✔️ |
 | Web optimised formats (Mapbox Vector Tiles, COG, FlatGeobuf) |  ❌  | ✔️ |
 | <big>**Data Integrations**</big> | | |
@@ -264,7 +264,7 @@ When you fund the development of new features, you have ongoing access to the ne
 | Community forum | ❌ | ✔️ |
 | Preview upcoming features | ❌ | ✔️ |
 | <big>**Security**</big> | | |
-| User access | Active Directory | Azure Active Directory and App Proxy |
+| User access | Active Directory | Entra ID Active Directory and App Proxy |
 | <big>**Procurement**</big> | | |
 | Pricing | $$$ | $ |
 | Commitment | multi-year lock-in contract | pay as you go |

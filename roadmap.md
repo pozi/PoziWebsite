@@ -15,27 +15,24 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ---
 
-## Upcoming
+## 2024
 
-### New Features
+### June 2024
 
-- [ ] "Profiles" - present user with optional simplified interface containing only the layers and layer groups associated with a selected role or workflow - like "modules", but better!
-- [ ] 3D view
+#### New
 
-### Enhancements
+- [x] ⚡"Profiles" - focus Pozi on only the layers and layer groups associated with a selected role or workflow - like "modules", but better!
 
-- [ ] add measure functionality to annotation tools
-- [ ] prevent Share links from including the panel state (unless specified in advanced options)
-- [ ] zoom/pan to selected feature on Pozi launch if URL contains a selected feature
-- [ ] display What's Here target on Pozi launch if URL contains a target
+#### Improved
 
----
-
-## Completed
+- [x] 👍 display What's Here target on the map when launching Pozi and when doing What's Within/Along Here
+- [x] 👍 context aware info results - display info results for overlapping vector features
 
 ### May 2024
 
-- [x] ⚡ new option for selected feature to query for intersecting features
+#### New
+
+- [x] ⚡ dynamic spatial querying - use selected feature to query for intersecting features
 - [x] ⚡ support for Kapish Easy Link protocol
 
 #### Improved
@@ -59,6 +56,8 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [x] 🪲 fix support for GML layers
 
 ### March 2024
+
+#### New
 
 - [x] ⚡ right-click options for selecting features and intersecting features
 - [x] ⚡ support for buffers (positive and negative) in spatial intersection queries
@@ -112,6 +111,10 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [x] 🪲 enable table view to cope with layers without an id field
 - [x] 🪲 enables features with all null values to display in map
 
+---
+
+## 2023
+
 ### December 2023
 
 #### New
@@ -144,9 +147,6 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - [x] 👍 improve ordering of search results
 display alternative title for GetFeatureInfo features when specified title field is empty
 add support for various geometry types for GetFeatureInfo requests
-
-
-
 
 #### Fixed
 
@@ -310,6 +310,10 @@ add support for various geometry types for GetFeatureInfo requests
 #### Improved
 
 - [x] 👍 update HERE Map API to v2.1
+
+---
+
+## 2022
 
 ### December 2022
 
@@ -499,6 +503,8 @@ Our biggest release in over two years!
 
 ---
 
+## 2021
+
 ### December 2021
 
 - [x] 👍 improved: apply subtle fill to generic polygon styles
@@ -521,73 +527,3 @@ Our biggest release in over two years!
 - [x] 👍 improved: upgrade to OpenLayers 6.8
 - [x] 👍 improved: upgrade to TurfJS 6.5
 - [x] 👍 improved: open Config Manager page in new tab
-
----
-
-!!!
-
-Please excuse the gaps in our timeline!
-
-Sometimes we get busy building, and we forget to celebrate our wins and record our accomplishments.
-
-We'll do a better job going forward keeping track of all new development and improvements!
-
-<!-- TO-DO: add to timeline from https://github.com/pozi/PoziApp/commits/ -->
-<!-- https://github.com/pozi/PoziApp/pulls?q=is%3Apr+sort%3Aupdated-desc+is%3Aclosed -->
-
-!!!
-
----
-
-### July 2021
-
-- [x] ❌ removed: support for Internet Explorer
-
----
-
-### July 2019
-
-- [x] ⚡ new: export map as georeferenced image (.png + .pngw worldfile)
-
-### June 2019
-
-- [x] ⚡ new: user map annotations
-- [x] ⚡ new: print options - A4, A3, Landscape, Portrait
-
-### May 2019
-
-- [x] ⚡ new: full-screen mode
-- [x] 👍 improved: layer control now remembers its last scroll position
-
----
-
-### April 2018
-
-- [x] ⚡ new: Jotform support
-- [x] ⚡ new: GeoServer authentication
-- [x] 👍 improved: new notification about limited compatibility on older mobile operating systems
-- [x] 🪲 fixed: support encoded URLs for better cross-application support
-
----
-### December 2017
-
-- [x] 👍 improved: nicer aerial photo button
-- [x] 👍 improved: when user turns off a WMS layer, deselect any selected features from that layer
-- [x] 🪲 fixed: cleared old cookies to prevent Firefox reporting "weak encryption"
-- [x] 🪲 fixed: changed GeoServer API requests to be compatible with new GeoServer
-- [x] 🪲 fixed: hide search options for private layers when user is public
-- [x] 🪲 fixed: interpretation of WMS result coordinates by Internet Explorer
-- [x] 🪲 fixed: un-highlight selected feature when user closes drawer
-
-### November 2017
-
-- [x] ⚡ new: Mapzen address search option
-- [x] 👍 improved: custom info symbol in menu
-- [x] 🪲 fixed: tickboxes in layer panel weren't on when opening layer panel on load
-- [x] 🪲 fixed: feature highlight disappeared when using measuring tool
-
-### October 2017
-
-- [x] ⚡ new: new search functionality for GeoJSON layers and various APIs
-- [x] 👍 improved: autocomplete search now allows user to hit Enter to accept
-- [x] 🪲 fixed: search option radio buttons in IE failed to display
