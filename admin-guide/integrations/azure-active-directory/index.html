@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.777621179259">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.777626494256">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -35,11 +35,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.777621179259" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.777626494256" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.777621179259" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.777626494256" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.777621179259" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.777626494256" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -374,6 +374,28 @@
     </h2>
 </doc-anchor-target>
 <p>See the <a href="../../installation/entra-id/">Azure AD section</a> in the Installation Guide.</p>
+<doc-anchor-target id="azure-enterprise-application">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#azure-enterprise-application">#</doc-anchor-trigger>
+        <span>Azure Enterprise Application</span>
+    </h2>
+</doc-anchor-target>
+<p>Pozi can be set up as an Azure Enterprise Application for an organisation. This will enable end users to access the app via a shortcut on both the <a href="https://myapplications.microsoft.com/" class="outbound" target="_blank"><span>Microsoft My Apps</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> page and the <a href="https://www.microsoft365.com/apps" class="outbound" target="_blank"><span>Microsoft 365 Apps</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> page.</p>
+<p>To create an Azure Enterprise Application, follow these steps.</p>
+<ul>
+<li>Navigate to <code v-pre>Enterprise applications</code> in the Azure Portal.</li>
+<li>Click to add a <code v-pre>New application</code>.</li>
+<li>Click <code v-pre>Create your own application</code>.</li>
+<li>Add &quot;Pozi&quot; as the name.</li>
+<li>Select <code v-pre>Integrate any other application you don't find in the gallery (Non-gallery)</code>.</li>
+<li>Push the <code v-pre>Create</code> button.</li>
+<li>Navigate to the <code v-pre>Properties</code>, and fill the form much like the image below.</li>
+</ul>
+<p><figure class="content-center">
+    <img src="../img/azure-ms365-app.png" alt="" style="width:600px">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
                                     <span>
