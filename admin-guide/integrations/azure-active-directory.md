@@ -44,3 +44,19 @@ Public users should continue to use `<sitename>.pozi.com`. They will not be prom
 ## Configuration
 
 See the [Azure AD section](/admin-guide/installation/entra-id) in the Installation Guide.
+
+## Azure Enterprise Application
+
+Pozi can be set up as an Azure Enterprise Application for an organisation. This will enable end users to access the app via a shortcut on both the [Microsoft My Apps](https://myapplications.microsoft.com/) page and the [Microsoft 365 Apps](https://www.microsoft365.com/apps) page.
+
+To create an Azure Enterprise Application, follow these steps.
+
+* Navigate to `Enterprise applications` in the Azure Portal.
+* Click to add a `New application`.
+* Click `Create your own application`.
+* Add "Pozi" as the name.
+* Select `Integrate any other application you don't find in the gallery (Non-gallery)`.
+* Push the `Create` button.
+* Navigate to the `Properties`, and fill the form much like the image below.
+
+![](./img/azure-ms365-app.png){style="width:600px"}
