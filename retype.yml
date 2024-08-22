@@ -29,10 +29,6 @@ links:
   link: /product/
   icon: stack
 
-- text: Pricing
-  link: /pricing/
-  icon: briefcase
-
 - text: Help
   link: /help/
   icon: comment-discussion

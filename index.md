@@ -25,8 +25,6 @@ layout: central
 
   <big>Pozi combines geographic information from local data sources and trusted web services to give your users the complete picture.</big>
 
-  <big>Deploy for a fraction of cost of traditional GIS software, with no lock-in contracts.</big>
-
   [!button variant="secondary" icon="checklist" size="2xl" corners="pill" text="Discover Pozi's features"](/features/)
 
 :::
@@ -41,7 +39,7 @@ layout: central
 
 <img src="/static/img/undraw/undraw_information_tab_re_f0w3.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
 
-#### Confident decision making
+#### CONFIDENT DECISION MAKING  
 
 Empower your users with the critical information they need by integrating with live, authoritative data sources
 
@@ -50,7 +48,7 @@ Empower your users with the critical information they need by integrating with l
 
 <img src="/static/img/undraw/undraw_map_re_60yf.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
-#### Ease of use
+#### EASE OF USE
 
 Simple, modern map interface with a focus on immediate usability
 
@@ -59,7 +57,7 @@ Simple, modern map interface with a focus on immediate usability
 
 <img src="/static/img/undraw/undraw_online_discussion_re_nn7e.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
 
-#### Real Support
+#### REAL SUPPORT
 
 Our team works with you to customise and maintain your map application - you're never on your own
 

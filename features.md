@@ -25,6 +25,55 @@ icon: stack
 
 ![](/static/img/Horsham-Pozi-Community-Map.jpg)
 
+<style>
+    .pricingTable th {
+        background: #E9E9E9;
+    }
+    .pricingTable tr:nth-child(1) { background: #F9F9F9; }
+</style>
+
+<div class="pricingTable">
+
+| &nbsp; | <h3>Public</h3> | <h3>Pro</h3> | <h3>Enterprise Cloud</h3> |
+|:--- |: --- :|: --- :|: --- :|: --- :|
+| Live, authoritative data | **✓** | **✓** | **✓**|
+| Customer support | **✓** | **✓** | **✓** |
+| Responsive design | **✓** | **✓** | **✓** |
+| Intelligent address search | **✓** | **✓** | **✓** |
+| Unlimited users | **✓** | **✓** | **✓** |
+| GPS location | **✓** | **✓** | **✓** |
+| [Community consultation module](admin-guide/community-consultation/) | | **✓** | **✓** |
+| Advanced search | | **✓** | **✓** |
+| Nearby places | | **✓** | **✓** |
+| Multiple imagery layers | | **✓** | **✓** |
+| [Widgets](/admin-guide/widgets/) | | **✓** | **✓** |
+| Layer filtering | | **✓** | **✓** |
+| Multi-select | | **✓** | **✓** |
+| [QGIS integration](/qgis/) | | | **✓** |
+| [Corporate system integrations](/admin-guide/integrations/) | | | **✓** |
+| Table view | | | **✓** |
+| &nbsp; | [Learn more](/features/#pozi-public) | [Learn more](/features/#pozi-pro) | [Learn more](/features/#pozi-enterprise-cloud) |
+</div>
+
+<br/>
+<br/>
+
+All Pozi subscriptions include:
+
+* customised web map application
+* high performance hosting
+* unlimited users
+* custom subdomain
+* embeddable maps
+* custom branding
+* updates and bug fixes
+* configuration updates
+* helpdesk support
+
+[!ref icon="trophy" text="Already use Pozi? ...Upgrade to Pozi Enterprise Cloud"](/enterprise-cloud/)
+
+<br/>
+
 <br/>
 
 ## Pozi Public
@@ -141,9 +190,10 @@ Pozi Pro can generate custom map links to control exactly how the app appears to
 
 ---
 
-## Pozi Enterprise
+## Pozi Enterprise Cloud
 
-Take your organisational data and public web page to the ultimate level. Pozi Enterprise has all the features of Pozi and Pozi Pro plus the following.
+Take your organisational data and public web page to the next level. Ultimate integration with your organisation's cloud infrastructure, with Azure AD Application Proxy integration.
+Pozi Enterprise Cloud has all the features of Pozi and Pozi Pro plus the following.
 
 <img src="/static/img/tweet-gallery/loddon_reflect_defects.png">
 <br/>
@@ -158,19 +208,13 @@ With Pozi Enterprise, staff will see live data for asset status, as well as insp
 Enable staff to access map layers directly from your organisation's network, including: MapInfo TAB, Esri Shapefile, PostGIS, SQL Server Spatial, GeoPackage, and any other GDAL-compatible source (SQLite, DXF, CSV, XLSX, VRT and more).
 |||
 
+![](/static/draw.io/network-diagram-enterprise-cloud.png)
+
 [!button variant="info" icon="stack" size="2xl" corners="pill" text="Powered by QGIS >"](/qgis/)
 
 [!ref icon="trophy" text="Upgrade to Pozi Enterprise"](/upgrade/)
 
 <br/>
-
----
-
-## Pozi Enterprise Cloud
-
-Ultimate integration with your organisation's cloud infrastructure, with Azure AD Application Proxy integration.
-
-![](/static/draw.io/network-diagram-enterprise-cloud.png)
 
 ---
 

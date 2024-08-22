@@ -27,7 +27,7 @@ You can configure what fields your users see by using the layer configuration op
 
 We configure Pozi to suit the specialised needs of our clients. Requests for configuration changes can be lodged with our help desk. All configuration updates are included in the subscription.
 
-Pozi *Enterprise* and *Enterprise Cloud* clients also have the ability to manage all their internal data connections via QGIS.
+Pozi *Enterprise Cloud* clients also have the ability to manage all their internal data connections via QGIS.
 
 ==- Can Pozi provide access to external parties for internal datasets?
 
@@ -104,16 +104,6 @@ See our list of some of the applications that Pozi integrates with [here](../adm
 ==-
 
 ---
-
-## Packages
-
-==- How does Pozi *Enterprise Cloud* differ from Pozi *Enterprise*?
-
-The Enterprise Cloud package enables you to maintain and manage your organisation's data within its existing IT infrastructure while allowing authorised users to access internal data via their Microsoft account.
-
-Enterprise and Enterprise Cloud packages both integrate with your on-premise data. However Enterprise Cloud enables staff to view internal data without needing to be connected to the corporate network. It also gives you greater control over which users can access which data.
-
-==-
 
 ---
 
