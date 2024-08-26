@@ -7,7 +7,7 @@ tags: [Pozi Enterprise]
 
 The Unified Search is a general purpose search utility designed to handle common user searches with the Pozi app. Users can type their search into the autocomplete search box and see results such addresses, assets, features of interest, properties, parcels, permit numbers, animal tags and more. Picking a result will zoom the map to the location.
 
-The Unified Search is a custom implementation of the [Pozi Pipeline](./pipeline/) ETL tool. It generates a search index in the form of a SQLite file which Pozi Server can query to fetch its search results. The process is run on a routine basis to keep the search index up-to-date.
+The Unified Search is a custom implementation of the Pozi Pipeline ETL tool. It generates a search index in the form of a SQLite file which Pozi Server can query to fetch its search results. The process is run on a routine basis to keep the search index up-to-date.
 
 ## Configuration
 
