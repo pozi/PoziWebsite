@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.777969771518">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.778897147039">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -24,20 +24,22 @@
     <meta property="og:url" content="https://pozi.com/user-guide/print/">
     <meta property="og:title" content="Print | Pozi Web GIS | Online Map">
     <meta property="og:description" content="The Pozi map view and associated information can be saved to a PDF for printing or sharing.">
+    <meta property="og:image" content="https://pozi.com/user-guide/img/print-map.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pozi.com/user-guide/print/">
     <meta property="twitter:title" content="Print | Pozi Web GIS | Online Map">
     <meta property="twitter:description" content="The Pozi map view and associated information can be saved to a PDF for printing or sharing.">
+    <meta property="twitter:image" content="https://pozi.com/user-guide/img/print-map.png">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.777969771518" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.778897147039" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.777969771518" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.778897147039" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.777969771518" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.778897147039" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -312,7 +314,11 @@
     </h1>
 </doc-anchor-target>
 <p>The Pozi map view and associated information can be saved to a PDF for printing or sharing.</p>
-<p><code v-pre>Menu</code> &gt; <code v-pre>Tools</code> &gt; <code v-pre>Print/Save</code> &gt; <code v-pre>Print</code></p>
+<p><figure class="content-center">
+    <img src="../img/print-map.png" alt="" style="width:200px">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <doc-anchor-target id="settings">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#settings">#</doc-anchor-trigger>
@@ -413,15 +419,66 @@
         <span>Add Statistics</span>
     </h5>
 </doc-anchor-target>
-<p>Print an addition page that contains statistics for any active vector layer. Pozi will generate statistics based on the any number fields for any features within the map bounds.</p>
+<p>Print an additional page that contains statistics for any active vector layer. Pozi will generate statistics based on the any number fields for any features within the map bounds.</p>
 <doc-anchor-target id="save-map">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#save-map">#</doc-anchor-trigger>
         <span>Save Map</span>
     </h2>
 </doc-anchor-target>
-<p>The Pozi map view can be exported to an image that you can save to your device.</p>
-<p><code v-pre>Menu</code> &gt; <code v-pre>Tools</code> &gt; <code v-pre>Print/Save</code> &gt; <code v-pre>Print</code></p>
+<p>The current Pozi map view can be exported to an image file on your device.  Go to the <code v-pre>Tools</code> panel in Pozi and select <code v-pre>Print\Save</code>.</p>
+<p><figure class="content-center">
+    <img src="../img/save-map-as-image.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>When selected, the option to <code v-pre>Save map as image</code> will save the map as a <strong>PNG</strong>, and will expose the option to save a corresponding world file</p>
+<p><figure class="content-center">
+    <img src="../img/save-map-world-file.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>If this button is pushed a <strong>.PNGW</strong> file will also be downloaded that contains georeference information about the image.</p>
+<p>The image and the world file will have the same name but different extensions. So if the image file is <strong>&quot;Bendigo Community Compass 20240906073714.png&quot;</strong>, the world file created will be called <strong>&quot;Bendigo Community Compass 20240906073714.pngw&quot;</strong>.</p>
+<doc-anchor-target id="adding-a-georeferenced-image-to-qgis">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#adding-a-georeferenced-image-to-qgis">#</doc-anchor-trigger>
+        <span>Adding a Georeferenced Image to QGIS</span>
+    </h3>
+</doc-anchor-target>
+<p>Start QGIS.</p>
+<p>Select <code v-pre>Layer</code> -&gt; <code v-pre>Add Layer</code> -&gt; <code v-pre>Add Raster Layer..</code> to open the following dialog:</p>
+<p><figure class="content-center">
+    <img src="../img/qgis-open-raster-layer.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>Navigate to the downloaded PNG file, and then click the <code v-pre>Add</code> button.  Then click the <code v-pre>Close</code> button</p>
+<p>You might see a warning message that the CRS for the image is undefined, if you have QGIS set to <code v-pre>Prompt for CRS</code> (see below).</p>
+<p><figure class="content-center">
+    <img src="../img/qgis-crs-settings.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>In any case the world file (.PNGW file) will be applied to the image as long as it is in the same directory as the PNG file.</p>
+<p>To correctly project the image the new layers projection should be set to <strong>EPSG:3857</strong>.  This can either be done when prompted, or by clicking on the question mark next to the layer in the <code v-pre>Layer Panel</code>.  Depending on any other layers that are currently open in QGIS, it may correctly guess the projection without requiring the CRS to be set.</p>
+<p><figure class="content-center">
+    <img src="../img/qgis-layer-without-projection.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>In the dialog box that presents, filtering to <code v-pre>3857</code> will limit the list to the relevant projection.  Then select <code v-pre>WGS 84 / Pseudo-Mercator</code> in the highlighted box and push the <code v-pre>OK</code> button.</p>
+<p><figure class="content-center">
+    <img src="../img/qgis-select-crs.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>Depending on the project based CRS that is currently defined, the image may disappear from view and/or appear distorted once the layer CRS has been set.  In order to remove distortion set the project based CRS to <code v-pre>WGS 84 / Pseudo-Mercator</code> by clicking on the <code v-pre>EPSG</code> setting in the bottom-right corner of the screen.  If the image is still out of view the <code v-pre>Zoom to Layer</code> or <code v-pre>Previous Zoom</code> functionality of QGIS can be used to zoom to the correct location.</p>
+<p><figure class="content-center">
+    <img src="../img/qgis-project-crs.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 
                                 
                                 <!-- Required only on API pages -->
