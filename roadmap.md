@@ -24,3 +24,23 @@ See it here: [!ref icon="log"](/changelog/)
 !!!
 
 ---
+
+## Upcoming
+
+### October 2024
+
+#### Improved Link-Ins
+
+Automatically zoom to features from link-in URL.
+
+### November 2024
+
+#### Compact View
+
+Display feature attributes in a compact table view that is a more familiar to traditional GIS users.
+
+### Beyond
+
+#### Pathway UX Integration
+
+Enhanced workflow integration for Pathway UX users.

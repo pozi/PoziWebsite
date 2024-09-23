@@ -17,16 +17,31 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## 2024
 
+### September 2024
+
+#### ⚡ New
+
+- Advanced Link-Outs - link to external application from any selected feature or collection of features!
+
+#### 👍 Improved
+
+- display Street View icon to indicate that the Street View image is interactive
+
+##### 🪲 Fixed
+
+- restore previous child dataset behaviour to expand results by default
+
 ### June 2024
 
 #### ⚡ New
 
-- [x] ⚡"Profiles" - focus Pozi on only the layers and layer groups associated with a selected role or workflow - like "modules", but better!
+- "Profiles" - focus Pozi on only the layers and layer groups associated with a selected role or workflow - like "modules", but better!
 
 #### 👍 Improved
 
 - display What's Here target on the map when launching Pozi and when doing What's Within/Along Here
 - context aware info results - display info results for overlapping vector features
+- when doing bulk selections, reduce impact on server endpoints by collapsing info panels by default
 
 ### May 2024
 
