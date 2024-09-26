@@ -60,3 +60,7 @@ To create an Azure Enterprise Application, follow these steps.
 * Navigate to the `Properties`, and fill the form much like the image below.
 
 ![](./img/azure-ms365-app.png){style="width:600px"}
+
+Your new Pozi app will appear along your other corporate apps.
+
+![](./img/azure-ms365-app-shortcuts.png){style="width:600px"}
