@@ -27,6 +27,8 @@ In our work, we constantly need to look up the EPSG codes based on a projection 
 | [EPSG:7856](https://epsg.io/7856) | GDA2020 / MGA Zone 56 |
 | [EPSG:7899](https://epsg.io/7899) | GDA2020 / Vicgrid |
 
+A more comprehensive list can be found at [SRS Explorer](https://spatialreference.org/explorer.html?latlng=-9,154,-44,113&ignoreWorld=true&allowDeprecated=false&authorities=EPSG&activeTypes=PROJECTED_CRS).
+
 ## Map Tile Scales
 
 | Zoom level | Scale denominator |
