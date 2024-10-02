@@ -22,14 +22,34 @@ We also offer clients the opportunity to sponsor development of new features, gi
 #### ⚡ New
 
 - Advanced Link-Outs - link to external application from any selected feature or collection of features!
+- new 'Advanced' search option - when searching a vector layer, click the 'Advanced' button to display the layer's table view which includes interactive search and filter options
+- enable HTML formatting in feature titles
 
 #### 👍 Improved
 
 - display Street View icon to indicate that the Street View image is interactive
+- display filter icon in layer tree when layer is filtered
+- enable displaying ancillary layer information in the header of selected feature, configured in QGIS using new "description" layer keyword setting
+- enable max zoom to be set on Esri ArcGIS vector tile layers
+- clear all layer filters when user clicks reset button
+- improve rendering efficiency of Layers component
+- avoid WMS GetMap requests going through a proxy server twice
+- improve handling of Entra ID errors
+- improve search experience by stripping HTML from search values
+- enable GPS follow button for all sites
+- improve handling of profile names and support non-standard characters
+- general background code improvements, including removing obsolete image, style and data files
+- upgrade to OpenLayers 10
 
 ##### 🪲 Fixed
 
 - restore previous child dataset behaviour to expand results by default
+- don't activate layer when its What's Here result panel is expanded (unless it's a 'nearby' layer)
+- always render the layer panel for legends in print view
+- always expand Details pane for selected feature
+- prevent Pozi reverting to default basemap when Basemaps group is collapsed
+- when a profile is enabled, exclude any child datasets associated with non-matching profiles
+- prevent child panels being collapsed when they should not be
 
 ### June 2024
 

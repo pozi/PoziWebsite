@@ -84,8 +84,6 @@ Every Pozi site provides a public-facing map view by default.
 
 Synchronise selected datasets from your network to the cloud for viewing by the public.
 
-And engage with the public using Pozi's two-way community consultation functionality. Collect information from the public about incidents, maintenance requests, feedback on strategic initiatives, community story-telling, and more.
-
 <br/>
 
 ### Unified Map
@@ -134,23 +132,13 @@ Pozi's open platform integrates with major vendor platforms and applications to 
 
 ### Future Ready
 
-The future of web GIS is driven by live data integrations, web-optimised data formats and in-browser geo-processing.
+Live data integrations, web-optimised data formats, and in-browser geo-processing are shaping the future of web GIS.
 
 <img src="../../static/img/undraw/undraw_dev_focus_re_6iwt.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
 Pozi invests for the future by keeping Pozi up-to-date with modern web technologies. We work with open source HTML5 technologies including [React](https://reactjs.org/), [Material UI](https://mui.com/), [OpenLayers 9](https://openlayers.org/), [TurfJS](https://turfjs.org/) and [GeoStyler](https://geostyler.org/) to ensure high performance, compatibility with modern data sources, and a high quality user experience.
 
 IntraMaps is built on an outdated version of OpenLayers, which ceased development in 2013. IntraMaps' performance and functionality remain tied to an ageing, unsupported code base, limiting its ability to innovate any further.
-
-<br/>
-
-### Transparent Pricing
-
-No long-term, lock-in contracts. No hidden costs.
-
-Hosting and basic support is included in your subscription. Initial setup and advanced support is available on-demand at our standard rate. You don't need a support contract to ask us for help.
-
-And we'll never charge you for fixing a bug.
 
 <br/>
 
@@ -183,7 +171,7 @@ When you fund the development of new features, you have ongoing access to the ne
 * view layers as interactive tables, narrow down results with filters, and browse to navigate to specific features
 * generate reports based on features within the current map view with dynamically calculated statistics
 * download layers
-* export geo-referenced maps to desktop GIS
+* export geo-referenced maps to your desktop GIS
 
 ==- For administrators
 
@@ -236,7 +224,6 @@ When you fund the development of new features, you have ongoing access to the ne
 | Measure | ✔️ | ✔️ |
 | Search in any layer | ❌ | ✔️ |
 | Dynamic spatial intersections | ❌ | ✔️ |
-| Two-way community consultation | ❌ | ✔️ |
 | <big>**Layer Options**</big> | | |
 | Opacity | ✔️ | ✔️ |
 | Download | ❌ | ✔️ |
@@ -250,7 +237,7 @@ When you fund the development of new features, you have ongoing access to the ne
 | Custom development available | ❌ | ✔️ |
 | <big>**Technology**</big> | | |
 | Supported map servers | MapServer | **QGIS Server**<br/>GeoServer<br/>MapServer<br/>ArcGIS Server |
-| Mapping Javascript library | OpenLayers v2<br/>(2013) | OpenLayers v9<br/>(2024) |
+| Mapping Javascript library | OpenLayers v2<br/>(2013) | OpenLayers v10<br/>(2024) |
 | OGC standards compliant (WMS/WFS) | ✔️ | ✔️ |
 | Web optimised formats (Mapbox Vector Tiles, COG, FlatGeobuf) |  ❌  | ✔️ |
 | <big>**Data Integrations**</big> | | |
@@ -267,7 +254,6 @@ When you fund the development of new features, you have ongoing access to the ne
 | User access | Active Directory | Entra ID Active Directory and App Proxy |
 | <big>**Procurement**</big> | | |
 | Pricing | $$$ | $ |
-| Commitment | multi-year lock-in contract | pay as you go |
 
 </div>
 
