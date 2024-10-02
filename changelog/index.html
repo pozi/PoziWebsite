@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.780645006642">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.781169689868">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -33,11 +33,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.6.0.780645006642" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.6.0.781169689868" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.6.0.780645006642" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.6.0.781169689868" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.6.0.780645006642" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.6.0.781169689868" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -330,6 +330,8 @@
 </doc-anchor-target>
 <ul>
 <li>Advanced Link-Outs - link to external application from any selected feature or collection of features!</li>
+<li>new &#x27;Advanced&#x27; search option - when searching a vector layer, click the &#x27;Advanced&#x27; button to display the layer&#x27;s table view which includes interactive search and filter options</li>
+<li>enable HTML formatting in feature titles</li>
 </ul>
 <doc-anchor-target id="improved">
     <h4>
@@ -339,6 +341,18 @@
 </doc-anchor-target>
 <ul>
 <li>display Street View icon to indicate that the Street View image is interactive</li>
+<li>display filter icon in layer tree when layer is filtered</li>
+<li>enable displaying ancillary layer information in the header of selected feature, configured in QGIS using new &quot;description&quot; layer keyword setting</li>
+<li>enable max zoom to be set on Esri ArcGIS vector tile layers</li>
+<li>clear all layer filters when user clicks reset button</li>
+<li>improve rendering efficiency of Layers component</li>
+<li>avoid WMS GetMap requests going through a proxy server twice</li>
+<li>improve handling of Entra ID errors</li>
+<li>improve search experience by stripping HTML from search values</li>
+<li>enable GPS follow button for all sites</li>
+<li>improve handling of profile names and support non-standard characters</li>
+<li>general background code improvements, including removing obsolete image, style and data files</li>
+<li>upgrade to OpenLayers 10</li>
 </ul>
 <doc-anchor-target id="-fixed">
     <h5>
@@ -348,6 +362,12 @@
 </doc-anchor-target>
 <ul>
 <li>restore previous child dataset behaviour to expand results by default</li>
+<li>don&#x27;t activate layer when its What&#x27;s Here result panel is expanded (unless it&#x27;s a &#x27;nearby&#x27; layer)</li>
+<li>always render the layer panel for legends in print view</li>
+<li>always expand Details pane for selected feature</li>
+<li>prevent Pozi reverting to default basemap when Basemaps group is collapsed</li>
+<li>when a profile is enabled, exclude any child datasets associated with non-matching profiles</li>
+<li>prevent child panels being collapsed when they should not be</li>
 </ul>
 <doc-anchor-target id="june-2024">
     <h3>
