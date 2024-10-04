@@ -30,6 +30,8 @@ In the below example, we want to fill the map with a park for the purpose of pri
 
 </br>
 
+Hold down the Shift key on your keyboard, and click and drag the cursor to create a box around your area of interest, then release the cursor. The map will zoom to the area defined by the box.
+
 ### Touch Device Features
 
 On touch devices and laptop trackpads, use a pinch motion with two fingers to zoom the map.
