@@ -17,6 +17,12 @@ Civica [Reflect](https://www.civica.com/en-au/product-pages/reflect/) (formerly 
 3. Protocol Type: GeoJSON
 4. URI: your dataset URL
 
+!!!
+
+Since October 2024, the Reflect API URL has changed from `https://api.assetedge.com.au` to `https://api.civicagov.com`.
+
+!!!
+
 Note: if the URL supplied to you contains `Kml3=`, replace it with `GeoJson=`.
 
 ![](img/civica-reflect-add-layer.png){style="width:400px"}
