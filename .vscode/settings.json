@@ -10,6 +10,7 @@
         "clearinghouse",
         "DEECA",
         "DELWP",
+        "EPSG",
         "Grampians",
         "Groundtruth",
         "Helpdesk",
@@ -22,6 +23,7 @@
         "polylines",
         "Pozi",
         "QGIS",
+        "Vicgrid",
         "Vicmap",
         "WMTS"
     ]

@@ -17,6 +17,13 @@ icon: paintbrush
 
 ![Creating SLD in QGIS](./img/creating-sld-in-qgis.gif)
 
+#### Export SLD
+
+1. Layer Properties > Symbology > Style > Save Style
+2. pick the SLD option
+3. specify a file name and location
+4. click OK
+
 ### Styling Options
 
 Refer to our QGIS styling guide for vector layers:

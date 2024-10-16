@@ -60,6 +60,7 @@ This is just the beginning for using selected features to support a variety of w
 - navigate to the selected feature
 - share selection via link
 - download selected feature
+- copy selected feature to annotation layer
 - display measurements
 - make a new selection based on a user-input buffer distance
 
