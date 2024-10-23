@@ -17,6 +17,34 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## 2024
 
+### October 2024
+
+#### ⚡ New
+
+- Support for Vicmap vector tile basemaps
+- Automatically zoom to feature from link-in
+- Enable link-ins to specify which field to use for the link
+- Support more print sizes (A0 to A5)
+- Add support for authenticated users when in iframe
+
+#### 👍 Improved
+
+- Exclude adjacent features when querying features that intersect a selected polygon
+- Keep info panel header fixed when scrolling through feature details
+- Make URLs clickable in table view
+- Gracefully handle table opening while features are not yet loaded
+- Load legend images regardless of whether the features are visible on the map
+- Remove unnecessary white space around legends for layers with labels
+- Unify appearance of buttons in tool panel
+- Detect and report if layer fails to load due to lack of WebGL support
+- Display warning when loading layers with duplicate names
+- Enable GPS Follow function for all sites
+- Upgrade OpenLayers to v10.2
+
+#### 🪲 Fixed
+
+- Fix missing photo thumbnails 
+
 ### September 2024
 
 #### ⚡ New
