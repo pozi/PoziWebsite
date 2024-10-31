@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.782969888070">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.783729518418">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.782969888070" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.783729518418" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.782969888070" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.783729518418" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.782969888070" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.782969888070" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.783729518418" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.783729518418" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -339,21 +339,12 @@
     </h3>
 </doc-anchor-target>
 <ol>
-<li>download <a href="https://github.com/3liz/qgis-wfsOutputExtension/releases/download/1.7.1/wfsOutputExtension.1.7.1.zip">https://github.com/3liz/qgis-wfsOutputExtension/releases/download/1.7.1/wfsOutputExtension.1.7.1.zip</a></li>
+<li>go to download <a href="https://github.com/3liz/qgis-wfsOutputExtension/releases/latest">https://github.com/3liz/qgis-wfsOutputExtension/releases/latest</a> and download the <code v-pre>wfsOutputExtension.1.x.x.zip</code> file</li>
 <li>extract the <code v-pre>wfsOutputExtension</code> folder from zip file and put into <code v-pre>C:\OSGeo4W\apps\qgis-ltr\plugins\</code> (ie, you&#x27;ll end up with this folder: <code v-pre>C:\OSGeo4W\apps\qgis-ltr\plugins\wfsOutputExtension\</code>)</li>
 <li>backup the existing <code v-pre>definitions.py</code> file</li>
 <li>open the <code v-pre>definitions.py</code> file in a text editor and append the following text to the bottom:
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-python"><code v-pre class="language-python">    Fgb = Format(
-        content_type='application/x-fgb',
-        filename_ext='fgb',
-        force_crs=None,
-        ogr_provider='FlatGeobuf',
-        ogr_datasource_options=(),
-        zip=False,
-        ext_to_zip=(),
-    )
-    GeoJSON = Format(
+<pre class="language-python"><code v-pre class="language-python">    GeoJSON = Format(
         content_type='application/x-geojson',
         filename_ext='geojson',
         force_crs=None,
@@ -364,7 +355,7 @@
     )</code></pre>
 </doc-codeblock></div>
 </li>
-<li>check that the text starting with <code v-pre>Fgb</code> aligns horizontally with the closing bracket above it - then save the file</li>
+<li>check that the text starting with <code v-pre>GeoJSON</code> aligns horizontally with the closing bracket above it - then save the file</li>
 <li>open IIS &gt; select server &gt; Fast CGISettings &gt; qgis_mapserv.fcgi.exe &gt; Edit &gt; Environment variables, and confirm that there is an environment variable for <code v-pre>DEBUG_WFSOUTPUTEXTENSION=1</code> (see <a href="../iis/#configure-environment-variables">here</a> for more information) - if not, add it</li>
 <li>in IIS, recycle the <code v-pre>PoziQgisServer</code> application pool</li>
 </ol>
@@ -420,9 +411,9 @@
 <ul>
 <li>Pozi webpage shortcuts
 <ul>
-<li>live site: <code v-pre>https://[sitename].pozi.com/</code></li>
-<li>staging/testing site: <code v-pre>https://staging.pozi.com/main/#/site[sitename]/</code></li>
-<li>config page: <code v-pre>https://staging.pozi.com/main/#/site[sitename]/config[true]/preview[true]/</code></li>
+<li>live site: <code v-pre>https://[sitename].enterprise.pozi.com/</code></li>
+<li>staging/testing site: <code v-pre>https://staging.pozi.com/main/#/site[sitename]/enterprise[true]/</code></li>
+<li>config page: <code v-pre>https://staging.pozi.com/main/#/site[sitename]/config[true]/preview[true]/enterprise[true]/</code></li>
 <li>Admin Guide: <a href="https://pozi.com/admin-guide/">https://pozi.com/admin-guide/</a></li>
 </ul>
 </li>

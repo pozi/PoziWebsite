@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.782969888070">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.783729518418">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.782969888070" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.783729518418" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.782969888070" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.783729518418" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.782969888070" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.783729518418" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -315,15 +315,15 @@
 <doc-tab id="standard">
 <template #title>Standard</template>
 <p>Any result that appears in the <em>What&#x27;s Here</em> section in the Info Panel of your site can be exposed in a Pozi data widget. All you need is the name of the dataset (as displayed in the relevant tab heading).</p>
-<p><code v-pre>https://</code> + <code v-pre>site</code> + <code v-pre>/#card=</code> + <code v-pre>dataset</code> + <code v-pre>&amp;widget=true</code></p>
+<p><code v-pre>https://</code> + <code v-pre>site</code> + <code v-pre>/#/card[</code> + <code v-pre>dataset</code> + <code v-pre>]/widget[true]/</code></p>
 <p>Example:</p>
 <ul>
 <li>site: <code v-pre>strathbogie.pozi.com</code></li>
 <li>dataset: <code v-pre>wastecollection</code> (derived from the &quot;Waste Collection&quot; tab heading in the <em>What&#x27;s Here</em> results, with any spaces or underscores removed)</li>
 </ul>
 <p>The basic widget URL is constructed as follows:</p>
-<p><code v-pre>https://</code> + <code v-pre>strathbogie.pozi.com</code> + <code v-pre>/#card=</code> + <code v-pre>wastecollection</code> + <code v-pre>&amp;widget=true</code></p>
-<p>Widget URL: <a href="https://strathbogie.pozi.com/#card=wastecollection&amp;widget=true">https://strathbogie.pozi.com/#card=wastecollection&amp;widget=true</a></p>
+<p><code v-pre>https://</code> + <code v-pre>strathbogie.pozi.com</code> + <code v-pre>/#/card[</code> + <code v-pre>wastecollection</code> + <code v-pre>]/widget[true]/</code></p>
+<p>Widget URL: <a href="https://strathbogie.pozi.com/#/card%5Bwastecollection%5D/widget%5Btrue%5D/">https://strathbogie.pozi.com/#/card[wastecollection]/widget[true]/</a></p>
 <p>The resulting widget displays a table view of the results for the address specified by the user. See the Options section below for customising the results.</p>
 </doc-tab>
 <doc-tab id="ckan">
