@@ -35,7 +35,7 @@ Two configuration options exist for data widgets:
 
 Any result that appears in the *What's Here* section in the Info Panel of your site can be exposed in a Pozi data widget. All you need is the name of the dataset (as displayed in the relevant tab heading).
 
-`https://` + `site` + `/#card=` + `dataset` + `&widget=true`
+`https://` + `site` + `/#/card[` + `dataset` + `]/widget[true]/`
 
 Example:
 
@@ -44,9 +44,9 @@ Example:
 
 The basic widget URL is constructed as follows:
 
-`https://` + `strathbogie.pozi.com` + `/#card=` + `wastecollection` + `&widget=true`
+`https://` + `strathbogie.pozi.com` + `/#/card[` + `wastecollection` + `]/widget[true]/`
 
-Widget URL: https://strathbogie.pozi.com/#card=wastecollection&widget=true
+Widget URL: https://strathbogie.pozi.com/#/card[wastecollection]/widget[true]/
 
 The resulting widget displays a table view of the results for the address specified by the user. See the Options section below for customising the results.
 

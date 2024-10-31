@@ -28,20 +28,11 @@ order: 90
 
 ### WFS Output Extension
 
-1. download https://github.com/3liz/qgis-wfsOutputExtension/releases/download/1.7.1/wfsOutputExtension.1.7.1.zip
+1. go to download https://github.com/3liz/qgis-wfsOutputExtension/releases/latest and download the `wfsOutputExtension.1.x.x.zip` file
 2. extract the `wfsOutputExtension` folder from zip file and put into `C:\OSGeo4W\apps\qgis-ltr\plugins\` (ie, you'll end up with this folder: `C:\OSGeo4W\apps\qgis-ltr\plugins\wfsOutputExtension\`)
 3. backup the existing `definitions.py` file
 4. open the `definitions.py` file in a text editor and append the following text to the bottom:
     ```python
-        Fgb = Format(
-            content_type='application/x-fgb',
-            filename_ext='fgb',
-            force_crs=None,
-            ogr_provider='FlatGeobuf',
-            ogr_datasource_options=(),
-            zip=False,
-            ext_to_zip=(),
-        )
         GeoJSON = Format(
             content_type='application/x-geojson',
             filename_ext='geojson',
@@ -52,7 +43,7 @@ order: 90
             ext_to_zip=(),
         )
     ```
-5. check that the text starting with `Fgb` aligns horizontally with the closing bracket above it - then save the file
+5. check that the text starting with `GeoJSON` aligns horizontally with the closing bracket above it - then save the file
 6. open IIS > select server > Fast CGISettings > qgis_mapserv.fcgi.exe > Edit > Environment variables, and confirm that there is an environment variable for `DEBUG_WFSOUTPUTEXTENSION=1` (see [here](iis.md#configure-environment-variables) for more information) - if not, add it
 7. in IIS, recycle the `PoziQgisServer` application pool
 
@@ -100,9 +91,9 @@ Upon completion of the update process, right-click, and select 'Start'.
 Desktop shortcuts:
 
 * Pozi webpage shortcuts
-  * live site: `https://[sitename].pozi.com/`
-  * staging/testing site: `https://staging.pozi.com/main/#/site[sitename]/`
-  * config page: `https://staging.pozi.com/main/#/site[sitename]/config[true]/preview[true]/`
+  * live site: `https://[sitename].enterprise.pozi.com/`
+  * staging/testing site: `https://staging.pozi.com/main/#/site[sitename]/enterprise[true]/`
+  * config page: `https://staging.pozi.com/main/#/site[sitename]/config[true]/preview[true]/enterprise[true]/`
   * Admin Guide: https://pozi.com/admin-guide/
 * GIS data folder
 * Pozi folder: `C:\Pozi`

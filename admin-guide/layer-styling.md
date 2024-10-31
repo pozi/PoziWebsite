@@ -17,7 +17,7 @@ icon: paintbrush
 
 ![Creating SLD in QGIS](./img/creating-sld-in-qgis.gif)
 
-#### Export SLD
+#### Exporting the SLD file
 
 1. Layer Properties > Symbology > Style > Save Style
 2. pick the SLD option

@@ -161,7 +161,7 @@ If your organisation uses Expression of Interest (EOI), Request For Tender (RFT)
 
 Alternatively, you can avoid RFTs and RFQs altogether with a pay-as-you-go Pozi subscription. Minimise your organisation's commitment and pick a plan that keeps your expenditure below any procurement thresholds. There are no lock-in contracts with standard annual Pozi subscriptions.
 
-[Contact us](./contact/) to learn how organisations like yours avoid months of wasted effort on RFTs and RFQs by switching to a low-cost Pozi solution.
+[Contact us](./contact/) to learn how organisations like yours avoid months of wasted effort on RFTs and RFQs by switching to a cost-effective Pozi subscription.
 
 </br>
 
