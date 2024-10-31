@@ -169,6 +169,7 @@ Ensure the PC on which the QGIS project is being maintained has the Font Awesome
 2. go to Layer Properties > Symbology > Style > Load Style > ... (select downloaded SLD file) > Load Style
 3. pick icon
     - select top SVG Marker item
+    - set the Fill Color to white (#FFFFFF)
     - in SVG browser, select Pozi SVGs
     - browse icons or use search box to find icon
     - select icon
