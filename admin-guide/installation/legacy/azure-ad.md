@@ -5,7 +5,7 @@ order: 87
 # Azure AD
 
 !!! :zap: Deprecated! :zap:
-Go to our [Entra ID](../entra-id/introduction) documentation instead.
+Go to our [Entra ID](/admin-guide/installation/entra-id) documentation instead.
 !!!
 
 ## Application Proxy (Enterprise Application)
