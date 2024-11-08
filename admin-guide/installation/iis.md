@@ -102,6 +102,12 @@ As of April 2023, the OSGeo4W installer installs Python in `C:\OSGeo4W\apps\Pyth
 
 !!!
 
+!!!warning
+
+Any Pozi installations prior to November 2024 will need to add the environment variable `QT_QPA_FONTDIR` with the setting `C:\Windows\Fonts` (being the location fonts are installed on the server). This enables the use of fonts, besides traditional web-safe fonts, for points and labelling in WMS layers.  This setting has now been included in the instructions below.
+
+!!!
+
 +++ Command Prompt
 
 Copy and paste the following into the command prompt:
@@ -135,6 +141,7 @@ Copy and paste the following into the command prompt:
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='PYTHONPATH',value='C:\OSGeo4W\apps\qgis-ltr\python']" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='PROJ_LIB',value='C:\OSGeo4W\share\proj']" /commit:apphost
 "%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='DEBUG_WFSOUTPUTEXTENSION',value='1']" /commit:apphost
+"%systemroot%\system32\inetsrv\appcmd.exe" set config -section:system.webServer/fastCgi /+"[fullPath='C:\OSGeo4W\apps\qgis-ltr\bin\qgis_mapserv.fcgi.exe'].environmentVariables.[name='QT_QPA_FONTDIR',value='C:\Windows\Fonts']" /commit:apphost
 
 ```
 
@@ -168,6 +175,7 @@ GDAL_DATA | `C:\OSGeo4W\apps\gdal\share\gdal`
 PYTHONPATH | `C:\OSGeo4W\apps\qgis-ltr\python`
 PROJ_LIB | `C:\OSGeo4W\share\proj`
 DEBUG_WFSOUTPUTEXTENSION | `1`
+QT_QPA_FONTDIR | `C:\Windows\Fonts`
 
 (End of `Manual Configuration` instructions)
 
