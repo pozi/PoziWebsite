@@ -49,6 +49,7 @@ In this example, we'll use a property layer as the source for both a What's Here
 - the dataset is considered to be a *child* of the *What's Here* target on the map
 - always returns a result when the user clicks on the map, regardless of whether the 'Properties' layer (above) is turned on or not
 - can be hidden from the layer panel
+- can be configured to be searchable by using the optional `searchFields` keyword
 - configuration:
   - use singular naming convention (ie 'Property')
   - enable for WFS
@@ -79,6 +80,7 @@ These settings provide an override for some of the default layer behaviours in P
 | `enabled=false` | disable a dataset in Pozi |
 | `infoPanelCollapse=true` | collapse info results panel for this dataset |
 | `promoteDetails=true` | display all child attributes instead of a preview |
+| `searchFields=fieldname1;fieldname2` | enable Search options for these fields |
 
 [Developer reference](https://github.com/pozi/PoziApp/blob/main/src/config/catalog/KeywordsParser.ts)
 
