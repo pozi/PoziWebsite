@@ -81,6 +81,7 @@ These settings provide an override for some of the default layer behaviours in P
 | `infoPanelCollapse=true` | collapse info results panel for this dataset |
 | `promoteDetails=true` | display all child attributes instead of a preview |
 | `searchFields=fieldname1;fieldname2` | enable Search options for these fields |
+| `initialRevealFields=n` | number of fields to initially display in the Details pane (use `0` to collapse pane) |
 
 [Developer reference](https://github.com/pozi/PoziApp/blob/main/src/config/catalog/KeywordsParser.ts)
 

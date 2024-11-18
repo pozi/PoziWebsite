@@ -116,6 +116,26 @@ Layer Properties > Fields > select field > Configuration
 
 ![](./img/qgis-hide-fields.png){style="width:600px"}
 
+### Specify Number of Fields to Initially Reveal
+
+!!!
+This will be available in the November 2024 release.
+!!!
+
+You can limit the number of fields that are initially revealed in Pozi's info panel. Users can click the *Show More* button to reveal the remaining fields.
+
+![](./img/pozi-initial-reveal-fields.png){style="width:300px"}
+
+This functionality is designed to make efficient use of the Info Panel space to ensure that important information is not pushed off the bottom of the page. This is particularly relevant when dealing with layers that have related child datasets. By reducing the number of parent fields initially displayed, the user can see the child dataset details without needing to scroll down the page.
+
+Layer Properties > QGIS Server > Keyword list > `initialRevealFields=n`
+
+Example: `initialRevealFields=3`
+
+![](./img/qgis-initial-reveal-fields.png){style="width:600px"}
+
+If you specify `initialRevealFields=0`, the Details pane will display in a collapsed state so that no fields are shown. Users will be able to click the pane header to reveal all fields.
+
 ### Rename Fields
 
 You can make field names more user-friendly by giving your field names an *alias*.
