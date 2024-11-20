@@ -21,18 +21,18 @@ Once all work has been completed, please provide Pozi Support with the requested
 
 After completion of the configuration, [email](mailto:support@pozi.com) us with the following information:
 
-- :icon-checkbox: The **internal** on-premises URL (something like `http://<internal-server-name>/pozi/`)
-- :icon-checkbox: The **external** application proxy URL (something like `https://poziserver-<entra-application-client-name>.msappproxy.net/pozi/`)
+- [ ] The **internal** on-premises URL (something like `http://<internal-server-name>/pozi/`)
+- [ ] The **external** application proxy URL (something like `https://poziserver-<entra-application-client-name>.msappproxy.net/pozi/`)
 
 ![](img/entra-id-required-information-step-1.png)
 
 
-- :icon-checkbox: The **`application (client) id`**
-- :icon-checkbox: The **`directory (tenant) id`**
+- [ ] The **`application (client) id`**
+- [ ] The **`directory (tenant) id`**
 
 ![](img/entra-id-required-information-step-2.png)
 
-- :icon-checkbox: (optional) A list of group ids and the QGIS catalogues that have access to them.
+- [ ] (optional) A list of group ids and the QGIS catalogues that have access to them.
 
 ![](img/entra-id-groups-claim-step-3.png)
 

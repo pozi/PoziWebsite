@@ -100,7 +100,7 @@ In the Add your own on-premises application section, provide the following infor
 
 ![](img/entra-id-new-enterprise-application-step-4.png)
 
-* **Translate Urls in application body** : :icon-checkbox: checked. This allows Entra ID to translate internal URLs to their external counterparts.
+* **Translate Urls in application body** : checked. This allows Entra ID to translate internal URLs to their external counterparts.
 
 
 
