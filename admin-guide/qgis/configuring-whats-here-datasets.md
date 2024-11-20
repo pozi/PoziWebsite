@@ -7,7 +7,7 @@ icon: location
 
 Pozi's Info Panel displays a set of results called *"What's Here"* whenever the user clicks anywhere on the map (but not directly on any vector feature).
 
-Any datasets that you configure as *What's Here* datasets will always appear in the Info Panel so that users will see information about a location without having to turn on specific layers.
+Any datasets that you configure as *What's Here* datasets will always appear in the Info Panel (as long as any active profile includes them). Users will see results for What's Here datasets when they click on a location without having to turn on specific layers.
 
 When a user clicks on the map or draws a line or polygon selection, Pozi creates a spatial *target* against which all What's Here datasets will be queried. If the user does a single click on the map, the target appears as a special icon. If the user uses the region or line selection tool, the target appears as a dashed line.
 
@@ -25,13 +25,13 @@ Use cases:
 
 Any dataset that is enabled for *What's Here* is essentially a *child* dataset. Learn more about parent/child dataset interaction [here](./configuring-linked-datasets.md).
 
-Instead of the layer's *parent* being a feature in another layer, the parent is a temporary feature called the *target* that is automatically created when the user clicks on the map (or uses the region or line selection tool).
+Instead of the layer's *parent* being a feature in another layer, the parent is a temporary feature called the *target* that is created when the user clicks on the map (or uses the region or line selection tool).
 
 !!!
 
 ## *What's Here* vs Standard Layers
 
-*What's Here* datasets are configured separately from standard layers. When working with core datasets such as property, consider configuring both a What's Here and a standard version of the layer in your QGIS project to cover a range of use cases.
+*What's Here* datasets can be configured separately from standard layers. When working with large datasets such as property, consider configuring both a What's Here and a standard version of the layer in your QGIS project to cover a range of use cases.
 
 In this example, we'll use a property layer as the source for both a What's Here dataset and a standard layer. Configure the two layers with different names, following the naming convention suggested below.
 

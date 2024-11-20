@@ -120,11 +120,13 @@ However if you want to explicitly specify a filter, you can do so by using the f
 parameter=filter=<Filter><Intersects><PropertyName>geometry</PropertyName>[$gml]</Intersects></Filter>
 ```
 
-Alternatively you can also a custom spatial filter. In this example, we are applying a negative buffer to the parent geometry to exclude records that have only a slight (<1m) overlap:
+Alternatively you can also specify a custom spatial filter. In this example, we are applying a negative buffer to the parent geometry to exclude records that have only a slight (<1m) overlap:
 
 ```
 parameter=EXP_FILTER=intersects(@geometry [$comma] buffer(geom_from_wkt('[$wkt]') [$comma] -0.00001 ))
 ```
+
+Note that the `[$comma]` is required in the place of a normal comma because QGIS considers a normal comma to be a keyword delimiter.
 
 #### Non-Spatial Filter
 
