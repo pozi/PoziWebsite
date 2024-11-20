@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.785392604629">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.785461491191">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.785392604629" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.785461491191" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.785392604629" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.785461491191" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.785392604629" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.785461491191" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -289,7 +289,7 @@
     </h1>
 </doc-anchor-target>
 <p>Pozi&#x27;s Info Panel displays a set of results called <em>&quot;What&#x27;s Here&quot;</em> whenever the user clicks anywhere on the map (but not directly on any vector feature).</p>
-<p>Any datasets that you configure as <em>What&#x27;s Here</em> datasets will always appear in the Info Panel so that users will see information about a location without having to turn on specific layers.</p>
+<p>Any datasets that you configure as <em>What&#x27;s Here</em> datasets will always appear in the Info Panel (as long as any active profile includes them). Users will see results for What&#x27;s Here datasets when they click on a location without having to turn on specific layers.</p>
 <p>When a user clicks on the map or draws a line or polygon selection, Pozi creates a spatial <em>target</em> against which all What&#x27;s Here datasets will be queried. If the user does a single click on the map, the target appears as a special icon. If the user uses the region or line selection tool, the target appears as a dashed line.</p>
 <p>Pozi fetches any intersecting features from the available What&#x27;s Here datasets and displays them in the Info Panel.</p>
 <p>Use cases:</p>
@@ -314,7 +314,7 @@
         </div>
         <div class="pr-5 ml-3 w-full">
 <p>Any dataset that is enabled for <em>What&#x27;s Here</em> is essentially a <em>child</em> dataset. Learn more about parent/child dataset interaction <a href="../configuring-linked-datasets/">here</a>.</p>
-<p>Instead of the layer&#x27;s <em>parent</em> being a feature in another layer, the parent is a temporary feature called the <em>target</em> that is automatically created when the user clicks on the map (or uses the region or line selection tool).</p>
+<p>Instead of the layer&#x27;s <em>parent</em> being a feature in another layer, the parent is a temporary feature called the <em>target</em> that is created when the user clicks on the map (or uses the region or line selection tool).</p>
         </div>
     </div>
 </div>
@@ -324,7 +324,7 @@
         <span><em>What&#x27;s Here</em> vs Standard Layers</span>
     </h2>
 </doc-anchor-target>
-<p><em>What&#x27;s Here</em> datasets are configured separately from standard layers. When working with core datasets such as property, consider configuring both a What&#x27;s Here and a standard version of the layer in your QGIS project to cover a range of use cases.</p>
+<p><em>What&#x27;s Here</em> datasets can be configured separately from standard layers. When working with large datasets such as property, consider configuring both a What&#x27;s Here and a standard version of the layer in your QGIS project to cover a range of use cases.</p>
 <p>In this example, we&#x27;ll use a property layer as the source for both a What&#x27;s Here dataset and a standard layer. Configure the two layers with different names, following the naming convention suggested below.</p>
 <doc-anchor-target id="standard-layer">
     <h3>
