@@ -116,6 +116,7 @@ AADSTS50011: The redirect URI 'https://xxxxxxxxxxxxxxxxxxx/' specified in the re
 invalid_resource: AADSTS500011 -  The resource principal named xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx was not found in the tenant named xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You might have sent your authentication request to the wrong tenant. | Make sure you have provided the correct tenant id and that you are logged in the correct account
 AADSTS50105: Your administrator has configured the application Pozi Server ('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx') to block users unless they are specifically granted ('assigned') access to the application. The signed in user 'xxxxxxxxx.xxxxxxx@xxxxxxxxxxx.xxx.xxx.xx') is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application. | Give the relevant users/groups access via Enterprise Applications. See the [Assign users](./application-proxy/#3-assign-users) section.
 Forbidden: This corporate app can't be accessed. You are not authorized to access this application.<br /><br />Next Steps.<br/><br />Authorization failed. Make sure to assign the user with access to this application. | NO SOLUTION YET
+WFS3 (resource check) response contains `"error": "invalid_tenant"` | confirm that the tenant id is correct
 
 
 <!-- ## 99. App registration
