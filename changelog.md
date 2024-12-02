@@ -17,6 +17,28 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## 2024
 
+### November 2024
+
+#### ⚡ New
+
+- Compact format for Details pane
+- Custom searches
+- Enable administrators to specify the number of fields to initially display in the Details pane for each layer
+- Use any selected feature to generate a buffer selection
+
+#### 👍 Improved
+
+- Hide the selection target from printout
+- Show placeholder box for Street View image while fetching image
+- Prioritise points and lines over polygons when vector features overlap
+- Notify user if link-in feature is not found
+
+#### 🪲 Fixed
+
+- Restore photo thumbnail functionality
+- Reinstate scrollbar in Tools panel
+- Fix tool subscription checks to avoid failure when settings don't exist
+
 ### October 2024
 
 #### ⚡ New

@@ -216,7 +216,7 @@ Please note that Pozi cannot use the display field if the field name has been gi
 
 <small>#selectable #queryable #identifiable</small>
 
-To prevent the Info Panel from displaying results from specific layers (say, for aerial photos), update the `Data Sources` settings in the QGIS project.
+To prevent the Info Panel from displaying results from specific layers (say, for imagery layers, or layers configured to display results as a child dataset), update the `Data Sources` settings in the QGIS project.
 
 Project > Properties > Data Sources > Identifiable > untick to disable layer selectability
 

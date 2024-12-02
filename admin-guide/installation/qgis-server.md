@@ -4,6 +4,15 @@ order: 90
 
 # QGIS Server
 
+## Recommended Server Specifications
+
+Here is list of recommended server specifications:
+
+- **CPU**: 6 Cores, Physical Server using Intel(R) Xeon(R) Gold 5317 CPU @ 3.00GHz CPUs
+- **RAM**: 32 GB
+- **SSDs**: Enterprise grade, storage allocation & drive layout designed relevant to your data/layers with capacity for some growth
+- **OS**: Windows Server 2022
+
 ## Installation
 
 * if any previous version of QGIS Desktop has been installed using the stand-alone installer, uninstall it
