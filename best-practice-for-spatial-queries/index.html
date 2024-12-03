@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.786524077018">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.786573511839">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -38,11 +38,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=2.4.0.786524077018" rel="stylesheet" />
+    <link href="../resources/css/retype.css?v=2.4.0.786573511839" rel="stylesheet" />
 
-    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.786524077018" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.786573511839" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.786524077018" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.786573511839" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -344,9 +344,9 @@
         <span>Child Dataset</span>
     </h3>
 </doc-anchor-target>
-<p>The overlay layer needs to be configured as a <em>child dataset</em> of the property layer.</p>
+<p>In order for a spatial intersection to be triggered, the overlay layer needs to be configured as a <em>child dataset</em> of the property layer.</p>
 <p>If you already have an overlay layer that is used for visualisation purposes, and it&#x27;s <em>not</em> enabled for WFS (which is typically the case to ensure performance and styling of large layers), you&#x27;ll need a new dedicated layer that <em>is</em> enabled for WFS and configured as a child dataset of the property layer.</p>
-<p>Duplicate the existing overlay layer in the QGIS project, give the duplicated layer a different name (such as Property Planning Overlays) to avoid conflicting with the existing overlay layer, and enable the layer for WFS. Then add <code v-pre>parent=Property, showInLayerControl=false</code> to the layer keywords.</p>
+<p>Duplicate the existing overlay layer in the QGIS project, give the new layer a different name (such as Property Planning Overlays) to avoid conflicting with the existing overlay layer, and enable the layer for WFS. Then add <code v-pre>parent=Property, showInLayerControl=false</code> to the layer keywords.</p>
 <p><a href="https://pozi.com/admin-guide/qgis/configuring-linked-datasets/#spatial-filter">https://pozi.com/admin-guide/qgis/configuring-linked-datasets/#spatial-filter</a></p>
 <p>With this configuration, Pozi will trigger a spatial intersection between the parent (Property) and child (Property Planning Overlays) layers when the user selects any property.</p>
 <doc-anchor-target id="end-result">
@@ -355,7 +355,7 @@
         <span>End Result</span>
     </h2>
 </doc-anchor-target>
-<p>When the user clicks on the map, the What&#x27;s Here results will show any features (from the property layer and any other active layers) found at that location. The user selects the desired property feature, and Pozi performs a spatial query between the property and overlay layer. Any intersecting overlays will be displayed under the property details.</p>
+<p>When the user clicks on the map, the What&#x27;s Here results will show any features (from the property layer and any other active layers) found at that location as per normal. The user then selects the desired property feature, and Pozi performs a spatial query between the property and overlay layer. Any intersecting overlays will be displayed under the property details, under the heading &#x27;Property Planning Overlays&#x27;.</p>
 <p>This enables the user to know with certainty whether the property is affected by any overlay or not.</p>
 <doc-anchor-target id="example">
     <h2>
