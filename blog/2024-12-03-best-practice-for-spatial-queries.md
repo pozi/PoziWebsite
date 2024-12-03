@@ -31,11 +31,11 @@ https://pozi.com/admin-guide/qgis/configuring-layers/#selectability
 
 ### Child Dataset
 
-The overlay layer needs to be configured as a *child dataset* of the property layer.
+In order for a spatial intersection to be triggered, the overlay layer needs to be configured as a *child dataset* of the property layer.
 
 If you already have an overlay layer that is used for visualisation purposes, and it's *not* enabled for WFS (which is typically the case to ensure performance and styling of large layers), you'll need a new dedicated layer that *is* enabled for WFS and configured as a child dataset of the property layer.
 
-Duplicate the existing overlay layer in the QGIS project, give the duplicated layer a different name (such as Property Planning Overlays) to avoid conflicting with the existing overlay layer, and enable the layer for WFS. Then add `parent=Property, showInLayerControl=false` to the layer keywords.
+Duplicate the existing overlay layer in the QGIS project, give the new layer a different name (such as Property Planning Overlays) to avoid conflicting with the existing overlay layer, and enable the layer for WFS. Then add `parent=Property, showInLayerControl=false` to the layer keywords.
 
 https://pozi.com/admin-guide/qgis/configuring-linked-datasets/#spatial-filter
 
@@ -43,7 +43,7 @@ With this configuration, Pozi will trigger a spatial intersection between the pa
 
 ## End Result
 
-When the user clicks on the map, the What's Here results will show any features (from the property layer and any other active layers) found at that location. The user selects the desired property feature, and Pozi performs a spatial query between the property and overlay layer. Any intersecting overlays will be displayed under the property details.
+When the user clicks on the map, the What's Here results will show any features (from the property layer and any other active layers) found at that location as per normal. The user then selects the desired property feature, and Pozi performs a spatial query between the property and overlay layer. Any intersecting overlays will be displayed under the property details, under the heading 'Property Planning Overlays'.
 
 This enables the user to know with certainty whether the property is affected by any overlay or not.
 
