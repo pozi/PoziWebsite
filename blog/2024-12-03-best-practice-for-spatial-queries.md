@@ -25,21 +25,27 @@ How do you configure Pozi to ensure users know for certain whether a property is
 
 ### Selectability
 
-Users must not be under the impression that simply clicking on a location on the map will inform them whether a property is affected by any overlay or not. To avoid this, make the overlay layer *unselectable*.
+If the overlays layer is selectable, users will see results in the What's Here results about any overlay found at the location of the click. However this doesn't necessarily tell users whether the target property is affected by any overlay or not.
+
+You can avoid giving users the impression that simply clicking on a location on the map will give them the right information by making the overlays layer *unselectable*. This will prevent users seeing any overlays result in the initial What's Here results.
 
 https://pozi.com/admin-guide/qgis/configuring-layers/#selectability
 
 ### Child Dataset
 
-In order for a spatial intersection to be triggered, the overlay layer needs to be configured as a *child dataset* of the property layer.
+Pozi can be made to trigger a spatial intersection between the property and overlay layers by configuring the overlay layer as a *child dataset* of the property layer.
 
 If you already have an overlay layer that is used for visualisation purposes, and it's *not* enabled for WFS (which is typically the case to ensure performance and styling of large layers), you'll need a new dedicated layer that *is* enabled for WFS and configured as a child dataset of the property layer.
 
-Duplicate the existing overlay layer in the QGIS project, give the new layer a different name (such as Property Planning Overlays) to avoid conflicting with the existing overlay layer, and enable the layer for WFS. Then add `parent=Property, showInLayerControl=false` to the layer keywords.
+Duplicate the existing overlay layer in the QGIS project, give the new layer a different name (such as Property Planning Overlays) to avoid conflicting with the existing overlay layer name, and enable the layer for WFS. Then add `parent=Property, showInLayerControl=false` to the layer keywords.
 
 https://pozi.com/admin-guide/qgis/configuring-linked-datasets/#spatial-filter
 
 With this configuration, Pozi will trigger a spatial intersection between the parent (Property) and child (Property Planning Overlays) layers when the user selects any property.
+
+!!! note
+We are currently working to make it even easier to configure spatial queries. Upcoming releases of Pozi will enable layers to be used as child datasets while also being displayed as WMS. This will avoid the need to have separate layers for spatial intersection and visualisation purposes. Stay tuned!
+!!!
 
 ## End Result
 
@@ -66,5 +72,5 @@ Notes:
   - improve user experience by reducing the space taken up in the Info Panel to display the presence or absence of any overlay
 - the overlays layer used for visualisation is configured in QGIS as *unselectable*
 - a 'Property Planning Overlays' layer is added to QGIS, enabled for WFS, and configured as a *child dataset* of the property layer
-- with the 'Property Planning Overlays' layer configured as a child dataset, it is not even necessary for the layer to visible in order for users to see the results of the spatial query
+- with the 'Property Planning Overlays' layer configured as a child dataset, it is not even necessary for the layer to be visible in order for users to see the results of the spatial query
 - if your existing overlays layer is already enabled for WFS (which would only be the case if styling and performance are suitable for WFS), you can use it directly as a child dataset of the property layer without adding a separate layer - simply add `parent=Property` to the existing overlay layer keywords
