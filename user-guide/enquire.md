@@ -44,11 +44,43 @@ To enquire on a path (for example, to select all the properties along a pipeline
 3. click on map locations to define the enquiry path
 4. double-click to finish
 
-#### Additional Point Locations
+### Buffer Selection
+
+Pozi also allows enquiry within a buffer distance to a point location or selected feature (for example, selecting all properties within 1km of ...)
+
+#### Buffer point location
+
+1. click a location on the map
+2. click Tools > Select > Select by Buffer
+3. specify buffer distance in metres
+4. click Select
+
+![](img/tools-select-by-buffer.png){style="width:300px"}
+
+The map will display a dashed line marking the enquiry area and open the info panel with enquiry results.
+
+![](img/buffer-result.png)
+
+#### Buffer selected feature
+
+1. Click on the desired feature
+2. Expand the features result set in the info panel
+3. Click the options button (3 stacked dots)
+4. click "Whats around this"
+5. specify buffer distance in metres
+6. click Select
+
+![](img/whats-around-this.png)
+
+The map will display a dashed line marking the enquiry area (buffer around the selected feature) and open the info panel with enquiry results.
+
+![](img/whats-around-this-result.png)
+
+### Additional Point Locations
 
 You can add point locations to any current *What's Here* selection by holding down the `Ctrl` key and clicking on the map.
 
-#### Viewing and Exporting Results
+### Viewing and Exporting Results
 
 The results of a multi-selection can be viewed as a table and optionally downloaded. An options button (three stacked dots) is shown at the top of each result set. Click the dots to view the selected features in a table view.
 
