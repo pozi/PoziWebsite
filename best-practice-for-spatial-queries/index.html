@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.786592808078">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.786671709605">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -38,11 +38,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=2.4.0.786592808078" rel="stylesheet" />
+    <link href="../resources/css/retype.css?v=2.4.0.786671709605" rel="stylesheet" />
 
-    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.786592808078" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.786671709605" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.786592808078" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.786671709605" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -336,7 +336,8 @@
         <span>Selectability</span>
     </h3>
 </doc-anchor-target>
-<p>Users must not be under the impression that simply clicking on a location on the map will inform them whether a property is affected by any overlay or not. To avoid this, make the overlay layer <em>unselectable</em>.</p>
+<p>If the overlays layer is selectable, users will see results in the What&#x27;s Here results about any overlay found at the location of the click. However this doesn&#x27;t necessarily tell users whether the target property is affected by any overlay or not.</p>
+<p>You can avoid giving users the impression that simply clicking on a location on the map will give them the right information by making the overlays layer <em>unselectable</em>. This will prevent users seeing any overlays result in the initial What&#x27;s Here results.</p>
 <p><a href="https://pozi.com/admin-guide/qgis/configuring-layers/#selectability">https://pozi.com/admin-guide/qgis/configuring-layers/#selectability</a></p>
 <doc-anchor-target id="child-dataset">
     <h3>
@@ -344,11 +345,29 @@
         <span>Child Dataset</span>
     </h3>
 </doc-anchor-target>
-<p>In order for a spatial intersection to be triggered, the overlay layer needs to be configured as a <em>child dataset</em> of the property layer.</p>
+<p>Pozi can be made to trigger a spatial intersection between the property and overlay layers by configuring the overlay layer as a <em>child dataset</em> of the property layer.</p>
 <p>If you already have an overlay layer that is used for visualisation purposes, and it&#x27;s <em>not</em> enabled for WFS (which is typically the case to ensure performance and styling of large layers), you&#x27;ll need a new dedicated layer that <em>is</em> enabled for WFS and configured as a child dataset of the property layer.</p>
-<p>Duplicate the existing overlay layer in the QGIS project, give the new layer a different name (such as Property Planning Overlays) to avoid conflicting with the existing overlay layer, and enable the layer for WFS. Then add <code v-pre>parent=Property, showInLayerControl=false</code> to the layer keywords.</p>
+<p>Duplicate the existing overlay layer in the QGIS project, give the new layer a different name (such as Property Planning Overlays) to avoid conflicting with the existing overlay layer name, and enable the layer for WFS. Then add <code v-pre>parent=Property, showInLayerControl=false</code> to the layer keywords.</p>
 <p><a href="https://pozi.com/admin-guide/qgis/configuring-linked-datasets/#spatial-filter">https://pozi.com/admin-guide/qgis/configuring-linked-datasets/#spatial-filter</a></p>
 <p>With this configuration, Pozi will trigger a spatial intersection between the parent (Property) and child (Property Planning Overlays) layers when the user selects any property.</p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>note</h5>
+<p>We are currently working to make it even easier to configure spatial queries. Upcoming releases of Pozi will enable layers to be used as child datasets while also being displayed as WMS. This will avoid the need to have separate layers for spatial intersection and visualisation purposes. Stay tuned!</p>
+        </div>
+    </div>
+</div>
 <doc-anchor-target id="end-result">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#end-result">#</doc-anchor-trigger>
@@ -386,7 +405,7 @@
 </li>
 <li>the overlays layer used for visualisation is configured in QGIS as <em>unselectable</em></li>
 <li>a &#x27;Property Planning Overlays&#x27; layer is added to QGIS, enabled for WFS, and configured as a <em>child dataset</em> of the property layer</li>
-<li>with the &#x27;Property Planning Overlays&#x27; layer configured as a child dataset, it is not even necessary for the layer to visible in order for users to see the results of the spatial query</li>
+<li>with the &#x27;Property Planning Overlays&#x27; layer configured as a child dataset, it is not even necessary for the layer to be visible in order for users to see the results of the spatial query</li>
 <li>if your existing overlays layer is already enabled for WFS (which would only be the case if styling and performance are suitable for WFS), you can use it directly as a child dataset of the property layer without adding a separate layer - simply add <code v-pre>parent=Property</code> to the existing overlay layer keywords</li>
 </ul>
 
