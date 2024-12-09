@@ -90,7 +90,13 @@ https://council.pozi.com/#/feature[parks.fid,15]/
 
 ### Layer Filter
 
+Launch Pozi with a filtered view of the available layers.
+
+For example, show only the layers that are related to assets:
+
 https://northerngrampians.pozi.com/#/filter[assets]/tab[layers]/
+
+Only layers whose name or folder name contains "assets" will be displayed.
 
 ### Panel Focus
 

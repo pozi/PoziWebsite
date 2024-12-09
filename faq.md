@@ -31,9 +31,13 @@ Pozi *Enterprise Cloud* clients also have the ability to manage all their intern
 
 ==- Can Pozi provide access to external parties for internal datasets?
 
-The Pozi *Enterprise Cloud* solution enables organisations to grant access to internal data to staff and external parties using Azure Active Directory.
+The Pozi *Enterprise Cloud* solution enables organisations to grant access to internal data to staff and external parties using Entra ID Active Directory.
 
-==-
+==- Does Pozi have a testing environment?
+
+The Pozi app has production and staging links that enable clients to preview upcoming enhancements and new features before they are released.
+
+On the client’s side, the client’s production QGIS Server is the single source of truth for its layer configuration. Pozi doesn’t integrate with any non-production QGIS Server for testing or other purposes.
 
 ---
 

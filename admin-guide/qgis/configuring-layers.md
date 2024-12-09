@@ -37,14 +37,6 @@ A UNC path is an absolute path that is recognised by all user accounts, regardle
 
 Add the UNC path of your GIS data folder as a *Favorite* in the QGIS Browser panel for easy access. Learn more [here](https://docs.qgis.org/latest/en/docs/user_manual/introduction/browser.html#favorites). Also add a shortcut to the UNC location on your PC desktop for extra convenience.
 
-==- About layer names
-
-Pozi does not currently support duplicate layer names within a site.
-
-If you have two layers that share a name, even if they are maintained in separate QGIS projects, [alter the layer name](https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#source-properties) on one or both layers in the affected QGIS project(s) so that they are no longer the same.
-
-Similarly, *layer folder* names must be unique, and must not share a name with any layer or layer folder within a site.
-
 ==-
 
 Some common layer configuration tasks you can do in QGIS include:
@@ -73,6 +65,7 @@ Evaluate the pros and cons of using vectors for your layer, and if appropriate, 
   * download
 * when a vector layer is turned on, Pozi loads the entire layer in the browser, including all geometries and attributes. The browser doesn't need to send further requests to the server every time the user moves the map
 * when hovering over a vector feature the cursor changes to indicate the feature is clickable, and a tooltip is displayed with the feature's title
+* vector layers can be used in [link-ins](../link-in.md)
 
 #### Disadvantages of vector layers
 
@@ -92,6 +85,40 @@ As a guideline, use vectors only for layers with fewer than 5-10K features, or e
 ![QGIS Project Properties WFS Configuration](./img/qgis-project-properties-wfs-configuration.png){style="width:700px"}
 
 <br/>
+
+## Naming Layers
+
+!!! Note
+
+Pozi does not currently support duplicate layer names within a site.
+
+If you have two layers that share a name, even if they are maintained in separate QGIS projects, alter the layer name (as described below) on one or both layers in the affected QGIS project(s) so that they are no longer the same.
+
+Similarly, *layer folder* names must be unique, and must not share a name with any layer or layer folder within a site.
+
+!!!
+
+When you add a layer in QGIS, you can rename it from its original name to a more meaningful, user-friendly name within the QGIS project. Changing the name in QGIS does not affect the source table or file.
+
+Go to Layer Properties > Source > Layer name
+
+https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#source-properties
+
+Spaces are allowed. To provide users with a better experience, it is recommended to replace any underscores with spaces and use spaces to separate words that may have been combined in the original name.
+
+==- Reserved layer names
+
+The following layer names cannot be used because they are reserved by the Pozi application:
+
+- Whats Here
+- Pozi Annotation
+- Pozi Highlight
+- Pozi Current Target
+- Pozi Measurement
+
+All variations of these layer names (with or without spaces or capitalisation) are also reserved.
+
+==-
 
 ## Styling Layers
 
@@ -117,10 +144,6 @@ Layer Properties > Fields > select field > Configuration
 ![](./img/qgis-hide-fields.png){style="width:600px"}
 
 ### Specify Number of Fields to Initially Reveal
-
-!!!
-This will be available in the November 2024 release.
-!!!
 
 You can limit the number of fields that are initially revealed in Pozi's info panel. Users can click the *Show More* button to reveal the remaining fields.
 

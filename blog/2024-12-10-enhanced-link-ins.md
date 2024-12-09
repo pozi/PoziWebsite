@@ -25,9 +25,9 @@ This example link launches the Pozi web application, activates the Parks layer, 
 
 Pozi link-ins have long supported the selection of specific features, but additional URL parameters were required to position the map view at the appropriate location. Pozi now automatically zooms to the selected feature based on its location as well as its size.
 
-### Control Which Field is Used for the Link
+### Choose Your Link Field
 
-Previously, the link-in required Pozi's internal id field as the feature link, which didn't always reflect the id field known to external applications. Now, the link-in URL can specify *any* field from the selected feature's layer to use for the link. Simply append the layer name with a dot followed by the field name to the layer name in the link-in URL.
+Previously, the link-in required Pozi's internal id field as the feature link, which didn't always reflect any id known to external applications. Now, the link-in URL can specify *any* field from the selected feature's layer to use for the link. Simply append the layer name with a dot followed by the field name to the layer name in the link-in URL.
 
 Example: link to a feature in the `Parks` layer where the `fid` field is `15`:
 
