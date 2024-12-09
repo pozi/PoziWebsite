@@ -82,13 +82,11 @@ https://strathbogie.pozi.com/#/x[145.56842]/y[-36.75206]/z[19]/feature[whatshere
 
 ### Feature Selection
 
-Given a layer name and feature id, Pozi will highlight the feature and display its info results.
+Given a layer name and feature id, Pozi will activate the layer, select and highlight the target feature, zoom the map to it, and display its details in the Info Panel.
 
-https://latrobe.pozi.com/#/layers[skateparks]/feature[skateparks,4]/
+Example: link to a feature in the `Parks` layer where the `fid` field is `15`:
 
-If the feature location is known (for example, if you have coordinates in addition to the feature id), specify the coordinates and a suitable zoom level.
-
-https://latrobe.pozi.com/#/x[146.40171]/y[-38.23845]/z[18]/layers[skateparks]/feature[skateparks,4]/
+https://council.pozi.com/#/feature[parks.fid,15]/
 
 ### Layer Filter
 
