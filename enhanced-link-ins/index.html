@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.787046646829">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.787102851761">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -38,11 +38,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=2.4.0.787046646829" rel="stylesheet" />
+    <link href="../resources/css/retype.css?v=2.4.0.787102851761" rel="stylesheet" />
 
-    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.787046646829" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.787102851761" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.787046646829" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.787102851761" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -331,13 +331,13 @@
     </h3>
 </doc-anchor-target>
 <p>Pozi link-ins have long supported the selection of specific features, but additional URL parameters were required to position the map view at the appropriate location. Pozi now automatically zooms to the selected feature based on its location as well as its size.</p>
-<doc-anchor-target id="control-which-field-is-used-for-the-link">
+<doc-anchor-target id="choose-your-link-field">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#control-which-field-is-used-for-the-link">#</doc-anchor-trigger>
-        <span>Control Which Field is Used for the Link</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#choose-your-link-field">#</doc-anchor-trigger>
+        <span>Choose Your Link Field</span>
     </h3>
 </doc-anchor-target>
-<p>Previously, the link-in required Pozi&#x27;s internal id field as the feature link, which didn&#x27;t always reflect the id field known to external applications. Now, the link-in URL can specify <em>any</em> field from the selected feature&#x27;s layer to use for the link. Simply append the layer name with a dot followed by the field name to the layer name in the link-in URL.</p>
+<p>Previously, the link-in required Pozi&#x27;s internal id field as the feature link, which didn&#x27;t always reflect any id known to external applications. Now, the link-in URL can specify <em>any</em> field from the selected feature&#x27;s layer to use for the link. Simply append the layer name with a dot followed by the field name to the layer name in the link-in URL.</p>
 <p>Example: link to a feature in the <code v-pre>Parks</code> layer where the <code v-pre>fid</code> field is <code v-pre>15</code>:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">https://council.pozi.com/#/feature[parks.fid,15]/</code></pre>
