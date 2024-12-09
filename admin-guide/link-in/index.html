@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.786671709605">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.787046646829">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.4.0.786671709605" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.787046646829" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.786671709605" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.787046646829" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.786671709605" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.787046646829" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -393,10 +393,9 @@
         <span>Feature Selection</span>
     </h3>
 </doc-anchor-target>
-<p>Given a layer name and feature id, Pozi will highlight the feature and display its info results.</p>
-<p><a href="https://latrobe.pozi.com/#/layers%5Bskateparks%5D/feature%5Bskateparks,4%5D/">https://latrobe.pozi.com/#/layers[skateparks]/feature[skateparks,4]/</a></p>
-<p>If the feature location is known (for example, if you have coordinates in addition to the feature id), specify the coordinates and a suitable zoom level.</p>
-<p><a href="https://latrobe.pozi.com/#/x%5B146.40171%5D/y%5B-38.23845%5D/z%5B18%5D/layers%5Bskateparks%5D/feature%5Bskateparks,4%5D/">https://latrobe.pozi.com/#/x[146.40171]/y[-38.23845]/z[18]/layers[skateparks]/feature[skateparks,4]/</a></p>
+<p>Given a layer name and feature id, Pozi will activate the layer, select and highlight the target feature, zoom the map to it, and display its details in the Info Panel.</p>
+<p>Example: link to a feature in the <code v-pre>Parks</code> layer where the <code v-pre>fid</code> field is <code v-pre>15</code>:</p>
+<p><a href="https://council.pozi.com/#/feature%5Bparks.fid,15%5D/">https://council.pozi.com/#/feature[parks.fid,15]/</a></p>
 <doc-anchor-target id="layer-filter">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#layer-filter">#</doc-anchor-trigger>
