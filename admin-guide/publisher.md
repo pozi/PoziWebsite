@@ -12,50 +12,9 @@ A ***map catalogue*** is a collection of map layers, typically in XML format gen
 
 The catalogue is the unit around which the Pozi Publisher workflow is based, either generating catalogues from various sources, modifying catalogues for specific use cases, or extracting information from catalogues.
 
-## Installation
-
-### Install Pozi Publisher
-
-1. Create folder `C:\Pozi\Publisher`
-2. Obtain Publisher from Pozi Support, and extract to/past  e to the new folder
-
-### Installing AWS Tools for Powershell
-
-+++ Run Powershell as Administrator
-
-1. Type `Install-Module -Name AWS.Tools.Installer`
-2. Answer 'Y' to the various security prompts
-
-!!!warning Warning
-
-If the `Install-Module` command fails with the following:
-
-`WARNING: Unable to download from URI 'https://go.microsoft.com...`
-
-It may be necessary to change the protocol that Powershell uses to access the Internet.  Entering the following command:
-
-`[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
-
-Then re-try the `Install-Module` command.
-
-!!!
-
-+++ Alternative installation
-
-1. Download [AWS Tools](https://sdk-for-net.amazonwebservices.com/ps/v4/latest/AWS.Tools.zip).
-2. Type `$Env:PSModulePath` on a PowerShell command line. This will provide a list of possible folders that the module zip file can be extracted in. It needs to be one that the application can access when running as a task or service.
-3. Extract the zip file into the chosen folder.
-
-+++
-
-### Install AWS Tools Modules
-
-- Extra modules are required for authentication and using S3 buckets.
-- Type `Install-AWSToolsModule AWS.Tools.EC2,AWS.Tools.S3 -CleanUp -Scope AllUsers`
-
----
-
 ## Configuration
+
+Configuration of Pozi Publisher tasks is set up in custom `.INI` files.  These files detail where the source files can be found, where the resulting data will be saved and what format it will take, where to locate the QGIS Server instance, and more.  A simple example of this `.INI` file is provided further down the page.
 
 | Section | Key | Description | Example |
 | --- | --- | --- | --- |

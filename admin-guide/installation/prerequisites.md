@@ -32,3 +32,12 @@ Prior to installation, ask your network administrator to set up two domain user 
 - [ ] internet access (needed to communicate with connect.pozi.com for software updates)
 
 Provide these credentials to your Pozi support contact, along with any instructions for remote access.
+
+## Recommended Server Specifications
+
+Here is list of recommended server specifications:
+
+- **CPU**: 6 Cores, Physical Server using Intel(R) Xeon(R) Gold 5317 CPU @ 3.00GHz CPUs
+- **RAM**: 32 GB
+- **SSDs**: Enterprise grade, storage allocation & drive layout designed relevant to your data/layers with capacity for some growth
+- **OS**: Windows Server 2022
