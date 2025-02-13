@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.791937784236">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.792744727862">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.791937784236" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.792744727862" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.791937784236" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.792744727862" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.791937784236" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.792744727862" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -291,13 +291,18 @@
     </h1>
 </doc-anchor-target>
 <p>Pozi&#x27;s Search Panel offers users several options for searching for features and locations on the map.</p>
+<ul>
+<li>Preconfigured searches</li>
+<li>Generic searches</li>
+<li>Custom searches</li>
+</ul>
 <doc-anchor-target id="preconfigured-searches">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#preconfigured-searches">#</doc-anchor-trigger>
         <span>Preconfigured Searches</span>
     </h2>
 </doc-anchor-target>
-<p>Your Pozi site may include one or more preconfigured searches. These typically include Address and other search services provided by external providers. If you require any changes to these searches, please contact <a href="mailto:support@pozi.com">support@pozi.com</a>.</p>
+<p>Your Pozi site may include one or more preconfigured searches that were included in your site&#x27;s intial installation. These typically include Address and other search services provided by external providers. If you require any changes to these searches, please contact <a href="mailto:support@pozi.com">support@pozi.com</a>.</p>
 <doc-anchor-target id="generic-searches">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#generic-searches">#</doc-anchor-trigger>
@@ -327,13 +332,20 @@
             </svg>
         </div>
         <div class="pr-5 ml-3 w-full">
-<p>Custom searches will be available in the November 2024 release. Only layers that are hidden in the layer panel can be used as custom searches in that release.</p>
+            <h5>Note</h5>
+<p>Datasets that are enabled for WFS (and aren&#x27;t hidden in the layer panel) are automatically available as a generic search (see above). Before attempting to configure a layer as a custom search, check that the layer isn&#x27;t already searchable via a generic search.</p>
         </div>
     </div>
 </div>
+<p>Large datasets such as a Property layer may be unavailable as a generic search because they are often configured for What&#x27;s Here and hidden from the layer panel, which prevents Pozi from presenting the layer as a search option.</p>
 <p>Layers that aren&#x27;t available as a <em>generic</em> search can be configured to be available as a <em>custom</em> search.</p>
-<p>A common use case for this is the Property layer. The Property layer is typically a large dataset that is often used as a What&#x27;s Here result but also configured to be hidden in the layer panel.</p>
-<p>You can configure any of the layer&#x27;s fields to be searchable. Each field you specify will show up as a separate search item in the drop-down list.</p>
+<p>Prerequisites:</p>
+<ul>
+<li>The layer must be enabled for WFS</li>
+<li>The layer must be hidden in the layer panel</li>
+</ul>
+<p>Using keywords, you can configure any of the layer&#x27;s fields to be searchable. Each field you specify will show up as a separate search item in the drop-down list.</p>
+<p><img src="../img/pozi-custom-search.png" style="width:350px" alt="" /></p>
 <doc-anchor-target id="example">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#example">#</doc-anchor-trigger>
@@ -346,7 +358,6 @@
 <pre class="language-none"><code v-pre class="language-none">parent=Whats Here, showInLayerControl=false, searchFields=polygon_nu;land_id;pi_parcel</code></pre>
 </doc-codeblock></div>
 <p>This configuration will expose the <code v-pre>polygon_nu</code>, <code v-pre>land_id</code> and <code v-pre>pi_parcel</code> fields as search options. If the fields are configured in QGIS with a user-friendly <a href="../configuring-layers/#rename-fields">alias</a>, Pozi will use the alias when showing the search item in the drop-down list.</p>
-<p><img src="../img/pozi-custom-search.png" style="width:350px" alt="" /></p>
 
                                 
                                 <!-- Required only on API pages -->
