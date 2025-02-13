@@ -39,3 +39,8 @@ Click on any of our client sites below to discover how Pozi serves these organis
 [!ref icon="/static/img/client-logos/queenscliffe.png" text="Borough of Queenscliffe"](https://queenscliffe.pozi.com/)
 [!ref icon="/static/img/client-logos/northburnett.png" text="North Burnett Regional Council"](https://northburnett.pozi.com/)
 [!ref icon="/static/img/client-logos/goondiwindi.png" text="Goondiwindi Regional Council"](https://goondiwindi.pozi.com/)
+[!ref icon="/static/img/client-logos/warren.png" text="Warren Shire Council"](https://warren.pozi.com/)
+[!ref icon="/static/img/client-logos/cobar.png" text="Cobar Regional Council"](https://cobar.pozi.com/)
+[!ref icon="/static/img/client-logos/moreeplains.png" text="Moree Plains Shire Council"](https://mpsc.pozi.com/)
+[!ref icon="/static/img/client-logos/kyogle.png" text="Kyogle Shire Council"](https://kyogle.pozi.com/)
+[!ref icon="/static/img/client-logos/northam.png" text="Shire of Northam"](https://northam.pozi.com/)
