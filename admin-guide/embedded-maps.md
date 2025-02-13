@@ -18,12 +18,12 @@ The Pozi web map can be embedded into any web page to enable your customers disc
 Pozi maps are embedded using a standard HTML iframe. Copy the link of the desired map from your browser's address bar or by clicking the Share button in the Tools panel. If you want the page to show the default map extent, you can strip out the location parameters (eg `x[144.44500]/y[-36.73075]/z[10]/`). Then wrap the link in an `iframe` tag.
 
 ```
-<iframe width="100%" height="500px" frameborder="0" scrolling="no" allow="fullscreen" src="https://bendigo.pozi.com/"></iframe>
+<iframe width="100%" height="500px" frameborder="0" scrolling="no" src="https://bendigo.pozi.com/" allowfullscreen></iframe>
 ```
 
 This is the resulting map from the above HTML:
 
-<iframe width="100%" height="500px" frameborder="0" scrolling="no" allow="fullscreen" src="https://bendigo.pozi.com/"></iframe>
+<iframe width="100%" height="500px" frameborder="0" scrolling="no" src="https://bendigo.pozi.com/" allowfullscreen></iframe>
 
 </br>
 
@@ -34,3 +34,4 @@ Insert the HTML in any webpage or CMS that supports iframes.
 ## Examples
 
 [!ref icon="/static/img/client-logos/frankston.png" text="Frankston City Council - My Address"](https://www.frankston.vic.gov.au/My-Property/My-Address-property-information-and-whats-in-your-area/)
+[!ref icon="/static/img/client-logos/kingston.png" text="City of Kingston - Public Bins"](https://www.kingston.vic.gov.au/services/rubbish-and-recycling/public-bins)

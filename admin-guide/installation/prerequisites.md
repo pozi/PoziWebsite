@@ -29,7 +29,7 @@ Prior to installation, ask your network administrator to set up two domain user 
 - [ ] trusted read-only user of GIS database and any relevant corporate databases
 - [ ] **permissions for running scheduled tasks**
 - [ ] **credentials must never expire**
-- [ ] internet access (needed to communicate with connect.pozi.com for software updates)
+- [ ] internet access
 
 Provide these credentials to your Pozi support contact, along with any instructions for remote access.
 

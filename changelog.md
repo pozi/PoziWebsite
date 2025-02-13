@@ -15,6 +15,39 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ---
 
+## 2025
+
+### February 2025
+
+#### ⚡ New
+
+- Revamped measuring tools!
+- Custom map disclaimer
+- Display feature count in results pane header
+- Link-ins for large datasets
+
+#### 👍 Improved
+
+- Hide empty results pane for vector layers
+- Enable Pozi to load with non-default basemap
+- Zoom map to within layer's visible scale when record is selected from the table view
+- Allow 'Annotation' to be used a layer name
+- Improve highlight consistency
+  - Highlight feature(s) in topmost layer in What's Here results
+  - Clear highlight when feature is no longer the focus
+  - Prevent highlight getting more opaque when details pane is expanded
+  - Make highlight for features found using search visually consistent with features clicked from the map
+- Improve formatting of long field names in compact view
+- When launching Pozi from a URL containing an active layer, also turn on any of its linked layers
+- Support for hyperlinks in the layer About tab (via Abstract box in QGIS metadata)
+- Improved legend display for bubble features
+- Upgrade to HERE Map v3 API
+
+#### 🪲 Fixed
+
+- Display/hide search options depending on the currently active profile
+- Fix bug where print output was missing the logo for some clients
+
 ## 2024
 
 ### November 2024

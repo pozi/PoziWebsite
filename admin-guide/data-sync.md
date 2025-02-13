@@ -4,7 +4,11 @@ icon: sync
 tags: [Pozi Enterprise]
 ---
 
-*Available for Pozi Enterprise and Enterprise Cloud customers*
+!!! Warning
+
+We are phasing out Pozi Data Sync. Talk to your Pozi reseller about Pozi's alternative solution that enables you to manage and publish layers to the public directly from QGIS!
+
+!!!
 
 Pozi Data Sync is a dedicated folder within Pozi Server that is permanently synced to the Pozi cloud platform. Any files created and/or updated in this folder are automatically synchronised to the web. This enables workflows for publishing data to the public on an ad-hoc or scheduled basis.
 
