@@ -26,7 +26,7 @@ When opening a spreadsheet:
 
 ##### expand columns
 
-* click top left corner to highlight all rows, then double-click on any column divider)
+* click top left corner to highlight all rows, then double-click on any column divider
 
 #### Filtering Audit
 
@@ -38,7 +38,7 @@ When opening a spreadsheet:
 
 Open this webpage, and drag your CSV file into it:
 
-https://lana-k.github.io/sqliteviz/#/
+https://sqliteviz.com/app/#/
 
 +++ Command Line
 

@@ -4,18 +4,6 @@ order: 90
 
 # M1s
 
-!!!
-
-**Sick of M1s?**
-
-We have a vision to simplify the way Victorian councils integrate their property information into Vicmap.
-
-Read our plan, and have your say!
-
-[!button variant="secondary" size="2xl" text="Land Central Station"](/land-central-station/)
-
-!!!
-
 <big>Pozi Connect generates council ['M1'](https://www.land.vic.gov.au/maps-and-spatial/data-services/vicmap-helpdesk/m1-process) reports that are critical link for updating the Victorian state map base.</big>
 
 ![](/static/img/m1-header.jpg)
@@ -30,7 +18,7 @@ After Pozi configures and implements Pozi Connect for your council, you can gene
 
 Vicmap data is maintained by DEECA. Councils obtain updates of [Vicmap Address](https://datashare.maps.vic.gov.au/search?q=uuid%3Db9e9146d-8378-5c37-b6cd-63e3a8d05d02) and [Vicmap Property Simplified 1](https://datashare.maps.vic.gov.au/search?q=uuid%3Da752b99e-baee-502e-a58b-7d15fa6c57cd) by downloading it weekly (recommended) or fortnightly from the [DEECA DataShare](https://datashare.maps.vic.gov.au/).
 
-Pozi Connect uses this downloaded Vicmap data (as well as the council's current rates data) to automatically generate the required M1s. When the M1 is submitted, it feeds into the Vicmap maintenance cycle. The changes will not be immediate because of the DEECA/Jacobs maintenance schedules and occasional backlogs. Allow at least two weeks before you can expect to see the changes in Vicmap.
+Pozi Connect uses this downloaded Vicmap data (as well as the council's current rates data) to automatically generate the required M1s. When the M1 is submitted, it feeds into the Vicmap maintenance cycle. The changes will not be immediate because of the DEECA maintenance schedules and occasional backlogs. Allow at least two weeks before you can expect to see the changes in Vicmap.
 
 Manual M1s (or using software like Common Ground) are no longer required for routine data maintenance. Pozi Connect takes care of most property number and address updates when you run it on a regular basis. It will even use any rural address point locations that you specify in a point table (if Pozi Connect is configured for it).
 
@@ -118,17 +106,7 @@ If you were filling out an M1 manually, you would typically update property numb
 
 In the case of a new property, there would be a P edit to allocate the new property number, followed by an S edit further down the spreadsheet.
 
-For more details about how Pozi Connect determines which records are included in which scenarios, see the dedicated explanations of the logic for each edit code:
-
-* [Edit Code A](https://github.com/pozi/PoziConnectConfig/blob/master/~Shared/SQL/M1%20A%20Edits.md/)
-* [Edit Code C](https://github.com/pozi/PoziConnectConfig/blob/master/~Shared/SQL/M1%20C%20Edits.md/)
-* [Edit Code E](https://github.com/pozi/PoziConnectConfig/blob/master/~Shared/SQL/M1%20E%20Edits.md/)
-* [Edit Code P](https://github.com/pozi/PoziConnectConfig/blob/master/~Shared/SQL/M1%20P%20Edits.md/)
-* [Edit Code R](https://github.com/pozi/PoziConnectConfig/blob/master/~Shared/SQL/M1%20R%20Edits.md/)
-* [Edit Code S](https://github.com/pozi/PoziConnectConfig/blob/master/~Shared/SQL/M1%20S%20Edits.md/)
-* [Edit Code S (proposed)](https://github.com/pozi/PoziConnectConfig/blob/master/~Shared/SQL/M1%20S%20Proposed%20Edits.md/)
-
-After the M1 is submitted in NES, Jacobs will process the edits in the following order:
+The edits are processed in the following order:
 
 ```
 Z, R, P, S, E, C, A
