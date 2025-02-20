@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.792744727862">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.793345140735">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.792744727862" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.793345140735" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.792744727862" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.793345140735" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.792744727862" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.793345140735" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -382,7 +382,7 @@
 <li>not all QGIS styles are supported in Pozi for vector features</li>
 <li>cannot directly use text expressions for labels (but you can still make use of <doc-anchor-trigger to="#virtual-fields">virtual fields</doc-anchor-trigger> for creating generating custom label values)</li>
 </ul>
-<p>As a guideline, use vectors only for layers with fewer than 5-10K features, or even fewer for layers with complex polylines or polygons. Also for polygon layers, consider that vector polygons will prevent users from interrogating any features underneath.</p>
+<p>As a guideline, use vectors only for layers with fewer than 20K features, or even fewer for layers with complex polylines or polygons. Also for polygon layers, consider that vector polygons will prevent users from interrogating any features underneath.</p>
 <doc-anchor-target id="enabling-vector-layer">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#enabling-vector-layer">#</doc-anchor-trigger>
@@ -782,14 +782,6 @@
        <template #title>Can&#x27;t see the layer option for switching on the table view</template>
 <p>Layers must be <doc-anchor-trigger to="#enabling-vector-layer">enabled as a vector layer</doc-anchor-trigger> in order to access the table view.</p>
 <p>If you&#x27;ve already enabled a layer for WFS, and the table view option is still not available, it may be because the layer shares the same name as a layer folder. Rename the layer or folder so they are unique.</p>
-   </doc-panel>
-   <doc-panel id="clicking-on-overlapping-features-shows-only-the-details-of-one-feature" collapsed>
-       <template #title>Clicking on overlapping features shows only the details of one feature</template>
-<p>​When you select a vector feature in Pozi, it displays only the feature you&#x27;ve selected, and not any overlapping features that may lie underneath.
-​
-​This issue is mentioned briefly <doc-anchor-trigger to="#disadvantages">above</doc-anchor-trigger>, as a disadvantage of enabling WFS for a layer:</p>
-<p>​If you anticipate having overlapping features in a layer, consider NOT enabling the layer for WFS. Pozi will instead treat the layer as WMS. When clicking on a  location, Pozi will return the details for all overlapping features.
-​</p>
    </doc-panel>
    <doc-panel id="can-t-see-the-latest-changes-from-qgis-in-pozi" collapsed>
        <template #title>Can&#x27;t see the latest changes from QGIS in Pozi</template>
