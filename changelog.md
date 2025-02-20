@@ -25,6 +25,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - Custom map disclaimer
 - Display feature count in results pane header
 - Link-ins for large datasets
+- Launch Pozi with specific search option
 
 #### 👍 Improved
 

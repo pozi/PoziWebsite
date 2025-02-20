@@ -73,7 +73,7 @@ Evaluate the pros and cons of using vectors for your layer, and if appropriate, 
 * not all QGIS styles are supported in Pozi for vector features
 * cannot directly use text expressions for labels (but you can still make use of [virtual fields](#virtual-fields) for creating generating custom label values)
 
-As a guideline, use vectors only for layers with fewer than 5-10K features, or even fewer for layers with complex polylines or polygons. Also for polygon layers, consider that vector polygons will prevent users from interrogating any features underneath.
+As a guideline, use vectors only for layers with fewer than 20K features, or even fewer for layers with complex polylines or polygons. Also for polygon layers, consider that vector polygons will prevent users from interrogating any features underneath.
 
 ### Enabling Vector Layer
 
@@ -376,14 +376,6 @@ Layers must be [enabled as a vector layer](#enabling-vector-layer) in order to a
 
 If you've already enabled a layer for WFS, and the table view option is still not available, it may be because the layer shares the same name as a layer folder. Rename the layer or folder so they are unique.
 
-==- Clicking on overlapping features shows only the details of one feature
-
-​When you select a vector feature in Pozi, it displays only the feature you've selected, and not any overlapping features that may lie underneath.
-​
-​This issue is mentioned briefly [above](#disadvantages), as a disadvantage of enabling WFS for a layer:
-
-​If you anticipate having overlapping features in a layer, consider NOT enabling the layer for WFS. Pozi will instead treat the layer as WMS. When clicking on a  location, Pozi will return the details for all overlapping features.
-​
 ==- Can't see the latest changes from QGIS in Pozi
 
 Some changes may not be available immediately in Pozi. If you encounter an issue such as a recently added or renamed layer not loading, restart the IIS application pool on the server.
