@@ -9,11 +9,13 @@ visibility: hidden
 
 # Building Together: Pozi's QGIS Sustaining Membership and Commitment to the Open-Source GIS Community
 
-![](../static/img/qgis_small_sustaining-member_2025_highres.png){style="width:400px"}
+![](../static/img/qgis_small_sustaining-member_2025_highres.png){style="width:250px"}
 
 Have you heard of Free and Open-Source Software? Many of our customers who utilise QGIS are familiar with this concept, often drawn in by the “free” aspect. There's nothing wrong with that - after all, who doesn't appreciate a good bargain? The fact that the software is free allows users to test it without commitment. If the software meets your needs, fantastic! You've discovered a solution that addresses your problem, all without a significant investment. And if it doesn’t work out, you don't have to worry about financial loss - this accessibility is one of the greatest advantages of free and open-source software, as it is available to everyone, not just a select few.
 
 At Pozi, we are particularly fascinated by the community aspect of open-source software. A robust and engaged community is essential for the survival of any open-source project, and it’s this vibrant community that we appreciate the most. Mature projects like QGIS and OpenLayers boast established communities and user groups that offer opportunities for learning and professional networking.
+
+![](/static/img/screenshots/qgis-to-pozi.png)
 
 But how do these incredible projects and communities sustain themselves if the software is free? This is a fundamental challenge that all open-source projects eventually face. While many developers embark on these projects as passion projects or to satisfy an intellectual curiosity, they realise that as these projects mature and attract a larger user base, financial resources become necessary to ensure their sustainability.
 
