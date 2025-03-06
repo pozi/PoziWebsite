@@ -1,10 +1,10 @@
 ---
 slug: qgis-sustaining-membership
 author: Sophie Webb
-tags:
+tags: [open source, sponsorship, QGIS, OpenLayers, GeoStyler, TurfJS]
 description: Pozi actively supports key open-source geospatial projects, including QGIS and OpenLayers. Discover how we’re contributing to a stronger open-source community.
 category:
-visibility: hidden
+visibility:
 ---
 
 # Building Together: Pozi's QGIS Sustaining Membership and Commitment to the Open-Source GIS Community
