@@ -5,7 +5,7 @@
     <link>https://pozi.com/blog/</link>
     <description>Blog</description>
     <copyright>© Copyright 2025 - Pozi Pty Ltd</copyright>
-    <lastBuildDate>Tue, 10 Dec 2024 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 06 Mar 2025 00:00:00 GMT</lastBuildDate>
     <generator>https://retype.com</generator>
     <atom:link rel="self" type="application/rss+xml" href="https://pozi.com/blog/feed.xml" />
     <image>
@@ -13,6 +13,13 @@
       <link>https://pozi.com/blog/</link>
       <url>https://pozi.com/favicon.ico</url>
     </image>
+    <item>
+      <title>Building Together: Pozi's QGIS Sustaining Membership and Commitment to the Open-Source GIS Community</title>
+      <guid isPermaLink="true">https://pozi.com/qgis-sustaining-membership/</guid>
+      <description>Pozi actively supports key open-source geospatial projects, including QGIS and OpenLayers. Discover how we’re contributing to a stronger open-source community.</description>
+      <author>Sophie Webb</author>
+      <pubDate>Thu, 06 Mar 2025 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>Enhanced Link-Ins</title>
       <guid isPermaLink="true">https://pozi.com/enhanced-link-ins/</guid>
@@ -154,13 +161,6 @@
       <description>We have previously discussed some creative ways organisations are integrating Pozi as part of customer service and community engagement.</description>
       <author>Megan Barrow</author>
       <pubDate>Sun, 01 Jul 2018 00:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Pozi in the news</title>
-      <guid isPermaLink="true">https://pozi.com/pozi-in-the-news/</guid>
-      <description>Finding opportunities to get PR for your organisation can be incredibly difficult.</description>
-      <author>Megan Barrow</author>
-      <pubDate>Thu, 01 Mar 2018 00:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
