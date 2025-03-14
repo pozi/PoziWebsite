@@ -17,6 +17,28 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## 2025
 
+### March 2025
+
+#### ⚡ New
+
+- **Easier previewing of upcoming features!** Users across all Pozi sites can now check out a preview version of their own site using a special link provided for each preview. This link opens the user's last used Pozi site with a preview of the upcoming feature, enhancement or bugfix.
+
+#### 👍 Improved
+
+- **Enable third-party applications to update embedded Pozi maps.** Third-party applications can now use a new URL parameter to reload Pozi, enabling actions such as selecting another feature or turning on a layer.
+- **Optimised viewing on mobile devices.** The map logo is now hidden and the scale bar size is reduced for better mobile experience.
+- **Clear selection highlights when layers are turned off.** The current selection highlight is now cleared when its layer is turned off.
+- **Ensure hidden layers do not appear in the page URL.** Hidden layers are no longer shown in the page URL.
+- **Linked layers activation.** When launching from a URL containing an active layer, any linked layers are now automatically turned on.
+- **Hide the result pane for non-retrievable attributes.** The result pane is now hidden for vector tile layers where attributes can't be retrieved.
+- **Hide the fullscreen button on unsupported devices.** The fullscreen button is now hidden on devices that don't support fullscreen mode.
+- **Automatic basemap activation.** The next available basemap is activated when the user switches to a profile that doesn't include the current basemap.
+
+#### 🪲 Fixed
+
+- **Prevent error caused by measuring tool.** An error is now prevented when turning on the aerial layer after measuring.
+- **Ensure basemap fallback works universally.** The basemap fallback function now works for any basemap, regardless of whether it's a manually configured layer or from a catalogue.
+
 ### February 2025
 
 #### ⚡ New
