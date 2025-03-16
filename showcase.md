@@ -27,6 +27,7 @@ Click on any of our client sites below to discover how Pozi serves these organis
 [!ref icon="/static/img/client-logos/swanhill.png" text="Swan Hill Rural City Council"](https://swanhill.pozi.com/)
 [!ref icon="/static/img/client-logos/shepparton.png" text="Greater Shepparton City Council"](https://shepparton.pozi.com/)
 [!ref icon="/static/img/client-logos/wangaratta.png" text="Wangaratta Rural City Council"](https://wangaratta.pozi.com/)
+[!ref icon="/static/img/client-logos/warrnambool.png" text="Warrnambool City Council"](https://warrnambool.pozi.com/)
 [!ref icon="/static/img/client-logos/latrobe.png" text="Latrobe City Council"](https://latrobe.pozi.com/)
 [!ref icon="/static/img/client-logos/northerngrampians.png" text="Northern Grampians Shire Council"](https://northerngrampians.pozi.com/)
 [!ref icon="/static/img/client-logos/southerngrampians.png" text="Southern Grampians Shire Council"](https://southerngrampians.pozi.com/)
