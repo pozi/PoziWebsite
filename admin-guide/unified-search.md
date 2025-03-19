@@ -1,6 +1,7 @@
 ---
 icon: search
 tags: [Pozi Enterprise]
+visibility: hidden
 ---
 
 # Unified Search
