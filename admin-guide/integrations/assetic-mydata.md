@@ -50,7 +50,7 @@ An example configuration in the VRT file is as follows:
 <?xml version="1.0" encoding="UTF-8"?>
 <OGRVRTDataSource>
     <OGRVRTLayer name="Buildings">
-        <SrcDataSource>\\nhillDB2\MapData\Assets\Building\Building.TAB</SrcDataSource>
+        <SrcDataSource>\\gis\data\Assets\Building\Building.TAB</SrcDataSource>
         <SrcSQL dialect="sqlite">
             select
                 *,
@@ -146,7 +146,7 @@ For integrations that don't use QGIS Server, the parent-child data lookup can be
 <?xml version="1.0" encoding="UTF-8"?>
 <OGRVRTDataSource>
 	<OGRVRTLayer name="Inspections">
-		<SrcDataSource>ODBC:DRIVER={SQL Server};SERVER=NHILLDB2;DATABASE=myDataProduction,InspectionView</SrcDataSource>
+		<SrcDataSource>ODBC:DRIVER={SQL Server};SERVER=myservername;DATABASE=mydatabasename,InspectionView</SrcDataSource>
 		<SrcSQL dialect="sqlite">
 		    select
 			    *,

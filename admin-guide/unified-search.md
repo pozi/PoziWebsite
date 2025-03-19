@@ -40,7 +40,7 @@ Example: `zzz_authority_property_owner.vrt`
 <?xml version="1.0" encoding="UTF-8"?>
 <OGRVRTDataSource>
     <OGRVRTLayer name="csc_asset_open_spaces_id">
-        <SrcDataSource>MSSQL:server=gisassets.db.cardinia.vic.gov.au;database=GISAssets</SrcDataSource>
+        <SrcDataSource>MSSQL:server=servername;database=databasename</SrcDataSource>
         <SrcSQL dialect="sqlite">
             with input as ( 
                 select
@@ -88,7 +88,7 @@ The file path or database connection string of the source dataset.
 
 |Data Source|Example|
 |--|--|
-|File path|`<SrcDataSource>\\Hollop\d\GIS_Data\Source\Vicmap\VMFEAT\FOI_POINT.tab</SrcDataSource>`|
+|File path|`<SrcDataSource>\\gis\data\Vicmap\VMFEAT\FOI_POINT.tab</SrcDataSource>`|
 |SQL Server connection string|`<SrcDataSource>MSSQL:server=myservername;database=mydatabasename;tables=mytablename</SrcDataSource>`|
 |ODBC connection string|`<SrcDataSource>ODBC:DRIVER={SQL Server};SERVER=myservername;DATABASE=mydatabasename,mytablename</SrcDataSource>`|
 

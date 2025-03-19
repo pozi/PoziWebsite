@@ -143,6 +143,8 @@ Layer Properties > Fields > select field > Configuration
 
 ![](./img/qgis-hide-fields.png){style="width:600px"}
 
+Fields that are required for link-ins and link-outs must be exposed via WFS.
+
 ### Specify Number of Fields to Initially Reveal
 
 You can limit the number of fields that are initially revealed in Pozi's info panel. Users can click the *Show More* button to reveal the remaining fields.
@@ -251,7 +253,11 @@ It can be useful to make a layer not selectable if it has a corresponding *What'
 
 ## Imagery Layers
 
+### Local
+
 You can add imagery layers such as aerial photos and satellite imagery from local TIF, ECW files, [mosaics](/admin-guide/data-preparation.md#image-mosaics) and other sources to your QGIS project.
+
+### Remote
 
 It's also possible to add layers from an external WMS/WMTS. However keep in mind the following:
 
