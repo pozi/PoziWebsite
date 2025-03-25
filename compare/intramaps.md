@@ -84,7 +84,7 @@ Every Pozi site provides a public-facing map view by default.
 
 Synchronise selected datasets from your network to the cloud for viewing by the public.
 
-<br/>
+<br/><br/>
 
 ### Unified Map
 
@@ -136,7 +136,7 @@ Live data integrations, web-optimised data formats, and in-browser geo-processin
 
 <img src="../../static/img/undraw/undraw_dev_focus_re_6iwt.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
-Pozi invests for the future by keeping Pozi up-to-date with modern web technologies. We work with open source HTML5 technologies including [React](https://reactjs.org/), [Material UI](https://mui.com/), [OpenLayers 9](https://openlayers.org/), [TurfJS](https://turfjs.org/) and [GeoStyler](https://geostyler.org/) to ensure high performance, compatibility with modern data sources, and a high quality user experience.
+Pozi invests for the future by keeping Pozi up-to-date with modern web technologies. We work with open source HTML5 technologies including [React](https://reactjs.org/), [Material UI](https://mui.com/), [OpenLayers 10](https://openlayers.org/), [TurfJS](https://turfjs.org/) and [GeoStyler](https://geostyler.org/) to ensure high performance, compatibility with modern data sources, and a high quality user experience.
 
 IntraMaps is built on an outdated version of OpenLayers, which ceased development in 2013. IntraMaps' performance and functionality remain tied to an ageing, unsupported code base, limiting its ability to innovate any further.
 
@@ -237,7 +237,7 @@ When you fund the development of new features, you have ongoing access to the ne
 | Custom development available | ❌ | ✔️ |
 | <big>**Technology**</big> | | |
 | Supported map servers | MapServer | **QGIS Server**<br/>GeoServer<br/>MapServer<br/>ArcGIS Server |
-| Mapping Javascript library | OpenLayers v2<br/>(2013) | OpenLayers v10<br/>(2024) |
+| Mapping Javascript library | OpenLayers v2<br/>(2013) | OpenLayers v10<br/>(2025) |
 | OGC standards compliant (WMS/WFS) | ✔️ | ✔️ |
 | Web optimised formats (Mapbox Vector Tiles, COG, FlatGeobuf) |  ❌  | ✔️ |
 | <big>**Data Integrations**</big> | | |

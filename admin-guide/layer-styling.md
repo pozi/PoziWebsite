@@ -40,6 +40,8 @@ Additional tips:
 * it isn't possible to style WMS layers in QGIS, however if the layer is also served using WFS, the WFS layer can be styled, and the exported SLD can also be used for the WMS layer
 * if a layer (or legend) is not being styled correctly, it may be a result of the version of SLD.  Newer versions of QGIS export SLD v1.1.0.  As an example, the DEECA Geoserver WMS instance (https://opendata.maps.vic.gov.au/geoserver/wms), doesn't correctly portray SLD v1.1.0 legends, but this is fixed if the SLD is converted to v1.0.0.  GeoStyler (https://geostyler.github.io/geostyler-demo/) can be used to convert files between SLD versions.
 
+==- Legacy Styling
+
 ### Symbols
 
 Symbols can be chosen from any of the following:
@@ -53,3 +55,5 @@ Obtain the URL or icon name for the desired icon.
 
 Bubble symbols can be styled with any of the standard HTML colours listed at:<br/>
 https://html-color-codes.info/color-names/.
+
+==-
