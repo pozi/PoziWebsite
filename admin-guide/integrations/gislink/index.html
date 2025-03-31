@@ -12,24 +12,26 @@
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>data.gov.au | Pozi Web GIS | Online Map</title>
-    <meta name="title" content="data.gov.au | Pozi Web GIS | Online Map">
-    <meta name="description" content="Data.gov.au is a federal government data portal where Australian government organisations can publish open data." />
+    <title>GISLink | Pozi Web GIS | Online Map</title>
+    <meta name="title" content="GISLink | Pozi Web GIS | Online Map">
+    <meta name="description" content="GIS integration for CAF GISLink" />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://pozi.com/admin-guide/integrations/data-gov-au/" />
+    <link rel="canonical" href="https://pozi.com/admin-guide/integrations/gislink/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pozi.com/admin-guide/integrations/data-gov-au/">
-    <meta property="og:title" content="data.gov.au | Pozi Web GIS | Online Map">
-    <meta property="og:description" content="Data.gov.au is a federal government data portal where Australian government organisations can publish open data.">
+    <meta property="og:url" content="https://pozi.com/admin-guide/integrations/gislink/">
+    <meta property="og:title" content="GISLink | Pozi Web GIS | Online Map">
+    <meta property="og:description" content="GIS integration for CAF GISLink">
+    <meta property="og:image" content="https://pozi.com/admin-guide/integrations/img/pozi-to-gislink.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://pozi.com/admin-guide/integrations/data-gov-au/">
-    <meta property="twitter:title" content="data.gov.au | Pozi Web GIS | Online Map">
-    <meta property="twitter:description" content="Data.gov.au is a federal government data portal where Australian government organisations can publish open data.">
+    <meta property="twitter:url" content="https://pozi.com/admin-guide/integrations/gislink/">
+    <meta property="twitter:title" content="GISLink | Pozi Web GIS | Online Map">
+    <meta property="twitter:description" content="GIS integration for CAF GISLink">
+    <meta property="twitter:image" content="https://pozi.com/admin-guide/integrations/img/pozi-to-gislink.png">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -282,112 +284,63 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="datagovau" class="break-words">
+<doc-anchor-target id="gislink" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#datagovau">#</doc-anchor-trigger>
-        <span>data.gov.au</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#gislink">#</doc-anchor-trigger>
+        <span>GISLink</span>
     </h1>
 </doc-anchor-target>
-<p>Data.gov.au is a federal government data portal where Australian government organisations can publish open data.</p>
+<p>GISLink by <a href="https://www.cafconsulting.com.au/">CAF Consulting</a> is a Windows desktop application that enables users to trigger workflows across Windows and web applications.</p>
+<p>Supported applications:</p>
 <ul>
-<li><a href="https://data.gov.au/">data.gov.au website</a></li>
-<li><a href="https://data.gov.au/geoserver/wfs?request=GetCapabilities">WFS GetCapabilities</a></li>
-<li><a href="https://data.gov.au/geoserver/wms?request=GetCapabilities">WMS GetCapabilities</a></li>
-<li><a href="https://data.gov.au/geoserver/web/">GeoServer</a></li>
+<li>SynergySoft</li>
+<li>Conquest</li>
+<li>MapInfo Professional</li>
+<li>Spectrum Spatial Analyst (SSA)</li>
+<li>ArcGIS Online</li>
 </ul>
-<doc-anchor-target id="open-council-data-standards">
+<doc-anchor-target id="link-out">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#open-council-data-standards">#</doc-anchor-trigger>
-        <span>Open Council Data Standards</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#link-out">#</doc-anchor-trigger>
+        <span>Link-Out</span>
     </h2>
 </doc-anchor-target>
-<p>The <a href="http://opencouncildata.org/">Open Council Data Toolkit</a> has recommended standards for commonly published datasets.</p>
-<p>When data is published using the recommended table structure, Pozi can apply some smarts when displaying the results. For instance, when waste collection data uses the conventions specified in the <a href="http://standards.opencouncildata.org/#/garbage-collection-zones">garbage collection</a>, Pozi will use the information in the table to calculate and display the next waste collection date.</p>
-<doc-anchor-target id="formats">
+<p><img src="../img/pozi-to-gislink.png" style="width:300px" alt="" /></p>
+<ol>
+<li>select feature in Pozi</li>
+<li>highlight the feature&#x27;s ID value</li>
+<li>press the GISLink shortcut key (eg <code v-pre>Ctrl+G</code>)</li>
+<li>GISLink will open the application of your choice and pick the feature based on its ID</li>
+</ol>
+<doc-anchor-target id="link-in">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#formats">#</doc-anchor-trigger>
-        <span>Formats</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#link-in">#</doc-anchor-trigger>
+        <span>Link-In</span>
     </h2>
 </doc-anchor-target>
-<doc-anchor-target id="geojson">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#geojson">#</doc-anchor-trigger>
-        <span>GeoJSON</span>
-    </h3>
-</doc-anchor-target>
-<p>Any the GeoJSON files published to data.gov.au are directly loaded by Pozi. Any changes to GeoJSON files will be live the next time you open Pozi.</p>
-<doc-anchor-target id="shapefile">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#shapefile">#</doc-anchor-trigger>
-        <span>Shapefile</span>
-    </h3>
-</doc-anchor-target>
-<p>Shapefiles are converted into WMS and WFS endpoints after an overnight &#x27;ingestion&#x27; process.</p>
-<p>After ingestion, the data is available via the following API endpoints:</p>
-<ul>
-<li>WFS: suitable for datasets with a few thousand features or fewer</li>
-<li>WMS: suitable for larger datasets</li>
-</ul>
-<p>Preparation:</p>
-<ul>
-<li>must be WGS84</li>
-<li>must be zipped</li>
-<li>zip file can have the extension <code v-pre>.zip</code> or <code v-pre>.shz</code></li>
-</ul>
-<doc-anchor-target id="csv">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#csv">#</doc-anchor-trigger>
-        <span>CSV</span>
-    </h3>
-</doc-anchor-target>
-<p>CSVs are ingested into the data.gov.au Data API where they can be queried. The first row should contain the field headings.</p>
-<p>If the data contains fields named <code v-pre>x</code>, <code v-pre>y</code>, <code v-pre>longitude</code>, <code v-pre>lng</code>, <code v-pre>lon</code>, <code v-pre>long</code>, <code v-pre>latitude</code> or <code v-pre>lat</code>, Pozi will use these to generate point geometries for each feature.</p>
-<p>Example request: <a href="https://data.gov.au/api/action/datastore_search_sql?sql=SELECT%20*%20from%20%22306f9e0d-581a-4506-8de9-20283f4334a1%22">https://data.gov.au/api/action/datastore_search_sql?sql=SELECT%20*%20from%20%22306f9e0d-581a-4506-8de9-20283f4334a1%22</a></p>
-<doc-anchor-target id="sld">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#sld">#</doc-anchor-trigger>
-        <span>SLD</span>
-    </h3>
-</doc-anchor-target>
-<p>Data files can be accompanied by SLD style files, which will be used by Pozi to style the layer.</p>
-<doc-anchor-target id="integration-with-pozi-cloud">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#integration-with-pozi-cloud">#</doc-anchor-trigger>
-        <span>Integration with Pozi Cloud</span>
-    </h2>
-</doc-anchor-target>
-<p>By special arrangement, selected datasets can be imported/synchronised to the Pozi Cloud for caching and/or joining with other datasets.</p>
-<p>Examples:</p>
-<ul>
-<li>Bendigo - SHZ datasets are synced overnight for caching</li>
-<li>Macedon Ranges - zipped Shapefiles are synced overnight for caching</li>
-<li>Frankston - Councillor Details CSV exported and joined with Vicmap Admin Ward boundaries</li>
-<li>Frankston - Council Facilities GeoJSON is dynamically split into separate layers</li>
-</ul>
-<doc-anchor-target id="alternative-to-datagovau">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#alternative-to-datagovau">#</doc-anchor-trigger>
-        <span>Alternative to data.gov.au</span>
-    </h2>
-</doc-anchor-target>
-<p>Pozi Enterprise enables organisations to synchronise local datasets directly to the Pozi Cloud. <a href="/contact/">Contact us</a> to discuss if this option is right for your organisation.</p>
-<doc-anchor-target id="support">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#support">#</doc-anchor-trigger>
-        <span>Support</span>
-    </h2>
-</doc-anchor-target>
-<p>Data.gov.au is now supported by the Australian Bureau of Statistics.</p>
-<p>Contact <a href="mailto:support@data.gov.au">support@data.gov.au</a> and allow for up to 5 business days turn around.</p>
-<p>Follow updates about any known issues and developments at <a href="https://data.gov.au/page/recent-developments">https://data.gov.au/page/recent-developments</a>.</p>
+<p>Configure GISLink with Pozi&#x27;s standard <a href="../../link-in/">link-In</a> parameters.</p>
+<p>For example: <code v-pre>https://sitename.pozi.com/#/feature[layername.fieldname,idvalue]/</code></p>
 
-                                
+                                <div class="flex items-center mt-6 mb-6 clear-both">
+                                    <span>
+                                        <a href="../../../tags/">
+                                            <svg class="inline-block -mb-px mr-1.5 text-blue-500 dark:text-blue-400" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" overflow="visible" fill="currentColor"><g><path d="M21.3 9.88l-8.59-8.59C12.52 1.11 12.27 1 12 1H2c-.55 0-1 .45-1 1v10c0 .27.11.52.29.71l8.59 8.58c.57.57 1.32.88 2.12.88s1.55-.31 2.12-.88l7.17-7.17a3.009 3.009 0 00.01-4.24zm-1.42 2.82l-7.17 7.17c-.39.39-1.02.39-1.42 0L3 11.59V3h8.59l8.29 8.29c.39.39.39 1.03 0 1.41z" /><path d="M7.01 6C6.45 6 6 6.45 6 7s.45 1 1 1 1-.45 1-1-.44-1-.99-1z" /></g></svg>
+                                        </a>
+                                        <span class="mr-2"><a href="../../../tags/pozi-enterprise/" class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+                                    <span>pozi enterprise</span>
+                                </a></span>
+                                        <span class="mr-2"><a href="../../../tags/mansfield-shire-council/" class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+                                    <span>mansfield shire council</span>
+                                </a></span>
+                                    </span>
+                                </div>
+                
                                 <!-- Required only on API pages -->
                                 <doc-toolbar-member-filter-no-results />
                             </div>
                             <footer class="clear-both">
                                 <div class="flex flex-wrap items-center justify-between mt-14">
-                                    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/pozi/PoziWebsite/blob/main/admin-guide/integrations/data-gov-au.md" target="_blank" rel="noopener">
+                                    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/pozi/PoziWebsite/blob/main/admin-guide/integrations/gislink.md" target="_blank" rel="noopener">
                                         <svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M20 12c-.55 0-1 .45-1 1v7c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h7c.55 0 1-.45 1-1s-.45-1-1-1H4C2.35 3 1 4.35 1 6v14c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-7c0-.55-.45-1-1-1z" /><path d="M22.21 1.79c-1.18-1.18-3.24-1.18-4.41 0l-9.5 9.5c-.13.13-.22.29-.26.46l-1 4c-.08.34.01.7.26.95.18.2.44.3.7.3.08 0 .16-.01.24-.03l4-1c.18-.04.34-.13.46-.26l9.5-9.5c1.22-1.22 1.22-3.2.01-4.42zm-1.42 3l-9.3 9.3-2.11.53.53-2.11 9.3-9.3c.42-.42 1.16-.42 1.59 0 .43.43.43 1.15-.01 1.58z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         <span>Edit this page</span>
                                     </a>
@@ -395,20 +348,20 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../admin-guide/integrations/councilwise/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../admin-guide/integrations/delwp-web-services/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Council​Wise</span>
+                                                <span class="block mt-1">DEECA Web Services</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../admin-guide/integrations/delwp-web-services/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../admin-guide/integrations/google-maps-platform/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">DEECA Web Services</span>
+                                                <span class="block mt-1">Google Maps Platform</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -472,6 +425,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "data.gov.au", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "GISLink", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
