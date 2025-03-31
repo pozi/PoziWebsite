@@ -21,6 +21,7 @@ Pozi's open architecture enables it to integrate seamlessly with a wide range of
 * [DELWP Web Services](./delwp-web-services/)
 * Geocode Earth
 * GeoSciences Australia
+* [GISLink](./gislink/)
 * Google Sheets
 * [Google Maps Platform](./google-maps-platform/)
 * Greenlight
