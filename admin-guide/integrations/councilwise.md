@@ -16,7 +16,3 @@ For example:
 
 - https://apps.councilwise.com.au/Module/Property/Details?filter=Property%20Number=913
 - https://apps.councilwise.com.au/Module/Property/Details/913
-
-## Link-In
-
-https://cwapp-help.helpdocs.com/properties/gis-integration
