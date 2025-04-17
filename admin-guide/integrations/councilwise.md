@@ -20,7 +20,3 @@ For example:
 ## Link-In
 
 https://cwapp-help.helpdocs.com/properties/gis-integration
-
-## Data API
-
-https://cwapp-help.helpdocs.com/general/setting-up-using-a-3rd-party-app-integration-api
