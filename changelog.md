@@ -17,6 +17,26 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## 2025
 
+### April 2025
+
+#### 👍 Improved
+
+- support for all QGIS default symbols and fill styles
+- maintain target in its native geometry
+  - display point targets that are added via Ctrl-click
+  - display polyline targets cleanly
+  - simplify URLs containing target geometries
+- activate basemap fallback in more scenarios
+- upgrade to OpenLayers 10.4
+
+#### 🪲 Fixed
+
+- stop text annotations reverting to points after specific user actions
+- prevent 'negative buffer' error when loading site with a line selection
+- prevent staging site attempting to load internal layers when it shouldn't
+- disable Share options that aren't supported
+- enable legend images from services that don't support CORS
+
 ### March 2025
 
 #### ⚡ New
@@ -53,6 +73,8 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 - Hide empty results pane for vector layers
 - Enable Pozi to load with non-default basemap
+- Switch to next basemap if current basemap fails to load
+- Don't zoom in too far when doing a link-in on a point feature
 - Zoom map to within layer's visible scale when record is selected from the table view
 - Allow 'Annotation' to be used a layer name
 - Improve highlight consistency
