@@ -231,15 +231,14 @@ When you fund the development of new features, you have ongoing access to the ne
 | Interactive table | ❌ | ✔️ |
 | Tooltips | ❌ | ✔️ |
 | <big>**Administration**</big> | | |
-| Configuration tool(s) | MapManager & ConfigManager | **QGIS** |
+| Configuration tool(s) | MapManager & ConfigManager | QGIS |
 | SQL queries | ✔️ | ✔️ |
 | Online reference and training material | ❌ | ✔️ |
 | Custom development available | ❌ | ✔️ |
 | <big>**Technology**</big> | | |
-| Supported map servers | MapServer | **QGIS Server**<br/>GeoServer<br/>MapServer<br/>ArcGIS Server |
+| Map Server | MapServer | QGIS Server |
 | Mapping Javascript library | OpenLayers v2<br/>(2013) | OpenLayers v10<br/>(2025) |
 | OGC standards compliant (WMS/WFS) | ✔️ | ✔️ |
-| Web optimised formats (Mapbox Vector Tiles, COG, FlatGeobuf) |  ❌  | ✔️ |
 | <big>**Data Integrations**</big> | | |
 | Cloud database | ✔️ | ✔️ |
 | On-premise databases and files | ❌ | ✔️ |
@@ -269,6 +268,6 @@ But with Pozi, your organisation's GIS is no longer locked to single software ve
 
 ### On a contract?
 
-If you're stuck in another contract, talk to us. Not only can we get you up and running with Pozi straight away, we'll provide credit to cover your use of Pozi during the remainder of your existing contract. Run Pozi and IntraMaps in parallel for as long as you need to make a seamless transition.
+If you're stuck in another contract, talk to us. We have flexible options to make a seamless transition to Pozi.
 
 [!button variant="info" size="xl" corners="pill" text="&nbsp;Get started"](/contact/)

@@ -28,6 +28,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
   - simplify URLs containing target geometries
 - activate basemap fallback in more scenarios
 - upgrade to OpenLayers 10.4
+- enable compact info view by default for all sites
 
 #### 🪲 Fixed
 
@@ -35,7 +36,6 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - prevent 'negative buffer' error when loading site with a line selection
 - prevent staging site attempting to load internal layers when it shouldn't
 - disable Share options that aren't supported
-- enable legend images from services that don't support CORS
 
 ### March 2025
 
