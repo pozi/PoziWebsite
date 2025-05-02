@@ -12,21 +12,21 @@ Pozi's *hybrid cloud* architecture connects users directly to live, authoritativ
 
 ​Pozi utilises many data APIs, most of which are public data catalogues made available by government and commercial providers.
 
-In addition, Pozi *Enterprise Cloud* sites have Pozi Server installed on their network which acts as an API for the organisation's internal datasets. The internal datasets are authorised via Microsoft App Proxy (*Enterprise Cloud*).
+In addition, Pozi *Enterprise Cloud* sites have QGIS Server installed on their network which acts as an API for the organisation's internal datasets. The internal datasets are authorised via Microsoft App Proxy.
 
-**Toggle between the tabs below to compare how Pozi interacts with internal datasets.**
-
-+++ Public and Pro
-
-![](/static/draw.io/network-diagram-public-pro.png)
-
-Public users can easily access publicly available data.
+**Toggle between the tabs below to compare how Pozi interacts with internal datasets vs public datasets.**
 
 +++ Enterprise Cloud
 
 ![](/static/draw.io/network-diagram-enterprise-cloud.png)
 
 Users who are signed in to their Microsoft account gain access to corporate data sources through Microsoft App Proxy.
+
++++ Public
+
+![](/static/draw.io/network-diagram-public-pro.png)
+
+Public users can easily access publicly available data.
 
 +++
 
