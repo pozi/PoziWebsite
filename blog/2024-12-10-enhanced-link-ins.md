@@ -39,12 +39,6 @@ https://council.pozi.com/#/feature[parks.fid,15]/
 
 The link-in now turns on the target layer without requiring a separate `layers[...]` parameter to load it. Link-in URLs are more self-contained, making them easier to generate, share and use.
 
-## Limitations
-
-The new link-in will work for any ***vector*** layer in your map. Layers that are not exposed as a vector layer, or are not exposed in the layer panel, do not currently support link-ins.
-
-However, we're currently working to support link-ins for larger datasets that are not normally exposed in the layer panel. Stay tuned!
-
 ## Try It Out
 
 This enhancement is part of our ongoing commitment to make spatial data sharing and collaboration as seamless as possible. Try it out today and let us know what you think!
