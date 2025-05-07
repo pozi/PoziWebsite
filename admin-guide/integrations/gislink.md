@@ -27,6 +27,6 @@ Supported applications:
 
 ## Link-In
 
-Configure GISLink with Pozi's standard [link-In](/admin-guide/link-in/) parameters.
+Configure GISLink with Pozi's standard [link-In](/admin-guide/link-ins/) parameters.
 
 For example: `https://sitename.pozi.com/#/feature[layername.fieldname,idvalue]/`

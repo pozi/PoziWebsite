@@ -65,7 +65,7 @@ Evaluate the pros and cons of using vectors for your layer, and if appropriate, 
   * download
 * when a vector layer is turned on, Pozi loads the entire layer in the browser, including all geometries and attributes. The browser doesn't need to send further requests to the server every time the user moves the map
 * when hovering over a vector feature the cursor changes to indicate the feature is clickable, and a tooltip is displayed with the feature's title
-* vector layers can be used in [link-ins](../link-in.md)
+* vector layers can be used in [link-ins](../link-ins.md)
 
 #### Disadvantages of vector layers
 
