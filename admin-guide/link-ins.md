@@ -126,7 +126,7 @@ https://frankston.pozi.com/#/tab[search]/search[roadresponsibility]/
 
 The URL can also contain a value for the search. Users can pick from any of the result candidates.
 
-https://frankston.pozi.com/#/tab[search]/search[roadresponsibility,way seaford private]/
+https://frankston.pozi.com/#/tab[search]/search[roadresponsibility,seabrook]/
 
 ### Reload
 

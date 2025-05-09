@@ -158,7 +158,7 @@ Pozi *Enterprise Cloud* customers can display their vector point layers using Po
 
 ![](./img/pozi-bubble-symbols-example.png){style="width:600px"}
 
-Ensure the PC on which the QGIS project is being maintained has the Font Awesome icon library installed and configured in QGIS.
+Ensure that your PC (and the server on which QGIS Server is running) has the Font Awesome icon library installed and configured in QGIS.
 
 [!ref icon="typography" text="Configuring Font Awesome"](setting-up-qgis.md#font-awesome)
 
