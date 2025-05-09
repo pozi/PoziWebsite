@@ -1,8 +1,8 @@
 ---
 description: GIS integration for Civica Authority
 icon: dot
-tags: [Pozi Enterprise, URL protocol handler]
-visibility: hidden
+tags: [Pozi Enterprise, URL protocol handler, Kyogle Council]
+visibility:
 ---
 
 # Civica Authority
@@ -14,6 +14,8 @@ Civica [Authority](https://www.civica.com/en-au/product-pages/enterprise-managem
 ### Link-Out
 
 Pozi enable users to launch the Authority application from a property selection to view further information or trigger workflows.
+
+![](./img/civica-authority-link-out.png)
 
 The following examples show the link format that can be used in a standard link (using [virtual fields](/admin-guide/qgis/configuring-layers.md#virtual-fields)) or a [link-out](/admin-guide/link-outs/).
 
@@ -28,6 +30,10 @@ The `aul:` protocol prefix is recognised by Pozi as a valid endpoint and will ma
 
 - `aul:event=runCommand&command=/f rtenq -f pcl_num 123 map`
 - `aul:event=runCommand&command=/f prenq filter auprparc.pcl_num=123`
+
+## Link-In
+
+Contact us for information regarding how to configure an ASPX page to launch Pozi.
 
 ## Authority Altitude
 
