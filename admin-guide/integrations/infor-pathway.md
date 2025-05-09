@@ -1,7 +1,7 @@
 ---
 description: GIS integration for Infor Pathway
 icon: dot
-tags: [Pozi Enterprise, URL protocol handler, Glen Eira City Council]
+tags: [Pozi Enterprise, URL protocol handler, Frankston City Council]
 ---
 
 # Infor Pathway

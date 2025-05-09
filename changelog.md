@@ -36,6 +36,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - prevent 'negative buffer' error when loading site with a line selection
 - prevent staging site attempting to load internal layers when it shouldn't
 - disable Share options that aren't supported
+- prevent map from zooming when double-clicking to finish a line or polygon selection
 
 ### March 2025
 

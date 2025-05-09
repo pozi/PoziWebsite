@@ -37,7 +37,9 @@ Provide these credentials to your Pozi support contact, along with any instructi
 
 Here is list of recommended server specifications:
 
-- **CPU**: 6 Cores, Physical Server using Intel(R) Xeon(R) Gold 5317 CPU @ 3.00GHz CPUs
-- **RAM**: 32 GB
+- **CPU**: Intel(R) Xeon(R) Gold 6300 series
+- **Clock Speed**: 2.60GHz to 3.00GHz
+- **Processors**: 2 to 6
+- **RAM**: 16 GB to 32 GB
 - **SSDs**: Enterprise grade, storage allocation & drive layout designed relevant to your data/layers with capacity for some growth
 - **OS**: Windows Server 2022
