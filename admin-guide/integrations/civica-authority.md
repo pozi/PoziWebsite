@@ -19,7 +19,7 @@ Pozi enable users to launch the Authority application from a property selection 
 
 The following examples show the link format that can be used in a standard link (using [virtual fields](/admin-guide/qgis/configuring-layers.md#virtual-fields)) or a [link-out](/admin-guide/link-outs/).
 
-The `aul:` protocol prefix is recognised by Pozi as a valid endpoint and will make it clickable.
+Pozi recognises the `aul:` protocol prefix as a valid endpoint and makes the link clickable.
 
 #### Prior to Authority 7.1
 
@@ -31,10 +31,14 @@ The `aul:` protocol prefix is recognised by Pozi as a valid endpoint and will ma
 - `aul:event=runCommand&command=/f rtenq -f pcl_num 123 map`
 - `aul:event=runCommand&command=/f prenq filter auprparc.pcl_num=123`
 
-## Link-In
+### Link-In
 
 Contact us for information regarding how to configure an ASPX page to launch Pozi.
+
+---
 
 ## Authority Altitude
 
 *Coming soon*
+
+---
