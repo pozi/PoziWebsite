@@ -12,6 +12,14 @@ A ***map catalogue*** is a collection of map layers, typically in XML format gen
 
 The catalogue is the unit around which the Pozi Publisher workflow is based, either generating catalogues from various sources, modifying catalogues for specific use cases, or extracting information from catalogues.
 
+!!! note
+
+When using Pozi Publisher for generating public catalogues from QGIS projects, ensure the project is configured with the `export=true` keyword to enable the layers to be exported by Pozi Publisher.
+
+Project Properties > QGIS Server > Service Capabilities > Keyword list > type `export=true`
+
+!!!
+
 ## Configuration
 
 Configuration of Pozi Publisher tasks is set up in custom `.INI` files.  These files detail where the source files can be found, where the resulting data will be saved and what format it will take, where to locate the QGIS Server instance, and more.  A simple example of this `.INI` file is provided further down the page.

@@ -124,7 +124,7 @@ All variations of these layer names (with or without spaces or capitalisation) a
 
 Instructions for styling your layers have been moved to a new dedicated page.
 
-[!ref icon="paintbrush" text="Styling layers"](styling-layers.md)
+[!ref icon="paintbrush"](styling-layers.md)
 
 <br/>
 
@@ -248,6 +248,8 @@ Project > Properties > Data Sources > Identifiable > untick to disable layer sel
 ![](img/qgis-layer-identifiable.png){style="width:450px"}
 
 It can be useful to make a layer not selectable if it has a corresponding *What's Here* dataset to avoid the Info Panel returning duplicate results.
+
+[Feature selection link-ins](/admin-guide/link-ins#feature-selection) require the layer to be selectable.
 
 <br/>
 

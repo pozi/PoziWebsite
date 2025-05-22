@@ -94,6 +94,20 @@ This also works for datasets that are configured for What's Here or a custom sea
 
 https://council.pozi.com/#/feature[propertyandrating.land_id,1234797]/
 
+Layers must be configured as [selectable](/admin-guide/qgis/configuring-layers.md#selectability) in QGIS for feature link-ins to work.
+
+#### Multiple Features
+
+Pozi also supports multiple feature link-ins.
+
+Each feature can be specified in its own `feature` parameter.
+
+https://council.pozi.com/#/feature[propertyandrating.land_id,1234797]/feature[propertyandrating.land_id,1234798]/
+
+Alternatively, feature ids can be separated by a comma within a single `feature` parameter.
+
+https://staging.pozi.com/main/#/site[council]/feature[propertyandrating.land_id,1375426,1375562]/
+
 ### Layer Filter
 
 Launch Pozi with a filtered view of the available layers.
@@ -173,10 +187,20 @@ When configuring the links in your application, instead of using `target="_blank
 
 Currently, link-ins that attempt to update the map with a layer setting or feature selection require the `/reload[true]` parameter - see [Reload](#reload) above.
 
+```
+<a href="https://westwimmera.pozi.com/#/search[propertynumber,1018753]/reload[true]/" target="pozi">Test link 1</a>
+<a href="https://westwimmera.pozi.com/#/search[propertynumber,1018530]/reload[true]/" target="pozi">Test link 2</a>
+```
+
 - <a href="https://westwimmera.pozi.com/#/search[propertynumber,1018753]/reload[true]/" target="pozi">Test link 1</a>
 - <a href="https://westwimmera.pozi.com/#/search[propertynumber,1018530]/reload[true]/" target="pozi">Test link 2</a>
 
 The exception is the [Property Identifier (Legacy)](#location-by-property-identifier-legacy) format link-in, which can update the selection without reloading.
+
+```
+<a href="https://westwimmera.pozi.com/?propnum=1018753" target="pozi">Test link 1</a>
+<a href="https://westwimmera.pozi.com/?propnum=1018530" target="pozi">Test link 2</a>
+```
 
 - <a href="https://westwimmera.pozi.com/?propnum=1018753" target="pozi">Test link 1</a>
 - <a href="https://westwimmera.pozi.com/?propnum=1018530" target="pozi">Test link 2</a>

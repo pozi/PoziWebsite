@@ -16,7 +16,13 @@ tags: [Pozi Enterprise, Link-Out, Southern Grampians Shire Council, Cardinia Shi
 
 To generate these links, see the instructions for working with [virtual fields](../qgis/configuring-layers#virtual-fields).
 
-#### Conquest On-Premise
+#### Conquest Desktop
+
+``` Asset Example
+conquest://link.conquest.live/?objectType=Asset&objectId=44930
+```
+
+#### Conquest On-Premise Web Client
 
 ``` Asset Example
 http://conquest/Link.aspx?Connection=Conquest&AssetID=13647

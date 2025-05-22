@@ -28,7 +28,7 @@ icon: paintbrush
 
 Refer to our QGIS styling guide for vector layers:
 
-[!ref icon="paintbrush" text="Styling layers"](./qgis/styling-layers.md)
+[!ref icon="paintbrush"](./qgis/styling-layers.md)
 
 Additional tips:
 
