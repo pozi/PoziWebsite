@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.800087651674">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.801189858839">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.4.0.800087651674" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.801189858839" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.800087651674" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.801189858839" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.800087651674" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.801189858839" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -399,6 +399,18 @@
 <p><a href="https://council.pozi.com/#/feature%5Bparks.fid,15%5D/">https://council.pozi.com/#/feature[parks.fid,15]/</a></p>
 <p>This also works for datasets that are configured for What&#x27;s Here or a custom search. Even though the layer may not be displayed in the layer panel, Pozi can still use feature link-ins to select and highlight the target feature.</p>
 <p><a href="https://council.pozi.com/#/feature%5Bpropertyandrating.land_id,1234797%5D/">https://council.pozi.com/#/feature[propertyandrating.land_id,1234797]/</a></p>
+<p>Layers must be configured as <a href="../qgis/configuring-layers/#selectability">selectable</a> in QGIS for feature link-ins to work.</p>
+<doc-anchor-target id="multiple-features">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#multiple-features">#</doc-anchor-trigger>
+        <span>Multiple Features</span>
+    </h4>
+</doc-anchor-target>
+<p>Pozi also supports multiple feature link-ins.</p>
+<p>Each feature can be specified in its own <code v-pre>feature</code> parameter.</p>
+<p><a href="https://council.pozi.com/#/feature%5Bpropertyandrating.land_id,1234797%5D/feature%5Bpropertyandrating.land_id,1234798%5D/">https://council.pozi.com/#/feature[propertyandrating.land_id,1234797]/feature[propertyandrating.land_id,1234798]/</a></p>
+<p>Alternatively, feature ids can be separated by a comma within a single <code v-pre>feature</code> parameter.</p>
+<p><a href="https://staging.pozi.com/main/#/site%5Bcouncil%5D/feature%5Bpropertyandrating.land_id,1375426,1375562%5D/">https://staging.pozi.com/main/#/site[council]/feature[propertyandrating.land_id,1375426,1375562]/</a></p>
 <doc-anchor-target id="layer-filter">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#layer-filter">#</doc-anchor-trigger>
@@ -509,11 +521,19 @@
 </div>
 </p>
 <p>Currently, link-ins that attempt to update the map with a layer setting or feature selection require the <code v-pre>/reload[true]</code> parameter - see <doc-anchor-trigger to="#reload">Reload</doc-anchor-trigger> above.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">&lt;a href=&quot;https://westwimmera.pozi.com/#/search[propertynumber,1018753]/reload[true]/&quot; target=&quot;pozi&quot;&gt;Test link 1&lt;/a&gt;
+&lt;a href=&quot;https://westwimmera.pozi.com/#/search[propertynumber,1018530]/reload[true]/&quot; target=&quot;pozi&quot;&gt;Test link 2&lt;/a&gt;</code></pre>
+</doc-codeblock></div>
 <ul>
 <li><a href="https://westwimmera.pozi.com/#/search[propertynumber,1018753]/reload[true]/" target="pozi">Test link 1</a></li>
 <li><a href="https://westwimmera.pozi.com/#/search[propertynumber,1018530]/reload[true]/" target="pozi">Test link 2</a></li>
 </ul>
 <p>The exception is the <doc-anchor-trigger to="#location-by-property-identifier-legacy">Property Identifier (Legacy)</doc-anchor-trigger> format link-in, which can update the selection without reloading.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">&lt;a href=&quot;https://westwimmera.pozi.com/?propnum=1018753&quot; target=&quot;pozi&quot;&gt;Test link 1&lt;/a&gt;
+&lt;a href=&quot;https://westwimmera.pozi.com/?propnum=1018530&quot; target=&quot;pozi&quot;&gt;Test link 2&lt;/a&gt;</code></pre>
+</doc-codeblock></div>
 <ul>
 <li><a href="https://westwimmera.pozi.com/?propnum=1018753" target="pozi">Test link 1</a></li>
 <li><a href="https://westwimmera.pozi.com/?propnum=1018530" target="pozi">Test link 2</a></li>
