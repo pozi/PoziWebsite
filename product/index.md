@@ -52,7 +52,7 @@ Unlike traditional GIS software, Pozi is built from the ground up to integrate d
 
 [!ref icon="checklist"](/features/)
 [!ref icon="star"](/showcase/)
-[!ref icon="milestone"](/roadmap/)
+[!ref icon="log"](/changelog/)
 [!ref icon="briefcase"](/pricing/)
 [!ref icon="tools"](/how-it-works/)
 [!ref icon="comment"](/faq/)

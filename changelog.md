@@ -17,6 +17,27 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## 2025
 
+### May 2025
+
+#### ⚡ New
+
+- multi-feature selections and link-ins!
+
+#### 👍 Improved
+
+- improve vector layer search results by prioritising attributes with shorter values
+- when launching from a link-in, zoom the map to a scale at which the layer is visible
+- add Conquest favicon for Conquest desktop links
+
+#### 🪲 Fixed
+
+- clear previous selection tool before starting another one
+- avoid embedded forms being cut off on small devices
+- prevent layer disappearing when assigned the `group` keyword
+- fix "What's within this" functionality for features with complex geometries
+- eliminate unneeded Street View requests
+- when displaying a feature in the info panel as the result of a search or a link-in, display the feature attributes in the correct order 
+
 ### April 2025
 
 #### 👍 Improved

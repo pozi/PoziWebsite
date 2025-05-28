@@ -102,11 +102,11 @@ Pozi also supports multiple feature link-ins.
 
 Each feature can be specified in its own `feature` parameter.
 
-https://council.pozi.com/#/feature[propertyandrating.land_id,1234797]/feature[propertyandrating.land_id,1234798]/
+https://council.pozi.com/#/feature[propertyandrating.land_id,1375426]/feature[propertyandrating.land_id,1375562]/
 
 Alternatively, feature ids can be separated by a comma within a single `feature` parameter.
 
-https://staging.pozi.com/main/#/site[council]/feature[propertyandrating.land_id,1375426,1375562]/
+https://council.pozi.com/#/feature[propertyandrating.land_id,1375426,1375562]/
 
 ### Layer Filter
 
