@@ -18,7 +18,8 @@ Pozi's open architecture enables it to integrate seamlessly with a wide range of
 * [Conquest](./conquest/)
 * [CouncilWise](./councilwise/)
 * [data.gov.au](./data-gov-au/)
-* [DELWP Web Services](./delwp-web-services/)
+* [Datacom Datascape](./datacom-datascape/)
+* [DEECA Web Services](./delwp-web-services/)
 * Geocode Earth
 * GeoSciences Australia
 * [GISLink](./gislink/)
