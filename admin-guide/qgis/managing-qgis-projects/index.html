@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.803694709008">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.803975259125">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.803694709008" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.803975259125" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.803694709008" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.803975259125" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.803694709008" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.803975259125" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -486,8 +486,16 @@
     </h2>
 </doc-anchor-target>
 <doc-panels>
-   <doc-panel id="none-of-the-project-s-layers-are-displaying-in-pozi" collapsed>
-       <template #title>None of the project&#x27;s layers are displaying in Pozi</template>
+   <doc-panel id="some-or-all-layers-do-not-appear-in-pozi" collapsed>
+       <template #title>Some or all layers do not appear in Pozi</template>
+<p>QGIS projects can fail to return layers if there are <em>projection transformations</em> specified the in the project.</p>
+<p>Remove any transformations from the project, then save the project and try again.</p>
+<p>Project &gt; Properties &gt; Transformations &gt; select and remove any listed transformations</p>
+<p><img src="../img/qgis-remove-transformations.png" style="width:600px" alt="" /></p>
+<p>As a preventive measure, see <a href="../setting-up-qgis/#transformation-settings">this page</a> about disabling QGIS&#x27;s prompt that causes transformation settings to be added to the project.</p>
+   </doc-panel>
+   <doc-panel id="none-of-the-project-s-layers-appear-in-pozi" collapsed>
+       <template #title>None of the project&#x27;s layers appear in Pozi</template>
 <p>For Azure implementations, ensure that QGIS Server WMS and WFS Advertised URLs are blank. For non-Azure implementations, ensure the Advertised URL contains the exact path and file name of the .qgs project file.</p>
 <p>Ensure that <code v-pre>Use layer ids as names</code> is NOT ticked. See Project &gt; Properties &gt; QGIS Server &gt; WMS.</p>
 <p>Check the Network panel in your browser console as you turn on layers. Look at the <code v-pre>GetFeature</code> requests and preview the response. If it contains bounding box coordinates but no records, there may be an issue with IIS.</p>
