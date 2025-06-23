@@ -15,6 +15,14 @@ Settings > Options > General > Project Files
 * Prompt for confirmation when a layer is to be removed: untick
 * Default project file format: QGS Project
 
+## Transformation Settings
+
+QGIS projects can sometimes fail to return all layers if there are *projection transformations* specified the in project. You can prevent QGIS prompting you to save transformations in the project by unticking the following setting.
+
+Settings > Options > CRS and Transforms > Coordinate Transforms > Ask for datum transformation if several are available: UNTICK
+
+![](img/qgis-disable-transformation-prompt.png){style="width:600px"}
+
 ## View Settings
 
 When opening a layer's attribute table, the default behaviour for QGIS is to open it as a separate window. Use the following setting to instead dock attribute tables under the map in the current QGIS window.

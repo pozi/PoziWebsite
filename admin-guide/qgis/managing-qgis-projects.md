@@ -186,7 +186,19 @@ During this time, and any time afterwards, you may continue to [add and configur
 
 ## Troubleshooting
 
-==- None of the project's layers are displaying in Pozi
+==- Some or all layers do not appear in Pozi
+
+QGIS projects can fail to return layers if there are *projection transformations* specified the in the project.
+
+Remove any transformations from the project, then save the project and try again.
+
+Project > Properties > Transformations > select and remove any listed transformations
+
+![](img/qgis-remove-transformations.png){style="width:600px"}
+
+As a preventive measure, see [this page](/admin-guide/qgis/setting-up-qgis/#transformation-settings) about disabling QGIS's prompt that causes transformation settings to be added to the project.
+
+==- None of the project's layers appear in Pozi
 
 For Azure implementations, ensure that QGIS Server WMS and WFS Advertised URLs are blank. For non-Azure implementations, ensure the Advertised URL contains the exact path and file name of the .qgs project file.
 
