@@ -17,6 +17,32 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## 2025
 
+### June 2025
+
+#### ⚡ New
+
+- **Scale-aware legends**: The legend now updates as you zoom in and out for layers that are styled to display differently at different scales.
+- **Custom legends**: Don't like a layer's default legend? Use a custom legend by specifying an image URL in the layer's legend settings in the QGIS project.
+
+#### 👍 Improved
+
+- **Improved wildcard support for WFS searches**: Search for items containing text anywhere in the string:
+  - search for "smith" will find "JOHN SMITH"
+  - search for "3 albert" will find "1/3 ALBERT STREET"
+  - search for "4 station" will find "2-4 STATION STREET"
+  - search for "PS765432" will find "1\PS765432"
+- **Link-outs for Civica Authority**: Use Pozi's dynamic link-outs to launch the Civica Authority desktop application (and any other application that uses custom URL protocols such as `aul:`)
+
+#### 🪲 Fixed
+
+- **WMS legends**: Restore legends for private WMS layers.
+- **Link-in layer status**: Ensure layer panel shows the link-in layer as active.
+- **Permission issues in Edge**: Improve Pozi's method of fetching Entra account information to ensure group restrictions work in Edge.
+- **Share links**:
+  - enable custom links to use hyphens and underscores
+  - stop including a parameter to open the Tools tab
+- **Feature highlight**: Prevent highlight from disappearing when basemap or imagery is toggled.
+
 ### May 2025
 
 #### ⚡ New
@@ -37,6 +63,7 @@ We also offer clients the opportunity to sponsor development of new features, gi
 - fix "What's within this" functionality for features with complex geometries
 - eliminate unneeded Street View requests
 - when displaying a feature in the info panel as the result of a search or a link-in, display the feature attributes in the correct order 
+- restore background colour override for Vicmap vector tile basemap
 
 ### April 2025
 
