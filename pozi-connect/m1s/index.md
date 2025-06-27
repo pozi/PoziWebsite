@@ -29,6 +29,8 @@ Download and unzip the following MapInfo or SHP datasets to the predefined locat
 - [Vicmap Address](https://datashare.maps.vic.gov.au/search?q=uuid%3Db9e9146d-8378-5c37-b6cd-63e3a8d05d02)
 - [Vicmap Property Simplified 1](https://datashare.maps.vic.gov.au/search?q=uuid%3Da752b99e-baee-502e-a58b-7d15fa6c57cd)
 
+![alt text](img/datashare-order.png)
+
 (If you do not know the predefined locations on your network for these datasets, launch Pozi Connect and pick the M1 task that relates to importing Vicmap. The network location is shown there.)
 
 If you have not already done so, set up a weekly repeat order for both datasets at [DEECA DataShare](https://datashare.maps.vic.gov.au/).
@@ -41,7 +43,7 @@ The behaviour of unzipping a file can vary depending on the setup of your PC. Wi
 
 The important thing is that you are aiming to overwrite the files in the main Vicmap Address and Vicmap Property Simplified folder(s).
 
-If you find that unzipping the zip file puts the new files into another location (eg, into series of subfolders like `mga94_55\mapinfo\lga_polygon\bayside\VMPROP\`), then you can see that it's gone wrong. All the individual table files need to be moved into the main folder(s) for Vicmap Address and Vicmap Property Simplified.
+If you find that unzipping the zip file puts the new files into another location (eg, into series of subfolders like `mga2020_54\esrishape\lga_polygon\WEST WIMMERA-1000\VMPROP\`), then you can see that it's gone wrong. All the individual table files need to be moved into the main folder(s) for Vicmap Address and Vicmap Property Simplified.
 
 Confirm that the dates of the files in these main folder(s) correspond to the date of the zip file to ensure that you've extracted the files to the correct location.
 
