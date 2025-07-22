@@ -17,6 +17,12 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## 2025
 
+### July 2025
+
+#### 👍 Improved
+
+- **Feature options for all results**: The feature menu (which includes options for "What's within this", "What's around this" and optional linkouts) is now available when the layer's results display mode is set to show all attributes at the top level (using the `promoteDetails` option)
+
 ### June 2025
 
 #### ⚡ New
