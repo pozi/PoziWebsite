@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.806486233358">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.806647678719">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.806486233358" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.806647678719" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.806486233358" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.806647678719" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.806486233358" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.806647678719" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -306,14 +306,6 @@
         <span>Configuration</span>
     </h2>
 </doc-anchor-target>
-<p>Two configuration options exist for data widgets:</p>
-<ul>
-<li><strong>Standard</strong> (typical): for any result that appears in the <em>What&#x27;s Here</em> section in the Info Panel of the Pozi map app</li>
-<li><strong>CKAN</strong>: for any dataset is published as a WFS on data.gov.au (and which doesn&#x27;t appear in the <em>What&#x27;s Here</em> section)</li>
-</ul>
-<doc-tabs>
-<doc-tab id="standard">
-<template #title>Standard</template>
 <p>Any result that appears in the <em>What&#x27;s Here</em> section in the Info Panel of your site can be exposed in a Pozi data widget. All you need is the name of the dataset (as displayed in the relevant tab heading).</p>
 <p><code v-pre>https://</code> + <code v-pre>site</code> + <code v-pre>/#/card[</code> + <code v-pre>dataset</code> + <code v-pre>]/widget[true]/</code></p>
 <p>Example:</p>
@@ -325,50 +317,6 @@
 <p><code v-pre>https://</code> + <code v-pre>strathbogie.pozi.com</code> + <code v-pre>/#/card[</code> + <code v-pre>wastecollection</code> + <code v-pre>]/widget[true]/</code></p>
 <p>Widget URL: <a href="https://strathbogie.pozi.com/#/card%5Bwastecollection%5D/widget%5Btrue%5D/">https://strathbogie.pozi.com/#/card[wastecollection]/widget[true]/</a></p>
 <p>The resulting widget displays a table view of the results for the address specified by the user. See the Options section below for customising the results.</p>
-</doc-tab>
-<doc-tab id="ckan">
-<template #title>CKAN</template>
-<p>Any dataset that is published as a data.gov.au WFS service can be configured as a data widget, regardless of whether is appears in the map app&#x27;s What&#x27;s Here section.</p>
-<p><code v-pre>https://</code> + <code v-pre>site</code> + <code v-pre>/#ckan=</code> + <code v-pre>ckan id</code> + <code v-pre>&amp;widget=true</code></p>
-<doc-anchor-target id="obtaining-the-ckan-id">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#obtaining-the-ckan-id">#</doc-anchor-trigger>
-        <span>Obtaining the CKAN id</span>
-    </h4>
-</doc-anchor-target>
-<div class="table-wrapper scrollbar overflow-hidden">
-<table class="comfortable">
-<thead>
-<tr>
-<th>Step</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1.</td>
-<td>obtain the dataset&#x27;s page on data.gov.au</td>
-<td><code v-pre>https://data.gov.au/dataset/ds-dga-f5d810f3-9b62-43c9-9a4e-e3afda01fe62/details?q=</code></td>
-</tr>
-<tr>
-<td>2.</td>
-<td>isolate the dataset id</td>
-<td><code v-pre>ds-dga-f5d810f3-9b62-43c9-9a4e-e3afda01fe62</code></td>
-</tr>
-<tr>
-<td>3.</td>
-<td>replace existing prefix with ckan prefix</td>
-<td><code v-pre>ckan_f5d810f3-9b62-43c9-9a4e-e3afda01fe62</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>The final URL will look like this:</p>
-<p><code v-pre>https://northerngrampians.pozi.com/#ckan=ckan_f5d810f3_9b62_43c9_9a4e_e3afda01fe62&amp;widget=true</code></p>
-<p>The results from the data.gov.au API will not have any data transformers applied. If you require any data manipulation (such as waste collection calculations), you can specify them a parameters in the widget URL. See Data Transformer details below.</p>
-</doc-tab>
-</doc-tabs>
 <doc-anchor-target id="options">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#options">#</doc-anchor-trigger>
@@ -402,15 +350,6 @@
 </doc-anchor-target>
 <p>By default the font size of the widget text is set to 18. However, you can specify a different font size by using the optional font size parameter, for example:</p>
 <p><code v-pre>fontsize=10</code></p>
-<doc-anchor-target id="data-transformer">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#data-transformer">#</doc-anchor-trigger>
-        <span>Data Transformer</span>
-    </h3>
-</doc-anchor-target>
-<p>If using the standard (not CKAN) configuration option, any transformers are already applied within the Pozi app, so there is typically no need to configure any transformer in the widget URL.</p>
-<p>However, if using the CKAN option, the results will not have any transformers applied, and so you can specify them here in the widget URL.</p>
-<p><code v-pre>transformer=garbage</code></p>
 <doc-anchor-target id="troubleshooting">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#troubleshooting">#</doc-anchor-trigger>
