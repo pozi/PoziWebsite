@@ -36,7 +36,7 @@ Victoria's 79 councils maintain the source of truth for much of the state's prop
 
 <img src="/static/img/undraw/undraw_small_town_re_7mcn.svg" alt="" style="float:left;width:250px;margin:0px 40px;">
 
-The Victorian [Department of Energy, Environment and Climate Action](https://deeca.vic.gov.au) (DEECA) relies on this information for its Vicmap Address and Property datasets. However, the current data exchange process puts responsibility on under-resourced councils to frequently prepare and submit lists of property data updates via complex spreadsheets ([M1s](https://www.land.vic.gov.au/maps-and-spatial/data-services/vicmap-helpdesk/m1-process)).
+The Victorian [Department of Transport and Planning](https://www.vic.gov.au/department-transport-and-planning) (DTP) relies on this information for its Vicmap Address and Property datasets. However, the current data exchange process puts responsibility on under-resourced councils to frequently prepare and submit lists of property data updates via complex spreadsheets ([M1s](https://www.land.vic.gov.au/maps-and-spatial/data-services/vicmap-helpdesk/m1-process)).
 
 <br clear="all" />
 <br/>
@@ -57,7 +57,7 @@ The exchange is made complicated because of the M1 specification:
 * must add information that the council doesn't maintain
   * PFI numbers
   * various flags (outside property, new road, multi-assessment, etc)
-  * edit codes (to instruct DEECA how to update the data)
+  * edit codes (to instruct DTP how to update the data)
 * manual submission process to VES
 * councils receive feedback once a year about how well they're doing
 
@@ -72,14 +72,14 @@ The current system is difficult to automate and innovate upon.
 
 <img src="/static/img/undraw/undraw_process_re_gws7.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
-* councils spend significant time on compiling and supplying data to DEECA that would be better spent on serving the council's own needs
+* councils spend significant time on compiling and supplying data to DTP that would be better spent on serving the council's own needs
 * as staff change or go on leave, there's a breakdown in the process, and it may be weeks or months between critical data updates
 
-#### For DEECA
+#### For DTP
 
 * data quality varies across the state according to how well resourced individual councils are
-* inherent data quality issues - data gridlocks where DEECA can't update Vicmap to reflect the council's version because there is no suitable M1 edit code (eg, changing multi-parcel multi-assessments)
-* it's currently impractical for DEECA to innovate within the M1 system because it would require changing the M1 specification/edit codes and re-educating 79 councils
+* inherent data quality issues - data gridlocks where DTP can't update Vicmap to reflect the council's version because there is no suitable M1 edit code (eg, changing multi-parcel multi-assessments)
+* it's currently impractical for DTP to innovate within the M1 system because it would require changing the M1 specification/edit codes and re-educating 79 councils
 
 ---
 
@@ -91,8 +91,8 @@ The current system is difficult to automate and innovate upon.
 
 It is designed to:
 
-* reduce the friction of data exchange between councils and DEECA
-* eliminate ongoing data discrepancies between councils and DEECA
+* reduce the friction of data exchange between councils and DTP
+* eliminate ongoing data discrepancies between councils and DTP
 * automate property data maintenance to better suit a modern digital cadastre
 
 ### How It Works
@@ -101,9 +101,9 @@ It is designed to:
 
 2. the platform automatically processes and compiles the data into a single uniform property dataset
 
-3. DEECA fetches the combined data from the platform on demand in the format of their choosing (complete extract, diffs, M1s, PIQAs, filtered extracts, audits, discrepancy reports, etc)
+3. DTP fetches the combined data from the platform on demand in the format of their choosing (complete extract, diffs, M1s, PIQAs, filtered extracts, audits, discrepancy reports, etc)
 
-With DEECA having complete access to the combined authoritative property information from every council, they have all the information they need to update Vicmap.
+With DTP having complete access to the combined authoritative property information from every council, they have all the information they need to update Vicmap.
 
 ### Components
 
@@ -117,7 +117,7 @@ A secure cloud-hosted platform provides a centralised source of truth for proper
 * automated workflows for transforming, validating and combining datasets from multiple councils
 * dashboard to provide status of recent loads, match stats, data discrepancy reports, etc
 * interactive web map for performing any manual spatial adjustments such as rural addresses and custom property boundaries
-* API for DEECA to access the council property dataset
+* API for DTP to access the council property dataset
 
 #### Data Sync
 
@@ -143,7 +143,7 @@ Councils may also use their own preferred methods such as FME, PowerShell or oth
 * increase frequency of updates
 * improve data quality by avoiding data gridlocks
 
-#### For DEECA
+#### For DTP
 
 * replacing 79 points of contact with a single source of truth for authoritative council property data for the whole state
 * reduce risk of councils falling behind in providing updates
@@ -175,19 +175,19 @@ We're passionate about solving this problem once and for all.
 
 ==- Is this solution already built?
 
-No. But we will work with DEECA to make it happen if there is sufficient demand.
+No. But we will work with DTP to make it happen if there is sufficient demand.
 
 ==- How does a cloud service help with M1s?
 
-The cloud service provides a clearinghouse where each council's property information is centralised. The service enables DEECA to obtain daily or weekly snapshots of the combined statewide property data. When DEECA has on-demand access to the complete council property information for the whole state, it doesn't need to re-assemble this information from dozens of spreadsheets.
+The cloud service provides a clearinghouse where each council's property information is centralised. The service enables DTP to obtain daily or weekly snapshots of the combined statewide property data. When DTP has on-demand access to the complete council property information for the whole state, it doesn't need to re-assemble this information from dozens of spreadsheets.
 
-To update Vicmap, DEECA will compare what changed between snapshots of the council data and then apply those changes to Vicmap. DEECA can continue to use the M1 format internally for supplying the changes to the Vicmap data maintainer. Or DEECA may develop a more efficient way to get changes into Vicmap. Either way, councils never need to use M1s again.
+To update Vicmap, DTP will compare what changed between snapshots of the council data and then apply those changes to Vicmap. DTP can continue to use the M1 format internally for supplying the changes to the Vicmap data maintainer. Or DTP may develop a more efficient way to get changes into Vicmap. Either way, councils never need to use M1s again.
 
 ==- Why hasn't this been considered in the past?
 
 Most discussions about improving the property data maintenance processes for councils have involved minor improvements to the M1 such as creating new edit codes or adding more fields to the specification.
 
-We have a different idea about how to better exchange data that doesn't rely on spreadsheets. It's a new shared-service approach based on modern technologies, and it involves DEECA taking a greater role in the property data maintenance workflow.
+We have a different idea about how to better exchange data that doesn't rely on spreadsheets. It's a new shared-service approach based on modern technologies, and it involves DTP taking a greater role in the property data maintenance workflow.
 
 ==- Have you considered the challenges of implementing this?
 
@@ -200,13 +200,13 @@ Yes. The challenges include, but are not limited to:
 * transition phase
 * hosting and support considerations
 
-==- How will DEECA's role change in the proposed solution?
+==- How will DTP's role change in the proposed solution?
 
-DEECA currently relies on council staff across Victoria to routinely compile change requests (M1s) detailing which records have changed (PFIs), what to update (property numbers, address attributes), and how to update it (edit codes).
+DTP currently relies on council staff across Victoria to routinely compile change requests (M1s) detailing which records have changed (PFIs), what to update (property numbers, address attributes), and how to update it (edit codes).
 
-Under the proposed solution, DEECA will gain access to a single source of truth of all council property information for the whole state, enabling it to update its Vicmap datasets on demand.
+Under the proposed solution, DTP will gain access to a single source of truth of all council property information for the whole state, enabling it to update its Vicmap datasets on demand.
 
-Instead of DEECA constantly recreating council information from individual change requests, their role will be to validate and merge the council's property attributes from the central source of truth into their Vicmap datasets.
+Instead of DTP constantly recreating council information from individual change requests, their role will be to validate and merge the council's property attributes from the central source of truth into their Vicmap datasets.
 
 ==- Doesn't Pozi already have an M1 solution?
 
@@ -260,7 +260,7 @@ Yes.
 
 Yes. Councils may choose to continue submitting M1s to VES using their current software and workflow.
 
-But ideally, in a scenario in which every council decides to switch, it becomes possible for DEECA to internally process all its updates with a more efficient format than the M1.
+But ideally, in a scenario in which every council decides to switch, it becomes possible for DTP to internally process all its updates with a more efficient format than the M1.
 
 ==- Can this platform be used for managing and sharing other council data?
 
