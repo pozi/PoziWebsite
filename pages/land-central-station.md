@@ -107,30 +107,28 @@ With DEECA having complete access to the combined authoritative property informa
 
 ### Components
 
-The system comprises:
-
-1. a central cloud platform
-2. a data sync tool installed at each council
-
 #### Cloud Platform
 
 A secure cloud-hosted platform provides a centralised source of truth for property information from every Victorian council.
 
 <img src="/static/img/undraw/undraw_server_status_re_n8ln.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
-* API for syncing data from councils
+* data ingestion API for receiving property data from councils
 * automated workflows for transforming, validating and combining datasets from multiple councils
 * dashboard to provide status of recent loads, match stats, data discrepancy reports, etc
 * interactive web map for performing any manual spatial adjustments such as rural addresses and custom property boundaries
 * API for DEECA to access the council property dataset
 
-#### Local File Sync
+#### Data Sync
 
 <img src="/static/img/undraw/undraw_going_up_re_86kg.svg" alt="" style="float:right;width:250px;margin:0px 40px;">
 
-On the council side, a simple data sync tool is installed at each council and configured for their property system to generate and upload a nightly extract of relevant property information.
+A data sync process is set up for each council to extract and transfer the relevant
+property information from a council's property system.
 
-Alternatively, councils may choose to set up FME, PowerShell or any other tool of their choice to push their data to the cloud platform.
+For on-premises systems, a secure data sync tool is installed and configured to generate and upload a nightly extract. For cloud-based systems, a secure API can be used to sync data directly.
+
+Councils may also use their own preferred methods such as FME, PowerShell or other tools to push data to the cloud platform.
 
 ---
 
