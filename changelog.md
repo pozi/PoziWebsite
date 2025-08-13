@@ -17,6 +17,12 @@ We also offer clients the opportunity to sponsor development of new features, gi
 
 ## 2025
 
+### August 2025
+
+#### 👍 Improved
+
+- **Restrict downloads for sensitive layers**: Disable the CSV download button in the table view when the layer is configured as not downloadable.
+
 ### July 2025
 
 #### 👍 Improved
