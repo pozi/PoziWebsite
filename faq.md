@@ -19,6 +19,10 @@ Pozi uses Progressive Web App (PWA) technology, enabling users to add Pozi to th
 
 You can configure what fields your users see by using the layer configuration options in QGIS. You can even modify the field names that your users see, as well as create virtual fields to display values derived or calculated from existing fields. This can all be done without modifying your data or setting up views in SQL Server.
 
+==- Does Pozi comply with Web Content Accessibility Guidelines (WCAG)?
+
+Pozi incorporates accessibility best practices. While interactive maps inherently pose challenges in meeting full WCAG 2.2 Level AA compliance. Pozi provides text descriptions for key elements, enables datasets to be downloaded in text formats, and supports high-contrast colour schemes and adjustable zoom levels for better readability.
+
 ==-
 
 ## Configuration
