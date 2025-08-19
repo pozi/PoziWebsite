@@ -1,5 +1,6 @@
 ---
 route: /iframe-test
+visibility: hidden
 ---
 
 # iFrame Test
