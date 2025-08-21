@@ -24,18 +24,10 @@ When styling *vector layers*, use only the supported styles specified below.
 
 Supported marker symbols:
 
-* Simple Marker
-  * `square`
-  * `circle`
-  * `triangle`
-  * `star`
-  * `cross`
-  * `x`
+* Simple Marker: `square`, `circle`, `triangle`, `star`, `cross`, `x`, etc...
 * SVG Marker
   * QGIS default SVG icons
   * [FontAwesome Pro 6 icons](setting-up-qgis.md#font-awesome)
-
-Note that `diamond`, `cross2`, `cross_fill`, `star_diamond` symbols are not currently supported. Symbol rotation is also not supported.
 
 Suggested sizes:
 
@@ -65,14 +57,8 @@ To style a line with dots and/or dashes:
 
 Supported fills:
 
-* Simple Fill
-  * Solid
-  * No brush (see note below)
-  * Cross
-  * Diagonal X
+* Simple Fill: `Solid`, `No brush`, `Horizontal`, `Vertical`, `Cross`, etc...
 * Point Pattern Fill
-
-![](./img/qgis-layer-styling-simple-fill.png){style="width:350px"}
 
 !!! Note
 
