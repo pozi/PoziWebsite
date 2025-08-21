@@ -63,19 +63,11 @@ Browser > Favorites (right-click) > Add a Directory... > navigate to your GIS da
 
 Also add a shortcut to the UNC location on your PC desktop for extra convenience.
 
+Do not use drive letters in the shortcut, only UNC paths. The domain user running QGIS Server will typically not recognise the any drive mappings that you have on your local PC.
+
 ### Database Connections
 
 Browser > MSSQL (right-click) > New Connection...
-
-### Basemap
-
-![Add Vicmap Basemap](./img/qgis-new-wmts-connection.png){style="width:600px"}
-
-Browser > WMS/WMTS (right-click) > New Connection...
-
-* Name: Vicmap Basemap
-* URL: https://base.maps.vic.gov.au/service
-* OK
 
 ## Font Awesome
 
