@@ -54,3 +54,5 @@ A more comprehensive list can be found at [SRS Explorer](https://spatialreferenc
 | 18 | 2,133 |
 | 19 | 1,066 |
 | 20 | 533 |
+| 21 | 266 |
+| 22 | 133 |

@@ -42,12 +42,6 @@ By default, the opacity of any new layers you add to your QGIS project may be se
 
 It's useful to include a basemap in the project to provide visual context for the layers you will add on top.
 
-#### Vicmap Basemap Example
-
-If you've [set up](/admin-guide/qgis/setting-up-qgis/#basemap) 'Vicmap Basemap' as a WMS/WMTS source, you can easily one of its layers as your basemap.
-
-Browser > WMS/WMTS > Vicmap Basemap > Vicmap Basemap - VicGrid2020 - Cartographic
-
 Ensure that you exclude the basemap from WMS to prevent it appearing in Pozi. See [here](/admin-guide/qgis/configuring-layers#exclude-layers) for more information.
 
 ## Configure Web Services

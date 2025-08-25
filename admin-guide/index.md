@@ -44,8 +44,6 @@ We are excited to invite you to our new community forum exclusively for Pozi adm
 
 Our forum will give you access to new features, exclusive content, and important announcements that will help you get the most out of your Pozi experience. You will also be able to connect with other Pozi users, discuss important topics, and have a little fun along the way.
 
-By joining our community forum, you'll not only stay informed about important information that affects your organization's use of Pozi but also gain access to your monthly usage analytics. This means you'll be able to track how your organization is performing and make data-driven decisions about how to optimize your Pozi usage.
-
 Don't miss out on this opportunity to engage with the Pozi community and get the most out of your Pozi experience. Contact info@pozi.com and request your invitation.
 
 Already a member? Then head on over!

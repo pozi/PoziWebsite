@@ -7,9 +7,7 @@ description: We strive to continually improve Pozi's capabilities. See what's ne
 
 <img src="/static/img/undraw/undraw_completed_m9ci.svg" alt="" style="float:right;width:200px;margin:40px 40px;">
 
-We're constantly working to improve the Pozi experience for our users based on the feedback and feature requests we receive from our clients. This includes developing new functionality, fixing bugs, improving the interface, and optimising performance.
-
-We also offer clients the opportunity to sponsor development of new features, giving them direct input into the specification to ensure it meets their exact requirements.
+We're constantly working to improve the Pozi experience for our users based on the feedback and feature requests we receive from our clients. This includes developing new functionality, improving the user experience, fixing bugs, and optimising performance.
 
 [!button corners="pill" text="&nbsp;Tell us what you want to see in Pozi!"](/contact/)
 
@@ -22,6 +20,11 @@ We also offer clients the opportunity to sponsor development of new features, gi
 #### 👍 Improved
 
 - **Restrict downloads for sensitive layers**: Disable the CSV download button in the table view when the layer is configured as not downloadable.
+- **Updated Vicmap vector tile basemap**: All Victorian sites now have access to the new Vicmap vector tile basemap.
+
+#### 🪲 Fixed
+
+- **Vicmap labels**: Update Vicmap label layer configuration to use maximum available resolution.
 
 ### July 2025
 
