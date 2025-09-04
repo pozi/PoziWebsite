@@ -31,7 +31,6 @@ Pozi's open architecture enables it to integrate seamlessly with a wide range of
 * [Infor Pathway](./infor-pathway/)
 * Jotform
 * [MAGIQ](./magiq/)
-* [MapBox](./mapbox/)
 * MapQuest
 * Mapscape
 * MapTiler
