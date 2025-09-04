@@ -17,9 +17,9 @@ Follow the instructions in the following sections and return here:
 
 Once all work has been completed, please provide Pozi Support with the requested information below.
 
-## Information to send to Pozi Support
+## Information to send
 
-After completion of the configuration, [email](mailto:support@pozi.com) us with the following information:
+After completion of the configuration, email your Pozi reseller's helpdesk with the following information:
 
 - [ ] The **internal** on-premises URL (something like `http://<internal-server-name>/pozi/`)
 - [ ] The **external** application proxy URL (something like `https://poziserver-<entra-application-client-name>.msappproxy.net/pozi/`)
@@ -36,7 +36,7 @@ After completion of the configuration, [email](mailto:support@pozi.com) us with 
 
 ![](img/entra-id-groups-claim-step-3.png)
 
-This information is [not sensitive](https://stackoverflow.com/questions/57306964/are-azure-active-directorys-tenantid-and-clientid-considered-secrets) and can be emailed directly to the Pozi support team at support@pozi.com.
+This information is [not sensitive](https://stackoverflow.com/questions/57306964/are-azure-active-directorys-tenantid-and-clientid-considered-secrets) and can be emailed directly to your Pozi reseller's helpdesk.
 
 In addition to the information above, if you have not done so already, provide the Azure AD credentials (email address and password) of the [Pozi Support](/admin-guide/installation/prerequisites.md#support-account) user account. Please get in touch with us on how to securely provide us with these details.
 

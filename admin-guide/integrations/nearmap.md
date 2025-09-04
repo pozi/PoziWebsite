@@ -20,4 +20,4 @@ Try the interactive view here:
 
 Nearmap customers can generate a dedicated Nearmap API key for use in Pozi.
 
-Follow the instructions at https://help.nearmap.com/kb/articles/650#creating-an-api-key and send your API key to support@pozi.com.
+Follow the instructions at https://help.nearmap.com/kb/articles/650#creating-an-api-key and send your API key to your Pozi reseller's helpdesk.

@@ -11,7 +11,7 @@ description: Get in touch with Pozi!
 #### Email
 
 General enquiries: info@pozi.com<br/>
-Support requests: support@pozi.com
+Support requests: Email your Pozi reseller's helpdesk
 
 #### Phone
 

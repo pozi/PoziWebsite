@@ -167,7 +167,7 @@ Test this URL by pasting it in your browser and check that you get a valid respo
 
 ### Submit Helpdesk Ticket
 
-Email support@pozi.com with these details:
+Email your Pozi reseller's helpdesk with these details:
 
 * subject: New layer catalogue
 * name of new layer group to appear in Pozi layer panel
@@ -210,4 +210,4 @@ Go to Project > Properties > QGIS Server > WMS > `Add geometry to feature respon
 
 ==-
 
-For further assistance, contact support@pozi.com.
+For further assistance, contact your Pozi reseller's helpdesk.

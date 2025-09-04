@@ -25,14 +25,12 @@ Administrators control the following aspects of the Pozi experience:
 
 ## Let Us Help You
 
-For other changes to the Pozi app experience, contact the Pozi Helpdesk:
+For other changes to the Pozi app experience, contact the your Pozi reseller:
 
 * register a new layer catalogue (ie, layer group) in Pozi
 * change the default basemap, search and imagery options
 * update branding
 * solve an issue that's not covered in our Troubleshooting pages
-
-support@pozi.com
 
 ---
 

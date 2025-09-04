@@ -13,7 +13,7 @@ Pozi's Search Panel offers users several options for searching for features and 
 
 ## Preconfigured Searches
 
-Your Pozi site may include one or more preconfigured searches that were included in your site's intial installation. These typically include Address and other search services provided by external providers. If you require any changes to these searches, please contact support@pozi.com.
+Your Pozi site may include one or more preconfigured searches that were included in your site's intial installation. These typically include Address and other search services provided by external providers. If you require any changes to these searches, please contact your Pozi reseller's helpdesk.
 
 ## Generic Searches
 

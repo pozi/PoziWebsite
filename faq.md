@@ -59,11 +59,7 @@ Talk to us about your requirements and priorities, and we can give you a more pr
 
 ==- How is Pozi supported?
 
-We provide technical support via our helpdesk service to enable you to get the most out of Pozi and solve any technical issues. Email and phone support is included in the subscription.
-
-Email [support@pozi.com](mailto:support@pozi.com) or call 03 9017 6850.
-
-We also partner with specialist GIS support providers who can offer a full range of GIS support services, including Pozi customisation, QGIS training, technical consulting and more.
+We partner with specialist GIS support providers who can offer a full range of GIS support services, including Pozi customisation, QGIS training, technical consulting and more.
 
 ==-
 

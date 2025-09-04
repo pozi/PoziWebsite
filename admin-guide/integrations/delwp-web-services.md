@@ -19,7 +19,7 @@ icon: dot
 
 Your DataShare account provides access to your organisation's IWS layers.
 
-If you haven't already, sign up for a DataShare account using an email address that belongs to your organisation, ideally a generic one like gis@example.com. Send your DataShare username and password to support@pozi.com to be added to the proxy service.
+If you haven't already, sign up for a DataShare account using an email address that belongs to your organisation, ideally a generic one like gis@example.com. Send your DataShare username and password to your Pozi reseller's helpdesk.
 
 ​Your username and password are not exposed to the public at all. They reside only on Pozi's proxy server which applies the credentials to each image request that passes through the server. The communication between our proxy server and the IWS is private, so your username and password remain secret.
 

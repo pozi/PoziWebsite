@@ -96,7 +96,7 @@ Service coverage by the Pozi Pty Ltd as outlined in this agreement follows the s
 
 ## 5. Support Engagement
 
-- Primary support contact: support@pozi.com
+- Primary support contact: Email your Pozi reseller's helpdesk
 - Emergency support contact: 03 9017 6850
 
 ## 6. Payment Terms

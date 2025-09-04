@@ -100,7 +100,7 @@ That is all that is needed in Entra ID. Pozi Web App will receive the group info
 ]
 ```
 
-Email support@pozi.com with your list of group ids and what catalogues (ie QGIS projects) each group should have access to.
+Email your Pozi reseller's helpdesk with your list of group ids and what catalogues (ie QGIS projects) each group should have access to.
 
 The group ids can be found under **Identity** ⇒ **Groups** ⇒ **All groups**.
 
