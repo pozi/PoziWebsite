@@ -143,7 +143,15 @@ Layer Properties > Fields > select field > Configuration
 
 ![](./img/qgis-hide-fields.png){style="width:600px"}
 
-Fields that are required for link-ins and link-outs must be exposed via WFS.
+Note that any fields required for any of the following purposes **must remain exposed** via WFS:
+
+- id field for link-in
+- id field for link-out
+- id field for parent/child joins
+- display/title field
+- vector layer specific
+  - styling categories
+  - labels
 
 ### Specify Number of Fields to Initially Reveal
 

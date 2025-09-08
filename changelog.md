@@ -19,12 +19,15 @@ We're constantly working to improve the Pozi experience for our users based on t
 
 #### 👍 Improved
 
-- **Restrict downloads for sensitive layers**: Disable the CSV download button in the table view when the layer is configured as not downloadable.
+- **Improved coordinate search**: Users can now specify a projection when searching for coordinates.
+- **Restrict downloads for sensitive layers**: The CSV download button in the table view is now hidden when the layer is configured as not downloadable.
 - **Updated Vicmap vector tile basemap**: All Victorian sites now have access to the new Vicmap vector tile basemap.
 
 #### 🪲 Fixed
 
-- **Vicmap labels**: Update Vicmap label layer configuration to use maximum available resolution.
+- **Vicmap labels**: Pozi now uses the maximum available resolution of the Vicmap label vector tile layer.
+- **HERE API**: HERE address searches are working again after upgrading to HERE API v7.
+- **URLs with profile parameter**: Launching Pozi with a profile parameter in the URL is working again.
 
 ### July 2025
 

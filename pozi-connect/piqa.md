@@ -46,9 +46,7 @@ Pozi Connect extracts tables from your council's property database and imports t
 
 ==- What else is Pozi Connect capable of?
 
-Pozi Connect has other tricks up its sleeve. It generates map layers from corporate databases (spatial and non-spatial), performs spatial data analysis, converts between data formats (Esri SHP, MapInfo TAB, DXF, KML, and others), loads data into spatial databases (SQL Server 2008, PostGIS, Oracle Spatial), and generally automates many of the tasks that GIS Administrators find themselves doing on a regular basis.
-
-Most importantly, it can [automate your M1 workflow](m1s/index.md).
+Pozi Connect can [automate your M1 workflow](m1s/index.md)!
 
 ==-
 

@@ -58,4 +58,5 @@ Notes:
 
 - URLs can be standard web links (eg `https://`) or any application protocols supported by the user's browser (eg `pathway://`)
 - specify the actual field name, not any field alias
+- field names can't contain spaces - use a virtual field with an alternative name that doesn't include a space
 - ensure that the field is exposed via WFS (ie, not [hidden](/admin-guide/qgis/configuring-layers.md#hide-fields))

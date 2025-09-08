@@ -10,8 +10,6 @@ Pozi Connect is a powerful data extraction and processing application that extra
 
 ![](/static/img/screenshots/pozi-connect-maroondah-m1.png)
 
-It generates map layers from corporate databases (spatial and non-spatial), performs spatial data analysis, converts between data formats (Esri SHP, MapInfo TAB, GeoPackage, KML, CSV, XLS/XLSX, GeoJSON and others), loads data into spatial databases (SQL Server, SQLite/Spatialite, PostGIS, Oracle Spatial), and generally automates many of the tasks that GIS Administrators find themselves doing on a regular basis.
-
 ## Why Use Pozi Connect?
 
 PoziConnect provides a simple interface for accessing, processing, analysing and exporting spatial and non-spatial data.
@@ -27,18 +25,6 @@ It uses the power of the popular open source [GDAL/OGR translator library](https
 ## Use Cases
 
 ### M1
-
-!!!
-
-**Sick of M1s?**
-
-We have a vision to simplify the way Victorian councils integrate their property information into Vicmap.
-
-Read our plan, and have your say!
-
-[!button variant="secondary" size="2xl" text="Land Central Station"](/land-central-station/)
-
-!!!
 
 Pozi Connect M1 is a specialised workflow designed for Victorian municipalities. It uses Pozi Connect's powerful extraction and processing capabilities to generate reports of changes to councils' property and address information to feed into the Vicmap state map base.
 
