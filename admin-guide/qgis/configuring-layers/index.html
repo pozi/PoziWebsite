@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.810279237813">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.810613038147">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.810279237813" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.810613038147" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.810279237813" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.810613038147" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.810279237813" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.810613038147" data-turbo-eval="false" defer></script>
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
@@ -481,7 +481,19 @@
 <li>tick &#x27;Do not expose via WFS&#x27;</li>
 </ul>
 <p><img src="../img/qgis-hide-fields.png" style="width:600px" alt="" /></p>
-<p>Fields that are required for link-ins and link-outs must be exposed via WFS.</p>
+<p>Note that any fields required for any of the following purposes <strong>must remain exposed</strong> via WFS:</p>
+<ul>
+<li>id field for link-in</li>
+<li>id field for link-out</li>
+<li>id field for parent/child joins</li>
+<li>display/title field</li>
+<li>vector layer specific
+<ul>
+<li>styling categories</li>
+<li>labels</li>
+</ul>
+</li>
+</ul>
 <doc-anchor-target id="specify-number-of-fields-to-initially-reveal">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#specify-number-of-fields-to-initially-reveal">#</doc-anchor-trigger>
