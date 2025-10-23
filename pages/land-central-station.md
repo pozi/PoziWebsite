@@ -89,7 +89,7 @@ The current system is difficult to automate and innovate upon.
 
 <img src="/static/img/undraw/undraw_start_building_re_xani.svg" alt="" style="float:right;width:300px;margin:0px 40px;">
 
-It is designed to:
+It is  to:
 
 * reduce the friction of data exchange between councils and DTP
 * eliminate ongoing data discrepancies between councils and DTP
@@ -228,9 +228,9 @@ No.
 
 ==- What happens if council's property data is not perfect?
 
-No council's property data is perfect. However, automation of property updates is possible with any level of data quality.
+No council's property data is perfect. However, the automation of property updates is possible with any level of data quality.
 
-Our existing M1 solution, Pozi Connect, has been generating M1s for councils for years, and already takes this into account. It's designed to not unmatch any property or remove any address information unless the council has a more complete record for that property with which to replace it. This same conservative approach will be applied for updates from the new consolidated dataset.
+Our existing M1 solution, Pozi Connect, has been generating M1s for councils for years, and already takes this into account. It's designed to not unmatch any property unless the council has a more complete record for that property with which to replace it. This same conservative approach will be applied for updates from the new consolidated dataset.
 
 ==- How will the system deal with special property attributes such as multi-assessment, access type and distance-based address?
 
